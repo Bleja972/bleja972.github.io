@@ -15,3 +15,6 @@
 
 /* Tableau de numération entièrement visible dans le bandeau compact. */
 .school-banner{background:#063d2c;border-bottom-color:#9c6c32}.school-banner img{height:clamp(110px,16.6667vw,220px);object-fit:contain;object-position:center}
+
+/* Afficher le tableau entier à sa hauteur naturelle, sans recadrage. */
+.school-banner img{display:block;width:100%;height:auto;min-height:0;max-height:none;object-fit:contain;object-position:center}
