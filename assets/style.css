@@ -12,3 +12,6 @@
 .numeration-art:last-child{right:0}
 @media(min-width:1440px){#numeration{padding-inline:0}.numeration-art{width:125px}.numeration-art:first-child{left:-145px}.numeration-art:last-child{right:-145px}}
 @media(max-width:600px){#numeration .card{padding:16px}#numeration .grid{grid-template-columns:minmax(0,1fr)}.numeration-heading h2{font-size:25px}}
+
+/* Tableau de numération entièrement visible dans le bandeau compact. */
+.school-banner{background:#063d2c;border-bottom-color:#9c6c32}.school-banner img{height:clamp(110px,16.6667vw,220px);object-fit:contain;object-position:center}
