@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head><base href="https://bleja972.github.io/Trouver_une_partie/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Find a missing part — Problems CE1</title>
+<style>
+:root{--navy:#102a43;--green:#2f855a;--orange:#ed8936;--red:#c53030;--purple:#6b46c1;--line:#d9e2ec;--text:#172033}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#f8fbff,#fffaf4);color:var(--text)}
+.app{max-width:1050px;margin:0 auto;padding:20px 14px 40px}.card{background:#fff;border:2px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 7px 22px rgba(20,40,70,.06)}
+h1{margin:4px 0;color:var(--navy)}.sub{color:#5f6b7a;line-height:1.45}.menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.cat{border:2px solid #dce5ef;border-radius:16px;background:#fff;padding:16px;text-align:left;cursor:pointer;min-height:95px}.cat:hover{border-color:#8bb7df}
+.cat strong{display:block;color:var(--navy);font-size:1.04rem;margin-bottom:5px}.cat span{color:#607080;font-size:.92rem;line-height:1.35}.hidden{display:none!important}
+.top{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}.badges{display:flex;gap:8px;flex-wrap:wrap}.badge{background:#eef4fa;border:1px solid #d6e0ea;padding:8px 11px;border-radius:11px;font-weight:700;color:var(--navy)}
+.problem{font-size:1.25rem;line-height:1.5;font-weight:700;margin:18px 0}.bar-wrap{background:#fbfcfe;border:2px dashed #d7e0ea;border-radius:18px;padding:20px 12px;margin:14px 0}
+.bar-model{max-width:760px;margin:0 auto}.two-step-visual .bar-model{max-width:none;width:100%}.total-label{text-align:center;font-weight:800;font-size:1rem;margin-bottom:4px}.total-bar{height:62px;border:3px solid #25364a;border-radius:5px 5px 0 0;background:#fff;display:flex;align-items:center;justify-content:center;font-size:1.45rem;font-weight:800}.parts{display:flex;width:100%;margin:0;border:3px solid #25364a;border-top:0;border-radius:0 0 5px 5px;overflow:hidden;min-height:82px}
+.part{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;border-right:2px solid #25364a;background:#f5f7fa;min-width:46px}.part:last-child{border-right:0}.part.yellow{background:#fde68a}.part.red{background:#fca5a5}.part.blue{background:#bfdbfe}.part.green{background:#bbf7d0}.part.brown{background:#d6b38a}.part.pink{background:#fbcfe8}.part.purple{background:#ddd6fe}.part.orangefill{background:#fed7aa}.part.gray{background:#e5e7eb}.part.cyan{background:#bae6fd}.part.lime{background:#d9f99d}.part.beige{background:#f5e6c8}
+.val{font-size:1.45rem;font-weight:800}.lab{font-size:.8rem;color:#536170;text-align:center;margin-top:4px}.seq{display:grid;gap:14px;max-width:760px;margin:auto}
+
+.transform-model{max-width:780px;margin:0 auto;display:grid;gap:16px}
+.transform-title{text-align:center;font-weight:800;color:#102a43;margin-bottom:5px}
+.transform-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.transform-label{width:135px;font-weight:800;color:#425466;text-align:right}
+.transform-track{flex:1;min-width:250px;height:64px;display:flex;align-items:stretch;position:relative}
+.transform-segment{border:3px solid #25364a;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;min-width:42px}
+.transform-initial{background:#dbeafe}
+.transform-added{background:#dcfce7;border-left:0}
+.transform-removed{background:#fee2e2;border-left:0;position:relative}
+.transform-removed:after{content:"";position:absolute;left:8px;right:8px;top:50%;border-top:3px solid #b91c1c;transform:rotate(-12deg)}
+.transform-final{background:#fff;border-style:dashed}
+.transform-arrow{font-size:1.8rem;font-weight:900;color:#52606d;text-align:center}
+.transform-word{font-size:.88rem;color:#667085;text-align:center;margin-top:4px;font-weight:700}
+@media(max-width:700px){
+  .transform-row{display:block}
+  .transform-label{width:auto;text-align:left;margin-bottom:5px}
+  .transform-track{min-width:0;width:100%}
+}
+.step{border:3px solid #25364a;border-radius:7px;padding:10px 14px;background:#f8fafc;display:grid;grid-template-columns:1.1fr 1fr .7fr;gap:10px;align-items:center}.step.plus{background:#dcfce7}.step.minus{background:#fee2e2}.step.neutral{background:#e0f2fe}.step strong{color:var(--navy)}.step .calc{font-weight:800;text-align:center}.step .res{font-size:1.3rem;font-weight:800;text-align:center}.step-propose{border:3px solid #25364a;border-radius:10px;padding:12px 14px;display:grid;gap:10px}.step-propose.plus{background:#dcfce7}.step-propose.minus{background:#fee2e2}.step-propose.neutral{background:#e0f2fe}.step-propose .line1{font-weight:800;color:var(--navy)}.calc-proposal{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.calc-proposal label{font-weight:700;color:#425466}.calc-proposal input{height:44px;min-width:200px;flex:1;border:2px solid #9fb3c8;border-radius:10px;background:#fff;padding:0 10px;font-size:1.05rem;font-weight:700;color:#102a43}.calc-proposal input::placeholder{color:#7b8794}
+.compare-grid{display:grid;gap:18px;max-width:none;width:100%;margin:auto}.compare-wide{width:100%}.compare-wide .bar-model{max-width:none;width:100%}.compare-wide .compare-row{grid-template-columns:110px minmax(0,1fr)}.compare-row{display:grid;grid-template-columns:100px 1fr;gap:10px;align-items:center}.compare-name{font-weight:800;color:var(--navy)}.compare-questions{display:grid;gap:12px;margin-top:18px}.compare-question{border:2px solid #d7e0ea;border-radius:12px;padding:12px;background:#fff}.compare-question strong{display:block;color:var(--navy);margin-bottom:8px}.compare-question input{width:100%;height:48px;border:3px solid #6b46c1;border-radius:10px;background:#fff;padding:0 12px;font-size:1.08rem;font-weight:700;color:#102a43;pointer-events:auto;user-select:text;position:relative;z-index:2}.compare-question input:focus{outline:3px solid #c4b5fd;outline-offset:2px}
+.target{max-width:760px;margin:auto}.targetbar{border:3px solid #25364a;height:78px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:800;background:#fff8dc}
+.cards{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-top:14px}.mini-card{padding:12px 15px;border-radius:10px;background:#cf2e4e;color:white;font-weight:800;font-size:1.1rem}
+.answer-zone{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:18px}.answer{height:54px;min-width:150px;border:3px solid var(--purple);border-radius:11px;text-align:center;font-size:1.25rem;font-weight:800;color:var(--purple);background:white}
+.btn{border:0;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer;min-height:46px}.orange{background:var(--orange);color:#fff}.navy{background:var(--navy);color:#fff}.green{background:var(--green);color:#fff}
+.feedback{min-height:30px;text-align:center;font-size:1.05rem;font-weight:800;margin-top:10px}.ok{color:var(--green)}.bad{color:var(--red)}.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.progress{height:9px;background:#e6ebf0;border-radius:999px;overflow:hidden;margin-top:12px}.progress>div{height:100%;background:var(--green);width:0}
+@media(max-width:700px){.menu{grid-template-columns:1fr}.problem{font-size:1.08rem}.parts{min-height:70px}.step{grid-template-columns:1fr}.compare-row{grid-template-columns:1fr}}
+
+.inter-question{font-weight:800;color:#102a43;font-size:1.02rem;line-height:1.35}.two-step-visual{width:100%;max-width:100%;margin:0 auto}
+.step-propose{gap:8px}
+.step-propose .line1{font-size:.85rem;color:#607080}
+
+:root{--accent:#15803d}
+body{background:#f3f6fa}button,input{font:inherit}button,input{touch-action:manipulation}h1{font-size:clamp(1.65rem,4vw,2.5rem);line-height:1.2;overflow-wrap:anywhere}.home-card{border:0;border-top:7px solid var(--accent);padding:clamp(20px,4vw,36px)}.home-brand{font-size:.85rem;letter-spacing:.05em;font-weight:800;color:var(--accent)}.home-intro{font-size:1.1rem;line-height:1.6;max-width:720px}.home-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:24px 0}.home-example{background:#edf4fa;border-radius:16px;padding:20px;line-height:1.6}.home-example h2,.home-steps h2{font-size:1.15rem;margin-top:0}.home-steps ol{padding-left:22px;line-height:1.7}.home-tags{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.home-tags span{background:#eef3f7;border-radius:24px;padding:8px 12px;font-weight:700}.menu{display:block}.cat{display:block;width:100%;text-align:center;min-height:54px;background:var(--accent);border:0}.cat strong{color:white;font-size:1.1rem;margin:0}.btn:disabled{opacity:.55;cursor:default}.erase{background:#e4eaf1;color:#102a43}.actions{align-items:stretch}.actions .btn{min-width:120px}.answer{max-width:100%;width:260px}.part{min-width:0;overflow-wrap:anywhere}.lab{overflow-wrap:anywhere}.calc-proposal input{min-width:0;width:100%}.top>div{min-width:0}.bar-wrap{overflow-x:auto}.home-note{font-size:.95rem;line-height:1.5;color:#52606d}button:focus-visible,input:focus-visible{outline:3px solid #7c3aed;outline-offset:3px}@media(max-width:700px){.home-layout{grid-template-columns:1fr;gap:14px}.app{padding:12px 10px 30px}.card{padding:16px}.actions .btn{flex:1 1 130px}.compare-wide .compare-row{grid-template-columns:1fr}.badges{width:100%}.home-card{padding:20px}.transform-segment{min-width:0}.bar-wrap{padding:16px 8px}}@media(min-width:701px) and (max-width:1000px){.app{padding:20px}.home-layout{gap:18px}}
+</style>
+</head>
+<body>
+<nav id="ce1-blog-navigation" aria-label="Tous les jeux" style="position:relative;z-index:1000;display:flex;justify-content:center;padding:10px 14px;background:#173f30"><a href="https://bleja972.github.io/en/" target="_top" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:12px;background:#fff6cf;color:#173f30;font:700 17px/1.3 system-ui,sans-serif;text-decoration:none;min-height:46px;box-shadow:0 2px 5px #0002">🏠 All games</a></nav>
+
+<div class="app">
+<section id="menuPage"><div class="card home-card"><div class="home-brand">WORD PROBLEMS · CE1 · TERM 1</div><h1>Find a missing part</h1><p class="home-intro">Use the total and the known part to find the missing part.</p><div class="home-tags"><span>9 problems</span><span>Bar models</span><span>At your own pace</span></div><div class="home-layout"><div class="home-example"><h2>An example to help you</h2><p>There are 20 marbles altogether and 9 in one pocket. There are 11 marbles in the other pocket.</p></div><div class="home-steps"><h2>How to play</h2><ol><li>Read the problem and look at the model.</li><li>Work it out, then write or choose your answer.</li><li>Use “Clear” if you want to enter your answer again.</li><li>Select “Check”, then move to the next problem.</li></ol></div></div><p class="home-note">Each checked answer counts once towards your score. You can clear your answer before checking. Your final summary shows your score and success percentage.</p><div class="menu"><button class="cat" data-cat="partie"><strong>Start the game</strong></button></div></div></section>
+
+<section id="gamePage" class="hidden">
+<div class="card">
+<div class="top">
+<div><div style="font-size:.85rem;color:#677788">Category</div><div id="catTitle" style="font-size:1.2rem;font-weight:800;color:var(--navy)"></div></div>
+<div class="badges"><div class="badge" id="counter"></div><div class="badge" id="atelier"></div><div class="badge" id="score">Score: 0</div></div>
+</div>
+<div class="progress"><div id="prog"></div></div>
+<div class="problem" id="problemText"></div>
+<div class="bar-wrap" id="barArea"></div>
+<div class="answer-zone" id="answerZone"></div>
+<div class="feedback" id="feedback" aria-live="polite"></div>
+<div class="actions">
+<button class="btn orange" id="checkBtn">Check</button>
+<button class="btn erase" id="clearBtn">Clear</button>
+<button class="btn green hidden" id="nextBtn">Next problem</button>
+<button class="btn navy" id="menuBtn">Game home</button>
+</div>
+</div>
+</section>
+</div>
+
+<script>
+const ALL=[{"cat": "partie", "atelier": 2, "text": "I have 20 marbles in my two pockets. There are 9 in my right pocket. How many marbles are in my left pocket?", "answer": "11", "kind": "parts", "total": "20", "parts": [["9", "right pocket"], ["?", "left pocket"]]}, {"cat": "partie", "atelier": 2, "text": "I have 24 marbles in my two boxes. There are 10 in my green box. How many marbles are in my yellow box?", "answer": "14", "kind": "parts", "total": "24", "parts": [["10", "green box"], ["?", "yellow box"]]}, {"cat": "partie", "atelier": 2, "text": "I have 50 marbles in my two boxes. There are 30 in my red box. How many marbles are in my blue box?", "answer": "20", "kind": "parts", "total": "50", "parts": [["30", "red box"], ["?", "blue box"]]}, {"cat": "partie", "atelier": 2, "text": "At the bookshop, I bought a pencil case for 3 euros and a book. I paid 14 euros altogether. How much did the book cost?", "answer": "11", "kind": "parts", "total": "14 €", "parts": [["3 €", "pencil case"], ["?", "book"]]}, {"cat": "partie", "atelier": 2, "text": "There are 38 animals on the farm: 23 cows, 2 horses and some sheep. How many sheep are there?", "answer": "13", "kind": "parts", "total": "38", "parts": [["23", "cows"], ["2", "horses"], ["?", "sheep"]]}, {"cat": "partie", "atelier": 3, "text": "There are 24 pupils in a class, including 13 boys. How many girls are there?", "answer": "11", "kind": "parts", "total": "24", "parts": [["?", "girls"], ["13", "boys"]]}, {"cat": "partie", "atelier": 3, "text": "There are 24 pupils in a class, including 11 girls. How many boys are there?", "answer": "13", "kind": "parts", "total": "24", "parts": [["11", "girls"], ["?", "boys"]]}, {"cat": "partie", "atelier": 3, "text": "There are 87 pupils in a school. There are 37 boys. How many girls are there?", "answer": "50", "kind": "parts", "total": "87", "parts": [["?", "girls"], ["37", "boys"]]}, {"cat": "partie", "atelier": 5, "text": "Hugo has 21 marbles altogether. There are 15 red marbles and the others are green. How many green marbles does Hugo have?", "answer": "6", "kind": "parts", "total": "21", "parts": [["15", "red"], ["?", "green"]]}];
+const TWO_STEP_QUESTIONS={"In Iris’s class, there are 11 girls and 7 boys. Today, 3 new pupils joined the class. How many pupils are in the class now?": ["How many pupils were in the class before the new pupils arrived?", "How many pupils are there now?"], "Hugo bought 3 pens at 5 euros each and a comic book for 7 euros. How much did he spend?": ["How much do the 3 pens cost altogether?", "How much did Hugo spend altogether, including the comic book?"], "There are 9 girls and 10 boys in a class. Today, 5 new pupils joined the class. How many pupils are in the class now?": ["How many pupils were in the class before the new pupils arrived?", "How many pupils are there now?"], "At Oakwood School, there are 8 CP pupils, 12 CE1 pupils, 10 CE2 pupils, 13 CM1 pupils and 11 CM2 pupils. Today, 6 pupils are absent. How many pupils are present?": ["How many pupils are in the school when everyone is present?", "How many pupils are present today?"], "Lucy has €40 in her money box. She buys a game for €25 and a book for €8. How much money does Lucy have left?": ["How much does Lucy spend altogether?", "How much money does she have left after her purchases?"], "I have 58 marbles in my bag. There are 13 green marbles and 12 red marbles. The others are yellow. How many yellow marbles do I have?": ["How many green and red marbles are there altogether?", "How many yellow marbles are left?"], "Leon buys a school bag for 40 euros, a pencil sharpener for 2 euros and a ruler. He spends 50 euros altogether. How much does the ruler cost?": ["How much do the school bag and pencil sharpener cost altogether?", "How much does the ruler cost?"], "There are 16 people on a bus. At the first stop, 9 people get on. At the second stop, 5 people get off. How many people are on the bus now?": ["How many people are on the bus after the first stop?", "How many people are on the bus after the second stop?"], "There are 38 people on a bus. At the first stop, 13 people get off. At the second stop, 5 people get on. How many people are on the bus now?": ["How many people remain on the bus after the first stop?", "How many people are on the bus after the second stop?"], "Lina has 23 euros in her purse. She buys a pen for 5 euros and a pencil case for 4 euros. How much money does Lina have left?": ["How much does Lina spend altogether?", "How much money does she have left after her purchases?"], "Theo has 32 cards. He loses 7. His sister gives him 10 cards. How many cards does he have now?": ["How many cards does Theo have left after losing 7?", "How many cards does he have after his sister gives him 10?"], "Eva is playing a board game. She is on square 51. She must move back 4 squares, then forward 6 squares. Which square will Eva land on?": ["Which square does Eva land on after moving back 4 squares?", "Which square does she then land on after moving forward 6 squares?"], "Iris has 46 boat cards and 30 vehicle cards. Her brother gives her 10 plane cards. How many cards does Iris have now?": ["How many cards does Iris have before her brother’s gift?", "How many cards does she have after receiving the 10 plane cards?"]};
+
+const COMPARE_QUESTIONS={
+  "Sam has 8 cat cards and 7 dog cards. Zoe has 10 boat cards and 3 dinosaur cards. Who has more cards?":[
+    "How many cards does Sam have altogether?",
+    "How many cards does Zoe have altogether?",
+    "Who has more cards?"
+  ],
+  "Hugo had 23 marbles this morning. He won 8 marbles at break time. Max had 40 marbles this morning. He lost 8 marbles at break time. Who has more marbles after break time?":[
+    "How many marbles does Hugo have after break time?",
+    "How many marbles does Max have after break time?",
+    "Who has more marbles after break time?"
+  ]
+};
+
+const TITLES={tout:"Find the whole",partie:"Find a missing part",ajouter:"Add / gain / move forward",soustraire:"Subtract / lose / move back",deux:"Two-step word problems",compare:"Compare two quantities",all:"All word problems"};
+let list=[],idx=0,score=0,answered=false;
+const menuPage=document.getElementById('menuPage'),gamePage=document.getElementById('gamePage'),barArea=document.getElementById('barArea'),problemText=document.getElementById('problemText'),answerZone=document.getElementById('answerZone'),feedback=document.getElementById('feedback'),nextBtn=document.getElementById('nextBtn'),checkBtn=document.getElementById('checkBtn');
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function normalizeLabel(txt){return String(txt||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
+function getPartClass(label,index){
+  const t=normalizeLabel(label);
+
+  // Couleurs explicitement indiquées dans l'énoncé.
+  if(/yellow|vanilla|jaune|vanille/.test(t))return 'yellow';
+  if(/red|rouge/.test(t))return 'red';
+  if(/blue|bleu/.test(t))return 'blue';
+  if(/green|vert/.test(t))return 'green';
+  if(/chocolate|chocolat/.test(t))return 'brown';
+  if(/violet|mauve|pourpre/.test(t))return 'purple';
+  if(/orange/.test(t))return 'orangefill';
+
+  // Catégories faciles à distinguer visuellement.
+  if(/girl|fille/.test(t))return 'pink';
+  if(/boy|garcon/.test(t))return 'blue';
+  if(/cat|chat/.test(t))return 'orangefill';
+  if(/dog|chien/.test(t))return 'brown';
+  if(/boat|bateau/.test(t))return 'cyan';
+  if(/dinosaur|dinosaure/.test(t))return 'green';
+  if(/cow|vache/.test(t))return 'beige';
+  if(/horse|cheval/.test(t))return 'brown';
+  if(/sheep|mouton/.test(t))return 'gray';
+  if(/absent/.test(t))return 'red';
+  if(/present/.test(t))return 'green';
+  if(/new|nouveau/.test(t))return 'lime';
+
+  // Objets / personnes : couleurs distinctes mais stables.
+  if(/lina/.test(t))return 'pink';
+  if(/theo|timeo|thimeo/.test(t))return 'blue';
+  if(/sam|sacha/.test(t))return 'purple';
+  if(/zoe/.test(t))return 'cyan';
+  if(/school bag|cartable/.test(t))return 'blue';
+  if(/pencil sharpener|taille-crayon/.test(t))return 'orangefill';
+  if(/ruler|regle/.test(t))return 'yellow';
+  if(/pencil case|trousse/.test(t))return 'purple';
+  if(/book|comic|livre|bd|bande dessinee/.test(t))return 'green';
+
+  // Pour les autres parties, alternance douce afin de bien les distinguer.
+  const fallback=['gray','blue','green','yellow','pink'];
+  return fallback[index%fallback.length];
+}
+function orderParts(parts){
+  const copy=[...parts];
+
+  // Pour les poches : gauche toujours à gauche, droite toujours à droite.
+  if(copy.some(p=>normalizeLabel(p[1]).includes("left pocket")) &&
+     copy.some(p=>normalizeLabel(p[1]).includes("right pocket"))){
+    copy.sort((a,b)=>{
+      const A=normalizeLabel(a[1]),B=normalizeLabel(b[1]);
+      if(A.includes("left pocket"))return -1;
+      if(B.includes("left pocket"))return 1;
+      if(A.includes("right pocket"))return 1;
+      if(B.includes("right pocket"))return -1;
+      return 0;
+    });
+  }
+  return copy;
+}
+function numberValue(v){
+  const m=String(v).replace(',','.').match(/\d+(?:\.\d+)?/);
+  return m ? Number(m[0]) : null;
+}
+function proportionalParts(total,parts){
+  const vals=parts.map(p=>numberValue(p[0]));
+  const totalNum=numberValue(total);
+
+  // Si une seule partie est inconnue et que le tout est connu, on la déduit.
+  const unknowns=vals.map((v,i)=>v===null?i:-1).filter(i=>i>=0);
+  if(totalNum!==null && unknowns.length===1){
+    const known=vals.reduce((s,v)=>s+(v||0),0);
+    vals[unknowns[0]]=Math.max(0,totalNum-known);
+  }
+
+  // Si le tout est inconnu, la somme des parties connues sert de référence.
+  let reference=totalNum;
+  if(reference===null){
+    const sum=vals.reduce((s,v)=>s+(v||0),0);
+    if(sum>0) reference=sum;
+  }
+
+  // Sécurité : si les données ne permettent pas un calcul, on revient à des parts égales.
+  if(!reference || vals.some(v=>v===null)){
+    return parts.map(()=>100/parts.length);
+  }
+
+  return vals.map(v=>(v/reference)*100);
+}
+function partsBar(total,parts){
+  const ordered=orderParts(parts);
+  const widths=proportionalParts(total,ordered);
+  return `The whole${esc(total)}</div>
+    <div class="parts">${ordered.map((p,i)=>`<div class="part ${getPartClass(p[1],i)}" style="width:${widths[i].toFixed(2)}%"><div class="val">${esc(p[0])}</div><div class="lab">${esc(p[1])}</div></div>`).join('')}</div>
+  </div>`;
+}
+
+function numericValue(v){
+  const m=String(v).replace(',','.').match(/\d+(?:\.\d+)?/);
+  return m ? Number(m[0]) : 0;
+}
+function transformWord(p,plus){const t=p.text.toLowerCase();if(plus){if(t.includes('win'))return 'wins';if(t.includes('forward'))return 'moves forward';if(t.includes('get on'))return 'get on';if(t.includes('join'))return 'join';if(t.includes('give'))return 'receives';return 'added'}if(t.includes('los'))return 'loses';if(t.includes('back'))return 'moves back';if(t.includes('sold'))return 'sells';if(t.includes('buy'))return 'spends';if(t.includes('get off'))return 'get off';return 'removed'}function renderTransformation(p,plus){
+  const start=numericValue(p.start);
+  const change=numericValue(p.change);
+  const finalVal=plus ? start+change : Math.max(0,start-change);
+
+  // Une seule échelle pour les trois lignes :
+  // une même valeur numérique = une même longueur de barre.
+  const scaleMax=Math.max(start, finalVal, 1);
+  const pct=v=>Math.max(0,Math.min(100,(v/scaleMax)*100));
+
+  if(plus){
+    const startPct=pct(start);
+    const changePct=pct(change);
+    const finalPct=pct(finalVal);
+
+    return `<div class="transform-model">
+      <div class="transform-row">
+        <div class="transform-label">Situation initiale</div>
+        <div class="transform-track">
+          <div class="transform-segment transform-initial" style="width:${startPct.toFixed(2)}%">${esc(p.start)}</div>
+        </div>
+      </div>
+
+      <div class="transform-arrow">↓</div>
+
+      <div class="transform-row">
+        <div class="transform-label">Transformation</div>
+        <div class="transform-track">
+          <div class="transform-segment transform-initial" style="width:${startPct.toFixed(2)}%">${esc(p.start)}</div>
+          <div class="transform-segment transform-added" style="width:${changePct.toFixed(2)}%">${esc(p.change)}</div>
+        </div>
+      </div>
+      <div class="transform-word">${esc(transformWord(p,true))} ${esc(p.change)}</div>
+
+      <div class="transform-arrow">↓</div>
+
+      <div class="transform-row">
+        <div class="transform-label">Final amount</div>
+        <div class="transform-track">
+          <div class="transform-segment transform-final" style="width:${finalPct.toFixed(2)}%">?</div>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  const startPct=pct(start);
+  const finalPct=pct(finalVal);
+  const changePct=pct(change);
+
+  return `<div class="transform-model">
+    <div class="transform-row">
+      <div class="transform-label">Situation initiale</div>
+      <div class="transform-track">
+        <div class="transform-segment transform-initial" style="width:${startPct.toFixed(2)}%">${esc(p.start)}</div>
+      </div>
+    </div>
+
+    <div class="transform-arrow">↓</div>
+
+    <div class="transform-row">
+      <div class="transform-label">Transformation</div>
+      <div class="transform-track">
+        <div class="transform-segment transform-initial" style="width:${finalPct.toFixed(2)}%">?</div>
+        <div class="transform-segment transform-removed" style="width:${changePct.toFixed(2)}%">${esc(p.change)}</div>
+      </div>
+    </div>
+    <div class="transform-word">${esc(transformWord(p,false))} ${esc(p.change)}</div>
+
+    <div class="transform-arrow">↓</div>
+
+    <div class="transform-row">
+      <div class="transform-label">Final amount</div>
+      <div class="transform-track">
+        <div class="transform-segment transform-final" style="width:${finalPct.toFixed(2)}%">?</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+
+function twoStepQuestions(p){
+  return TWO_STEP_QUESTIONS[p.text] || [
+    "What do you need to calculate first?",
+    "What do you need to calculate next?"
+  ];
+}
+function renderTwoStepQuestions(p){
+  const qs=twoStepQuestions(p);
+  return `<div class="seq">
+    ${qs.map((q,i)=>`<div class="step-propose ${i===0?'neutral':'plus'}">
+      <div class="inter-question">${esc(q)}Calculation ${i+1} :</label>
+        <input type="text" placeholder="Write your calculation" aria-label="Calculation ${i+1}">
+      </div>
+    </div>`).join('')}
+  </div>`;
+}
+
+
+function renderCompareQuestions(p){
+  const qs=COMPARE_QUESTIONS[p.text] || [
+    "What is the first quantity to compare?",
+    "What is the second quantity to compare?",
+    "Which is greater?"
+  ];
+  return `<div class="compare-questions">
+    ${qs.map((q,i)=>`<div class="compare-question">
+      <strong>${esc(q)}</strong>
+      <input id="compareAnswer${idx}_${i}" type="text" inputmode="${i<2?'numeric':'text'}"
+             placeholder="${i<2?"Write your answer":"Write the name"}"
+             aria-label="${esc(q)}" autocomplete="off">
+    </div>`).join('')}
+  </div>`;
+}
+
+function renderBar(p){
+if(p.cat==='deux'){
+  let visual='';
+  if(p.kind==='parts') visual=`<div class="two-step-visual">${partsBar(p.total,p.parts)}</div>`;
+  return `<div style="display:grid;gap:18px;width:100%">${visual}${renderTwoStepQuestions(p)}</div>`;
+}
+if(p.kind==='parts')return partsBar(p.total,p.parts);
+if(p.kind==='changePlus')return renderTransformation(p,true);
+if(p.kind==='changeMinus')return renderTransformation(p,false);
+if(p.kind==='sequence')return renderTwoStepQuestions(p);
+if(p.kind==='compare')return `<div class="compare-wide"><div class="compare-grid">${p.bars.map(b=>`<div class="compare-row"><div class="compare-name">${esc(b[0])}</div>${partsBar('?',b[1])}</div>`).join('')}</div>${renderCompareQuestions(p)}</div>`;
+if(p.kind==='compareSeq')return `<div class="compare-wide"><div class="compare-grid">${p.bars.map(b=>{const cls=String(b[1]).includes('−')?'minus':'plus';return `<div class="step ${cls}" style="width:100%"><strong>${esc(b[0])}</strong><div class="calc"></div><div class="res"></div></div>`}).join('')}</div>${renderCompareQuestions(p)}</div>`;
+if(p.kind==='target')return `Target${esc(p.target)} points</div><div class="cards">${p.cards.map(c=>`<span class="mini-card">${esc(c)}</span>`).join('')}</div></div>`;
+return '';
+}
+
+function compactCalc(s){
+  return String(s)
+    .toLowerCase()
+    .replace(/€/g,'')
+    .replace(/\s+/g,'')
+    .replace(/×/g,'*')
+    .replace(/,/g,'.');
+}
+function isValidFinalAnswer(p,got){
+  const raw=compactCalc(got);
+
+  if(p.text==="Hugo bought 3 pens at 5 euros each and a comic book for 7 euros. How much did he spend?"){
+    const accepted=[
+      "22",
+      "15+7",
+      "15+7=22",
+      "5+5+5+7",
+      "5+5+5+7=22",
+      "3*5+7",
+      "3*5+7=22"
+    ];
+    return accepted.includes(raw);
+  }
+
+  return normalize(got)===normalize(p.answer);
+}
+
+function normalize(s){return String(s).trim().toLowerCase().replace(/\s+/g,' ').replace(/€/g,'').trim()}
+function renderAnswer(p){
+if(p.choices){answerZone.innerHTML=p.choices.map(c=>`<button class="btn navy choice" data-value="${esc(c)}">${esc(c)}</button>`).join('');document.querySelectorAll('.choice').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.choice').forEach(x=>{x.classList.remove('green');x.dataset.selected=''});b.classList.add('green');b.dataset.selected='1'}));}
+else{const ph=p.kind==='target'?"e.g. 10 + 7 + 4":(p.cat==='deux'?"Answer or calculation":"Write your answer");answerZone.innerHTML=`<input id="answer" class="answer" autocomplete="off" inputmode="${(p.kind==='target'||p.cat==='deux')?'text':'numeric'}" placeholder="${ph}">`;}
+}
+function currentAnswer(){const p=list[idx];if(p.choices){const b=document.querySelector('.choice[data-selected="1"]');return b?b.dataset.value:''}const a=document.getElementById('answer');return a?a.value:''}
+function render(){answered=false;document.getElementById('clearBtn').disabled=false;checkBtn.disabled=false;feedback.textContent='';nextBtn.classList.add('hidden');checkBtn.classList.remove('hidden');const p=list[idx];document.getElementById('counter').textContent=`Problem ${idx+1} / ${list.length}`;document.getElementById('atelier').textContent=`Workshop ${p.atelier}`;document.getElementById('score').textContent=`Score: ${score} / ${list.length}`;document.getElementById('prog').style.width=`${(idx/list.length)*100}%`;problemText.textContent=p.text;barArea.innerHTML=renderBar(p);renderAnswer(p);
+document.querySelectorAll('.compare-question input').forEach(inp=>{
+  inp.addEventListener('click',e=>e.stopPropagation());
+  inp.addEventListener('mousedown',e=>e.stopPropagation());
+  inp.addEventListener('touchstart',e=>e.stopPropagation(),{passive:true});
+});
+}
+function check(){if(answered)return;const p=list[idx],got=currentAnswer();if(!got){feedback.innerHTML="Write or choose an answer.";return}let ok=isValidFinalAnswer(p,got);answered=true;document.getElementById('clearBtn').disabled=true;document.querySelectorAll('#gamePage input, .choice').forEach(el=>el.disabled=true);if(ok){score++;feedback.innerHTML="<span class=\"ok\">Well done! Correct answer.</span>"}else{feedback.innerHTML=`Expected answer: ${esc(p.answer)}.</span>`}document.getElementById('score').textContent=`Score: ${score} / ${list.length}`;checkBtn.disabled=true;nextBtn.classList.remove('hidden')}
+function start(cat){list=cat==='all'?[...ALL]:ALL.filter(p=>p.cat===cat);idx=0;score=0;document.getElementById('catTitle').textContent=TITLES[cat];menuPage.classList.add('hidden');gamePage.classList.remove('hidden');render()}
+document.querySelectorAll('.cat').forEach(b=>b.addEventListener('click',()=>start(b.dataset.cat)));
+checkBtn.addEventListener('click',check);
+document.getElementById('clearBtn').addEventListener('click',()=>{
+ if(answered)return;
+ document.querySelectorAll('#gamePage input').forEach(el=>{el.value=''});
+ document.querySelectorAll('.choice').forEach(el=>{el.classList.remove('green');el.dataset.selected=''});
+ feedback.textContent='';
+ const first=document.querySelector('#gamePage input, .choice');if(first)first.focus();
+});
+nextBtn.addEventListener('click',()=>{if(idx<list.length-1){idx++;render()}else{document.getElementById('prog').style.width='100%';feedback.innerHTML=`Game finished: ${score} / ${list.length} — ${Math.round(score/list.length*1000)/10}% success.`;nextBtn.classList.add('hidden')}});
+document.getElementById('menuBtn').addEventListener('click',()=>{gamePage.classList.add('hidden');menuPage.classList.remove('hidden')});
+</script>
+</body>
+</html>
+
+

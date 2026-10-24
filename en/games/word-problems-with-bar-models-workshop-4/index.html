@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><base href="https://bleja972.github.io/PROBLEMES4/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CE1 Mini Challenges — Word problems, pages 7 and 8</title>
+<style>
+:root{
+  --navy:#17324d; --green:#2f8f57; --red:#c94c4c; --purple:#6c63d9;
+  --orange:#efb46d; --blue:#8fd3ff; --mint:#a8e4b1; --yellow:#ffe18a;
+  --lav:#c9bbff; --pink:#f7b9cb; --whole:#f4a6a6; --border:#ead1ad;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(180deg,#fff8ef,#f7dfbd);
+  color:#222;
+}
+.app{max-width:1040px;margin:0 auto;padding:18px}
+.shell{
+  background:#fff;
+  border:3px solid #efdbc0;
+  box-shadow:0 10px 28px rgba(0,0,0,.10);
+  overflow:hidden;
+}
+header{
+  text-align:center;
+  padding:18px;
+  background:linear-gradient(135deg,#ffe7bd,#ffd49b 55%,#fff0d3);
+  border-bottom:3px solid #efd4ad;
+}
+.brand{
+  color:var(--navy);
+  font-weight:900;
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+h1{margin:8px 0 4px;font-size:clamp(29px,4vw,44px)}
+.subtitle{margin:0;color:#5b5b5b;font-size:18px}
+main{padding:20px}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-bottom:15px;
+}
+.stat{
+  background:#fff8ef;
+  border:2px solid var(--border);
+  padding:10px;
+  text-align:center;
+  color:var(--navy);
+  font-weight:900;
+}
+.stat strong{display:block;font-size:28px;margin-top:4px}
+.progress{
+  height:14px;
+  background:#f1e4d2;
+  border:1px solid #dfc7a5;
+  margin-bottom:18px;
+  overflow:hidden;
+}
+.progress div{
+  height:100%;
+  width:0;
+  background:linear-gradient(90deg,var(--navy),#52799c);
+  transition:width .25s;
+}
+.card{
+  background:linear-gradient(180deg,#fffdf9,#fff5e8);
+  border:2px solid #ecd4b3;
+  padding:20px;
+}
+.tag{
+  display:inline-block;
+  background:#ffe4ae;
+  border:2px solid #efc46e;
+  color:var(--navy);
+  padding:7px 14px;
+  font-weight:900;
+  margin-bottom:14px;
+}
+.problem{
+  background:white;
+  border:2px solid #eed8bb;
+  border-left:8px solid var(--orange);
+  padding:16px;
+  font-size:clamp(20px,3vw,27px);
+  line-height:1.45;
+  font-weight:800;
+  color:var(--navy);
+}
+.question{
+  margin-top:10px;
+  font-weight:900;
+  color:#111;
+}
+.model-title{
+  margin:18px 0 10px;
+  font-size:22px;
+  font-weight:900;
+  color:var(--navy);
+  text-align:center;
+}
+.model{
+  background:#fffaf2;
+  border:2px dashed #e6c89b;
+  padding:14px;
+  margin-bottom:16px;
+}
+.whole{
+  min-height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--whole);
+  border:3px solid #fff;
+  font-size:23px;
+  font-weight:900;
+  color:#512020;
+  margin-bottom:8px;
+}
+.parts{display:flex;width:100%}
+.part{
+  min-height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:7px;
+  text-align:center;
+  font-size:20px;
+  font-weight:900;
+  color:var(--navy);
+  border:3px solid #fff;
+}
+.p1{background:var(--blue)}
+.p2{background:var(--mint)}
+.p3{background:var(--yellow)}
+.unknown{background:#fff;color:#777}
+.legend{
+  text-align:center;
+  color:#666;
+  font-size:15px;
+  margin-top:6px;
+  font-weight:700;
+}
+.answer-area{
+  margin-top:18px;
+  text-align:center;
+}
+.answer-area label{
+  display:block;
+  font-size:21px;
+  font-weight:900;
+  color:var(--navy);
+  margin-bottom:9px;
+}
+.answer-input{
+  width:180px;
+  height:58px;
+  border:3px solid var(--navy);
+  background:#fff;
+  color:var(--navy);
+  font-size:30px;
+  font-weight:900;
+  text-align:center;
+  outline:none;
+}
+.answer-input:focus{
+  border-color:#f0a24b;
+  box-shadow:0 0 0 4px rgba(240,162,75,.18);
+}
+.feedback{
+  min-height:44px;
+  margin:18px 0 8px;
+  text-align:center;
+  font-size:22px;
+  font-weight:900;
+  line-height:1.35;
+}
+.actions{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+.action{
+  border:none;
+  color:white;
+  padding:14px 24px;
+  font-size:20px;
+  font-weight:900;
+  cursor:pointer;
+}
+.check{background:var(--green)}
+.next{background:var(--purple);display:none}
+.replay{background:var(--navy)}
+.end{
+  display:none;
+  text-align:center;
+  padding:30px 12px 14px;
+}
+.end h2{
+  font-size:42px;
+  color:var(--navy);
+  margin:0 0 10px;
+}
+.end p{
+  font-size:24px;
+  font-weight:900;
+}
+.calc{
+  margin-top:12px;
+  display:inline-block;
+  background:#eef6ff;
+  color:var(--navy);
+  border:2px solid #b9d6eb;
+  padding:8px 12px;
+  font-weight:900;
+}
+@media(max-width:700px){
+  .stats{grid-template-columns:1fr}
+  .part{font-size:16px}
+  .answer-input{width:140px}
+}
+</style>
+</head>
+<body><nav style="padding:12px;text-align:center"><a href="https://bleja972.github.io/en/">🏠 All games</a></nav>
+<div class="app"><div class="shell">
+
+<header>
+  <div class="brand">CE1 Mini Challenges</div>
+  <h1>Word problems with bar models</h1>
+  <p class="subtitle">Word problem workshop 4 — pages 7 and 8</p>
+</header>
+
+<main>
+<section id="game">
+  <div class="stats">
+    <div class="stat">Question<strong id="qnum">1 / 7</strong></div>
+    <div class="stat">Score<strong id="score">0</strong></div>
+    <div class="stat">Correct answers<strong id="good">0</strong></div>
+  </div>
+
+  <div class="progress"><div id="bar"></div></div>
+
+  <div class="card">
+    <div class="tag" id="tag">Problem 1</div>
+    <div class="problem" id="problem"></div>
+
+    <div class="model-title">Bar model</div>
+    <div id="model"></div>
+
+    <div class="answer-area">
+      <label for="answerInput">Your answer:</label>
+      <input id="answerInput" class="answer-input" type="text" inputmode="numeric" autocomplete="off">
+    </div>
+
+    <div class="feedback" id="feedback" aria-live="polite"></div>
+
+    <div class="actions">
+      <button class="action check" id="checkBtn" type="button">Check</button>
+      <button class="action next" id="nextBtn" type="button">Next question</button>
+    </div>
+  </div>
+</section>
+
+<section class="end" id="end">
+  <h2>Well done!</h2>
+  <p id="finalText"></p>
+  <button class="action replay" id="replayBtn" type="button">Play again</button>
+</section>
+</main>
+
+</div></div>
+
+<script>
+const problems = [
+  {
+    tag:"Problem 1",
+    text:"Max had 23 marbles. He wins 7 at break time. How many marbles does he have now?",
+    answer:30,
+    parts:[
+      {label:"23 marbles at the start",weight:23},
+      {label:"7 marbles won",weight:7}
+    ],
+    calc:"23 + 7 = 30"
+  },
+  {
+    tag:"Problem 2",
+    text:"Lucy had 23 marbles. She loses 7 at break time. How many marbles does she have now?",
+    answer:16,
+    parts:[
+      {label:"? marbles left",weight:16,unknown:true},
+      {label:"7 marbles lost",weight:7}
+    ],
+    calc:"23 - 7 = 16"
+  },
+  {
+    tag:"Problem 3",
+    text:"Lina had 68 marbles. She wins 6 at break time. How many marbles does Lina have now?",
+    answer:74,
+    parts:[
+      {label:"68 marbles at the start",weight:68},
+      {label:"6 marbles won",weight:6}
+    ],
+    calc:"68 + 6 = 74"
+  },
+  {
+    tag:"Problem 4",
+    text:"Theo is playing a board game. His counter is on square 35. He moves it forward 7 squares. Which square will it land on?",
+    answer:42,
+    parts:[
+      {label:"35 squares",weight:35},
+      {label:"7 squares forward",weight:7}
+    ],
+    calc:"35 + 7 = 42"
+  },
+  {
+    tag:"Problem 5",
+    text:"The ice-cream seller had 53 ice creams this morning. He sold 20. How many ice creams does he have left?",
+    answer:33,
+    parts:[
+      {label:"? ice creams left",weight:33,unknown:true},
+      {label:"20 ice creams sold",weight:20}
+    ],
+    calc:"53 - 20 = 33"
+  },
+  {
+    tag:"Problem 6",
+    text:"Iris has 48 euros in her money box. She buys a comic book for 12 euros. How much money does she have left?",
+    answer:36,
+    parts:[
+      {label:"€? left",weight:36,unknown:true},
+      {label:"€12 spent",weight:12}
+    ],
+    calc:"48 - 12 = 36"
+  },
+  {
+    tag:"Problem 7",
+    text:"There are 27 people on a bus. At a stop, 15 people get on. How many people are on the bus now?",
+    answer:42,
+    parts:[
+      {label:"27 people",weight:27},
+      {label:"15 people get on",weight:15}
+    ],
+    calc:"27 + 15 = 42"
+  }
+];
+
+let current=0, score=0, good=0, locked=false;
+
+const qnum=document.getElementById("qnum");
+const scoreEl=document.getElementById("score");
+const goodEl=document.getElementById("good");
+const bar=document.getElementById("bar");
+const tag=document.getElementById("tag");
+const problem=document.getElementById("problem");
+const model=document.getElementById("model");
+const input=document.getElementById("answerInput");
+const feedback=document.getElementById("feedback");
+const checkBtn=document.getElementById("checkBtn");
+const nextBtn=document.getElementById("nextBtn");
+const game=document.getElementById("game");
+const end=document.getElementById("end");
+const finalText=document.getElementById("finalText");
+const replayBtn=document.getElementById("replayBtn");
+
+function renderModel(p){
+  model.innerHTML="";
+  const box=document.createElement("div");
+  box.className="model";
+
+  const whole=document.createElement("div");
+  whole.className="whole";
+  whole.textContent="The whole";
+  box.appendChild(whole);
+
+  const parts=document.createElement("div");
+  parts.className="parts";
+
+  p.parts.forEach((item,i)=>{
+    const part=document.createElement("div");
+    part.className="part p"+((i%3)+1)+(item.unknown?" unknown":"");
+    part.textContent=item.label;
+    part.style.flex=String(item.weight);
+    parts.appendChild(part);
+  });
+
+  box.appendChild(parts);
+
+  const legend=document.createElement("div");
+  legend.className="legend";
+  legend.textContent="The parts make the whole.";
+  box.appendChild(legend);
+
+  model.appendChild(box);
+}
+
+function render(){
+  locked=false;
+  const p=problems[current];
+
+  qnum.textContent=`${current+1} / ${problems.length}`;
+  scoreEl.textContent=score;
+  goodEl.textContent=good;
+  bar.style.width=`${current/problems.length*100}%`;
+
+  tag.textContent=p.tag;
+  problem.innerHTML=p.text;
+  renderModel(p);
+
+  input.value="";
+  input.disabled=false;
+  input.style.borderColor="var(--navy)";
+  input.style.background="#ffffff";
+
+  feedback.textContent="";
+  checkBtn.disabled=false;
+  checkBtn.style.display="inline-block";
+  nextBtn.style.display="none";
+
+  setTimeout(()=>input.focus(),50);
+}
+
+function validate(){
+  if(locked)return;
+
+  if(input.value.trim()===""){
+    feedback.style.color="var(--red)";
+    feedback.textContent="Write an answer.";
+    return;
+  }
+
+  const p=problems[current];
+  const value=Number(input.value);
+
+  locked=true;
+  input.disabled=true;
+  checkBtn.disabled=true;
+
+  if(value===p.answer){
+    score++;
+    good++;
+    input.style.borderColor="var(--green)";
+    input.style.background="#ffffff";
+    feedback.style.color="var(--green)";
+    feedback.innerHTML=`Well done! Correct answer.${p.calc}</span>`;
+  }else{
+    input.style.borderColor="var(--red)";
+    input.style.background="#ffffff";
+    feedback.style.color="var(--red)";
+    feedback.innerHTML=`The correct answer is ${p.answer}</strong>.<br><span class="calc">${p.calc}</span>`;
+  }
+
+  scoreEl.textContent=score;
+  goodEl.textContent=good;
+  bar.style.width=`${(current+1)/problems.length*100}%`;
+  nextBtn.style.display="inline-block";
+}
+
+function nextQuestion(){
+  if(!locked)return;
+
+  current++;
+
+  if(current>=problems.length){
+    game.style.display="none";
+    end.style.display="block";
+
+    let txt=`You scored ${score} correct answers out of ${problems.length}.`;
+    if(score===7) txt+=" A perfect score!";
+    else if(score>=5) txt+=" Great work!";
+    else txt+=" Keep practising with the bar models.";
+
+    finalText.textContent=txt;
+    return;
+  }
+
+  render();
+}
+
+function replay(){
+  current=0;
+  score=0;
+  good=0;
+  game.style.display="block";
+  end.style.display="none";
+  render();
+}
+
+input.addEventListener("input",()=>input.value=input.value.replace(/[^0-9]/g,""));
+input.addEventListener("keydown",e=>{
+  if(e.key==="Enter"){
+    if(locked) nextQuestion();
+    else validate();
+  }
+});
+
+checkBtn.addEventListener("click",validate);
+nextBtn.addEventListener("click",nextQuestion);
+replayBtn.addEventListener("click",replay);
+
+render();
+</script>
+</body>
+</html>
+

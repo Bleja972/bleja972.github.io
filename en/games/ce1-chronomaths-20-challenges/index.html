@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>20 CE1 Chronomaths challenges</title>
+<style>
+:root{
+  --bg1:#eef8ff;
+  --bg2:#fff7e9;
+  --card:#ffffff;
+  --ink:#243449;
+  --muted:#5c6d7a;
+  --green:#1d9b73;
+  --green-dark:#0f7355;
+  --blue:#2f7de1;
+  --yellow:#ffcb3d;
+  --pink:#ff6b8e;
+  --orange:#ff9a3d;
+  --red:#d94b4b;
+  --line:#d9e6f4;
+  --good:#e8fbef;
+  --good-border:#8cd4a3;
+  --bad:#fff0ef;
+  --bad-border:#ef9c9c;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at top left,#dff4ff 0,#eef8ff 30%,transparent 31%),
+    radial-gradient(circle at top right,#fff0c9 0,#fff7e9 28%,transparent 29%),
+    linear-gradient(180deg,var(--bg1),var(--bg2));
+  min-height:100vh;
+}
+main{max-width:1080px;margin:0 auto;padding:20px}
+header{
+  border-radius:28px;
+  padding:24px 26px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--green),var(--blue));
+  box-shadow:0 12px 30px rgba(36,52,73,.15);
+  position:relative;
+  overflow:hidden;
+}
+header:before,header:after{
+  content:"";position:absolute;border-radius:50%;opacity:.18;background:#fff;
+}
+header:before{width:180px;height:180px;right:-40px;top:-50px}
+header:after{width:90px;height:90px;left:-20px;bottom:-20px}
+h1{margin:0 0 8px;font-size:clamp(26px,4vw,40px)}
+header p{margin:0;font-size:17px;line-height:1.5;max-width:760px}
+.panel{
+  margin-top:18px;
+  background:rgba(255,255,255,.95);
+  backdrop-filter: blur(4px);
+  border:1px solid #e3edf8;
+  border-radius:24px;
+  padding:22px;
+  box-shadow:0 8px 24px rgba(36,52,73,.08);
+}
+.settings{display:flex;align-items:end;gap:14px;flex-wrap:wrap}
+label{font-weight:700;color:#24415a}
+select,input,button{font:inherit}
+select,input{
+  border:2px solid #cce0f4;
+  border-radius:14px;
+  padding:11px 12px;
+  background:#fff;
+  color:var(--ink);
+}
+select{min-width:230px}
+button{
+  border:none;
+  border-radius:16px;
+  padding:13px 18px;
+  min-height:50px;
+  font-weight:700;
+  cursor:pointer;
+  transition:transform .12s ease,filter .12s ease, box-shadow .12s ease;
+}
+button:hover{transform:translateY(-1px);filter:brightness(.98)}
+button:active{transform:translateY(0)}
+button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:4px solid #ffbf47;
+  outline-offset:2px;
+}
+button.primary{background:linear-gradient(135deg,var(--pink),var(--orange));color:#fff;box-shadow:0 6px 16px rgba(255,107,142,.28)}
+button.secondary{background:#eef6ff;color:var(--blue);border:2px solid #d7e6ff}
+button.tertiary{background:#edf8f4;color:var(--green-dark);border:2px solid #c9eadc}
+button:disabled{opacity:.55;cursor:default;transform:none}
+.intro{line-height:1.65;font-size:16px}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.topline h2{margin:0;font-size:clamp(24px,3vw,34px);color:#1b446a}
+.clock{
+  font-size:29px;
+  font-weight:900;
+  font-variant-numeric:tabular-nums;
+  letter-spacing:1px;
+  color:#124c77;
+  background:linear-gradient(135deg,#ddf0ff,#fff8cb);
+  border:3px solid #cfe4fb;
+  border-radius:18px;
+  padding:10px 16px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.8);
+}
+.clock.waiting{border-color:#8cd4a3;box-shadow:0 0 0 3px #e2faeb;}
+.clock.urgent{background:linear-gradient(135deg,#ffe2de,#fff0cf);color:#9b2e2a;border-color:#f5c0bc}
+.tasks{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-auto-flow:column;
+  grid-template-rows:repeat(8,minmax(62px,auto));
+  gap:12px 16px;
+}
+.task{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  background:linear-gradient(135deg,#ffffff,#f9fcff);
+  border:2px solid var(--line);
+  border-radius:18px;
+  padding:12px 14px;
+  box-shadow:0 4px 10px rgba(36,52,73,.04);
+}
+.task:nth-child(4n+1){border-color:#cde7ff;background:linear-gradient(135deg,#f6fbff,#eef7ff)}
+.task:nth-child(4n+2){border-color:#ffe1b8;background:linear-gradient(135deg,#fffdf7,#fff5e8)}
+.task:nth-child(4n+3){border-color:#d5f0de;background:linear-gradient(135deg,#f9fffb,#eefbf2)}
+.task:nth-child(4n+4){border-color:#ffd2de;background:linear-gradient(135deg,#fff9fb,#fff0f5)}
+.expression{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  font-size:clamp(20px,2.4vw,26px);
+  font-weight:700;
+  line-height:1.25;
+  min-width:0;
+}
+.expression .chunk{white-space:nowrap}
+.answer{
+  width:clamp(74px,9vw,112px);
+  min-width:0;
+  font-size:22px;
+  font-weight:700;
+  text-align:center;
+  padding:8px 6px;
+  border:3px solid #bfdaf3;
+  border-radius:14px;
+  background:#fff;
+  color:#173654;
+}
+.answer.hole{
+  width:clamp(62px,7vw,90px);
+  padding-inline:4px;
+  border-style:dashed;
+  border-color:#7ab4ea;
+  background:#f9fcff;
+}
+.answer::placeholder{color:#9ab4cb;opacity:1}
+.task.correct{background:var(--good)!important;border-color:var(--good-border)!important}
+.task.incorrect{background:var(--bad)!important;border-color:var(--bad-border)!important}
+.result{
+  display:inline-flex;
+  align-items:center;
+  margin-left:4px;
+  padding:4px 10px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.07);
+  color:#8d3027;
+  font-size:14px;
+  font-weight:700;
+}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.note{margin:12px 0 0;color:var(--muted);font-size:14px;line-height:1.5}
+.final{
+  margin-top:20px;
+  border-radius:22px;
+  padding:20px;
+  border:2px solid #caeadb;
+  background:linear-gradient(135deg,#eefcf3,#f7fffb);
+}
+.final h3{margin:0 0 14px;font-size:28px;color:#166445}
+.metrics{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:14px}
+.metric{
+  flex:1 1 210px;
+  background:#fff;
+  border:2px solid #d8efe2;
+  border-radius:18px;
+  padding:15px 18px;
+  font-size:18px;
+  font-weight:700;
+}
+.metric strong{display:block;margin-top:6px;font-size:34px;color:#166445}
+.hide{display:none!important}
+@media (max-width:760px){
+  main{padding:10px}
+  header{padding:20px}
+  .panel{padding:14px}
+  .tasks{grid-template-columns:minmax(0,1fr);grid-auto-flow:row;grid-template-rows:none}
+  .task{padding:12px}
+  .expression{font-size:22px}
+  .answer{width:92px;font-size:21px}
+  .answer.hole{width:76px}
+  .settings>*{flex:1 1 100%}
+  select{width:100%}
+}
+</style>
+</head>
+<body><nav style="padding:12px;text-align:center"><a href="/en/">← All maths games</a></nav>
+<main>
+  <header>
+    <h1>⏱️ 20 CE1 Chronomaths challenges</h1>
+    <p>15 calculations per sheet · 3 minutes · your score and percentage at the end</p>
+  </header>
+
+  <section class="panel" id="menu">
+    <div class="settings">
+      <div>
+        <label for="series">Choose a Chronomaths challenge</label>
+        <div><select id="series"></select></div>
+      </div>
+      <button id="start" class="primary">Show calculations ▶</button>
+    </div>
+    <p class="intro">Choose a sheet from 1 to 20. The 3-minute timer only starts when you enter your first digit. For <strong>missing-number additions</strong>, type your answer directly <strong>in the gap</strong>. At the end, you will see your <strong>score out of 15</strong> and your <strong>success percentage</strong>.</p>
+  </section>
+
+  <section class="panel hide" id="game">
+    <div class="topline">
+      <h2 id="heading">Chronomaths 1</h2>
+      <div class="clock" id="clock" role="timer" aria-live="off">03:00</div>
+    </div>
+
+    <div class="tasks" id="tasks"></div>
+
+    <div class="controls">
+      <button id="finish" class="primary">Finish and check</button>
+      <button class="secondary" id="back">Back to the sheets</button>
+    </div>
+
+    <p class="note" id="note">Blank answers count as errors. You can change your answers until the time runs out.</p>
+
+    <div class="final hide" id="final" aria-live="polite">
+      <h3 id="finishTitle">Result</h3>
+      <div class="metrics">
+        <div class="metric">Score<strong id="score">0 / 15</strong></div>
+        <div class="metric">Success<strong id="percent">0 %</strong></div>
+      </div>
+      <p id="finalText"></p>
+      <div class="controls">
+        <button id="retry" class="primary">Try this sheet again</button>
+        <button class="tertiary" id="choose">Choose another challenge</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+const source = [
+['9|10','5|10','13|20','24|30','36|40','39|40','48|50','40|50','51|60','63|70','69|70','75|80','84|90','88|90','93|100'],
+['4+10','17+20','28+30','39+60','47+50','21-10','45-20','56-30','72-20','98-50','129+30','124-20','155+30','154-60','49+70'],
+['9+10','21+20','34+30','42+50','59+40','13-10','45-20','68-30','87-40','93-50','114+20','136-10','165+20','121-30','58+60'],
+['59+100','135+100','214+200','322+300','569+400','153-100','345-200','468-300','857-400','981-500','104+200','720-100','5+200','321-300','106-100'],
+['45+9','62+9','76+9','80+9','124+9','23+19','48+19','80+19','135+19','260+19','34+29','70+29','59+29','146+29','250+29'],
+['52+9','83+9','90+9','148+9','256+9','36+19','45+19','73+19','132+19','354+19','30+29','61+29','122+29','175+29','349+29'],
+['37+40','75-30','191-20','148+20','312+60','178-40','345-100','567-200','925-400','282+500','52+21','43+35','22+73','180+20','135-40'],
+['25+40','82-50','135-20','140+50','72+9','148-30','54+19','250-200','33+29','190+400','84+9','19+75','29+61','250+50','125-30'],
+['37+40','97-50','151-20','139+50','65+9','138-20','73+19','198-100','56+29','309+300','87+9','19+68','29+52','350+50','115-20'],
+['37+9','65+9','54+19','22+19','73+19','113+9','708+9','526+19','350+29','421+29','half:68','half:124','half:342','half:134','half:258'],
+['37+50','45+80','91-20','77-50','143+40','168-30','951-20','526+70','17*10','23*10','38*10','54*10','46*10','67*10','70*10'],
+['52+9','78+9','64+19','77+19','53+29','185+9','333+19','461+29','15*10','21*10','30*10','59*10','66*10','75*10','94*10'],
+['75+100','145+300','391-200','717-500','503+400','570-300','159+600','800-400','46-9','55-9','78-9','137-9','282-9','621-9','754-9'],
+['74+9','145+9','62+19','137+29','353+9','57-9','84-9','121-9','456-9','585-9','14*10','28*10','37*10','56*10','78*10'],
+['41-9','76-9','134-9','275-9','453-9','587-9','842-9','910-9','136-4','267-6','523-5','484-6','711-6','909-8','823-7'],
+['11*10','23*10','34*10','46*10','58*10','67*10','70*10','83*10','12*3','14*2','15*3','16*4','17*5','16*8','14*7'],
+['41+50','76+100','184-60','375-200','431+300','643+200','802+90','383-60','136-40','257+60','half:84','half:146','half:232','half:854','half:362'],
+['56-5','79-8','136-4','257-6','384-5','552-4','473-5','121-2','14*3','18*2','12*4','16*3','17*5','11*9','19*5'],
+['69-5','84-2','156-5','91-9','143-3','154-9','73-5','111-2','283-4','817-5','329-9','771-4','515-7','485-9','796-8'],
+['69+10','84-10','161+300','507-200','143+9','525+19','half:274','178-3','367-5','67*10','124-9','265-6','481-3','15*4','18*3']
+];
+
+const $ = id => document.getElementById(id);
+let timer = null, remaining = 180, active = false, done = false, current = 0;
+
+function parse(q){
+  if(q.startsWith('half:')){
+    const n = Number(q.slice(5));
+    return { type:'half', parts:['Half of ' + n + ' :'], answer:n/2, aria:'Half of ' + n };
+  }
+  if(q.includes('|')){
+    const [a,b] = q.split('|').map(Number);
+    return { type:'hole', before: a + ' +', after:'= ' + b, answer:b-a, aria: a + ' plus what equals ' + b };
+  }
+  const match = q.match(/^(\d+)([+*\-])(\d+)$/);
+  if(!match) throw Error('Unrecognised calculation: ' + q);
+  const a = +match[1], b = +match[3], op = match[2];
+  const sign = op === '*' ? '×' : (op === '-' ? '−' : '+');
+  const answer = op === '+' ? a+b : op === '-' ? a-b : a*b;
+  return { type:'classic', parts:[a + ' ' + sign, '='], answer, aria: a + ' ' + sign + ' ' + b, middle:b };
+}
+
+function stopClock(){ if(timer !== null){ clearInterval(timer); timer = null; } }
+
+function showClock(){
+  $('clock').textContent = String(Math.floor(remaining/60)).padStart(2,'0') + ':' + String(remaining%60).padStart(2,'0');
+  $('clock').classList.toggle('urgent', remaining <= 30);
+}
+
+function taskMarkup(parsed, i){
+  const id = 'answer-' + i;
+  if(parsed.type === 'hole'){
+    return `
+      <div class="expression" aria-label="${parsed.aria}">
+        <span class="chunk">${parsed.before}</span>
+        <input id="${id}" class="answer hole" type="number" inputmode="numeric" autocomplete="off" placeholder="?" aria-label="Fill in the missing number in ${parsed.aria}">
+        <span class="chunk">${parsed.after}</span>
+      </div>`;
+  }
+  if(parsed.type === 'half'){
+    return `
+      <div class="expression" aria-label="${parsed.aria}">
+        <span class="chunk">${parsed.parts[0]}</span>
+        <input id="${id}" class="answer" type="number" inputmode="numeric" autocomplete="off" placeholder="?" aria-label="Answer to ${parsed.aria}">
+      </div>`;
+  }
+  return `
+    <div class="expression" aria-label="${parsed.aria}">
+      <span class="chunk">${parsed.parts[0]}</span>
+      <span class="chunk">${parsed.middle}</span>
+      <span class="chunk">${parsed.parts[1]}</span>
+      <input id="${id}" class="answer" type="number" inputmode="numeric" autocomplete="off" placeholder="?" aria-label="Answer to ${parsed.aria}">
+    </div>`;
+}
+
+function clearGame(){
+  $('tasks').replaceChildren();
+  $('final').classList.add('hide');
+  $('finish').disabled = false;
+  $('finish').classList.remove('hide');
+}
+
+function start(){
+  stopClock();
+  current = Number($('series').value);
+  remaining = 180;
+  active = false;
+  done = false;
+  clearGame();
+  $('game').classList.remove('hide');
+  $('menu').classList.add('hide');
+  $('heading').textContent = 'Chronomaths ' + (current + 1);
+  $('note').textContent = 'The timer starts with your first digit. Blank answers count as errors.';
+  source[current].forEach((q,i)=>{
+    const parsed = parse(q);
+    const el = document.createElement('div');
+    el.className = 'task';
+    el.dataset.index = i;
+    el.innerHTML = taskMarkup(parsed, i);
+    $('tasks').append(el);
+  });
+  showClock();
+  $('clock').classList.add('waiting');
+  const first = $('answer-0');
+  if(first) first.focus({preventScroll:true});
+}
+
+function beginTimerOnFirstDigit(event){
+  if(done || active || !event.target.matches('.task input')) return;
+  if(!/[0-9]/.test(event.target.value)) return;
+  active = true;
+  $('clock').classList.remove('waiting');
+  $('note').textContent = 'The timer has started! You can change your answers until time runs out.';
+  timer = setInterval(()=>{
+    if(!active) return;
+    remaining = Math.max(0, remaining - 1);
+    showClock();
+    if(remaining === 0) finish(true);
+  },1000);
+}
+
+function finish(timeout){
+  if(done) return;
+  stopClock();
+  active = false;
+  done = true;
+  let good = 0;
+  source[current].forEach((q,i)=>{
+    const parsed = parse(q);
+    const input = $('answer-' + i);
+    const wrapper = input.closest('.task');
+    const ok = input.value.trim() !== '' && Number(input.value) === parsed.answer;
+    input.disabled = true;
+    wrapper.classList.add(ok ? 'correct' : 'incorrect');
+    if(ok){
+      good++;
+    } else {
+      const corr = document.createElement('span');
+      corr.className = 'result';
+      corr.textContent = '→ ' + parsed.answer;
+      wrapper.querySelector('.expression').append(corr);
+    }
+  });
+  $('score').textContent = good + ' / 15';
+  $('percent').textContent = Math.round(good/15*100) + ' %';
+  $('finishTitle').textContent = timeout ? 'Time is up!' : 'Chronomaths completed!';
+  $('finalText').textContent = (good === 15 ? 'Well done! All answers are correct.' : good >= 10 ? 'Well done! Keep practising to improve.' : 'Keep practising. Every attempt helps you improve.') + ' The correct answers appear next to calculations that need correcting.';
+  $('final').classList.remove('hide');
+  $('finish').classList.add('hide');
+  $('note').textContent = 'Your 15 corrected calculations are shown above.';
+  $('final').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function menu(){
+  stopClock();
+  active = false;
+  done = false;
+  $('menu').classList.remove('hide');
+  $('game').classList.add('hide');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+for(let i=0;i<source.length;i++){
+  if(source[i].length !== 15) throw Error('Sheet ' + (i+1) + ' : ' + source[i].length);
+  source[i].forEach(parse);
+  const option = document.createElement('option');
+  option.value = i;
+  option.textContent = 'Chronomaths ' + (i+1);
+  $('series').append(option);
+}
+
+$('start').addEventListener('click', start);
+$('tasks').addEventListener('input', beginTimerOnFirstDigit);
+$('finish').addEventListener('click', ()=>finish(false));
+$('back').addEventListener('click', menu);
+$('retry').addEventListener('click', start);
+$('choose').addEventListener('click', menu);
+
+document.addEventListener('keydown', e => {
+  if(e.key === 'Enter' && !done && e.target.matches('.task input')){
+    e.preventDefault();
+    const inputs = [...document.querySelectorAll('.task input')];
+    const i = inputs.indexOf(e.target);
+    if(i < inputs.length - 1) inputs[i+1].focus();
+    else $('finish').focus();
+  }
+});
+</script>
+</body>
+</html>
+

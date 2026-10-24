@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><base href="https://bleja972.github.io/differentes_representations_d_un_nombre/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Representations of numbers - CE1</title>
+<style>
+:root{--navy:#0f2747;--green:#2e8b57;--orange:#f28c28;--ink:#172033;--muted:#667085;--line:#d8dee8;--ok:#198754;--bad:#d92d20}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:linear-gradient(180deg,#fffaf3,#f8fbff)}
+.wrap{max-width:1100px;margin:0 auto;padding:22px 16px 40px}header{background:#fff;border:2px solid #ead9c5;border-radius:20px;padding:18px;box-shadow:0 8px 22px rgba(20,30,50,.06)}
+h1{margin:0;color:var(--navy);font-size:2rem}.sub{margin:8px 0 0;color:#475467;line-height:1.45}.levels{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.level{background:var(--navy);color:#fff;border:none;border-radius:12px;padding:11px 16px;font-size:1rem;font-weight:700;cursor:pointer}.level.active{background:var(--green)}
+.topline{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:14px}.badge{background:#f4f7fb;border:1px solid #d8dee8;border-radius:12px;padding:9px 12px;font-weight:700}
+.card{margin-top:18px;background:#fff;border:2px solid #dfe5ec;border-radius:20px;padding:20px;min-height:430px;box-shadow:0 8px 22px rgba(20,30,50,.05)}
+.kicker{color:#8a5a2d;font-weight:700;margin-bottom:6px}.question{font-size:1.1rem;font-weight:700;margin-bottom:16px}.representation{min-height:230px;display:flex;align-items:center;justify-content:center;padding:14px;background:#fbfcfe;border:2px dashed #d8dee8;border-radius:18px;overflow:auto}
+.answer-zone{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:center}.answer-zone label{font-weight:700;font-size:1.1rem}#answer{width:155px;height:58px;font-size:2rem;font-weight:800;text-align:center;color:#5a35a0;background:#fff;border:3px solid #7651b9;border-radius:12px;outline:none}#answer:focus{box-shadow:0 0 0 4px rgba(118,81,185,.14)}
+.action{border:none;border-radius:12px;padding:13px 18px;font-size:1rem;font-weight:700;cursor:pointer}.check{background:var(--orange);color:#fff}.next{background:var(--navy);color:#fff}.next:disabled{opacity:.4;cursor:not-allowed}.feedback{min-height:30px;margin-top:14px;text-align:center;font-size:1.08rem;font-weight:700}.good{color:var(--ok)}.wrong{color:var(--bad)}
+.words{font-size:2rem;font-weight:800;text-align:center;color:var(--navy);line-height:1.35}.place-table{border-collapse:collapse;font-size:1.7rem;text-align:center;min-width:380px}.place-table th,.place-table td{border:3px solid #26374d;padding:15px 26px}.place-table th{background:#eef4fb;font-size:1rem}.place-table th:first-child,.place-table td:first-child{background:#d8f3dc;color:#1b5e20}.place-table th:nth-child(2),.place-table td:nth-child(2){background:#fff3b0;color:#7a5d00}.place-table th:last-child,.place-table td:last-child{background:#ffd6d6;color:#8b1e1e}.place-table td{font-weight:800}.addition{font-size:2.1rem;font-weight:800;color:#2f3e55;text-align:center}
+.material{display:flex;gap:28px;flex-wrap:wrap;justify-content:center;align-items:flex-end}.mat-group{text-align:center;min-width:130px}.mat-label{font-weight:700;margin-bottom:8px}.hundreds{display:grid;grid-template-columns:repeat(2,52px);gap:7px;justify-content:center}.hundred{width:52px;height:52px;border:2px solid #c65c5c;border-radius:5px;background:linear-gradient(#f0b7b7 1px,transparent 1px),linear-gradient(90deg,#f0b7b7 1px,transparent 1px),#ffe5e5;background-size:10% 10%}.tens{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:120px}.ten{width:14px;height:78px;border:2px solid #3d8b63;border-radius:4px;background:repeating-linear-gradient(to bottom,#d9f2df 0 7px,#a9d9b6 7px 8px)}.units{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:100px}
+.quantity-groups{display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap}
+.quantity-pack{display:flex;align-items:flex-end;justify-content:center;gap:6px;flex-wrap:wrap}
+.quantity-pack.hundreds-pack{max-width:170px}
+.quantity-pack.tens-pack{max-width:120px}
+.quantity-pack.units-pack{max-width:110px}
+.disk-groups{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+.disk-pack{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:170px}.unit{width:18px;height:18px;border:2px solid #376ea6;background:#dceeff;border-radius:3px}
+.abacus{display:flex;gap:28px;align-items:flex-end;justify-content:center;padding:12px 20px 0;border-bottom:7px solid #725337;min-width:430px;margin-bottom:42px}.rod{position:relative;width:95px;height:180px;border-left:5px solid #9a704a}.rod-title{position:absolute;bottom:-43px;left:-27px;width:60px;text-align:center;font-weight:800;font-size:1.15rem}.beads{position:absolute;bottom:5px;left:-18px;display:flex;flex-direction:column-reverse;gap:3px}.bead{width:37px;height:15px;border-radius:999px;border:2px solid #3a506b;background:#b9d7f2}
+.text-rep{font-size:2rem;font-weight:800;text-align:center;color:#27364d;line-height:1.45}.disks{display:flex;gap:30px;flex-wrap:wrap;justify-content:center;align-items:flex-start}.disk-col{min-width:145px;text-align:center}.disk-title{font-weight:800;margin-bottom:10px}.disk-stack{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.disk{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;border:3px solid rgba(0,0,0,.18);box-shadow:inset 0 2px 0 rgba(255,255,255,.55)}.d100{background:#b7e4c7;color:#1b5e20}.d10{background:#ffe680;color:#7a5d00}.d1{background:#ffb4b4;color:#8b1e1e}.progress{height:10px;border-radius:999px;background:#e7ebf0;overflow:hidden;margin-top:14px}.progress>div{height:100%;background:var(--green);width:0;transition:width .25s}
+@media(max-width:700px){h1{font-size:1.6rem}.card{padding:14px}.representation{min-height:260px}.words,.addition,.text-rep{font-size:1.6rem}.place-table{min-width:300px}.place-table th,.place-table td{padding:12px 18px}.abacus{min-width:340px;gap:14px}}
+</style>
+</head>
+<body>
+<nav id="ce1-blog-navigation" aria-label="All games" style="position:relative;z-index:1000;display:flex;justify-content:center;padding:10px 14px;background:#173f30"><a href="/en/" target="_top" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:12px;background:#fff6cf;color:#173f30;font:700 17px/1.3 system-ui,sans-serif;text-decoration:none;min-height:46px;box-shadow:0 2px 5px #0002">🏠 All games</a></nav>
+
+<div class="wrap"><header><h1>Different ways to represent a number</h1><p class="sub">Look at the representation and write the number in digits. Numbers range from <strong>60 to 999</strong>.</p>
+<div class="levels"><button class="level active" data-level="1">Level 1</button><button class="level" data-level="2">Level 2</button><button class="level" data-level="3">Level 3</button><button class="level" id="restartBtn" type="button">New game</button></div>
+<div class="topline"><div class="badge" id="rangeBadge">Numbers: 60 to 199</div><div class="badge" id="qBadge">Question 1 / 10</div><div class="badge" id="scoreBadge">Score : 0</div></div><div class="progress"><div id="progressBar"></div></div></header>
+<main class="card"><div class="kicker" id="modeName"></div><div class="question">Which number is represented?</div><div class="representation" id="representation"></div>
+<div class="answer-zone"><label for="answer">Answer:</label><input id="answer" inputmode="numeric" maxlength="3" autocomplete="off" aria-label="Write the number en chiffres"><button class="action check" id="checkBtn">Check</button><button class="action next" id="nextBtn" disabled>Next question</button></div><div class="feedback" id="feedback" aria-live="polite"></div></main></div>
+<script>function enNumber(n){if(n<0)return 'minus '+enNumber(-n);const ones=['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];if(n<20)return ones[n];if(n<100)return ['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'][Math.floor(n/10)]+(n%10?'-'+ones[n%10]:'');if(n<1000)return ones[Math.floor(n/100)]+' hundred'+(n%100?' and '+enNumber(n%100):'');if(n===1000)return 'one thousand';return String(n)}
+
+const ranges={1:[60,199],2:[100,599],3:[100,999]};const modes=[{id:'words',name:"Number in words"},{id:'table',name:"Place-value chart"},{id:'addition',name:"Additive partition"},{id:'material',name:"Base-ten blocks"},{id:'abacus',name:"Abacus"},{id:'short',name:"Hundreds, tens and ones: abbreviations"},{id:'verbal',name:"Hundreds, tens and ones: words"},{id:'disks',name:"Place-value counters"}];let level=1,questionIndex=0,score=0,current=null,usedNumbers=new Set(),previousRoundNumbers=new Set(),audioCtx=null;
+const rep=document.getElementById('representation'),answer=document.getElementById('answer'),feedback=document.getElementById('feedback'),nextBtn=document.getElementById('nextBtn'),checkBtn=document.getElementById('checkBtn'),modeName=document.getElementById('modeName'),qBadge=document.getElementById('qBadge'),scoreBadge=document.getElementById('scoreBadge'),rangeBadge=document.getElementById('rangeBadge'),progressBar=document.getElementById('progressBar');
+function randint(a,b){return Math.floor(Math.random()*(b-a+1))+a}function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}function getNumber(){
+  const [lo,hi]=ranges[level];
+  // Priorité aux nombres jamais vus dans la partie précédente.
+  for(let i=0;i<1000;i++){
+    const n=randint(lo,hi);
+    if(!usedNumbers.has(n) && !previousRoundNumbers.has(n)){
+      usedNumbers.add(n);
+      return n;
+    }
+  }
+  // Sécurité : si la plage est trop petite, on évite au moins les doublons dans la partie en cours.
+  for(let i=0;i<1000;i++){
+    const n=randint(lo,hi);
+    if(!usedNumbers.has(n)){
+      usedNumbers.add(n);
+      return n;
+    }
+  }
+  return randint(lo,hi);
+}function digits(n){return{c:Math.floor(n/100),d:Math.floor((n%100)/10),u:n%10}}
+const ones=["zero","one","two","three","four","five",'six',"seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen"];const tensWords={20:"twenty",30:"thirty",40:"forty",50:"fifty",60:"sixty"};
+function under100(n){return enNumber(n)}
+function numberToWords(n){return enNumber(n)}
+function renderWords(n){rep.innerHTML=`<div class="words">${numberToWords(n)}</div>`}function renderTable(n){const{c,d,u}=digits(n);rep.innerHTML=`<table class="place-table"><tr><th>Hundreds</th><th>Tens</th><th>Ones</th></tr><tr><td>${c}</td><td>${d}</td><td>${u}</td></tr></table>`}function renderAddition(n){const{c,d,u}=digits(n);let p=[];if(c)p.push(c*100);if(d)p.push(d*10);if(u)p.push(u);p=shuffle(p);rep.innerHTML=`<div class="addition">${p.join(' + ')}</div>`}
+function groupedItems(count,itemHtml,packClass){
+  if(count===0)return '—';
+  const make=n=>Array.from({length:n},()=>itemHtml).join('');
+  if(count>5){
+    return `<div class="quantity-groups"><div class="quantity-pack ${packClass}">${make(5)}</div><div class="quantity-pack ${packClass}">${make(count-5)}</div></div>`;
+  }
+  return `<div class="quantity-pack ${packClass}">${make(count)}</div>`;
+}
+function renderMaterial(n){
+  const{c,d,u}=digits(n);
+  const h=groupedItems(c,'<span class="hundred"></span>','hundreds-pack');
+  const t=groupedItems(d,'<span class="ten"></span>','tens-pack');
+  const un=groupedItems(u,'<span class="unit"></span>','units-pack');
+  rep.innerHTML=`<div class="material"><div class="mat-group"><div class="mat-label">Hundreds</div>${h}</div><div class="mat-group"><div class="mat-label">Tens</div>${t}</div><div class="mat-group"><div class="mat-label">Ones</div>${un}</div></div>`;
+}
+function rod(letter,count,color){return`<div class="rod"><div class="beads">${Array.from({length:count},()=>`<span class="bead" style="background:${color}"></span>`).join('')}</div><div class="rod-title">${letter}</div></div>`}function renderAbacus(n){const{c,d,u}=digits(n);rep.innerHTML=`<div class="abacus">${rod('H',c,'#ffc8c8')}${rod('T',d,'#c9efd3')}${rod('O',u,'#c8ddff')}</div>`}
+function renderShort(n){
+const{c,d,u}=digits(n);
+let parts;
+if(level===3&&Math.random()<.45){
+  parts=[`${Math.floor(n/10)}T`,`${n%10}O`];
+}else if(level>=2&&Math.random()<.30&&d>0){
+  parts=[`${c}H`,`${d-1}T`,`${u+10}O`];
+}else{
+  parts=[`${c}H`,`${d}T`,`${u}O`];
+}
+parts=shuffle(parts);
+rep.innerHTML=`<div class="text-rep">${parts.join(', ')}</div>`
+}function renderVerbal(n){const{c,d,u}=digits(n),p=[];if(c)p.push(`${c} ${c===1?"hundred":"hundreds"}`);if(d)p.push(`${d} ${d===1?"ten":"tens"}`);if(u)p.push(`${u} ${u===1?"one":"ones"}`);rep.innerHTML=`<div class="text-rep">${p.join(', ')}</div>`}
+function diskGroups(count,cls,label){
+  if(count===0)return '—';
+  const make=n=>Array.from({length:n},()=>`<span class="disk ${cls}">${label}</span>`).join('');
+  if(count>5){
+    return `<div class="disk-groups"><div class="disk-pack">${make(5)}</div><div class="disk-pack">${make(count-5)}</div></div>`;
+  }
+  return `<div class="disk-pack">${make(count)}</div>`;
+}
+function renderDisks(n){
+  const{c,d,u}=digits(n);
+  rep.innerHTML=`<div class="disks"><div class="disk-col"><div class="disk-title">Hundreds</div>${diskGroups(c,'d100','100')}</div><div class="disk-col"><div class="disk-title">Tens</div>${diskGroups(d,'d10','10')}</div><div class="disk-col"><div class="disk-title">Ones</div>${diskGroups(u,'d1','1')}</div></div>`;
+}
+const renderers={words:renderWords,table:renderTable,addition:renderAddition,material:renderMaterial,abacus:renderAbacus,short:renderShort,verbal:renderVerbal,disks:renderDisks};
+function newQuestion(){if(questionIndex>=10){finishRound();return}answer.value='';answer.disabled=false;checkBtn.disabled=false;nextBtn.disabled=true;feedback.textContent='';const n=getNumber(),mode=modes[questionIndex%modes.length];current={n,mode};modeName.textContent=mode.name;renderers[mode.id](n);qBadge.textContent=`Question ${questionIndex+1} / 10`;scoreBadge.textContent=`Score : ${score}`;progressBar.style.width=`${questionIndex*10}%`;answer.focus()}
+function finishRound(){rep.innerHTML=`<div class="text-rep">Round complete!<br><span style="font-size:2.4rem;color:#198754">${score} / 10</span></div>`;modeName.textContent="Result";feedback.innerHTML=score>=8?"<span class=\"good\">Well done, excellent work!</span>":"<span>Play again to improve your score.</span>";answer.disabled=true;checkBtn.disabled=true;nextBtn.disabled=true;qBadge.textContent="10 questions completed";progressBar.style.width='100%'}
+function getAudio(){const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return null;if(!audioCtx)audioCtx=new AC();if(audioCtx.state==='suspended')audioCtx.resume();return audioCtx}function beep(){const ctx=getAudio();if(!ctx)return;[0,.2].forEach((t,i)=>{const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=i?410:560;g.gain.setValueAtTime(.0001,ctx.currentTime+t);g.gain.exponentialRampToValueAtTime(.18,ctx.currentTime+t+.01);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+t+.16);o.connect(g);g.connect(ctx.destination);o.start(ctx.currentTime+t);o.stop(ctx.currentTime+t+.19)})}function check(){if(!current)return;const raw=answer.value.trim();if(raw===''){feedback.innerHTML="<span class=\"wrong\">Write your answer first.</span>";beep();return}const val=Number(raw);if(val===current.n){feedback.innerHTML="<span class=\"good\">Well done! That is correct.</span>";score++;scoreBadge.textContent=`Score : ${score}`}else{feedback.innerHTML=`<span class="wrong">Not quite. The correct answer is ${current.n}.</span>`;beep()}answer.disabled=true;checkBtn.disabled=true;nextBtn.disabled=false}
+function startNewRound(){
+  previousRoundNumbers = new Set(usedNumbers);
+  usedNumbers.clear();
+  questionIndex=0;
+  score=0;
+  scoreBadge.textContent='Score : 0';
+  progressBar.style.width='0%';
+  newQuestion();
+}
+checkBtn.addEventListener('click',check);nextBtn.addEventListener('click',()=>{questionIndex++;newQuestion()});answer.addEventListener('keydown',e=>{if(e.key==='Enter'&&!checkBtn.disabled)check()});document.querySelectorAll('.level[data-level]').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.level[data-level]').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  previousRoundNumbers = new Set(usedNumbers);
+  usedNumbers.clear();
+  level=Number(btn.dataset.level);
+  const[lo,hi]=ranges[level];
+  rangeBadge.textContent=`Numbers: ${lo} to ${hi}`;
+  questionIndex=0;
+  score=0;
+  newQuestion();
+}));
+const restartBtn=document.getElementById('restartBtn');
+if(restartBtn) restartBtn.addEventListener('click',startNewRound);
+newQuestion();
+</script></body></html>
+
