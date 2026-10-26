@@ -33,7 +33,7 @@ const topButton=$('.floating-top');addEventListener('scroll',()=>{if(topButton)t
 if(document.body.dataset.page!=='catalog')return;
 const initial={niveau:'CE1',matiere:document.body.dataset.subject||'toutes',domaine:document.body.dataset.group||'tous',competence:'toutes',q:'',collection:'tous',tri:'selection'};
 const validCollections=['tous','nouveautes','semaine','favoris'];
-const groupNames={numeration:'Numération',mental:'Calcul mental',pose:'Calcul posé',problemes:'Problèmes',lecture:'Lecture',orthographe:'Orthographe et dictées',grammaire:'Grammaire',vocabulaire:'Vocabulaire',ecriture:'Production d’écrit'};
+const groupNames={numeration:'Numération',mental:'Calcul mental',pose:'Calcul posé',geometrie:'Géométrie',problemes:'Problèmes',lecture:'Lecture',orthographe:'Orthographe et dictées',grammaire:'Grammaire',vocabulaire:'Vocabulaire',ecriture:'Production d’écrit'};
 const controls={niveau:$('#level-filter'),matiere:$('#subject-filter'),domaine:$('#group-filter'),competence:$('#skill-filter'),q:$('#game-search'),tri:$('#sort-filter')};
 const cardNodes=$$('[data-game]',$('#game-grid'));const cardMap=new Map(cardNodes.map(n=>[n.dataset.game,n]));
 function readState(){
@@ -124,7 +124,7 @@ function updateSidebarCounts(){
   const description=label+' : '+count+' jeu'+(count===1?'':'x');link.setAttribute('aria-label',description);link.title=description;
  });
 }
-fetch('/assets/catalogue-v2/catalogue.json?v=20261026-calcul-pop-ce2').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;updateSidebarCounts();state=readState();render();}).catch(()=>{
+fetch('/assets/catalogue-v2/catalogue.json?v=20261026-geometrie-ce1').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;updateSidebarCounts();state=readState();render();}).catch(()=>{
  toast('Les filtres sont indisponibles. Tous les liens vers les jeux restent accessibles.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();
