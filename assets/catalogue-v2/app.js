@@ -114,7 +114,17 @@ $('#apply-filters').addEventListener('click',e=>{e.preventDefault();$('#filter-p
 $('#show-more').addEventListener('click',()=>{const prior=shown;shown+=12;render();const games=filteredGames();const first=cardMap.get(games[prior]?.id);const link=$('h3 a',first||document.createElement('div'));link?.focus({preventScroll:true});});
 document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();controls.q.focus();$('#catalogue').scrollIntoView({block:'start'});}});
 addEventListener('popstate',()=>{state=readState();shown=12;render();});
-fetch('/assets/catalogue-v2/catalogue.json').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;state=readState();render();}).catch(()=>{
+function updateSidebarCounts(){
+ const totals={};catalog.forEach(game=>{totals[game.group]=(totals[game.group]||0)+1;});
+ $$('[data-group-link]').forEach(link=>{
+  const group=link.dataset.groupLink,count=totals[group]||0,label=groupNames[group]||link.textContent.trim();
+  let badge=$('.side-game-count',link);
+  if(!badge){badge=document.createElement('span');badge.className='side-game-count';badge.setAttribute('aria-hidden','true');link.append(badge);}
+  badge.textContent=String(count);
+  const description=label+' : '+count+' jeu'+(count===1?'':'x');link.setAttribute('aria-label',description);link.title=description;
+ });
+}
+fetch('/assets/catalogue-v2/catalogue.json').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;updateSidebarCounts();state=readState();render();}).catch(()=>{
  toast('Les filtres sont indisponibles. Tous les liens vers les jeux restent accessibles.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();
