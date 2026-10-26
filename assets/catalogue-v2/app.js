@@ -46,10 +46,10 @@ function readState(){
  if(s.competence!=='toutes'&&!catalog.some(g=>g.skill===s.competence))s.competence='toutes';
  return s;
 }
-function writeState(){
+function writeState(replace=false){
  const url=new URL(location.href);url.search='';
  Object.keys(state).forEach(k=>{if(state[k]!==initial[k])url.searchParams.set(k,state[k])});
- const target=url.pathname+url.search+url.hash;if(target!==location.pathname+location.search+location.hash)history.pushState(null,'',target);
+ const target=url.pathname+url.search+url.hash;if(target!==location.pathname+location.search+location.hash)(replace?history.replaceState.bind(history):history.pushState.bind(history))(null,'',target);
 }
 function syncControls(){
  for(const k of ['niveau','matiere','domaine','q','tri'])controls[k].value=state[k];
@@ -90,12 +90,12 @@ function render(){
  $('.weekly-section')?.toggleAttribute('hidden',state.collection!=='tous'||state.q!==''||state.matiere!=='toutes'||state.domaine!=='tous'||state.niveau!=='CE1');
  updateFavorites();
 }
-function change(patch,{scroll=false,reset=false}={}){
- state=reset?{...initial,niveau:'tous',matiere:'toutes',domaine:'tous',competence:'toutes',...patch}:{...state,...patch};shown=12;syncControls();writeState();render();if(scroll)$('#catalogue').scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+function change(patch,{scroll=false,reset=false,replace=false}={}){
+ state=reset?{...initial,niveau:'tous',matiere:'toutes',domaine:'tous',competence:'toutes',...patch}:{...state,...patch};shown=12;syncControls();writeState(replace);render();if(scroll)$('#catalogue').scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
 }
 function reset(){change({}, {reset:true});}
 for(const [key,el] of Object.entries(controls)){
- if(key==='q'){let timer;el.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(()=>change({q:el.value}),120)});}
+ if(key==='q'){el.addEventListener('input',()=>change({q:el.value},{replace:true}));}
  else el.addEventListener('change',()=>{
   const patch={[key]:el.value};if(['niveau','matiere','domaine'].includes(key))patch.competence='toutes';
   if(key==='matiere')patch.domaine='tous';
