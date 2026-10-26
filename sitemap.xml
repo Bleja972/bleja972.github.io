@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://bleja972.github.io/</loc></url>
   <url><loc>https://bleja972.github.io/activites/dizaines-entieres/</loc></url>
   <url><loc>https://bleja972.github.io/activites/soustraire-a-10/</loc></url>
+  <url><loc>https://bleja972.github.io/competences/ecriture/</loc></url>
+  <url><loc>https://bleja972.github.io/competences/grammaire/</loc></url>
+  <url><loc>https://bleja972.github.io/competences/lecture/</loc></url>
+  <url><loc>https://bleja972.github.io/competences/mental/</loc></url>
+  <url><loc>https://bleja972.github.io/competences/numeration/</loc></url>
+  <url><loc>https://bleja972.github.io/competences/orthographe/</loc></url>
+  <url><loc>https://bleja972.github.io/competences/pose/</loc></url>
+  <url><loc>https://bleja972.github.io/competences/problemes/</loc></url>
+  <url><loc>https://bleja972.github.io/competences/vocabulaire/</loc></url>
+  <url><loc>https://bleja972.github.io/en/</loc></url>
   <url><loc>https://bleja972.github.io/en/games/add-and-subtract-tens/</loc></url>
   <url><loc>https://bleja972.github.io/en/games/add-gain-move-forward/</loc></url>
   <url><loc>https://bleja972.github.io/en/games/addition-by-bridging-10/</loc></url>
@@ -49,11 +60,87 @@
   <url><loc>https://bleja972.github.io/en/games/word-problems-term-1/</loc></url>
   <url><loc>https://bleja972.github.io/en/games/word-problems-term-2/</loc></url>
   <url><loc>https://bleja972.github.io/en/games/word-problems-with-bar-models-workshop-4/</loc></url>
-  <url><loc>https://bleja972.github.io/en/</loc></url>
-  <url><loc>https://bleja972.github.io/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/additions-avec-echanges-jetons-3d/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/additions-avec-passage-par-10/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/additions-posees-avec-echanges/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/additions-posees-sans-echange/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/ajouter-et-soustraire-des-dizaines/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/ajouter-gagner-avancer/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/ateliers-problemes-ce2/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/bulles-de-corail-pairs-et-impairs/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/bulles-en-duo-comparer-les-nombres/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/calcul-mental-cp/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/calcul-mental-periode-1/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/calcul-mental-periode-2/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/chronomaths-ce1-20-defis/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/chronomaths-ce2-20-defis/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/comparer-deux-nombres/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/comparer-deux-quantites/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/complements-a-1-000-la-course-de-la-sorciere/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/complements-a-1-000-le-defi-de-laraignee/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/complements-a-10-100-et-1-000/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/complements-a-10-la-course-de-la-sorciere/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/complements-a-10-le-defi-de-laraignee/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/complements-a-100-la-course-de-la-sorciere/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/complements-a-100-le-defi-de-laraignee/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/completer-des-suites/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/composer-et-decomposer/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/compter-de-plusieurs-facons/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/decomposer-un-nombre/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/denombrer-une-collection/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/dictee-5-les-mots-en-images/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/dictee-5-les-phrases-a-completer/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/dictee-de-nombres/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/dictees-1-a-6-periode-1/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/dictees-periode-2/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/grammaire-periode-1/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/happy-halloween-complements-a-1-000/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/happy-halloween-complements-a-10/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/happy-halloween-complements-a-100/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/je-revois-les-nombres-jusqua-1000/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/la-course-des-calculs/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/la-droite-graduee-mystere/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/latelier-des-souris/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/le-defi-de-la-droite-graduee/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/le-grain-de-riz-aide-dys/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/le-tour-du-monde-en-80-jours-complements-a-1-000/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/lecture-et-comprehension/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/les-complements-a-10/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/les-doubles/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/les-mots-en-images/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/les-petites-additions/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/les-poissons-des-nombres/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/les-presque-doubles/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/les-representations-des-nombres/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/lile-mysterieuse-soustractions/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/lire-et-ecrire-les-nombres/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/mission-abysses-additions-de-11-a-19/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/mission-mars-additions-de-11-a-19/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/mission-nautilus-complements-a-100/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/ordonner-les-nombres/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/orthographe-periode-1/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/problemes-avec-modeles-en-barres-atelier-4/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/problemes-periode-1/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/problemes-periode-2/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/ranger-des-nombres/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/recomposer-un-nombre/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/reconnaitre-les-nombres-pairs-et-impairs/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/resoudre-en-deux-etapes/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/soustractions-avec-le-materiel-de-numeration/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/soustractions-par-cassage/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/soustraire-perdre-reculer/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/soustraire-un-nombre-a-10/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/suites-de-nombres/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/trouver-le-tout/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/trouver-une-partie/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/vocabulaire-periode-1/</loc></url>
+  <url><loc>https://bleja972.github.io/fiches/voyage-au-centre-de-la-terre-les-presque-doubles/</loc></url>
+  <url><loc>https://bleja972.github.io/imprimer/</loc></url>
   <url><loc>https://bleja972.github.io/jeux/additions-abysses-11-19/</loc></url>
   <url><loc>https://bleja972.github.io/jeux/additions-posees-avec-retenue-ce1/</loc></url>
   <url><loc>https://bleja972.github.io/jeux/additions-posees-sans-echange-ce1/</loc></url>
+  <url><loc>https://bleja972.github.io/jeux/bulles-de-corail-pairs-impairs/</loc></url>
+  <url><loc>https://bleja972.github.io/jeux/bulles-en-duo-comparer-nombres/</loc></url>
   <url><loc>https://bleja972.github.io/jeux/calcul-mental-cp/</loc></url>
   <url><loc>https://bleja972.github.io/jeux/calcul-mental-periode-1/</loc></url>
   <url><loc>https://bleja972.github.io/jeux/calcul-mental-periode-2/</loc></url>
@@ -113,6 +200,7 @@
   <url><loc>https://bleja972.github.io/jeux/suites-de-nombres/</loc></url>
   <url><loc>https://bleja972.github.io/jeux/tour-du-monde-complements-1000/</loc></url>
   <url><loc>https://bleja972.github.io/jeux/vocabulaire-periode-1/</loc></url>
-  <url><loc>https://bleja972.github.io/jeux/bulles-de-corail-pairs-impairs/</loc></url>
-  <url><loc>https://bleja972.github.io/jeux/bulles-en-duo-comparer-nombres/</loc></url>
+  <url><loc>https://bleja972.github.io/matieres/francais/</loc></url>
+  <url><loc>https://bleja972.github.io/matieres/mathematiques/</loc></url>
+  <url><loc>https://bleja972.github.io/parents/</loc></url>
 </urlset>
