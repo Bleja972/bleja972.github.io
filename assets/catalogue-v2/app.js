@@ -35,6 +35,7 @@ const initial={niveau:'CE1',matiere:document.body.dataset.subject||'toutes',doma
 const validCollections=['tous','nouveautes','semaine','favoris'];
 const groupNames={numeration:'Numération',mental:'Calcul mental',pose:'Calcul posé',geometrie:'Géométrie',problemes:'Problèmes',lecture:'Lecture',orthographe:'Orthographe et dictées',grammaire:'Grammaire',vocabulaire:'Vocabulaire',ecriture:'Production d’écrit'};
 const controls={niveau:$('#level-filter'),matiere:$('#subject-filter'),domaine:$('#group-filter'),competence:$('#skill-filter'),q:$('#game-search'),tri:$('#sort-filter')};
+if(!document.querySelector('[data-game="jeu-78"]'))$('#game-grid').insertAdjacentHTML('afterbegin',"<article class=\"game-card\" data-game=\"jeu-78\"><div class=\"game-cover\"><button class=\"capture-button\" type=\"button\" data-preview data-src=\"/assets/catalogue-v2/captures/jeu-78.webp\" data-title=\"Les formes autour de nous\" data-game-url=\"https://bleja972.github.io/jeux/formes-autour-de-nous/\" aria-label=\"Agrandir la capture du jeu Les formes autour de nous\"><img src=\"/assets/catalogue-v2/captures/jeu-78.webp\" alt=\"Jeu de reconnaissance des formes avec un objet du quotidien et quatre réponses.\" width=\"950\" height=\"800\" loading=\"lazy\"><span class=\"capture-zoom\" aria-hidden=\"true\">Agrandir ⛶</span></button><div class=\"cover-badges\"><span class=\"badge new\">Nouveau</span></div><button class=\"game-fav\" data-favorite=\"jeu-78\" aria-label=\"Ajouter Les formes autour de nous aux favoris\" aria-pressed=\"false\">♡</button></div><div class=\"game-info\"><div class=\"card-meta\">CE1 · Géométrie</div><h3><a href=\"/jeux/formes-autour-de-nous/\">Les formes autour de nous</a></h3><p>36 objets à observer pour reconnaître carré, rectangle, cercle et triangle.</p><div class=\"card-actions\"><a class=\"play\" href=\"https://bleja972.github.io/jeux/formes-autour-de-nous/\" target=\"_blank\" rel=\"noopener\" data-goatcounter-click=\"jouer-formes-autour-de-nous\" data-goatcounter-title=\"Jouer : Les formes autour de nous\">Jouer ↗</a></div></div></article>");
 const cardNodes=$$('[data-game]',$('#game-grid'));const cardMap=new Map(cardNodes.map(n=>[n.dataset.game,n]));
 function readState(){
  const p=new URLSearchParams(location.search),s={...initial};Object.keys(s).forEach(k=>{if(p.has(k))s[k]=p.get(k)});
@@ -124,7 +125,7 @@ function updateSidebarCounts(){
   const description=label+' : '+count+' jeu'+(count===1?'':'x');link.setAttribute('aria-label',description);link.title=description;
  });
 }
-fetch('/assets/catalogue-v2/catalogue.json?v=20261026-geometrie-ce1').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;updateSidebarCounts();state=readState();render();}).catch(()=>{
+fetch('/assets/catalogue-v2/catalogue.json?v=20261026-formes-36').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;updateSidebarCounts();state=readState();render();}).catch(()=>{
  toast('Les filtres sont indisponibles. Tous les liens vers les jeux restent accessibles.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();
