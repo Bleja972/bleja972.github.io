@@ -1,5 +1,29 @@
 [
   {
+    "id": "jeu-89",
+    "title": "Les tables enchantées CE2",
+    "url": "https://bleja972.github.io/jeux/tables-enchantees-ce2/",
+    "path": "/jeux/tables-enchantees-ce2/",
+    "description": "Entraîne-toi aux tables de 1 à 10 dans une forêt magique avec des bulles rapides et un son à chaque bonne réponse.",
+    "weekly": false,
+    "new": true,
+    "category": "calcul",
+    "level": "CE2",
+    "levels": [
+      "CE2"
+    ],
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "skill": "tables-1-10",
+    "skillName": "Mémoriser les tables de multiplication",
+    "slug": "tables-enchantees-ce2",
+    "objective": "Mémoriser les tables de multiplication de 1 à 10 et répondre rapidement.",
+    "short": "Toutes les tables de 1 à 10 et les tables mélangées dans une forêt magique.",
+    "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
+    "imageAlt": "Bulle de multiplication dans une forêt magique, devant un château au bord du lac."
+  },
+  {
     "id": "jeu-88",
     "title": "Problèmes CP — Barres à compléter",
     "url": "https://bleja972.github.io/jeux/problemes-cp-barres-a-completer/",
