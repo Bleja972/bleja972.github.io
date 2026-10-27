@@ -1,5 +1,29 @@
 [
   {
+    "id": "jeu-87",
+    "title": "Problèmes CP — Période 1",
+    "url": "https://bleja972.github.io/jeux/problemes-cp-periode-1/",
+    "path": "/jeux/problemes-cp-periode-1/",
+    "description": "Résous 42 problèmes CP avec des modèles en barres et écoute les énoncés.",
+    "weekly": false,
+    "new": true,
+    "category": "problemes",
+    "level": "CP",
+    "levels": [
+      "CP"
+    ],
+    "subject": "Mathématiques",
+    "group": "problemes",
+    "groupName": "Problèmes",
+    "skill": "problemes",
+    "skillName": "Résoudre des problèmes",
+    "slug": "problemes-cp-periode-1",
+    "objective": "Résoudre des problèmes additifs et soustractifs à l’aide de modèles en barres.",
+    "short": "42 problèmes à résoudre avec des modèles en barres et une lecture des énoncés.",
+    "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-1.svg",
+    "imageAlt": "Modèle en barres pour trouver les carottes manquantes."
+  },
+  {
     "id": "jeu-86",
     "title": "Problèmes CP — Période 2",
     "url": "https://bleja972.github.io/jeux/problemes-cp-periode-2/",
