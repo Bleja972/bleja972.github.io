@@ -1,5 +1,29 @@
 [
   {
+    "id": "jeu-91",
+    "title": "Chronomaths enchantés CE1",
+    "url": "https://bleja972.github.io/jeux/chronomaths-enchantes-ce1/",
+    "path": "/jeux/chronomaths-enchantes-ce1/",
+    "description": "Réussis 15 calculs en 3 minutes dans une forêt enchantée. Les bulles ratées reviennent et les bonnes réponses font éclater les bulles.",
+    "weekly": false,
+    "new": true,
+    "category": "calculs",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "skill": "calcul-mental",
+    "skillName": "Calcul mental varié",
+    "slug": "chronomaths-enchantes-ce1",
+    "objective": "S’entraîner aux calculs de Chronomaths en trois minutes.",
+    "short": "20 séries de 15 calculs dans la forêt enchantée, avec retour des calculs ratés.",
+    "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
+    "imageAlt": "Une forêt enchantée avec un château et des bulles de calcul."
+  },
+  {
     "id": "jeu-90",
     "title": "Chronomaths galactiques CE2",
     "url": "https://bleja972.github.io/jeux/chronomaths-galactiques-ce2/",
