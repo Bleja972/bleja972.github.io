@@ -1,5 +1,29 @@
 [
   {
+    "id": "jeu-88",
+    "title": "Problèmes CP — Barres à compléter",
+    "url": "https://bleja972.github.io/jeux/problemes-cp-barres-a-completer/",
+    "path": "/jeux/problemes-cp-barres-a-completer/",
+    "description": "Place les nombres et le point d’interrogation dans les modèles en barres pour résoudre 18 problèmes.",
+    "weekly": false,
+    "new": true,
+    "category": "problemes",
+    "level": "CP",
+    "levels": [
+      "CP"
+    ],
+    "subject": "Mathématiques",
+    "group": "problemes",
+    "groupName": "Problèmes",
+    "skill": "problemes",
+    "skillName": "Résoudre des problèmes",
+    "slug": "problemes-cp-barres-a-completer",
+    "objective": "Construire un modèle en barres pour résoudre un problème.",
+    "short": "Place les nombres et le point d’interrogation dans les barres.",
+    "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-2.svg",
+    "imageAlt": "Modèle en barres à compléter pour résoudre un problème."
+  },
+  {
     "id": "jeu-87",
     "title": "Problèmes CP — Période 1",
     "url": "https://bleja972.github.io/jeux/problemes-cp-periode-1/",
