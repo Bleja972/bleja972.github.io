@@ -1,5 +1,29 @@
 [
   {
+    "id": "jeu-90",
+    "title": "Chronomaths galactiques CE2",
+    "url": "https://bleja972.github.io/jeux/chronomaths-galactiques-ce2/",
+    "path": "/jeux/chronomaths-galactiques-ce2/",
+    "description": "Résous 20 calculs en 3 minutes : les bulles ratées reviennent dans cette aventure spatiale CE2.",
+    "weekly": false,
+    "new": true,
+    "category": "calcul-mental-ce2",
+    "level": "CE2",
+    "levels": [
+      "CE2"
+    ],
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "skill": "calcul-mental",
+    "skillName": "Calcul mental varié",
+    "slug": "chronomaths-galactiques-ce2",
+    "objective": "S’entraîner aux calculs de Chronomaths en trois minutes.",
+    "short": "20 séries de 20 calculs : les bulles ratées reviennent avant la fin du chrono.",
+    "thumb": "/assets/catalogue-v2/captures/jeu-82.webp",
+    "imageAlt": "Une bulle de calcul dans un décor spatial."
+  },
+  {
     "id": "jeu-89",
     "title": "Les tables enchantées CE2",
     "url": "https://bleja972.github.io/jeux/tables-enchantees-ce2/",
