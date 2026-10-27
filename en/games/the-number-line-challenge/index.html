@@ -164,7 +164,7 @@ h1{margin:4px 0 0;color:var(--blue);font-size:clamp(28px,7vw,45px)}
   .app{box-shadow:0 0 35px rgba(0,0,0,.16)}
 }
 </style>
-</head>
+<style id="decouvrir-autre-jeu-style">.decouvrir-autre-jeu{margin:20px 0 8px;padding:16px;border:2px solid #cde9dc;border-radius:16px;background:#f0faf3;color:#163f31;text-align:center;font-family:Arial,sans-serif}.decouvrir-autre-jeu strong{display:block;font-size:17px;line-height:1.35;margin-bottom:6px}.decouvrir-autre-jeu span{display:block;font-size:15px;margin-bottom:11px}.decouvrir-autre-jeu a{display:inline-block;background:#f9bb3d!important;color:#332300!important;border:2px solid #b97b10;border-radius:11px;padding:10px 15px;font-weight:800;text-decoration:none;box-shadow:0 3px 0 #ac750f}.decouvrir-autre-jeu a:focus-visible{outline:3px solid #1769aa;outline-offset:3px}[data-end]>.panel{max-height:95%;overflow-y:auto}</style></head>
 <body><nav aria-label="English games" style="display:flex;justify-content:center;padding:10px;background:#173f30"><a href="/en/" style="padding:10px 18px;border-radius:12px;background:#fff6cf;color:#173f30;text-decoration:none;font:bold 17px Arial,sans-serif">🏠 All games</a></nav>
 <div class="app">
 <header>
@@ -228,7 +228,7 @@ h1{margin:4px 0 0;color:var(--blue);font-size:clamp(28px,7vw,45px)}
     <button class="startBtn" id="replayBtn">🎮 PLAY AGAIN</button>
     <button class="secondary" id="homeBtn">Change level</button>
   </div>
-</section>
+<div class="decouvrir-autre-jeu"><strong>Ready for another game?</strong><span>The mystery number line</span><a href="/en/games/the-mystery-number-line/">Discover this game →</a></div></section>
 </div>
 
 <script>function enNumber(n){if(n<0)return 'minus '+enNumber(-n);const ones=['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];if(n<20)return ones[n];if(n<100)return ['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'][Math.floor(n/10)]+(n%10?'-'+ones[n%10]:'');if(n<1000)return ones[Math.floor(n/100)]+' hundred'+(n%100?' and '+enNumber(n%100):'');if(n===1000)return 'one thousand';return String(n)}
