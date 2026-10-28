@@ -1,5 +1,29 @@
 [
   {
+    "id": "jeu-95",
+    "title": "Les droites du T-Rex — CE1",
+    "url": "https://bleja972.github.io/jeux/droite-numerique-t-rex-ce1/",
+    "path": "/jeux/droite-numerique-t-rex-ce1/",
+    "description": "Droites numériques CE1 avec un T-Rex animé : cinq niveaux de 1 en 1, 2 en 2, 5 en 5, 10 en 10 et 100 en 100. L’élève saisit sa réponse, sans aide.",
+    "weekly": false,
+    "new": true,
+    "category": "numeration",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Numération",
+    "skill": "droite-numerique",
+    "skillName": "Lire un nombre sur une droite graduée",
+    "slug": "droite-numerique-t-rex-ce1",
+    "objective": "Lire une droite graduée en identifiant un pas de 1, 2, 5, 10 ou 100.",
+    "short": "Cinq niveaux, de 1 en 1 à 100 en 100 : observe la flèche et saisis ta réponse.",
+    "thumb": "/assets/catalogue-v2/captures/droite-t-rex-ce1.svg",
+    "imageAlt": "T-Rex, droite graduée et champ de réponse à saisir."
+  },
+  {
     "id": "jeu-94",
     "title": "Les 42 droites du T-Rex animé",
     "url": "https://bleja972.github.io/jeux/droite-numerique-t-rex-anime-cp/",
