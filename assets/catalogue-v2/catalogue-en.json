@@ -1,0 +1,1460 @@
+[
+  {
+    "id": "en-1",
+    "title": "Number bonds to 10 — spider challenge",
+    "url": "/en/games/complements1_a_10/",
+    "description": "Find the missing number as quickly as possible. Help the spider cross its moonlit web and discover your score.",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Find the missing number as quickly as possible. Help the spider cross its moonlit web and discover your score.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-2",
+    "title": "Year 2 Mental maths",
+    "url": "/en/games/cp-mental-maths/",
+    "description": "Choose a skill and practise for 3 minutes: addition, subtraction, doubles, halves and number bonds to 10.",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Choose a skill and practise for 3 minutes: addition, subtraction, doubles, halves and number bonds to 10.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-3",
+    "title": "Calcul Pop! — Year 4 mental maths",
+    "url": "/en/games/year-4-calcul-pop/",
+    "description": "Choose from 30 colourful mental maths missions, with hints and a timed challenge.",
+    "levels": [
+      "CE2"
+    ],
+    "level": "CE2",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Choose from 30 colourful mental maths missions, with hints and a timed challenge.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-4",
+    "title": "Year 4 Chronomaths — 20 challenges",
+    "url": "/en/games/ce2-chronomaths-20-challenges/",
+    "description": "Practise with 20 timed challenges, each with 20 calculations in 3 minutes. The timer starts when you enter the first digit. Your score and success percentage appear at the end.",
+    "levels": [
+      "CE2"
+    ],
+    "level": "CE2",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Practise with 20 timed challenges, each with 20 calculations in 3 minutes. The timer starts when you enter the first digit. Your score and success percentage appear at the end.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-5",
+    "title": "Year 4 Word problem workshops",
+    "url": "/en/games/ce2-word-problem-workshops/",
+    "description": "Choose a workshop and solve the word problems. Use the hints and bar models, then see your success percentage.",
+    "levels": [
+      "CE2"
+    ],
+    "level": "CE2",
+    "subject": "Mathématiques",
+    "group": "problemes",
+    "groupName": "Word problems",
+    "skill": "problemes",
+    "skillName": "Word problems",
+    "objective": "Choose a workshop and solve the word problems. Use the hints and bar models, then see your success percentage.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-6",
+    "title": "Count a collection",
+    "url": "/en/games/count-a-collection/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-7",
+    "title": "Compare two numbers",
+    "url": "/en/games/compare-two-numbers/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-8",
+    "title": "Put numbers in order",
+    "url": "/en/games/put-numbers-in-order/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-9",
+    "title": "Read and write numbers",
+    "url": "/en/games/read-and-write-numbers/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-10",
+    "title": "Number dictation",
+    "url": "/en/games/number-dictation/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-11",
+    "title": "Count in different ways",
+    "url": "/en/games/count-in-different-ways/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-12",
+    "title": "Compose and partition numbers",
+    "url": "/en/games/compose-and-partition-numbers/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-13",
+    "title": "Recognise odd and even numbers",
+    "url": "/en/games/recognise-odd-and-even-numbers/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-14",
+    "title": "Complete number sequences",
+    "url": "/en/games/complete-number-sequences/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-15",
+    "title": "Review numbers up to 1,000",
+    "url": "/en/games/review-numbers-up-to-1-000/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": true,
+    "new": false
+  },
+  {
+    "id": "en-16",
+    "title": "The mystery number line",
+    "url": "/en/games/the-mystery-number-line/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-17",
+    "title": "The number line challenge",
+    "url": "/en/games/the-number-line-challenge/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-18",
+    "title": "Partition a number",
+    "url": "/en/games/partition-a-number/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-19",
+    "title": "Build a number",
+    "url": "/en/games/build-a-number/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-20",
+    "title": "Number sequences",
+    "url": "/en/games/number-sequences/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-21",
+    "title": "Ways to represent numbers",
+    "url": "/en/games/ways-to-represent-numbers/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-22",
+    "title": "Order numbers",
+    "url": "/en/games/order-numbers/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number skills",
+    "skill": "numeration",
+    "skillName": "Number skills",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-23",
+    "title": "The Valley of Halves",
+    "url": "/en/games/vallee-des-moities/",
+    "description": "Find halves and free the bubbles.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Find halves and free the bubbles.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-24",
+    "title": "The Temple of Doubles",
+    "url": "/en/games/temple-des-doubles/",
+    "description": "Find doubles and free the bubbles.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Find doubles and free the bubbles.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-25",
+    "title": "Galactic Division",
+    "url": "/en/games/divisions-galactiques/",
+    "description": "Practise division by 2, 3, 4, 5 and 10.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Practise division by 2, 3, 4, 5 and 10.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-26",
+    "title": "The Enchanted Times Tables",
+    "url": "/en/games/tables-enchantees/",
+    "description": "Practise multiplication tables with magic bubbles.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Practise multiplication tables with magic bubbles.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-27",
+    "title": "Wizard Bubbles",
+    "url": "/en/games/bulles-de-sorcellerie/",
+    "description": "Add and subtract numbers ending in 9.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Add and subtract numbers ending in 9.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-28",
+    "title": "The Mysterious Island — Subtraction",
+    "url": "/en/games/ile-mysterieuse-soustractions/",
+    "description": "Practise subtraction on an island adventure.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Practise subtraction on an island adventure.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-29",
+    "title": "Around the World — Number Bonds to 1,000",
+    "url": "/en/games/tour-du-monde-complements-1000/",
+    "description": "Find the missing numbers on a journey around the world.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Find the missing numbers on a journey around the world.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-30",
+    "title": "Mission Nautilus — Number Bonds to 100",
+    "url": "/en/games/mission-nautilus/",
+    "description": "Practise number bonds to 100 on the Nautilus.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Practise number bonds to 100 on the Nautilus.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-31",
+    "title": "Journey to the Centre of the Earth — Near Doubles",
+    "url": "/en/games/presque-doubles-terre/",
+    "description": "Practise near doubles on a journey underground.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Practise near doubles on a journey underground.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-32",
+    "title": "Mars Mission — Addition",
+    "url": "/en/games/mission-mars/",
+    "description": "Practise addition with answers from 11 to 19.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Practise addition with answers from 11 to 19.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-33",
+    "title": "Deep Sea Mission — Addition",
+    "url": "/en/games/additions-abysses-11-19/",
+    "description": "Practise addition with answers from 11 to 19.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Practise addition with answers from 11 to 19.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-34",
+    "title": "Halloween — Number Bonds to 10",
+    "url": "/en/games/halloween-complements-10/",
+    "description": "Help the witch find number bonds to 10.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Help the witch find number bonds to 10.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-35",
+    "title": "Halloween — Number Bonds to 100",
+    "url": "/en/games/halloween-complements-100/",
+    "description": "Help the witch find number bonds to 100.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Help the witch find number bonds to 100.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-36",
+    "title": "Halloween — Number Bonds to 1,000",
+    "url": "/en/games/halloween-complements-1000/",
+    "description": "Help the witch find number bonds to 1,000.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Help the witch find number bonds to 1,000.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-37",
+    "title": "The Witch’s Race — Number Bonds to 10",
+    "url": "/en/games/sorciere-complements-10/",
+    "description": "Find number bonds to 10 during the witch’s race.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Find number bonds to 10 during the witch’s race.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-38",
+    "title": "The Witch’s Race — Number Bonds to 100",
+    "url": "/en/games/sorciere-complements-100/",
+    "description": "Find number bonds to 100 during the witch’s race.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Find number bonds to 100 during the witch’s race.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-39",
+    "title": "The Witch’s Race — Number Bonds to 1,000",
+    "url": "/en/games/sorciere-complements-1000/",
+    "description": "Find number bonds to 1,000 during the witch’s race.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Find number bonds to 1,000 during the witch’s race.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-40",
+    "title": "The Maths Lab",
+    "url": "/en/games/maths-lab/",
+    "description": "Add and subtract 1, 10 or 100 before time runs out.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Add and subtract 1, 10 or 100 before time runs out.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-41",
+    "title": "Number bonds to 10 — spider challenge",
+    "url": "/en/games/complements1_a_10/",
+    "description": "Find the missing number as quickly as possible. Help the spider cross its moonlit web and discover your score.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Find the missing number as quickly as possible. Help the spider cross its moonlit web and discover your score.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-42",
+    "title": "Number bonds to 100 — spider challenge",
+    "url": "/en/games/complements_a_100/",
+    "description": "Find the missing multiple of ten as quickly as possible. Help the spider cross its moonlit web and discover your score.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Find the missing multiple of ten as quickly as possible. Help the spider cross its moonlit web and discover your score.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-43",
+    "title": "Number bonds to 1,000 — spider challenge",
+    "url": "/en/games/complements_a_1000/",
+    "description": "Find the missing multiple of one hundred as quickly as possible. Help the spider cross its moonlit web and discover your score.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Find the missing multiple of one hundred as quickly as possible. Help the spider cross its moonlit web and discover your score.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-44",
+    "title": "Year 3 Chronomaths — 20 challenges",
+    "url": "/en/games/ce1-chronomaths-20-challenges/",
+    "description": "Practise mental maths with 20 challenges of 15 calculations. The timer starts with your first digit. See your score and success percentage.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "Practise mental maths with 20 challenges of 15 calculations. The timer starts with your first digit. See your score and success percentage.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-45",
+    "title": "Column subtraction with regrouping",
+    "url": "/en/games/column-subtraction-with-regrouping/",
+    "description": "Regroup a ten or a hundred, cross out the base-ten blocks and complete the column subtractions. Eight calculations to practise.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "pose",
+    "groupName": "Column calculations",
+    "skill": "pose",
+    "skillName": "Column calculations",
+    "objective": "Regroup a ten or a hundred, cross out the base-ten blocks and complete the column subtractions. Eight calculations to practise.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-46",
+    "title": "Subtraction with base-ten blocks",
+    "url": "/en/games/subtraction-with-base-ten-blocks/",
+    "description": "Use red cubes, yellow rods and green flats to subtract without regrouping. Cross out the blocks and solve 8 random calculations.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "pose",
+    "groupName": "Column calculations",
+    "skill": "pose",
+    "skillName": "Column calculations",
+    "objective": "Use red cubes, yellow rods and green flats to subtract without regrouping. Cross out the blocks and solve 8 random calculations.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-47",
+    "title": "Column addition without regrouping",
+    "url": "/en/games/column-addition-without-regrouping/",
+    "description": "Add two- or three-digit numbers by lining up hundreds, tens and ones. Check your answers and see your score.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "pose",
+    "groupName": "Column calculations",
+    "skill": "pose",
+    "skillName": "Column calculations",
+    "objective": "Add two- or three-digit numbers by lining up hundreds, tens and ones. Check your answers and see your score.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-48",
+    "title": "Column addition with regrouping",
+    "url": "/en/games/column-addition-with-regrouping/",
+    "description": "Practise column addition with one regrouping, then two. Calculate each column, look at the carried digit and check your answers to see your score.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "pose",
+    "groupName": "Column calculations",
+    "skill": "pose",
+    "skillName": "Column calculations",
+    "objective": "Practise column addition with one regrouping, then two. Calculate each column, look at the carried digit and check your answers to see your score.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-49",
+    "title": "Addition with regrouping — 3D counters",
+    "url": "/en/games/addition-with-regrouping-3d-counters/",
+    "description": "Complete eight additions with 3D counters. Calculate ones and tens, then exchange 10 ones for 1 ten or 10 tens for 1 hundred.",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "pose",
+    "groupName": "Column calculations",
+    "skill": "pose",
+    "skillName": "Column calculations",
+    "objective": "Complete eight additions with 3D counters. Calculate ones and tens, then exchange 10 ones for 1 ten or 10 tens for 1 hundred.",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-50",
+    "title": "Addition by bridging 10",
+    "url": "/en/games/addition-by-bridging-10/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-51",
+    "title": "Subtract from 10",
+    "url": "/en/games/subtract-from-10/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-52",
+    "title": "Doubles",
+    "url": "/en/games/doubles/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-53",
+    "title": "Near doubles",
+    "url": "/en/games/near-doubles/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-54",
+    "title": "Number bonds to 10",
+    "url": "/en/games/number-bonds-to-10/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-55",
+    "title": "Add and subtract tens",
+    "url": "/en/games/add-and-subtract-tens/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-56",
+    "title": "Simple addition",
+    "url": "/en/games/simple-addition/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-57",
+    "title": "Mental maths — Term 1",
+    "url": "/en/games/mental-maths-term-1/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-58",
+    "title": "Number fish",
+    "url": "/en/games/number-fish/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-59",
+    "title": "The calculation race",
+    "url": "/en/games/the-calculation-race/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-60",
+    "title": "Number bonds to 10, 100 and 1,000",
+    "url": "/en/games/number-bonds-to-10-100-and-1-000/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-61",
+    "title": "Mental maths — Term 2",
+    "url": "/en/games/mental-maths-term-2/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-62",
+    "title": "Find the whole",
+    "url": "/en/games/find-the-whole/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "problemes",
+    "groupName": "Word problems",
+    "skill": "problemes",
+    "skillName": "Word problems",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-63",
+    "title": "Find a missing part",
+    "url": "/en/games/find-a-missing-part/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "problemes",
+    "groupName": "Word problems",
+    "skill": "problemes",
+    "skillName": "Word problems",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-64",
+    "title": "Add, gain, move forward",
+    "url": "/en/games/add-gain-move-forward/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "problemes",
+    "groupName": "Word problems",
+    "skill": "problemes",
+    "skillName": "Word problems",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-65",
+    "title": "Subtract, lose, move back",
+    "url": "/en/games/subtract-lose-move-back/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "problemes",
+    "groupName": "Word problems",
+    "skill": "problemes",
+    "skillName": "Word problems",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-66",
+    "title": "Solve in two steps",
+    "url": "/en/games/solve-in-two-steps/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "problemes",
+    "groupName": "Word problems",
+    "skill": "problemes",
+    "skillName": "Word problems",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-67",
+    "title": "Compare two quantities",
+    "url": "/en/games/compare-two-quantities/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "problemes",
+    "groupName": "Word problems",
+    "skill": "problemes",
+    "skillName": "Word problems",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-68",
+    "title": "Word problems with bar models — Workshop 4",
+    "url": "/en/games/word-problems-with-bar-models-workshop-4/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "problemes",
+    "groupName": "Word problems",
+    "skill": "problemes",
+    "skillName": "Word problems",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-69",
+    "title": "Word problems — Term 1",
+    "url": "/en/games/word-problems-term-1/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "problemes",
+    "groupName": "Word problems",
+    "skill": "problemes",
+    "skillName": "Word problems",
+    "objective": "",
+    "weekly": true,
+    "new": false
+  },
+  {
+    "id": "en-70",
+    "title": "Word problems — Term 2",
+    "url": "/en/games/word-problems-term-2/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "problemes",
+    "groupName": "Word problems",
+    "skill": "problemes",
+    "skillName": "Word problems",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-71",
+    "title": "Reading comprehension",
+    "url": "/lecture_comprehension_periode1/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Français",
+    "group": "lecture",
+    "groupName": "Reading",
+    "skill": "lecture",
+    "skillName": "Reading",
+    "objective": "",
+    "weekly": true,
+    "new": false
+  },
+  {
+    "id": "en-72",
+    "title": "The Grain of Rice — dyslexia support",
+    "url": "/lecturegrainderizdys/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Français",
+    "group": "lecture",
+    "groupName": "Reading",
+    "skill": "lecture",
+    "skillName": "Reading",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-73",
+    "title": "Dictations 1–6 — Term 1",
+    "url": "/dictee_periode2/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Français",
+    "group": "orthographe",
+    "groupName": "Spelling and dictation",
+    "skill": "orthographe",
+    "skillName": "Spelling and dictation",
+    "objective": "",
+    "weekly": true,
+    "new": false
+  },
+  {
+    "id": "en-74",
+    "title": "Words in pictures",
+    "url": "/dictee1/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Français",
+    "group": "orthographe",
+    "groupName": "Spelling and dictation",
+    "skill": "orthographe",
+    "skillName": "Spelling and dictation",
+    "objective": "",
+    "weekly": true,
+    "new": false
+  },
+  {
+    "id": "en-75",
+    "title": "Spelling — Term 1",
+    "url": "/orthographe_periode1/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Français",
+    "group": "orthographe",
+    "groupName": "Spelling and dictation",
+    "skill": "orthographe",
+    "skillName": "Spelling and dictation",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-76",
+    "title": "Dictations — Term 2",
+    "url": "/dictees_periode2/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Français",
+    "group": "orthographe",
+    "groupName": "Spelling and dictation",
+    "skill": "orthographe",
+    "skillName": "Spelling and dictation",
+    "objective": "",
+    "weekly": false,
+    "new": false
+  },
+  {
+    "id": "en-77",
+    "title": "Dictation 5 — Words in pictures",
+    "url": "/dictee5/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Français",
+    "group": "orthographe",
+    "groupName": "Spelling and dictation",
+    "skill": "orthographe",
+    "skillName": "Spelling and dictation",
+    "objective": "",
+    "weekly": true,
+    "new": false
+  },
+  {
+    "id": "en-78",
+    "title": "Dictation 5 — Fill in the sentences",
+    "url": "/dictee_5a/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Français",
+    "group": "orthographe",
+    "groupName": "Spelling and dictation",
+    "skill": "orthographe",
+    "skillName": "Spelling and dictation",
+    "objective": "",
+    "weekly": true,
+    "new": false
+  },
+  {
+    "id": "en-79",
+    "title": "Grammar — Term 1",
+    "url": "/grammaire_periode1/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Français",
+    "group": "grammaire",
+    "groupName": "Grammar",
+    "skill": "grammaire",
+    "skillName": "Grammar",
+    "objective": "",
+    "weekly": true,
+    "new": false
+  },
+  {
+    "id": "en-80",
+    "title": "Vocabulary — Term 1",
+    "url": "/evaluation_voca_P1/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Français",
+    "group": "vocabulaire",
+    "groupName": "Vocabulary",
+    "skill": "vocabulaire",
+    "skillName": "Vocabulary",
+    "objective": "",
+    "weekly": true,
+    "new": false
+  },
+  {
+    "id": "en-81",
+    "title": "The Mouse Workshop",
+    "url": "/production_d-ecrit/",
+    "description": "",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Français",
+    "group": "ecriture",
+    "groupName": "Writing",
+    "skill": "ecriture",
+    "skillName": "Writing",
+    "objective": "",
+    "weekly": true,
+    "new": false
+  }
+]
