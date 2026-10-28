@@ -195,14 +195,14 @@ function renderSequence(){
 }
 function newQuestion(){
   locked=false;makeQuestion();renderSequence();
-  $("答案").value="";$("答案").disabled=false;$("feedback").textContent="";
+  $("answer").value="";$("answer").disabled=false;$("feedback").textContent="";
   $("hintBox").style.display="none";$("checkBtn").style.display="block";$("nextBtn").style.display="none";
   $("qnum").textContent=qIndex+1;$("bar").style.width=(qIndex/TOTAL*100)+"%";
-  setTimeout(()=>$("答案").focus(),80);
+  setTimeout(()=>$("answer").focus(),80);
 }
 function startGame(){
   player=$("name").value.trim()||player||"冠军";
-  score=0;streak=0;qIndex=0;usedQuestions=new Set();$("得分").textContent=0;$("streak").textContent=0;show("game");newQuestion();
+  score=0;streak=0;qIndex=0;usedQuestions=new Set();$("score").textContent=0;$("streak").textContent=0;show("game");newQuestion();
 }
 $("hintBtn").addEventListener("click",()=>{
   if(locked)return;
@@ -211,14 +211,14 @@ $("hintBtn").addEventListener("click",()=>{
 });
 $("checkBtn").addEventListener("click",()=>{
   if(locked)return;
-  const val=$("答案").value.trim();
+  const val=$("answer").value.trim();
   if(val===""){$("feedback").textContent="寫一個數字先。";return}
   locked=true;
   const ok=Number(val)===correctAnswer;
   const slot=$("missingSlot");slot.textContent=correctAnswer;
   if(ok){score++;streak++;slot.classList.remove("active");slot.classList.add("correct");$("feedback").textContent="干得不错!这是正确的: "+correctAnswer+".";beep(720,.12)}
   else{streak=0;slot.classList.remove("active");slot.classList.add("wrong");$("feedback").textContent="正确的答案是 "+correctAnswer+".";beep(220,.18)}
-  $("得分").textContent=score;$("streak").textContent=streak;$("答案").disabled=true;
+  $("score").textContent=score;$("streak").textContent=streak;$("answer").disabled=true;
   $("checkBtn").style.display="none";$("nextBtn").style.display="block";qIndex++;$("bar").style.width=(qIndex/TOTAL*100)+"%";
 });
 $("nextBtn").addEventListener("click",()=>{if(qIndex>=TOTAL)finish();else newQuestion()});
@@ -239,8 +239,8 @@ function beep(freq,dur){
 }
 $("startBtn").addEventListener("click",startGame);
 $("replayBtn").addEventListener("click",startGame);
-$("homeBtn").addEventListener("click",()=>show("首页"));
-$("答案").addEventListener("keydown",e=>{if(e.key==="Enter"){locked?$("nextBtn").click():$("checkBtn").click()}});
+$("homeBtn").addEventListener("click",()=>show("home"));
+$("answer").addEventListener("keydown",e=>{if(e.key==="Enter"){locked?$("nextBtn").click():$("checkBtn").click()}});
 </script>
 <script src="/assets/catalogue-v2/runtime-zh.js?v=1" defer></script></body>
 </html>

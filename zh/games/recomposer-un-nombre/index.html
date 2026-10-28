@@ -286,22 +286,22 @@ function newQuestion(){
   locked=false;
   makeQuestion();
   renderExpression();
-  $("答案").value="";
-  $("答案").disabled=false;
-  $("答案").classList.remove("correct","wrong");
+  $("answer").value="";
+  $("answer").disabled=false;
+  $("answer").classList.remove("correct","wrong");
   $("feedback").textContent="";
   $("hintBox").style.display="none";
   $("checkBtn").style.display="block";
   $("nextBtn").style.display="none";
   $("qnum").textContent=qIndex+1;
   $("bar").style.width=(qIndex/TOTAL*100)+"%";
-  setTimeout(()=>$("答案").focus(),80);
+  setTimeout(()=>$("answer").focus(),80);
 }
 
 function startGame(){
   player=$("name").value.trim()||player;
   score=0;streak=0;qIndex=0;used.clear();
-  $("得分").textContent=0;$("streak").textContent=0;
+  $("score").textContent=0;$("streak").textContent=0;
   show("game");newQuestion();
 }
 
@@ -314,7 +314,7 @@ $("hintBtn").addEventListener("click",()=>{
 
 $("checkBtn").addEventListener("click",()=>{
   if(locked)return;
-  const val=$("答案").value.trim();
+  const val=$("answer").value.trim();
   if(val===""){
     $("feedback").textContent=" ⁇ 糶腹絏";
     return;
@@ -322,7 +322,7 @@ $("checkBtn").addEventListener("click",()=>{
 
   locked=true;
   const ok=Number(val)===current.n;
-  $("答案").classList.add(ok?"正确":"wrong");
+  $("answer").classList.add(ok?"正确":"wrong");
 
   if(ok){
     score++;streak++;
@@ -330,13 +330,13 @@ $("checkBtn").addEventListener("click",()=>{
     beep(720,.12);
   }else{
     streak=0;
-    $("答案").value=current.n;
+    $("answer").value=current.n;
     $("feedback").textContent="正确的答案是 "+current.n+".";
     beep(220,.18);
   }
 
-  $("答案").disabled=true;
-  $("得分").textContent=score;
+  $("answer").disabled=true;
+  $("score").textContent=score;
   $("streak").textContent=streak;
   $("checkBtn").style.display="none";
   $("nextBtn").style.display="block";
@@ -373,8 +373,8 @@ function beep(freq,dur){
 
 $("startBtn").addEventListener("click",startGame);
 $("replayBtn").addEventListener("click",startGame);
-$("homeBtn").addEventListener("click",()=>show("首页"));
-$("答案").addEventListener("keydown",e=>{
+$("homeBtn").addEventListener("click",()=>show("home"));
+$("answer").addEventListener("keydown",e=>{
   if(e.key==="Enter"){
     if(locked) $("nextBtn").click();
     else $("checkBtn").click();

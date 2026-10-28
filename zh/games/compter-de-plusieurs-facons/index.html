@@ -719,12 +719,12 @@ function mn8(){
 }
 function mn9(){let step=[2,3,5,10][rnd(0,3)],start=rnd(100,700),vals=Array.from({length:8},(_,k)=>start+k*step),bl=[0,3,4,7];return{t:"看看顺序 完成它。",h:`<div class="seq">${vals.map((v,k)=>bl.includes(k)?`<input class="smallin" data-a="${v}" inputmode="numeric">`:`<div class="slot">${v}</div>`).join('')}</div>`,c:()=>[...document.querySelectorAll('[data-a]')].every(x=>+x.value===+x.dataset.a),a:bl.map(k=>vals[k]).join(', ')}}
 const gen={mn1,mn2,mn3,mn4,mn5,mn6,mn7,mn8,mn9};
-function render(){answered=false;$("清空").disabled=false;let s=sk();current=gen[s]();$('skillName').textContent=mode==='eval'?"全面做法":names[s];$('exTitle').textContent=current.t;$('ex').innerHTML=current.h;$('fb').textContent='';$('count').textContent=`演习演练 ${i+1} / ${total()}`;$("得分").textContent=`得分 ${score}`;$('prog').style.width=`${i/total()*100}%`;$("检查答案").classList.remove('hidden');$("下一题").classList.add('hidden');if(current.s)current.s();let f=document.querySelector('#ex input');if(f)setTimeout(()=>f.focus(),50)}
-function start(s){mode='mn6';i=0;score=0;evalSkills=['mn1','mn2','mn3','mn4','mn5','mn6','mn7','mn8','mn9'].sort(()=>Math.random()-.5);$("菜单").classList.add('hidden');$('game').classList.remove('hidden');render()}
+function render(){answered=false;$("clear").disabled=false;let s=sk();current=gen[s]();$('skillName').textContent=mode==='eval'?"全面做法":names[s];$('exTitle').textContent=current.t;$('ex').innerHTML=current.h;$('fb').textContent='';$('count').textContent=`演习演练 ${i+1} / ${total()}`;$("score").textContent=`得分 ${score}`;$('prog').style.width=`${i/total()*100}%`;$("check").classList.remove('hidden');$("next").classList.add('hidden');if(current.s)current.s();let f=document.querySelector('#ex input');if(f)setTimeout(()=>f.focus(),50)}
+function start(s){mode='mn6';i=0;score=0;evalSkills=['mn1','mn2','mn3','mn4','mn5','mn6','mn7','mn8','mn9'].sort(()=>Math.random()-.5);$("menu").classList.add('hidden');$('game').classList.remove('hidden');render()}
 document.querySelectorAll('.skill').forEach(b=>b.onclick=()=>start(b.dataset.s));
-$("检查答案").onclick=()=>{
+$("check").onclick=()=>{
   if(answered)return;
-  answered=true;$("清空").disabled=true;
+  answered=true;$("clear").disabled=true;
   let ok=current.c();
   if(ok)score++;
   const done=i+1;
@@ -732,12 +732,12 @@ $("检查答案").onclick=()=>{
   $('fb').innerHTML=ok
     ? `<span class="good">真棒！</span><span class="successPct">成功率: ${pct} %</span>`
     : `<span class="bad">预期答复: ${current.a}</span><span class="successPct">成功率: ${pct} %</span>`;
-  $("得分").textContent=`得分 ${score}`;
-  $("检查答案").classList.add('hidden');
-  $("下一题").classList.remove('hidden');
+  $("score").textContent=`得分 ${score}`;
+  $("check").classList.add('hidden');
+  $("next").classList.remove('hidden');
 };
-$("清空").onclick=()=>{if(answered)return;document.querySelectorAll('#ex input, #ex textarea').forEach(el=>el.value='');current.sel=null;document.querySelectorAll('[data-v]').forEach(el=>el.classList.remove('selected'));const erase=$('eraseOrder');if(erase&&erase.onclick)erase.onclick();$('fb').textContent='';};
-$("下一题").onclick=()=>{
+$("clear").onclick=()=>{if(answered)return;document.querySelectorAll('#ex input, #ex textarea').forEach(el=>el.value='');current.sel=null;document.querySelectorAll('[data-v]').forEach(el=>el.classList.remove('selected'));const erase=$('eraseOrder');if(erase&&erase.onclick)erase.onclick();$('fb').textContent='';};
+$("next").onclick=()=>{
   if(i<total()-1){
     i++;
     render();
@@ -749,9 +749,9 @@ $("下一题").onclick=()=>{
     $('fb').innerHTML=score>=Math.ceil(total()*.75)
       ? "<span class=\"good\">优秀的练习!</span>"
       : "<span class=\"bad\">再玩一次来提升这个技能 。</span>";
-    $("下一题").classList.add('hidden');
+    $("next").classList.add('hidden');
   }
 };
-$("返回").onclick=()=>{if(window.speechSynthesis)speechSynthesis.cancel();$('game').classList.add('hidden');$("菜单").classList.remove('hidden')};
+$("back").onclick=()=>{if(window.speechSynthesis)speechSynthesis.cancel();$('game').classList.add('hidden');$("menu").classList.remove('hidden')};
 })();
 </script><script src="/assets/catalogue-v2/runtime-zh.js?v=1" defer></script></body></html>

@@ -331,7 +331,7 @@ function newQuestion(){
 function startGame(){
   player=$("name").value.trim()||player;
   score=0;streak=0;qIndex=0;used.clear();
-  $("得分").textContent=0;$("streak").textContent=0;
+  $("score").textContent=0;$("streak").textContent=0;
   show("game");newQuestion();
 }
 
@@ -412,7 +412,7 @@ $("checkBtn").addEventListener("click",()=>{
     beep(220,.18);
   }
 
-  $("得分").textContent=score;
+  $("score").textContent=score;
   $("streak").textContent=streak;
   $("checkBtn").style.display="none";
   $("nextBtn").style.display="block";
@@ -449,7 +449,7 @@ function beep(freq,dur){
 
 $("startBtn").addEventListener("click",startGame);
 $("replayBtn").addEventListener("click",startGame);
-$("homeBtn").addEventListener("click",()=>show("首页"));
+$("homeBtn").addEventListener("click",()=>show("home"));
 </script>
 <script src="/assets/catalogue-v2/runtime-zh.js?v=1" defer></script></body>
 </html>

@@ -837,7 +837,7 @@
   }
 
   function updateHud(){
-    $("得分").textContent = `得分 ${score}`;
+    $("score").textContent = `得分 ${score}`;
     $('lives').textContent = `生命: ${'❤️'.repeat(lives) || '—'}`;
     $('level').textContent = `速度 : ${speedLevel}`;
     const labels = ['', "轻缓开始", "再快一点", "中速", "快速快速", "速度很快", "涡轮"];
@@ -911,7 +911,7 @@
     bounce($('player'));
     setRacers();
     removeOperation(op);
-    $("答案").value = '';
+    $("answer").value = '';
     if(score > 0 && score % 5 === 0) speedLevel = Math.min(6, speedLevel + 1);
     updateHud();
     if(round >= MAX_ROUNDS || playerProgress >= 1){
@@ -939,7 +939,7 @@
 
   function checkTyped(){
     if(!running || paused) return;
-    const raw = $("答案").value.trim();
+    const raw = $("answer").value.trim();
     if(raw === '') return;
     const n = Number(raw);
     let matches = active.filter(op => op.ans === n);
@@ -1018,7 +1018,7 @@
     $('startCover').classList.add('hidden');
     $('endCard').classList.add('hidden');
     $('feedback').textContent = '';
-    $("答案").value = '';
+    $("answer").value = '';
     $('pauseBtn').textContent = '❚❚';
 
     updateHud();
@@ -1028,7 +1028,7 @@
     setTimeout(()=>{ if(running) spawnOperation(); }, 650);
     setTimeout(()=>{ if(running) spawnOperation(); }, 1250);
 
-    $("答案").focus();
+    $("answer").focus();
     raf = requestAnimationFrame(loop);
   }
 
@@ -1041,10 +1041,10 @@
     $('pauseBtn').textContent = paused ? '▶' : '❚❚';
     if(!paused){
       last = performance.now();
-      $("答案").focus();
+      $("answer").focus();
     }
   });
-  $("答案").addEventListener('input', checkTyped);
+  $("answer").addEventListener('input', checkTyped);
 
   updateHud();
   setRacers();

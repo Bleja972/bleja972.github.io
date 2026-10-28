@@ -287,7 +287,7 @@ const $ = id => document.getElementById(id);
 let timer = null, remaining = 180, active = false, done = false, current = 0;
 
 function parse(q){
-  if(q.startsWith("一半:")){
+  if(q.startsWith('half:')){
     const n = Number(q.slice(5));
     return { type:'half', parts:["半数半 " + n + ' :'], answer:n/2, aria:"半数半 " + n };
   }
@@ -351,7 +351,7 @@ function start(){
   done = false;
   clearGame();
   $('game').classList.remove('hide');
-  $("菜单").classList.add('hide');
+  $("menu").classList.add('hide');
   $('heading').textContent = "时钟现象 " + (current + 1);
   $('note').textContent = "计时器从第一个数开始空白回答算作错误 。";
   source[current].forEach((q,i)=>{
@@ -404,7 +404,7 @@ function finish(timeout){
       wrapper.querySelector('.expression').append(corr);
     }
   });
-  $("得分").textContent = good + ' / 15';
+  $("score").textContent = good + ' / 15';
   $('percent').textContent = Math.round(good/15*100) + ' %';
   $('finishTitle').textContent = timeout ? "时间到了!" : "计时器完成!";
   $('finalText').textContent = (good === 15 ? "干得不错!所有答案都是正确的。" : good >= 10 ? "干得不错!继续练习不断改进。" : "继续练习每一次尝试都会帮助你进步。") + " 正确的答案似乎与需要纠正的计算相邻。";
@@ -418,7 +418,7 @@ function menu(){
   stopClock();
   active = false;
   done = false;
-  $("菜单").classList.remove('hide');
+  $("menu").classList.remove('hide');
   $('game').classList.add('hide');
   window.scrollTo({top:0,behavior:'smooth'});
 }
@@ -432,10 +432,10 @@ for(let i=0;i<source.length;i++){
   $('series').append(option);
 }
 
-$("开始").addEventListener('click', start);
+$("start").addEventListener('click', start);
 $('tasks').addEventListener('input', beginTimerOnFirstDigit);
 $('finish').addEventListener('click', ()=>finish(false));
-$("返回").addEventListener('click', menu);
+$("back").addEventListener('click', menu);
 $('retry').addEventListener('click', start);
 $('choose').addEventListener('click', menu);
 

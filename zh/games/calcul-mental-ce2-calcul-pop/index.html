@@ -83,7 +83,7 @@ dialog{border:1px solid #dfe2d1;background:var(--white);color:var(--ink);border-
 <div class="confetti" id="confetti" aria-hidden="true"></div>
 <script>
 (function(root){
- "严格使用";
+ "use strict";
  const families={addition:{name:'Addition',icon:'+',color:'peach'},subtraction:{name:'Subtraction',icon:'−',color:'pink'},multiplication:{name:'Multiplication',icon:'×',color:'lavender'},double:{name:'Doubles & halves',icon:'½',color:'mint'},mix:{name:'Mixed',icon:'✦',color:'yellow'}};
  const missions=[
   {id:'add-tables',family:'addition',title:"小型添加",detail:"加上失踪数字的事实。",type:'add',stage:1},
@@ -157,7 +157,7 @@ dialog{border:1px solid #dfe2d1;background:var(--white);color:var(--ink);border-
 </script>
 <script>
 (()=>{
- "严格使用";
+ "use strict";
  const {families,missions,makeRound,isCorrect,fmt}=CalculPop;
  const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
  const key='calcul-pop-ce2-v1';let mode='relax',family='all',stage='all',session=null,tick=null,returnFocus=null;

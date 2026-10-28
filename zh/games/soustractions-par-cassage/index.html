@@ -419,8 +419,8 @@ function updatePlaceEquations(){
   // Ne jamais dévoiler un calcul avant les cassages nécessaires.
   // Les calculs déjà validés restent affichés, les suivants sont masqués.
   const uReady=phase==='units' && !needBreakTen();
-  const tReady=phase==="十位" && !needBreakHundred();
-  const hReady=phase==="百位";
+  const tReady=phase==="tens" && !needBreakHundred();
+  const hReady=phase==="hundreds";
   $('exprUnits').innerHTML=(uReady || $('unitsResult').disabled)
     ?lineExpr('u',current.minuend.u,current.sub.u,false):'';
   $('exprTens').innerHTML=(tReady || $('tensResult').disabled)
@@ -446,7 +446,7 @@ function render(){
   current=buildState(games[index].a,games[index].b);
   locked=false; phase='units';
   $('progress').textContent=`减法 ${index+1} / 8`;
-  $("得分").textContent=`正确答案: ${score}`;
+  $("score").textContent=`正确答案: ${score}`;
   $('operation').innerHTML=posedSubtraction(current.a,current.b);
   views.H=setupColumn($('colH')); views.T=setupColumn($('colT')); views.U=setupColumn($('colU'));
   for(let i=0;i<current.minuend.h;i++) views.H.top.append(make('hundred','first','100'));
@@ -454,7 +454,7 @@ function render(){
   for(let i=0;i<current.minuend.u;i++) views.U.top.append(make('unit','first','1'));
   removed={u:0,t:0,h:0}; remainingToRemove={u:0,t:0,h:0};
   show('stepUnits',true); show('stepTens',false); show('stepHundreds',false); show('breakTen',false); show('breakHundred',false);
-  $("答案").classList.remove('hidden'); $('end').classList.add('hidden'); resetInputs();
+  $("answer").classList.remove('hidden'); $('end').classList.add('hidden'); resetInputs();
   prepareUnits();
   updatePlaceEquations();
   syncLineWork();
@@ -485,7 +485,7 @@ function prepareTens(){
     phase='breakHundred'; show('stepTens',false);$('breakHundred').disabled=false;show('breakHundred',true);
     setNotice("没有足够的几十个。计算前汇一百元");
   }else{
-    phase="十位";show('stepTens',true);
+    phase="tens";show('stepTens',true);
     $('exprTens').innerHTML=lineExpr('t',current.minuend.t,current.sub.t,false);
     beginRemoval('t');
     syncLineWork();
@@ -573,7 +573,7 @@ async function breakHundred(){
   if(!forUnits) $('exprTens').innerHTML=lineExpr('t', current.minuend.t, current.sub.t, false);
   show('breakHundred',false); locked=false;
   if(forUnits){phase='breakTen';$('breakTen').disabled=false;show('breakTen',true);setNotice("你现在有10万10个人换11个");}
-  else {phase="十位";show('stepTens',true);beginRemoval('t');}
+  else {phase="tens";show('stepTens',true);beginRemoval('t');}
   syncLineWork();
 }
 async function checkUnits(){
@@ -593,7 +593,7 @@ async function checkUnits(){
 }
 async function checkTens(){
   if(locked) return;
-  if(phase!=="十位"){
+  if(phase!=="tens"){
     if(phase==='breakHundred') setNotice("头一百换十万");
     else setNotice("首先完成计算。");
     return;
@@ -623,7 +623,7 @@ async function checkTens(){
   setNotice("真棒！ "+current.minuend.t+' − '+current.sub.t+' = '+expected+" 十位");
   await writeResultDigit('t',expected);
   show('stepHundreds',true);
-  phase="百位";
+  phase="hundreds";
   locked=false;
   beginRemoval('h');
   updatePlaceEquations();
@@ -631,7 +631,7 @@ async function checkTens(){
   $('hundredsResult').focus({preventScroll:true});
 }
 async function checkHundreds(){
-  if(locked || phase!=="百位") return;
+  if(locked || phase!=="hundreds") return;
   if(removed.h<current.sub.h){setNotice(`横出另一个 ${current.sub.h-removed.h} 检查前为绿百。`); enableSelection('h');return;}
   const v=$('hundredsResult').value.trim();
   const expected=current.minuend.h - current.sub.h;
@@ -658,7 +658,7 @@ async function verify(){
   locked=true;
   // Aucun second trajet du zéro lors de la vérification finale.
   if(/^0\d/.test(answer)) $('finalAnswer').value=String(val);
-  score++; $("得分").textContent=`正确答案: ${score}`; $('verify').disabled=true; setNotice("干得不错!没错!");
+  score++; $("score").textContent=`正确答案: ${score}`; $('verify').disabled=true; setNotice("干得不错!没错!");
   await pause(1200);
   index++;
   if(index<8) render(); else finish();
@@ -666,10 +666,10 @@ async function verify(){
 function finish(){
   $('progress').textContent="游戏完成"; $('operation').textContent="真棒！"; $('end').classList.remove('hidden');
   $('end').textContent=`你解决了 ${score} 8减8,或 ${Math.round(score/8*100)} % !`;
-  $("答案").classList.add('hidden'); show('stepUnits',false); show('stepTens',false); show('stepHundreds',false); show('breakTen',false); show('breakHundred',false);
+  $("answer").classList.add('hidden'); show('stepUnits',false); show('stepTens',false); show('stepHundreds',false); show('breakTen',false); show('breakHundred',false);
   setNotice("点击新游戏再玩一次 。");
 }
-function restart(){show('zeroTrash',false);games=genGames(); index=0; score=0; $("答案").classList.remove('hidden'); render();}
+function restart(){show('zeroTrash',false);games=genGames(); index=0; score=0; $("answer").classList.remove('hidden'); render();}
 ['unitsResult','tensResult','hundredsResult','finalAnswer'].forEach(id=>$(id).addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,Number(e.target.maxLength)>0?Number(e.target.maxLength):2)}));
 $('checkUnits').addEventListener('click',checkUnits);
 $('checkTens').addEventListener('click',checkTens);
@@ -677,7 +677,7 @@ $('checkHundreds').addEventListener('click',checkHundreds);
 $('breakTen').addEventListener('click',breakTen);
 $('breakHundred').addEventListener('click',breakHundred);
 $('verify').addEventListener('click',verify);
-$("重新开始").addEventListener('click',restart);
+$("restart").addEventListener('click',restart);
 restart();
 </script>
 <script src="/assets/catalogue-v2/runtime-zh.js?v=1" defer></script></body>
