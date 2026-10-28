@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="zh-Hans" translate="no" class="notranslate">
+<head><base href="https://bleja972.github.io/les-suites-de-nombres/">
+<meta charset="UTF-8"><meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b8fa3">
+<title>数列</title>
+<style>
+:root{--ink:#17324d;--blue:#0b8fa3;--good:#2f9e44;--bad:#d94841;--orange:#ffbf69;--cream:#fff7e8}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;color:var(--ink)}
+body{min-height:100vh;background:linear-gradient(#c9efff 0 56%,#71cfe2 56% 66%,#f3d99a 66%);display:flex;justify-content:center}
+.app{width:100%;max-width:900px;min-height:100vh;background:rgba(255,255,255,.96);display:flex;flex-direction:column}
+header{text-align:center;padding:14px 12px 10px;background:linear-gradient(90deg,#fff0bc,#ffe0a0);border-bottom:3px solid #fff}
+.brand{font-weight:900;color:#086b76;font-size:clamp(16px,4vw,21px)}
+h1{margin:4px 0 0;color:var(--blue);font-size:clamp(30px,7vw,46px)}
+.screen{display:none;flex:1}.screen.active{display:flex;flex-direction:column}
+.home{justify-content:center;padding:18px}
+.card{background:var(--orange);border-radius:28px;padding:22px 18px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.hero{font-size:60px}.intro{font-size:19px;font-weight:800;line-height:1.45;margin:8px 0 14px}
+.nameInput,.answer{width:100%;border:3px solid #d98d24;border-radius:17px;text-align:center;padding:14px;font-size:24px;outline:none;background:#fff8eb;color:#17324d;-webkit-text-fill-color:#17324d}
+.nameInput{margin-bottom:14px;pointer-events:auto;cursor:text;position:relative;z-index:2}
+.answer{color:#17324d;-webkit-text-fill-color:#17324d;caret-color:#17324d}
+.levels{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:8px 0 16px}
+.levelBtn{border:3px solid #102d4f;border-radius:16px;background:#17324d;color:#fff;min-height:58px;padding:10px;font-size:19px;font-weight:900;cursor:pointer}
+.levelBtn.selected{border-color:#1f7a3d;background:#2f9e44;color:#fff;box-shadow:0 0 0 3px rgba(47,158,68,.25)}
+.startBtn,.actionBtn{touch-action:manipulation;cursor:pointer}
+.startBtn{width:100%;min-height:65px;border:0;border-radius:20px;background:var(--blue);color:white;font-size:clamp(23px,6vw,30px);font-weight:900;box-shadow:0 7px 0 #076d79}
+.game{padding:10px 14px 16px}
+.top{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.stat{background:var(--orange);border-radius:16px;text-align:center;padding:10px 4px;font-weight:900;box-shadow:0 5px 12px rgba(0,0,0,.06)}
+.progress{height:12px;background:#e5ecee;border-radius:999px;overflow:hidden;margin-bottom:14px}
+.bar{height:100%;width:0;background:linear-gradient(90deg,#55c3da,#2f9e44);transition:width .3s}
+.challenge{background:var(--cream);border:4px solid white;border-radius:26px;padding:20px 12px;box-shadow:0 9px 20px rgba(0,0,0,.10)}
+.prompt{text-align:center;font-size:21px;font-weight:900;margin-bottom:14px}
+.sequenceWrap{overflow-x:auto;padding:8px 0}
+.sequence{min-width:620px;display:grid;grid-template-columns:repeat(7,1fr);gap:8px;align-items:center}
+.numBox,.slot{min-height:74px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:clamp(28px,6vw,40px);font-weight:900}
+.numBox{background:#ffd797;border:3px solid #dc962d}
+.slot{background:#fff;border:4px dashed #0b8fa3;color:#0b8fa3}
+.slot.active{background:#dff8fb;border-style:solid}.slot.correct{background:#daf2df;border-color:var(--good);color:var(--good)}.slot.wrong{background:#ffe0de;border-color:var(--bad);color:var(--bad)}
+.answerArea{max-width:360px;margin:18px auto 0;text-align:center}.answer{font-size:38px;font-weight:900}.smallHelp{font-size:16px;font-weight:800;color:#5a6e78;margin-top:8px}
+.hintBox{display:none;margin:14px auto 0;max-width:600px;background:var(--orange);border:2px dashed #b66e00;border-radius:16px;padding:12px;text-align:center;font-size:19px;font-weight:800}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;max-width:530px;margin:14px auto 0}
+.actionBtn{border:0;border-radius:16px;min-height:54px;font-size:18px;font-weight:900}.hint{background:#ffe29a;color:#725000}.check{background:var(--blue);color:#fff}.next{background:var(--good);color:#fff;display:none}
+.feedback{min-height:52px;text-align:center;font-size:22px;font-weight:900;margin-top:10px}
+.end{justify-content:center;text-align:center;padding:20px}.stars{font-size:50px}.end h2{font-size:36px;margin:6px 0}.end p{font-size:20px;font-weight:800}
+.endBtns{display:grid;gap:9px}.secondary{border:3px solid #b66e00;border-radius:17px;padding:13px;background:var(--orange);font-size:18px;font-weight:900;cursor:pointer}
+@media(min-width:700px){.levels{grid-template-columns:repeat(3,1fr)}.app{box-shadow:0 0 35px rgba(0,0,0,.16)}}
+</style>
+<style id="decouvrir-autre-jeu-style">.decouvrir-autre-jeu{margin:20px 0 8px;padding:16px;border:2px solid #cde9dc;border-radius:16px;background:#f0faf3;color:#163f31;text-align:center;font-family:Arial,sans-serif}.decouvrir-autre-jeu strong{display:block;font-size:17px;line-height:1.35;margin-bottom:6px}.decouvrir-autre-jeu span{display:block;font-size:15px;margin-bottom:11px}.decouvrir-autre-jeu a{display:inline-block;background:#f9bb3d!important;color:#332300!important;border:2px solid #b97b10;border-radius:11px;padding:10px 15px;font-weight:800;text-decoration:none;box-shadow:0 3px 0 #ac750f}.decouvrir-autre-jeu a:focus-visible{outline:3px solid #1769aa;outline-offset:3px}[data-end]>.panel{max-height:95%;overflow-y:auto}</style></head>
+<body><nav aria-label="英语游戏" style="display:flex;justify-content:center;padding:10px;background:#173f30"><a href="/zh/?lang=zh" style="padding:10px 18px;border-radius:12px;background:#fff6cf;color:#173f30;text-decoration:none;font:bold 17px Arial,sans-serif">所有游戏</a></nav>
+<div class="app">
+<header><div class="brand">小CE1挑战</div><h1>数列</h1></header>
+
+<section id="home" class="screen active home">
+  <div class="card">
+    <div class="hero">1️⃣ 2️⃣ 3️⃣ ➡️</div>
+    <p class="intro">看看序列 找到规则 填上失踪的号码小心点:有些序列上升,另一些序列下降!</p>
+    <input id="name" class="nameInput" type="text" maxlength="18" placeholder="我姓我的名字" autocomplete="off" autocapitalize="words" spellcheck="false">
+    <div class="levels">
+      <button class="levelBtn selected" data-level="1">1级1级</button>
+      <button class="levelBtn" data-level="2">2级2级</button>
+      <button class="levelBtn" data-level="3">3级</button>
+      <button class="levelBtn" data-level="4">4级</button>
+      <button class="levelBtn" data-level="5">5级</button>
+      <button class="levelBtn" data-level="6">6级</button>
+    </div>
+    <button id="startBtn" class="startBtn">开始</button>
+  </div>
+</section>
+
+<section id="game" class="screen game">
+  <div class="top">
+    <div class="stat">得分<br><span id="score">0</span>/10</div>
+    <div class="stat">問題<br><span id="qnum">1</span>/10</div>
+    <div class="stat"> ⁇   ⁇ <br><span id="streak">0</span></div>
+  </div>
+  <div class="progress"><div id="bar" class="bar"></div></div>
+  <div class="challenge">
+    <div class="prompt">序列中缺少哪个数字 ?</div>
+    <div class="sequenceWrap"><div id="sequence" class="sequence"></div></div>
+    <div class="answerArea">
+      <input id="answer" class="answer" inputmode="numeric" pattern="[0-9]*" autocomplete="off" placeholder="?">
+      <div class="smallHelp">写失踪的号码。</div>
+    </div>
+    <div id="hintBox" class="hintBox"></div>
+    <div class="actions">
+      <button id="hintBtn" type="button" class="actionBtn hint">提示</button>
+      <button id="checkBtn" type="button" class="actionBtn check">检查答案</button>
+      <button id="nextBtn" type="button" class="actionBtn next">下一题</button>
+    </div>
+    <div id="feedback" class="feedback"></div>
+  </div>
+</section>
+
+<section id="end" class="screen end">
+  <div id="stars" class="stars">⭐⭐⭐</div>
+  <h2 id="endTitle">真棒！</h2>
+  <p id="endText"></p>
+  <div class="endBtns">
+    <button id="replayBtn" class="startBtn">再玩一次</button>
+    <button id="homeBtn" class="secondary">变化水平</button>
+  </div>
+<div class="decouvrir-autre-jeu"><strong>准备好再玩一场了吗?</strong><span>谜号线</span><a href="/zh/games/la-droite-graduee-mystere/">发现此游戏  ⁇ </a></div></section>
+</div>
+
+<script>function enNumber(n){n=Number(n);const d=['零','一','二','三','四','五','六','七','八','九'];if(n<0)return '负'+enNumber(-n);if(n<10)return d[n];if(n<100)return (n<20?'':d[Math.floor(n/10)])+'十'+(n%10?d[n%10]:'');if(n<1000)return d[Math.floor(n/100)]+'百'+(n%100?(n%100<10?'零':'')+enNumber(n%100):'');if(n===1000)return '一千';return String(n)}
+
+const TOTAL=10;
+let level=1,score=0,streak=0,qIndex=0,player="冠军";
+let step=1,start=0,missingIndex=3,correctAnswer=0,locked=false,direction=1;
+let usedQuestions=new Set();
+const $=id=>document.getElementById(id);
+
+function show(id){document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));$(id).classList.add("active")}
+function rand(min,max){return min+Math.floor(Math.random()*(max-min+1))}
+
+document.querySelectorAll(".levelBtn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".levelBtn").forEach(b=>b.classList.remove("selected"));
+    btn.classList.add("selected");
+    level=Number(btn.dataset.level);
+  });
+});
+
+function setRules(){
+  // 1 = la suite avance ; -1 = la suite recule
+  direction = Math.random() < 0.5 ? 1 : -1;
+
+  if(level===1){
+    step=1;
+    start = direction===1 ? rand(0,70) : rand(6,90);
+  }else if(level===2){
+    step=2;
+    start = direction===1 ? rand(0,120) : rand(12,150);
+  }else if(level===3){
+    step=3;
+    start = direction===1 ? rand(0,180) : rand(18,220);
+  }else if(level===4){
+    step=5;
+    start = direction===1 ? rand(0,300) : rand(30,350);
+  }else if(level===5){
+    step=10;
+    start = direction===1 ? rand(0,700) : rand(60,760);
+  }else{
+    step=100;
+    // Au dernier niveau, on conserve aussi des nombres non ronds :
+    // ex. 137, 237... ou 837, 737...
+    start = direction===1 ? rand(10,400) : rand(610,1000);
+  }
+}
+
+function makeQuestion(){
+  let attempts=0;
+  let signature="";
+
+  do{
+    setRules();
+
+    // On garantit que les 7 termes restent dans une plage correcte.
+    if(direction===1){
+      if(level===6 && start+6*step>1000){
+        start=rand(10,400);
+      }
+    }else{
+      const minStart=6*step;
+      if(start-minStart<0){
+        start=minStart+rand(0,Math.max(0,100-minStart));
+      }
+      if(level===6 && start-6*step<0){
+        start=rand(610,1000);
+      }
+    }
+
+    missingIndex=rand(1,5);
+    correctAnswer=start+(missingIndex*step*direction);
+
+    signature=[level,step,start,direction,missingIndex].join("-");
+    attempts++;
+  }while(usedQuestions.has(signature) && attempts<150);
+
+  usedQuestions.add(signature);
+}
+
+function renderSequence(){
+  const seq=$("sequence");seq.innerHTML="";
+  for(let i=0;i<7;i++){
+    const value=start+i*step*direction;
+    const box=document.createElement("div");
+    if(i===missingIndex){box.className="slot active";box.id="missingSlot";box.textContent="?"}
+    else{box.className="numBox";box.textContent=value}
+    seq.appendChild(box);
+  }
+}
+function newQuestion(){
+  locked=false;makeQuestion();renderSequence();
+  $("答案").value="";$("答案").disabled=false;$("feedback").textContent="";
+  $("hintBox").style.display="none";$("checkBtn").style.display="block";$("nextBtn").style.display="none";
+  $("qnum").textContent=qIndex+1;$("bar").style.width=(qIndex/TOTAL*100)+"%";
+  setTimeout(()=>$("答案").focus(),80);
+}
+function startGame(){
+  player=$("name").value.trim()||player||"冠军";
+  score=0;streak=0;qIndex=0;usedQuestions=new Set();$("得分").textContent=0;$("streak").textContent=0;show("game");newQuestion();
+}
+$("hintBtn").addEventListener("click",()=>{
+  if(locked)return;
+  $("hintBox").textContent="比較相邻的兩個數字: 找出序列每次增减多少。";
+  $("hintBox").style.display="block";
+});
+$("checkBtn").addEventListener("click",()=>{
+  if(locked)return;
+  const val=$("答案").value.trim();
+  if(val===""){$("feedback").textContent="寫一個數字先。";return}
+  locked=true;
+  const ok=Number(val)===correctAnswer;
+  const slot=$("missingSlot");slot.textContent=correctAnswer;
+  if(ok){score++;streak++;slot.classList.remove("active");slot.classList.add("correct");$("feedback").textContent="干得不错!这是正确的: "+correctAnswer+".";beep(720,.12)}
+  else{streak=0;slot.classList.remove("active");slot.classList.add("wrong");$("feedback").textContent="正确的答案是 "+correctAnswer+".";beep(220,.18)}
+  $("得分").textContent=score;$("streak").textContent=streak;$("答案").disabled=true;
+  $("checkBtn").style.display="none";$("nextBtn").style.display="block";qIndex++;$("bar").style.width=(qIndex/TOTAL*100)+"%";
+});
+$("nextBtn").addEventListener("click",()=>{if(qIndex>=TOTAL)finish();else newQuestion()});
+function finish(){
+  show("end");
+  $("endText").textContent=player+"中发现 "+score+" sequence"+(score>1?"s":"")+" 10个中";
+  if(score===10){$("stars").textContent="⭐⭐⭐";$("endTitle").textContent="数字序列冠军!"}
+  else if(score>=7){$("stars").textContent="⭐⭐";$("endTitle").textContent="干得不错!"}
+  else{$("stars").textContent="⭐";$("endTitle").textContent="继续走,你进步了!"}
+}
+function beep(freq,dur){
+  try{
+    const ctx=new (window.AudioContext||window.webkitAudioContext)();
+    const osc=ctx.createOscillator(),gain=ctx.createGain();
+    osc.frequency.value=freq;gain.gain.value=.04;osc.connect(gain);gain.connect(ctx.destination);osc.start();
+    setTimeout(()=>{osc.stop();ctx.close()},dur*1000);
+  }catch(e){}
+}
+$("startBtn").addEventListener("click",startGame);
+$("replayBtn").addEventListener("click",startGame);
+$("homeBtn").addEventListener("click",()=>show("首页"));
+$("答案").addEventListener("keydown",e=>{if(e.key==="Enter"){locked?$("nextBtn").click():$("checkBtn").click()}});
+</script>
+<script src="/assets/catalogue-v2/runtime-zh.js?v=1" defer></script></body>
+</html>

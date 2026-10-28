@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="zh-Hans" translate="no" class="notranslate">
+<head><base href="https://bleja972.github.io/complements/">
+<meta charset="UTF-8"><meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#17324d">
+<title>凑满10、100和1000</title>
+<style>
+:root{
+  --navy:#17324d;
+  --blue:#0b8fa3;
+  --green:#2f8f57;
+  --orange:#ffd18a;
+  --cream:#fff8e9;
+  --gold:#e8b54d;
+  --good:#2f9e44;
+  --bad:#d94841;
+  --ink:#253746;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;color:var(--ink)}
+body{
+  min-height:100vh;
+  background:linear-gradient(#d6f2ff 0 55%,#f2d797 55% 100%);
+  display:flex;
+  justify-content:center;
+}
+.app{
+  width:100%;
+  max-width:900px;
+  min-height:100vh;
+  background:rgba(255,255,255,.96);
+  display:flex;
+  flex-direction:column;
+}
+header{
+  text-align:center;
+  padding:12px 10px 10px;
+  background:linear-gradient(90deg,#fff0bb,#ffe0a0);
+  border-bottom:4px solid #c78d2a;
+}
+.brand{font-weight:900;color:#0b6b75;font-size:18px}
+h1{margin:4px 0;color:var(--navy);font-size:clamp(27px,7vw,43px)}
+.screen{display:none;flex:1}
+.screen.active{display:flex;flex-direction:column}
+.home{padding:18px;justify-content:center}
+.panel{
+  background:var(--orange);
+  border:4px solid #c88625;
+  border-radius:26px;
+  padding:20px;
+  box-shadow:0 10px 24px rgba(0,0,0,.12);
+}
+.intro{
+  text-align:center;
+  font-size:19px;
+  font-weight:800;
+  line-height:1.4;
+  margin:4px 0 13px;
+}
+.example{
+  max-width:560px;
+  margin:0 auto 14px;
+  padding:11px;
+  border:3px solid #c88625;
+  border-radius:14px;
+  background:#fff4d2;
+  text-align:center;
+  color:var(--navy);
+  font-size:20px;
+  font-weight:900;
+}
+.nameInput,.answerInput{
+  width:100%;
+  text-align:center;
+  color:var(--navy);
+  background:#fff;
+  border:3px solid #b97a20;
+  border-radius:15px;
+  outline:none;
+}
+.nameInput{padding:13px;font-size:23px}
+.levels{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:9px;
+  margin:14px 0;
+}
+.levelBtn{
+  min-height:58px;
+  border:3px solid #102d4f;
+  border-radius:15px;
+  background:var(--navy);
+  color:#fff;
+  font-size:18px;
+  font-weight:900;
+  cursor:pointer;
+}
+.levelBtn.selected{
+  background:var(--green);
+  border-color:#1d6f40;
+  box-shadow:0 0 0 4px rgba(47,143,87,.22);
+}
+.startBtn,.actionBtn{cursor:pointer;touch-action:manipulation}
+.startBtn{
+  width:100%;
+  min-height:64px;
+  border:0;
+  border-radius:18px;
+  background:var(--blue);
+  color:white;
+  font-size:26px;
+  font-weight:900;
+  box-shadow:0 7px 0 #076d79;
+}
+.game{padding:10px 12px 16px}
+.top{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin-bottom:9px;
+}
+.stat{
+  background:var(--orange);
+  border:2px solid #d69634;
+  border-radius:14px;
+  padding:9px 4px;
+  text-align:center;
+  font-weight:900;
+}
+.progress{
+  height:11px;
+  background:#e7edef;
+  border-radius:999px;
+  overflow:hidden;
+  margin-bottom:12px;
+}
+.bar{
+  height:100%;
+  width:0;
+  background:linear-gradient(90deg,#4fb3c8,#2f9e44);
+  transition:.3s;
+}
+.challenge{
+  background:var(--cream);
+  border:4px solid #fff;
+  border-radius:24px;
+  padding:22px 12px;
+  box-shadow:0 8px 18px rgba(0,0,0,.1);
+}
+.prompt{
+  text-align:center;
+  font-size:21px;
+  font-weight:900;
+  margin-bottom:14px;
+}
+.targetBadge{
+  width:max-content;
+  max-width:100%;
+  margin:0 auto 15px;
+  padding:7px 17px;
+  border-radius:999px;
+  background:#ffe2a3;
+  border:3px solid #d4972d;
+  color:var(--navy);
+  font-size:17px;
+  font-weight:900;
+}
+.operation{
+  min-height:125px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:11px;
+  flex-wrap:wrap;
+  color:var(--navy);
+  font-size:clamp(42px,11vw,72px);
+  font-weight:900;
+  margin:4px 0 10px;
+}
+.questionMark{
+  min-width:82px;
+  padding:5px 10px;
+  border:4px dashed var(--blue);
+  border-radius:16px;
+  background:#e8fbff;
+  color:var(--blue);
+  text-align:center;
+}
+.answerWrap{max-width:310px;margin:0 auto}
+.answerInput{
+  min-height:76px;
+  padding:8px;
+  border:4px solid var(--navy);
+  font-size:42px;
+  font-weight:900;
+  -webkit-text-fill-color:var(--navy);
+}
+.answerInput.correct{background:#dcf4e2;border-color:var(--good)}
+.answerInput.wrong{background:#ffe1df;border-color:var(--bad)}
+.hintBox{
+  display:none;
+  max-width:620px;
+  margin:14px auto 0;
+  padding:12px;
+  border:2px dashed #c28022;
+  background:#ffd894;
+  border-radius:15px;
+  text-align:center;
+  font-size:18px;
+  font-weight:800;
+}
+.actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+  max-width:520px;
+  margin:14px auto 0;
+}
+.actionBtn{
+  border:0;
+  border-radius:15px;
+  min-height:52px;
+  font-size:18px;
+  font-weight:900;
+}
+.hint{background:#ffe29b;color:#704b16}
+.check{background:var(--blue);color:#fff}
+.next{background:var(--good);color:#fff;display:none}
+.feedback{
+  min-height:48px;
+  margin-top:9px;
+  text-align:center;
+  font-size:21px;
+  font-weight:900;
+}
+.end{padding:20px;justify-content:center;text-align:center}
+.stars{font-size:48px}
+.end h2{font-size:36px;margin:6px}
+.end p{font-size:20px;font-weight:800}
+.secondary{
+  margin-top:10px;
+  border:3px solid #c88625;
+  border-radius:15px;
+  padding:13px;
+  background:var(--orange);
+  font-size:18px;
+  font-weight:900;
+  cursor:pointer;
+}
+@media(max-width:520px){
+  .operation{font-size:clamp(37px,11vw,55px);gap:7px}
+  .questionMark{min-width:66px}
+  .answerInput{font-size:36px}
+}
+@media(min-width:760px){
+  .levels{grid-template-columns:repeat(5,1fr)}
+  .app{box-shadow:0 0 35px rgba(0,0,0,.16)}
+}
+</style>
+<style id="decouvrir-autre-jeu-style">.decouvrir-autre-jeu{margin:20px 0 8px;padding:16px;border:2px solid #cde9dc;border-radius:16px;background:#f0faf3;color:#163f31;text-align:center;font-family:Arial,sans-serif}.decouvrir-autre-jeu strong{display:block;font-size:17px;line-height:1.35;margin-bottom:6px}.decouvrir-autre-jeu span{display:block;font-size:15px;margin-bottom:11px}.decouvrir-autre-jeu a{display:inline-block;background:#f9bb3d!important;color:#332300!important;border:2px solid #b97b10;border-radius:11px;padding:10px 15px;font-weight:800;text-decoration:none;box-shadow:0 3px 0 #ac750f}.decouvrir-autre-jeu a:focus-visible{outline:3px solid #1769aa;outline-offset:3px}[data-end]>.panel{max-height:95%;overflow-y:auto}</style></head>
+<body><nav aria-label="博客浏览导航" style="text-align:center;padding:12px"><a href="/zh/?lang=zh" style="display:inline-block;padding:10px 18px;border-radius:12px;background:#17664e;color:white;font:bold 16px Arial,sans-serif;text-decoration:none">英文博客</a></nav>
+<div class="app">
+<header>
+  <div class="brand">小CE1挑战</div>
+  <h1>凑满10、100和1000</h1>
+</header>
+
+<section id="home" class="screen active home">
+  <div class="panel">
+    <p class="intro">找到失踪的号码 得出10、100或1000</p>
+    <div class="example">实例:6+?=10 * 100 -70 =?</div>
+    <input id="name" class="nameInput" type="text" maxlength="18" placeholder="我姓我的名字" autocomplete="off">
+
+    <div class="levels">
+      <button class="levelBtn selected" data-level="1">1级1级</button>
+      <button class="levelBtn" data-level="2">2级2级</button>
+      <button class="levelBtn" data-level="3">3级</button>
+      <button class="levelBtn" data-level="4">4级</button>
+      <button class="levelBtn" data-level="5">5级</button>
+    </div>
+
+    <button id="startBtn" class="startBtn">开始</button>
+  </div>
+</section>
+
+<section id="game" class="screen game">
+  <div class="top">
+    <div class="stat">得分<br><span id="score">0</span>/10</div>
+    <div class="stat">問題<br><span id="qnum">1</span>/10</div>
+    <div class="stat"> ⁇   ⁇ <br><span id="streak">0</span></div>
+  </div>
+  <div class="progress"><div id="bar" class="bar"></div></div>
+
+  <div class="challenge">
+    <div class="prompt">找到失踪的号码</div>
+    <div id="targetBadge" class="targetBadge"></div>
+    <div id="operation" class="operation"></div>
+
+    <div class="answerWrap">
+      <input id="answer" class="answerInput" inputmode="numeric" pattern="[0-9]*" autocomplete="off">
+    </div>
+
+    <div id="hintBox" class="hintBox"></div>
+
+    <div class="actions">
+      <button id="hintBtn" type="button" class="actionBtn hint">提示</button>
+      <button id="checkBtn" type="button" class="actionBtn check">检查答案</button>
+      <button id="nextBtn" type="button" class="actionBtn next">下一题</button>
+    </div>
+
+    <div id="feedback" class="feedback"></div>
+  </div>
+</section>
+
+<section id="end" class="screen end">
+  <div id="stars" class="stars">⭐⭐⭐</div>
+  <h2 id="endTitle">真棒！</h2>
+  <p id="endText"></p>
+  <button id="replayBtn" class="startBtn">再玩一次</button>
+  <button id="homeBtn" class="secondary">变化水平</button>
+<div class="decouvrir-autre-jeu"><strong>准备好再玩一场了吗?</strong><span>至100的债券</span><a href="/zh/games/mission-nautilus-complements-a-100/">发现此游戏  ⁇ </a></div></section>
+</div>
+
+<script>
+const TOTAL=10;
+let level=1,score=0,streak=0,qIndex=0,player="冠军",locked=false;
+let current=null;
+let used=new Set();
+
+const $=id=>document.getElementById(id);
+function show(id){
+  document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
+  $(id).classList.add("active");
+}
+function rand(min,max){return min+Math.floor(Math.random()*(max-min+1))}
+
+document.querySelectorAll(".levelBtn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".levelBtn").forEach(b=>b.classList.remove("selected"));
+    btn.classList.add("selected");
+    level=Number(btn.dataset.level);
+  });
+});
+
+function numberForLevel(){
+  if(level===1){
+    return {target:10, a:rand(1,9), label:"至10的债券"};
+  }
+  if(level===2){
+    // dizaines entières strictement entre 0 et 100
+    return {target:100, a:rand(1,9)*10, label:"至100的债券"};
+  }
+  if(level===3){
+    // nombre à 2 chiffres avec unité différente de 0
+    let a;
+    do{ a=rand(11,99); }while(a%10===0);
+    return {target:100, a, label:"至100的债券"};
+  }
+  if(level===4){
+    // centaines entières strictement entre 0 et 1000
+    return {target:1000, a:rand(1,9)*100, label:"至1000的保证金"};
+  }
+  // nombre à 3 chiffres, chiffre des unités différent de 0
+  let a;
+  do{ a=rand(101,999); }while(a%10===0);
+  return {target:1000, a, label:"至1000的保证金"};
+}
+
+function makeQuestion(){
+  let q,signature,tries=0;
+  do{
+    const data=numberForLevel();
+    const form=Math.random()<0.5 ? "add" : "sub";
+    q={
+      target:data.target,
+      a:data.a,
+      answer:data.target-data.a,
+      form,
+      label:data.label
+    };
+    signature=[level,q.a,q.form].join("-");
+    tries++;
+  }while(used.has(signature) && tries<300);
+
+  used.add(signature);
+  current=q;
+}
+
+function renderOperation(){
+  const host=$("operation");
+  host.innerHTML="";
+
+  const makeSpan=(text,cls="")=>{
+    const s=document.createElement("span");
+    s.textContent=text;
+    if(cls)s.className=cls;
+    host.appendChild(s);
+  };
+
+  if(current.form==="add"){
+    makeSpan(current.a);
+    makeSpan("+");
+    makeSpan("?","questionMark");
+    makeSpan("=");
+    makeSpan(current.target);
+  }else{
+    makeSpan(current.target);
+    makeSpan("−");
+    makeSpan(current.a);
+    makeSpan("=");
+    makeSpan("?","questionMark");
+  }
+
+  $("targetBadge").textContent=current.label;
+}
+
+function newQuestion(){
+  locked=false;
+  makeQuestion();
+  renderOperation();
+
+  $("答案").value="";
+  $("答案").disabled=false;
+  $("答案").classList.remove("correct","wrong");
+  $("feedback").textContent="";
+  $("hintBox").style.display="none";
+  $("checkBtn").style.display="block";
+  $("nextBtn").style.display="none";
+  $("qnum").textContent=qIndex+1;
+  $("bar").style.width=(qIndex/TOTAL*100)+"%";
+  setTimeout(()=>$("答案").focus(),80);
+}
+
+function startGame(){
+  player=$("name").value.trim()||player;
+  score=0;streak=0;qIndex=0;used.clear();
+  $("得分").textContent=0;
+  $("streak").textContent=0;
+  show("game");
+  newQuestion();
+}
+
+$("hintBtn").addEventListener("click",()=>{
+  if(locked)return;
+
+  let text="";
+  if(current.target===10){
+    text="找出要加到多少 "+current.a+" 至10岁。";
+  }else if(current.target===100){
+    if(current.a%10===0){
+      text="想想十:来自 "+(current.a/10)+" 几十至10万,还需要多少?";
+    }else{
+      text="首先到下个十岁 然后继续到100岁";
+    }
+  }else{
+    if(current.a%100===0){
+      text="想想上百人:来自 "+(current.a/100)+" 几百到10百,还需要多少?";
+    }else{
+      text="一步一步地工作:到达下一个十岁,再到下一个一百,再到一千。";
+    }
+  }
+
+  $("hintBox").textContent=text;
+  $("hintBox").style.display="block";
+});
+
+$("checkBtn").addEventListener("click",()=>{
+  if(locked)return;
+
+  const val=$("答案").value.trim();
+  if(val===""){
+    $("feedback").textContent="先写一个答案。";
+    return;
+  }
+
+  locked=true;
+  const ok=Number(val)===current.answer;
+  $("答案").classList.add(ok?"正确":"wrong");
+
+  if(ok){
+    score++;
+    streak++;
+    $("feedback").textContent="干得不错!答案是 "+current.answer+".";
+    beep(720,.12);
+  }else{
+    streak=0;
+    $("答案").value=current.answer;
+    $("feedback").textContent="正确的答案是 "+current.answer+".";
+    beep(220,.18);
+  }
+
+  $("答案").disabled=true;
+  $("得分").textContent=score;
+  $("streak").textContent=streak;
+  $("checkBtn").style.display="none";
+  $("nextBtn").style.display="block";
+  qIndex++;
+  $("bar").style.width=(qIndex/TOTAL*100)+"%";
+});
+
+$("nextBtn").addEventListener("click",()=>qIndex>=TOTAL?finish():newQuestion());
+
+function finish(){
+  show("end");
+  $("endText").textContent=player+"你解决了 "+score+" calcul"+(score>1?"s":"")+" 10个中";
+  if(score===10){
+    $("stars").textContent="⭐⭐⭐";
+    $("endTitle").textContent="数字债券冠军!";
+  }else if(score>=7){
+    $("stars").textContent="⭐⭐";
+    $("endTitle").textContent="干得不错!";
+  }else{
+    $("stars").textContent="⭐";
+    $("endTitle").textContent="继续走,你进步了!";
+  }
+}
+
+function beep(freq,dur){
+  try{
+    const ctx=new (window.AudioContext||window.webkitAudioContext)();
+    const osc=ctx.createOscillator(),gain=ctx.createGain();
+    osc.frequency.value=freq;
+    gain.gain.value=.04;
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+    setTimeout(()=>{osc.stop();ctx.close()},dur*1000);
+  }catch(e){}
+}
+
+$("startBtn").addEventListener("click",startGame);
+$("replayBtn").addEventListener("click",startGame);
+$("homeBtn").addEventListener("click",()=>show("首页"));
+$("答案").addEventListener("keydown",e=>{
+  if(e.key==="Enter"){
+    if(locked)$("nextBtn").click();
+    else $("checkBtn").click();
+  }
+});
+</script>
+<script src="/assets/catalogue-v2/runtime-zh.js?v=1" defer></script></body>
+</html>

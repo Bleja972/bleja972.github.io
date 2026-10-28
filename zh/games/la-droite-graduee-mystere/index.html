@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="zh-Hans" translate="no" class="notranslate">
+<head><base href="https://jeu-de-la-droite-graduee.netlify.app/">
+<meta charset="UTF-8"><meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b8fa3">
+<title>神秘数轴</title>
+<style>
+:root{
+  --ink:#17324d;
+  --blue:#0b8fa3;
+  --good:#2f9e44;
+  --bad:#d94841;
+  --orange:#ffd18a;
+  --cream:#fff6e2;
+}
+*{box-sizing:border-box}
+html,body{
+  margin:0;min-height:100%;
+  font-family:Arial,Helvetica,sans-serif;color:var(--ink)
+}
+body{
+  min-height:100vh;min-height:100dvh;
+  background:linear-gradient(#c8efff 0 58%,#5dc6dc 58% 68%,#f3d998 68%);
+  display:flex;justify-content:center
+}
+.app{
+  width:100%;max-width:820px;min-height:100vh;min-height:100dvh;
+  background:rgba(255,255,255,.95);display:flex;flex-direction:column
+}
+header{
+  text-align:center;padding:13px 14px 10px;
+  background:linear-gradient(90deg,#fff0c2,#ffe0a0);
+  border-bottom:3px solid white
+}
+.school{font-weight:900;color:#086a74;font-size:clamp(16px,4vw,21px)}
+h1{margin:4px 0 0;color:var(--blue);font-size:clamp(28px,7vw,45px)}
+.screen{display:none;flex:1}
+.screen.active{display:flex;flex-direction:column}
+.home{justify-content:center;padding:20px;text-align:center}
+.card{
+  background:var(--orange);border-radius:28px;padding:22px 18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.12)
+}
+.hero{font-size:58px}
+.intro{font-size:19px;font-weight:800;line-height:1.45}
+.nameInput{
+  width:100%;border:3px solid #c98928;border-radius:17px;text-align:center;
+  padding:14px;font-size:24px;outline:none;margin:8px 0 15px;background:#fff4de
+}
+.startBtn,.actionBtn,.tickBtn{
+  touch-action:manipulation;-webkit-tap-highlight-color:transparent;cursor:pointer
+}
+.startBtn{
+  width:100%;min-height:66px;border:0;border-radius:20px;background:var(--blue);
+  color:white;font-size:clamp(23px,6vw,31px);font-weight:900;box-shadow:0 7px 0 #076d79
+}
+.game{padding:10px 14px 16px}
+.top{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.stat{
+  background:var(--orange);border-radius:16px;text-align:center;padding:10px 4px;
+  font-weight:900;box-shadow:0 5px 12px rgba(0,0,0,.06)
+}
+.progress{
+  height:12px;background:#e7eef0;border-radius:999px;overflow:hidden;margin-bottom:14px
+}
+.bar{
+  height:100%;width:0;background:linear-gradient(90deg,#55c3da,#2f9e44);transition:width .3s
+}
+.challenge{
+  background:var(--cream);border:4px solid white;border-radius:26px;
+  padding:20px 12px;box-shadow:0 9px 20px rgba(0,0,0,.10)
+}
+.prompt{text-align:center;font-size:21px;font-weight:900}
+.target{
+  text-align:center;font-size:clamp(50px,14vw,78px);font-weight:900;
+  color:#0b7180;margin:4px 0 18px
+}
+.lineCard{
+  background:var(--orange);border-radius:22px;padding:28px 12px 24px;
+  box-shadow:inset 0 0 0 2px #e1a24a;
+  overflow-x:auto
+}
+.numberLine{
+  min-width:560px;display:grid;align-items:start;position:relative;padding:0 12px 22px
+}
+.lineTrack{
+  height:8px;background:#17324d;border-radius:999px;
+  position:absolute;left:28px;right:28px;top:24px
+}
+.ticks{
+  display:grid;grid-template-columns:repeat(11,1fr);
+  position:relative;z-index:2
+}
+.tickCol{
+  display:flex;flex-direction:column;align-items:center;min-width:0
+}
+.tickBtn{
+  width:44px;height:52px;border:0;background:transparent;position:relative;
+  display:flex;align-items:flex-start;justify-content:center;padding:0
+}
+.tickMark{
+  width:4px;height:26px;background:#17324d;border-radius:3px;transition:.15s
+}
+.tickBtn.selected .tickMark{height:40px;background:#ff9800}
+.tickBtn.correct .tickMark{height:42px;background:var(--good);width:7px}
+.tickBtn.wrong .tickMark{height:42px;background:var(--bad);width:7px}
+.tickLabel{
+  min-height:44px;margin-top:4px;font-size:0;color:transparent
+}
+.tickLabel.endpoint{
+  min-height:72px;width:72px;height:72px;margin-top:8px;
+  font-size:23px;font-weight:900;color:#17324d;background:#ffb64d;
+  border:3px solid #b96e00;display:flex;align-items:center;justify-content:center;
+  transform:rotate(45deg);border-radius:10px;
+  box-shadow:0 6px 14px rgba(0,0,0,.08)
+}
+.tickLabel.endpoint span{
+  transform:rotate(-45deg);display:block
+}
+.selectedText{
+  text-align:center;font-size:20px;font-weight:900;min-height:32px;margin-top:12px
+}
+.hintBox{
+  display:none;margin:14px auto 0;max-width:590px;background:var(--orange);
+  border-radius:16px;padding:12px;text-align:center;font-size:19px;font-weight:800;
+  border:2px dashed #b96e00
+}
+.actions{
+  display:grid;grid-template-columns:1fr 1fr;gap:9px;
+  max-width:520px;margin:14px auto 0
+}
+.actionBtn{
+  border:0;border-radius:16px;min-height:54px;font-size:18px;font-weight:900
+}
+.hint{background:#ffde92;color:#725000}
+.check{background:var(--blue);color:white}
+.next{background:#2f9e44;color:white;display:none}
+.feedback{
+  min-height:52px;text-align:center;font-size:22px;font-weight:900;margin-top:10px
+}
+.end{justify-content:center;text-align:center;padding:20px}
+.stars{font-size:48px}
+.end h2{font-size:37px;margin:6px 0}
+.end p{font-size:20px;font-weight:800}
+.endBtns{display:grid;gap:9px}
+.secondary{
+  border:3px solid #b96e00;border-radius:17px;padding:13px;background:var(--orange);
+  font-size:18px;font-weight:900;cursor:pointer
+}
+@media(min-width:650px){
+  .app{box-shadow:0 0 35px rgba(0,0,0,.16)}
+}
+</style>
+<style id="decouvrir-autre-jeu-style">.decouvrir-autre-jeu{margin:20px 0 8px;padding:16px;border:2px solid #cde9dc;border-radius:16px;background:#f0faf3;color:#163f31;text-align:center;font-family:Arial,sans-serif}.decouvrir-autre-jeu strong{display:block;font-size:17px;line-height:1.35;margin-bottom:6px}.decouvrir-autre-jeu span{display:block;font-size:15px;margin-bottom:11px}.decouvrir-autre-jeu a{display:inline-block;background:#f9bb3d!important;color:#332300!important;border:2px solid #b97b10;border-radius:11px;padding:10px 15px;font-weight:800;text-decoration:none;box-shadow:0 3px 0 #ac750f}.decouvrir-autre-jeu a:focus-visible{outline:3px solid #1769aa;outline-offset:3px}[data-end]>.panel{max-height:95%;overflow-y:auto}</style></head>
+<body><nav aria-label="英语游戏" style="display:flex;justify-content:center;padding:10px;background:#173f30"><a href="/zh/?lang=zh" style="padding:10px 18px;border-radius:12px;background:#fff6cf;color:#173f30;text-decoration:none;font:bold 17px Arial,sans-serif">所有游戏</a></nav>
+<div class="app">
+<header>
+  <div class="school">埃米尔纳贝蒂学校</div>
+  <h1>神秘数轴</h1>
+</header>
+
+<section id="home" class="screen active home">
+  <div class="card">
+    <div class="hero">📍 ───── 🔢</div>
+    <p class="intro">
+      只看第一个和最后一个数字。
+      沿着数字行找到步骤,然后输入所要求的号码。
+    </p>
+    <input id="name" class="nameInput" maxlength="18" placeholder="我姓我的名字">
+    <button id="startBtn" class="startBtn">开始</button>
+  </div>
+</section>
+
+<section id="game" class="screen game">
+  <div class="top">
+    <div class="stat">得分<br><span id="score">0</span>/10</div>
+    <div class="stat">問題<br><span id="qnum">1</span>/10</div>
+    <div class="stat"> ⁇   ⁇ <br><span id="streak">0</span></div>
+  </div>
+
+  <div class="progress"><div id="bar" class="bar"></div></div>
+
+  <div class="challenge">
+    <div class="prompt">将此数字放在数字行上:</div>
+    <div id="target" class="target">54</div>
+
+    <div class="lineCard">
+      <div class="numberLine">
+        <div class="lineTrack"></div>
+        <div id="ticks" class="ticks"></div>
+      </div>
+    </div>
+
+    <div id="selectedText" class="selectedText">
+      单击数字所属的选项。
+    </div>
+
+    <div id="hintBox" class="hintBox"></div>
+
+    <div class="actions">
+      <button id="hintBtn" type="button" class="actionBtn hint">提示</button>
+      <button id="checkBtn" type="button" class="actionBtn check">检查答案</button>
+      <button id="nextBtn" type="button" class="actionBtn next">下一题</button>
+    </div>
+
+    <div id="feedback" class="feedback"></div>
+  </div>
+</section>
+
+<section id="end" class="screen end">
+  <div id="stars" class="stars">⭐⭐⭐</div>
+  <h2 id="endTitle">真棒！</h2>
+  <p id="endText"></p>
+  <div class="endBtns">
+    <button class="startBtn" id="replayBtn">再玩一次</button>
+    <button class="secondary" id="homeBtn">首页</button>
+  </div>
+<div class="decouvrir-autre-jeu"><strong>准备好再玩一场了吗?</strong><span>数字线挑战</span><a href="/zh/games/le-defi-de-la-droite-graduee/">发现此游戏  ⁇ </a></div></section>
+</div>
+
+<script>function enNumber(n){n=Number(n);const d=['零','一','二','三','四','五','六','七','八','九'];if(n<0)return '负'+enNumber(-n);if(n<10)return d[n];if(n<100)return (n<20?'':d[Math.floor(n/10)])+'十'+(n%10?d[n%10]:'');if(n<1000)return d[Math.floor(n/100)]+'百'+(n%100?(n%100<10?'零':'')+enNumber(n%100):'');if(n===1000)return '一千';return String(n)}
+
+const TOTAL=10;
+const POSSIBLE_STEPS=[1,2,5,10];
+
+let score=0,streak=0,qIndex=0,player="冠军";
+let start=10,step=1,target=0,targetIndex=0,selectedIndex=null,locked=false;
+
+const $=id=>document.getElementById(id);
+
+function show(id){
+  document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
+  $(id).classList.add("active");
+}
+
+function randomInt(min,max){
+  return min+Math.floor(Math.random()*(max-min+1));
+}
+
+function chooseStep(){
+  return POSSIBLE_STEPS[randomInt(0,POSSIBLE_STEPS.length-1)];
+}
+
+function makeQuestion(){
+  step=chooseStep();
+
+  // 11 graduations = 10 intervalles. Les deux extrémités
+  // ainsi que la cible doivent rester entre 10 et 200.
+  const maxStart=200-(10*step);
+  const raw=randomInt(10,maxStart);
+
+  if(step===1){
+    start=raw;
+  }else{
+    start=Math.ceil(raw/step)*step;
+    if(start>maxStart) start=Math.floor(maxStart/step)*step;
+    if(start<10) start=Math.ceil(10/step)*step;
+  }
+
+  targetIndex=randomInt(1,9);
+  target=start+(targetIndex*step);
+}
+
+function renderLine(){
+  const ticks=$("ticks");
+  ticks.innerHTML="";
+
+  for(let i=0;i<=10;i++){
+    const col=document.createElement("div");
+    col.className="tickCol";
+
+    const btn=document.createElement("button");
+    btn.type="button";
+    btn.className="tickBtn";
+    btn.dataset.index=i;
+    btn.setAttribute("aria-label","毕业 "+i);
+
+    const mark=document.createElement("div");
+    mark.className="tickMark";
+    btn.appendChild(mark);
+
+    const label=document.createElement("div");
+    const value=start+(i*step);
+
+    if(i===0 || i===10){
+      label.className="tickLabel endpoint";
+      const span=document.createElement("span");
+      span.textContent=value;
+      label.appendChild(span);
+    }else{
+      label.className="tickLabel";
+    }
+
+    btn.addEventListener("click",()=>{
+      if(locked) return;
+      selectedIndex=i;
+      document.querySelectorAll(".tickBtn").forEach(b=>b.classList.remove("selected"));
+      btn.classList.add("selected");
+      $("selectedText").textContent="您选中了此选项 。";
+    });
+
+    col.appendChild(btn);
+    col.appendChild(label);
+    ticks.appendChild(col);
+  }
+}
+
+function startGame(){
+  player=$("name").value.trim()||player||"冠军";
+  score=0;
+  streak=0;
+  qIndex=0;
+  $("得分").textContent=0;
+  $("streak").textContent=0;
+  show("game");
+  newQuestion();
+}
+
+function newQuestion(){
+  locked=false;
+  selectedIndex=null;
+  makeQuestion();
+  renderLine();
+
+  $("target").textContent=target;
+  $("qnum").textContent=qIndex+1;
+  $("bar").style.width=(qIndex/TOTAL*100)+"%";
+  $("selectedText").textContent="单击数字所属的选项。";
+  $("feedback").textContent="";
+  $("hintBox").style.display="none";
+  $("checkBtn").style.display="block";
+  $("nextBtn").style.display="none";
+}
+
+$("hintBtn").addEventListener("click",()=>{
+  if(locked) return;
+  const end=start+(10*step);
+  $("hintBox").textContent=
+    "计数间距 "+start+" and "+end+
+    "然后确定每个步骤的大小。";
+  $("hintBox").style.display="block";
+});
+
+$("checkBtn").addEventListener("click",()=>{
+  if(locked) return;
+
+  if(selectedIndex===null){
+    $("feedback").textContent="请先点击一个滴答。";
+    return;
+  }
+
+  locked=true;
+  const buttons=[...document.querySelectorAll(".tickBtn")];
+  const ok=selectedIndex===targetIndex;
+
+  buttons.forEach(btn=>{
+    btn.disabled=true;
+    const idx=Number(btn.dataset.index);
+    if(idx===targetIndex) btn.classList.add("correct");
+    if(idx===selectedIndex && !ok) btn.classList.add("wrong");
+  });
+
+  if(ok){
+    score++;
+    streak++;
+    $("feedback").textContent="真棒！ "+target+" 确是在正确的地方。";
+    beep(720,.12);
+  }else{
+    streak=0;
+    $("feedback").textContent=
+      "Look at the green tick: 那就是你应该放置的地方 "+target+".";
+    beep(220,.18);
+  }
+
+  $("得分").textContent=score;
+  $("streak").textContent=streak;
+  $("checkBtn").style.display="none";
+  $("nextBtn").style.display="block";
+  qIndex++;
+  $("bar").style.width=(qIndex/TOTAL*100)+"%";
+});
+
+$("nextBtn").addEventListener("click",()=>{
+  if(qIndex>=TOTAL) finish();
+  else newQuestion();
+});
+
+function finish(){
+  show("end");
+  $("endText").textContent=
+    player+",您正确的位置 "+score+
+    " number"+(score===1?"":"s")+" 10个中";
+
+  if(score===10){
+    $("stars").textContent="⭐⭐⭐";
+    $("endTitle").textContent="数字队冠军!";
+  }else if(score>=7){
+    $("stars").textContent="⭐⭐";
+    $("endTitle").textContent="干得不错!";
+  }else{
+    $("stars").textContent="⭐";
+    $("endTitle").textContent="继续走,你进步了!";
+  }
+}
+
+function beep(freq,dur){
+  try{
+    const ctx=new (window.AudioContext||window.webkitAudioContext)();
+    const osc=ctx.createOscillator();
+    const gain=ctx.createGain();
+    osc.frequency.value=freq;
+    gain.gain.value=.04;
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+    setTimeout(()=>{osc.stop();ctx.close()},dur*1000);
+  }catch(e){}
+}
+
+$("startBtn").addEventListener("click",startGame);
+$("replayBtn").addEventListener("click",startGame);
+$("homeBtn").addEventListener("click",()=>show("首页"));
+</script>
+<script src="/assets/catalogue-v2/runtime-zh.js?v=1" defer></script></body>
+</html>

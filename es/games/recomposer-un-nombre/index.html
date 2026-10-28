@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="es" translate="no" class="notranslate">
+<head><base href="https://bleja972.github.io/recompose/">
+<meta charset="UTF-8"><meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#17324d">
+<title>Componer un número</title>
+<style>
+:root{
+  --navy:#17324d; --green:#2f8f57; --blue:#2f6fb0; --red:#c94b40;
+  --orange:#ffd18a; --cream:#fff8e9; --ink:#263238; --ok:#2f9e44; --bad:#d94841;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;color:var(--ink)}
+body{
+  min-height:100vh;
+  background:linear-gradient(#d8f2ff 0 55%,#f2d797 55% 100%);
+  display:flex;justify-content:center
+}
+.app{
+  width:100%;max-width:900px;min-height:100vh;background:rgba(255,255,255,.96);
+  display:flex;flex-direction:column
+}
+header{
+  text-align:center;padding:12px 10px;background:linear-gradient(90deg,#fff0bb,#ffe0a0);
+  border-bottom:4px solid #c78d2a
+}
+.brand{font-weight:900;color:#0b6b75;font-size:18px}
+h1{margin:4px 0;color:var(--navy);font-size:clamp(28px,7vw,44px)}
+.screen{display:none;flex:1}.screen.active{display:flex;flex-direction:column}
+.home{padding:18px;justify-content:center}
+.panel{
+  background:var(--orange);border:4px solid #c88625;border-radius:26px;padding:20px;
+  box-shadow:0 10px 24px rgba(0,0,0,.12)
+}
+.intro{text-align:center;font-size:19px;font-weight:800;line-height:1.4;margin:4px 0 12px}
+.exampleBox{
+  max-width:480px;margin:0 auto 14px;padding:12px 16px;background:#fff4d2;
+  border:3px solid #c88625;border-radius:14px;text-align:center;
+  font-size:22px;font-weight:900;color:var(--navy)
+}
+.nameInput,.answerInput{
+  width:100%;padding:14px;border:3px solid #bf7f21;border-radius:15px;
+  font-size:24px;text-align:center;color:var(--navy);background:#fff8e8;outline:none
+}
+.levels{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.levelBtn{
+  min-height:60px;border:3px solid #102d4f;border-radius:15px;background:var(--navy);
+  color:#fff;font-size:19px;font-weight:900;cursor:pointer
+}
+.levelBtn.selected{
+  background:var(--green);border-color:#1c6c40;box-shadow:0 0 0 4px rgba(47,143,87,.22)
+}
+.startBtn,.actionBtn{cursor:pointer;touch-action:manipulation}
+.startBtn{
+  width:100%;min-height:64px;border:0;border-radius:18px;background:#0b8fa3;
+  color:white;font-size:26px;font-weight:900;box-shadow:0 7px 0 #076d79
+}
+.game{padding:10px 12px 16px}
+.top{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:9px}
+.stat{
+  background:var(--orange);border-radius:14px;padding:9px 4px;text-align:center;
+  font-weight:900;border:2px solid #d69634
+}
+.progress{height:11px;background:#e8edef;border-radius:999px;overflow:hidden;margin-bottom:12px}
+.bar{height:100%;width:0;background:linear-gradient(90deg,#4fb3c8,#2f9e44);transition:.3s}
+.challenge{
+  background:var(--cream);border:4px solid white;border-radius:24px;padding:20px 12px;
+  box-shadow:0 8px 18px rgba(0,0,0,.1)
+}
+.prompt{text-align:center;font-size:22px;font-weight:900;margin-bottom:15px}
+.expression{
+  min-height:125px;display:flex;align-items:center;justify-content:center;gap:10px;
+  flex-wrap:wrap;margin:5px auto 18px
+}
+.term{
+  min-width:112px;min-height:78px;border-radius:13px;display:flex;align-items:center;
+  justify-content:center;font-size:36px;font-weight:900;color:#fff;
+  border:4px solid rgba(0,0,0,.16);box-shadow:0 6px 0 rgba(0,0,0,.14)
+}
+.term.h{background:var(--red)}
+.term.t{background:var(--blue)}
+.term.u{background:var(--green)}
+.plus{font-size:38px;font-weight:900;color:var(--navy)}
+.equals{font-size:42px;font-weight:900;color:var(--navy)}
+.answerWrap{max-width:320px;margin:0 auto}
+.answerInput{
+  font-size:44px;font-weight:900;border:4px solid var(--navy);
+  min-height:78px;background:white;-webkit-text-fill-color:var(--navy)
+}
+.answerInput.correct{background:#dcf4e2;border-color:var(--ok)}
+.answerInput.wrong{background:#ffe1df;border-color:var(--bad)}
+.hintBox{
+  display:none;max-width:620px;margin:14px auto 0;padding:12px;border:2px dashed #c28022;
+  background:#ffd894;border-radius:15px;text-align:center;font-size:18px;font-weight:800
+}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;max-width:520px;margin:14px auto 0}
+.actionBtn{border:0;border-radius:15px;min-height:52px;font-size:18px;font-weight:900}
+.hint{background:#ffe29b;color:#704b16}.check{background:#0b8fa3;color:#fff}
+.next{background:var(--ok);color:#fff;display:none}
+.feedback{min-height:48px;margin-top:9px;text-align:center;font-size:21px;font-weight:900}
+.end{padding:20px;justify-content:center;text-align:center}
+.stars{font-size:48px}.end h2{font-size:36px;margin:6px}.end p{font-size:20px;font-weight:800}
+.secondary{
+  margin-top:10px;border:3px solid #c88625;border-radius:15px;padding:13px;background:var(--orange);
+  font-size:18px;font-weight:900;cursor:pointer
+}
+@media(max-width:560px){
+  .term{min-width:86px;min-height:65px;font-size:29px}
+  .plus{font-size:30px}.equals{font-size:33px}
+}
+@media(min-width:720px){
+  .levels{grid-template-columns:repeat(4,1fr)}
+  .app{box-shadow:0 0 35px rgba(0,0,0,.16)}
+}
+</style>
+<style id="decouvrir-autre-jeu-style">.decouvrir-autre-jeu{margin:20px 0 8px;padding:16px;border:2px solid #cde9dc;border-radius:16px;background:#f0faf3;color:#163f31;text-align:center;font-family:Arial,sans-serif}.decouvrir-autre-jeu strong{display:block;font-size:17px;line-height:1.35;margin-bottom:6px}.decouvrir-autre-jeu span{display:block;font-size:15px;margin-bottom:11px}.decouvrir-autre-jeu a{display:inline-block;background:#f9bb3d!important;color:#332300!important;border:2px solid #b97b10;border-radius:11px;padding:10px 15px;font-weight:800;text-decoration:none;box-shadow:0 3px 0 #ac750f}.decouvrir-autre-jeu a:focus-visible{outline:3px solid #1769aa;outline-offset:3px}[data-end]>.panel{max-height:95%;overflow-y:auto}</style></head>
+<body><nav aria-label="Juegos en inglés" style="display:flex;justify-content:center;padding:10px;background:#173f30"><a href="/es/?lang=es" style="padding:10px 18px;border-radius:12px;background:#fff6cf;color:#173f30;text-decoration:none;font:bold 17px Arial,sans-serif">Todos los juegos</a></nav>
+<div class="app">
+<header>
+  <div class="brand">Pequeños retos CE1</div>
+  <h1>Componer un número</h1>
+</header>
+
+<section id="home" class="screen active home">
+  <div class="panel">
+    <p class="intro">Mira la adición y escribe sólo el número resultante.</p>
+    <div class="exampleBox"><strong>Ejemplo</strong> 3 + 50 + 200 = 253</div>
+    <input id="name" class="nameInput" type="text" maxlength="18" placeholder="Mi nombre de pila" autocomplete="off">
+    <div class="levels">
+      <button class="levelBtn selected" data-level="1">Nivel 1</button>
+      <button class="levelBtn" data-level="2">Nivel 2</button>
+      <button class="levelBtn" data-level="3">Nivel 3</button>
+      <button class="levelBtn" data-level="4">Nivel 4</button>
+    </div>
+    <button id="startBtn" class="startBtn">Empezar</button>
+  </div>
+</section>
+
+<section id="game" class="screen game">
+  <div class="top">
+    <div class="stat">Puntuación<br><span id="score">0</span>/10</div>
+    <div class="stat">Pregunta<br><span id="qnum">1</span>/10</div>
+    <div class="stat"> ⁇  Streak<br><span id="streak">0</span></div>
+  </div>
+  <div class="progress"><div id="bar" class="bar"></div></div>
+
+  <div class="challenge">
+    <div class="prompt">¿Qué número está representado?</div>
+
+    <div id="expression" class="expression"></div>
+
+    <div class="answerWrap">
+      <input id="answer" class="answerInput" inputmode="numeric" pattern="[0-9]*" autocomplete="off">
+    </div>
+
+    <div id="hintBox" class="hintBox"></div>
+
+    <div class="actions">
+      <button id="hintBtn" class="actionBtn hint" type="button">Pista</button>
+      <button id="checkBtn" class="actionBtn check" type="button">Comprobar</button>
+      <button id="nextBtn" class="actionBtn next" type="button">Siguiente</button>
+    </div>
+
+    <div id="feedback" class="feedback"></div>
+  </div>
+</section>
+
+<section id="end" class="screen end">
+  <div id="stars" class="stars">⭐⭐⭐</div>
+  <h2 id="endTitle">¡Muy bien!</h2>
+  <p id="endText"></p>
+  <button id="replayBtn" class="startBtn">Volver a jugar</button>
+  <button id="homeBtn" class="secondary">Cambio de nivel</button>
+<div class="decouvrir-autre-jeu"><strong>¿Listo para otro juego?</strong><span>Partición un número</span><a href="/es/games/decomposer-un-nombre/">Descubre este juego →</a></div></section>
+</div>
+
+<script>function enNumber(n){n=Number(n);if(n<0)return 'menos '+enNumber(-n);const u=['cero','uno','dos','tres','cuatro','cinco','seis','siete','ocho','nueve','diez','once','doce','trece','catorce','quince','dieciséis','diecisiete','dieciocho','diecinueve','veinte','veintiuno','veintidós','veintitrés','veinticuatro','veinticinco','veintiséis','veintisiete','veintiocho','veintinueve'];if(n<30)return u[n];if(n<100)return ['','','','treinta','cuarenta','cincuenta','sesenta','setenta','ochenta','noventa'][Math.floor(n/10)]+(n%10?' y '+u[n%10]:'');if(n===100)return 'cien';if(n<1000)return ['','ciento','doscientos','trescientos','cuatrocientos','quinientos','seiscientos','setecientos','ochocientos','novecientos'][Math.floor(n/100)]+(n%100?' '+enNumber(n%100):'');if(n===1000)return 'mil';return String(n)}
+
+const TOTAL=10;
+let level=1,score=0,streak=0,qIndex=0,player="Campeón",locked=false;
+let current=null;
+let used=new Set();
+const $=id=>document.getElementById(id);
+
+function show(id){
+  document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
+  $(id).classList.add("active");
+}
+function rand(min,max){return min+Math.floor(Math.random()*(max-min+1))}
+function shuffle(arr){
+  for(let i=arr.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]]=[arr[j],arr[i]];
+  }
+  return arr;
+}
+
+document.querySelectorAll(".levelBtn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".levelBtn").forEach(b=>b.classList.remove("selected"));
+    btn.classList.add("selected");
+    level=Number(btn.dataset.level);
+  });
+});
+
+function makeQuestion(){
+  let n, parts, signature, tries=0;
+
+  do{
+    if(level===1){
+      // 2 chiffres, ordre classique, sans zéro
+      const d=rand(1,4),u=rand(1,9);
+      n=d*10+u;
+      parts=[
+        {value:d*10,type:"t"},
+        {value:u,type:"u"}
+      ];
+    }else if(level===2){
+      // 2 chiffres plus grands, ordre parfois inversé
+      const d=rand(5,9),u=rand(0,9);
+      n=d*10+u;
+      parts=[
+        {value:d*10,type:"t"},
+        {value:u,type:"u"}
+      ];
+      if(Math.random()<0.65) shuffle(parts);
+    }else if(level===3){
+      // 3 chiffres, sans zéro, ordre souvent mélangé
+      const h=rand(1,4),d=rand(1,9),u=rand(1,9);
+      n=h*100+d*10+u;
+      parts=[
+        {value:h*100,type:"h"},
+        {value:d*10,type:"t"},
+        {value:u,type:"u"}
+      ];
+      if(Math.random()<0.75) shuffle(parts);
+    }else{
+      // 3 chiffres 500-999, zéros possibles, ordre toujours mélangé.
+      // Pièges du type 3 + 50 + 200.
+      n=rand(500,999);
+      const h=Math.floor(n/100);
+      const d=Math.floor((n%100)/10);
+      const u=n%10;
+      parts=[
+        {value:h*100,type:"h"},
+        {value:d*10,type:"t"},
+        {value:u,type:"u"}
+      ];
+      shuffle(parts);
+    }
+
+    signature=level+"|"+n+"|"+parts.map(p=>p.value).join(",");
+    tries++;
+  }while(used.has(signature) && tries<300);
+
+  used.add(signature);
+  current={n,parts};
+}
+
+function renderExpression(){
+  const host=$("expression");
+  host.innerHTML="";
+
+  current.parts.forEach((part,i)=>{
+    if(i>0){
+      const plus=document.createElement("span");
+      plus.className="plus";
+      plus.textContent="+";
+      host.appendChild(plus);
+    }
+
+    const term=document.createElement("div");
+    term.className="term "+part.type;
+    term.textContent=part.value;
+    host.appendChild(term);
+  });
+
+  const eq=document.createElement("span");
+  eq.className="equals";
+  eq.textContent="=";
+  host.appendChild(eq);
+}
+
+function newQuestion(){
+  locked=false;
+  makeQuestion();
+  renderExpression();
+  $("Respuesta").value="";
+  $("Respuesta").disabled=false;
+  $("Respuesta").classList.remove("correct","wrong");
+  $("feedback").textContent="";
+  $("hintBox").style.display="none";
+  $("checkBtn").style.display="block";
+  $("nextBtn").style.display="none";
+  $("qnum").textContent=qIndex+1;
+  $("bar").style.width=(qIndex/TOTAL*100)+"%";
+  setTimeout(()=>$("Respuesta").focus(),80);
+}
+
+function startGame(){
+  player=$("name").value.trim()||player;
+  score=0;streak=0;qIndex=0;used.clear();
+  $("Puntuación").textContent=0;$("streak").textContent=0;
+  show("game");newQuestion();
+}
+
+$("hintBtn").addEventListener("click",()=>{
+  if(locked)return;
+  $("hintBox").textContent=
+    "Los términos pueden estar en cualquier orden. Encuentra los cientos, decenas y unidades, luego construye el número.";
+  $("hintBox").style.display="block";
+});
+
+$("checkBtn").addEventListener("click",()=>{
+  if(locked)return;
+  const val=$("Respuesta").value.trim();
+  if(val===""){
+    $("feedback").textContent="Escribe el número primero.";
+    return;
+  }
+
+  locked=true;
+  const ok=Number(val)===current.n;
+  $("Respuesta").classList.add(ok?"Correcto":"wrong");
+
+  if(ok){
+    score++;streak++;
+    $("feedback").textContent="¡Bien hecho! El número es "+current.n+".";
+    beep(720,.12);
+  }else{
+    streak=0;
+    $("Respuesta").value=current.n;
+    $("feedback").textContent=" ⁇  La respuesta correcta es "+current.n+".";
+    beep(220,.18);
+  }
+
+  $("Respuesta").disabled=true;
+  $("Puntuación").textContent=score;
+  $("streak").textContent=streak;
+  $("checkBtn").style.display="none";
+  $("nextBtn").style.display="block";
+  qIndex++;
+  $("bar").style.width=(qIndex/TOTAL*100)+"%";
+});
+
+$("nextBtn").addEventListener("click",()=>qIndex>=TOTAL?finish():newQuestion());
+
+function finish(){
+  show("end");
+  $("endText").textContent=player+", has terminado "+score+" tarea de creación de números"+(score>1?"s":"")+" de 10.";
+  if(score===10){
+    $("stars").textContent="⭐⭐⭐";
+    $("endTitle").textContent="¡Campeón de la construcción de números!";
+  }else if(score>=7){
+    $("stars").textContent="⭐⭐";
+    $("endTitle").textContent="¡Excelente trabajo!";
+  }else{
+    $("stars").textContent="⭐";
+    $("endTitle").textContent="¡Sigan, están mejorando!";
+  }
+}
+
+function beep(freq,dur){
+  try{
+    const ctx=new (window.AudioContext||window.webkitAudioContext)();
+    const osc=ctx.createOscillator(),gain=ctx.createGain();
+    osc.frequency.value=freq;gain.gain.value=.04;
+    osc.connect(gain);gain.connect(ctx.destination);osc.start();
+    setTimeout(()=>{osc.stop();ctx.close()},dur*1000);
+  }catch(e){}
+}
+
+$("startBtn").addEventListener("click",startGame);
+$("replayBtn").addEventListener("click",startGame);
+$("homeBtn").addEventListener("click",()=>show("Inicio"));
+$("Respuesta").addEventListener("keydown",e=>{
+  if(e.key==="Enter"){
+    if(locked) $("nextBtn").click();
+    else $("checkBtn").click();
+  }
+});
+</script>
+<script src="/assets/catalogue-v2/runtime-es.js?v=1" defer></script></body>
+</html>
