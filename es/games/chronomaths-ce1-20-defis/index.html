@@ -287,7 +287,7 @@ const $ = id => document.getElementById(id);
 let timer = null, remaining = 180, active = false, done = false, current = 0;
 
 function parse(q){
-  if(q.startsWith("mitad:")){
+  if(q.startsWith('half:')){
     const n = Number(q.slice(5));
     return { type:'half', parts:["La mitad de " + n + ' :'], answer:n/2, aria:"La mitad de " + n };
   }
