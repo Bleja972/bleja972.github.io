@@ -1,0 +1,5 @@
+T-Rex Calls, CaveboyTup, Freesound, CC0 1.0.
+Source: https://freesound.org/people/CaveboyTup/sounds/529462/
+License: https://creativecommons.org/publicdomain/zero/1.0/
+Edited excerpt, 4.2 seconds; normalization and fades applied.
+Visual assets generated for this game using ImageGen. Background: prehistoric river valley at dawn. Transparent sprite atlas: Triceratops, Brachiosaurus, Pteranodon and roaring T-Rex.

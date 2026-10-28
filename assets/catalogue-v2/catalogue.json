@@ -1,5 +1,30 @@
 [
   {
+    "id": "jeu-92",
+    "title": "Dino Calculs — Multiplications et divisions",
+    "url": "https://bleja972.github.io/jeux/dino-calculs/",
+    "path": "/jeux/dino-calculs/",
+    "description": "Révise les tables de 1 à 10 avec multiplications et divisions mélangées. Des dinosaures animés et un T-Rex rugissant accompagnent le défi.",
+    "weekly": false,
+    "new": true,
+    "category": "calculs",
+    "level": "CE1",
+    "levels": [
+      "CE1",
+      "CE2"
+    ],
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "skill": "tables-multiplications-divisions",
+    "skillName": "Mémoriser les tables et leurs divisions",
+    "slug": "dino-calculs",
+    "objective": "Associer les multiplications et les divisions des tables de 1 à 10.",
+    "short": "Multiplications et divisions mélangées, bulles à éclater et dinosaures animés.",
+    "thumb": "/assets/catalogue-v2/captures/dino-calculs.webp",
+    "imageAlt": "Dino Calculs dans une vallée avec des dinosaures et une forêt tropicale."
+  },
+  {
     "id": "jeu-91",
     "title": "Chronomaths enchantés CE1",
     "url": "https://bleja972.github.io/jeux/chronomaths-enchantes-ce1/",
