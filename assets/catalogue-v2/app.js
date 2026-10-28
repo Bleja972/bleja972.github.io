@@ -142,3 +142,6 @@ fetch('/assets/catalogue-v2/catalogue.json?v=20261027-chrono-enchantes').then(r=
  toast('Les filtres sont indisponibles. Tous les liens vers les jeux restent accessibles.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();
+
+/* Boutons de partage des jeux. */
+(()=>{if(document.querySelector('script[data-bleja-share]'))return;const s=document.createElement('script');s.src='/assets/partager-jeu.js?v=share-v1';s.dataset.blejaShare='';s.defer=true;document.head.append(s)})();

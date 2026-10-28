@@ -17,3 +17,6 @@ document.querySelectorAll("[data-counter-path]").forEach(async function(el) {
     clearTimeout(timer);
   }
 });
+
+/* Boutons de partage des jeux. */
+(()=>{if(document.querySelector('script[data-bleja-share]'))return;const s=document.createElement('script');s.src='/assets/partager-jeu.js?v=share-v1';s.dataset.blejaShare='';s.defer=true;document.head.append(s)})();

@@ -32,4 +32,4 @@ function finish(){if(phase!=='playing')return;phase='result';syncMusic();cancelA
 function home(){phase='intro';syncMusic();musicAudio.currentTime=0;cancelAnimationFrame(raf);clearTimeout(pending);show('intro');$('witch').hidden=false;$('witch').classList.add('idle');$('witch').style.transform='';$('flightStatus').innerHTML='Une traversée de <strong>60 secondes</strong>';$('timefill').style.width='100%';$('timebar').setAttribute('aria-valuenow','60');bestIntro();window.scrollTo({top:0,behavior:'instant'})}
 $('start').onclick=start;$('restart').onclick=start;$('home').onclick=home;$('quit').onclick=home;
 document.addEventListener('visibilitychange',()=>{syncMusic();if(!document.hidden&&phase==='playing'){if(performance.now()>=deadline)finish();else{cancelAnimationFrame(raf);raf=requestAnimationFrame(tick)}}});
-</script></body></html>
+</script><script defer data-bleja-share src="/assets/partager-jeu.js?v=share-v1"></script></body></html>

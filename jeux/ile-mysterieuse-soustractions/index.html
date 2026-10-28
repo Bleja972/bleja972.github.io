@@ -97,4 +97,4 @@ positionRocket(0);new ResizeObserver(()=>{positionRocket(journeyProgress);if(pha
 $('start').onclick=start;$('restart').onclick=start;$('quit').onclick=home;$('home').onclick=home;
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&phase==='playing'){cancelAnimationFrame(raf);if(performance.now()>=deadline)finish();else raf=requestAnimationFrame(tick)}});
 
-</script></body></html>
+</script><script defer data-bleja-share src="/assets/partager-jeu.js?v=share-v1"></script></body></html>

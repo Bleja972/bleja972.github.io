@@ -25,5 +25,5 @@ if('speechSynthesis' in window){loadFrenchVoices();speechSynthesis.addEventListe
 function stopReading(){if('speechSynthesis' in window)speechSynthesis.cancel()}
 $('listen').addEventListener('click',()=>{if(!('speechSynthesis' in window)||typeof SpeechSynthesisUtterance==='undefined'){$('feedback').textContent='La lecture audio n’est pas disponible sur cet appareil.';return}stopReading();loadFrenchVoices();const story=$('story').textContent.trim().replace(/\s+/g,' ');const question=$('question').textContent.trim().replace(/\s+/g,' ');const u=new SpeechSynthesisUtterance(story+' '+question);u.lang='fr-FR';u.rate=.86;u.pitch=1;const chosen=frenchVoices.find(v=>v.voiceURI===voiceSelect.value);if(chosen){u.voice=chosen;u.lang=chosen.lang}u.onerror=e=>{if(e.error!=='canceled'&&e.error!=='interrupted')$('feedback').textContent=frenchVoices.length>1?'La lecture audio n’a pas pu démarrer. Essaie une autre voix.':'La lecture audio n’a pas pu démarrer. Vérifie les voix et le son sur cet appareil.'};speechSynthesis.speak(u)});
 
-</script></body></html>
+</script><script defer data-bleja-share src="/assets/partager-jeu.js?v=share-v1"></script></body></html>
 
