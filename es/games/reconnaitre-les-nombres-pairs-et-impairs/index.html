@@ -719,12 +719,12 @@ function mn8(){
 }
 function mn9(){let step=[2,3,5,10][rnd(0,3)],start=rnd(100,700),vals=Array.from({length:8},(_,k)=>start+k*step),bl=[0,3,4,7];return{t:"Mira la secuencia y complétala.",h:`<div class="seq">${vals.map((v,k)=>bl.includes(k)?`<input class="smallin" data-a="${v}" inputmode="numeric">`:`<div class="slot">${v}</div>`).join('')}</div>`,c:()=>[...document.querySelectorAll('[data-a]')].every(x=>+x.value===+x.dataset.a),a:bl.map(k=>vals[k]).join(', ')}}
 const gen={mn1,mn2,mn3,mn4,mn5,mn6,mn7,mn8,mn9};
-function render(){answered=false;$("Borrar").disabled=false;let s=sk();current=gen[s]();$('skillName').textContent=mode==='eval'?" ⁇  Práctica completa":names[s];$('exTitle').textContent=current.t;$('ex').innerHTML=current.h;$('fb').textContent='';$('count').textContent=`Ejercicio ${i+1} / ${total()}`;$("Puntuación").textContent=`Puntuación ${score}`;$('prog').style.width=`${i/total()*100}%`;$("Comprobar").classList.remove('hidden');$("Siguiente").classList.add('hidden');if(current.s)current.s();let f=document.querySelector('#ex input');if(f)setTimeout(()=>f.focus(),50)}
-function start(s){mode='mn8';i=0;score=0;evalSkills=['mn1','mn2','mn3','mn4','mn5','mn6','mn7','mn8','mn9'].sort(()=>Math.random()-.5);$("Menú").classList.add('hidden');$('game').classList.remove('hidden');render()}
+function render(){answered=false;$("clear").disabled=false;let s=sk();current=gen[s]();$('skillName').textContent=mode==='eval'?" ⁇  Práctica completa":names[s];$('exTitle').textContent=current.t;$('ex').innerHTML=current.h;$('fb').textContent='';$('count').textContent=`Ejercicio ${i+1} / ${total()}`;$("score").textContent=`Puntuación ${score}`;$('prog').style.width=`${i/total()*100}%`;$("check").classList.remove('hidden');$("next").classList.add('hidden');if(current.s)current.s();let f=document.querySelector('#ex input');if(f)setTimeout(()=>f.focus(),50)}
+function start(s){mode='mn8';i=0;score=0;evalSkills=['mn1','mn2','mn3','mn4','mn5','mn6','mn7','mn8','mn9'].sort(()=>Math.random()-.5);$("menu").classList.add('hidden');$('game').classList.remove('hidden');render()}
 document.querySelectorAll('.skill').forEach(b=>b.onclick=()=>start(b.dataset.s));
-$("Comprobar").onclick=()=>{
+$("check").onclick=()=>{
   if(answered)return;
-  answered=true;$("Borrar").disabled=true;
+  answered=true;$("clear").disabled=true;
   let ok=current.c();
   if(ok)score++;
   const done=i+1;
@@ -732,12 +732,12 @@ $("Comprobar").onclick=()=>{
   $('fb').innerHTML=ok
     ? `<span class="good">¡Muy bien!</span><span class="successPct">Tasa de éxito: ${pct} %</span>`
     : `<span class="bad">Respuesta prevista: ${current.a}</span><span class="successPct">Tasa de éxito: ${pct} %</span>`;
-  $("Puntuación").textContent=`Puntuación ${score}`;
-  $("Comprobar").classList.add('hidden');
-  $("Siguiente").classList.remove('hidden');
+  $("score").textContent=`Puntuación ${score}`;
+  $("check").classList.add('hidden');
+  $("next").classList.remove('hidden');
 };
-$("Borrar").onclick=()=>{if(answered)return;document.querySelectorAll('#ex input, #ex textarea').forEach(el=>el.value='');current.sel=null;document.querySelectorAll('[data-v]').forEach(el=>el.classList.remove('selected'));const erase=$('eraseOrder');if(erase&&erase.onclick)erase.onclick();$('fb').textContent='';};
-$("Siguiente").onclick=()=>{
+$("clear").onclick=()=>{if(answered)return;document.querySelectorAll('#ex input, #ex textarea').forEach(el=>el.value='');current.sel=null;document.querySelectorAll('[data-v]').forEach(el=>el.classList.remove('selected'));const erase=$('eraseOrder');if(erase&&erase.onclick)erase.onclick();$('fb').textContent='';};
+$("next").onclick=()=>{
   if(i<total()-1){
     i++;
     render();
@@ -749,9 +749,9 @@ $("Siguiente").onclick=()=>{
     $('fb').innerHTML=score>=Math.ceil(total()*.75)
       ? "<span class=\"good\">¡Excelente práctica!</span>"
       : "<span class=\"bad\">Juega de nuevo para mejorar esta habilidad.</span>";
-    $("Siguiente").classList.add('hidden');
+    $("next").classList.add('hidden');
   }
 };
-$("Volver").onclick=()=>{if(window.speechSynthesis)speechSynthesis.cancel();$('game').classList.add('hidden');$("Menú").classList.remove('hidden')};
+$("back").onclick=()=>{if(window.speechSynthesis)speechSynthesis.cancel();$('game').classList.add('hidden');$("menu").classList.remove('hidden')};
 })();
 </script><script src="/assets/catalogue-v2/runtime-es.js?v=1" defer></script></body></html>

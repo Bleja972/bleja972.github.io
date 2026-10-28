@@ -446,7 +446,7 @@ function render(){
   current=buildState(games[index].a,games[index].b);
   locked=false; phase='units';
   $('progress').textContent=`Sustracción ${index+1} / 8`;
-  $("Puntuación").textContent=`Respuestas correctas: ${score}`;
+  $("score").textContent=`Respuestas correctas: ${score}`;
   $('operation').innerHTML=posedSubtraction(current.a,current.b);
   views.H=setupColumn($('colH')); views.T=setupColumn($('colT')); views.U=setupColumn($('colU'));
   for(let i=0;i<current.minuend.h;i++) views.H.top.append(make('hundred','first','100'));
@@ -454,7 +454,7 @@ function render(){
   for(let i=0;i<current.minuend.u;i++) views.U.top.append(make('unit','first','1'));
   removed={u:0,t:0,h:0}; remainingToRemove={u:0,t:0,h:0};
   show('stepUnits',true); show('stepTens',false); show('stepHundreds',false); show('breakTen',false); show('breakHundred',false);
-  $("Respuesta").classList.remove('hidden'); $('end').classList.add('hidden'); resetInputs();
+  $("answer").classList.remove('hidden'); $('end').classList.add('hidden'); resetInputs();
   prepareUnits();
   updatePlaceEquations();
   syncLineWork();
@@ -658,7 +658,7 @@ async function verify(){
   locked=true;
   // Aucun second trajet du zéro lors de la vérification finale.
   if(/^0\d/.test(answer)) $('finalAnswer').value=String(val);
-  score++; $("Puntuación").textContent=`Respuestas correctas: ${score}`; $('verify').disabled=true; setNotice("¡Bien hecho! ¡Eso es correcto!");
+  score++; $("score").textContent=`Respuestas correctas: ${score}`; $('verify').disabled=true; setNotice("¡Bien hecho! ¡Eso es correcto!");
   await pause(1200);
   index++;
   if(index<8) render(); else finish();
@@ -666,10 +666,10 @@ async function verify(){
 function finish(){
   $('progress').textContent="Juego completo"; $('operation').textContent="¡Muy bien!"; $('end').classList.remove('hidden');
   $('end').textContent=`Has resuelto ${score} las sustracciones de 8, o ${Math.round(score/8*100)} % !`;
-  $("Respuesta").classList.add('hidden'); show('stepUnits',false); show('stepTens',false); show('stepHundreds',false); show('breakTen',false); show('breakHundred',false);
+  $("answer").classList.add('hidden'); show('stepUnits',false); show('stepTens',false); show('stepHundreds',false); show('breakTen',false); show('breakHundred',false);
   setNotice("Haga clic en Nuevo juego para jugar de nuevo.");
 }
-function restart(){show('zeroTrash',false);games=genGames(); index=0; score=0; $("Respuesta").classList.remove('hidden'); render();}
+function restart(){show('zeroTrash',false);games=genGames(); index=0; score=0; $("answer").classList.remove('hidden'); render();}
 ['unitsResult','tensResult','hundredsResult','finalAnswer'].forEach(id=>$(id).addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,Number(e.target.maxLength)>0?Number(e.target.maxLength):2)}));
 $('checkUnits').addEventListener('click',checkUnits);
 $('checkTens').addEventListener('click',checkTens);
@@ -677,7 +677,7 @@ $('checkHundreds').addEventListener('click',checkHundreds);
 $('breakTen').addEventListener('click',breakTen);
 $('breakHundred').addEventListener('click',breakHundred);
 $('verify').addEventListener('click',verify);
-$("Reiniciar").addEventListener('click',restart);
+$("restart").addEventListener('click',restart);
 restart();
 </script>
 <script src="/assets/catalogue-v2/runtime-es.js?v=1" defer></script></body>

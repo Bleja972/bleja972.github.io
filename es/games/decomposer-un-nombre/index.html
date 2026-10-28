@@ -331,7 +331,7 @@ function newQuestion(){
 function startGame(){
   player=$("name").value.trim()||player;
   score=0;streak=0;qIndex=0;used.clear();
-  $("Puntuación").textContent=0;$("streak").textContent=0;
+  $("score").textContent=0;$("streak").textContent=0;
   show("game");newQuestion();
 }
 
@@ -412,7 +412,7 @@ $("checkBtn").addEventListener("click",()=>{
     beep(220,.18);
   }
 
-  $("Puntuación").textContent=score;
+  $("score").textContent=score;
   $("streak").textContent=streak;
   $("checkBtn").style.display="none";
   $("nextBtn").style.display="block";
@@ -449,7 +449,7 @@ function beep(freq,dur){
 
 $("startBtn").addEventListener("click",startGame);
 $("replayBtn").addEventListener("click",startGame);
-$("homeBtn").addEventListener("click",()=>show("Inicio"));
+$("homeBtn").addEventListener("click",()=>show("home"));
 </script>
 <script src="/assets/catalogue-v2/runtime-es.js?v=1" defer></script></body>
 </html>

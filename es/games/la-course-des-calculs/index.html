@@ -837,7 +837,7 @@
   }
 
   function updateHud(){
-    $("Puntuación").textContent = `Puntuación ${score}`;
+    $("score").textContent = `Puntuación ${score}`;
     $('lives').textContent = `Vive : ${'❤️'.repeat(lives) || '—'}`;
     $('level').textContent = `Velocidad: ${speedLevel}`;
     const labels = ['', "Inicio suave", "Un poco más rápido.", "Velocidad media", 'Rapide', "Muy rápido", 'Turbo'];
@@ -911,7 +911,7 @@
     bounce($('player'));
     setRacers();
     removeOperation(op);
-    $("Respuesta").value = '';
+    $("answer").value = '';
     if(score > 0 && score % 5 === 0) speedLevel = Math.min(6, speedLevel + 1);
     updateHud();
     if(round >= MAX_ROUNDS || playerProgress >= 1){
@@ -939,7 +939,7 @@
 
   function checkTyped(){
     if(!running || paused) return;
-    const raw = $("Respuesta").value.trim();
+    const raw = $("answer").value.trim();
     if(raw === '') return;
     const n = Number(raw);
     let matches = active.filter(op => op.ans === n);
@@ -1018,7 +1018,7 @@
     $('startCover').classList.add('hidden');
     $('endCard').classList.add('hidden');
     $('feedback').textContent = '';
-    $("Respuesta").value = '';
+    $("answer").value = '';
     $('pauseBtn').textContent = '❚❚';
 
     updateHud();
@@ -1028,7 +1028,7 @@
     setTimeout(()=>{ if(running) spawnOperation(); }, 650);
     setTimeout(()=>{ if(running) spawnOperation(); }, 1250);
 
-    $("Respuesta").focus();
+    $("answer").focus();
     raf = requestAnimationFrame(loop);
   }
 
@@ -1041,10 +1041,10 @@
     $('pauseBtn').textContent = paused ? '▶' : '❚❚';
     if(!paused){
       last = performance.now();
-      $("Respuesta").focus();
+      $("answer").focus();
     }
   });
-  $("Respuesta").addEventListener('input', checkTyped);
+  $("answer").addEventListener('input', checkTyped);
 
   updateHud();
   setRacers();
