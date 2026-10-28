@@ -1,5 +1,24 @@
 [
   {
+    "id": "en-dino-calculs",
+    "title": "Dino Maths — Multiplication and division",
+    "url": "/en/games/dino-calculs/",
+    "description": "Practise times tables from 1 to 10 with mixed multiplication and division, animated dinosaurs, a volcano and a meteor. Save your high score!",
+    "levels": [
+      "CE1",
+      "CE2"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "times-tables-and-division",
+    "skillName": "Times tables and related division facts",
+    "objective": "Recall multiplication and division facts from 1 to 10.",
+    "weekly": true,
+    "new": true
+  },
+  {
     "id": "en-1",
     "title": "Number bonds to 10 — spider challenge",
     "url": "/en/games/complements1_a_10/",
