@@ -1,5 +1,29 @@
 [
   {
+    "id": "jeu-93",
+    "title": "La droite numérique du T-Rex",
+    "url": "https://bleja972.github.io/jeux/droite-numerique-t-rex-cp/",
+    "path": "/jeux/droite-numerique-t-rex-cp/",
+    "description": "Observe la flèche sur la droite numérique et clique sur la bonne réponse. 24 défis dans un paysage de dinosaures, avec un T-Rex.",
+    "weekly": false,
+    "new": true,
+    "category": "numeration",
+    "level": "CP",
+    "levels": [
+      "CP"
+    ],
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Numération",
+    "skill": "droite-numerique",
+    "skillName": "Lire un nombre sur une droite graduée",
+    "slug": "droite-numerique-t-rex-cp",
+    "objective": "Identifier le nombre indiqué par une flèche sur une droite graduée à l’unité.",
+    "short": "24 défis et trois parcours : observe la flèche et clique sur le bon nombre.",
+    "thumb": "/assets/catalogue-v2/captures/droite-t-rex-cp.svg",
+    "imageAlt": "T-Rex dans une vallée préhistorique et droite numérique avec trois réponses."
+  },
+  {
     "id": "jeu-92",
     "title": "Dino Calculs — Multiplications et divisions",
     "url": "https://bleja972.github.io/jeux/dino-calculs/",
