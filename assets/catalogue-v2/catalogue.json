@@ -1,5 +1,29 @@
 [
   {
+    "id": "jeu-94",
+    "title": "Les 42 droites du T-Rex animé",
+    "url": "https://bleja972.github.io/jeux/droite-numerique-t-rex-anime-cp/",
+    "path": "/jeux/droite-numerique-t-rex-anime-cp/",
+    "description": "Un T-Rex réaliste animé accompagne 42 défis de droite numérique. Six séries et un mode mélangé, avec réponses cliquables et bilan final.",
+    "weekly": false,
+    "new": true,
+    "category": "numeration",
+    "level": "CP",
+    "levels": [
+      "CP"
+    ],
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Numération",
+    "skill": "droite-numerique",
+    "skillName": "Lire un nombre sur une droite graduée",
+    "slug": "droite-numerique-t-rex-anime-cp",
+    "objective": "Identifier le nombre indiqué par une flèche sur une droite graduée à l’unité.",
+    "short": "42 défis et six séries : observe la flèche et clique sur le bon nombre.",
+    "thumb": "/assets/catalogue-v2/captures/droite-t-rex-cp.svg",
+    "imageAlt": "T-Rex dans un paysage préhistorique et droite numérique à lire."
+  },
+  {
     "id": "jeu-93",
     "title": "La droite numérique du T-Rex",
     "url": "https://bleja972.github.io/jeux/droite-numerique-t-rex-cp/",
