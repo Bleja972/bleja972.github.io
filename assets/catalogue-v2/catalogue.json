@@ -5,7 +5,7 @@
     "url": "https://bleja972.github.io/jeux/dino-calculs/",
     "path": "/jeux/dino-calculs/",
     "description": "Révise les tables de 1 à 10 avec multiplications et divisions mélangées. Des dinosaures animés et un T-Rex rugissant accompagnent le défi.",
-    "weekly": false,
+    "weekly": true,
     "new": true,
     "category": "calculs",
     "level": "CE1",
