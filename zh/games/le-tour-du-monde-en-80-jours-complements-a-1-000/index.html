@@ -34,7 +34,7 @@ function sound(ok){if(muted)return;try{audio=audio||new(window.AudioContext||win
 $('sound').onclick=()=>{muted=!muted;$('sound').textContent=muted?"声音关闭":"音响";$('sound').setAttribute('aria-pressed',String(!muted));};
 function show(id){$('scene').closest('main').classList.toggle('is-playing',id==="play");for(const s of['intro',"play",'result'])$(s).hidden=s!==id}
 function buttons(disabled){$('validate').disabled=disabled;$("answer").readOnly=disabled}
-function position(progress){const scene=$('scene'),card=$('falling'),maxX=Math.max(10,scene.clientWidth-card.offsetWidth-20),x=10+maxX*xRatio,y=58+Math.max(0,scene.clientHeight-card.offsetHeight-103)*Math.max(0,Math.min(1,progress));card.style.transform="翻译3d( 翻译)"+x+"(px, px),"+y+"(px,0)"}
+function position(progress){const scene=$('scene'),card=$('falling'),maxX=Math.max(10,scene.clientWidth-card.offsetWidth-20),x=10+maxX*xRatio,y=58+Math.max(0,scene.clientHeight-card.offsetHeight-103)*Math.max(0,Math.min(1,progress));card.style.transform="translate3d("+x+"px,"+y+"px,0)"}
 function hideAlien(){}
 function showAlien(){sound(false);$("answer").classList.remove('invalid');void $("answer").offsetWidth;$("answer").classList.add('invalid')}
 function nextQuestion(){hideAlien();if(phase!=='playing')return;const now=performance.now();if(now>=deadline){finish();return}current=generate();roundNumber++;locked=false;xRatio=.08+Math.random()*.78;questionAt=now;fallDuration=descentFor(correct);$('fallSpeed').textContent="世系: "+(fallDuration/1000).toFixed(1).replace('.',',')+' s';$('falling').className='falling';$('falling').hidden=false;$('expression').textContent=current.a;$('questionmark').textContent='?';$('feedback').textContent="输入缺失的号码,然后按 Enter 键。";$('feedback').className='feedback';buttons(false);$("answer").value='';$("answer").classList.remove('invalid');$("answer").setAttribute('aria-invalid','false');$("answer").focus({preventScroll:true});position(0)}
@@ -55,7 +55,7 @@ function positionRocket(progress){
  $('depth').textContent="时游 "+Math.min(80,1+Math.floor(t*80))+' / 80';
  const scene=$('scene'),pair=$('travelers'),local=t===1?1:(t*8)%1;
  const x=12+Math.max(0,scene.clientWidth-pair.offsetWidth-24)*local;
- pair.style.transform="翻译3d( 翻译)"+x+"(px,0,0)";
+ pair.style.transform="translate3d("+x+"px,0,0)";
  $('journey-progress').style.width=(t*100)+'%';
 }
 

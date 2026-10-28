@@ -519,7 +519,7 @@ async function animateBreak(sourceEl,targetGroup,type,count,text){
   await pause(480);
   sourceEl.remove();ring.remove();
 
-  const reduce=window.matchMedia && window.matchMedia("(优惠降降调:减)").matches;
+  const reduce=window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const flights=replacements.map((replacement,i)=>{
     const dest=tokenRect(replacement);
     const flying=make(pieceType,'first',text);

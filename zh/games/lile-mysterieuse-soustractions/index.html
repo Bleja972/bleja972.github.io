@@ -47,7 +47,7 @@ function sound(ok){if(muted)return;try{audio=audio||new(window.AudioContext||win
 $('sound').onclick=()=>{muted=!muted;$('sound').textContent=muted?"声音关闭":"音响";$('sound').setAttribute('aria-pressed',String(!muted));};
 function show(id){$('scene').closest('main').classList.toggle('is-playing',id==="play");for(const s of['intro',"play",'result'])$(s).hidden=s!==id}
 function buttons(disabled){$('validate').disabled=disabled;$("answer").readOnly=disabled}
-function position(progress){const scene=$('scene'),card=$('falling'),maxX=Math.max(10,scene.clientWidth-card.offsetWidth-20),x=10+maxX*xRatio,y=58+Math.max(0,scene.clientHeight-card.offsetHeight-103)*Math.max(0,Math.min(1,progress));card.style.transform="翻译3d( 翻译)"+x+"(px, px),"+y+"(px,0)"}
+function position(progress){const scene=$('scene'),card=$('falling'),maxX=Math.max(10,scene.clientWidth-card.offsetWidth-20),x=10+maxX*xRatio,y=58+Math.max(0,scene.clientHeight-card.offsetHeight-103)*Math.max(0,Math.min(1,progress));card.style.transform="translate3d("+x+"px,"+y+"px,0)"}
 function hideAlien(){}
 function showAlien(){resetThumb();sound(false);$("answer").classList.remove('invalid');void $("answer").offsetWidth;$("answer").classList.add('invalid')}
 let thumbTimer=0;
