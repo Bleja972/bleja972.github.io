@@ -1,5 +1,29 @@
 [
   {
+    "id": "jeu-96",
+    "title": "Les Martiens miroirs — Symétrie CE2",
+    "url": "https://bleja972.github.io/jeux/symetrie-mars-ce2/",
+    "path": "/jeux/symetrie-mars-ce2/",
+    "description": "Neuf extraterrestres, trois niveaux et des textures réalistes pour compléter des symétries sur un quadrillage 12 × 12.",
+    "weekly": false,
+    "new": true,
+    "category": "geometrie",
+    "level": "CE2",
+    "levels": [
+      "CE2"
+    ],
+    "subject": "Mathématiques",
+    "group": "geometrie",
+    "groupName": "Géométrie",
+    "skill": "symetrie",
+    "skillName": "Compléter une figure par symétrie",
+    "slug": "symetrie-mars-ce2",
+    "objective": "Reproduire les couleurs et textures à égale distance d’un axe de symétrie vertical ou horizontal.",
+    "short": "Neuf extraterrestres, trois niveaux et des textures réalistes pour compléter des symétries sur un quadrillage 12 × 12.",
+    "thumb": "/assets/catalogue-v2/captures/symetrie-mars-ce2.webp",
+    "imageAlt": "Extraterrestre sur un quadrillage 12 × 12 avec textures et axe de symétrie rose."
+  },
+  {
     "id": "jeu-95",
     "title": "Les droites du T-Rex — CE1",
     "url": "https://bleja972.github.io/jeux/droite-numerique-t-rex-ce1/",
