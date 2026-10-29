@@ -1,5 +1,29 @@
 [
   {
+    "id": "jeu-99",
+    "title": "La planète de Fritz — Encadrer les nombres CE2",
+    "url": "https://bleja972.github.io/jeux/fritz-encadrements-ce2/",
+    "path": "/jeux/fritz-encadrements-ce2/",
+    "description": "Encadrer les nombres de 501 à 10 000 à l’unité, entre deux dizaines, deux centaines ou deux milliers entiers. Quatre niveaux avec Fritz, score et chronomètre.",
+    "weekly": false,
+    "new": true,
+    "category": "numeration",
+    "level": "CE2",
+    "levels": [
+      "CE2"
+    ],
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Numération",
+    "skill": "encadrer-nombres",
+    "skillName": "Encadrer un nombre",
+    "slug": "fritz-encadrements-ce2",
+    "objective": "Trouver les bornes d’un nombre à l’unité, à la dizaine, à la centaine ou au millier.",
+    "short": "Quatre niveaux pour encadrer les nombres de 501 à 10 000 avec Fritz.",
+    "thumb": "/assets/fritz-encadrements/apercu.webp",
+    "imageAlt": "Illustration de Fritz détouré sur sa planète extraterrestre."
+  },
+  {
     "id": "jeu-98",
     "title": "La planète de Fritz — Encadrer les nombres CP",
     "url": "https://bleja972.github.io/jeux/fritz-encadrements-cp/",
