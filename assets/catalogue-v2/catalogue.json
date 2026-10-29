@@ -1,5 +1,29 @@
 [
   {
+    "id": "jeu-98",
+    "title": "La planète de Fritz — Encadrer les nombres CP",
+    "url": "https://bleja972.github.io/jeux/fritz-encadrements-cp/",
+    "path": "/jeux/fritz-encadrements-cp/",
+    "description": "Encadrer les nombres de 1 à 99 à l’unité ou entre deux dizaines entières. Deux niveaux avec Fritz, score et chronomètre.",
+    "weekly": false,
+    "new": true,
+    "category": "numeration",
+    "level": "CP",
+    "levels": [
+      "CP"
+    ],
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Numération",
+    "skill": "encadrer-nombres",
+    "skillName": "Encadrer un nombre",
+    "slug": "fritz-encadrements-cp",
+    "objective": "Trouver le nombre précédent et le nombre suivant, ou les deux dizaines entières qui encadrent un nombre.",
+    "short": "Deux niveaux pour encadrer les nombres de 1 à 99 avec Fritz.",
+    "thumb": "/assets/fritz-encadrements/apercu.webp",
+    "imageAlt": "Illustration de Fritz détouré sur sa planète extraterrestre."
+  },
+  {
     "id": "jeu-97",
     "title": "La planète de Fritz — Encadrer les nombres",
     "url": "https://bleja972.github.io/jeux/fritz-encadrements-ce1/",
