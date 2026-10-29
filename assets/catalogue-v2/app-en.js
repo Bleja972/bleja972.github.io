@@ -129,7 +129,7 @@ function updateSidebarCounts(){
   const description=label+' : '+count+' game'+(count===1?'':'s');link.setAttribute('aria-label',description);link.title=description;
  });
 }
-fetch('/assets/catalogue-v2/catalogue-en.json?v=same-order-v1').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;updateSidebarCounts();state=readState();render();}).catch(()=>{
+fetch('/assets/catalogue-v2/catalogue-en.json?v=fritz-bounds-v1').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;updateSidebarCounts();state=readState();render();}).catch(()=>{
  toast('Filters are unavailable. All game links remain accessible.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();

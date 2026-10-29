@@ -1,5 +1,29 @@
 [
   {
+    "id": "jeu-97",
+    "title": "La planète de Fritz — Encadrer les nombres",
+    "url": "https://bleja972.github.io/jeux/fritz-encadrements-ce1/",
+    "path": "/jeux/fritz-encadrements-ce1/",
+    "description": "Encadrer les nombres de 71 à 999 à l’unité, entre deux dizaines ou deux centaines entières. Trois niveaux avec Fritz, score et chronomètre.",
+    "weekly": false,
+    "new": true,
+    "category": "numeration",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Numération",
+    "skill": "encadrer-nombres",
+    "skillName": "Encadrer un nombre",
+    "slug": "fritz-encadrements-ce1",
+    "objective": "Trouver les deux bornes d’un nombre à l’unité, à la dizaine ou à la centaine.",
+    "short": "Trois niveaux pour encadrer les nombres de 71 à 999 sur la planète de Fritz.",
+    "thumb": "/assets/fritz-encadrements/apercu.webp",
+    "imageAlt": "Illustration de Fritz détouré sur sa planète extraterrestre."
+  },
+  {
     "id": "jeu-96",
     "title": "Les Martiens miroirs — Symétrie CE2",
     "url": "https://bleja972.github.io/jeux/symetrie-mars-ce2/",

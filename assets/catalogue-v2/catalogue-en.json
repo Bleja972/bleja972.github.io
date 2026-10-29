@@ -1,5 +1,30 @@
 [
   {
+    "id": "en-fritz-number-bounds",
+    "title": "Fritz’s Planet — Number bounds",
+    "url": "/en/games/fritz-number-bounds/",
+    "path": "/en/games/fritz-number-bounds/",
+    "description": "Find the bounds of numbers from 71 to 999 using ones, tens or hundreds. Three levels with Fritz, a score and a timer.",
+    "weekly": false,
+    "new": true,
+    "category": "numeration",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Number and place value",
+    "skill": "encadrer-nombres",
+    "skillName": "Find number bounds",
+    "slug": "fritz-encadrements-ce1",
+    "objective": "Find the previous and next number, multiple of 10 or multiple of 100.",
+    "short": "Three levels of number bounds on Fritz’s Planet.",
+    "thumb": "/assets/fritz-encadrements/apercu.webp",
+    "imageAlt": "Illustration of Fritz on his alien planet.",
+    "sourceId": "jeu-97"
+  },
+  {
     "id": "en-dino-calculs",
     "title": "Dino Maths — Multiplication and division",
     "url": "/en/games/dino-calculs/",
