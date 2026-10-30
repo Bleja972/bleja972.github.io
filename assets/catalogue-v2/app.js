@@ -153,3 +153,6 @@ fetch('/assets/catalogue-v2/catalogue.json?v=castle-exterior-v1').then(r=>{if(!r
 /* Boutons de partage des jeux. */
 (()=>{if(document.querySelector('script[data-bleja-share]'))return;const s=document.createElement('script');s.src='/assets/partager-jeu.js?v=share-v1';s.dataset.blejaShare='';s.defer=true;document.head.append(s)})();
 
+
+/* Keep the French blog name consistent across shared navigation. */
+(()=>{if(!document.documentElement.lang.startsWith('fr'))return;const name='Jeux éducatifs du CP au CE2';document.querySelectorAll('.brand,.footer').forEach(el=>{const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let node;while(node=walker.nextNode())if(node.nodeValue.includes('Les jeux de CE1'))node.nodeValue=node.nodeValue.replaceAll('Les jeux de CE1',name);});document.querySelectorAll('.brand[aria-label]').forEach(el=>el.setAttribute('aria-label',el.getAttribute('aria-label').replaceAll('Les jeux de CE1',name)));document.title=document.title.replace('Jeux éducatifs CE1 : maths et français en ligne | Les jeux de CE1',name).replaceAll('Les jeux de CE1',name);})();
