@@ -71,7 +71,7 @@ function writeState(replace=false){
 }
 function syncControls(){
  for(const k of ['niveau','matiere','domaine','q','tri'])controls[k].value=state[k];
- $('[data-group-link="geometrie"]').forEach(link=>{link.href='/?niveau='+state.niveau+'&matiere=Math%C3%A9matiques&domaine=geometrie#catalogue';});
+ $$('[data-group-link="geometrie"]').forEach(link=>{link.href='/?niveau='+state.niveau+'&matiere=Math%C3%A9matiques&domaine=geometrie#catalogue';});
  const available=catalog.filter(g=>(state.niveau==='tous'||g.levels.includes(state.niveau))&&(state.matiere==='toutes'||g.subject===state.matiere)&&(state.domaine==='tous'||g.group===state.domaine));
  const skills=[...new Map(available.map(g=>[g.skill,g.skillName])).entries()].sort((a,b)=>a[1].localeCompare(b[1],'fr'));
  if(state.competence!=='toutes'&&!skills.some(([key])=>key===state.competence))state.competence='toutes';
