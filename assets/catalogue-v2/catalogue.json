@@ -1,5 +1,29 @@
 [
   {
+    "id": "jeu-101",
+    "title": "Le château des nombres — Vue extérieure",
+    "url": "https://bleja972.github.io/jeux/chateau-nombres-exterieur-cp/",
+    "path": "/jeux/chateau-nombres-exterieur-cp/",
+    "description": "Écouter les familles et retrouver les nombres de 0 à 99 devant un château médiéval vu de l’extérieur. Deux niveaux, voix naturelle et couleurs par famille.",
+    "weekly": false,
+    "new": true,
+    "category": "numeration",
+    "level": "CP",
+    "levels": [
+      "CP"
+    ],
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Numération",
+    "skill": "familles-nombres",
+    "skillName": "Reconnaître les familles de nombres",
+    "slug": "chateau-nombres-exterieur-cp",
+    "objective": "Identifier les familles des unités aux 90 et reconnaître à l’écoute les nombres de 0 à 99.",
+    "short": "Deux missions audio, de 0 à 99, devant un château médiéval réaliste.",
+    "thumb": "/jeux/chateau-nombres-exterieur-cp/assets/apercu.webp",
+    "imageAlt": "Tableau de 0 à 99 devant les tours et les remparts d’un château médiéval vu de l’extérieur."
+  },
+  {
     "id": "jeu-100",
     "title": "Le château des nombres — CP",
     "url": "https://bleja972.github.io/jeux/chateau-nombres-cp/",

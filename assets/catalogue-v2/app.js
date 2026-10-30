@@ -145,7 +145,7 @@ function updateSidebarCounts(){
   const description=label+' : '+count+' jeu'+(count===1?'':'x');link.setAttribute('aria-label',description);link.title=description;
  });
 }
-fetch('/assets/catalogue-v2/catalogue.json?v=chateau-cp-v1').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
+fetch('/assets/catalogue-v2/catalogue.json?v=castle-exterior-v1').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
  toast('Les filtres sont indisponibles. Tous les liens vers les jeux restent accessibles.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();
