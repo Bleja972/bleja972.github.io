@@ -11,3 +11,18 @@
 .footer{flex-wrap:wrap}.public-stats-note{flex-basis:100%;font-size:10px;color:#65775f}.public-counter{white-space:nowrap}
 /* Total des jeux disponibles dans chaque rubrique du menu. */
 .side-links a{gap:8px}.side-game-count{display:inline-flex;align-items:center;justify-content:center;margin-left:auto;min-width:23px;height:20px;padding:0 6px;border-radius:7px;background:#e1ecd8;color:#365b3f;font-size:11px;font-weight:700;line-height:1;flex-shrink:0}
+
+/* Bouton coloré en relief pour poursuivre la découverte. */
+#show-more.button{
+ background:linear-gradient(180deg,#ffe398 0%,#ffc54b 48%,#f5a91c 100%);
+ color:#3c2a09;border:2px solid #d58a0b;border-top-color:#fff0b8;
+ border-radius:18px;padding:17px 30px;min-height:58px;font-size:17px;font-weight:800;
+ box-shadow:0 7px 0 #b96c08,0 11px 18px #8c540b30,inset 0 2px 0 #fff7d9;
+ text-shadow:0 1px 0 #fff2b8;transition:transform .15s,box-shadow .15s,filter .15s;
+ max-width:100%;white-space:normal;
+}
+#show-more.button:hover{background:linear-gradient(180deg,#ffecb7,#ffd36b 48%,#ffb52c);filter:brightness(1.03);transform:translateY(-2px);box-shadow:0 9px 0 #b96c08,0 13px 20px #8c540b35,inset 0 2px 0 #fff7d9}
+#show-more.button:active{transform:translateY(5px);box-shadow:0 2px 0 #b96c08,0 4px 8px #8c540b25,inset 0 2px 3px #b96c0820}
+#show-more.button:focus-visible{outline:3px solid #245d45;outline-offset:7px}
+@media(max-width:480px){#show-more.button{width:100%;font-size:16px;padding:16px 20px}}
+@media(prefers-reduced-motion:reduce){#show-more.button{transition:none}}
