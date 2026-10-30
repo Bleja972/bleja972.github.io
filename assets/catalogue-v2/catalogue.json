@@ -251,7 +251,8 @@
     "category": "calculs",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
@@ -395,7 +396,8 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
@@ -419,7 +421,8 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
@@ -443,7 +446,8 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
@@ -467,7 +471,8 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
@@ -491,7 +496,8 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
@@ -515,7 +521,8 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
@@ -697,7 +704,8 @@
     "skillName": "Soustractions mentales",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Trouver un résultat en retirant une quantité.",
     "thumb": "/assets/catalogue-v2/captures/jeu-3.webp"
@@ -722,7 +730,8 @@
     "skillName": "Compléments",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-4.webp"
@@ -747,7 +756,8 @@
     "skillName": "Compléments",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-5.webp"
@@ -773,7 +783,8 @@
     "groupName": "Calcul mental",
     "levels": [
       "CP",
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Utiliser les doubles pour calculer plus facilement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-6.webp"
@@ -799,7 +810,8 @@
     "groupName": "Calcul mental",
     "levels": [
       "CP",
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Utiliser des résultats connus pour calculer une addition mentalement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-7.webp"
@@ -825,7 +837,8 @@
     "groupName": "Calcul mental",
     "levels": [
       "CP",
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Utiliser des résultats connus pour calculer une addition mentalement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-8.webp"
@@ -875,7 +888,8 @@
     "skillName": "Compléments",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-10.webp"
@@ -900,7 +914,8 @@
     "skillName": "Compléments",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-11.webp"
@@ -950,7 +965,8 @@
     "skillName": "Compléments",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-13.webp"
@@ -975,7 +991,8 @@
     "skillName": "Compléments",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-14.webp"
@@ -1001,7 +1018,8 @@
     "groupName": "Calcul mental",
     "levels": [
       "CP",
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-15.webp"
@@ -1026,7 +1044,8 @@
     "skillName": "Compléments",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-16.webp"
@@ -1051,7 +1070,8 @@
     "skillName": "Compléments",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-17.webp"
@@ -1795,7 +1815,8 @@
     "skillName": "Calcul mental varié",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-47.webp",
@@ -1819,7 +1840,8 @@
     "skillName": "Soustractions posées",
     "groupName": "Calcul posé",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Utiliser les centaines, les dizaines et les unités pour soustraire.",
     "thumb": "/assets/catalogue-v2/captures/jeu-48.webp",
@@ -1843,7 +1865,8 @@
     "skillName": "Soustractions posées",
     "groupName": "Calcul posé",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Utiliser les centaines, les dizaines et les unités pour soustraire.",
     "thumb": "/assets/catalogue-v2/captures/jeu-49.webp",
@@ -1868,7 +1891,8 @@
     "skillName": "Additions posées",
     "groupName": "Calcul posé",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Additionner à deux ou trois chiffres, sans échange.",
     "thumb": "/assets/catalogue-v2/captures/jeu-50.webp",
@@ -1893,7 +1917,8 @@
     "skillName": "Additions posées",
     "groupName": "Calcul posé",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Comprendre et calculer les additions avec un ou deux échanges.",
     "thumb": "/assets/catalogue-v2/captures/jeu-51.webp",
@@ -1917,7 +1942,8 @@
     "skillName": "Additions posées",
     "groupName": "Calcul posé",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Aligner les colonnes et calculer une addition posée.",
     "thumb": "/assets/catalogue-v2/captures/jeu-52.webp",
@@ -1943,7 +1969,8 @@
     "groupName": "Calcul mental",
     "levels": [
       "CP",
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Utiliser des résultats connus pour calculer une addition mentalement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-53.webp",
@@ -1969,7 +1996,8 @@
     "groupName": "Calcul mental",
     "levels": [
       "CP",
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Trouver un résultat en retirant une quantité.",
     "thumb": "/assets/catalogue-v2/captures/jeu-54.webp",
@@ -1995,7 +2023,8 @@
     "groupName": "Calcul mental",
     "levels": [
       "CP",
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Utiliser les doubles pour calculer plus facilement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-55.webp",
@@ -2021,7 +2050,8 @@
     "groupName": "Calcul mental",
     "levels": [
       "CP",
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Utiliser les doubles pour calculer plus facilement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-56.webp",
@@ -2047,7 +2077,8 @@
     "groupName": "Calcul mental",
     "levels": [
       "CP",
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-57.webp",
@@ -2072,7 +2103,8 @@
     "skillName": "Soustractions mentales",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Trouver un résultat en retirant une quantité.",
     "thumb": "/assets/catalogue-v2/captures/jeu-58.webp",
@@ -2098,7 +2130,8 @@
     "groupName": "Calcul mental",
     "levels": [
       "CP",
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Utiliser des résultats connus pour calculer une addition mentalement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-59.webp",
@@ -2123,7 +2156,8 @@
     "skillName": "Calcul mental varié",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-60.webp",
@@ -2148,7 +2182,8 @@
     "skillName": "Calcul mental varié",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-61.webp",
@@ -2174,7 +2209,8 @@
     "groupName": "Calcul mental",
     "levels": [
       "CP",
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-62.webp",
@@ -2199,7 +2235,8 @@
     "skillName": "Compléments",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-63.webp",
@@ -2224,7 +2261,8 @@
     "skillName": "Calcul mental varié",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-64.webp",
