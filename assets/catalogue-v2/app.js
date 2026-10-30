@@ -36,7 +36,7 @@ if(!document.querySelector('[data-group-link="geometrie"]')){
  if(mathLink)mathLink.insertAdjacentHTML('afterend',"<a href=\"/?niveau=CE1&amp;matiere=Math%C3%A9matiques&amp;domaine=geometrie#catalogue\" data-group-link=\"geometrie\" aria-label=\"Géométrie : 2 jeux\">Géométrie<span class=\"side-game-count\" aria-hidden=\"true\">2</span></a>");
 }
 // Keep printable classroom games easy to identify throughout the blog.
-$('a[href="/imprimer/"]').forEach(link=>{link.title='Jeux à imprimer pour la classe';link.setAttribute('aria-label','Jeux à imprimer pour la classe');for(const node of link.childNodes)if(node.nodeType===3&&/fiches à imprimer|À imprimer/.test(node.textContent))node.textContent=node.textContent.replace('Les fiches à imprimer','Jeux à imprimer').replace('À imprimer','Jeux à imprimer');});
+$$('a[href="/imprimer/"]').forEach(link=>{link.title='Jeux à imprimer pour la classe';link.setAttribute('aria-label','Jeux à imprimer pour la classe');for(const node of link.childNodes)if(node.nodeType===3&&/fiches à imprimer|À imprimer/.test(node.textContent))node.textContent=node.textContent.replace('Les fiches à imprimer','Jeux à imprimer').replace('À imprimer','Jeux à imprimer');});
 if(document.body.dataset.page!=='catalog')return;
 const initial={niveau:'CE1',matiere:document.body.dataset.subject||'toutes',domaine:document.body.dataset.group||'tous',competence:'toutes',q:'',collection:'tous',tri:'selection'};
 const validCollections=['tous','nouveautes','semaine','favoris'];
