@@ -26,3 +26,10 @@
 #show-more.button:focus-visible{outline:3px solid #245d45;outline-offset:7px}
 @media(max-width:480px){#show-more.button{width:100%;font-size:16px;padding:16px 20px}}
 @media(prefers-reduced-motion:reduce){#show-more.button{transition:none}}
+
+/* Laisse la place au titre du jeu sur les boutons du catalogue. */
+html[lang="fr"] .card-actions { align-items:stretch; flex-direction:column; }
+html[lang="fr"] :is(.card-actions .play,.card-actions .card-detail,.week-bottom a) { white-space:normal; overflow-wrap:anywhere; }
+html[lang="fr"] :is(.card-actions .play,.card-actions .card-detail) { display:block; }
+html[lang="fr"] .card-actions .card-detail { min-height:0; padding:8px 0; }
+html[lang="fr"] .week-bottom { flex-wrap:wrap; gap:4px; }
