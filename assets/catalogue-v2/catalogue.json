@@ -1,5 +1,31 @@
 [
   {
+    "id": "jeu-103",
+    "title": "Popeye sur la ligne graduée",
+    "url": "https://bleja972.github.io/jeux/popeye-ligne-graduee/",
+    "path": "/jeux/popeye-ligne-graduee/",
+    "description": "Aide Popeye à rejoindre Olive en trouvant le nombre indiqué sur la ligne graduée. Trois classes et six pas de graduation.",
+    "weekly": false,
+    "new": true,
+    "category": "numeration",
+    "level": "CE1",
+    "levels": [
+      "CP",
+      "CE1",
+      "CE2"
+    ],
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Numération",
+    "skill": "droite-graduee",
+    "skillName": "Lire une ligne graduée",
+    "slug": "popeye-ligne-graduee",
+    "objective": "Trouver un nombre sur une ligne graduée de 10 à 100 au CP, de 50 à 1 000 au CE1 ou de 250 à 10 000 au CE2.",
+    "short": "Trouve le nombre pointé par la flèche pour aider Popeye à rejoindre Olive.",
+    "thumb": "/jeux/popeye-ligne-graduee/apercu.webp",
+    "imageAlt": "Popeye et Olive aux extrémités d’une ligne graduée, avec un point d’interrogation au milieu."
+  },
+  {
     "id": "jeu-102",
     "title": "Les crabes des Salines",
     "url": "https://bleja972.github.io/jeux/crabes-des-salines/",
