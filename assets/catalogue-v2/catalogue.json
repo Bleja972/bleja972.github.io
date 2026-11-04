@@ -1797,31 +1797,6 @@
     "imageAlt": "Capture d’écran du jeu « Les représentations des nombres »"
   },
   {
-    "title": "Ordonner les nombres",
-    "url": "https://bleja972.github.io/ordonnerlesnombres/",
-    "description": "Ordonner des nombres du plus petit au plus grand.",
-    "weekly": false,
-    "category": "numeration",
-    "level": "CE1",
-    "subject": "Mathématiques",
-    "originalGuide": "https://bleja972.github.io/jeux/ordonner-les-nombres/",
-    "id": "jeu-46",
-    "new": false,
-    "skill": "ranger",
-    "group": "numeration",
-    "slug": "ordonner-les-nombres",
-    "path": "/fiches/ordonner-les-nombres/",
-    "objective": "Ordonner des nombres du plus petit au plus grand.",
-    "skillName": "Ranger les nombres",
-    "groupName": "Numération",
-    "levels": [
-      "CE1"
-    ],
-    "short": "Ordonner des nombres du plus petit au plus grand.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-46.webp",
-    "imageAlt": "Capture d’écran du jeu « Ordonner les nombres »"
-  },
-  {
     "title": "Chronomaths CE1 — 20 défis",
     "url": "https://bleja972.github.io/CHRONOMATHS_CE1/",
     "description": "Entraîne-toi au calcul mental avec 20 Chronomaths de 15 calculs. Le chronomètre démarre au premier chiffre saisi. Découvre ton score et ton pourcentage de réussite.",
