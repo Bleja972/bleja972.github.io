@@ -1,5 +1,29 @@
 [
   {
+    "id": "hexaflash-ce1",
+    "title": "Hexa Flash — Genre et nombre",
+    "url": "https://bleja972.github.io/jeux/hexaflash-ce1/",
+    "path": "/jeux/hexaflash-ce1/",
+    "description": "Classe 12 groupes de mots selon leur genre et leur nombre dans une station spatiale. Bruitages, effets arcade et scores.",
+    "weekly": false,
+    "new": true,
+    "category": "grammaire",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Français",
+    "group": "grammaire",
+    "groupName": "Grammaire",
+    "skill": "genre-nombre",
+    "skillName": "Reconnaître le genre et le nombre",
+    "slug": "hexaflash-ce1",
+    "objective": "Identifier le masculin, le féminin, le singulier et le pluriel d’un groupe de mots.",
+    "short": "Allume les hexagones en trouvant le genre et le nombre des groupes de mots.",
+    "thumb": "/jeux/hexaflash-ce1/apercu.svg",
+    "imageAlt": "Hexa Flash dans une station spatiale, avec quatre catégories de grammaire aux couleurs néon."
+  },
+  {
     "id": "jeu-103",
     "title": "Popeye sur la ligne graduée",
     "url": "https://bleja972.github.io/jeux/popeye-ligne-graduee/",
