@@ -1,0 +1,30 @@
+.parcours-page { margin:0; background:#f5f7f0; color:#203c31; font:1rem/1.6 system-ui,sans-serif; }
+.parcours-page * { box-sizing:border-box; }
+.parcours-page a { color:#174d38; text-underline-offset:.18em; }
+.parcours-shell { width:min(68rem,calc(100% - 2rem)); margin-inline:auto; }
+.parcours-top { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:.75rem; padding-block:1.1rem; font-weight:700; }
+.parcours-crumb { padding:.75rem 0; font-size:.92rem; }
+.parcours-hero { background:linear-gradient(135deg,#dcebd6,#eff3dc); border:1px solid #cfdfc6; border-radius:1.5rem; padding:clamp(1.3rem,5vw,3.3rem); }
+.parcours-hero h1 { margin:.2rem 0 .75rem; max-width:18ch; font-size:clamp(2rem,5.3vw,3.55rem); line-height:1.08; letter-spacing:-.035em; }
+.parcours-hero p { max-width:65ch; margin:.5rem 0 0; }
+.parcours-kicker { color:#3e6448; font-weight:750; }
+.parcours-example,.parcours-advice { border:1px solid #d4e1cd; border-radius:1rem; padding:1.1rem 1.4rem; background:#fff; margin-block:1.5rem; }
+.parcours-example h2,.parcours-advice h2 { margin-top:0; }
+.parcours-equation { font-size:clamp(1.2rem,3vw,1.8rem); font-weight:800; margin:.35rem 0; }
+.parcours-section,.parcours-related { margin-block:2rem; }
+.parcours-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr)); gap:1rem; }
+.parcours-card { background:#fff; border:1px solid #d4e1cd; border-radius:1rem; overflow:hidden; }
+.parcours-card img { display:block; width:100%; height:auto; aspect-ratio:16/10; object-fit:contain; background:#edf1e8; }
+.parcours-card-body { padding:1.1rem; }
+.parcours-card h3,.parcours-card p { margin:0 0 .7rem; }
+.parcours-card-body a { display:block; width:fit-content; margin:.65rem 0 0; }
+.parcours-page .parcours-play { color:white; background:#265740; border-radius:.65rem; padding:.55rem .85rem; text-decoration:none; font-weight:750; }
+.parcours-pdf { list-style:none; padding:0; display:grid; gap:.6rem; }
+.parcours-pdf li { padding:.75rem 1rem; background:#fff; border:1px solid #d4e1cd; border-radius:.8rem; }
+.parcours-pdf p { margin:.1rem 0; }
+.parcours-links { display:flex; flex-wrap:wrap; gap:.55rem; padding:0; margin:.6rem 0 0; list-style:none; }
+.parcours-links a { display:block; padding:.55rem .8rem; background:#fff; color:#214b37; border:1px solid #d4e1cd; border-radius:.7rem; font-weight:700; }
+.parcours-home { margin:1.3rem 0 1.7rem; padding:1.1rem 1.25rem; background:#edf3e6; border:1px solid #d4e1cd; border-radius:1rem; }
+.parcours-home h2,.parcours-home p { margin:0 0 .35rem; }
+.parcours-bottom { padding:1rem 0 2rem; }
+.parcours-pdf-preview { display:block; max-width:100%; width:18rem; height:auto; margin-bottom:.65rem; border-radius:.4rem; }
