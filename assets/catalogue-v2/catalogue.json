@@ -1,5 +1,29 @@
 [
   {
+    "id": "crabes-du-tombolo",
+    "slug": "crabes-du-tombolo",
+    "title": "Les crabes du tombolo",
+    "url": "https://bleja972.github.io/jeux/crabes-du-tombolo/",
+    "path": "/jeux/crabes-du-tombolo/",
+    "description": "Fais traverser le tombolo aux crabes en reconnaissant les nombres pairs et impairs de 20 à 999.",
+    "short": "Fais traverser les crabes en choisissant les nombres pairs ou impairs.",
+    "objective": "Reconnaître les nombres pairs et impairs en observant le chiffre des unités.",
+    "skill": "pairs-impairs",
+    "skillName": "Reconnaître les nombres pairs et impairs",
+    "category": "numeration",
+    "group": "numeration",
+    "groupName": "Numération",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/jeux/crabes-du-tombolo/apercu.svg",
+    "imageAlt": "Langue de sable du tombolo entre la mer et les îlets."
+  },
+  {
     "id": "hexaflash-ce1",
     "title": "Hexa Flash — Genre et nombre",
     "url": "https://bleja972.github.io/jeux/hexaflash-ce1/",
