@@ -35,6 +35,26 @@ table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}th,t
 body{background:#efd2a2;isolation:isolate;min-height:100vh}
 body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:#efd2a2 url("sable-salines.webp") center/cover no-repeat}
 .panel{box-shadow:0 6px 24px #5237121a}
+
+/* Le parcours reste sur une rangée, même sur un petit téléphone. */
+.score-fields label{min-width:0;flex:1 1 10rem}
+.score-fields select{width:100%}
+.score-scroll:focus-visible{outline:3px solid #923902;outline-offset:3px}
+.crab .sign{display:grid;place-items:center;min-height:44px}
+@media(max-width:600px){
+  main{padding:10px}
+  .panel{padding:12px;margin:12px 0}
+  .actions button{flex:1 1 110px}
+  #menu .actions{display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+  #game .beach{aspect-ratio:3/1;background-size:cover;background-position:center 70%}
+  .lane{gap:4px;padding:4px;min-height:0}
+  .sign{font-size:clamp(14px,4.7vw,26px)}
+  th,td{padding:6px}
+}
+@media(max-width:380px){
+  .score-fields label{flex-basis:100%}
+  #save-score{width:100%}
+}
 </style></head>
 <body><main><nav><a href="/">← Retour au blog</a></nav>
 <header><div class="kicker">CE1 · NUMÉRATION · DE 50 À 1 000</div><h1>Les crabes des Salines</h1><p>Range les crabes en cliquant sur leurs pancartes.</p></header>
@@ -43,7 +63,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 <div class="beach" aria-hidden="true"></div><div class="sand"><div class="zone"><span>← Crabes rangés</span><span>Crabes à choisir →</span></div><div id="lane" class="lane" aria-label="Nombres à ranger"></div></div>
 <p id="feedback" role="status"></p><div class="actions"><button id="clear">Effacer</button><button class="primary" id="check">Vérifier</button><button class="primary" id="next" hidden>Série suivante</button><button id="menu-button">Menu</button></div></section>
 <section class="panel" id="result" hidden><h2>Partie terminée !</h2><p id="final" role="status"></p><form id="score-form"><p>Compose ton pseudo et choisis ton pays pour enregistrer ton score.</p><div class="score-fields"><label>Animal<select id="alias-animal"></select></label><label>Qualité<select id="alias-quality"></select></label><label>Pays ou territoire<select id="country"></select></label></div><button class="primary" id="save-score" type="submit">Enregistrer mon score</button></form><p id="save-status" role="status"></p><button id="replay">Rejouer</button></section>
-<section class="panel"><h2>Tableau des scores</h2><p>Les 10 meilleurs résultats de ce navigateur, avec ta dernière partie si elle est hors du classement. À score égal, le plus rapide passe devant.</p><div class="score-scroll"><table><thead><tr><th scope="col">Rang</th><th scope="col">Pseudo</th><th scope="col">Pays</th><th scope="col">Mode</th><th scope="col">Score</th><th scope="col">Temps</th></tr></thead><tbody id="scores"></tbody></table></div></section>
+<section class="panel"><h2>Tableau des scores</h2><p>Les 10 meilleurs résultats de ce navigateur, avec ta dernière partie si elle est hors du classement. À score égal, le plus rapide passe devant.</p><div class="score-scroll" tabindex="0" role="region" aria-label="Classement des joueurs"><table><thead><tr><th scope="col">Rang</th><th scope="col">Pseudo</th><th scope="col">Pays</th><th scope="col">Mode</th><th scope="col">Score</th><th scope="col">Temps</th></tr></thead><tbody id="scores"></tbody></table></div></section>
 </main>
 <script>
 'use strict';

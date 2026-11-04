@@ -18,3 +18,14 @@
 
 /* Afficher le tableau entier à sa hauteur naturelle, sans recadrage. */
 .school-banner img{display:block;width:100%;height:auto;min-height:0;max-height:none;object-fit:contain;object-position:center}
+
+/* Fiches de jeux : commandes tactiles et contenu fluide. */
+.detail .button{min-block-size:44px;max-inline-size:100%;white-space:normal;overflow-wrap:anywhere}
+.detail .button,.top nav a{touch-action:manipulation}
+.detail img,.detail video{max-inline-size:100%;height:auto}
+.detail .crumb{overflow-wrap:anywhere}
+@media(max-width:600px){
+  .detail .button{display:inline-flex;align-items:center}
+  .top nav a{display:inline-flex;align-items:center;min-block-size:44px}
+  .detail{padding-inline:clamp(12px,4vw,22px)}
+}
