@@ -663,7 +663,7 @@
     "description": "Dans chaque couple qui remonte, clique sur le plus grand nombre. Trois niveaux : 2 chiffres, 3 chiffres, puis un mélange. Avec des requins animés.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/bulles-duo/capture.webp",
-    "imageAlt": "Capture d’écran du jeu « Bulles en duo — Comparer les nombres »",
+    "imageAlt": "Aperçu de Bulles en duo — Comparer les nombres : comparer deux nombres et reconnaître le plus grand.",
     "category": "numeration",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -688,7 +688,7 @@
     "description": "Éclate les bulles de nombres pairs au niveau 1, puis impairs au niveau 2, avant qu’elles atteignent la surface. La vitesse augmente progressivement.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/bulles-corail/capture.webp",
-    "imageAlt": "Capture d’écran du jeu « Bulles de corail — Pairs et impairs »",
+    "imageAlt": "Aperçu de Bulles de corail — Pairs et impairs : reconnaître les nombres pairs et les nombres impairs.",
     "category": "numeration",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -714,7 +714,7 @@
     "description": "Retire de 1 à 9 à une dizaine entière, puis saisis le résultat. Explore huit paysages en 90 secondes avec Top, Jup et un agouti. L’explorateur lève le pouce à chaque bonne réponse.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/ile-mysterieuse/capture.webp",
-    "imageAlt": "Capture d’écran du jeu « L’Île mystérieuse — Soustractions »",
+    "imageAlt": "Aperçu de L’Île mystérieuse — Soustractions : trouver un résultat en retirant une quantité.",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -740,7 +740,7 @@
     "description": "Saisis les compléments à 1 000 avec des nombres terminés par zéro. Un défi de 90 secondes pour accompagner Phileas Fogg et Passepartout à travers huit décors de leur voyage.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/monde80/capture.webp",
-    "imageAlt": "Capture d’écran du jeu « Le tour du monde en 80 jours — Compléments à 1 000 »",
+    "imageAlt": "Aperçu de Le tour du monde en 80 jours — Compléments à 1 000 : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -766,7 +766,7 @@
     "description": "Saisis rapidement les compléments à 100 avec des unités différentes de zéro. Un défi de 90 secondes dans le Nautilus, avec des créatures animées au hublot.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/nautilus/capture.webp",
-    "imageAlt": "Capture d’écran du jeu « Mission Nautilus — Compléments à 100 »",
+    "imageAlt": "Aperçu de Mission Nautilus — Compléments à 100 : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -792,7 +792,7 @@
     "description": "90 secondes pour réussir les presque doubles dans une caverne spectaculaire peuplée de créatures animées. La descente accélère et les réponses rapides rapportent plus de points.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/terre/capture.webp",
-    "imageAlt": "Capture d’écran du jeu « Voyage au centre de la Terre — Les presque doubles »",
+    "imageAlt": "Aperçu de Voyage au centre de la Terre — Les presque doubles : utiliser les doubles pour calculer plus facilement.",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -819,7 +819,7 @@
     "description": "90 secondes pour rejoindre Mars : réussis les additions, gagne des points de rapidité et évite le martien qui surgit en riant à chaque erreur.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/mars/capture.webp",
-    "imageAlt": "Capture d’écran du jeu « Mission Mars — Additions de 11 à 19 »",
+    "imageAlt": "Aperçu de Mission Mars — Additions de 11 à 19 : utiliser des résultats connus pour calculer une addition mentalement.",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -846,7 +846,7 @@
     "description": "90 secondes pour réussir des additions dans les abysses. La descente accélère, les réponses rapides rapportent plus de points et les parties sans faute accèdent au classement.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/abysses/capture.webp",
-    "imageAlt": "Capture d’écran du jeu « Mission Abysses — Additions de 11 à 19 »",
+    "imageAlt": "Aperçu de Mission Abysses — Additions de 11 à 19 : utiliser des résultats connus pour calculer une addition mentalement.",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -873,7 +873,7 @@
     "description": "Citrouilles, chat noir, chauves-souris et araignées animées : trouve les compléments à 10 avant la sortie de la sorcière !",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/halloween/capture-10.webp",
-    "imageAlt": "Capture d’écran du jeu « Happy Halloween — Compléments à 10 »",
+    "imageAlt": "Aperçu de Happy Halloween — Compléments à 10 : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "category": "calcul-mental-cp",
     "level": "CP",
     "subject": "Mathématiques",
@@ -898,7 +898,7 @@
     "description": "Citrouilles, chat noir, chauves-souris et araignées animées : trouve les compléments à 100 avant la sortie de la sorcière !",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/halloween/capture-100.webp",
-    "imageAlt": "Capture d’écran du jeu « Happy Halloween — Compléments à 100 »",
+    "imageAlt": "Aperçu de Happy Halloween — Compléments à 100 : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -924,7 +924,7 @@
     "description": "Citrouilles, chat noir, chauves-souris et araignées animées : trouve les compléments à 1 000 avant la sortie de la sorcière !",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/halloween/capture-1000.webp",
-    "imageAlt": "Capture d’écran du jeu « Happy Halloween — Compléments à 1 000 »",
+    "imageAlt": "Aperçu de Happy Halloween — Compléments à 1 000 : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -950,7 +950,7 @@
     "description": "Trouve les compléments à 10 avant que la sorcière quitte l’écran. Un défi de 60 secondes !",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/sorciere/capture-10.webp",
-    "imageAlt": "Capture d’écran du jeu « Compléments à 10 — la course de la sorcière »",
+    "imageAlt": "Aperçu de Compléments à 10 — la course de la sorcière : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "category": "calcul-mental-cp",
     "level": "CP",
     "subject": "Mathématiques",
@@ -975,7 +975,7 @@
     "description": "Trouve les compléments à 100 avant que la sorcière quitte l’écran. Un défi de 60 secondes avec des dizaines entières !",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/sorciere/capture-100.webp",
-    "imageAlt": "Capture d’écran du jeu « Compléments à 100 — la course de la sorcière »",
+    "imageAlt": "Aperçu de Compléments à 100 — la course de la sorcière : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -1001,7 +1001,7 @@
     "description": "Trouve les compléments à 1 000 avant que la sorcière quitte l’écran. Un défi de 60 secondes avec des centaines entières !",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/sorciere/capture-1000.webp",
-    "imageAlt": "Capture d’écran du jeu « Compléments à 1 000 — la course de la sorcière »",
+    "imageAlt": "Aperçu de Compléments à 1 000 — la course de la sorcière : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -1027,7 +1027,7 @@
     "description": "Trouve les compléments à 10 et fais avancer l’araignée sur sa toile.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/capture-complements1_a_10.webp",
-    "imageAlt": "Capture d’écran du jeu « Compléments à 10 — le défi de l’araignée »",
+    "imageAlt": "Aperçu de Compléments à 10 — le défi de l’araignée : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "category": "calculs",
     "level": "CP",
     "subject": "Mathématiques",
@@ -1054,7 +1054,7 @@
     "description": "Complète 100 avec des dizaines entières.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/capture-complements_a_100.webp",
-    "imageAlt": "Capture d’écran du jeu « Compléments à 100 — le défi de l’araignée »",
+    "imageAlt": "Aperçu de Compléments à 100 — le défi de l’araignée : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -1080,7 +1080,7 @@
     "description": "Complète 1 000 avec des centaines entières.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/capture-complements_a_1000.webp",
-    "imageAlt": "Capture d’écran du jeu « Compléments à 1 000 — le défi de l’araignée »",
+    "imageAlt": "Aperçu de Compléments à 1 000 — le défi de l’araignée : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -1123,7 +1123,7 @@
     ],
     "short": "Lire, écrire, comparer et décomposer les nombres jusqu’à 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-18.webp",
-    "imageAlt": "Capture d’écran du jeu « Je revois les nombres jusqu’à 1000 »"
+    "imageAlt": "Aperçu de Je revois les nombres jusqu’à 1000 : lire, écrire, comparer et décomposer les nombres jusqu’à 1 000."
   },
   {
     "title": "Problèmes — Période 1",
@@ -1149,7 +1149,7 @@
     ],
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-19.webp",
-    "imageAlt": "Capture d’écran du jeu « Problèmes — Période 1 »"
+    "imageAlt": "Aperçu de Problèmes — Période 1 : comprendre une situation et choisir un calcul pour la résoudre."
   },
   {
     "title": "Vocabulaire — Période 1",
@@ -1174,7 +1174,7 @@
     ],
     "short": "Utiliser l’ordre alphabétique et reconnaître des contraires.",
     "thumb": "/assets/catalogue-v2/captures/jeu-20.webp",
-    "imageAlt": "Capture d’écran du jeu « Vocabulaire — Période 1 »"
+    "imageAlt": "Aperçu de Vocabulaire — Période 1 : utiliser l’ordre alphabétique et reconnaître des contraires."
   },
   {
     "title": "Lecture et compréhension",
@@ -1199,7 +1199,7 @@
     ],
     "short": "Lire un texte et retrouver les informations utiles pour répondre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-21.webp",
-    "imageAlt": "Capture d’écran du jeu « Lecture et compréhension »"
+    "imageAlt": "Aperçu de Lecture et compréhension : lire un texte et retrouver les informations utiles pour répondre."
   },
   {
     "title": "L’atelier des souris",
@@ -1224,7 +1224,7 @@
     ],
     "short": "Compléter et construire des phrases, puis relire son écrit.",
     "thumb": "/assets/catalogue-v2/captures/jeu-22.webp",
-    "imageAlt": "Capture d’écran du jeu « L’atelier des souris »"
+    "imageAlt": "Aperçu de L’atelier des souris : compléter et construire des phrases, puis relire son écrit."
   },
   {
     "title": "Les mots en images",
@@ -1249,7 +1249,7 @@
     ],
     "short": "Écouter, observer et écrire pour mémoriser l’orthographe.",
     "thumb": "/assets/catalogue-v2/captures/jeu-23.webp",
-    "imageAlt": "Capture d’écran du jeu « Les mots en images »"
+    "imageAlt": "Aperçu de Les mots en images : écouter, observer et écrire pour mémoriser l’orthographe."
   },
   {
     "title": "Dictées 1 à 6 — Période 1",
@@ -1274,7 +1274,7 @@
     ],
     "short": "Écouter, observer et écrire pour mémoriser l’orthographe.",
     "thumb": "/assets/catalogue-v2/captures/jeu-24.webp",
-    "imageAlt": "Capture d’écran du jeu « Dictées 1 à 6 — Période 1 »"
+    "imageAlt": "Aperçu de Dictées 1 à 6 — Période 1 : écouter, observer et écrire pour mémoriser l’orthographe."
   },
   {
     "title": "Dictée 5 — Les mots en images",
@@ -1298,7 +1298,7 @@
     ],
     "short": "Écouter, observer et écrire pour mémoriser l’orthographe.",
     "thumb": "/assets/catalogue-v2/captures/jeu-25.webp",
-    "imageAlt": "Capture d’écran du jeu « Dictée 5 — Les mots en images »"
+    "imageAlt": "Aperçu de Dictée 5 — Les mots en images : écouter, observer et écrire pour mémoriser l’orthographe."
   },
   {
     "title": "Dictée 5 — Les phrases à compléter",
@@ -1322,7 +1322,7 @@
     ],
     "short": "Écouter, observer et écrire pour mémoriser l’orthographe.",
     "thumb": "/assets/catalogue-v2/captures/jeu-26.webp",
-    "imageAlt": "Capture d’écran du jeu « Dictée 5 — Les phrases à compléter »"
+    "imageAlt": "Aperçu de Dictée 5 — Les phrases à compléter : écouter, observer et écrire pour mémoriser l’orthographe."
   },
   {
     "title": "Grammaire — Période 1",
@@ -1347,7 +1347,7 @@
     ],
     "short": "Repérer les éléments d’une phrase et s’entraîner en grammaire.",
     "thumb": "/assets/catalogue-v2/captures/jeu-27.webp",
-    "imageAlt": "Capture d’écran du jeu « Grammaire — Période 1 »"
+    "imageAlt": "Aperçu de Grammaire — Période 1 : repérer les éléments d’une phrase et s’entraîner en grammaire."
   },
   {
     "title": "Calcul mental CP",
@@ -1371,7 +1371,7 @@
     ],
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-28.webp",
-    "imageAlt": "Capture d’écran du jeu « Calcul mental CP »"
+    "imageAlt": "Aperçu de Calcul mental CP : s’entraîner à plusieurs procédures de calcul mental."
   },
   {
     "title": "Chronomaths CE2 — 20 défis",
@@ -1395,7 +1395,7 @@
     ],
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-29.webp",
-    "imageAlt": "Capture d’écran du jeu « Chronomaths CE2 — 20 défis »"
+    "imageAlt": "Aperçu de Chronomaths CE2 — 20 défis : s’entraîner à plusieurs procédures de calcul mental."
   },
   {
     "title": "Ateliers problèmes CE2",
@@ -1419,7 +1419,7 @@
     ],
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-30.webp",
-    "imageAlt": "Capture d’écran du jeu « Ateliers problèmes CE2 »"
+    "imageAlt": "Aperçu de Ateliers problèmes CE2 : comprendre une situation et choisir un calcul pour la résoudre."
   },
   {
     "title": "Dénombrer une collection",
@@ -1444,7 +1444,7 @@
     ],
     "short": "Organiser une collection pour trouver combien elle contient d’éléments.",
     "thumb": "/assets/catalogue-v2/captures/jeu-31.webp",
-    "imageAlt": "Capture d’écran du jeu « Dénombrer une collection »"
+    "imageAlt": "Aperçu de Dénombrer une collection : organiser une collection pour trouver combien elle contient d’éléments."
   },
   {
     "title": "Comparer deux nombres",
@@ -1469,7 +1469,7 @@
     ],
     "short": "Comparer deux nombres et reconnaître le plus grand.",
     "thumb": "/assets/catalogue-v2/captures/jeu-32.webp",
-    "imageAlt": "Capture d’écran du jeu « Comparer deux nombres »"
+    "imageAlt": "Aperçu de Comparer deux nombres : comparer deux nombres et reconnaître le plus grand."
   },
   {
     "title": "Ranger des nombres",
@@ -1494,7 +1494,7 @@
     ],
     "short": "Ordonner des nombres du plus petit au plus grand.",
     "thumb": "/assets/catalogue-v2/captures/jeu-33.webp",
-    "imageAlt": "Capture d’écran du jeu « Ranger des nombres »"
+    "imageAlt": "Aperçu de Ranger des nombres : ordonner des nombres du plus petit au plus grand."
   },
   {
     "title": "Lire et écrire les nombres",
@@ -1519,7 +1519,7 @@
     ],
     "short": "Associer une écriture en chiffres et une écriture en lettres.",
     "thumb": "/assets/catalogue-v2/captures/jeu-34.webp",
-    "imageAlt": "Capture d’écran du jeu « Lire et écrire les nombres »"
+    "imageAlt": "Aperçu de Lire et écrire les nombres : associer une écriture en chiffres et une écriture en lettres."
   },
   {
     "title": "Dictée de nombres",
@@ -1544,7 +1544,7 @@
     ],
     "short": "Écouter un nombre et l’écrire en chiffres.",
     "thumb": "/assets/catalogue-v2/captures/jeu-35.webp",
-    "imageAlt": "Capture d’écran du jeu « Dictée de nombres »"
+    "imageAlt": "Aperçu de Dictée de nombres : écouter un nombre et l’écrire en chiffres."
   },
   {
     "title": "Compter de plusieurs façons",
@@ -1569,7 +1569,7 @@
     ],
     "short": "Trouver la règle et poursuivre une suite de nombres.",
     "thumb": "/assets/catalogue-v2/captures/jeu-36.webp",
-    "imageAlt": "Capture d’écran du jeu « Compter de plusieurs façons »"
+    "imageAlt": "Aperçu de Compter de plusieurs façons : trouver la règle et poursuivre une suite de nombres."
   },
   {
     "title": "Composer et décomposer",
@@ -1594,7 +1594,7 @@
     ],
     "short": "Relier centaines, dizaines et unités pour composer ou décomposer un nombre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-37.webp",
-    "imageAlt": "Capture d’écran du jeu « Composer et décomposer »"
+    "imageAlt": "Aperçu de Composer et décomposer : relier centaines, dizaines et unités pour composer ou décomposer un nombre."
   },
   {
     "title": "Reconnaître les nombres pairs et impairs",
@@ -1619,7 +1619,7 @@
     ],
     "short": "Reconnaître les nombres pairs et les nombres impairs.",
     "thumb": "/assets/catalogue-v2/captures/jeu-38.webp",
-    "imageAlt": "Capture d’écran du jeu « Reconnaître les nombres pairs et impairs »"
+    "imageAlt": "Aperçu de Reconnaître les nombres pairs et impairs : reconnaître les nombres pairs et les nombres impairs."
   },
   {
     "title": "Compléter des suites",
@@ -1644,7 +1644,7 @@
     ],
     "short": "Trouver la règle et poursuivre une suite de nombres.",
     "thumb": "/assets/catalogue-v2/captures/jeu-39.webp",
-    "imageAlt": "Capture d’écran du jeu « Compléter des suites »"
+    "imageAlt": "Aperçu de Compléter des suites : trouver la règle et poursuivre une suite de nombres."
   },
   {
     "title": "La droite graduée mystère",
@@ -1669,7 +1669,7 @@
     ],
     "short": "Repérer la place d’un nombre sur une droite graduée.",
     "thumb": "/assets/catalogue-v2/captures/jeu-40.webp",
-    "imageAlt": "Capture d’écran du jeu « La droite graduée mystère »"
+    "imageAlt": "Aperçu de La droite graduée mystère : repérer la place d’un nombre sur une droite graduée."
   },
   {
     "title": "Le défi de la droite graduée",
@@ -1694,7 +1694,7 @@
     ],
     "short": "Repérer la place d’un nombre sur une droite graduée.",
     "thumb": "/assets/catalogue-v2/captures/jeu-41.webp",
-    "imageAlt": "Capture d’écran du jeu « Le défi de la droite graduée »"
+    "imageAlt": "Aperçu de Le défi de la droite graduée : repérer la place d’un nombre sur une droite graduée."
   },
   {
     "title": "Décomposer un nombre",
@@ -1719,7 +1719,7 @@
     ],
     "short": "Relier centaines, dizaines et unités pour composer ou décomposer un nombre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-42.webp",
-    "imageAlt": "Capture d’écran du jeu « Décomposer un nombre »"
+    "imageAlt": "Aperçu de Décomposer un nombre : relier centaines, dizaines et unités pour composer ou décomposer un nombre."
   },
   {
     "title": "Recomposer un nombre",
@@ -1744,7 +1744,7 @@
     ],
     "short": "Relier centaines, dizaines et unités pour composer ou décomposer un nombre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-43.webp",
-    "imageAlt": "Capture d’écran du jeu « Recomposer un nombre »"
+    "imageAlt": "Aperçu de Recomposer un nombre : relier centaines, dizaines et unités pour composer ou décomposer un nombre."
   },
   {
     "title": "Suites de nombres",
@@ -1769,7 +1769,7 @@
     ],
     "short": "Trouver la règle et poursuivre une suite de nombres.",
     "thumb": "/assets/catalogue-v2/captures/jeu-44.webp",
-    "imageAlt": "Capture d’écran du jeu « Suites de nombres »"
+    "imageAlt": "Aperçu de Suites de nombres : trouver la règle et poursuivre une suite de nombres."
   },
   {
     "title": "Les représentations des nombres",
@@ -1794,7 +1794,7 @@
     ],
     "short": "Reconnaître différentes représentations d’un même nombre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-45.webp",
-    "imageAlt": "Capture d’écran du jeu « Les représentations des nombres »"
+    "imageAlt": "Aperçu de Les représentations des nombres : reconnaître différentes représentations d’un même nombre."
   },
   {
     "title": "Ordonner les nombres",
@@ -1819,7 +1819,7 @@
     ],
     "short": "Ordonner des nombres du plus petit au plus grand.",
     "thumb": "/assets/catalogue-v2/captures/jeu-46.webp",
-    "imageAlt": "Capture d’écran du jeu « Ordonner les nombres »"
+    "imageAlt": "Aperçu de Ordonner les nombres : ordonner des nombres du plus petit au plus grand."
   },
   {
     "title": "Chronomaths CE1 — 20 défis",
@@ -1844,7 +1844,7 @@
     ],
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-47.webp",
-    "imageAlt": "Capture d’écran du jeu « Chronomaths CE1 — 20 défis »"
+    "imageAlt": "Aperçu de Chronomaths CE1 — 20 défis : s’entraîner à plusieurs procédures de calcul mental."
   },
   {
     "title": "Soustractions par cassage",
@@ -1869,7 +1869,7 @@
     ],
     "short": "Utiliser les centaines, les dizaines et les unités pour soustraire.",
     "thumb": "/assets/catalogue-v2/captures/jeu-48.webp",
-    "imageAlt": "Capture d’écran du jeu « Soustractions par cassage »"
+    "imageAlt": "Aperçu de Soustractions par cassage : utiliser les centaines, les dizaines et les unités pour soustraire."
   },
   {
     "title": "Soustractions avec le matériel de numération",
@@ -1894,7 +1894,7 @@
     ],
     "short": "Utiliser les centaines, les dizaines et les unités pour soustraire.",
     "thumb": "/assets/catalogue-v2/captures/jeu-49.webp",
-    "imageAlt": "Capture d’écran du jeu « Soustractions avec le matériel de numération »"
+    "imageAlt": "Aperçu de Soustractions avec le matériel de numération : utiliser les centaines, les dizaines et les unités pour soustraire."
   },
   {
     "title": "Additions posées sans échange",
@@ -1920,7 +1920,7 @@
     ],
     "short": "Additionner à deux ou trois chiffres, sans échange.",
     "thumb": "/assets/catalogue-v2/captures/jeu-50.webp",
-    "imageAlt": "Capture d’écran du jeu « Additions posées sans échange »"
+    "imageAlt": "Aperçu de Additions posées sans échange : poser et calculer une addition sans échange à deux ou trois chiffres."
   },
   {
     "title": "Additions posées avec échanges",
@@ -1946,7 +1946,7 @@
     ],
     "short": "Comprendre et calculer les additions avec un ou deux échanges.",
     "thumb": "/assets/catalogue-v2/captures/jeu-51.webp",
-    "imageAlt": "Capture d’écran du jeu « Additions posées avec échanges »"
+    "imageAlt": "Aperçu de Additions posées avec échanges : calculer une addition posée en effectuant un ou deux échanges entre les colonnes."
   },
   {
     "title": "Additions avec échanges — Jetons 3D",
@@ -1971,7 +1971,7 @@
     ],
     "short": "Aligner les colonnes et calculer une addition posée.",
     "thumb": "/assets/catalogue-v2/captures/jeu-52.webp",
-    "imageAlt": "Capture d’écran du jeu « Additions avec échanges — Jetons 3D »"
+    "imageAlt": "Aperçu de Additions avec échanges — Jetons 3D : aligner les colonnes et calculer une addition posée."
   },
   {
     "title": "Additions avec passage par 10",
@@ -1998,7 +1998,7 @@
     ],
     "short": "Utiliser des résultats connus pour calculer une addition mentalement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-53.webp",
-    "imageAlt": "Capture d’écran du jeu « Additions avec passage par 10 »"
+    "imageAlt": "Aperçu de Additions avec passage par 10 : utiliser des résultats connus pour calculer une addition mentalement."
   },
   {
     "title": "Soustraire un nombre à 10",
@@ -2025,7 +2025,7 @@
     ],
     "short": "Trouver un résultat en retirant une quantité.",
     "thumb": "/assets/catalogue-v2/captures/jeu-54.webp",
-    "imageAlt": "Capture d’écran du jeu « Soustraire un nombre à 10 »"
+    "imageAlt": "Aperçu de Soustraire un nombre à 10 : trouver un résultat en retirant une quantité."
   },
   {
     "title": "Les doubles",
@@ -2052,7 +2052,7 @@
     ],
     "short": "Utiliser les doubles pour calculer plus facilement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-55.webp",
-    "imageAlt": "Capture d’écran du jeu « Les doubles »"
+    "imageAlt": "Aperçu de Les doubles : utiliser les doubles pour calculer plus facilement."
   },
   {
     "title": "Les presque doubles",
@@ -2079,7 +2079,7 @@
     ],
     "short": "Utiliser les doubles pour calculer plus facilement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-56.webp",
-    "imageAlt": "Capture d’écran du jeu « Les presque doubles »"
+    "imageAlt": "Aperçu de Les presque doubles : utiliser les doubles pour calculer plus facilement."
   },
   {
     "title": "Les compléments à 10",
@@ -2106,7 +2106,7 @@
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-57.webp",
-    "imageAlt": "Capture d’écran du jeu « Les compléments à 10 »"
+    "imageAlt": "Aperçu de Les compléments à 10 : trouver le nombre manquant pour atteindre 10, 100 ou 1 000."
   },
   {
     "title": "Ajouter et soustraire des dizaines",
@@ -2132,7 +2132,7 @@
     ],
     "short": "Trouver un résultat en retirant une quantité.",
     "thumb": "/assets/catalogue-v2/captures/jeu-58.webp",
-    "imageAlt": "Capture d’écran du jeu « Ajouter et soustraire des dizaines »"
+    "imageAlt": "Aperçu de Ajouter et soustraire des dizaines : trouver un résultat en retirant une quantité."
   },
   {
     "title": "Les petites additions",
@@ -2159,7 +2159,7 @@
     ],
     "short": "Utiliser des résultats connus pour calculer une addition mentalement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-59.webp",
-    "imageAlt": "Capture d’écran du jeu « Les petites additions »"
+    "imageAlt": "Aperçu de Les petites additions : utiliser des résultats connus pour calculer une addition mentalement."
   },
   {
     "title": "Calcul mental — Période 1",
@@ -2185,7 +2185,7 @@
     ],
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-60.webp",
-    "imageAlt": "Capture d’écran du jeu « Calcul mental — Période 1 »"
+    "imageAlt": "Aperçu de Calcul mental — Période 1 : s’entraîner à plusieurs procédures de calcul mental."
   },
   {
     "title": "Les poissons des nombres",
@@ -2211,7 +2211,7 @@
     ],
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-61.webp",
-    "imageAlt": "Capture d’écran du jeu « Les poissons des nombres »"
+    "imageAlt": "Aperçu de Les poissons des nombres : s’entraîner à plusieurs procédures de calcul mental."
   },
   {
     "title": "La course des calculs",
@@ -2238,7 +2238,7 @@
     ],
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-62.webp",
-    "imageAlt": "Capture d’écran du jeu « La course des calculs »"
+    "imageAlt": "Aperçu de La course des calculs : s’entraîner à plusieurs procédures de calcul mental."
   },
   {
     "title": "Compléments à 10, 100 et 1 000",
@@ -2264,7 +2264,7 @@
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-63.webp",
-    "imageAlt": "Capture d’écran du jeu « Compléments à 10, 100 et 1 000 »"
+    "imageAlt": "Aperçu de Compléments à 10, 100 et 1 000 : trouver le nombre manquant pour atteindre 10, 100 ou 1 000."
   },
   {
     "title": "Calcul mental — Période 2",
@@ -2290,7 +2290,7 @@
     ],
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-64.webp",
-    "imageAlt": "Capture d’écran du jeu « Calcul mental — Période 2 »"
+    "imageAlt": "Aperçu de Calcul mental — Période 2 : s’entraîner à plusieurs procédures de calcul mental."
   },
   {
     "title": "Trouver le tout",
@@ -2316,7 +2316,7 @@
     ],
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-65.webp",
-    "imageAlt": "Capture d’écran du jeu « Trouver le tout »"
+    "imageAlt": "Aperçu de Trouver le tout : comprendre une situation et choisir un calcul pour la résoudre."
   },
   {
     "title": "Trouver une partie",
@@ -2342,7 +2342,7 @@
     ],
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-66.webp",
-    "imageAlt": "Capture d’écran du jeu « Trouver une partie »"
+    "imageAlt": "Aperçu de Trouver une partie : comprendre une situation et choisir un calcul pour la résoudre."
   },
   {
     "title": "Ajouter, gagner, avancer",
@@ -2368,7 +2368,7 @@
     ],
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-67.webp",
-    "imageAlt": "Capture d’écran du jeu « Ajouter, gagner, avancer »"
+    "imageAlt": "Aperçu de Ajouter, gagner, avancer : comprendre une situation et choisir un calcul pour la résoudre."
   },
   {
     "title": "Soustraire, perdre, reculer",
@@ -2394,7 +2394,7 @@
     ],
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-68.webp",
-    "imageAlt": "Capture d’écran du jeu « Soustraire, perdre, reculer »"
+    "imageAlt": "Aperçu de Soustraire, perdre, reculer : comprendre une situation et choisir un calcul pour la résoudre."
   },
   {
     "title": "Résoudre en deux étapes",
@@ -2420,7 +2420,7 @@
     ],
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-69.webp",
-    "imageAlt": "Capture d’écran du jeu « Résoudre en deux étapes »"
+    "imageAlt": "Aperçu de Résoudre en deux étapes : comprendre une situation et choisir un calcul pour la résoudre."
   },
   {
     "title": "Comparer deux quantités",
@@ -2446,7 +2446,7 @@
     ],
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-70.webp",
-    "imageAlt": "Capture d’écran du jeu « Comparer deux quantités »"
+    "imageAlt": "Aperçu de Comparer deux quantités : comprendre une situation et choisir un calcul pour la résoudre."
   },
   {
     "title": "Problèmes avec modèles en barres — Atelier 4",
@@ -2472,7 +2472,7 @@
     ],
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-71.webp",
-    "imageAlt": "Capture d’écran du jeu « Problèmes avec modèles en barres — Atelier 4 »"
+    "imageAlt": "Aperçu de Problèmes avec modèles en barres — Atelier 4 : comprendre une situation et choisir un calcul pour la résoudre."
   },
   {
     "title": "Problèmes — Période 2",
@@ -2497,7 +2497,7 @@
     ],
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-72.webp",
-    "imageAlt": "Capture d’écran du jeu « Problèmes — Période 2 »"
+    "imageAlt": "Aperçu de Problèmes — Période 2 : comprendre une situation et choisir un calcul pour la résoudre."
   },
   {
     "title": "Le grain de riz — aide DYS",
@@ -2522,7 +2522,7 @@
     ],
     "short": "Lire un texte et retrouver les informations utiles pour répondre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-73.webp",
-    "imageAlt": "Capture d’écran du jeu « Le grain de riz — aide DYS »"
+    "imageAlt": "Aperçu de Le grain de riz — aide DYS : lire un texte et retrouver les informations utiles pour répondre."
   },
   {
     "title": "Orthographe — Période 1",
@@ -2547,7 +2547,7 @@
     ],
     "short": "Écouter, observer et écrire pour mémoriser l’orthographe.",
     "thumb": "/assets/catalogue-v2/captures/jeu-74.webp",
-    "imageAlt": "Capture d’écran du jeu « Orthographe — Période 1 »"
+    "imageAlt": "Aperçu de Orthographe — Période 1 : écouter, observer et écrire pour mémoriser l’orthographe."
   },
   {
     "title": "Dictées — Période 2",
@@ -2572,6 +2572,6 @@
     ],
     "short": "Écouter, observer et écrire pour mémoriser l’orthographe.",
     "thumb": "/assets/catalogue-v2/captures/jeu-75.webp",
-    "imageAlt": "Capture d’écran du jeu « Dictées — Période 2 »"
+    "imageAlt": "Aperçu de Dictées — Période 2 : écouter, observer et écrire pour mémoriser l’orthographe."
   }
 ]
