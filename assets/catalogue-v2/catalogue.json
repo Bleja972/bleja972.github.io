@@ -4,12 +4,13 @@
     "title": "Les crabes des Salines",
     "url": "https://bleja972.github.io/jeux/crabes-des-salines/",
     "path": "/jeux/crabes-des-salines/",
-    "description": "Ranger cinq nombres de 50 à 1 000 avec des crabes animés. Cinq séries aléatoires et tableau des scores.",
+    "description": "Ranger des nombres de 5 à 100 au CP ou de 50 à 1 000 au CE1, avec des crabes animés et un classement par niveau.",
     "weekly": false,
     "new": true,
     "category": "numeration",
     "level": "CE1",
     "levels": [
+      "CP",
       "CE1"
     ],
     "subject": "Mathématiques",
@@ -18,8 +19,8 @@
     "skill": "ranger",
     "skillName": "Ranger les nombres",
     "slug": "crabes-des-salines",
-    "objective": "Ranger les nombres de 50 à 1 000 dans les deux sens.",
-    "short": "Cinq séries de cinq nombres à ranger dans l’ordre croissant ou décroissant, sur la plage des Salines.",
+    "objective": "Ranger des nombres dans les deux sens, de 5 à 100 au CP et de 50 à 1 000 au CE1.",
+    "short": "Cinq séries de nombres à ranger sur la plage des Salines. Choisis le niveau CP ou CE1.",
     "thumb": "/jeux/crabes-des-salines/plage.webp",
     "imageAlt": "Les crabes et leurs pancartes sur la plage des Salines."
   },
