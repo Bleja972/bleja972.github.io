@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les crabes des Salines | Ordonner les nombres au CE1</title>
+<meta name="description" content="Range les nombres de 50 à 1 000 avec les crabes des Salines. Cinq séries aléatoires en ordre croissant ou décroissant.">
+<link rel="canonical" href="https://bleja972.github.io/jeux/crabes-des-salines/">
+<style>
+*{box-sizing:border-box} [hidden]{display:none!important}
+body{margin:0;background:#e9f8f5;color:#143a39;font:16px/1.5 system-ui,sans-serif}
+main{max-width:1080px;margin:auto;padding:clamp(12px,3vw,30px)}
+nav a{color:#14534f;font-weight:700}header{margin:18px 0}h1{font-size:clamp(30px,6vw,58px);line-height:1.05;margin:8px 0}h2{margin:0 0 .5rem}
+.kicker{font-size:.85rem;letter-spacing:.1em;font-weight:800;color:#17605c}p{margin:.5em 0}
+.panel{background:#fff;border-radius:20px;padding:clamp(12px,3vw,24px);margin:16px 0;border:1px solid #b9ddd5}
+.actions,.hud{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button{font:inherit;font-weight:800;cursor:pointer;border:1px solid #14605b;border-radius:12px;min-height:44px;padding:9px 15px;background:#fff;color:#153c3a;touch-action:manipulation}
+button.primary{background:#14605b;color:#fff}button:disabled{opacity:.65;cursor:default}button:focus-visible,a:focus-visible{outline:3px solid #923902;outline-offset:3px}
+.hud{justify-content:space-between;font-weight:800}.instruction{font-size:clamp(18px,3vw,27px);margin:12px 0}
+.beach{aspect-ratio:1264/590;background:url(plage.webp) center top/100% auto no-repeat;border-radius:16px 16px 0 0;min-height:0}
+.sand{background:linear-gradient(#f9d782,#ffedba);border-radius:0 0 16px 16px;padding:12px 5px 8px}
+.lane{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(3px,1vw,12px);padding:6px;min-height:95px}
+.crab{min-width:0;padding:0;background:none;border:0;color:#3b2718;display:flex;flex-direction:column;align-items:center;align-self:start}
+.crab:disabled{opacity:1}.sign{width:100%;background:#fffdf2;border:2px solid #896036;border-radius:9px;font-size:clamp(15px,4.6vw,42px);line-height:1.35;font-variant-numeric:tabular-nums;white-space:nowrap}
+.crab.picked .sign{background:#d6f6e9;border-color:#17605c}
+.crab svg{width:90%;max-width:126px;height:auto;overflow:visible}.crab.walk svg{animation:scuttle .12s alternate 5}.crab.walk .claw{animation:pinch .15s alternate 4;transform-box:fill-box;transform-origin:center}
+@keyframes scuttle{to{transform:translateY(-7px) rotate(7deg)}}@keyframes pinch{to{transform:rotate(20deg)}}
+.zone{display:flex;justify-content:space-between;gap:8px;padding:0 8px;font-size:.82rem;font-weight:800;color:#543916}
+#feedback{min-height:1.5em;font-weight:750}.bad{color:#9a281b}.good{color:#0c6550}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}th,td{padding:8px;text-align:left;border-bottom:1px solid #d8eae5}caption{text-align:left;margin-bottom:6px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}}
+
+.home-beach{margin:12px 0;border-radius:16px}
+.score-fields{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}
+.score-fields label{display:grid;gap:5px;font-weight:700}
+.score-fields select{font:inherit;min-height:44px;max-width:100%;padding:6px;border:1px solid #14605b;border-radius:8px;background:white;color:#143a39}
+.score-scroll{overflow-x:auto}
+</style></head>
+<body><main><nav><a href="/">← Retour au blog</a></nav>
+<header><div class="kicker">CE1 · NUMÉRATION · DE 50 À 1 000</div><h1>Les crabes des Salines</h1><p>Range les crabes en cliquant sur leurs pancartes.</p></header>
+<section class="panel" id="menu"><div class="beach home-beach" role="img" aria-label="Plage des Salines, en Martinique"></div><h2>Choisis le sens du rangement</h2><p>5 séries de 5 nombres. Chaque série réussie du premier coup rapporte 1 point.</p><div class="actions"><button class="primary" data-mode="asc">Du plus petit au plus grand</button><button class="primary" data-mode="desc">Du plus grand au plus petit</button><button data-mode="mix">Les deux sens</button></div></section>
+<section class="panel" id="game" hidden><div class="hud"><span id="round"></span><span id="points"></span></div><h2 class="instruction" id="instruction"></h2>
+<div class="beach" aria-hidden="true"></div><div class="sand"><div class="zone"><span>← Crabes rangés</span><span>Crabes à choisir →</span></div><div id="lane" class="lane" aria-label="Nombres à ranger"></div></div>
+<p id="feedback" role="status"></p><div class="actions"><button id="clear">Effacer</button><button class="primary" id="check">Vérifier</button><button class="primary" id="next" hidden>Série suivante</button><button id="menu-button">Menu</button></div></section>
+<section class="panel" id="result" hidden><h2>Partie terminée !</h2><p id="final" role="status"></p><form id="score-form"><p>Compose ton pseudo et choisis ton pays pour enregistrer ton score.</p><div class="score-fields"><label>Animal<select id="alias-animal"></select></label><label>Qualité<select id="alias-quality"></select></label><label>Pays ou territoire<select id="country"></select></label></div><button class="primary" id="save-score" type="submit">Enregistrer mon score</button></form><p id="save-status" role="status"></p><button id="replay">Rejouer</button></section>
+<section class="panel"><h2>Tableau des scores</h2><p>Les 10 meilleurs résultats de ce navigateur, avec ta dernière partie si elle est hors du classement. À score égal, le plus rapide passe devant.</p><div class="score-scroll"><table><thead><tr><th scope="col">Rang</th><th scope="col">Pseudo</th><th scope="col">Pays</th><th scope="col">Mode</th><th scope="col">Score</th><th scope="col">Temps</th></tr></thead><tbody id="scores"></tbody></table></div></section>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const labels={asc:'Croissant',desc:'Décroissant',mix:'Mélangé'};
+const fmt=n=>n.toLocaleString('fr-FR');
+const duration=ms=>{const s=Math.floor(ms/1000);return Math.floor(s/60)+' min '+String(s%60).padStart(2,'0')+' s';};
+const icon='<svg aria-hidden="true" viewBox="0 0 128 76"><g fill="none" stroke="#8e4a14" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="m47 48-24 1-12 14m35-9-22 7-7 10m62-23 24 1 12 14m-35-9 22 7 7 10M41 42 22 33l-3-13m68 22 19-9 3-13"/></g><g fill="#ffae21" stroke="#8e4a14" stroke-width="2"><path class="claw" d="M22 33C4 31 3 12 17 4c-2 8 1 12 5 13l7-11c10 11 7 24-7 27Z"/><path class="claw" d="M106 33c18-2 19-21 5-29 2 8-1 12-5 13l-7-11c-10 11-7 24 7 27Z"/><ellipse cx="64" cy="48" rx="31" ry="21"/></g><g fill="#38271b"><path d="M53 33v-9m22 9v-9" stroke="#38271b" stroke-width="3"/><circle cx="53" cy="23" r="4"/><circle cx="75" cy="23" r="4"/></g><path d="M58 51q6 6 12 0" stroke="#78360b" stroke-width="2" fill="none"/></svg>';
+const key='crabes-salines-scores-v1';
+let board=[];try{const saved=JSON.parse(localStorage.getItem(key)||'[]');if(Array.isArray(saved))board=saved.filter(r=>r&&Object.hasOwn(labels,r.mode)&&Number.isInteger(r.points)&&r.points>=0&&r.points<=5&&Number.isFinite(r.ms)&&r.ms>=0).slice(0,11);}catch{}
+
+const animals=['Crabe','Dauphin','Colibri','Tortue','Pélican','Manicou','Gecko','Papillon','Raie','Héron'];
+const qualities=['Arc-en-ciel','Éclair','Étoile','Corail','Soleil','Courage','Saphir','Lagon','Sourire','Comète'];
+const regionNames=new Intl.DisplayNames(['fr'],{type:'region'});
+const countries=["AD", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AQ", "AR", "AS", "AT", "AU", "AW", "AX", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CC", "CD", "CF", "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CU", "CV", "CW", "CX", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "EH", "ER", "ES", "ET", "FI", "FJ", "FK", "FM", "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HM", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IM", "IN", "IO", "IQ", "IR", "IS", "IT", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KP", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MH", "MK", "ML", "MM", "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN", "PR", "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SD", "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV", "SX", "SY", "SZ", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "UM", "US", "UY", "UZ", "VA", "VC", "VE", "VG", "VI", "VN", "VU", "WF", "WS", "YE", "YT", "ZA", "ZM", "ZW"];
+const countryLabel=code=>code&&countries.includes(code)?String.fromCodePoint(...Array.from(code,c=>127397+c.charCodeAt(0)))+' '+regionNames.of(code):'—';
+function option(select,value,label){const el=document.createElement('option');el.value=value;el.textContent=label;select.append(el);}
+animals.forEach((v,i)=>option($('alias-animal'),String(i),v));
+qualities.forEach((v,i)=>option($('alias-quality'),String(i),v));
+option($('country'),'','Non renseigné');
+countries.sort((a,b)=>regionNames.of(a).localeCompare(regionNames.of(b),'fr')).forEach(code=>option($('country'),code,countryLabel(code)));
+const pseudo=r=>animals[r.animal]&&qualities[r.quality]?animals[r.animal]+' '+qualities[r.quality]:'—';
+let pendingScore=null;
+function scores(){
+ const body=$('scores');body.replaceChildren();
+ if(!board.length){const td=body.insertRow().insertCell();td.colSpan=6;td.textContent='Aucune partie terminée.';return;}
+ board.forEach((r,i)=>{const row=body.insertRow();if(r.latest)row.style.background="#d6f6e9";[i<10?i+1:"Dernière partie",pseudo(r),countryLabel(r.country),labels[r.mode],r.points+' / 5',duration(r.ms)].forEach(v=>row.insertCell().textContent=v);});
+}
+function makeRounds(mode){
+ const pool=Array.from({length:951},(_,i)=>50+i);
+ for(let i=0;i<25;i++){const j=i+Math.floor(Math.random()*(pool.length-i));[pool[i],pool[j]]=[pool[j],pool[i]];}
+ const first=Math.random()<.5?'asc':'desc';
+ return Array.from({length:5},(_,i)=>({values:pool.slice(i*5,i*5+5),direction:mode==='mix'?(i%2?(first==='asc'?'desc':'asc'):first):mode}));
+}
+let mode,rounds,index,points,start,chosen,attempted,solved,nodes;
+function message(s,kind=''){$('feedback').textContent=s;$('feedback').className=kind;}
+function render(moved){
+ const lane=$('lane'),first=new Map([...lane.children].map(el=>[el,el.getBoundingClientRect()]));
+ const order=[...chosen,...rounds[index].values.filter(n=>!chosen.includes(n))];
+ order.forEach(n=>{const el=nodes.get(n);const picked=chosen.includes(n);el.disabled=picked||solved;el.classList.toggle('picked',picked);lane.append(el);});
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  order.forEach(n=>{const el=nodes.get(n),prev=first.get(el);if(!prev)return;const now=el.getBoundingClientRect(),x=prev.left-now.left;if(x&&el.animate){el.getAnimations().filter(a=>a.effect?.target===el).forEach(a=>a.cancel());el.animate([{transform:'translateX('+x+'px)'},{transform:'translateX(0)'}],{duration:360,easing:'ease-out'});}});
+  if(moved!==undefined){const el=nodes.get(moved);el.classList.remove('walk');void el.offsetWidth;el.classList.add('walk');}
+ }
+ $('clear').disabled=!chosen.length||solved;$('check').hidden=solved;
+}
+function round(){
+ chosen=[];attempted=false;solved=false;nodes=new Map();$('lane').replaceChildren();
+ $('round').textContent='Série '+(index+1)+' / 5';$('points').textContent=points+' / 5 points';
+ $('instruction').textContent=rounds[index].direction==='asc'?'Du plus petit au plus grand':'Du plus grand au plus petit';
+ $('next').hidden=true;$('next').textContent=index===4?'Voir mon score':'Série suivante';
+ rounds[index].values.forEach(n=>{const b=document.createElement('button');b.type='button';b.className='crab';const s=document.createElement('span');s.className='sign';s.textContent=fmt(n);b.append(s);b.insertAdjacentHTML('beforeend',icon);b.onclick=()=>{if(solved||chosen.includes(n))return;chosen.push(n);message(chosen.length===5?'Tu peux vérifier ton rangement.':'Crabes rangés : '+chosen.length+' sur 5.');render(n);const next=rounds[index].values.find(v=>!chosen.includes(v));(next===undefined?$('check'):nodes.get(next)).focus({preventScroll:true});};nodes.set(n,b);});
+ message('Choisis le premier crabe.');render();
+}
+function play(m){mode=m;rounds=makeRounds(m);index=0;points=0;start=performance.now();$('menu').hidden=true;$('result').hidden=true;$('game').hidden=false;round();nodes.values().next().value.focus();}
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>play(b.dataset.mode));
+$('clear').onclick=()=>{if(solved)return;chosen=[];message('Recommence ton rangement.');render();nodes.values().next().value.focus({preventScroll:true});};
+$('check').onclick=()=>{
+ if(solved)return;
+ if(chosen.length!==5){const left=5-chosen.length;message(left===1?'Choisis encore un crabe avant de vérifier.':'Choisis encore '+left+' crabes avant de vérifier.','bad');return;}
+ const expected=[...rounds[index].values].sort((a,b)=>rounds[index].direction==='asc'?a-b:b-a);
+ if(!chosen.every((n,i)=>n===expected[i])){attempted=true;message('Pas encore ! Clique sur Effacer et essaie dans le bon sens.','bad');$('clear').focus();return;}
+ if(!attempted)points++;solved=true;$('points').textContent=points+' / 5 points';message('Bravo, les crabes sont bien rangés !','good');render();$('next').hidden=false;$('next').focus();
+};
+$('next').onclick=()=>{if(!solved)return;if(index<4){index++;round();nodes.values().next().value.focus();return;}
+ const ms=performance.now()-start;
+ pendingScore={mode,points,ms};
+ $('score-form').hidden=false;$('save-status').textContent='';
+ $('game').hidden=true;$('result').hidden=false;
+ $('final').textContent=points+' séries réussies du premier coup sur 5 · '+duration(ms);
+ $('alias-animal').focus();
+};
+$('score-form').onsubmit=e=>{
+ e.preventDefault();if(!pendingScore){$('save-status').textContent='Termine une partie pour enregistrer un score.';return;}
+ const animal=Number($('alias-animal').value),quality=Number($('alias-quality').value),country=$('country').value;
+ if(!Number.isInteger(animal)||!animals[animal]||!Number.isInteger(quality)||!qualities[quality]||(country&&!countries.includes(country))){$('save-status').textContent='Vérifie le pseudo et le pays choisis.';return;}
+ const entry={...pendingScore,animal,quality,country,latest:true};pendingScore=null;board=board.slice(0,10);board.forEach(r=>delete r.latest);board.push(entry);
+ board.sort((a,b)=>b.points-a.points||a.ms-b.ms);board=board.slice(0,10);if(!board.includes(entry))board.push(entry);
+ let saved=true;try{localStorage.setItem(key,JSON.stringify(board));}catch{saved=false;}scores();
+ $('score-form').hidden=true;
+ $('save-status').textContent=saved?'Score enregistré pour '+pseudo(entry)+' !':'Score affiché pour '+pseudo(entry)+'. Ce navigateur ne permet pas de le conserver après fermeture.';
+ $('replay').focus();
+};
+function menu(){pendingScore=null;$('game').hidden=true;$('result').hidden=true;$('menu').hidden=false;document.querySelector('[data-mode]').focus();}
+$('menu-button').onclick=menu;$('replay').onclick=menu;scores();
+</script>
+
+<script async data-goatcounter="https://lesjeuxdemathsetdefrancais.goatcounter.com/count" src="https://gc.zgo.at/count.js"></script>
+</body></html>
