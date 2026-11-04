@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Les crabes des Salines | Ordonner les nombres au CE1</title>
-<meta name="description" content="Range les nombres de 50 à 1 000 avec les crabes des Salines. Cinq séries aléatoires en ordre croissant ou décroissant.">
+<title>Les crabes des Salines | Ordonner les nombres au CP et au CE1</title>
+<meta name="description" content="Range les nombres de 5 à 100 au CP ou de 50 à 1 000 au CE1 avec les crabes des Salines. Cinq séries aléatoires en ordre croissant ou décroissant.">
 <link rel="canonical" href="https://bleja972.github.io/jeux/crabes-des-salines/">
 <style>
 *{box-sizing:border-box} [hidden]{display:none!important}
@@ -12,7 +12,7 @@ nav a{color:#14534f;font-weight:700}header{margin:18px 0}h1{font-size:clamp(30px
 .panel{background:#fff;border-radius:20px;padding:clamp(12px,3vw,24px);margin:16px 0;border:1px solid #b9ddd5}
 .actions,.hud{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 button{font:inherit;font-weight:800;cursor:pointer;border:1px solid #14605b;border-radius:12px;min-height:44px;padding:9px 15px;background:#fff;color:#153c3a;touch-action:manipulation}
-button.primary{background:#14605b;color:#fff}button:disabled{opacity:.65;cursor:default}button:focus-visible,a:focus-visible{outline:3px solid #923902;outline-offset:3px}
+button[data-level][aria-pressed="true"]{background:#d6f6e9;border:2px solid #14605b}button.primary{background:#14605b;color:#fff}button:disabled{opacity:.65;cursor:default}button:focus-visible,a:focus-visible{outline:3px solid #923902;outline-offset:3px}
 .hud{justify-content:space-between;font-weight:800}.instruction{font-size:clamp(18px,3vw,27px);margin:12px 0}
 .beach{aspect-ratio:1264/590;background:url(plage.webp) center top/100% auto no-repeat;border-radius:16px 16px 0 0;min-height:0}
 .sand{background:linear-gradient(#f9d782,#ffedba);border-radius:0 0 16px 16px;padding:12px 5px 8px}
@@ -57,13 +57,13 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 }
 </style></head>
 <body><main><nav><a href="/">← Retour au blog</a></nav>
-<header><div class="kicker">CE1 · NUMÉRATION · DE 50 À 1 000</div><h1>Les crabes des Salines</h1><p>Range les crabes en cliquant sur leurs pancartes.</p></header>
-<section class="panel" id="menu"><div class="beach home-beach" role="img" aria-label="Plage des Salines, en Martinique"></div><h2>Choisis le sens du rangement</h2><p>5 séries de 5 nombres. Chaque série réussie du premier coup rapporte 1 point.</p><div class="actions"><button class="primary" data-mode="asc">Du plus petit au plus grand</button><button class="primary" data-mode="desc">Du plus grand au plus petit</button><button data-mode="mix">Les deux sens</button></div></section>
+<header><div class="kicker" id="level-label">CE1 · NUMÉRATION · DE 50 À 1 000</div><h1>Les crabes des Salines</h1><p>Range les crabes en cliquant sur leurs pancartes.</p></header>
+<section class="panel" id="menu"><div class="beach home-beach" role="img" aria-label="Plage des Salines, en Martinique"></div><h2>Choisis ton niveau</h2><div class="actions" role="group" aria-label="Niveau"><button type="button" data-level="CP" aria-pressed="false">CP · de 5 à 100</button><button type="button" data-level="CE1" aria-pressed="true">CE1 · de 50 à 1 000</button></div><h2 class="instruction">Choisis le sens du rangement</h2><p>5 séries de 5 nombres. Chaque série réussie du premier coup rapporte 1 point.</p><div class="actions"><button class="primary" data-mode="asc">Du plus petit au plus grand</button><button class="primary" data-mode="desc">Du plus grand au plus petit</button><button data-mode="mix">Les deux sens</button></div></section>
 <section class="panel" id="game" hidden><div class="hud"><span id="round"></span><span id="points"></span></div><h2 class="instruction" id="instruction"></h2>
 <div class="beach" aria-hidden="true"></div><div class="sand"><div class="zone"><span>← Crabes rangés</span><span>Crabes à choisir →</span></div><div id="lane" class="lane" aria-label="Nombres à ranger"></div></div>
 <p id="feedback" role="status"></p><div class="actions"><button id="clear">Effacer</button><button class="primary" id="check">Vérifier</button><button class="primary" id="next" hidden>Série suivante</button><button id="menu-button">Menu</button></div></section>
-<section class="panel" id="result" hidden><h2>Partie terminée !</h2><p id="final" role="status"></p><form id="score-form"><p>Compose ton pseudo et choisis ton pays pour enregistrer ton score.</p><div class="score-fields"><label>Animal<select id="alias-animal"></select></label><label>Qualité<select id="alias-quality"></select></label><label>Pays ou territoire<select id="country"></select></label></div><button class="primary" id="save-score" type="submit">Enregistrer mon score</button></form><p id="save-status" role="status"></p><button id="replay">Rejouer</button></section>
-<section class="panel"><h2>Tableau des scores</h2><p>Les 10 meilleurs résultats de ce navigateur, avec ta dernière partie si elle est hors du classement. À score égal, le plus rapide passe devant.</p><div class="score-scroll" tabindex="0" role="region" aria-label="Classement des joueurs"><table><thead><tr><th scope="col">Rang</th><th scope="col">Pseudo</th><th scope="col">Pays</th><th scope="col">Mode</th><th scope="col">Score</th><th scope="col">Temps</th></tr></thead><tbody id="scores"></tbody></table></div></section>
+<section class="panel" id="result" hidden><h2>Partie terminée !</h2><p id="final" role="status"></p><form id="score-form"><p>Compose ton pseudo et choisis ton pays pour enregistrer ton score.</p><div class="score-fields"><label>Animal<select id="alias-animal"></select></label><label>Qualité<select id="alias-quality"></select></label><label>Pays ou territoire<select id="country"></select></label></div><button class="primary" id="save-score" type="submit">Enregistrer mon score</button></form><p id="save-status" role="status"></p><button id="replay">Rejouer</button><div class="next-games" data-level-links="CP" hidden><h3>Continue à jouer au CP</h3><ul><li><a href="/jeux/chateau-nombres-cp/">Le château des nombres</a></li><li><a href="/competences/numeration/?niveau=CP#catalogue">Tous les jeux de numération au CP</a></li></ul></div><div class="next-games" data-level-links="CE1"><h3>Continue à jouer au CE1</h3><ul><li><a href="/ranger/">Ranger des nombres</a></li><li><a href="/jeux/fritz-encadrements-ce1/">La planète de Fritz</a></li><li><a href="/competences/numeration/?niveau=CE1#catalogue">Tous les jeux de numération au CE1</a></li></ul></div></section>
+<section class="panel"><h2>Tableau des scores · <span id="score-level">CE1</span></h2><p>Les 10 meilleurs résultats de ce navigateur, avec ta dernière partie si elle est hors du classement. À score égal, le plus rapide passe devant.</p><div class="score-scroll" tabindex="0" role="region" aria-label="Classement des joueurs"><table><thead><tr><th scope="col">Rang</th><th scope="col">Pseudo</th><th scope="col">Pays</th><th scope="col">Mode</th><th scope="col">Score</th><th scope="col">Temps</th></tr></thead><tbody id="scores"></tbody></table></div></section>
 </main>
 <script>
 'use strict';
@@ -72,8 +72,10 @@ const labels={asc:'Croissant',desc:'Décroissant',mix:'Mélangé'};
 const fmt=n=>n.toLocaleString('fr-FR');
 const duration=ms=>{const s=Math.floor(ms/1000);return Math.floor(s/60)+' min '+String(s%60).padStart(2,'0')+' s';};
 const icon='<svg aria-hidden="true" viewBox="0 0 128 76"><g fill="none" stroke="#8e4a14" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="m47 48-24 1-12 14m35-9-22 7-7 10m62-23 24 1 12 14m-35-9 22 7 7 10M41 42 22 33l-3-13m68 22 19-9 3-13"/></g><g fill="#ffae21" stroke="#8e4a14" stroke-width="2"><path class="claw" d="M22 33C4 31 3 12 17 4c-2 8 1 12 5 13l7-11c10 11 7 24-7 27Z"/><path class="claw" d="M106 33c18-2 19-21 5-29 2 8-1 12-5 13l-7-11c-10 11-7 24 7 27Z"/><ellipse cx="64" cy="48" rx="31" ry="21"/></g><g fill="#38271b"><path d="M53 33v-9m22 9v-9" stroke="#38271b" stroke-width="3"/><circle cx="53" cy="23" r="4"/><circle cx="75" cy="23" r="4"/></g><path d="M58 51q6 6 12 0" stroke="#78360b" stroke-width="2" fill="none"/></svg>';
-const key='crabes-salines-scores-v1';
-let board=[];try{const saved=JSON.parse(localStorage.getItem(key)||'[]');if(Array.isArray(saved))board=saved.filter(r=>r&&Object.hasOwn(labels,r.mode)&&Number.isInteger(r.points)&&r.points>=0&&r.points<=5&&Number.isFinite(r.ms)&&r.ms>=0).slice(0,11);}catch{}
+const levels={CP:{min:5,max:100,key:'crabes-salines-cp-scores-v1'},CE1:{min:50,max:1000,key:'crabes-salines-scores-v1'}};
+let level=new URLSearchParams(location.search).get('niveau')==='CP'?'CP':'CE1';
+let board=[];
+function loadBoard(key){let board=[];try{const saved=JSON.parse(localStorage.getItem(key)||'[]');if(Array.isArray(saved))board=saved.filter(r=>r&&Object.hasOwn(labels,r.mode)&&Number.isInteger(r.points)&&r.points>=0&&r.points<=5&&Number.isFinite(r.ms)&&r.ms>=0).slice(0,11);}catch{}return board;}
 
 const animals=['Crabe','Dauphin','Colibri','Tortue','Pélican','Manicou','Gecko','Papillon','Raie','Héron'];
 const qualities=['Arc-en-ciel','Éclair','Étoile','Corail','Soleil','Courage','Saphir','Lagon','Sourire','Comète'];
@@ -92,8 +94,8 @@ function scores(){
  if(!board.length){const td=body.insertRow().insertCell();td.colSpan=6;td.textContent='Aucune partie terminée.';return;}
  board.forEach((r,i)=>{const row=body.insertRow();if(r.latest)row.style.background="#d6f6e9";[i<10?i+1:"Dernière partie",pseudo(r),countryLabel(r.country),labels[r.mode],r.points+' / 5',duration(r.ms)].forEach(v=>row.insertCell().textContent=v);});
 }
-function makeRounds(mode){
- const pool=Array.from({length:951},(_,i)=>50+i);
+function makeRounds(mode,range=levels[level]){
+ const pool=Array.from({length:range.max-range.min+1},(_,i)=>range.min+i);
  for(let i=0;i<25;i++){const j=i+Math.floor(Math.random()*(pool.length-i));[pool[i],pool[j]]=[pool[j],pool[i]];}
  const first=Math.random()<.5?'asc':'desc';
  return Array.from({length:5},(_,i)=>({values:pool.slice(i*5,i*5+5),direction:mode==='mix'?(i%2?(first==='asc'?'desc':'asc'):first):mode}));
@@ -142,14 +144,23 @@ $('score-form').onsubmit=e=>{
  if(!Number.isInteger(animal)||!animals[animal]||!Number.isInteger(quality)||!qualities[quality]||(country&&!countries.includes(country))){$('save-status').textContent='Vérifie le pseudo et le pays choisis.';return;}
  const entry={...pendingScore,animal,quality,country,latest:true};pendingScore=null;board=board.slice(0,10);board.forEach(r=>delete r.latest);board.push(entry);
  board.sort((a,b)=>b.points-a.points||a.ms-b.ms);board=board.slice(0,10);if(!board.includes(entry))board.push(entry);
- let saved=true;try{localStorage.setItem(key,JSON.stringify(board));}catch{saved=false;}scores();
+ let saved=true;try{localStorage.setItem(levels[level].key,JSON.stringify(board));}catch{saved=false;}scores();
  $('score-form').hidden=true;
  $('save-status').textContent=saved?'Score enregistré pour '+pseudo(entry)+' !':'Score affiché pour '+pseudo(entry)+'. Ce navigateur ne permet pas de le conserver après fermeture.';
  $('replay').focus();
 };
 function menu(){pendingScore=null;$('game').hidden=true;$('result').hidden=true;$('menu').hidden=false;document.querySelector('[data-mode]').focus();}
-$('menu-button').onclick=menu;$('replay').onclick=menu;scores();
+function selectLevel(next){
+ level=next;const {min,max,key}=levels[level];
+ $('level-label').textContent=level+' · NUMÉRATION · DE '+fmt(min)+' À '+fmt(max);
+ $('score-level').textContent=level;
+ document.querySelectorAll('[data-level]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.level===level)));
+ document.querySelectorAll('[data-level-links]').forEach(el=>el.hidden=el.dataset.levelLinks!==level);
+ board=loadBoard(key);scores();
+}
+document.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>selectLevel(b.dataset.level));
+$('menu-button').onclick=menu;$('replay').onclick=menu;selectLevel(level);
 </script>
 
 <script async data-goatcounter="https://lesjeuxdemathsetdefrancais.goatcounter.com/count" src="https://gc.zgo.at/count.js"></script>
-<script src="/assets/jeux-conseilles.js?v=parcours-20261104" data-recommendations="{&quot;selector&quot;: &quot;#result&quot;, &quot;games&quot;: [{&quot;url&quot;: &quot;https://bleja972.github.io/ranger/&quot;, &quot;title&quot;: &quot;Ranger des nombres&quot;}, {&quot;url&quot;: &quot;https://bleja972.github.io/jeux/fritz-encadrements-ce1/&quot;, &quot;title&quot;: &quot;La planète de Fritz — Encadrer les nombres&quot;}, {&quot;url&quot;: &quot;/competences/numeration/?niveau=CE1#catalogue&quot;, &quot;title&quot;: &quot;Tous les jeux de Numération · CE1&quot;}]}"></script></body></html>
+</body></html>
