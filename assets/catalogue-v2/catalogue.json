@@ -1,5 +1,29 @@
 [
   {
+    "id": "jeu-102",
+    "title": "Les crabes des Salines",
+    "url": "https://bleja972.github.io/jeux/crabes-des-salines/",
+    "path": "/jeux/crabes-des-salines/",
+    "description": "Ordonner cinq nombres de 50 à 1 000 avec des crabes animés. Cinq séries aléatoires, ordre croissant ou décroissant et tableau des scores.",
+    "weekly": false,
+    "new": true,
+    "category": "numeration",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "group": "numeration",
+    "groupName": "Numération",
+    "skill": "ranger",
+    "skillName": "Ranger les nombres",
+    "slug": "crabes-des-salines",
+    "objective": "Ranger les nombres de 50 à 1 000 dans les deux sens.",
+    "short": "Range les crabes sur la plage : cinq séries de cinq nombres, du plus petit au plus grand ou l’inverse.",
+    "thumb": "/jeux/crabes-des-salines/plage.webp",
+    "imageAlt": "Des crabes portant des pancartes sur la plage des Salines."
+  },
+  {
     "id": "jeu-101",
     "title": "Le château des nombres — Vue extérieure",
     "url": "https://bleja972.github.io/jeux/chateau-nombres-exterieur-cp/",
