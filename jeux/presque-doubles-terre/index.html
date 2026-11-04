@@ -49,4 +49,4 @@ positionRocket(0);new ResizeObserver(()=>positionRocket(phase==='playing'?(perfo
 $('start').onclick=start;$('restart').onclick=start;$('quit').onclick=home;$('home').onclick=home;
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&phase==='playing'){cancelAnimationFrame(raf);if(performance.now()>=deadline)finish();else raf=requestAnimationFrame(tick)}});
 
-</script><script defer data-bleja-share src="/assets/partager-jeu.js?v=share-v1"></script></body></html>
+</script><script defer data-bleja-share src="/assets/partager-jeu.js?v=share-v1"></script><script src="/assets/jeux-conseilles.js?v=parcours-20261104" data-recommendations="{&quot;selector&quot;: &quot;#result&quot;, &quot;games&quot;: [{&quot;url&quot;: &quot;https://bleja972.github.io/doubles2/&quot;, &quot;title&quot;: &quot;Les doubles&quot;}, {&quot;url&quot;: &quot;https://bleja972.github.io/PRESQUE8DOUBLES/&quot;, &quot;title&quot;: &quot;Les presque doubles&quot;}, {&quot;url&quot;: &quot;/competences/mental/?niveau=CP#catalogue&quot;, &quot;title&quot;: &quot;Tous les jeux de Calcul mental · CP&quot;}]}"></script></body></html>

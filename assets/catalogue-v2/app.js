@@ -23,7 +23,7 @@ const captureDialog=$('#capture-dialog');let previewTrigger;
 document.addEventListener('click',e=>{
  const button=e.target.closest('[data-preview]');if(!button||!captureDialog)return;
  previewTrigger=button;$('#capture-title').textContent=button.dataset.title;
- $('#capture-full').src=button.dataset.src;$('#capture-full').alt='Capture d’écran du jeu '+button.dataset.title;
+ $('#capture-full').src=button.dataset.src;$('#capture-full').alt=button.querySelector('img')?.alt||button.dataset.title;
  $('#capture-play').href=button.dataset.gameUrl;const tracked=previousTracking[button.dataset.gameUrl];if(tracked){Object.entries(tracked).forEach(([key,value])=>$('#capture-play').setAttribute(key,value));}else{$('#capture-play').removeAttribute('data-goatcounter-click');$('#capture-play').removeAttribute('data-goatcounter-title');}captureDialog.showModal();
 });
 $('#capture-close')?.addEventListener('click',()=>captureDialog.close());
@@ -47,7 +47,7 @@ const cardNodes=$$('[data-game]',$('#game-grid'));const cardMap=new Map(cardNode
 function ensureCatalogCards(){
  const escape=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
  for(const g of catalog){
-  if(cardMap.has(g.id)){const meta=$('.card-meta',cardMap.get(g.id));if(meta)meta.textContent=g.levels.join(' · ')+' · '+g.groupName;continue;}
+  if(cardMap.has(g.id)){const img=$('.game-cover img',cardMap.get(g.id));if(img&&g.imageAlt)img.alt=g.imageAlt;const meta=$('.card-meta',cardMap.get(g.id));if(meta)meta.textContent=g.levels.join(' · ')+' · '+g.groupName;continue;}
   const card=document.createElement('article');card.className='game-card';card.dataset.game=g.id;
   card.innerHTML=`<div class="game-cover"><button class="capture-button" type="button" data-preview data-src="${escape(g.thumb)}" data-title="${escape(g.title)}" data-game-url="${escape(g.url)}" aria-label="Agrandir l’aperçu du jeu ${escape(g.title)}"><img src="${escape(g.thumb)}" alt="${escape(g.imageAlt||g.title)}" width="1000" height="650" loading="lazy"><span class="capture-zoom" aria-hidden="true">Agrandir ⛶</span></button><div class="cover-badges">${g.new?'<span class="badge new">Nouveau</span>':''}</div><button class="game-fav" data-favorite="${escape(g.id)}" aria-label="Ajouter ${escape(g.title)} aux favoris" aria-pressed="false">♡</button></div><div class="game-info"><div class="card-meta">${escape(g.levels.join(' · '))} · ${escape(g.groupName)}</div><h3><a href="${escape(g.path||g.url)}">${escape(g.title)}</a></h3><p>${escape(g.short||g.description)}</p><div class="card-actions"><a class="play" href="${escape(g.url)}" target="_blank" rel="noopener">Jouer ↗</a></div></div>`;
   const tracked=previousTracking[g.url];if(tracked)for(const [key,value] of Object.entries(tracked))$('.play',card).setAttribute(key,value);
@@ -146,7 +146,7 @@ function updateSidebarCounts(){
   const description=label+' : '+count+' jeu'+(count===1?'':'x');link.setAttribute('aria-label',description);link.title=description;
  });
 }
-fetch('/assets/catalogue-v2/catalogue.json?v=crabes-salines-v2').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
+fetch('/assets/catalogue-v2/catalogue.json?v=parcours-20261104').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
  toast('Les filtres sont indisponibles. Tous les liens vers les jeux restent accessibles.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();
