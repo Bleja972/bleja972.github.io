@@ -1,5 +1,29 @@
 [
   {
+    "id": "chemin-du-kangourou",
+    "slug": "chemin-du-kangourou",
+    "title": "Le chemin du kangourou",
+    "url": "https://bleja972.github.io/jeux/chemin-du-kangourou/",
+    "path": "/jeux/chemin-du-kangourou/",
+    "description": "Aide le kangourou à rejoindre le spinifex en coloriant un labyrinthe de nombres par bonds de 10, 20, 25 ou 50.",
+    "short": "Colorie le chemin du kangourou en avançant par bonds de 10, 20, 25 ou 50.",
+    "objective": "Poursuivre une suite numérique par bonds de 10, 20, 25 ou 50.",
+    "skill": "suites-numeriques",
+    "skillName": "Compléter des suites numériques",
+    "category": "numeration",
+    "group": "numeration",
+    "groupName": "Numération",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/jeux/chemin-du-kangourou/australie.webp",
+    "imageAlt": "Kangourou et spinifex dans le désert australien."
+  },
+  {
     "id": "crabes-du-tombolo",
     "slug": "crabes-du-tombolo",
     "title": "Les crabes du tombolo",
