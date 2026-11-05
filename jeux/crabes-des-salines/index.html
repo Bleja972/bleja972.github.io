@@ -104,10 +104,11 @@ function makeRounds(mode,range=levels[level]){
 let mode,rounds,index,points,start,chosen,attempted,solved,nodes;
 function message(s,kind=''){$('feedback').textContent=s;$('feedback').className=kind;}
 function render(moved){
- const lane=$('lane'),first=new Map([...lane.children].map(el=>[el,el.getBoundingClientRect()]));
+ const lane=$('lane'),touchLayout=matchMedia('(pointer: coarse)').matches||matchMedia('(max-width: 1024px)').matches,first=touchLayout?new Map():new Map([...lane.children].map(el=>[el,el.getBoundingClientRect()]));
  const order=[...chosen,...rounds[index].values.filter(n=>!chosen.includes(n))];
- order.forEach(n=>{const el=nodes.get(n);const picked=chosen.includes(n);el.disabled=picked||solved;el.classList.toggle('picked',picked);lane.append(el);});
- if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+ const ordered=order.map(n=>{const el=nodes.get(n);const picked=chosen.includes(n);el.disabled=picked||solved;el.classList.toggle('picked',picked);return el;});
+ lane.replaceChildren(...ordered);
+ if(!touchLayout&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
   order.forEach(n=>{const el=nodes.get(n),prev=first.get(el);if(!prev)return;const now=el.getBoundingClientRect(),x=prev.left-now.left;if(x&&el.animate){el.getAnimations().filter(a=>a.effect?.target===el).forEach(a=>a.cancel());el.animate([{transform:'translateX('+x+'px)'},{transform:'translateX(0)'}],{duration:360,easing:'ease-out'});}});
   if(moved!==undefined){const el=nodes.get(moved);el.classList.remove('walk');void el.offsetWidth;el.classList.add('walk');}
  }
@@ -118,10 +119,10 @@ function round(){
  $('round').textContent='Série '+(index+1)+' / 5';$('points').textContent=points+' / 5 points';
  $('instruction').textContent=rounds[index].direction==='asc'?'Du plus petit au plus grand':'Du plus grand au plus petit';
  $('next').hidden=true;$('next').textContent=index===4?'Voir mon score':'Série suivante';
- rounds[index].values.forEach(n=>{const b=document.createElement('button');b.type='button';b.className='crab';const s=document.createElement('span');s.className='sign';s.textContent=fmt(n);b.append(s);b.insertAdjacentHTML('beforeend',icon);b.onclick=()=>{if(solved||chosen.includes(n))return;chosen.push(n);message(chosen.length===5?'Tu peux vérifier ton rangement.':'Crabes rangés : '+chosen.length+' sur 5.');render(n);const next=rounds[index].values.find(v=>!chosen.includes(v));(next===undefined?$('check'):nodes.get(next)).focus({preventScroll:true});};nodes.set(n,b);});
+ rounds[index].values.forEach(n=>{const b=document.createElement('button');b.type='button';b.className='crab';const s=document.createElement('span');s.className='sign';s.textContent=fmt(n);b.append(s);b.insertAdjacentHTML('beforeend',icon);b.onclick=()=>{if(solved||chosen.includes(n))return;chosen.push(n);message(chosen.length===5?'Tu peux vérifier ton rangement.':'Crabes rangés : '+chosen.length+' sur 5.');render(n);const next=rounds[index].values.find(v=>!chosen.includes(v));if(!matchMedia('(pointer: coarse)').matches)(next===undefined?$('check'):nodes.get(next)).focus({preventScroll:true});};nodes.set(n,b);});
  message('Choisis le premier crabe.');render();
 }
-function play(m){mode=m;rounds=makeRounds(m);index=0;points=0;start=performance.now();$('menu').hidden=true;$('result').hidden=true;$('game').hidden=false;round();nodes.values().next().value.focus();}
+function play(m){mode=m;rounds=makeRounds(m);index=0;points=0;start=performance.now();$('menu').hidden=true;$('result').hidden=true;$('game').hidden=false;round();if(!matchMedia('(pointer: coarse)').matches)nodes.values().next().value.focus({preventScroll:true});}
 document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>play(b.dataset.mode));
 $('clear').onclick=()=>{if(solved)return;chosen=[];message('Recommence ton rangement.');render();nodes.values().next().value.focus({preventScroll:true});};
 $('check').onclick=()=>{
