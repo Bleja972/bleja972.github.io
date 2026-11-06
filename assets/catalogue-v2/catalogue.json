@@ -1,5 +1,29 @@
 [
   {
+    "id": "ours-de-la-banquise",
+    "slug": "ours-de-la-banquise",
+    "title": "L’ours de la banquise",
+    "url": "https://bleja972.github.io/jeux/ours-de-la-banquise/",
+    "path": "/jeux/ours-de-la-banquise/",
+    "description": "Programme les déplacements de l’ours polaire pour attraper les poissons sans tomber à l’eau. Vingt défis et deux modes de codage.",
+    "short": "Programme les déplacements de l’ours pour attraper les poissons sur la banquise.",
+    "objective": "Programmer une suite de déplacements et d’actions sur une grille.",
+    "skill": "programmer-deplacements",
+    "skillName": "Programmer des déplacements",
+    "category": "codage",
+    "group": "codage",
+    "groupName": "Codage",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/jeux/ours-de-la-banquise/banquise.webp",
+    "imageAlt": "Paysage de banquise arctique, décor du jeu de codage."
+  },
+  {
     "id": "chemin-du-kangourou",
     "slug": "chemin-du-kangourou",
     "title": "Le chemin du kangourou",

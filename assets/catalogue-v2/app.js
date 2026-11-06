@@ -36,12 +36,14 @@ if(!document.querySelector('[data-group-link="geometrie"]')){
  const mathLink=document.querySelector('[data-group-link="pose"]');
  if(mathLink)mathLink.insertAdjacentHTML('afterend',"<a href=\"/?niveau=CE1&amp;matiere=Math%C3%A9matiques&amp;domaine=geometrie#catalogue\" data-group-link=\"geometrie\" aria-label=\"Géométrie : 2 jeux\">Géométrie<span class=\"side-game-count\" aria-hidden=\"true\">2</span></a>");
 }
+if(!document.querySelector('[data-group-link="codage"]')){const link=document.querySelector('[data-group-link="pose"]');if(link)link.insertAdjacentHTML('afterend','<a data-group-link="codage" href="/?niveau=CE1&amp;matiere=Math%C3%A9matiques&amp;domaine=codage#catalogue">Codage<span class="side-game-count" aria-hidden="true">1</span></a>');}
+const domainSelect=document.querySelector('#group-filter');if(domainSelect&&!domainSelect.querySelector('option[value="codage"]'))domainSelect.add(new Option('Codage','codage'));
 // Keep printable classroom games easy to identify throughout the blog.
 $$('a[href="/imprimer/"]').forEach(link=>{link.title='Jeux à imprimer pour la classe';link.setAttribute('aria-label','Jeux à imprimer pour la classe');for(const node of link.childNodes)if(node.nodeType===3&&/fiches à imprimer|À imprimer/.test(node.textContent))node.textContent=node.textContent.replace('Les fiches à imprimer','Jeux à imprimer').replace('À imprimer','Jeux à imprimer');});
 if(document.body.dataset.page!=='catalog')return;
 const initial={niveau:'CE1',matiere:document.body.dataset.subject||'toutes',domaine:document.body.dataset.group||'tous',competence:'toutes',q:'',collection:'tous',tri:'selection'};
 const validCollections=['tous','nouveautes','semaine','favoris'];
-const groupNames={numeration:'Numération',mental:'Calcul mental',pose:'Calcul posé',geometrie:'Géométrie',problemes:'Problèmes',lecture:'Lecture',orthographe:'Orthographe et dictées',grammaire:'Grammaire',vocabulaire:'Vocabulaire',ecriture:'Production d’écrit'};
+const groupNames={numeration:'Numération',mental:'Calcul mental',pose:'Calcul posé',codage:'Codage',geometrie:'Géométrie',problemes:'Problèmes',lecture:'Lecture',orthographe:'Orthographe et dictées',grammaire:'Grammaire',vocabulaire:'Vocabulaire',ecriture:'Production d’écrit'};
 const controls={niveau:$('#level-filter'),matiere:$('#subject-filter'),domaine:$('#group-filter'),competence:$('#skill-filter'),q:$('#game-search'),tri:$('#sort-filter')};
 const cardNodes=$$('[data-game]',$('#game-grid'));const cardMap=new Map(cardNodes.map(n=>[n.dataset.game,n]));
 // Build missing cards from the catalogue so new games also work on older landing pages.
@@ -147,7 +149,7 @@ function updateSidebarCounts(){
   const description=label+' : '+count+' jeu'+(count===1?'':'x');link.setAttribute('aria-label',description);link.title=description;
  });
 }
-fetch('/assets/catalogue-v2/catalogue.json?v=tableau-vert-20261105').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
+fetch('/assets/catalogue-v2/catalogue.json?v=codage-ours-20261105').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
  toast('Les filtres sont indisponibles. Tous les liens vers les jeux restent accessibles.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();
