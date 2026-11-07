@@ -1,5 +1,29 @@
 [
   {
+    "id": "genre-des-noms-ce1",
+    "slug": "genre-des-noms-ce1",
+    "title": "Le genre des noms — Masculin ou féminin ?",
+    "url": "https://bleja972.github.io/jeux/genre-des-noms-ce1/",
+    "path": "/jeux/genre-des-noms-ce1/",
+    "description": "Trois défis de 12 questions pour reconnaître les noms masculins et féminins, choisir un ou une et retrouver le genre derrière l’apostrophe. Écoute des mots, corrections et pourcentage de réussite.",
+    "short": "Reconnais les noms masculins et féminins avec le, la, un et une.",
+    "objective": "Identifier le genre d’un nom commun à l’aide d’un déterminant.",
+    "skill": "genre-des-noms",
+    "skillName": "Reconnaître le genre des noms",
+    "category": "grammaire",
+    "group": "grammaire",
+    "groupName": "Grammaire",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Français",
+    "weekly": false,
+    "new": true,
+    "thumb": "/jeux/genre-des-noms-ce1/apercu.svg",
+    "imageAlt": "Le genre des noms : un colibri et une fleur, masculin ou féminin."
+  },
+  {
     "id": "ours-de-la-banquise",
     "slug": "ours-de-la-banquise",
     "title": "L’ours de la banquise",
