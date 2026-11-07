@@ -70,5 +70,17 @@
       "url": "/pdf/Dictee_6_Periode_1_CE1_eleve_et_correction_parents.pdf",
       "label": "Dictée 6 · Période 1 · Élève et correction parents"
     }
+  ],
+  "/jeux/problemes4/": [
+    {
+      "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+      "label": "CE1 · 7 problèmes avec barres · Exercices et corrigé"
+    }
+  ],
+  "/PROBLEMES4/": [
+    {
+      "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+      "label": "CE1 · 7 problèmes avec barres · Exercices et corrigé"
+    }
   ]
 }

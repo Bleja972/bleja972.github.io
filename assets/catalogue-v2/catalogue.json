@@ -2654,7 +2654,7 @@
   },
   {
     "title": "Problèmes avec modèles en barres — Atelier 4",
-    "url": "https://bleja972.github.io/PROBLEMES4/",
+    "url": "https://bleja972.github.io/jeux/problemes4/",
     "description": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "weekly": false,
     "category": "problemes",
@@ -2676,7 +2676,9 @@
     ],
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-71.webp",
-    "imageAlt": "Aperçu de Problèmes avec modèles en barres — Atelier 4 : comprendre une situation et choisir un calcul pour la résoudre."
+    "imageAlt": "Aperçu de Problèmes avec modèles en barres — Atelier 4 : comprendre une situation et choisir un calcul pour la résoudre.",
+    "pdfUrl": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+    "pdfLabel": "7 problèmes avec barres + corrigé (PDF)"
   },
   {
     "title": "Problèmes — Période 2",
