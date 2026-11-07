@@ -37,11 +37,12 @@ if(!document.querySelector('[data-group-link="geometrie"]')){
  if(mathLink)mathLink.insertAdjacentHTML('afterend',"<a href=\"/?niveau=CE1&amp;matiere=Math%C3%A9matiques&amp;domaine=geometrie#catalogue\" data-group-link=\"geometrie\" aria-label=\"Géométrie : 2 jeux\">Géométrie<span class=\"side-game-count\" aria-hidden=\"true\">2</span></a>");
 }
 if(!document.querySelector('[data-group-link="codage"]')){const link=document.querySelector('[data-group-link="pose"]');if(link)link.insertAdjacentHTML('afterend','<a data-group-link="codage" href="/?niveau=CE1&amp;matiere=Math%C3%A9matiques&amp;domaine=codage#catalogue">Codage<span class="side-game-count" aria-hidden="true">1</span></a>');}
+document.querySelectorAll('.parcours-niveaux a').forEach(link=>{if(link.textContent.trim()==='Tous les jeux CE2')link.href='/ce2/';});
 const domainSelect=document.querySelector('#group-filter');if(domainSelect&&!domainSelect.querySelector('option[value="codage"]'))domainSelect.add(new Option('Codage','codage'));
 // Keep printable classroom games easy to identify throughout the blog.
 $$('a[href="/imprimer/"]').forEach(link=>{link.title='Jeux à imprimer pour la classe';link.setAttribute('aria-label','Jeux à imprimer pour la classe');for(const node of link.childNodes)if(node.nodeType===3&&/fiches à imprimer|À imprimer/.test(node.textContent))node.textContent=node.textContent.replace('Les fiches à imprimer','Jeux à imprimer').replace('À imprimer','Jeux à imprimer');});
 if(document.body.dataset.page!=='catalog')return;
-const initial={niveau:'CE1',matiere:document.body.dataset.subject||'toutes',domaine:document.body.dataset.group||'tous',competence:'toutes',q:'',collection:'tous',tri:'selection'};
+const initial={niveau:document.body.dataset.level||'CE1',matiere:document.body.dataset.subject||'toutes',domaine:document.body.dataset.group||'tous',competence:'toutes',q:'',collection:'tous',tri:'selection'};
 const validCollections=['tous','nouveautes','semaine','favoris'];
 const groupNames={numeration:'Numération',mental:'Calcul mental',pose:'Calcul posé',codage:'Codage',geometrie:'Géométrie',problemes:'Problèmes',lecture:'Lecture',orthographe:'Orthographe et dictées',grammaire:'Grammaire',vocabulaire:'Vocabulaire',ecriture:'Production d’écrit'};
 const controls={niveau:$('#level-filter'),matiere:$('#subject-filter'),domaine:$('#group-filter'),competence:$('#skill-filter'),q:$('#game-search'),tri:$('#sort-filter')};
@@ -98,18 +99,18 @@ function filteredGames(){
  return catalog.filter(g=>{
   const hay=normalize([g.title,g.description,g.subject,g.groupName,g.skillName,g.objective,g.levels.join(' ')].join(' '));
   return (state.niveau==='tous'||g.levels.includes(state.niveau))&&(state.matiere==='toutes'||g.subject===state.matiere)&&(state.domaine==='tous'||g.group===state.domaine)&&(state.competence==='toutes'||g.skill===state.competence)&&(state.collection!=='nouveautes'||g.new)&&(state.collection!=='semaine'||g.weekly)&&(state.collection!=='favoris'||favorites.has(g.id))&&terms.every(term=>hay.includes(term));
- }).sort(state.tri==='az'?(a,b)=>a.title.localeCompare(b.title,'fr'):()=>0);
+ }).sort(state.tri==='az'?(a,b)=>a.title.localeCompare(b.title,'fr'):state.niveau==='CE2'?(a,b)=>Number(b.level==='CE2')-Number(a.level==='CE2'):()=>0);
 }
 function render(){
- syncControls();const games=filteredGames(),visible=games.slice(0,shown),visibleIds=new Set(visible.map(g=>g.id));
+ syncControls();const games=filteredGames(),visible=state.niveau==='CE2'?games:games.slice(0,shown),visibleIds=new Set(visible.map(g=>g.id));
  cardNodes.forEach(n=>n.hidden=!visibleIds.has(n.dataset.game));
  const fragment=document.createDocumentFragment();games.forEach(g=>fragment.append(cardMap.get(g.id)));$('#game-grid').append(fragment);
- const count=games.length;$('#result-count').textContent=count+' jeu'+(count===1?'':'x')+' trouvé'+(count===1?'':'s')+(state.q?' pour « '+state.q+' »':'');
+ const count=games.length,displayed=state.niveau==='CE2'?count:Math.min(shown,count);$('#result-count').textContent=count+' jeu'+(count===1?'':'x')+' trouvé'+(count===1?'':'s')+(state.q?' pour « '+state.q+' »':'');
  const labels={tous:'Tous les jeux',nouveautes:'Les nouveautés',semaine:'Les jeux de la semaine',favoris:'Mes jeux favoris'};
- $('#catalog-title').textContent=state.collection==='tous'&&state.domaine!=='tous'?'Les jeux de '+groupNames[state.domaine].toLowerCase():labels[state.collection];
+ $('#catalog-title').textContent=state.collection==='tous'&&state.domaine!=='tous'?'Les jeux de '+groupNames[state.domaine].toLowerCase():state.collection==='tous'&&state.niveau==='CE2'?'Tous les jeux CE2':labels[state.collection];
  $('#empty-state').hidden=count>0;$('#empty-title').textContent=state.collection==='favoris'?'Ta sélection attend ses premiers jeux':'Aucun jeu trouvé';
  $('#empty-text').textContent=state.collection==='favoris'?(favorites.size?'Tes favoris ne correspondent pas à ces filtres. Élargis ta recherche.':'Touche le cœur d’un jeu pour le retrouver ici. Les favoris sont gardés sur cet appareil.'):'Essaie un autre mot ou élargis les filtres pour trouver ton prochain jeu.';
- $('#show-more').hidden=count<=shown;$('#show-more').textContent='Voir '+Math.min(12,count-shown)+' jeux de plus ↓';$('#shown-count').textContent=count?Math.min(shown,count)+' sur '+count+' jeu'+(count===1?'':'x'):'';
+ $('#show-more').hidden=state.niveau==='CE2'||count<=shown;$('#show-more').textContent='Voir '+Math.min(12,count-shown)+' jeux de plus ↓';$('#shown-count').textContent=count?displayed+' sur '+count+' jeu'+(count===1?'':'x'):'';
  $('.weekly-section')?.toggleAttribute('hidden',state.collection!=='tous'||state.q!==''||state.matiere!=='toutes'||state.domaine!=='tous'||state.niveau!=='CE1');
  updateFavorites();
 }
@@ -123,12 +124,12 @@ for(const [key,el] of Object.entries(controls)){
   const patch={[key]:el.value};if(['niveau','matiere','domaine'].includes(key))patch.competence='toutes';
   if(key==='matiere')patch.domaine='tous';
   if(key==='domaine'&&el.value!=='tous'){const first=catalog.find(g=>g.group===el.value);if(first)patch.matiere=first.subject;}
-  change(patch);
+  change(patch,{reset:key==='niveau'});
  });
 }
 $('#search-form').addEventListener('submit',e=>{e.preventDefault();change({q:controls.q.value});});
 $('#clear-search').addEventListener('click',()=>{change({q:''});controls.q.focus();});
-$$('[data-level]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();change({niveau:b.dataset.level,competence:'toutes'},{scroll:true});}));
+$$('[data-level]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();change({niveau:b.dataset.level,competence:'toutes'},{scroll:true,reset:true});}));
 $$('[data-collection]').forEach(b=>b.addEventListener('click',()=>change({collection:b.dataset.collection},{reset:b.dataset.collection==='favoris'})));
 $$('[data-collection-link]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();change({collection:b.dataset.collectionLink},{scroll:true,reset:true});}));
 $('#reset-filters').addEventListener('click',reset);$('#empty-reset').addEventListener('click',reset);
