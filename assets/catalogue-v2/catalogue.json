@@ -1476,7 +1476,9 @@
     ],
     "short": "Écouter, observer et écrire pour mémoriser l’orthographe.",
     "thumb": "/assets/catalogue-v2/captures/jeu-24.webp",
-    "imageAlt": "Aperçu de Dictées 1 à 6 — Période 1 : écouter, observer et écrire pour mémoriser l’orthographe."
+    "imageAlt": "Aperçu de Dictées 1 à 6 — Période 1 : écouter, observer et écrire pour mémoriser l’orthographe.",
+    "pdfUrl": "/pdf/Dictee_6_Periode_1_CE1_eleve_et_correction_parents.pdf",
+    "pdfLabel": "Dictée 6 · à trous + correction parents (PDF)"
   },
   {
     "title": "Dictée 5 — Les mots en images",

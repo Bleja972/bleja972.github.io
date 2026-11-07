@@ -58,5 +58,11 @@
       "url": "/pdf/Vocabulaire_CE1_jeux_a_imprimer.pdf",
       "label": "CE1 · Ordre alphabétique et contraires"
     }
+  ],
+  "/dictee6/": [
+    {
+      "url": "/pdf/Dictee_6_Periode_1_CE1_eleve_et_correction_parents.pdf",
+      "label": "Dictée 6 · Période 1 · Élève et correction parents"
+    }
   ]
 }
