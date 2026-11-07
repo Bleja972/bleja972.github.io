@@ -75,6 +75,7 @@ function writeState(replace=false){
  const target=url.pathname+url.search+url.hash;if(target!==location.pathname+location.search+location.hash)(replace?history.replaceState.bind(history):history.pushState.bind(history))(null,'',target);
 }
 function syncControls(){
+ $$('[aria-label="Parcourir les jeux"] a[href]').forEach(link=>{if(link.hasAttribute('data-level'))return;const url=new URL(link.href,location.href);if((url.pathname.startsWith('/competences/')||url.pathname.startsWith('/matieres/')||link.hasAttribute('data-group-link'))&&url.searchParams.has('niveau')){url.searchParams.set('niveau',state.niveau);link.href=url.pathname+url.search+url.hash;}});
  for(const k of ['niveau','matiere','domaine','q','tri'])controls[k].value=state[k];
  $$('[data-group-link="geometrie"]').forEach(link=>{link.href='/?niveau='+state.niveau+'&matiere=Math%C3%A9matiques&domaine=geometrie#catalogue';});
  const available=catalog.filter(g=>(state.niveau==='tous'||g.levels.includes(state.niveau))&&(state.matiere==='toutes'||g.subject===state.matiere)&&(state.domaine==='tous'||g.group===state.domaine));
