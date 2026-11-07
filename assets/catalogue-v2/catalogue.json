@@ -1,5 +1,31 @@
 [
   {
+    "id": "cartons-montessori-ce1",
+    "slug": "cartons-montessori-ce1",
+    "title": "La magie des nombres — Cartons Montessori",
+    "url": "https://bleja972.github.io/jeux/cartons-montessori-ce1/",
+    "path": "/jeux/cartons-montessori-ce1/",
+    "description": "Décompose et recompose les nombres de 10 à 999 avec les cartons Montessori fléchés. Observe les cartons se séparer ou se superposer dans un laboratoire spatial lumineux.",
+    "short": "Décompose et recompose les nombres avec des cartons Montessori animés.",
+    "objective": "Comprendre la valeur de chaque chiffre et décomposer un nombre en centaines, dizaines et unités.",
+    "skill": "composer-decomposer",
+    "skillName": "Composer et décomposer les nombres",
+    "category": "numeration",
+    "group": "numeration",
+    "groupName": "Numération",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/jeux/cartons-montessori-ce1/apercu.webp",
+    "imageAlt": "Cartons Montessori lumineux montrant 400 + 50 + 1 dans un laboratoire spatial.",
+    "pdfUrl": "/pdf/Cartons_Montessori_CE1_exercices_et_correction.pdf",
+    "pdfLabel": "4 fiches élèves + corrigé (PDF)"
+  },
+  {
     "id": "genre-des-noms-ce1",
     "slug": "genre-des-noms-ce1",
     "title": "Le genre des noms — Masculin ou féminin ?",
