@@ -12,3 +12,7 @@ function addCards(){document.querySelectorAll('.game-card').forEach(card=>{const
 function init(){addCards();const path=location.pathname;if(/^\/(jeux|en\/games)\//.test(path)){const block=document.createElement('div');block.className='bleja-share-widget';const url=new URL(location.href);url.search='';url.hash='';url.pathname=url.pathname.replace(/index\.html$/,'');block.append(button(url.href,document.title.split('|')[0].trim()));document.body.append(block)}else if(path.startsWith('/fiches/')||path.startsWith('/en/fiches/')){const play=document.querySelector('.detail-layout a[target="_blank"],.detail-layout a.primary');if(play&&!play.parentElement.querySelector('.bleja-share'))play.parentElement.append(button(play.href,document.querySelector('h1')?.textContent||document.title))}let scheduled=false;new MutationObserver(()=>{if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{scheduled=false;addCards()})}).observe(document.body,{childList:true,subtree:true})}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
+
+
+/* Les PDF du jeu, lorsqu’ils sont disponibles. */
+(()=>{if(window.blejaPdfReady||document.querySelector('script[data-bleja-pdf-loader]'))return;const s=document.createElement('script');s.src='https://bleja972.github.io/assets/pdf-jeux.js?v=pdf3d-20261107';s.dataset.blejaPdfLoader='';s.defer=true;document.head.append(s)})();

@@ -25,3 +25,6 @@ else panel.hidden=true;
 observe()}
 update();
 })();
+
+/* Les PDF du jeu, lorsqu’ils sont disponibles. */
+(()=>{if(window.blejaPdfReady||document.querySelector('script[data-bleja-pdf-loader]'))return;const s=document.createElement('script');s.src='https://bleja972.github.io/assets/pdf-jeux.js?v=pdf3d-20261107';s.dataset.blejaPdfLoader='';s.defer=true;document.head.append(s)})();
