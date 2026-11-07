@@ -2101,9 +2101,9 @@
     "imageAlt": "Aperçu de Soustractions avec le matériel de numération : utiliser les centaines, les dizaines et les unités pour soustraire."
   },
   {
-    "title": "Additions posées sans échange",
-    "url": "https://bleja972.github.io/additions_posees_sans_echange/",
-    "description": "Calcule des additions à deux ou trois chiffres en alignant les centaines, les dizaines et les unités. Vérifie tes réponses et découvre ton score.",
+    "title": "Les additions sans échange en orbite",
+    "url": "https://bleja972.github.io/jeux/additions-sans-echange-en-orbite/",
+    "description": "Trois missions sans retenue : deux chiffres, trois chiffres et nombres à aligner. Dix additions par partie, calcul colonne par colonne, décor spatial, bruitages, néons et bouton paysage Android.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2122,9 +2122,9 @@
       "CE1",
       "CE2"
     ],
-    "short": "Additionner à deux ou trois chiffres, sans échange.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-50.webp",
-    "imageAlt": "Aperçu de Additions posées sans échange : poser et calculer une addition sans échange à deux ou trois chiffres."
+    "short": "Trois niveaux d’additions sans retenue dans le système solaire, avec sons et clavier intégré en paysage.",
+    "thumb": "/assets/catalogue-v2/captures/additions-sans-echange-orbite.webp",
+    "imageAlt": "Addition posée 243 + 125 et calcul des unités, dans un cadre translucide devant la Terre et Saturne."
   },
   {
     "title": "Les additions en orbite — Additions avec échanges",
