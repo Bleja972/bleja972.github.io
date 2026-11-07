@@ -55,8 +55,8 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   .score-fields label{flex-basis:100%}
   #save-score{width:100%}
 }
-</style></head>
-<body><main><nav><a href="/">← Retour au blog</a></nav>
+</style><script defer src="/assets/affichage-horizontal.js?v=crabes-20261107"></script></head>
+<body><div class="horizontal-tools"><button id="horizontal-toggle" type="button" aria-pressed="false">↻ Affichage horizontal</button><p id="horizontal-status" role="status" aria-live="polite" hidden></p></div><main><nav><a href="/">← Retour au blog</a></nav>
 <header><div class="kicker" id="level-label">CE1 · NUMÉRATION · DE 50 À 1 000</div><h1>Les crabes des Salines</h1><p>Range les crabes en cliquant sur leurs pancartes.</p></header>
 <section class="panel" id="menu"><div class="beach home-beach" role="img" aria-label="Plage des Salines, en Martinique"></div><h2>Choisis ton niveau</h2><div class="actions" role="group" aria-label="Niveau"><button type="button" data-level="CP" aria-pressed="false">CP · de 5 à 100</button><button type="button" data-level="CE1" aria-pressed="true">CE1 · de 50 à 1 000</button><button type="button" data-level="CE2" aria-pressed="false">CE2 · de 50 à 10 000</button></div><h2 class="instruction">Choisis le sens du rangement</h2><p>5 séries de 5 nombres. Chaque série réussie du premier coup rapporte 1 point.</p><div class="actions"><button class="primary" data-mode="asc">Du plus petit au plus grand</button><button class="primary" data-mode="desc">Du plus grand au plus petit</button><button data-mode="mix">Les deux sens</button></div></section>
 <section class="panel" id="game" hidden><div class="hud"><span id="round"></span><span id="points"></span></div><h2 class="instruction" id="instruction"></h2>
