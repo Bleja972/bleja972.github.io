@@ -152,7 +152,7 @@ function updateSidebarCounts(){
   const description=label+' : '+count+' jeu'+(count===1?'':'x');link.setAttribute('aria-label',description);link.title=description;
  });
 }
-fetch('/assets/catalogue-v2/catalogue.json?v=problemes4-pdf-20261107').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
+fetch('/assets/catalogue-v2/catalogue.json?v=additions-orbite-20261107').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
  toast('Les filtres sont indisponibles. Tous les liens vers les jeux restent accessibles.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();
@@ -163,3 +163,4 @@ fetch('/assets/catalogue-v2/catalogue.json?v=problemes4-pdf-20261107').then(r=>{
 
 /* Keep the French blog name consistent across shared navigation. */
 (()=>{if(!document.documentElement.lang.startsWith('fr'))return;const name='Jeux éducatifs du CP au CE2';document.querySelectorAll('.brand,.footer').forEach(el=>{const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let node;while(node=walker.nextNode())if(node.nodeValue.includes('Les jeux de CE1'))node.nodeValue=node.nodeValue.replaceAll('Les jeux de CE1',name);});document.querySelectorAll('.brand[aria-label]').forEach(el=>el.setAttribute('aria-label',el.getAttribute('aria-label').replaceAll('Les jeux de CE1',name)));document.title=document.title.replace('Jeux éducatifs CE1 : maths et français en ligne | Les jeux de CE1',name).replaceAll('Les jeux de CE1',name);})();
+

@@ -2127,9 +2127,9 @@
     "imageAlt": "Aperçu de Additions posées sans échange : poser et calculer une addition sans échange à deux ou trois chiffres."
   },
   {
-    "title": "Additions posées avec échanges",
-    "url": "https://bleja972.github.io/REtenues_additions2/",
-    "description": "Entraîne-toi aux additions posées avec un échange, puis deux échanges. Calcule chaque colonne, observe la retenue et vérifie tes réponses pour connaître ton score.",
+    "title": "Les additions en orbite — Additions avec échanges",
+    "url": "https://bleja972.github.io/jeux/additions-en-orbite/",
+    "description": "Dix additions par mission, avec un ou deux échanges. Écris le total de chaque colonne et observe le 1 rejoindre les dizaines ou les centaines. Décor des Nombres en orbite, sons et effets désactivables.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2148,7 +2148,7 @@
       "CE1",
       "CE2"
     ],
-    "short": "Comprendre et calculer les additions avec un ou deux échanges.",
+    "short": "Calcule en colonnes et fais voyager les retenues dans le système solaire : sons, néons et animations.",
     "thumb": "/assets/catalogue-v2/captures/additions-posees-tableau-operation.webp",
     "imageAlt": "Capture du jeu : une addition posée écrite sur un tableau vert."
   },
