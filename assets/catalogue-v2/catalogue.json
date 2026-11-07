@@ -1,5 +1,29 @@
 [
   {
+    "id": "cartons-montessori-ce2",
+    "slug": "cartons-montessori-ce2",
+    "title": "Les nombres en orbite — Cartons Montessori CE2",
+    "url": "https://bleja972.github.io/jeux/cartons-montessori-ce2/",
+    "path": "/jeux/cartons-montessori-ce2/",
+    "description": "Décompose et recompose les nombres jusqu’à 9 999 avec quatre cartons Montessori, dans un système solaire réaliste. Dix défis, sons, animations et top 10 par activité sur ce navigateur, avec pseudo proposé et pays facultatif.",
+    "short": "Explore le système solaire et décompose les nombres jusqu’à 9 999 avec les cartons Montessori.",
+    "objective": "Décomposer et recomposer les nombres en milliers, centaines, dizaines et unités.",
+    "skill": "composer-decomposer",
+    "skillName": "Composer et décomposer les nombres",
+    "category": "numeration",
+    "group": "numeration",
+    "groupName": "Numération",
+    "level": "CE2",
+    "levels": [
+      "CE2"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/jeux/cartons-montessori-ce2/apercu.webp",
+    "imageAlt": "Quatre cartons Montessori lumineux : 4 000 + 500 + 80 + 8 devant la Terre et Saturne."
+  },
+  {
     "id": "cartons-montessori-ce1",
     "slug": "cartons-montessori-ce1",
     "title": "La magie des nombres — Cartons Montessori",
