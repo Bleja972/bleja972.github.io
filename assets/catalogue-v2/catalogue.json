@@ -21,7 +21,9 @@
     "weekly": false,
     "new": true,
     "thumb": "/jeux/genre-des-noms-ce1/apercu.svg",
-    "imageAlt": "Le genre des noms : un colibri et une fleur, masculin ou féminin."
+    "imageAlt": "Le genre des noms : un colibri et une fleur, masculin ou féminin.",
+    "pdfUrl": "/pdf/Le_genre_des_noms_CE1_exercices_et_correction.pdf",
+    "pdfLabel": "Fiche à imprimer + correction (PDF)"
   },
   {
     "id": "ours-de-la-banquise",
