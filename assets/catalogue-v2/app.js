@@ -41,6 +41,12 @@ document.querySelectorAll('.parcours-niveaux a').forEach(link=>{if(link.textCont
 const domainSelect=document.querySelector('#group-filter');if(domainSelect&&!domainSelect.querySelector('option[value="codage"]'))domainSelect.add(new Option('Codage','codage'));
 // Keep printable classroom games easy to identify throughout the blog.
 $$('a[href="/imprimer/"]').forEach(link=>{link.title='Jeux à imprimer pour la classe';link.setAttribute('aria-label','Jeux à imprimer pour la classe');for(const node of link.childNodes)if(node.nodeType===3&&/fiches à imprimer|À imprimer/.test(node.textContent))node.textContent=node.textContent.replace('Les fiches à imprimer','Jeux à imprimer').replace('À imprimer','Jeux à imprimer');});
+
+// Les jeux externes de numération CE1 utilisent le cadre paysage du blog.
+const horizontalGameLinks={"https://bleja972.github.io/evaluation_periode1_numeration/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-18","https://bleja972.github.io/denombrer2/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-31","https://bleja972.github.io/comparer/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-32","https://bleja972.github.io/ranger/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-33","https://bleja972.github.io/lire_nombres/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-34","https://bleja972.github.io/dictee_nombres/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-35","https://bleja972.github.io/suite_de_nombres/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-36","https://bleja972.github.io/composer_decomposer/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-37","https://bleja972.github.io/pair_ou_impair/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-38","https://bleja972.github.io/suites/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-39","https://jeu-de-la-droite-graduee.netlify.app/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-40","https://bejewelled-kataifi-9328a8.netlify.app/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-41","https://bleja972.github.io/decompose/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-42","https://bleja972.github.io/recompose/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-43","https://bleja972.github.io/les-suites-de-nombres/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-44","https://bleja972.github.io/differentes_representations_d_un_nombre/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-45","https://bleja972.github.io/ordonnerlesnombres/":"https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-46"};
+document.querySelectorAll('a[href]').forEach(link=>{if(horizontalGameLinks[link.href])link.href=horizontalGameLinks[link.href];});
+document.querySelectorAll('[data-game-url]').forEach(el=>{if(horizontalGameLinks[el.dataset.gameUrl])el.dataset.gameUrl=horizontalGameLinks[el.dataset.gameUrl];});
+
 if(document.body.dataset.page!=='catalog')return;
 const initial={niveau:document.body.dataset.level||'CE1',matiere:document.body.dataset.subject||'toutes',domaine:document.body.dataset.group||'tous',competence:'toutes',q:'',collection:'tous',tri:'selection'};
 const validCollections=['tous','nouveautes','semaine','favoris'];
@@ -152,7 +158,7 @@ function updateSidebarCounts(){
   const description=label+' : '+count+' jeu'+(count===1?'':'x');link.setAttribute('aria-label',description);link.title=description;
  });
 }
-fetch('/assets/catalogue-v2/catalogue.json?v=sans-echange-orbite-20261107').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
+fetch('/assets/catalogue-v2/catalogue.json?v=horizontal-numeration-20261107').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
  toast('Les filtres sont indisponibles. Tous les liens vers les jeux restent accessibles.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();

@@ -1304,7 +1304,7 @@
   },
   {
     "title": "Je revois les nombres jusqu’à 1000",
-    "url": "https://bleja972.github.io/evaluation_periode1_numeration/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-18",
     "description": "Révise la lecture, l’écriture, la comparaison et la décomposition des nombres jusqu’à 1 000.",
     "weekly": true,
     "originalGuide": "https://bleja972.github.io/jeux/les-nombres-jusqu-a-1-000-revisions/",
@@ -1627,7 +1627,7 @@
   },
   {
     "title": "Dénombrer une collection",
-    "url": "https://bleja972.github.io/denombrer2/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-31",
     "description": "Organiser une collection pour trouver combien elle contient d’éléments.",
     "weekly": false,
     "category": "numeration",
@@ -1652,7 +1652,7 @@
   },
   {
     "title": "Comparer deux nombres",
-    "url": "https://bleja972.github.io/comparer/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-32",
     "description": "Comparer deux nombres et reconnaître le plus grand.",
     "weekly": false,
     "category": "numeration",
@@ -1677,7 +1677,7 @@
   },
   {
     "title": "Ranger des nombres",
-    "url": "https://bleja972.github.io/ranger/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-33",
     "description": "Ordonner des nombres du plus petit au plus grand.",
     "weekly": false,
     "category": "numeration",
@@ -1702,7 +1702,7 @@
   },
   {
     "title": "Lire et écrire les nombres",
-    "url": "https://bleja972.github.io/lire_nombres/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-34",
     "description": "Associer une écriture en chiffres et une écriture en lettres.",
     "weekly": false,
     "category": "numeration",
@@ -1727,7 +1727,7 @@
   },
   {
     "title": "Dictée de nombres",
-    "url": "https://bleja972.github.io/dictee_nombres/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-35",
     "description": "Écouter un nombre et l’écrire en chiffres.",
     "weekly": false,
     "category": "numeration",
@@ -1752,7 +1752,7 @@
   },
   {
     "title": "Compter de plusieurs façons",
-    "url": "https://bleja972.github.io/suite_de_nombres/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-36",
     "description": "Trouver la règle et poursuivre une suite de nombres.",
     "weekly": false,
     "category": "numeration",
@@ -1777,7 +1777,7 @@
   },
   {
     "title": "Composer et décomposer",
-    "url": "https://bleja972.github.io/composer_decomposer/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-37",
     "description": "Relier centaines, dizaines et unités pour composer ou décomposer un nombre.",
     "weekly": false,
     "category": "numeration",
@@ -1802,7 +1802,7 @@
   },
   {
     "title": "Reconnaître les nombres pairs et impairs",
-    "url": "https://bleja972.github.io/pair_ou_impair/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-38",
     "description": "Reconnaître les nombres pairs et les nombres impairs.",
     "weekly": false,
     "category": "numeration",
@@ -1827,7 +1827,7 @@
   },
   {
     "title": "Compléter des suites",
-    "url": "https://bleja972.github.io/suites/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-39",
     "description": "Trouver la règle et poursuivre une suite de nombres.",
     "weekly": false,
     "category": "numeration",
@@ -1852,7 +1852,7 @@
   },
   {
     "title": "La droite graduée mystère",
-    "url": "https://jeu-de-la-droite-graduee.netlify.app/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-40",
     "description": "Repérer la place d’un nombre sur une droite graduée.",
     "weekly": false,
     "category": "numeration",
@@ -1877,7 +1877,7 @@
   },
   {
     "title": "Le défi de la droite graduée",
-    "url": "https://bejewelled-kataifi-9328a8.netlify.app/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-41",
     "description": "Repérer la place d’un nombre sur une droite graduée.",
     "weekly": false,
     "category": "numeration",
@@ -1902,7 +1902,7 @@
   },
   {
     "title": "Décomposer un nombre",
-    "url": "https://bleja972.github.io/decompose/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-42",
     "description": "Relier centaines, dizaines et unités pour composer ou décomposer un nombre.",
     "weekly": false,
     "category": "numeration",
@@ -1927,7 +1927,7 @@
   },
   {
     "title": "Recomposer un nombre",
-    "url": "https://bleja972.github.io/recompose/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-43",
     "description": "Relier centaines, dizaines et unités pour composer ou décomposer un nombre.",
     "weekly": false,
     "category": "numeration",
@@ -1952,7 +1952,7 @@
   },
   {
     "title": "Suites de nombres",
-    "url": "https://bleja972.github.io/les-suites-de-nombres/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-44",
     "description": "Trouver la règle et poursuivre une suite de nombres.",
     "weekly": false,
     "category": "numeration",
@@ -1977,7 +1977,7 @@
   },
   {
     "title": "Les représentations des nombres",
-    "url": "https://bleja972.github.io/differentes_representations_d_un_nombre/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-45",
     "description": "Reconnaître différentes représentations d’un même nombre.",
     "weekly": false,
     "category": "numeration",
@@ -2002,7 +2002,7 @@
   },
   {
     "title": "Ordonner les nombres",
-    "url": "https://bleja972.github.io/ordonnerlesnombres/",
+    "url": "https://bleja972.github.io/jouer/numeration-ce1/?jeu=jeu-46",
     "description": "Ordonner des nombres du plus petit au plus grand.",
     "weekly": false,
     "category": "numeration",
