@@ -21,7 +21,9 @@
     "weekly": false,
     "new": true,
     "thumb": "/jeux/cartons-montessori-ce2/apercu.webp",
-    "imageAlt": "Quatre cartons Montessori lumineux : 4 000 + 500 + 80 + 8 devant la Terre et Saturne."
+    "imageAlt": "Quatre cartons Montessori lumineux : 4 000 + 500 + 80 + 8 devant la Terre et Saturne.",
+    "pdfUrl": "/pdf/Cartons_Montessori_CE2_systeme_solaire_exercices_et_correction.pdf",
+    "pdfLabel": "4 fiches élèves + corrigé (PDF)"
   },
   {
     "id": "cartons-montessori-ce1",
