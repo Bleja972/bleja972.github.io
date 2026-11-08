@@ -2393,7 +2393,9 @@
     ],
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-60.webp",
-    "imageAlt": "Aperçu de Calcul mental — Période 1 : s’entraîner à plusieurs procédures de calcul mental."
+    "imageAlt": "Aperçu de Calcul mental — Période 1 : s’entraîner à plusieurs procédures de calcul mental.",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "7 compétences : exercices et corrigés (PDF)"
   },
   {
     "title": "Les poissons des nombres",
