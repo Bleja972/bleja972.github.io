@@ -94,5 +94,11 @@
       "url": "/pdf/Fritz_encadrements_CE1_exercices_et_correction.pdf",
       "label": "CE1 · Encadrements à l’unité, à la dizaine et à la centaine · Exercices et corrigé"
     }
+  ],
+  "/jeux/additions-sans-echange-en-orbite/": [
+    {
+      "url": "/pdf/Additions_posees_sans_retenue_CE1_7_fiches_et_corriges.pdf",
+      "label": "CE1 · Additions sans retenue · 7 fiches et corrigés"
+    }
   ]
 }

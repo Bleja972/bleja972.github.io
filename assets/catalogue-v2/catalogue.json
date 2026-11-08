@@ -2128,7 +2128,9 @@
     ],
     "short": "Trois niveaux d’additions sans retenue dans le système solaire, avec sons et clavier intégré en paysage.",
     "thumb": "/assets/catalogue-v2/captures/additions-sans-echange-orbite.webp",
-    "imageAlt": "Addition posée 243 + 125 et calcul des unités, dans un cadre translucide devant la Terre et Saturne."
+    "imageAlt": "Addition posée 243 + 125 et calcul des unités, dans un cadre translucide devant la Terre et Saturne.",
+    "pdfUrl": "/pdf/Additions_posees_sans_retenue_CE1_7_fiches_et_corriges.pdf",
+    "pdfLabel": "Sans retenue : 7 fiches + corrigés (PDF)"
   },
   {
     "title": "Les additions en orbite — Additions avec échanges",
