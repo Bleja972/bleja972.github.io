@@ -1,0 +1,126 @@
+{
+  "fr:jeu-19": {
+    "title": "Problèmes — Période 1",
+    "url": "https://bleja972.github.io/problemes_periode1/"
+  },
+  "fr:jeu-20": {
+    "title": "Vocabulaire — Période 1",
+    "url": "https://bleja972.github.io/evaluation_voca_P1/"
+  },
+  "fr:jeu-21": {
+    "title": "Lecture et compréhension",
+    "url": "https://bleja972.github.io/lecture_comprehension_periode1/"
+  },
+  "fr:jeu-22": {
+    "title": "L’atelier des souris",
+    "url": "https://bleja972.github.io/production_d-ecrit/"
+  },
+  "fr:jeu-23": {
+    "title": "Les mots en images",
+    "url": "https://bleja972.github.io/dictee1/"
+  },
+  "fr:jeu-24": {
+    "title": "Dictées 1 à 6 — Période 1",
+    "url": "https://bleja972.github.io/dictee_periode2/"
+  },
+  "fr:jeu-25": {
+    "title": "Dictée 5 — Les mots en images",
+    "url": "https://bleja972.github.io/dictee5/"
+  },
+  "fr:jeu-26": {
+    "title": "Dictée 5 — Les phrases à compléter",
+    "url": "https://bleja972.github.io/dictee_5a/"
+  },
+  "fr:jeu-27": {
+    "title": "Grammaire — Période 1",
+    "url": "https://bleja972.github.io/grammaire_periode1/"
+  },
+  "fr:jeu-30": {
+    "title": "Ateliers problèmes CE2",
+    "url": "https://bleja972.github.io/problemes_CE2/"
+  },
+  "fr:jeu-65": {
+    "title": "Trouver le tout",
+    "url": "https://bleja972.github.io/trouver_le_tout/"
+  },
+  "fr:jeu-66": {
+    "title": "Trouver une partie",
+    "url": "https://bleja972.github.io/Trouver_une_partie/"
+  },
+  "fr:jeu-67": {
+    "title": "Ajouter, gagner, avancer",
+    "url": "https://bleja972.github.io/transformation/"
+  },
+  "fr:jeu-68": {
+    "title": "Soustraire, perdre, reculer",
+    "url": "https://bleja972.github.io/TRANSFORMATION2/"
+  },
+  "fr:jeu-69": {
+    "title": "Résoudre en deux étapes",
+    "url": "https://bleja972.github.io/problemes2/"
+  },
+  "fr:jeu-70": {
+    "title": "Comparer deux quantités",
+    "url": "https://bleja972.github.io/comparaison/"
+  },
+  "fr:jeu-72": {
+    "title": "Problèmes — Période 2",
+    "url": "https://bleja972.github.io/problemes_periode2/"
+  },
+  "fr:jeu-73": {
+    "title": "Le grain de riz — aide DYS",
+    "url": "https://bleja972.github.io/lecturegrainderizdys/"
+  },
+  "fr:jeu-74": {
+    "title": "Orthographe — Période 1",
+    "url": "https://bleja972.github.io/orthographe_periode1/"
+  },
+  "fr:jeu-75": {
+    "title": "Dictées — Période 2",
+    "url": "https://bleja972.github.io/dictees_periode2/"
+  },
+  "en:en-80": {
+    "title": "Vocabulary — Term 1",
+    "url": "/evaluation_voca_P1/"
+  },
+  "en:en-71": {
+    "title": "Reading comprehension",
+    "url": "/lecture_comprehension_periode1/"
+  },
+  "en:en-81": {
+    "title": "The Mouse Workshop",
+    "url": "/production_d-ecrit/"
+  },
+  "en:en-74": {
+    "title": "Words in pictures",
+    "url": "/dictee1/"
+  },
+  "en:en-73": {
+    "title": "Dictations 1–6 — Term 1",
+    "url": "/dictee_periode2/"
+  },
+  "en:en-77": {
+    "title": "Dictation 5 — Words in pictures",
+    "url": "/dictee5/"
+  },
+  "en:en-78": {
+    "title": "Dictation 5 — Fill in the sentences",
+    "url": "/dictee_5a/"
+  },
+  "en:en-79": {
+    "title": "Grammar — Term 1",
+    "url": "/grammaire_periode1/"
+  },
+  "en:en-72": {
+    "title": "The Grain of Rice — dyslexia support",
+    "url": "/lecturegrainderizdys/"
+  },
+  "en:en-75": {
+    "title": "Spelling — Term 1",
+    "url": "/orthographe_periode1/"
+  },
+  "en:en-76": {
+    "title": "Dictations — Term 2",
+    "url": "/dictees_periode2/"
+  }
+}

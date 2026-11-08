@@ -783,7 +783,7 @@
   {
     "id": "en-80",
     "title": "Vocabulary — Term 1",
-    "url": "/evaluation_voca_P1/",
+    "url": "/jouer/?lang=en&jeu=en-80",
     "description": "",
     "levels": [
       "CE1"
@@ -804,7 +804,7 @@
   {
     "id": "en-71",
     "title": "Reading comprehension",
-    "url": "/lecture_comprehension_periode1/",
+    "url": "/jouer/?lang=en&jeu=en-71",
     "description": "",
     "levels": [
       "CE1"
@@ -825,7 +825,7 @@
   {
     "id": "en-81",
     "title": "The Mouse Workshop",
-    "url": "/production_d-ecrit/",
+    "url": "/jouer/?lang=en&jeu=en-81",
     "description": "",
     "levels": [
       "CE1"
@@ -846,7 +846,7 @@
   {
     "id": "en-74",
     "title": "Words in pictures",
-    "url": "/dictee1/",
+    "url": "/jouer/?lang=en&jeu=en-74",
     "description": "",
     "levels": [
       "CE1"
@@ -867,7 +867,7 @@
   {
     "id": "en-73",
     "title": "Dictations 1–6 — Term 1",
-    "url": "/dictee_periode2/",
+    "url": "/jouer/?lang=en&jeu=en-73",
     "description": "",
     "levels": [
       "CE1"
@@ -888,7 +888,7 @@
   {
     "id": "en-77",
     "title": "Dictation 5 — Words in pictures",
-    "url": "/dictee5/",
+    "url": "/jouer/?lang=en&jeu=en-77",
     "description": "",
     "levels": [
       "CE1"
@@ -909,7 +909,7 @@
   {
     "id": "en-78",
     "title": "Dictation 5 — Fill in the sentences",
-    "url": "/dictee_5a/",
+    "url": "/jouer/?lang=en&jeu=en-78",
     "description": "",
     "levels": [
       "CE1"
@@ -930,7 +930,7 @@
   {
     "id": "en-79",
     "title": "Grammar — Term 1",
-    "url": "/grammaire_periode1/",
+    "url": "/jouer/?lang=en&jeu=en-79",
     "description": "",
     "levels": [
       "CE1"
@@ -1896,7 +1896,7 @@
   {
     "id": "en-72",
     "title": "The Grain of Rice — dyslexia support",
-    "url": "/lecturegrainderizdys/",
+    "url": "/jouer/?lang=en&jeu=en-72",
     "description": "",
     "levels": [
       "CE1"
@@ -1917,7 +1917,7 @@
   {
     "id": "en-75",
     "title": "Spelling — Term 1",
-    "url": "/orthographe_periode1/",
+    "url": "/jouer/?lang=en&jeu=en-75",
     "description": "",
     "levels": [
       "CE1"
@@ -1938,7 +1938,7 @@
   {
     "id": "en-76",
     "title": "Dictations — Term 2",
-    "url": "/dictees_periode2/",
+    "url": "/jouer/?lang=en&jeu=en-76",
     "description": "",
     "levels": [
       "CE1"

@@ -1329,7 +1329,7 @@
   },
   {
     "title": "Problèmes — Période 1",
-    "url": "https://bleja972.github.io/problemes_periode1/",
+    "url": "/jouer/?lang=fr&jeu=jeu-19",
     "description": "Entraîne-toi à trouver un tout ou une partie, à ajouter, soustraire et comparer.",
     "weekly": true,
     "originalGuide": "https://bleja972.github.io/jeux/problemes-periode-1/",
@@ -1355,7 +1355,7 @@
   },
   {
     "title": "Vocabulaire — Période 1",
-    "url": "https://bleja972.github.io/evaluation_voca_P1/",
+    "url": "/jouer/?lang=fr&jeu=jeu-20",
     "description": "Révise l’ordre alphabétique et les contraires.",
     "weekly": true,
     "originalGuide": "https://bleja972.github.io/jeux/vocabulaire-periode-1/",
@@ -1380,7 +1380,7 @@
   },
   {
     "title": "Lecture et compréhension",
-    "url": "https://bleja972.github.io/lecture_comprehension_periode1/",
+    "url": "/jouer/?lang=fr&jeu=jeu-21",
     "description": "Lis des textes sur les animaux, puis réponds aux questions pour vérifier ta compréhension.",
     "weekly": true,
     "originalGuide": "https://bleja972.github.io/jeux/lecture-et-comprehension/",
@@ -1405,7 +1405,7 @@
   },
   {
     "title": "L’atelier des souris",
-    "url": "https://bleja972.github.io/production_d-ecrit/",
+    "url": "/jouer/?lang=fr&jeu=jeu-22",
     "description": "Complète un texte, construis une phrase, puis relis ton travail.",
     "weekly": true,
     "originalGuide": "https://bleja972.github.io/jeux/l-atelier-des-souris/",
@@ -1430,7 +1430,7 @@
   },
   {
     "title": "Les mots en images",
-    "url": "https://bleja972.github.io/dictee1/",
+    "url": "/jouer/?lang=fr&jeu=jeu-23",
     "description": "Observe les images, écoute et écris huit mots pour t’entraîner en orthographe.",
     "weekly": true,
     "originalGuide": "https://bleja972.github.io/jeux/les-mots-en-images/",
@@ -1455,7 +1455,7 @@
   },
   {
     "title": "Dictées 1 à 6 — Période 1",
-    "url": "https://bleja972.github.io/dictee_periode2/",
+    "url": "/jouer/?lang=fr&jeu=jeu-24",
     "description": "Écoute les phrases et complète les dictées à trous avec l’aide des illustrations.",
     "weekly": true,
     "originalGuide": "https://bleja972.github.io/jeux/dictees-1-a-6-periode-1/",
@@ -1482,7 +1482,7 @@
   },
   {
     "title": "Dictée 5 — Les mots en images",
-    "url": "https://bleja972.github.io/dictee5/",
+    "url": "/jouer/?lang=fr&jeu=jeu-25",
     "description": "Apprends à écrire école, été, chez, quartier, éléphant, étoile, vélo et cahier.",
     "weekly": true,
     "category": "orthographe-dictees",
@@ -1506,7 +1506,7 @@
   },
   {
     "title": "Dictée 5 — Les phrases à compléter",
-    "url": "https://bleja972.github.io/dictee_5a/",
+    "url": "/jouer/?lang=fr&jeu=jeu-26",
     "description": "Complète les phrases sur l’été, l’école et les éléphants, puis vérifie tes réponses.",
     "weekly": true,
     "category": "orthographe-dictees",
@@ -1530,7 +1530,7 @@
   },
   {
     "title": "Grammaire — Période 1",
-    "url": "https://bleja972.github.io/grammaire_periode1/",
+    "url": "/jouer/?lang=fr&jeu=jeu-27",
     "description": "Entraîne-toi avec les missions de grammaire pour préparer l’évaluation de période 1.",
     "weekly": true,
     "originalGuide": "https://bleja972.github.io/jeux/grammaire-periode-1/",
@@ -1603,7 +1603,7 @@
   },
   {
     "title": "Ateliers problèmes CE2",
-    "url": "https://bleja972.github.io/problemes_CE2/",
+    "url": "/jouer/?lang=fr&jeu=jeu-30",
     "description": "Choisis ton atelier et résous les problèmes. Utilise les aides et les schémas en barres, puis découvre ton pourcentage de réussite.",
     "weekly": false,
     "category": "problemes-ce2",
@@ -2498,7 +2498,7 @@
   },
   {
     "title": "Trouver le tout",
-    "url": "https://bleja972.github.io/trouver_le_tout/",
+    "url": "/jouer/?lang=fr&jeu=jeu-65",
     "description": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "weekly": false,
     "category": "problemes",
@@ -2524,7 +2524,7 @@
   },
   {
     "title": "Trouver une partie",
-    "url": "https://bleja972.github.io/Trouver_une_partie/",
+    "url": "/jouer/?lang=fr&jeu=jeu-66",
     "description": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "weekly": false,
     "category": "problemes",
@@ -2550,7 +2550,7 @@
   },
   {
     "title": "Ajouter, gagner, avancer",
-    "url": "https://bleja972.github.io/transformation/",
+    "url": "/jouer/?lang=fr&jeu=jeu-67",
     "description": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "weekly": false,
     "category": "problemes",
@@ -2576,7 +2576,7 @@
   },
   {
     "title": "Soustraire, perdre, reculer",
-    "url": "https://bleja972.github.io/TRANSFORMATION2/",
+    "url": "/jouer/?lang=fr&jeu=jeu-68",
     "description": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "weekly": false,
     "category": "problemes",
@@ -2602,7 +2602,7 @@
   },
   {
     "title": "Résoudre en deux étapes",
-    "url": "https://bleja972.github.io/problemes2/",
+    "url": "/jouer/?lang=fr&jeu=jeu-69",
     "description": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "weekly": false,
     "category": "problemes",
@@ -2628,7 +2628,7 @@
   },
   {
     "title": "Comparer deux quantités",
-    "url": "https://bleja972.github.io/comparaison/",
+    "url": "/jouer/?lang=fr&jeu=jeu-70",
     "description": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "weekly": false,
     "category": "problemes",
@@ -2682,7 +2682,7 @@
   },
   {
     "title": "Problèmes — Période 2",
-    "url": "https://bleja972.github.io/problemes_periode2/",
+    "url": "/jouer/?lang=fr&jeu=jeu-72",
     "description": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "weekly": false,
     "category": "problemes",
@@ -2707,7 +2707,7 @@
   },
   {
     "title": "Le grain de riz — aide DYS",
-    "url": "https://bleja972.github.io/lecturegrainderizdys/",
+    "url": "/jouer/?lang=fr&jeu=jeu-73",
     "description": "Lire un texte et retrouver les informations utiles pour répondre.",
     "weekly": false,
     "category": "lecture-comprehension",
@@ -2732,7 +2732,7 @@
   },
   {
     "title": "Orthographe — Période 1",
-    "url": "https://bleja972.github.io/orthographe_periode1/",
+    "url": "/jouer/?lang=fr&jeu=jeu-74",
     "description": "Écouter, observer et écrire pour mémoriser l’orthographe.",
     "weekly": false,
     "category": "orthographe-dictees",
@@ -2757,7 +2757,7 @@
   },
   {
     "title": "Dictées — Période 2",
-    "url": "https://bleja972.github.io/dictees_periode2/",
+    "url": "/jouer/?lang=fr&jeu=jeu-75",
     "description": "Écouter, observer et écrire pour mémoriser l’orthographe.",
     "weekly": false,
     "category": "orthographe-dictees",
