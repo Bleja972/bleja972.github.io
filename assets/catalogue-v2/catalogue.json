@@ -147,7 +147,9 @@
     "weekly": false,
     "new": true,
     "thumb": "/jeux/crabes-du-tombolo/apercu.svg",
-    "imageAlt": "Langue de sable du tombolo entre la mer et les îlets."
+    "imageAlt": "Langue de sable du tombolo entre la mer et les îlets.",
+    "pdfUrl": "/pdf/Les_crabes_du_tombolo_CE1_pairs_impairs_exercices_et_correction.pdf",
+    "pdfLabel": "Pairs et impairs : 3 fiches élèves + corrigé (PDF)"
   },
   {
     "id": "hexaflash-ce1",

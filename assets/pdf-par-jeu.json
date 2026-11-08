@@ -82,5 +82,11 @@
       "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
       "label": "CE1 · 7 problèmes avec barres · Exercices et corrigé"
     }
+  ],
+  "/jeux/crabes-du-tombolo/": [
+    {
+      "url": "/pdf/Les_crabes_du_tombolo_CE1_pairs_impairs_exercices_et_correction.pdf",
+      "label": "CE1 · Nombres pairs et impairs · 3 fiches et corrigé"
+    }
   ]
 }
