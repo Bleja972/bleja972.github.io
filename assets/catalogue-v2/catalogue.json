@@ -1225,7 +1225,7 @@
   },
   {
     "title": "Compléments à 10 — le défi de l’araignée",
-    "url": "https://bleja972.github.io/complements1_a_10/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-15",
     "description": "Trouve les compléments à 10 et fais avancer l’araignée sur sa toile.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/capture-complements1_a_10.webp",
@@ -1252,7 +1252,7 @@
   },
   {
     "title": "Compléments à 100 — le défi de l’araignée",
-    "url": "https://bleja972.github.io/complements_a_100/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-16",
     "description": "Complète 100 avec des dizaines entières.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/capture-complements_a_100.webp",
@@ -1278,7 +1278,7 @@
   },
   {
     "title": "Compléments à 1 000 — le défi de l’araignée",
-    "url": "https://bleja972.github.io/complements_a_1000/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-17",
     "description": "Complète 1 000 avec des centaines entières.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/capture-complements_a_1000.webp",
@@ -2027,7 +2027,7 @@
   },
   {
     "title": "Chronomaths CE1 — 20 défis",
-    "url": "https://bleja972.github.io/CHRONOMATHS_CE1/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-47",
     "description": "Entraîne-toi au calcul mental avec 20 Chronomaths de 15 calculs. Le chronomètre démarre au premier chiffre saisi. Découvre ton score et ton pourcentage de réussite.",
     "weekly": false,
     "category": "calculs",
@@ -2052,7 +2052,7 @@
   },
   {
     "title": "Soustractions par cassage",
-    "url": "https://bleja972.github.io/soustraction_cassage/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-48",
     "description": "Casse une dizaine ou une centaine, barre le matériel de numération et complète les soustractions posées. Huit opérations pour s’entraîner.",
     "weekly": false,
     "category": "calculs",
@@ -2077,7 +2077,7 @@
   },
   {
     "title": "Soustractions avec le matériel de numération",
-    "url": "https://bleja972.github.io/Soustractions_sans_echange2/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-49",
     "description": "Utilise les cubes rouges, les barres jaunes et les plaques vertes pour soustraire sans échange. Barre le matériel et réussis 8 opérations aléatoires.",
     "weekly": false,
     "category": "calculs",
@@ -2154,7 +2154,7 @@
   },
   {
     "title": "Additions avec échanges — Jetons 3D",
-    "url": "https://bleja972.github.io/additions_echanges2/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-52",
     "description": "Effectue huit additions avec des jetons 3D. Calcule les unités et les dizaines en ligne, puis échange 10 unités contre 1 dizaine ou 10 dizaines contre 1 centaine.",
     "weekly": false,
     "category": "calculs",
@@ -2179,7 +2179,7 @@
   },
   {
     "title": "Additions avec passage par 10",
-    "url": "https://bleja972.github.io/passage_par_10/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-53",
     "description": "Utiliser des résultats connus pour calculer une addition mentalement.",
     "weekly": false,
     "category": "calculs",
@@ -2233,7 +2233,7 @@
   },
   {
     "title": "Les doubles",
-    "url": "https://bleja972.github.io/doubles2/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-55",
     "description": "Utiliser les doubles pour calculer plus facilement.",
     "weekly": false,
     "category": "calculs",
@@ -2260,7 +2260,7 @@
   },
   {
     "title": "Les presque doubles",
-    "url": "https://bleja972.github.io/PRESQUE8DOUBLES/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-56",
     "description": "Utiliser les doubles pour calculer plus facilement.",
     "weekly": false,
     "category": "calculs",
@@ -2287,7 +2287,7 @@
   },
   {
     "title": "Les compléments à 10",
-    "url": "https://bleja972.github.io/complements_a_10/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-57",
     "description": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "weekly": false,
     "category": "calculs",
@@ -2340,7 +2340,7 @@
   },
   {
     "title": "Les petites additions",
-    "url": "https://bleja972.github.io/petites_additions/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-59",
     "description": "Utiliser des résultats connus pour calculer une addition mentalement.",
     "weekly": false,
     "category": "calculs",
@@ -2367,7 +2367,7 @@
   },
   {
     "title": "Calcul mental — Période 1",
-    "url": "https://bleja972.github.io/calcul_mental_P1_/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-60",
     "description": "S’entraîner à plusieurs procédures de calcul mental.",
     "weekly": false,
     "category": "calculs",
@@ -2393,7 +2393,7 @@
   },
   {
     "title": "Les poissons des nombres",
-    "url": "https://bleja972.github.io/chainesdecalculspoissons/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-61",
     "description": "S’entraîner à plusieurs procédures de calcul mental.",
     "weekly": false,
     "category": "calculs",
@@ -2419,7 +2419,7 @@
   },
   {
     "title": "La course des calculs",
-    "url": "https://bleja972.github.io/HJDZGHJ/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-62",
     "description": "S’entraîner à plusieurs procédures de calcul mental.",
     "weekly": false,
     "category": "calculs",
@@ -2446,7 +2446,7 @@
   },
   {
     "title": "Compléments à 10, 100 et 1 000",
-    "url": "https://bleja972.github.io/complements/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-63",
     "description": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "weekly": false,
     "category": "calculs",
@@ -2472,7 +2472,7 @@
   },
   {
     "title": "Calcul mental — Période 2",
-    "url": "https://bleja972.github.io/calculmentalP2/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-64",
     "description": "S’entraîner à plusieurs procédures de calcul mental.",
     "weekly": false,
     "category": "calculs",

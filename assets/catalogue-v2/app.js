@@ -47,6 +47,12 @@ const horizontalGameLinks={"https://bleja972.github.io/evaluation_periode1_numer
 document.querySelectorAll('a[href]').forEach(link=>{if(horizontalGameLinks[link.href])link.href=horizontalGameLinks[link.href];});
 document.querySelectorAll('[data-game-url]').forEach(el=>{if(horizontalGameLinks[el.dataset.gameUrl])el.dataset.gameUrl=horizontalGameLinks[el.dataset.gameUrl];});
 
+
+// Cadre horizontal pour les jeux de calcul CE1 hébergés séparément.
+const calcHorizontalLinks={"https://bleja972.github.io/complements1_a_10/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-15","https://bleja972.github.io/complements_a_100/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-16","https://bleja972.github.io/complements_a_1000/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-17","https://bleja972.github.io/CHRONOMATHS_CE1/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-47","https://bleja972.github.io/soustraction_cassage/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-48","https://bleja972.github.io/Soustractions_sans_echange2/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-49","https://bleja972.github.io/additions_echanges2/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-52","https://bleja972.github.io/passage_par_10/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-53","https://bleja972.github.io/doubles2/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-55","https://bleja972.github.io/PRESQUE8DOUBLES/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-56","https://bleja972.github.io/complements_a_10/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-57","https://bleja972.github.io/petites_additions/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-59","https://bleja972.github.io/calcul_mental_P1_/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-60","https://bleja972.github.io/chainesdecalculspoissons/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-61","https://bleja972.github.io/HJDZGHJ/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-62","https://bleja972.github.io/complements/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-63","https://bleja972.github.io/calculmentalP2/":"https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-64"};
+document.querySelectorAll('a[href]').forEach(link=>{if(calcHorizontalLinks[link.href])link.href=calcHorizontalLinks[link.href];});
+document.querySelectorAll('[data-game-url]').forEach(el=>{if(calcHorizontalLinks[el.dataset.gameUrl])el.dataset.gameUrl=calcHorizontalLinks[el.dataset.gameUrl];});
+
 if(document.body.dataset.page!=='catalog')return;
 const initial={niveau:document.body.dataset.level||'CE1',matiere:document.body.dataset.subject||'toutes',domaine:document.body.dataset.group||'tous',competence:'toutes',q:'',collection:'tous',tri:'selection'};
 const validCollections=['tous','nouveautes','semaine','favoris'];
@@ -158,7 +164,7 @@ function updateSidebarCounts(){
   const description=label+' : '+count+' jeu'+(count===1?'':'x');link.setAttribute('aria-label',description);link.title=description;
  });
 }
-fetch('/assets/catalogue-v2/catalogue.json?v=horizontal-numeration-20261107').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
+fetch('/assets/catalogue-v2/catalogue.json?v=horizontal-calcul-20261107').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
  toast('Les filtres sont indisponibles. Tous les liens vers les jeux restent accessibles.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();
