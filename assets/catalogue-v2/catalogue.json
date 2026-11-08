@@ -345,7 +345,9 @@
     "objective": "Trouver les deux bornes d’un nombre à l’unité, à la dizaine ou à la centaine.",
     "short": "Trois niveaux pour encadrer les nombres de 71 à 999 sur la planète de Fritz.",
     "thumb": "/assets/fritz-encadrements/apercu.webp",
-    "imageAlt": "Illustration de Fritz détouré sur sa planète extraterrestre."
+    "imageAlt": "Illustration de Fritz détouré sur sa planète extraterrestre.",
+    "pdfUrl": "/pdf/Fritz_encadrements_CE1_exercices_et_correction.pdf",
+    "pdfLabel": "Encadrements : 30 exercices + corrigé (PDF)"
   },
   {
     "id": "jeu-96",

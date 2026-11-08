@@ -88,5 +88,11 @@
       "url": "/pdf/Les_crabes_du_tombolo_CE1_pairs_impairs_exercices_et_correction.pdf",
       "label": "CE1 · Nombres pairs et impairs · 3 fiches et corrigé"
     }
+  ],
+  "/jeux/fritz-encadrements-ce1/": [
+    {
+      "url": "/pdf/Fritz_encadrements_CE1_exercices_et_correction.pdf",
+      "label": "CE1 · Encadrements à l’unité, à la dizaine et à la centaine · Exercices et corrigé"
+    }
   ]
 }
