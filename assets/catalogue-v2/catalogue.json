@@ -494,7 +494,7 @@
   {
     "id": "jeu-90",
     "title": "Chronomaths galactiques CE2",
-    "url": "https://bleja972.github.io/CHRONOMATHS_CE22/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce2/?jeu=jeu-90",
     "path": "/jeux/chronomaths-galactiques-ce2/",
     "description": "Résous 20 calculs en 3 minutes : les bulles ratées reviennent dans cette aventure spatiale CE2.",
     "weekly": false,
@@ -836,7 +836,7 @@
   },
   {
     "title": "Calcul mental CE2 — Calcul Pop !",
-    "url": "https://bleja972.github.io/calcul_mental_ce2/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce2/?jeu=jeu-76",
     "description": "30 missions pour s’entraîner aux additions, soustractions, tables de multiplication, doubles et moitiés. Choisis 10 calculs à ton rythme ou 15 calculs en 3 minutes, avec des astuces et des corrections, sans ceintures.",
     "weekly": false,
     "image": "https://bleja972.github.io/assets/catalogue-v2/captures/jeu-76.webp",
@@ -1579,7 +1579,7 @@
   },
   {
     "title": "Chronomaths CE2 — 20 défis",
-    "url": "https://bleja972.github.io/CHRONOMATHS_CE2/",
+    "url": "https://bleja972.github.io/jouer/calcul-ce2/?jeu=jeu-29",
     "description": "Entraîne-toi avec 20 Chronomaths de 20 calculs en 3 minutes. Le chronomètre démarre au premier chiffre saisi et le score ainsi que le pourcentage s’affichent à la fin.",
     "weekly": false,
     "category": "calcul-mental-ce2",

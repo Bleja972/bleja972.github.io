@@ -53,6 +53,12 @@ const calcHorizontalLinks={"https://bleja972.github.io/complements1_a_10/":"http
 document.querySelectorAll('a[href]').forEach(link=>{if(calcHorizontalLinks[link.href])link.href=calcHorizontalLinks[link.href];});
 document.querySelectorAll('[data-game-url]').forEach(el=>{if(calcHorizontalLinks[el.dataset.gameUrl])el.dataset.gameUrl=calcHorizontalLinks[el.dataset.gameUrl];});
 
+
+// Accès paysage aux jeux de calcul propres au CE2.
+const ce2HorizontalLinks={"https://bleja972.github.io/CHRONOMATHS_CE22/":"https://bleja972.github.io/jouer/calcul-ce2/?jeu=jeu-90","https://bleja972.github.io/calcul_mental_ce2/":"https://bleja972.github.io/jouer/calcul-ce2/?jeu=jeu-76","https://bleja972.github.io/CHRONOMATHS_CE2/":"https://bleja972.github.io/jouer/calcul-ce2/?jeu=jeu-29"};
+document.querySelectorAll('a[href]').forEach(link=>{if(ce2HorizontalLinks[link.href])link.href=ce2HorizontalLinks[link.href];});
+document.querySelectorAll('[data-game-url]').forEach(el=>{if(ce2HorizontalLinks[el.dataset.gameUrl])el.dataset.gameUrl=ce2HorizontalLinks[el.dataset.gameUrl];});
+
 if(document.body.dataset.page!=='catalog')return;
 const initial={niveau:document.body.dataset.level||'CE1',matiere:document.body.dataset.subject||'toutes',domaine:document.body.dataset.group||'tous',competence:'toutes',q:'',collection:'tous',tri:'selection'};
 const validCollections=['tous','nouveautes','semaine','favoris'];
@@ -164,7 +170,7 @@ function updateSidebarCounts(){
   const description=label+' : '+count+' jeu'+(count===1?'':'x');link.setAttribute('aria-label',description);link.title=description;
  });
 }
-fetch('/assets/catalogue-v2/catalogue.json?v=horizontal-calcul-20261107').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
+fetch('/assets/catalogue-v2/catalogue.json?v=horizontal-cp-ce2-20261108').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
  toast('Les filtres sont indisponibles. Tous les liens vers les jeux restent accessibles.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();
