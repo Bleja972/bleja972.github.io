@@ -15,8 +15,9 @@
   --red: #ffc1bf;
   --focus: #fff1aa;
   --digits: "Orbite Segment", "Inter", system-ui, sans-serif;
-  --digit-light: #c1faff;
-  --digit-glow: #43e8ff85;
+  --digit-spacing: .09em;
+  --digit-light: #fff47a;
+  --digit-glow: #ffdb329e;
   font-family: "Atkinson Hyperlegible Next", "Inter", system-ui, sans-serif;
 }
 
@@ -148,10 +149,11 @@ h1 span { color: #bdeaff; }
   margin-top: 2px;
   font: 700 clamp(1.25rem, 3.4vw, 1.72rem)/1.15 var(--digits);
   font-variant-numeric: tabular-nums;
+  letter-spacing: var(--digit-spacing);
   text-shadow: 0 0 .32em var(--digit-glow);
 }
-.timer.warn { color: #ffe0a1; --digit-glow: #ffb856a0; }
-.timer.danger { color: var(--red); --digit-glow: #ff6f769e; }
+.box:has(.timer.warn) { border-color: #ffb856; background: #352b20; }
+.box:has(.timer.danger) { border-color: #ff858a; background: #40222c; }
 .progress { height: 6px; margin: 0 14px 12px; border-radius: 12px; background: #8bbfe64a; overflow: hidden; }
 .progress > div { width: 0; height: 100%; background: linear-gradient(90deg, #5ce8ff, #9bf3bb); transition: width .2s ease; }
 .content { padding: 0 clamp(12px, 3vw, 24px) 20px; }
@@ -175,10 +177,11 @@ h1 span { color: #bdeaff; }
   background: #0c2336d8;
   color: var(--digit-light);
   font: 700 clamp(1.15rem, 3vw, 1.55rem)/1.1 var(--digits);
+  letter-spacing: var(--digit-spacing);
   text-shadow: 0 0 .3em var(--digit-glow);
 }
 .calc input {
-  width: clamp(58px, 10vw, 78px);
+  width: clamp(70px, 13vw, 85px);
   min-height: 42px;
   padding: 4px;
   border: 2px solid #87bcd7;
@@ -186,12 +189,13 @@ h1 span { color: #bdeaff; }
   background: #061725;
   color: var(--digit-light);
   caret-color: var(--digit-light);
+  letter-spacing: var(--digit-spacing);
   text-align: center;
   text-shadow: 0 0 .3em var(--digit-glow);
 }
 .calc input:disabled { opacity: 1; }
-.calc input.good { border-color: #46c793; background: #092e26; color: #a9ffdc; --digit-glow: #59ebaa90; }
-.calc input.bad { border-color: #ec7a72; background: #381c28; color: #ffd0ce; --digit-glow: #ff717b90; }
+.calc input.good { border-color: #46c793; background: #092e26; }
+.calc input.bad { border-color: #ec7a72; background: #381c28; }
 .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
 .actions button, .end button {
   min-height: 43px;
