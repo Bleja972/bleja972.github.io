@@ -6,6 +6,7 @@
 
   const pagePath = url => new URL(url).pathname.replace(/index\.html$/, '').replace(/\/?$/, '/');
   const path = pagePath(location.href);
+  const trexNumberLine = /\/(?:droite-numerique-t-rex-ce1|t-rex-number-lines-ce1)\/$/.test(path);
   const launchers = new Set(['/jouer/calcul-ce1/', '/jouer/calcul-ce2/', '/jouer/numeration-ce1/']);
 
   // These games generate a plain text input for their numeric questions.
@@ -46,6 +47,7 @@
     /en/games/popeye-number-line/
     /jeux/popeye-ligne-graduee/
   `.trim().split(/\s+/));
+  const numberLine = trexNumberLine || spacedNumberFields.has(path);
   const numericGames = new Set(`
     /activites/dizaines-entieres/
     /activites/soustraire-a-10/
@@ -224,6 +226,7 @@
   const modifiedFields = new Map();
   let activeField;
   let updatePending = false;
+  let selectionVersion = 0;
 
   const host = document.createElement('bleja-number-pad');
   host.hidden = true;
@@ -231,26 +234,25 @@
   const shadow = host.attachShadow({mode: 'open'});
   shadow.innerHTML = `
     <style>
-      :host { all: initial; position: fixed; z-index: 2147483001; bottom: max(8px, env(safe-area-inset-bottom));
-        left: 50%; transform: translateX(-50%); width: min(320px, calc(100% - 20px)); }
+      :host { all: initial; box-sizing: border-box; display: block; flex: 0 0 auto;
+        grid-column: 1 / -1; width: min(100%, 300px); margin: 6px auto 8px; }
       :host([hidden]) { display: none !important; }
-      :host([data-top]) { top: max(8px, env(safe-area-inset-top)); bottom: auto; }
-      .pad { box-sizing: border-box; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 5px; padding: 7px; background: #10243a; border: 1px solid #8ea9bf;
-        border-radius: 14px; box-shadow: 0 5px 20px #08152b65; }
-      button { appearance: none; min-width: 0; min-height: 44px; padding: 0; border: 1px solid #6ba6cd;
-        border-radius: 9px; background: #f1f8ff; color: #142b47; font: 700 22px/1 system-ui, sans-serif;
-        touch-action: manipulation; cursor: pointer; }
-      button[data-action] { background: #d8edff; }
-      button:active { background: #89cef4; }
-      button:focus-visible { outline: 3px solid #ffcf59; outline-offset: -3px; }
-      .actions { grid-column: 1 / -1; display: flex; gap: 5px; }
-      .actions button { flex: 1; color: #fff; background: #183b57; font-size: 15px; }
-      .actions button[data-action="submit"] { background: #176451; }
+      .pad { box-sizing: border-box; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 4px; padding: 5px; background: rgba(19, 45, 68, .30); border: 1px solid #8ea9bf9c;
+        border-radius: 10px; }
+      button { appearance: none; min-width: 0; min-height: 34px; padding: 0 2px; border: 1px solid #6ba6cd85;
+        border-radius: 6px; background: rgba(242, 249, 255, .86); color: #102b42;
+        font: 700 17px/1 system-ui, sans-serif; touch-action: manipulation; cursor: pointer; }
+      button[data-action] { background: rgba(217, 239, 255, .86); }
+      button:active { background: rgba(138, 205, 243, .95); }
+      button:focus-visible { outline: 2px solid #234d72; outline-offset: -2px; }
+      .actions { grid-column: 1 / -1; display: flex; gap: 4px; }
+      .actions button { flex: 1; min-height: 28px; font-size: 12px; }
+      .actions button[data-action="submit"] { background: rgba(210, 244, 227, .88); }
       .actions button[hidden] { display: none; }
-      @media (orientation: landscape), (max-height: 480px) {
-        :host { width: min(520px, calc(100% - 20px)); }
-        .pad { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+      @media (orientation: landscape) and (min-width: 620px) {
+        :host { width: min(100%, 490px); }
+        .pad { grid-template-columns: repeat(12, minmax(0, 1fr)); }
       }
     </style>
     <div class="pad" role="group"></div>`;
@@ -300,32 +302,67 @@
     activeField = null;
   }
 
-  function positionPad() {
+  // Leave the game and answer controls in their normal flow. The keypad
+  // gets a new row below the answer block, including on number-line games.
+  function answerBlock(field) {
+    const container = field.closest('section, article, details, #gamePage, #game, main');
+    let block = field.closest('form, [role="form"], .dock, .answer-entry, .response-form, .answerWrap') || field;
+    if (block === field && container) {
+      while (block.parentElement !== container) block = block.parentElement;
+    }
+    while (block.parentElement !== document.body) {
+      const parent = block.parentElement;
+      const layout = getComputedStyle(parent);
+      const inline = ['LABEL', 'SPAN', 'P'].includes(parent.tagName);
+      const singleRow = layout.display.includes('flex') && layout.flexWrap === 'nowrap'
+        && layout.flexDirection.startsWith('row');
+      if (!inline && !singleRow) break;
+      block = parent;
+    }
+    return block;
+  }
+
+  function updatePad() {
     if (!activeField) return;
     if (!available(activeField)) return dismiss();
     submitKey.hidden = !formSubmit(activeField);
-    const viewportHeight = document.documentElement.clientHeight;
-    const rect = activeField.getBoundingClientRect();
-    const spaceAbove = rect.top;
-    const spaceBelow = viewportHeight - rect.bottom;
-    host.toggleAttribute('data-top', spaceAbove > spaceBelow);
   }
 
-  function updatePosition() {
+  function scheduleUpdate() {
     if (updatePending || !activeField) return;
     updatePending = true;
     requestAnimationFrame(() => {
       updatePending = false;
-      positionPad();
+      updatePad();
     });
   }
 
-  function show(field) {
+  function show(field, reveal = false) {
     prepare(field);
     if (!device.matches || !isNumberField(field) || !available(field)) return;
+    selectionVersion += 1;
     activeField = field;
+    const block = answerBlock(field);
+    if (block.nextElementSibling !== host) block.after(host);
     host.hidden = false;
-    positionPad();
+    updatePad();
+
+    if (reveal) requestAnimationFrame(() => {
+      if (activeField !== field || host.hidden) return;
+      host.scrollIntoView({block: 'nearest', inline: 'nearest'});
+      if (!numberLine) return;
+
+      // If the exercise and keypad fit together, keep the whole line in view.
+      const axis = document.getElementById('axis');
+      if (!axis) return;
+      const lineTop = axis.getBoundingClientRect().top;
+      const padBottom = host.getBoundingClientRect().bottom;
+      const toolbarBottom = document.querySelector('.bleja-landscape-tools')?.getBoundingClientRect().bottom || 0;
+      const top = Math.max(0, toolbarBottom) + 4;
+      if (lineTop < top && padBottom - lineTop <= document.documentElement.clientHeight - top) {
+        scrollBy(0, lineTop - top);
+      }
+    });
   }
 
   function editField(field, digit, action) {
@@ -342,7 +379,7 @@
       field.setSelectionRange(caret, caret);
     }
     field.dispatchEvent(new Event('input', {bubbles: true}));
-    updatePosition();
+    scheduleUpdate();
   }
 
   // Keep the input focused while tapping buttons, including in games that
@@ -364,21 +401,25 @@
 
   document.addEventListener('focusin', event => {
     if (isNumberField(event.target)) show(event.target);
-    else if (!event.composedPath().includes(host)) dismiss();
   }, true);
   document.addEventListener('pointerdown', event => {
     if (isNumberField(event.target)) prepare(event.target);
-    else if (!event.composedPath().includes(host)) dismiss();
   }, true);
   document.addEventListener('click', event => {
-    if (isNumberField(event.target)) show(event.target);
-    updatePosition();
+    if (isNumberField(event.target)) {
+      show(event.target, true);
+    } else if (!event.composedPath().includes(host) && activeField) {
+      const version = selectionVersion;
+      // Let the original button handle the click before removing the row.
+      requestAnimationFrame(() => {
+        if (version === selectionVersion) dismiss();
+      });
+    }
+    scheduleUpdate();
   }, true);
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && activeField) dismiss();
   });
-  document.addEventListener('scroll', updatePosition, {capture: true, passive: true});
-  addEventListener('resize', updatePosition, {passive: true});
 
   const observer = new MutationObserver(changes => {
     for (const change of changes) {
@@ -392,7 +433,7 @@
     for (const field of modifiedFields.keys()) {
       if (!field.isConnected) modifiedFields.delete(field);
     }
-    updatePosition();
+    scheduleUpdate();
   });
 
   function adaptToDevice() {
@@ -415,7 +456,20 @@
   }
 
   function init() {
-    document.body.append(host);
+    if (trexNumberLine) {
+      const style = document.createElement('style');
+      style.textContent = `
+        @media (orientation: landscape) and (max-height: 500px) {
+          #game .axis { padding-bottom: 4px; }
+          #game .axis svg { max-height: 28vh; }
+          #game .response-form { margin: 8px auto 4px; }
+          #game .response-form label { font-size: 16px; margin-bottom: 4px; }
+          #game .response-row input { font-size: 24px; padding: 5px 8px; }
+          #game .response-row button { font-size: 16px; padding: 8px 12px; }
+        }
+      `;
+      document.head.append(style);
+    }
     adaptToDevice();
     device.addEventListener('change', adaptToDevice);
   }
