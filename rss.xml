@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Jeux éducatifs du CP au CE2</title>
+    <link>https://bleja972.github.io/</link>
+    <description>Les nouveaux jeux éducatifs, les fiches à imprimer et les mises à jour du blog.</description>
+    <language>fr</language>
+    <atom:link href="https://bleja972.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Calcul mental CE1 – Période 1 : la correction immédiate</title>
+      <link>https://bleja972.github.io/fiches/calcul-mental-periode-1/</link>
+      <description>Les 15 calculs sont affichés sur une seule page. Le bouton Vérifier signale chaque réponse et affiche le score sur 15.</description>
+      <pubDate>Wed, 11 Nov 2026 13:15:42 -0400</pubDate>
+      <guid isPermaLink="false">urn:bleja972:actualite:calcul-mental-p1-correction</guid>
+    </item>
+    <item>
+      <title>Calcul mental CE1 – Période 2 : le laboratoire orbital</title>
+      <link>https://bleja972.github.io/fiches/calcul-mental-periode-2/</link>
+      <description>Entraînez-vous au calcul mental dans le laboratoire orbital, avec un chronomètre et un clavier numérique sur téléphone.</description>
+      <pubDate>Wed, 11 Nov 2026 11:48:17 -0400</pubDate>
+      <guid isPermaLink="false">urn:bleja972:actualite:calcul-mental-p2-orbite</guid>
+    </item>
+    <item>
+      <title>Lecture CE1 : quatre textes sur les animaux</title>
+      <link>https://bleja972.github.io/fiches/lecture-et-comprehension/</link>
+      <description>Des textes, des exercices de compréhension et leurs corrigés à télécharger et à imprimer.</description>
+      <pubDate>Wed, 11 Nov 2026 10:48:59 -0400</pubDate>
+      <guid isPermaLink="false">urn:bleja972:actualite:lecture-ce1-animaux</guid>
+    </item>
+  </channel>
+</rss>

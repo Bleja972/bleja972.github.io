@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suivre le blog | Jeux éducatifs du CP au CE2</title>
+  <meta name="description" content="Abonnez-vous au flux RSS des Jeux éducatifs du CP au CE2 pour suivre les nouveaux jeux, les fiches et les mises à jour.">
+  <link rel="canonical" href="https://bleja972.github.io/suivre/">
+  <link rel="alternate" type="application/rss+xml" title="Jeux éducatifs du CP au CE2" href="/rss.xml">
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .subscribe { max-width: 660px; margin: clamp(24px, 6vw, 64px) auto; }
+    .subscribe h1 { margin-top: 0; }
+    .feed-address { display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; }
+    .feed-address input { flex: 1 1 250px; min-width: 0; border: 1px solid #7c9b8c; border-radius: 8px; padding: 10px; font: inherit; }
+    .feed-address button { border: 0; cursor: pointer; }
+    .feed-address button[hidden] { display: none; }
+    #copy-status { min-height: 1.5em; margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <header class="top"><a class="brand" href="/">Jeux éducatifs du CP au CE2</a></header>
+  <main class="subscribe" id="contenu">
+    <h1>Suivre le blog</h1>
+    <p>Retrouvez les nouveaux jeux, les fiches à imprimer et les mises à jour dans votre lecteur RSS.</p>
+    <ol>
+      <li>Copiez l’adresse du flux ci-dessous.</li>
+      <li>Dans votre lecteur RSS, choisissez « Ajouter un flux » et collez l’adresse.</li>
+    </ol>
+    <p><label for="feed-url"><strong>Adresse du flux RSS</strong></label></p>
+    <div class="feed-address">
+      <input id="feed-url" type="url" value="https://bleja972.github.io/rss.xml" readonly>
+      <button id="copy-feed" class="button" type="button" hidden>Copier l’adresse</button>
+    </div>
+    <p id="copy-status" role="status"></p>
+    <p><a href="/rss.xml" type="application/rss+xml">Ouvrir le flux RSS</a></p>
+  </main>
+  <script>
+    const copyButton = document.getElementById('copy-feed');
+    const feedAddress = document.getElementById('feed-url');
+    const copyStatus = document.getElementById('copy-status');
+    if (navigator.clipboard?.writeText) {
+      copyButton.hidden = false;
+      copyButton.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(feedAddress.value);
+          copyStatus.textContent = 'Adresse copiée.';
+        } catch {
+          feedAddress.select();
+          copyStatus.textContent = 'L’adresse est sélectionnée. Vous pouvez la copier.';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
