@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Orbite Segment";
+  src: url("./orbite-segments.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+  unicode-range: U+0020, U+0030-003A;
+}
+
 :root {
   color-scheme: dark;
   --ink: #f1faff;
@@ -6,6 +14,9 @@
   --green: #83f0bf;
   --red: #ffc1bf;
   --focus: #fff1aa;
+  --digits: "Orbite Segment", "Inter", system-ui, sans-serif;
+  --digit-light: #c1faff;
+  --digit-glow: #43e8ff85;
   font-family: "Atkinson Hyperlegible Next", "Inter", system-ui, sans-serif;
 }
 
@@ -133,13 +144,14 @@ h1 span { color: #bdeaff; }
 }
 .box strong {
   display: block;
-  color: var(--ink);
+  color: var(--digit-light);
   margin-top: 2px;
-  font-size: clamp(1.12rem, 3.3vw, 1.55rem);
+  font: 700 clamp(1.25rem, 3.4vw, 1.72rem)/1.15 var(--digits);
   font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 .32em var(--digit-glow);
 }
-.timer.warn { color: #ffe0a1; }
-.timer.danger { color: var(--red); }
+.timer.warn { color: #ffe0a1; --digit-glow: #ffb856a0; }
+.timer.danger { color: var(--red); --digit-glow: #ff6f769e; }
 .progress { height: 6px; margin: 0 14px 12px; border-radius: 12px; background: #8bbfe64a; overflow: hidden; }
 .progress > div { width: 0; height: 100%; background: linear-gradient(90deg, #5ce8ff, #9bf3bb); transition: width .2s ease; }
 .content { padding: 0 clamp(12px, 3vw, 24px) 20px; }
@@ -161,9 +173,9 @@ h1 span { color: #bdeaff; }
   border: 1px solid var(--edge);
   border-radius: 11px;
   background: #0c2336d8;
-  color: var(--ink);
-  font-size: clamp(1.08rem, 3vw, 1.42rem);
-  font-weight: 800;
+  color: var(--digit-light);
+  font: 700 clamp(1.15rem, 3vw, 1.55rem)/1.1 var(--digits);
+  text-shadow: 0 0 .3em var(--digit-glow);
 }
 .calc input {
   width: clamp(58px, 10vw, 78px);
@@ -171,14 +183,15 @@ h1 span { color: #bdeaff; }
   padding: 4px;
   border: 2px solid #87bcd7;
   border-radius: 8px;
-  background: #f5fbff;
-  color: #142f43;
+  background: #061725;
+  color: var(--digit-light);
+  caret-color: var(--digit-light);
   text-align: center;
-  font-weight: 850;
+  text-shadow: 0 0 .3em var(--digit-glow);
 }
 .calc input:disabled { opacity: 1; }
-.calc input.good { border-color: #46c793; background: #dffbee; }
-.calc input.bad { border-color: #ec7a72; background: #fff0ee; }
+.calc input.good { border-color: #46c793; background: #092e26; color: #a9ffdc; --digit-glow: #59ebaa90; }
+.calc input.bad { border-color: #ec7a72; background: #381c28; color: #ffd0ce; --digit-glow: #ff717b90; }
 .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
 .actions button, .end button {
   min-height: 43px;
