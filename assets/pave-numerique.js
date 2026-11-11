@@ -225,12 +225,14 @@
   const [title, clear, backspace, close, check] = labels[language] || labels.fr;
   const modifiedFields = new Map();
   let activeField;
+  let pressedField = null;
   let updatePending = false;
   let selectionVersion = 0;
 
   const host = document.createElement('bleja-number-pad');
   host.hidden = true;
   host.translate = false;
+  if (loader.dataset.numericPadTheme) host.dataset.theme = loader.dataset.numericPadTheme;
   const shadow = host.attachShadow({mode: 'open'});
   shadow.innerHTML = `
     <style>
@@ -250,6 +252,12 @@
       .actions button { flex: 1; min-height: 28px; font-size: 12px; }
       .actions button[data-action="submit"] { background: rgba(210, 244, 227, .88); }
       .actions button[hidden] { display: none; }
+      :host([data-theme="orbite"]) .pad { background: #061426de; border-color: #547396; }
+      :host([data-theme="orbite"]) button {
+        color: #fff47a; background: #081a35; border-color: #4d6585;
+      }
+      :host([data-theme="orbite"]) button:active { background: #263f68; }
+      :host([data-theme="orbite"]) button:focus-visible { outline-color: #fff47a; }
       @media (orientation: landscape) and (min-width: 620px) {
         :host { width: min(100%, 490px); }
         .pad { grid-template-columns: repeat(12, minmax(0, 1fr)); }
@@ -400,12 +408,17 @@
   });
 
   document.addEventListener('focusin', event => {
-    if (isNumberField(event.target)) show(event.target);
+    // Moving the keypad while a touch is still in progress moves the field,
+    // so the browser can deliver its click to a different part of the grid.
+    if (event.target !== pressedField && isNumberField(event.target)) show(event.target);
   }, true);
   document.addEventListener('pointerdown', event => {
-    if (isNumberField(event.target)) prepare(event.target);
+    pressedField = isNumberField(event.target) ? event.target : null;
+    if (pressedField) prepare(pressedField);
   }, true);
+  document.addEventListener('pointercancel', () => { pressedField = null; }, true);
   document.addEventListener('click', event => {
+    pressedField = null;
     if (isNumberField(event.target)) {
       show(event.target, true);
     } else if (!event.composedPath().includes(host) && activeField) {
@@ -418,8 +431,9 @@
     scheduleUpdate();
   }, true);
   document.addEventListener('keydown', event => {
+    pressedField = null;
     if (event.key === 'Escape' && activeField) dismiss();
-  });
+  }, true);
 
   const observer = new MutationObserver(changes => {
     for (const change of changes) {
