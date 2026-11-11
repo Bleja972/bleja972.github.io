@@ -4,7 +4,7 @@ if(window.__blejaLandscapeLoaded)return;
 window.__blejaLandscapeLoaded=true;
 const landscapeAsset = new URL(document.currentScript.src);
 // Game pages and the older math launchers share this entry point.
-if (matchMedia('(pointer: coarse)').matches && /^\/(?:jeux|activites|jouer|(?:en|es|zh)\/games)\//.test(location.pathname)) {
+if (!document.querySelector('script[data-numeric-pad]') && matchMedia('(pointer: coarse)').matches && /^\/(?:jeux|activites|jouer|(?:en|es|zh)\/games)\//.test(location.pathname)) {
  const keypad = document.createElement('script');
  keypad.src = new URL('pave-numerique.js?v=20261111-inline', landscapeAsset).href;
  keypad.dataset.numericPad = '';
