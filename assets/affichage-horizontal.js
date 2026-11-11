@@ -2,6 +2,15 @@
 'use strict';
 if(window.__blejaLandscapeLoaded)return;
 window.__blejaLandscapeLoaded=true;
+const landscapeAsset = new URL(document.currentScript.src);
+// Game pages and the older math launchers share this entry point.
+if (matchMedia('(pointer: coarse)').matches && /^\/(?:jeux|activites|jouer|(?:en|es|zh)\/games)\//.test(location.pathname)) {
+ const keypad = document.createElement('script');
+ keypad.src = new URL('pave-numerique.js?v=20261111', landscapeAsset).href;
+ keypad.dataset.numericPad = '';
+ document.head.append(keypad);
+}
+
 function init(){
  const language=(document.documentElement.lang||'fr').toLowerCase().split('-')[0];
  const translations={
