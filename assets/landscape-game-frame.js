@@ -11,10 +11,12 @@ $('catalogue-link').href=lang==='fr'?'/?lang=fr':'/'+lang+'/?lang='+lang;
 $('catalogue-link').textContent=text.back;$('direct-link').textContent=text.direct;document.querySelector('.game-links').setAttribute('aria-label',text.navigation);$('missing').textContent=text.missing;
 const id=new URLSearchParams(location.search).get('jeu');if(!id)return;
 try{
- const response=await fetch('/assets/landscape-game-links.json?v=all-languages-20261108');if(!response.ok)throw Error('manifest');
+ const response=await fetch('/assets/landscape-game-links.json?v=lecture-pdf-20261111');if(!response.ok)throw Error('manifest');
  const games=await response.json(),key=lang+':'+id;if(!Object.hasOwn(games,key))throw Error('unknown game');
  const game=games[key],url=new URL(game.url,'https://bleja972.github.io/');if(!['http:','https:'].includes(url.protocol))throw Error('invalid url');
  document.title=game.title;$('game-title').textContent=game.title;$('direct-link').href=url.href;$('direct-link').hidden=false;
+ const pdfLink=$('game-pdf-link');
+ if(pdfLink&&game.pdfUrl){pdfLink.href=game.pdfUrl;pdfLink.hidden=false;}
  const frame=document.createElement('iframe');frame.title=game.title;frame.src=url.href;frame.allow='fullscreen; autoplay';frame.allowFullscreen=true;frame.dataset.blejaGameFrame='';$('game-container').replaceChildren(frame);
 }catch{$('missing').textContent=text.error;}
 })();

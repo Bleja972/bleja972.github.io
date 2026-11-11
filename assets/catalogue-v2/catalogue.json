@@ -1405,7 +1405,9 @@
     ],
     "short": "Lire un texte et retrouver les informations utiles pour répondre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-21.webp",
-    "imageAlt": "Aperçu de Lecture et compréhension : lire un texte et retrouver les informations utiles pour répondre."
+    "imageAlt": "Aperçu de Lecture et compréhension : lire un texte et retrouver les informations utiles pour répondre.",
+    "pdfUrl": "/pdf/Lecture_comprehension_CE1_animaux_exercices_et_corriges.pdf",
+    "pdfLabel": "Lecture CE1 · 4 textes, exercices et corrigés (PDF)"
   },
   {
     "title": "L’atelier des souris",
