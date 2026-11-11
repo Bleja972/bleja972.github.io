@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Calcul mental CE1 · Période 2</title>
-<link rel="stylesheet" href="./orbite.css?v=3">
+<link rel="stylesheet" href="./orbite.css?v=4">
 <script defer data-numeric-pad data-game-numeric-pad src="/assets/pave-numerique.js?v=20261111-inline"></script>
 </head>
 <body>
@@ -294,16 +294,30 @@ function renderExercise(){
   ex.items.forEach((item,idx)=>{
     const card=document.createElement("div");
     card.className="calc answer-entry";
-    const left=document.createElement("span");
-    left.textContent=item.left;
-    card.appendChild(left);
+    const row=document.createElement("div");
+    row.className="equation-row";
+    const left=item.left.match(/\d+|[+=-]/g) || [];
+    const right=item.right.match(/\d+|[+=-]/g) || [];
+    // Estimate the row's width in em so longer equations also fit on narrow cards.
+    const terms=[...left,...right];
+    const termsWidth=terms.reduce((width,term)=>width+(/^[0-9]/.test(term)?term.length*.79:.86),0);
+    row.style.setProperty("--equation-width",String(4.2 + termsWidth + terms.length*.17));
+    function appendTerms(terms){
+      for(const term of terms){
+        const span=document.createElement("span");
+        span.textContent=term === "-" ? "−" : term;
+        if(/^[0-9]/.test(term)) span.className="operand";
+        row.appendChild(span);
+      }
+    }
+    appendTerms(left);
     const input=document.createElement("input");
     input.type="text";
     input.inputMode="numeric";
     input.autocomplete="off";
     input.maxLength=4;
     input.dataset.index=idx;
-    input.setAttribute("aria-label",`Réponse ${idx+1}`);
+    input.setAttribute("aria-label",`Réponse ${idx+1} : ${item.left} … ${item.right}`.trim());
     input.addEventListener("input",()=>{
       input.value=input.value.replace(/[^0-9]/g,"");
       input.classList.remove("good","bad");
@@ -316,10 +330,9 @@ function renderExercise(){
         if(pos<inputs.length-1) inputs[pos+1].focus();
       }
     });
-    card.appendChild(input);
-    const right=document.createElement("span");
-    right.textContent=item.right;
-    card.appendChild(right);
+    row.appendChild(input);
+    appendTerms(right);
+    card.appendChild(row);
     grid.appendChild(card);
   });
   const first=grid.querySelector("input");

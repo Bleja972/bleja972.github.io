@@ -162,34 +162,41 @@ h1 span { color: #bdeaff; }
 .skill { color: var(--muted); font-size: .88rem; }
 .notice, .startnote { margin: 9px 0; color: #e1f6ff; font-size: .92rem; }
 .startnote { color: #ffe0a1; }
-.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-flow: dense; gap: 9px; }
 .calc {
   min-width: 0;
   min-height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 6px;
+  display: grid;
+  place-items: center;
+  container-type: inline-size;
   padding: 7px;
   border: 1px solid var(--edge);
   border-radius: 11px;
   background: #0c2336d8;
   color: var(--digit-light);
   font: 700 clamp(1.15rem, 3vw, 1.55rem)/1.1 var(--digits);
-  letter-spacing: var(--digit-spacing);
   text-shadow: 0 0 .3em var(--digit-glow);
 }
+.equation-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .17em;
+  white-space: nowrap;
+  font-size: min(1em, calc(100cqw / var(--equation-width)));
+}
+.equation-row .operand { letter-spacing: .16em; }
 .calc input {
-  width: clamp(70px, 13vw, 85px);
+  flex: 0 0 4.1em;
+  width: 4.1em;
   min-height: 42px;
-  padding: 4px;
+  padding: 4px 2px;
   border: 2px solid #87bcd7;
   border-radius: 8px;
   background: #061725;
   color: var(--digit-light);
   caret-color: var(--digit-light);
-  letter-spacing: var(--digit-spacing);
+  letter-spacing: .16em;
   text-align: center;
   text-shadow: 0 0 .3em var(--digit-glow);
 }
@@ -223,14 +230,17 @@ h1 span { color: #bdeaff; }
 @media (max-width: 780px) {
   .exercise-menu, .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+@media (pointer: coarse) and (max-height: 520px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 @media (max-width: 480px) {
+  .app { padding-inline: 6px; }
+  .content { padding-inline: 7px; }
+  .grid { gap: 6px; }
   .shell { border-radius: 16px; }
   .exercise-menu { grid-template-columns: minmax(0, 1fr); }
   .skill-card { padding: 11px; }
   .calc { min-height: 54px; padding: 6px 3px; }
-}
-@media (max-width: 350px) {
-  .grid { grid-template-columns: minmax(0, 1fr); }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; }
