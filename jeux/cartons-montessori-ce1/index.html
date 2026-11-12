@@ -27,11 +27,43 @@ function later(fn,ms){let t=setTimeout(fn,ms);timers.push(t)}
 function clearTimers(){timers.forEach(clearTimeout);timers=[]}
 function values(num){return [Math.floor(num/100)*100,Math.floor(num/10)%10*10,num%10].filter(v=>v>0)}
 function choose(){let pool=[];for(let v=10;v<1000;v++){if(used.has(v))continue;let h=Math.floor(v/100),t=Math.floor(v/10)%10,u=v%10;let level=$('level').value;if(level==='3'&&h&&t&&u||level==='2'&&v<100&&t&&u||level==='zero'&&v>=100&&(!t||!u))pool.push(v)}let value=pool[Math.floor(Math.random()*pool.length)];used.add(value);return value}
-function draw(){parts=values(n);if(mode==='recomp'&&parts.length>1&&Math.random()<0.4){const ordered=[...parts];for(let i=parts.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[parts[i],parts[j]]=[parts[j],parts[i]];}if(parts.every((v,i)=>v===ordered[i]))parts.push(parts.shift());}const widths=parts.map(v=>String(v).length*70+28),total=widths.reduce((a,b)=>a+b,0)+(parts.length-1)*65;let x=(860-total)/2;let svg='';const cards=[];let additions='';parts.forEach((v,i)=>{let w=widths[i],color=v>=100?'#b4ef69':v>=10?'#ffbb69':'#7cbaff',closed=550-w,open=x;cards.push({value:v,markup:`<g class="card" data-closed="${closed}" data-open="${open}" transform="translate(${mode==='decomp'?closed:open},72)"><path d="M 0 0 H ${w-28} L ${w} 48 L ${w-28} 96 H 0 Z" fill="#fffef8" stroke="#263d36" stroke-width="2.5"/><text y="65" font-family="Arial,sans-serif" font-size="53" font-weight="500">${String(v).split('').map((d,j)=>`<tspan x="${12+j*70}" fill="${j===0?color:j===String(v).length-1?'#7cbaff':'#ffbb69'}">${d}</tspan>`).join('')}</text></g>`});x+=w;if(i<parts.length-1){additions+=`<text class="plus" text-anchor="middle" x="${x+32.5}" y="134" opacity="${mode==='decomp'?0:1}">+</text>`;x+=65}});svg=cards.sort((a,b)=>b.value-a.value).map(card=>card.markup).join('')+additions;$('stage').innerHTML=svg;$('stage').setAttribute('aria-label',mode==='decomp'?`Cartons superposés : ${n}`:`Cartons séparés : ${parts.join(' plus ')}`)}
-function layout(open){document.querySelectorAll('.card').forEach(el=>el.style.transform=`translate(${open?el.dataset.open:el.dataset.closed}px,72px)`);document.querySelectorAll('.plus').forEach(el=>el.style.opacity=open?1:0);$('stage').setAttribute('aria-label',open?parts.join(' plus '):String(n))}
+function draw(){
+  parts=values(n);
+  if(mode==='recomp'&&parts.length>1&&Math.random()<0.4){
+    const ordered=[...parts];
+    for(let i=parts.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[parts[i],parts[j]]=[parts[j],parts[i]]}
+    if(parts.every((v,i)=>v===ordered[i]))parts.push(parts.shift());
+  }
+  const widths=parts.map(v=>String(v).length*70+28);
+  const total=widths.reduce((a,b)=>a+b,0)+(parts.length-1)*65;
+  let x=(860-total)/2,additions='';
+  const cards=[];
+  parts.forEach((v,i)=>{
+    const w=widths[i],color=v>=100?'#b4ef69':v>=10?'#ffbb69':'#7cbaff';
+    // Tous les cartons terminent avec leur chiffre des unités sur la même colonne.
+    const closed=550-w,open=x;
+    const digits=String(v).split('').map((d,j)=>`<tspan x="${12+j*70}" fill="${j===0?color:j===String(v).length-1?'#7cbaff':'#ffbb69'}">${d}</tspan>`).join('');
+    cards.push({value:v,markup:`<g class="card" data-closed="${closed}" data-open="${open}" transform="translate(${mode==='decomp'?closed:open},72)"><path d="M 0 0 H ${w-28} L ${w} 48 L ${w-28} 96 H 0 Z" fill="#fffef8" stroke="#263d36" stroke-width="2.5"/><text y="65" font-family="Arial,sans-serif" font-size="53" font-weight="500">${digits}</text></g>`});
+    x+=w;
+    if(i<parts.length-1){additions+=`<text class="plus" text-anchor="middle" x="${x+32.5}" y="134" opacity="${mode==='decomp'?0:1}">+</text>`;x+=65}
+  });
+  // Dessin dans l'ordre des valeurs : centaines au fond, dizaines au milieu, unités au-dessus.
+  const separateCards=cards.sort((a,b)=>b.value-a.value).map(card=>card.markup).join('');
+  const resultWidth=String(n).length*70+28,resultX=550-resultWidth;
+  const resultDigits=String(n).split('').map((digit,j)=>`<tspan x="${12+j*70}" fill="${j===0&&n>=100?'#b4ef69':j===String(n).length-1?'#7cbaff':'#ffbb69'}">${digit}</tspan>`).join('');
+  const finalCard=`<g id="finalMontessori" opacity="0" pointer-events="none" transform="translate(${resultX},72)"><path d="M 0 0 H ${resultWidth-28} L ${resultWidth} 48 L ${resultWidth-28} 96 H 0 Z" fill="#fffef8" stroke="#263d36" stroke-width="2.5"/><text y="65" font-family="Arial,sans-serif" font-size="53" font-weight="500">${resultDigits}</text></g>`;
+  $('stage').innerHTML=separateCards+additions+finalCard;
+  $('stage').setAttribute('aria-label',mode==='decomp'?`Cartons superposés : ${n}`:`Cartons séparés : ${parts.join(' plus ')}`);
+}
+function layout(open){
+  document.querySelectorAll('#stage .card').forEach(el=>{el.style.opacity='1';el.style.transform=`translate(${open?el.dataset.open:el.dataset.closed}px,72px)`});
+  document.querySelectorAll('#stage .plus').forEach(el=>el.style.opacity=open?1:0);
+  const final=$('finalMontessori');if(final)final.style.opacity='0';
+  $('stage').setAttribute('aria-label',open?parts.join(' plus '):String(n));
+}
 function render(){clearTimers();document.body.classList.remove('isanimating','celebrate');failed=false;solved=false;busy=false;draw();$('instruction').textContent=mode==='decomp'?'Écris la valeur de chaque chiffre.':'Quel nombre forment ces cartons ?';$('guide').textContent=mode==='decomp'?'Les pointes sont superposées. Quels nombres se cachent dessous ?':'Additionne les valeurs. Les pointes vont se rejoindre.';$('answerlabel').textContent=mode==='decomp'?'Complète l’addition en ligne.':'Écris le nombre recomposé.';$('equation').innerHTML=mode==='decomp'?`<span class="given">${n}</span><span>=</span>`+parts.map((v,i)=>`${i?'<span>+</span>':''}<input aria-label="${v>=100?'Valeur des centaines':v>=10?'Valeur des dizaines':'Valeur des unités'}" inputmode="numeric" autocomplete="off" maxlength="3" data-answer="${v}">`).join(''):`<span class="given">${parts.join(' + ')}</span><span>=</span><input aria-label="Nombre recomposé" inputmode="numeric" autocomplete="off" maxlength="3" data-answer="${n}">`;$('feedback').textContent='';$('feedback').className='feedback';['next','replay','correction','result'].forEach(id=>$(id).hidden=true);$('check').hidden=false;$('erase').hidden=false;$('check').disabled=false;update()}
 function update(){$('progress').textContent=custom?'Nombre choisi':`Défi ${step} / 10`;$('score').textContent=`${score} réussite${score>1?'s':''}`;$('dots').innerHTML=Array.from({length:10},(_,i)=>`<i class="${i<step-1?'done':''}"></i>`).join('')}
-function animate(){playFx('move');document.body.classList.add('isanimating');busy=true;$('replay').disabled=true;$('next').disabled=true;layout(mode!=='decomp');later(()=>layout(mode==='decomp'),100);later(()=>{document.body.classList.remove('isanimating');busy=false;$('replay').disabled=false;$('next').disabled=false},1850)}
+function animate(){playFx('move');document.body.classList.add('isanimating');busy=true;$('replay').disabled=true;$('next').disabled=true;layout(mode!=='decomp');later(()=>layout(mode==='decomp'),100);later(()=>{if(mode==='recomp'){document.querySelectorAll('#stage .card').forEach(el=>el.style.opacity='0');$('finalMontessori').style.opacity='1';$('stage').setAttribute('aria-label',`Nombre recomposé : ${n}`)}document.body.classList.remove('isanimating');busy=false;$('replay').disabled=false;$('next').disabled=false},1850)}
 function finish(correct){solved=true;if(correct){playFx('win');burst();}else{playFx('reveal');}document.querySelectorAll('#equation input').forEach(el=>{el.value=el.dataset.answer;el.disabled=true});if(correct&&!failed&&!custom)score++;$('feedback').className='feedback good';$('feedback').textContent=(correct?'Bravo ! ':'Observe : ')+`${n} = ${parts.join(' + ')}.`+(parts.length<3&&n>=100?' Un chiffre 0 n’ajoute aucun carton.':'');['check','erase','correction'].forEach(id=>$(id).hidden=true);$('replay').hidden=false;$('next').hidden=false;$('next').textContent=step===10&&!custom?'Voir mon bilan →':'Nombre suivant →';update();animate()}
 $('form').onsubmit=e=>{e.preventDefault();if(solved||busy)return;let inputs=[...document.querySelectorAll('#equation input')];if(inputs.some(el=>!el.value.trim())){$('feedback').textContent='Complète toutes les cases avant de vérifier.';$('feedback').className='feedback error';return}let correct=inputs.every(el=>/^\d+$/.test(el.value.trim())&&Number(el.value)===Number(el.dataset.answer));if(correct)finish(true);else{failed=true;playFx('error');$('feedback').className='feedback error';$('feedback').textContent=mode==='decomp'?'Essaie encore : écris la valeur du chiffre, avec ses zéros.':'Essaie encore : additionne les valeurs des cartons.';$('correction').hidden=false}};
 $('correction').onclick=()=>finish(false);$('replay').onclick=()=>{if(!busy)animate()};$('erase').onclick=()=>{document.querySelectorAll('#equation input').forEach(el=>el.value='');$('feedback').textContent='';document.querySelector('#equation input').focus()};$('next').onclick=()=>{if(busy)return;if(step===10&&!custom){playFx('win');burst();$('result').hidden=false;$('result').textContent=`Série terminée ! ${score} / 10, soit ${score*10} % de réussite sans erreur. Recommence pour t’entraîner !`;$('next').hidden=true;return}if(custom){start();return}step++;n=choose();render()};
