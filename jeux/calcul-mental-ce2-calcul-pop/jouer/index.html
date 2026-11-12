@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="fr">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f2"><meta name="robots" content="noindex,nofollow">
+ <title>Calcul Pop ! · Le jardin du calcul mental CE2</title>
+ <meta name="description" content="Fais pousser tes progrès en calcul mental CE2 ! Des missions colorées pour les additions, les tables, les doubles et les moitiés, à ton rythme ou en 3 minutes.">
+ <link rel="stylesheet" href="/jeux/calcul-mental-periode-2/jouer/orbite.css?v=4">
+ <style>
+:root{--ink:#293f43;--muted:#65736c;--cream:#faf9f2;--line:#e5e5d9;--green:#345e4b;--lime:#d8ed9e;--peach:#f8d7c4;--mint:#d9e9dc;--lavender:#e3def4;--pink:#f8dfe4;--yellow:#f8edbc;--white:#fffefa}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,sans-serif;font-size:15px;line-height:1.55}button,input,select{font:inherit;color:inherit}button,a,select,input{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button{border:0}a{color:inherit}button:disabled{cursor:default;opacity:.55}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #8b72cf;outline-offset:4px}button,select{touch-action:manipulation}h1,h2,h3,p{margin:0}h1,h2,h3,.site-brand,.equation,.primary,.result-stat b{font-family:'Trebuchet MS',Arial,sans-serif}h2{font-size:25px;line-height:1.3;font-weight:900}h3{font-size:21px;line-height:1.3;font-weight:900}button{background:transparent}svg{width:100%;height:100%}[hidden]{display:none!important}.svg-defs{position:absolute;width:0;height:0;overflow:hidden}.skip{position:fixed;top:-100px;left:12px;padding:12px;background:var(--ink);color:white;z-index:20;border-radius:10px}.skip:focus{top:12px}
+.site-topbar{max-width:1280px;margin:auto;height:106px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.site-brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-size:31px;font-weight:900;line-height:1.05;letter-spacing:-1px}.brand-icon{display:block;background:var(--lime);width:43px;height:48px;padding:7px;border-radius:15px;transform:rotate(-7deg);color:var(--green)}.brand-pop{color:var(--green)}.brand-dot{color:#d6815e}.site-brand small{display:block;font-family:Arial,sans-serif;letter-spacing:1.2px;font-size:8px;font-weight:700;margin-top:7px;color:var(--muted)}.site-topbar nav{display:flex;gap:26px;align-items:center}.nav-help{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600}.nav-help>span{display:inline-grid;place-items:center;width:21px;height:21px;border:1.5px solid #7c8a7b;border-radius:50%;font-size:12px}.garden-button{display:flex;align-items:center;gap:9px;border:1px solid #dfe4d3;border-radius:13px;padding:10px 15px;background:#f0f3e5;font-size:13px;font-weight:700}.garden-button svg{width:21px;height:26px;color:#e99a7e}.garden-button b{font-size:11px;padding:1px 7px;background:white;border-radius:12px;margin-left:3px}
+main{max-width:1280px;margin:auto;padding:0 48px}.eyebrow{font-size:10px;font-weight:700;letter-spacing:1.6px;display:flex;gap:8px;align-items:center;color:#58735e}.eyebrow>span{height:6px;width:6px;border-radius:50%;background:#7f9f58}
+.play-settings{display:flex;align-items:center;justify-content:space-between;padding:22px 25px;background:#f0f2e7;border:1px solid #e4e6d7;border-radius:19px;gap:20px}.settings-title{display:flex;align-items:center;gap:14px}.settings-title h2{font-size:19px}.settings-title p{font-size:11px;color:var(--muted);margin-top:4px}.step-number{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid #ccd8be;background:#e6edd9;color:#4d6955;font-size:13px;font-family:'Trebuchet MS',Arial,sans-serif;font-weight:900;flex-shrink:0;width:28px;height:28px}.mode-options{display:flex;gap:11px}.mode-button{padding:13px 14px;background:var(--white);border:1.5px solid #e1e3d7;border-radius:12px;display:flex;align-items:center;gap:12px;min-width:230px;text-align:left}.mode-button.selected{background:#fbfdf3;border-color:#779565;box-shadow:0 0 0 1px #779565}.mode-button b{display:block;font-weight:700;font-size:13px}.mode-button small{display:block;font-size:10px;color:var(--muted);margin-top:2px}.mode-icon{font-size:28px;color:#a78139;line-height:1}.mode-button:nth-child(2) .mode-icon{color:#7c72ac}.radio-dot{border:1.5px solid #d1d6c7;width:16px;height:16px;border-radius:50%;margin-left:auto;position:relative}.selected .radio-dot{border-color:#6b8f57}.selected .radio-dot:after{content:'';position:absolute;inset:3px;border-radius:50%;background:#6b8f57}
+.missions-section{padding-top:44px}.section-heading{display:flex;justify-content:space-between;align-items:center;gap:20px}.heading-line{display:flex;align-items:center;gap:13px}.section-heading p{font-size:12px;color:var(--muted);margin:9px 0 0 41px}.count-label{font-size:10px;letter-spacing:.5px;color:#6d7968;border-radius:20px;padding:7px 13px;background:#eeefe5;white-space:nowrap}.category-filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px;padding-bottom:20px;border-bottom:1px solid var(--line)}.filter{display:flex;align-items:center;gap:7px;font-size:11px;border-radius:9px;padding:9px 11px;border:1px solid #e5e6da;background:#fffefa;white-space:nowrap}.filter.active{background:var(--ink);border-color:var(--ink);color:white}.filter b{padding:0 5px;background:#ffffff26;border-radius:4px;font-size:9px}.filter i{font-style:normal;display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;font-size:14px;color:#39484c}.peach{background:var(--peach)}.mint{background:var(--mint)}.yellow{background:var(--yellow)}.lavender{background:var(--lavender)}.pink{background:var(--pink)}.mission-tools{display:flex;align-items:center;gap:9px;padding:16px 0;font-size:11px;color:var(--muted);min-height:60px}.mission-tools select{border:0;background:transparent;padding:5px 24px 5px 4px;font-size:11px;font-weight:600}.mission-tools>button{margin-left:auto;font-size:11px;color:var(--green);text-decoration:underline;text-underline-offset:4px}.mission-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.mission-card{border:1px solid #e4e5d9;border-radius:19px;background:var(--white);padding:22px;display:flex;flex-direction:column;min-height:244px;position:relative;transition:transform .16s,box-shadow .16s}.mission-card:hover{transform:translateY(-3px);box-shadow:0 7px 22px #3445310a}.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.mission-symbol{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;font-family:'Trebuchet MS',Arial,sans-serif;font-size:28px;font-weight:800;line-height:1}.card-stage{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#788071}.mission-card h3{font-size:18px;letter-spacing:-.25px}.mission-card>p{font-size:11px;line-height:1.7;color:var(--muted);margin-top:8px;max-width:260px;flex:1}.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:21px}.card-progress{font-size:10px;color:#7c8273}.card-progress.done{color:var(--green);font-weight:600}.card-play{padding:8px 14px;border-radius:9px;font-size:11px;font-weight:700;display:flex;align-items:center;gap:15px}.card-play:hover{filter:brightness(.96)}.card-play>span{font-size:15px}.empty-state{text-align:center;padding:35px;background:#f1f1e6;border-radius:15px}.empty-state button{text-decoration:underline;margin:15px}.gentle-note{border-radius:17px;display:flex;align-items:center;gap:20px;background:#edf0e4;padding:23px 30px;margin:34px 0 42px}.gentle-note>svg{width:38px;height:45px;color:#799961;flex-shrink:0}.gentle-note strong{display:block;font-size:13px;font-weight:700}.gentle-note p span{display:block;color:var(--muted);font-size:11px;margin-top:4px}.note-doodle{margin-left:auto;font-size:36px;color:#9cad80}
+footer{border-top:1px solid var(--line);max-width:1184px;margin:0 auto;padding:24px 0 28px;display:flex;gap:20px;align-items:center;font-size:10px;color:#6a776c}.footer-brand{font-family:'Trebuchet MS',Arial,sans-serif;font-weight:900;font-size:18px;color:var(--green);text-decoration:none;letter-spacing:-.8px}footer>p{flex:1}footer>button{font-size:10px;text-decoration:underline;text-underline-offset:3px}
+.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;font-size:16px;font-weight:800;padding:14px 22px;gap:22px;transition:transform .15s}.primary{background:var(--green);color:white;box-shadow:0 4px 0 #244333}.primary:hover{background:#294d3d;transform:translateY(-1px)}.primary:active{transform:translateY(2px);box-shadow:0 1px 0 #244333}.secondary{background:#edeee5;border:1px solid #dcded0;font-size:14px}.game-view{max-width:800px;margin:25px auto 36px}.game-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.back-button{font-size:12px;color:var(--green);padding:12px 0}.game-mode{font-size:11px;color:var(--muted);background:#edeee4;border-radius:20px;padding:6px 12px}.icon-button{background:#eeeee3;border:1px solid #dcded0;border-radius:11px;font-size:16px;width:39px;height:39px;font-weight:800}.game-heading{text-align:center;margin:20px 0 22px}.family-caption{font-size:11px;text-transform:uppercase;letter-spacing:1.7px;color:#65816a}.game-heading h1{font-size:32px;margin-top:7px;letter-spacing:-.8px;line-height:1.25;font-weight:900}.round-status{display:flex;gap:16px;align-items:center;font-size:11px;margin:0 5px 18px}.progress-track{height:7px;border-radius:6px;background:#e6e9d8;flex:1;overflow:hidden}.progress-track>span{display:block;height:100%;background:#92b76a;border-radius:6px;transition:width .2s;width:0}.timer{font-variant-numeric:tabular-nums;background:#e4def3;padding:4px 10px;border-radius:8px;font-size:13px;font-weight:700}.timer.urgent{color:#9a3e32;background:#f8dfcf}.right-count{color:#59775a}.question-card{background:var(--white);border:1px solid #e2e5d7;border-radius:24px;padding:27px 42px;text-align:center;box-shadow:0 9px 40px #3a502a05}.question-kicker{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#6e7e65;font-weight:600}.equation{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;font-size:42px;line-height:1.3;font-weight:900;min-height:100px;margin:12px 0 18px}.equation.word-equation{font-size:30px}.answer-input{width:clamp(98px,20vw,145px);height:72px;border-radius:14px;border:2px dashed #b2c399;background:#f7faed;text-align:center;font-family:'Trebuchet MS',Arial,sans-serif;font-size:34px;font-weight:900;padding:8px 3px;-moz-appearance:textfield}.answer-input::placeholder{color:#b0bea1}.answer-input:focus{outline:0;border-style:solid;border-color:#70935a;box-shadow:0 0 0 4px #e8efd7}.answer-input:disabled{opacity:1;-webkit-text-fill-color:var(--ink)}.answer-input.correct{background:#e2f0dc;border-color:#739c60}.answer-input.incorrect{border-color:#c87958;background:#fff0e5}.answer-error{font-size:12px;color:#ab4737;margin-bottom:10px}.keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:300px;margin:auto}.keypad>button{background:#f1f1e8;border:1px solid #e3e5d7;border-radius:10px;font-family:'Trebuchet MS',Arial,sans-serif;font-size:22px;font-weight:800;height:47px;box-shadow:0 2px 0 #e2e4d6}.keypad>button:hover{background:#e5ebd4}.keypad>button:active{transform:translateY(2px);box-shadow:none}.keypad .key-clear{background:#f8eadf;font-size:17px;color:#89604c}.validate,.next-button{min-width:300px;margin:17px auto 0}.hint-button{display:block;font-size:12px;color:#72815b;margin:20px auto 0;padding:4px 9px;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:4px}.hint-box{background:#f8f2d9;color:#71613e;border:1px solid #e9dfbc;padding:14px 17px;border-radius:12px;margin:12px auto 0;font-size:13px;text-align:left;max-width:540px}.answer-feedback{padding:14px 18px;border-radius:13px;background:#e9f2e2;color:#3b663f;text-align:left;max-width:540px;margin:15px auto 0;font-size:13px}.answer-feedback strong{display:block;font-size:17px;font-family:'Trebuchet MS',Arial,sans-serif;font-weight:900;margin-bottom:3px}.answer-feedback.retry,.answer-feedback.correction{background:#fbecdb;color:#78543e}.keyboard-note{text-align:center;font-size:10px;color:#7e887a;margin-top:15px}
+.result-view{max-width:840px;margin:32px auto 46px;text-align:center}.result-illustration{display:flex;justify-content:center;align-items:center;height:116px;gap:15px}.result-illustration svg{width:79px;height:95px;color:#eda185;transform:rotate(-8deg)}.result-illustration svg:last-child{width:65px;color:#b0a0da;transform:rotate(8deg)}.result-illustration>span{color:#a4b26d;font-size:33px}.result-view>.eyebrow{justify-content:center}.result-view h1{font-size:37px;font-weight:900;letter-spacing:-1px;margin:12px 0}.result-view>p{color:var(--muted);font-size:14px}.result-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:25px 0 15px}.result-stat{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:22px 10px}.result-stat b{font-size:32px;line-height:1;font-weight:900;display:block;color:var(--green)}.result-stat span{display:block;font-size:11px;color:var(--muted);margin-top:9px}.result-view>.flower-message{font-size:12px;color:var(--green)}.result-actions{display:flex;justify-content:center;gap:14px;margin:25px 0 38px}.review-section{text-align:left;border-top:1px solid var(--line);padding-top:26px}.review-section h2{font-size:23px}.review-section>p{color:var(--muted);font-size:12px;margin:8px 0 18px}.review-row{border:1px solid var(--line);background:var(--white);border-radius:13px;padding:16px 20px;margin-bottom:10px}.review-row strong{font-family:'Trebuchet MS',Arial,sans-serif;font-size:20px;font-weight:800}.review-row p{font-size:12px;color:var(--muted);margin-top:6px}.review-row small{display:block;font-size:10px;color:#9e6e51;margin-top:6px}
+dialog{border:1px solid #dfe2d1;background:var(--white);color:var(--ink);border-radius:24px;padding:36px;width:calc(100% - 32px);max-width:510px;max-height:90dvh;box-shadow:0 20px 100px #203d3326}dialog::backdrop{background:#253e426e;backdrop-filter:blur(4px)}.dialog-close{position:absolute;right:14px;top:11px;font-size:27px;width:34px;height:34px;border-radius:50%;background:#f0f0e6}.dialog-icon{display:grid;place-items:center;width:50px;height:50px;border-radius:15px;font-family:'Trebuchet MS',Arial,sans-serif;font-size:29px;font-weight:900;margin-bottom:20px}.dialog-icon svg{width:36px;height:36px;color:var(--green)}dialog h2{font-size:27px;margin-bottom:15px}dialog p{font-size:13px;line-height:1.85;color:var(--muted);margin:12px 0}.help-steps{padding-left:21px;font-size:13px;color:var(--muted);line-height:1.8}.help-steps li{margin:12px 0}.help-steps b{color:var(--ink)}.soft-box{background:#f1f4e7;padding:14px 17px;border-radius:13px}dialog .primary{font-size:14px;margin-top:12px;width:100%}.garden-flowers{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;background:#f1f4e6;border-radius:15px;padding:20px;margin-top:20px;min-height:105px;align-items:center}.garden-flowers svg{width:40px;height:52px;color:#eda185}.garden-flowers p{font-size:12px;text-align:center}.garden-stats-row{display:flex;justify-content:space-around;background:#f7f7ef;padding:18px;border-radius:12px;gap:12px;text-align:center}.garden-stats-row b{display:block;font-family:'Trebuchet MS',Arial,sans-serif;font-weight:900;font-size:27px}.garden-stats-row span{display:block;color:var(--muted);font-size:10px}.local-note{font-size:10px!important;line-height:1.7!important;color:#86907f!important}.reset-button{font-size:11px;color:#a0614d;text-decoration:underline;text-underline-offset:4px;padding:8px 0}.pause-dialog{text-align:center}.pause-dialog .dialog-icon{margin:0 auto 20px}.pause-dialog .secondary{display:block;width:100%;margin-top:16px}.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:99}.confetti i{position:absolute;top:-20px;width:10px;height:16px;border-radius:4px;animation:fall 1.7s ease-in forwards}@keyframes fall{to{transform:translateY(105vh) rotate(540deg);opacity:0}}
+@media(min-width:1440px){}@media(max-width:1080px){.site-topbar{padding:0 30px}main{padding:0 30px}.play-settings{padding:20px}.mode-button{min-width:196px;gap:8px}.settings-title h2{font-size:17px}.settings-title p{font-size:10px}footer{margin:0 30px}.mission-card{padding:20px}.category-filters{gap:7px}.filter{padding:8px 9px;font-size:10px}}
+@media(max-width:850px){.site-brand small{font-size:6.5px}.site-topbar nav{gap:15px}.eyebrow{font-size:8px;letter-spacing:1px}.play-settings{display:block}.mode-options{margin-top:17px}.mode-button{flex:1;min-width:0}.settings-title p{font-size:11px}.settings-title h2{font-size:19px}.mission-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section-heading h2{font-size:23px}.gentle-note{padding:22px}.missions-section{padding-top:32px}}
+@media(max-width:600px){.site-topbar{height:84px;padding:0 20px}.site-brand{font-size:26px;gap:8px}.brand-icon{width:35px;height:39px;padding:5px;border-radius:12px}.site-brand small{font-size:5.7px;letter-spacing:.7px;margin-top:5px}.site-topbar nav{gap:8px}.nav-help{font-size:0;gap:0;padding:6px}.nav-help>span{font-size:12px}.garden-button{padding:7px 9px;gap:5px;font-size:11px;border-radius:10px}.garden-button svg{width:17px;height:24px}.garden-button b{padding:0 5px;margin-left:0}main{padding:0 20px}.hero-copy{position:relative;z-index:1}.eyebrow{font-size:7.4px;letter-spacing:.95px}.play-settings{padding:18px 15px;border-radius:16px}.settings-title{gap:10px}.settings-title h2{font-size:18px}.settings-title p{font-size:10px}.step-number{width:25px;height:25px;font-size:12px}.mode-options{gap:9px;margin-top:16px}.mode-button{padding:12px 10px;gap:8px;position:relative;align-items:flex-start}.mode-button b{font-size:11px}.mode-button small{font-size:8.5px;margin-top:3px;line-height:1.6}.mode-icon{font-size:23px}.radio-dot{width:12px;height:12px;position:absolute;right:7px;top:7px}.selected .radio-dot:after{inset:2px}.missions-section{padding-top:30px}.section-heading{display:block}.section-heading h2{font-size:23px}.heading-line{gap:10px}.section-heading p{font-size:11px;margin:7px 0 0 35px}.count-label{display:inline-block;font-size:9px;margin:12px 0 0 35px;padding:4px 10px}.category-filters{flex-wrap:nowrap;overflow-x:auto;max-width:calc(100vw - 20px);padding:0 20px 14px 0;margin-top:20px;gap:7px;scrollbar-width:thin;scrollbar-color:#c4d1b6 transparent}.filter{flex-shrink:0;padding:8px 10px;font-size:10px}.filter i{width:17px;height:17px;font-size:13px}.mission-tools{flex-wrap:wrap;gap:4px;padding:12px 0}.mission-tools label{font-size:10px}.mission-tools select{font-size:10px;max-width:calc(100% - 50px)}.mission-tools>button{font-size:10px;flex-basis:100%;text-align:left;margin:4px 0 0}.mission-grid{gap:12px}.mission-card{border-radius:15px;padding:15px;min-height:245px}.mission-symbol{width:34px;height:34px;font-size:23px;border-radius:11px}.card-top{margin-bottom:13px}.card-stage{font-size:7px;letter-spacing:.6px}.mission-card h3{font-size:16px;line-height:1.25;letter-spacing:-.4px}.mission-card>p{font-size:10px;line-height:1.6;margin-top:7px}.card-bottom{align-items:flex-start;flex-direction:column;gap:8px;margin-top:14px}.card-progress{font-size:9px}.card-play{padding:6px 10px;font-size:10px;align-self:stretch;justify-content:space-between}.card-play>span{font-size:13px}.gentle-note{padding:20px 17px;gap:12px;margin:25px 0}.gentle-note>svg{width:29px}.gentle-note strong{font-size:11px}.gentle-note p span{font-size:10px}.note-doodle{display:none}footer{margin:0 20px;padding:20px 0;flex-wrap:wrap;gap:8px 14px}.footer-brand{font-size:17px}footer p{font-size:9px}footer>button,footer>span{font-size:9px}.game-view{margin-top:17px}.game-top{gap:7px}.game-mode{font-size:9px;padding:5px 8px}.back-button{font-size:11px}.icon-button{width:32px;height:32px;border-radius:9px;font-size:14px}.game-heading{margin:21px 0 18px}.game-heading h1{font-size:26px;letter-spacing:-.6px}.family-caption{font-size:9px}.round-status{font-size:9px;gap:9px;margin:0 0 14px}.timer{font-size:11px;padding:3px 7px}.question-card{padding:24px 17px 22px;border-radius:20px}.question-kicker{font-size:10px}.equation{font-size:32px;gap:6px;min-height:94px;margin:8px 0 15px}.equation.word-equation{font-size:23px}.answer-input{font-size:28px;width:104px;height:63px;border-radius:12px}.keypad{max-width:270px;gap:7px}.keypad>button{height:46px;font-size:21px}.validate,.next-button{min-width:0;width:100%;max-width:270px;font-size:15px;padding:12px 16px;margin-top:16px}.hint-button{font-size:11px;margin-top:20px}.answer-feedback{font-size:12px;padding:13px}.answer-feedback strong{font-size:15px}.hint-box{font-size:12px;padding:12px}.keyboard-note{font-size:9px;margin-top:12px}.result-view{margin:20px auto 30px}.result-view h1{font-size:29px;line-height:1.2}.result-view>p{font-size:12px}.result-stats{gap:8px;margin:22px 0 14px}.result-stat{padding:19px 8px;border-radius:14px}.result-stat b{font-size:27px}.result-stat span{font-size:9px;margin-top:7px}.result-actions{flex-direction:column;gap:15px;margin:24px 0 30px}.result-actions .primary{font-size:15px}.result-actions .secondary{font-size:13px}.review-section h2{font-size:21px}.review-row{padding:14px}.review-row strong{font-size:18px}.review-row p{font-size:11px}dialog{padding:29px 23px;border-radius:20px}dialog h2{font-size:25px}.help-steps{font-size:12px}dialog p{font-size:12px}.garden-stats-row{padding:15px 8px}.garden-stats-row b{font-size:25px}.garden-stats-row span{font-size:9px}}
+@media(max-width:360px){.site-topbar{padding:0 14px}main{padding:0 14px}.site-brand small{display:none}.site-brand{font-size:25px}.garden-button{font-size:10px}.mode-button{padding:11px 8px;gap:6px}.mode-button small{font-size:7.5px}.mode-button b{font-size:10px}.mode-icon{font-size:20px}.mission-card{padding:12px}.mission-card h3{font-size:15px}.question-card{padding:23px 13px}.equation{font-size:28px;gap:5px}.equation.word-equation{font-size:21px}.answer-input{width:90px;font-size:26px}.game-mode{font-size:8px}.keypad{max-width:250px}}
+.garden-button>span{white-space:nowrap}.mission-card>p{font-size:12px}
+@media(max-width:600px){.site-brand small{display:none}.mission-card>p{font-size:11px}.mode-button small{line-height:1.5}.card-play{min-height:38px}.filter{min-height:40px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.confetti{display:none}}
+
+</style>
+<link rel="stylesheet" href="./orbite-ce2.css?v=1">
+<script defer data-numeric-pad data-game-numeric-pad data-numeric-pad-theme="orbite" src="/assets/pave-numerique.js?v=20261111-tactile"></script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au jeu</a>
+<svg class="svg-defs" aria-hidden="true"><defs>
+ <symbol id="sprout" viewBox="0 0 64 64"><path d="M32 55V28" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M32 35C13 36 8 25 9 15c17-2 26 6 23 20Z" fill="currentColor"/><path d="M33 27C30 13 40 6 54 8c1 14-6 22-21 19Z" fill="currentColor"/></symbol>
+ <symbol id="flower" viewBox="0 0 64 64"><path d="M32 40v20" stroke="#39715e" stroke-width="4"/><path d="M32 54c-12-2-13-7-13-10 9-1 13 3 13 10Z" fill="#79ab65"/><path d="M30 23C8 25 11 6 23 10 20-4 42-4 39 10c13-6 23 13 8 17 15 9 1 26-10 15-2 15-23 12-20-1C0 45-1 25 14 25" fill="currentColor"/><circle cx="30" cy="25" r="9" fill="#ffd76a"/><circle cx="27" cy="24" r="1.4" fill="#293f43"/><circle cx="33" cy="24" r="1.4" fill="#293f43"/><path d="M27 28q3 3 6 0" fill="none" stroke="#293f43" stroke-width="1.5" stroke-linecap="round"/></symbol>
+</defs></svg>
+<header class="site-topbar">
+ <a class="site-brand" href="./index.html" aria-label="Calcul Pop, accueil"><span class="brand-icon"><svg><use href="#sprout"/></svg></span><span>calcul<span class="brand-pop">pop<span class="brand-dot">!</span></span><small>LES PETITS CALCULS, LES GRANDS PROGRÈS</small></span></a>
+ <nav aria-label="Navigation principale"><button class="sound orbit-sound" id="soundBtn" type="button" aria-pressed="true">♫ Sons activés</button><button class="nav-help" id="help-open"><span aria-hidden="true">?</span> Comment jouer</button><button class="garden-button" id="garden-open"><svg aria-hidden="true"><use href="#flower"/></svg><span>Mon jardin</span><b id="garden-count">0</b></button></nav>
+</header>
+<main id="main" tabindex="-1">
+<section id="home-view">
+ <section class="orbit-intro shell" aria-labelledby="home-title">
+  <div class="brand">CE2 · Calcul mental</div>
+  <h1 id="home-title">Calcul Pop !</h1>
+  <p class="sub">Choisis une mission et joue à ton rythme ou relève le défi de 3 minutes.</p>
+ </section>
+ <section class="play-settings" aria-label="Choix du mode de jeu"><div class="settings-title"><span class="step-number">1</span><div><h2>Comment veux-tu jouer ?</h2><p>Une petite pause ou un petit défi ?</p></div></div><div class="mode-options" role="group" aria-label="Mode de jeu"><button class="mode-button selected" data-mode="relax" aria-pressed="true"><span class="mode-icon" aria-hidden="true">☀</span><span><b>À ton rythme</b><small>10 calculs · sans chrono</small></span><i class="radio-dot"></i></button><button class="mode-button" data-mode="chrono" aria-pressed="false"><span class="mode-icon" aria-hidden="true">◷</span><span><b>Défi 3 minutes</b><small>15 calculs · avec chrono</small></span><i class="radio-dot"></i></button></div></section>
+ <section class="missions-section" aria-labelledby="missions-title"><div class="section-heading"><div><div class="heading-line"><span class="step-number">2</span><h2 id="missions-title">Choisis ta mission</h2></div><p>Des petits défis à picorer, dans l’ordre qui te plaît.</p></div><span id="mission-count" class="count-label">30 missions à explorer</span></div>
+ <div class="category-filters" role="group" aria-label="Famille de calcul"><button class="filter active" data-family="all" aria-pressed="true">Toutes les missions <b>30</b></button><button class="filter" data-family="addition" aria-pressed="false"><i class="peach">+</i> Additions</button><button class="filter" data-family="subtraction" aria-pressed="false"><i class="pink">−</i> Soustractions</button><button class="filter" data-family="multiplication" aria-pressed="false"><i class="lavender">×</i> Multiplications</button><button class="filter" data-family="double" aria-pressed="false"><i class="mint">½</i> Doubles & moitiés</button><button class="filter" data-family="mix" aria-pressed="false"><i class="yellow">✦</i> Méli-mélo</button></div>
+ <div class="mission-tools"><label for="journey">Parcours</label><select id="journey"><option value="all">Toute la progression</option><option value="1">1 · Les premiers bourgeons</option><option value="2">2 · Les astuces prennent racine</option><option value="3">3 · Les nombres grandissent</option><option value="4">4 · Ça se multiplie !</option><option value="5">5 · Le jardin en fleurs</option></select><button id="resume-button" hidden>↻ Reprendre ma dernière mission</button></div>
+ <div class="mission-grid" id="mission-grid" aria-live="polite"></div><p id="empty-missions" class="empty-state" hidden>Aucune mission ici pour ce parcours.<br><button id="show-all">Voir toute la progression</button></p>
+ </section>
+ <aside class="gentle-note"><svg aria-hidden="true"><use href="#sprout"/></svg><p><strong>Le plus beau des progrès ? Oser essayer.</strong><span>Une erreur, c’est une occasion de découvrir une nouvelle astuce.</span></p><span class="note-doodle" aria-hidden="true">✧</span></aside>
+</section>
+<section id="game-view" class="game-view" hidden aria-labelledby="game-title">
+ <div class="game-top"><button class="back-button" id="game-back">← Mes missions</button><span class="game-mode" id="game-mode"></span><button class="icon-button" id="pause-button" aria-label="Mettre la partie en pause">Ⅱ</button></div>
+ <div class="game-heading"><span class="family-caption" id="game-family"></span><h1 id="game-title"></h1></div>
+ <div class="round-status"><span id="question-count"></span><div class="progress-track" role="progressbar" aria-label="Avancement de la partie" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="round-progress"><span id="progress-fill"></span></div><span class="timer" id="timer" hidden>3:00</span><span class="right-count" id="right-count">0 trouvé</span></div>
+ <div id="practice-round" class="question-card"><div class="question-kicker" id="question-kicker">À toi de trouver !</div><div id="answer-form"><div class="equation answer-entry" id="equation"></div><p id="answer-error" class="answer-error" hidden>Écris un nombre entier pour essayer.</p><div class="keypad" id="practice-keypad" role="group" aria-label="Clavier numérique"><button type="button" data-key="1">1</button><button type="button" data-key="2">2</button><button type="button" data-key="3">3</button><button type="button" data-key="4">4</button><button type="button" data-key="5">5</button><button type="button" data-key="6">6</button><button type="button" data-key="7">7</button><button type="button" data-key="8">8</button><button type="button" data-key="9">9</button><button type="button" class="key-clear" data-key="clear" aria-label="Effacer tout">C</button><button type="button" data-key="0">0</button><button type="button" class="key-clear" data-key="back" aria-label="Effacer le dernier chiffre">⌫</button></div><button class="primary validate" id="validate-button" type="button">Valider <span aria-hidden="true">→</span></button></div>
+ <div id="answer-feedback" class="answer-feedback" role="status" aria-live="polite" hidden></div><button class="primary next-button" id="next-button" hidden>Calcul suivant <span aria-hidden="true">→</span></button><button class="hint-button" id="hint-button">✧ Un petit coup de pouce</button><div class="hint-box" id="hint-box" hidden></div></div>
+ <section id="chrono-round" class="shell" aria-label="Défi chronométré" hidden>
+  <div class="content">
+   <p id="chrono-instructions" class="notice">Le chrono démarre à ta première réponse. Complète les 15 calculs, puis clique sur « Vérifier ».</p>
+   <div id="chrono-grid" class="grid"></div>
+   <div class="actions">
+    <button type="button" id="chrono-check" class="check">Vérifier</button>
+    <button type="button" id="chrono-results" hidden>Voir mon bilan</button>
+   </div>
+   <p id="chrono-feedback" class="feedback" role="status"></p>
+  </div>
+ </section>
+</section>
+<section id="result-view" class="result-view" hidden aria-labelledby="result-title"><div class="result-illustration" aria-hidden="true"><svg><use href="#flower"/></svg><span>✧</span><svg><use href="#flower"/></svg></div><div class="eyebrow">CHAQUE ESSAI TE FAIT GRANDIR</div><h1 id="result-title">Une belle pousse de progrès !</h1><p id="result-description"></p><div class="result-stats" id="result-stats"></div><p class="flower-message" id="flower-message"></p><div class="result-actions"><button class="primary" id="replay-button">Une nouvelle partie <span>↻</span></button><button class="secondary" id="result-home">Choisir une autre mission</button></div><section class="review-section"><h2>Les calculs à faire refleurir</h2><p id="review-intro"></p><div id="review-list"></div></section></section>
+</main>
+<footer><a class="footer-brand" href="./index.html">calculpop!</a><p>Un jardin pour apprendre, un calcul à la fois.</p><button id="source-open">À propos des activités</button><span>CE2 · Sans publicité</span></footer>
+<dialog id="help-dialog" class="info-dialog"><button class="dialog-close" data-close aria-label="Fermer">×</button><span class="dialog-icon peach">?</span><h2>Un petit tour avant de jouer ?</h2><ol class="help-steps"><li><b>Choisis ton rythme.</b> Sans chrono, ou 15 calculs en 3 minutes.</li><li><b>Choisis une mission.</b> Tous les défis sont ouverts dès le début.</li><li><b>Trouve le nombre manquant.</b> Tape ta réponse ou utilise le clavier numérique. En mode chronométré, les 15 calculs sont sur la même page.</li><li><b>Découvre une astuce.</b> À ton rythme, tu peux demander de l’aide et réessayer une fois. En mode chronométré, clique sur « Vérifier » pour voir la correction.</li></ol><p class="soft-box">Une partie terminée avec au moins un calcul trouvé fait pousser une fleur dans ton jardin. Il n’y a pas de ceinture : tu avances à ton rythme !</p><button class="primary" data-close>C’est parti !</button></dialog>
+<dialog id="garden-dialog" class="info-dialog garden-dialog"><button class="dialog-close" data-close aria-label="Fermer">×</button><span class="dialog-icon mint"><svg><use href="#sprout"/></svg></span><h2>Mon jardin de progrès</h2><p>Chaque partie est une petite graine plantée.</p><div id="garden-stats"></div><div id="garden-flowers" class="garden-flowers"></div><p class="local-note">Ton jardin est enregistré sur cet appareil, dans ce navigateur.</p><button class="reset-button" id="reset-open">Recommencer mon jardin</button></dialog>
+<dialog id="pause-dialog" class="info-dialog pause-dialog"><span class="dialog-icon yellow">☀</span><h2>Une petite pause</h2><p>Ton calcul t’attend. Prends le temps de souffler.</p><button class="primary" id="resume-game">Je continue →</button><button class="secondary" id="quit-game">Quitter cette partie</button><p class="local-note">Une partie quittée ne compte pas dans le jardin.</p></dialog>
+<dialog id="reset-dialog" class="info-dialog"><h2>Repartir d’une petite graine ?</h2><p>Les fleurs et les résultats enregistrés sur cet appareil seront effacés.</p><button class="primary" id="reset-cancel">Garder mon jardin</button><button class="reset-button" id="reset-confirm">Effacer mon jardin</button></dialog>
+<dialog id="source-dialog" class="info-dialog"><button class="dialog-close" data-close aria-label="Fermer">×</button><span class="dialog-icon lavender">✦</span><h2>Le calcul, en version jeu</h2><p>Ces 30 missions reprennent les compétences du document « Calcul Mental CE2 P1 à P5 » fourni : additions, compléments, soustractions, tables, doubles et moitiés.</p><p>Les calculs sont générés pour varier les parties. Les cinq parcours organisent les compétences dans leur ordre de découverte ; ils ne reproduisent pas un découpage officiel en périodes. Les ceintures ont été retirées.</p><p class="local-note">Document de référence : « Maths en CE2 », Accès éditions, 2025. Jeu interactif adapté pour un entraînement personnel. Aucun nom d’élève n’est demandé.</p><button class="primary" data-close>Retour au jardin</button></dialog>
+<div class="confetti" id="confetti" aria-hidden="true"></div>
+<script>
+(function(root){
+ 'use strict';
+ const families={addition:{name:'Additions',icon:'+',color:'peach'},subtraction:{name:'Soustractions',icon:'−',color:'pink'},multiplication:{name:'Multiplications',icon:'×',color:'lavender'},double:{name:'Doubles & moitiés',icon:'½',color:'mint'},mix:{name:'Méli-mélo',icon:'✦',color:'yellow'}};
+ const missions=[
+  {id:'add-tables',family:'addition',title:'Les petites additions',detail:'Les tables d’addition, avec des nombres à trouver.',type:'add',stage:1},
+  {id:'next-ten',family:'addition',title:'En route vers la dizaine',detail:'Trouver ce qui manque pour atteindre la dizaine suivante.',type:'complement',stage:1},
+  {id:'add-small',family:'addition',title:'Les petits bonds',detail:'Ajouter un nombre de 1 à 8, même aux grands nombres.',type:'small',stage:1},
+  {id:'double-small',family:'double',title:'Doubles malins',detail:'Le double des nombres de 1 à 20.',type:'double',values:Array.from({length:20},(_,i)=>i+1),stage:1},
+  {id:'half-small',family:'double',title:'À partager en deux',detail:'La moitié des nombres pairs de 2 à 40.',type:'half',values:Array.from({length:20},(_,i)=>(i+1)*2),stage:1},
+  {id:'mix-small',family:'mix',title:'Duo de petits nombres',detail:'Un mélange de doubles et de moitiés jusqu’à 40.',types:['double-small','half-small'],stage:1},
+  {id:'add-nine',family:'addition',title:'Presque une dizaine',detail:'Ajouter 9, 19, 29 ou 39 avec une astuce.',type:'near-add',offset:1,stage:2},
+  {id:'add-eight',family:'addition',title:'Encore deux petits pas',detail:'Ajouter 8, 18, 28 ou 38 avec une astuce.',type:'near-add',offset:2,stage:2},
+  {id:'subtract-nine',family:'subtraction',title:'Le détour malin',detail:'Soustraire 9, 19, 29 ou 39 en passant par une dizaine.',type:'near-subtract',stage:2},
+  {id:'tables-2510',family:'multiplication',title:'Tables de 2, 5 et 10',detail:'Produits, nombres manquants et petits partages.',type:'table',tables:[2,5,10],stage:2},
+  {id:'tables-24510',family:'multiplication',title:'La table de 4 s’invite',detail:'Réviser les tables de 2, 4, 5 et 10.',type:'table',tables:[2,4,5,10],stage:2},
+  {id:'tables-234510',family:'multiplication',title:'Bonjour, la table de 3 !',detail:'Réviser les tables de 2, 3, 4, 5 et 10.',type:'table',tables:[2,3,4,5,10],stage:2},
+  {id:'mix-strategy',family:'mix',title:'Le mélange des astuces',detail:'Ajouter 8 ou 9, retirer 9… et leurs grandes familles.',types:['add-eight','add-nine','subtract-nine'],stage:2},
+  {id:'tables-36',family:'multiplication',title:'Les copines 3 et 6',detail:'Faire le lien entre la table de 3 et celle de 6.',type:'table',tables:[3,6],stage:3},
+  {id:'tables-2345610',family:'multiplication',title:'Les tables font équipe',detail:'Réviser les tables de 2, 3, 4, 5, 6 et 10.',type:'table',tables:[2,3,4,5,6,10],stage:3},
+  {id:'double-tens',family:'double',title:'Doubles en grand',detail:'Doubler 20, 25, 30, 35, 40, 45, 50, 60 et 75.',type:'double',values:[20,25,30,35,40,45,50,60,75],stage:3},
+  {id:'double-hundreds',family:'double',title:'Les doubles géants',detail:'Doubler 100, 150, 200, 250, 300, 400, 500 et 600.',type:'double',values:[100,150,200,250,300,400,500,600],stage:3},
+  {id:'times-10100',family:'multiplication',title:'Dix fois, cent fois',detail:'Multiplier un entier par 10 ou par 100.',type:'scale',stage:3},
+  {id:'mix-doubles',family:'mix',title:'La ronde des doubles',detail:'Mélanger les doubles des dizaines et des centaines.',types:['double-tens','double-hundreds'],stage:3},
+  {id:'multiples25',family:'multiplication',title:'Les bonds de 25',detail:'Retrouver 25, 50, 75 et 100 et leurs décompositions.',type:'quarter',stage:4},
+  {id:'times-four',family:'multiplication',title:'Deux doubles, ça fait quatre',detail:'Multiplier un nombre à deux chiffres par 4.',type:'four',stage:4},
+  {id:'tables-seven',family:'multiplication',title:'La table de 7 rejoint le jeu',detail:'Réviser les tables de 2, 3, 4, 5, 6, 7 et 10.',type:'table',tables:[2,3,4,5,6,7,10],stage:4},
+  {id:'half-tens',family:'double',title:'La moitié des dizaines',detail:'Partager en deux : 40, 50, 60, 70, 80, 90, 100, 120, 150.',type:'half',values:[40,50,60,70,80,90,100,120,150],stage:4},
+  {id:'half-hundreds',family:'double',title:'La moitié des centaines',detail:'Partager en deux des nombres de 200 à 1 200.',type:'half',values:[200,300,400,500,600,800,1000,1200],stage:4},
+  {id:'times-tens',family:'multiplication',title:'Des paquets de dizaines',detail:'Multiplier un nombre de 1 à 9 par 10, 20… ou 90.',type:'tens',stage:4},
+  {id:'mix-halves',family:'mix',title:'Le grand partage',detail:'Mélanger les moitiés des dizaines et des centaines.',types:['half-tens','half-hundreds'],stage:4},
+  {id:'make60',family:'multiplication',title:'Tous les chemins vers 60',detail:'Trouver les nombres qui se multiplient pour faire 60.',type:'sixty',stage:5},
+  {id:'tables-89',family:'multiplication',title:'Le duo 8 et 9',detail:'Produits, nombres manquants et divisions dans les tables de 8 et 9.',type:'table',tables:[8,9],stage:5},
+  {id:'tables-all',family:'multiplication',title:'Le grand bal des tables',detail:'Toutes les tables de 2 à 10 se retrouvent !',type:'table',tables:[2,3,4,5,6,7,8,9,10],stage:5},
+  {id:'mix-final',family:'mix',title:'La promenade des calculs',detail:'Doubles, moitiés et astuces d’addition ou de soustraction.',types:['add-eight','add-nine','subtract-nine','half-tens','half-hundreds','double-tens','double-hundreds'],stage:5}
+ ];
+ const int=(a,b)=>a+Math.floor(Math.random()*(b-a+1)),pick=a=>a[int(0,a.length-1)],fmt=n=>new Intl.NumberFormat('fr-FR').format(n);
+ function equation(a,op,b,result,blank='result',hint=''){
+  const f=fmt;return {parts:[blank==='a'?null:f(a),` ${op} `,blank==='b'?null:f(b),' = ',blank==='result'?null:f(result)],answer:blank==='a'?a:blank==='b'?b:result,solution:`${f(a)} ${op} ${f(b)} = ${f(result)}`,hint};
+ }
+ function makeQuestion(mission){
+  const m=typeof mission==='string'?missions.find(x=>x.id===mission):mission;
+  if(!m)throw Error('Mission inconnue');
+  if(m.types)return {...makeQuestion(pick(m.types)),missionId:m.id};
+  const f=fmt;let q,a,b,v,t,shape;
+  switch(m.type){
+   case 'add':a=int(1,9);b=int(1,9);q=equation(a,'+',b,a+b,pick(['result','result','a','b']),`Pars de ${Math.max(a,b)} et ajoute ${Math.min(a,b)}. Pour un nombre manquant, cherche ce qu’il faut ajouter pour arriver au total.`);break;
+   case 'complement':a=pick([int(1,9),int(11,99),int(101,999)]);if(a%10===0)a++;b=10-a%10;q=equation(a,'+',b,a+b,pick(['a','b','b']),`Regarde le chiffre des unités de ${f(a)} : c’est ${a%10}. Combien lui manque-t-il pour arriver à 10 ?`);break;
+   case 'small':a=pick([int(15,99),int(100,999),int(1000,8999)]);b=int(1,8);v=a+b;q=Math.random()<.5?equation(a,'+',b,v):equation(b,'+',a,v);q.hint=`Tu peux ajouter ${b} en plusieurs petits bonds. Si tu passes une dizaine, complète d’abord cette dizaine, puis ajoute le reste.`;break;
+   case 'near-add':a=int(12,959);t=pick([10,20,30,40]);b=t-m.offset;q=equation(a,'+',b,a+b,'result',`Pour ajouter ${b}, ajoute ${t}, puis retire ${m.offset} : ${f(a)} + ${t} = ${f(a+t)}. Il reste à retirer ${m.offset}.`);break;
+   case 'near-subtract':a=int(41,999);t=pick([10,20,30,40]);b=t-1;q=equation(a,'−',b,a-b,'result',`Pour retirer ${b}, retire ${t}, puis ajoute 1 : ${f(a)} − ${t} = ${f(a-t)}. Il reste à ajouter 1.`);break;
+   case 'double':a=pick(m.values);v=a*2;shape=int(0,2);q=shape===0?{parts:[`Le double de ${f(a)} = `,null],answer:v,solution:`Le double de ${f(a)} est ${f(v)}.`}:equation(a,shape===1?'+':'×',shape===1?a:2,v);q.hint=`Un double, c’est deux fois le même nombre : ${f(a)} + ${f(a)}. Tu peux doubler les centaines, les dizaines, puis les unités.`;break;
+   case 'half':a=pick(m.values);v=a/2;shape=int(0,2);q=shape===0?{parts:[`La moitié de ${f(a)} = `,null],answer:v,solution:`La moitié de ${f(a)} est ${f(v)}.`}:shape===1?equation(2,'×',v,a,'b'):equation(a,'÷',2,v);q.hint=`Cherche le nombre qui, ajouté à lui-même, donne ${f(a)}. Tu partages ${f(a)} en deux parts égales.`;break;
+   case 'table':a=pick(m.tables);b=int(0,10);v=a*b;shape=int(0,4);q=shape===4?{parts:[`Dans ${v}, combien de fois ${a} ? `,null],answer:b,solution:`${v} ÷ ${a} = ${b}`} : shape===3?equation(v,'÷',a,b):equation(a,'×',b,v,shape===2?'b':'result');q.hint=`Compte de ${a} en ${a}. Pour un nombre manquant ou un partage, cherche combien de paquets de ${a} donnent ${v}.`;break;
+   case 'scale':a=int(1,799);b=pick([10,100]);v=a*b;q=equation(a,'×',b,v,pick(['result','result','a']));q.hint=`Multiplier par ${b}, c’est rendre le nombre ${b} fois plus grand. Les chiffres se déplacent de ${b===10?'un rang':'deux rangs'} vers la gauche dans le tableau de numération.`;break;
+   case 'quarter':a=25;b=int(1,4);v=a*b;q=equation(a,'×',b,v,pick(['result','b']));q.hint='Compte de 25 en 25 : 25, 50, 75, 100. Quatre paquets de 25 font 100.';break;
+   case 'four':a=int(11,79);q=equation(a,'×',4,a*4);q.hint=`Multiplie par 4 en faisant deux doubles : le double de ${a} est ${a*2}. Double encore ce résultat.`;break;
+   case 'tens':a=int(1,9);b=int(1,9)*10;v=a*b;q=equation(a,'×',b,v,pick(['result','result','a','b']));q.hint=`${b}, c’est ${b/10} dizaine${b===10?'':'s'}. Utilise ${a} × ${b/10} = ${a*(b/10)}, puis compte en dizaines. Pour un nombre manquant, vérifie la multiplication complète.`;break;
+   case 'sixty':a=pick([2,3,4,5,6,10,12,15,20,30]);b=60/a;q=equation(a,'×',b,60,pick(['a','b','result']));q.hint='Pense aux paires qui donnent 60 : 2 et 30, 3 et 20, 4 et 15, 5 et 12, 6 et 10.';break;
+   default:throw Error('Type inconnu');
+  }
+  return {...q,missionId:m.id};
+ }
+ function makeRound(id,count=10){
+  const result=[],seen=new Set();let retries=0;
+  while(result.length<count){const q=makeQuestion(id),key=q.parts.join('?');if(seen.has(key)&&retries++<100)continue;seen.add(key);result.push(q);}
+  return result;
+ }
+ function isCorrect(value,answer){return /^\d+$/.test(String(value).trim())&&Number(value)===answer;}
+ const api={families,missions,makeQuestion,makeRound,isCorrect,fmt};
+ if(typeof module==='object'&&module.exports)module.exports=api;else root.CalculPop=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+
+</script>
+<script>
+(()=>{
+ 'use strict';
+ const {families,missions,makeRound,isCorrect,fmt}=CalculPop;
+ const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+let audio;
+let soundEnabled = true;
+try { soundEnabled = localStorage.getItem("calcul-pop-ce2-sound") !== "off"; } catch {}
+const soundBtn = document.getElementById("soundBtn");
+
+function updateSoundButton(){
+  soundBtn.setAttribute("aria-pressed", String(soundEnabled));
+  soundBtn.textContent = soundEnabled ? "♫ Sons activés" : "♫ Sons coupés";
+}
+
+function armAudio(){
+  if(!soundEnabled) return;
+  const Audio = window.AudioContext || window.webkitAudioContext;
+  if(!Audio) return;
+  try{
+    if(!audio) audio = new Audio();
+    if(audio.state === "suspended") audio.resume().catch(()=>{});
+  }catch{}
+}
+
+function playCorrection(hasCorrect, hasError){
+  if(!soundEnabled || !audio) return;
+  function play(){
+    if(!soundEnabled || audio.state !== "running") return;
+    const start = audio.currentTime + .015;
+    function note(frequency, offset, duration, shape){
+      const when = start + offset;
+      const tone = audio.createOscillator();
+      const gain = audio.createGain();
+      tone.type = shape;
+      tone.frequency.value = frequency;
+      gain.gain.setValueAtTime(.0001, when);
+      gain.gain.exponentialRampToValueAtTime(.045, when + .018);
+      gain.gain.exponentialRampToValueAtTime(.0001, when + duration);
+      tone.connect(gain);
+      gain.connect(audio.destination);
+      tone.start(when);
+      tone.stop(when + duration + .02);
+    }
+    if(hasCorrect) [523.25, 659.25, 783.99].forEach((pitch,i)=>note(pitch,i*.075,.18,"sine"));
+    if(hasError){
+      const offset = hasCorrect ? .38 : 0;
+      note(293.66,offset,.13,"triangle");
+      note(196,offset+.13,.20,"triangle");
+    }
+  }
+  if(audio.state === "suspended") audio.resume().then(play).catch(()=>{});
+  else play();
+}
+
+updateSoundButton();
+soundBtn.addEventListener("click",()=>{
+  soundEnabled = !soundEnabled;
+  try { localStorage.setItem("calcul-pop-ce2-sound", soundEnabled ? "on" : "off"); } catch {}
+  updateSoundButton();
+  armAudio();
+});
+
+ const key='calcul-pop-ce2-v1';let mode='relax',family='all',stage='all',session=null,tick=null,returnFocus=null;
+ const fresh=()=>({version:1,flowers:0,sessions:0,totalFound:0,skills:{},lastMission:null,mode:'relax'});
+ function read(){try{const v=JSON.parse(localStorage.getItem(key));return v&&v.version===1&&v.skills?{...fresh(),...v}:fresh();}catch{return fresh();}}
+ let garden=read();mode=['relax','chrono'].includes(garden.mode)?garden.mode:'relax';
+ function save(){try{localStorage.setItem(key,JSON.stringify(garden));}catch{}}
+ function openDialog(id){returnFocus=document.activeElement;$('#'+id).showModal();}
+ function closeDialog(d){d.close();returnFocus?.focus();}
+ function view(id){['home','game','result'].forEach(v=>$('#'+v+'-view').hidden=v!==id);window.scrollTo({top:0,behavior:'instant'});}
+ function updateHeader(){$('#garden-count').textContent=garden.flowers;$('#garden-open').setAttribute('aria-label',`Mon jardin, ${garden.flowers} fleur${garden.flowers===1?'':'s'}`);}
+ function setMode(value){mode=value;garden.mode=mode;save();$$('[data-mode]').forEach(b=>{const chosen=b.dataset.mode===mode;b.classList.toggle('selected',chosen);b.setAttribute('aria-pressed',String(chosen));});}
+ function renderMissions(){
+  const list=missions.filter(m=>(family==='all'||m.family===family)&&(stage==='all'||String(m.stage)===stage));
+  $('#mission-count').textContent=`${list.length} mission${list.length===1?'':'s'} à explorer`;
+  $('#mission-grid').replaceChildren();$('#empty-missions').hidden=!!list.length;
+  list.forEach(m=>{
+   const f=families[m.family],s=garden.skills[m.id];const card=document.createElement('article');card.className='mission-card';
+   card.innerHTML=`<div class="card-top"><span class="mission-symbol ${f.color}" aria-hidden="true">${f.icon}</span><span class="card-stage">Parcours ${m.stage}</span></div><h3>${m.title}</h3><p>${m.detail}</p><div class="card-bottom"><span class="card-progress ${s?'done':''}">${s?`✿ Meilleur : ${Math.round(s.best*100)} %`:'À découvrir'}</span><button class="card-play ${f.color}" aria-label="Jouer : ${m.title}">Jouer <span aria-hidden="true">→</span></button></div>`;
+   $('button',card).addEventListener('click',()=>start(m.id));$('#mission-grid').append(card);
+  });
+  $('#resume-button').hidden=!garden.lastMission;
+ }
+ function goHome(){clearInterval(tick);session=null;view('home');renderMissions();updateHeader();$('#missions-title').setAttribute('tabindex','-1');$('#missions-title').focus({preventScroll:true});}
+ function start(id){
+  const m=missions.find(m=>m.id===id);if(!m)return;clearInterval(tick);armAudio();
+  garden.lastMission=id;save();
+  session={id,mission:m,mode,questions:makeRound(id,mode==='chrono'?15:10),index:0,records:[],attempts:0,hint:false,solved:false,paused:false,remaining:180000,lastTick:Date.now(),clockStarted:false,completed:false};
+  $('#pause-button').disabled=false;
+  $('#game-title').textContent=m.title;$('#game-family').textContent=families[m.family].name;$('#game-mode').textContent=mode==='chrono'?'◷ Défi 3 minutes':'☀ À ton rythme';$('#timer').hidden=mode!=='chrono';$('#right-count').hidden=mode==='chrono';
+  $('#round-progress').setAttribute('aria-valuemax',String(session.questions.length));
+  const timed=mode==='chrono';
+  $('#practice-round').hidden=timed;
+  $('#chrono-round').hidden=!timed;
+  view('game');
+  if(timed)renderChrono();
+  else renderQuestion();
+  if(timed){
+   tick=setInterval(()=>{
+    const now=Date.now();
+    if(session.clockStarted&&!session.paused){
+     session.remaining=Math.max(0,session.remaining-(now-session.lastTick));
+     renderTime();
+     if(session.remaining===0)checkChrono(true);
+    }
+    session.lastTick=now;
+   },200);
+  }
+ }
+ function updateChronoProgress(){
+  const answered=$$('.chrono-answer').filter(input=>input.value!=='').length;
+  $('#question-count').textContent=`${answered} / ${session.questions.length} réponses`;
+  $('#round-progress').setAttribute('aria-valuenow',String(answered));
+  $('#progress-fill').style.width=`${answered/session.questions.length*100}%`;
+ }
+ function renderChrono(){
+  const grid=$('#chrono-grid');
+  grid.replaceChildren();
+  $('#chrono-check').hidden=false;
+  $('#chrono-results').hidden=true;
+  $('#chrono-feedback').textContent='';
+  session.questions.forEach((q,index)=>{
+   const card=document.createElement('div');
+   card.className='calc answer-entry';
+   const row=document.createElement('div');
+   row.className='equation-row';
+   const textQuestion=q.parts.some(part=>part!==null&&/[a-zÀ-ÿ]/i.test(part));
+   if(textQuestion)card.classList.add('text-question');
+   // Size mathematical equations as a single row, including on narrow screens.
+   const width=q.parts.reduce((total,part)=>{
+    if(part===null)return total+4.6;
+    return total+part.trim().length*.86;
+   },.85);
+   row.style.setProperty('--equation-width',String(width));
+   for(const part of q.parts){
+    if(part===null){
+     const input=document.createElement('input');
+     input.className='chrono-answer';
+     input.inputMode='numeric';
+     input.autocomplete='off';
+     input.maxLength=6;
+     input.setAttribute('aria-label',`Réponse ${index+1} : ${q.parts.map(p=>p??'…').join('')}`);
+     input.addEventListener('input',()=>{
+      input.value=input.value.replace(/\D/g,'');
+      if(!session.clockStarted&&input.value!==''){
+       session.clockStarted=true;
+       session.lastTick=Date.now();
+      }
+      updateChronoProgress();
+     });
+     input.addEventListener('keydown',event=>{
+      if(event.key!=='Enter')return;
+      event.preventDefault();
+      ($$('.chrono-answer')[index+1] || $('#chrono-check')).focus();
+     });
+     row.append(input);
+    }else{
+     const span=document.createElement('span');
+     span.textContent=part.trim();
+     if(/^\d/.test(span.textContent))span.className='operand';
+     row.append(span);
+    }
+   }
+   card.append(row);
+   grid.append(card);
+  });
+  updateChronoProgress();
+  renderTime();
+  if(!matchMedia('(pointer: coarse)').matches)$('input',grid).focus({preventScroll:true});
+ }
+ function checkChrono(expired=false){
+  const s=session;
+  if(!s||s.completed||s.paused)return;
+  s.records=$$('.chrono-answer').map((input,index)=>{
+   const q=s.questions[index],response=input.value;
+   const unanswered=response==='',correct=isCorrect(response,q.answer);
+   const feedback=document.createElement('span');
+   feedback.id=`chrono-mark-${index+1}`;
+   feedback.className='chrono-mark';
+   if(unanswered){
+    feedback.textContent='Sans réponse';
+   }else if(correct){
+    input.classList.add('good');
+    feedback.classList.add('good');
+    feedback.textContent='✓ Juste';
+   }else{
+    input.classList.add('bad');
+    feedback.classList.add('bad');
+    input.setAttribute('aria-invalid','true');
+    feedback.textContent='✗ Faux';
+   }
+   input.setAttribute('aria-describedby',feedback.id);
+   input.disabled=true;
+   input.closest('.calc').append(feedback);
+   return {q,correct,first:correct,response,unanswered};
+  });
+  const correct=s.records.filter(r=>r.correct).length;
+  playCorrection(correct>0,s.records.some(r=>!r.correct&&!r.unanswered));
+  finish(expired,true);
+  $('#chrono-check').hidden=true;
+  $('#chrono-results').hidden=false;
+  $('#chrono-feedback').textContent=`${expired?'Temps écoulé ! ':''}Score : ${correct} / ${s.questions.length}.`;
+  $('#pause-button').disabled=true;
+  $('#right-count').textContent=`Score : ${correct} / ${s.questions.length}`;
+  $('#right-count').hidden=false;
+  if(!expired){
+   $('#chrono-results').focus({preventScroll:true});
+   requestAnimationFrame(()=>$('#chrono-feedback').scrollIntoView({block:'nearest'}));
+  }
+ }
+ function renderTime(){if(!session)return;const seconds=Math.ceil(session.remaining/1000);$('#timer').textContent=`${Math.floor(seconds/60)}:${String(seconds%60).padStart(2,'0')}`;$('#timer').classList.toggle('urgent',seconds<=30);}
+ function renderQuestion(){
+  const s=session,q=s.questions[s.index];s.attempts=0;s.hint=false;s.solved=false;
+  $('#question-count').textContent=`Calcul ${s.index+1} sur ${s.questions.length}`;$('#progress-fill').style.width=`${s.index/s.questions.length*100}%`;$('#round-progress').setAttribute('aria-valuenow',String(s.index));
+  const right=s.records.filter(r=>r.correct).length;$('#right-count').textContent=`${right} trouvé${right>1?'s':''}`;
+  $('#question-kicker').textContent=q.parts.some(p=>p===null)&&q.parts[q.parts.length-1]!==null?'Quel nombre manque ?':'À toi de trouver !';
+  const equation=$('#equation');equation.replaceChildren();equation.classList.toggle('word-equation',q.parts.some(p=>typeof p==='string'&&/[a-zA-ZÀ-ÿ]/.test(p)));
+  q.parts.forEach(part=>{if(part===null){const input=document.createElement('input');input.type='text';input.inputMode='numeric';input.pattern='[0-9]*';input.autocomplete='off';input.spellcheck=false;input.maxLength=6;input.className='answer-input';input.id='answer';input.placeholder='?';input.setAttribute('aria-label','Ta réponse, le nombre manquant');input.setAttribute('aria-describedby','answer-error');input.addEventListener('input',()=>{input.value=input.value.replace(/\D/g,'').slice(0,6);$('#answer-error').hidden=true;input.removeAttribute('aria-invalid');});equation.append(input);}else{const span=document.createElement('span');span.textContent=part.trim();if(/^\d/.test(span.textContent))span.className='operand';equation.append(span);}});
+  $('#practice-keypad').hidden=false;$('#validate-button').hidden=false;$('#next-button').hidden=true;$('#answer-feedback').hidden=true;$('#answer-error').hidden=true;$('#hint-box').hidden=true;$('#hint-button').hidden=false;$('#hint-button').textContent='✧ Un petit coup de pouce';renderTime();focusAnswer();
+ }
+ function focusAnswer(){if(window.innerWidth>600)$('#answer')?.focus({preventScroll:true});}
+ function showHint(){if(!session||session.solved)return;session.hint=true;$('#hint-box').textContent='✧ '+session.questions[session.index].hint;$('#hint-box').hidden=false;$('#hint-button').hidden=true;}
+ function feedback(cls,title,detail){const box=$('#answer-feedback');box.className='answer-feedback '+cls;box.replaceChildren();const strong=document.createElement('strong');strong.textContent=title;box.append(strong,document.createTextNode(detail));box.hidden=false;}
+ function submit(){
+  const s=session;if(!s||s.paused||s.solved)return;const input=$('#answer'),value=input.value.trim(),q=s.questions[s.index];
+  if(!/^\d+$/.test(value)){$('#answer-error').hidden=false;input.setAttribute('aria-invalid','true');input.focus();return;}
+  s.attempts++;const correct=isCorrect(value,q.answer);playCorrection(correct,!correct);
+  if(correct){s.records.push({q,correct:true,first:s.attempts===1&&!s.hint,hinted:s.hint,response:value,attempts:s.attempts});feedback('success',s.attempts===1&&!s.hint?'Bien joué, ça pousse !':'Trouvé ! Tu as persévéré.',q.solution);input.classList.remove('incorrect');input.classList.add('correct');completeQuestion();}
+  else if(s.attempts===1){input.classList.add('incorrect');feedback('retry','Un petit détour… on essaie encore ?',`Ta réponse ${value} ne complète pas ce calcul. Voici une astuce pour t’aider.`);showHint();input.value='';focusAnswer();}
+  else{s.records.push({q,correct:false,first:false,hinted:true,response:value,attempts:s.attempts});feedback('correction','Une nouvelle astuce à garder.',`La réponse était ${fmt(q.answer)}. ${q.solution}`);input.value=String(q.answer);input.classList.remove('incorrect');completeQuestion();}
+ }
+ function completeQuestion(){session.solved=true;$('#answer').disabled=true;$('#practice-keypad').hidden=true;$('#validate-button').hidden=true;$('#hint-button').hidden=true;$('#next-button').textContent=session.index===session.questions.length-1?'Voir mon jardin →':'Calcul suivant →';$('#next-button').hidden=false;$('#next-button').focus({preventScroll:true});}
+ function next(){if(!session||!session.solved||session.paused)return;session.index++;if(session.index>=session.questions.length)finish(false);else renderQuestion();}
+ function pause(){if(!session||session.completed)return;session.paused=true;openDialog('pause-dialog');}
+ function resume(){if(!session)return;session.paused=false;session.lastTick=Date.now();$('#pause-dialog').close();(session.mode==='chrono'?$('.chrono-answer'):session.solved?$('#next-button'):$('#answer')).focus({preventScroll:true});}
+ function finish(expired,keepGrid=false){
+  const s=session;if(!s||s.completed)return;s.completed=true;clearInterval(tick);if($('#pause-dialog').open)$('#pause-dialog').close();
+  const correct=s.records.filter(r=>r.correct).length,first=s.records.filter(r=>r.first).length,help=correct-first,remaining=s.questions.length-s.records.length;
+  garden.sessions++;garden.totalFound+=correct;if(correct)garden.flowers++;
+  const prev=garden.skills[s.id]||{played:0,best:0};garden.skills[s.id]={played:prev.played+1,best:Math.max(prev.best,correct/s.questions.length)};save();updateHeader();
+  $('#result-title').textContent=expired?'Le temps est écoulé, bravo d’avoir essayé !':correct===s.questions.length?'Tous les calculs ont fleuri !':'Une belle pousse de progrès !';
+  $('#result-description').textContent=`${s.mission.title} · ${s.mode==='chrono'?'Défi 3 minutes':'À ton rythme'} · ${correct} calcul${correct===1?'':'s'} trouvé${correct===1?'':'s'} sur ${s.questions.length}`;
+  const stats=[{n:first,label:'Du premier coup'},{n:help,label:'Avec un coup de pouce'},{n:s.questions.length-correct,label:expired&&remaining?'À revoir ou à découvrir':'À faire refleurir'}];$('#result-stats').innerHTML=stats.map(o=>`<div class="result-stat"><b>${o.n}</b><span>${o.label}</span></div>`).join('');
+  $('#flower-message').textContent=correct?'✿ Une nouvelle fleur a poussé dans ton jardin !':'Chaque essai compte. Une nouvelle partie t’attend quand tu veux.';
+  const review=s.records.filter(r=>!r.first);if(expired&&remaining){for(let i=s.records.length;i<s.questions.length;i++)review.push({q:s.questions[i],unanswered:true});}
+  $('#review-intro').textContent=review.length?'Un petit rappel pour la prochaine promenade.':'Tout est trouvé du premier coup. Prêt pour une autre mission ?';$('#review-list').replaceChildren();
+  review.forEach(r=>{const row=document.createElement('article');row.className='review-row';const title=document.createElement('strong');title.textContent=r.q.solution;const hint=document.createElement('p');hint.textContent=r.q.hint;const note=document.createElement('small');note.textContent=r.unanswered?'À découvrir lors d’une prochaine partie':r.correct?'Trouvé avec de l’aide ou au deuxième essai':'À réessayer tranquillement';row.append(title,hint,note);$('#review-list').append(row);});
+  if(!keepGrid)showResults();
+ }
+ function showResults(){
+  view('result');$('#result-title').setAttribute('tabindex','-1');$('#result-title').focus({preventScroll:true});if(session.records.some(r=>r.correct))celebrate();
+ }
+ function celebrate(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;const box=$('#confetti');box.replaceChildren();for(let i=0;i<24;i++){const p=document.createElement('i');p.style.left=Math.random()*100+'%';p.style.background=['#c4db8d','#e9a184','#b7a8df','#f2d47f'][i%4];p.style.animationDelay=Math.random()*.4+'s';box.append(p);}setTimeout(()=>box.replaceChildren(),2400);}
+ function showGarden(){
+  $('#garden-stats').innerHTML=`<div class="garden-stats-row"><div><b>${garden.flowers}</b><span>fleur${garden.flowers===1?'':'s'}</span></div><div><b>${garden.sessions}</b><span>partie${garden.sessions===1?'':'s'} terminée${garden.sessions===1?'':'s'}</span></div><div><b>${garden.totalFound}</b><span>calcul${garden.totalFound===1?'':'s'} trouvé${garden.totalFound===1?'':'s'}</span></div></div>`;
+  const box=$('#garden-flowers');box.replaceChildren();if(!garden.flowers){const p=document.createElement('p');p.textContent='Ton jardin attend sa première fleur. Choisis une mission et lance-toi !';box.append(p);}else{for(let i=0;i<Math.min(garden.flowers,40);i++){const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('aria-hidden','true');svg.innerHTML='<use href="#flower"/>';svg.style.color=['#eda185','#b5a1d9','#e8bf59'][i%3];box.append(svg);}if(garden.flowers>40){const p=document.createElement('p');p.textContent=`… et ${garden.flowers-40} autres fleurs !`;box.append(p);}}
+  openDialog('garden-dialog');
+ }
+ $$('[data-mode]').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.mode)));
+ $$('[data-family]').forEach(b=>b.addEventListener('click',()=>{family=b.dataset.family;$$('[data-family]').forEach(btn=>{const active=btn===b;btn.classList.toggle('active',active);btn.setAttribute('aria-pressed',String(active));});renderMissions();}));
+ $('#journey').addEventListener('change',e=>{stage=e.target.value;renderMissions();});$('#show-all').addEventListener('click',()=>{stage='all';$('#journey').value='all';renderMissions();});
+ $('#resume-button').addEventListener('click',()=>start(garden.lastMission));$('#validate-button').addEventListener('click',submit);$('#answer-form').addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.id==='answer'){e.preventDefault();e.stopPropagation();submit();}});$('#next-button').addEventListener('click',next);$('#hint-button').addEventListener('click',showHint);
+ $$('[data-key]').forEach(b=>b.addEventListener('click',()=>{if(!session||session.solved||session.paused)return;const input=$('#answer'),k=b.dataset.key;input.value=k==='clear'?'':k==='back'?input.value.slice(0,-1):(input.value+k).slice(0,6);$('#answer-error').hidden=true;input.removeAttribute('aria-invalid');}));
+ $('#chrono-check').addEventListener('click',()=>checkChrono());$('#chrono-results').addEventListener('click',showResults);
+ $('#pause-button').addEventListener('click',pause);$('#game-back').addEventListener('click',()=>session?.completed?goHome():pause());$('#resume-game').addEventListener('click',resume);$('#quit-game').addEventListener('click',()=>{$('#pause-dialog').close();goHome();});$('#pause-dialog').addEventListener('cancel',e=>{e.preventDefault();resume();});
+ $('#replay-button').addEventListener('click',()=>start(session.id));$('#result-home').addEventListener('click',goHome);
+ $('#help-open').addEventListener('click',()=>{if(session&&!$('#game-view').hidden)session.paused=true;openDialog('help-dialog');});$('#garden-open').addEventListener('click',()=>{if(session&&!$('#game-view').hidden)session.paused=true;showGarden();});$('#source-open').addEventListener('click',()=>{if(session&&!$('#game-view').hidden)session.paused=true;openDialog('source-dialog');});
+ $$('[data-close]').forEach(b=>b.addEventListener('click',()=>closeDialog(b.closest('dialog'))));
+ ['help-dialog','garden-dialog','source-dialog'].forEach(id=>$('#'+id).addEventListener('close',()=>{if(session&&!$('#game-view').hidden&&!$('#reset-dialog').open){session.paused=false;session.lastTick=Date.now();}}));
+ $('#reset-open').addEventListener('click',()=>openDialog('reset-dialog'));$('#reset-cancel').addEventListener('click',()=>closeDialog($('#reset-dialog')));$('#reset-confirm').addEventListener('click',()=>{garden=fresh();save();$('#reset-dialog').close();$('#garden-dialog').close();if(session&&!$('#game-view').hidden){session.paused=false;session.lastTick=Date.now();}setMode('relax');renderMissions();updateHeader();showGarden();});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden&&session&&!$('#game-view').hidden&&!session.paused)pause();});
+ document.addEventListener('keydown',e=>{if(e.key==='Enter'&&session?.solved&&!session.paused&&!$('#game-view').hidden&&e.target!==$('#next-button')){e.preventDefault();next();}});
+ setMode(mode);renderMissions();updateHeader();
+})();
+
+</script>
+</body></html>
