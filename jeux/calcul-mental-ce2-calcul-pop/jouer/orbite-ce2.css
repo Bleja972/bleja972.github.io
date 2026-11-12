@@ -127,3 +127,38 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
   .game-view { margin-top: 14px; }
   #chrono-round .text-question .equation-row { font-size: .75rem; }
 }
+
+/* Let the orbital background show through the exercise panels. */
+#chrono-round {
+  max-width: 890px;
+  margin-inline: auto;
+  padding-top: 2px;
+  background: #06152538;
+  backdrop-filter: none;
+  box-shadow: 0 12px 30px #0003;
+}
+#chrono-round .content { padding-bottom: 11px; }
+#chrono-round .calc {
+  min-height: 54px;
+  background: #0c233698;
+}
+#chrono-round .notice { margin-block: 7px; }
+#chrono-round .actions { margin-top: 10px; }
+#practice-round {
+  max-width: 720px;
+  margin-inline: auto;
+  padding: clamp(10px, 2vw, 20px);
+  background: #06152538;
+}
+#practice-keypad .space-key { grid-column: 1 / -1; height: 38px; font: 700 .9rem system-ui, sans-serif; }
+.game-top .back-button {
+  padding: 8px 12px;
+  border: 1px solid var(--edge);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 750;
+}
+@media (pointer: coarse) and (max-width: 1024px), (pointer: coarse) and (max-height: 600px) {
+  #chrono-space { display: none; }
+}

@@ -25,8 +25,8 @@ dialog{border:1px solid #dfe2d1;background:var(--white);color:var(--ink);border-
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.confetti{display:none}}
 
 </style>
-<link rel="stylesheet" href="./orbite-ce2.css?v=1">
-<script defer data-numeric-pad data-game-numeric-pad data-numeric-pad-theme="orbite" src="/assets/pave-numerique.js?v=20261111-tactile"></script>
+<link rel="stylesheet" href="./orbite-ce2.css?v=2">
+<script defer data-numeric-pad data-game-numeric-pad data-numeric-pad-theme="orbite" data-numeric-pad-spaces src="/assets/pave-numerique.js?v=espaces-milliers"></script>
 </head>
 <body>
 <a class="skip" href="#main">Aller au jeu</a>
@@ -54,16 +54,17 @@ dialog{border:1px solid #dfe2d1;background:var(--white);color:var(--ink);border-
  <aside class="gentle-note"><svg aria-hidden="true"><use href="#sprout"/></svg><p><strong>Le plus beau des progrès ? Oser essayer.</strong><span>Une erreur, c’est une occasion de découvrir une nouvelle astuce.</span></p><span class="note-doodle" aria-hidden="true">✧</span></aside>
 </section>
 <section id="game-view" class="game-view" hidden aria-labelledby="game-title">
- <div class="game-top"><button class="back-button" id="game-back">← Mes missions</button><span class="game-mode" id="game-mode"></span><button class="icon-button" id="pause-button" aria-label="Mettre la partie en pause">Ⅱ</button></div>
+ <div class="game-top"><button class="back-button" id="game-back">← Menu</button><span class="game-mode" id="game-mode"></span><button class="icon-button" id="pause-button" aria-label="Mettre la partie en pause">Ⅱ</button></div>
  <div class="game-heading"><span class="family-caption" id="game-family"></span><h1 id="game-title"></h1></div>
  <div class="round-status"><span id="question-count"></span><div class="progress-track" role="progressbar" aria-label="Avancement de la partie" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="round-progress"><span id="progress-fill"></span></div><span class="timer" id="timer" hidden>3:00</span><span class="right-count" id="right-count">0 trouvé</span></div>
- <div id="practice-round" class="question-card"><div class="question-kicker" id="question-kicker">À toi de trouver !</div><div id="answer-form"><div class="equation answer-entry" id="equation"></div><p id="answer-error" class="answer-error" hidden>Écris un nombre entier pour essayer.</p><div class="keypad" id="practice-keypad" role="group" aria-label="Clavier numérique"><button type="button" data-key="1">1</button><button type="button" data-key="2">2</button><button type="button" data-key="3">3</button><button type="button" data-key="4">4</button><button type="button" data-key="5">5</button><button type="button" data-key="6">6</button><button type="button" data-key="7">7</button><button type="button" data-key="8">8</button><button type="button" data-key="9">9</button><button type="button" class="key-clear" data-key="clear" aria-label="Effacer tout">C</button><button type="button" data-key="0">0</button><button type="button" class="key-clear" data-key="back" aria-label="Effacer le dernier chiffre">⌫</button></div><button class="primary validate" id="validate-button" type="button">Valider <span aria-hidden="true">→</span></button></div>
+ <div id="practice-round" class="question-card"><div class="question-kicker" id="question-kicker">À toi de trouver !</div><div id="answer-form"><div class="equation answer-entry" id="equation"></div><p id="answer-error" class="answer-error" hidden>Écris un nombre entier. Pour les milliers, tu peux écrire 1 250 ou 1250.</p><div class="keypad" id="practice-keypad" role="group" aria-label="Clavier numérique"><button type="button" data-key="1">1</button><button type="button" data-key="2">2</button><button type="button" data-key="3">3</button><button type="button" data-key="4">4</button><button type="button" data-key="5">5</button><button type="button" data-key="6">6</button><button type="button" data-key="7">7</button><button type="button" data-key="8">8</button><button type="button" data-key="9">9</button><button type="button" class="key-clear" data-key="clear" aria-label="Effacer tout">C</button><button type="button" data-key="0">0</button><button type="button" class="key-clear" data-key="back" aria-label="Effacer le dernier chiffre">⌫</button><button type="button" class="space-key" data-key="space">Espace</button></div><button class="primary validate" id="validate-button" type="button">Valider <span aria-hidden="true">→</span></button></div>
  <div id="answer-feedback" class="answer-feedback" role="status" aria-live="polite" hidden></div><button class="primary next-button" id="next-button" hidden>Calcul suivant <span aria-hidden="true">→</span></button><button class="hint-button" id="hint-button">✧ Un petit coup de pouce</button><div class="hint-box" id="hint-box" hidden></div></div>
  <section id="chrono-round" class="shell" aria-label="Défi chronométré" hidden>
   <div class="content">
    <p id="chrono-instructions" class="notice">Le chrono démarre à ta première réponse. Complète les 15 calculs, puis clique sur « Vérifier ».</p>
    <div id="chrono-grid" class="grid"></div>
    <div class="actions">
+    <button type="button" id="chrono-space" aria-label="Insérer un espace dans la réponse">Espace</button>
     <button type="button" id="chrono-check" class="check">Vérifier</button>
     <button type="button" id="chrono-results" hidden>Voir mon bilan</button>
    </div>
@@ -148,8 +149,17 @@ dialog{border:1px solid #dfe2d1;background:var(--white);color:var(--ink);border-
   while(result.length<count){const q=makeQuestion(id),key=q.parts.join('?');if(seen.has(key)&&retries++<100)continue;seen.add(key);result.push(q);}
   return result;
  }
- function isCorrect(value,answer){return /^\d+$/.test(String(value).trim())&&Number(value)===answer;}
- const api={families,missions,makeQuestion,makeRound,isCorrect,fmt};
+ function normalizeAnswer(value){
+  const text=String(value).trim();
+  return /^(?:\d+|\d{1,3}(?:[ \u00a0\u202f]\d{3})+)$/.test(text)
+   ? text.replace(/[ \u00a0\u202f]/g,'')
+   : null;
+ }
+ function isCorrect(value,answer){
+  const normalized=normalizeAnswer(value);
+  return normalized!==null&&Number(normalized)===answer;
+ }
+ const api={families,missions,makeQuestion,makeRound,normalizeAnswer,isCorrect,fmt};
  if(typeof module==='object'&&module.exports)module.exports=api;else root.CalculPop=api;
 })(typeof globalThis!=='undefined'?globalThis:this);
 
@@ -157,7 +167,7 @@ dialog{border:1px solid #dfe2d1;background:var(--white);color:var(--ink);border-
 <script>
 (()=>{
  'use strict';
- const {families,missions,makeRound,isCorrect,fmt}=CalculPop;
+ const {families,missions,makeRound,normalizeAnswer,isCorrect,fmt}=CalculPop;
  const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 let audio;
 let soundEnabled = true;
@@ -217,7 +227,7 @@ soundBtn.addEventListener("click",()=>{
   armAudio();
 });
 
- const key='calcul-pop-ce2-v1';let mode='relax',family='all',stage='all',session=null,tick=null,returnFocus=null;
+ const key='calcul-pop-ce2-v1';let mode='relax',family='all',stage='all',session=null,tick=null,returnFocus=null,chronoField=null;
  const fresh=()=>({version:1,flowers:0,sessions:0,totalFound:0,skills:{},lastMission:null,mode:'relax'});
  function read(){try{const v=JSON.parse(localStorage.getItem(key));return v&&v.version===1&&v.skills?{...fresh(),...v}:fresh();}catch{return fresh();}}
  let garden=read();mode=['relax','chrono'].includes(garden.mode)?garden.mode:'relax';
@@ -265,7 +275,7 @@ soundBtn.addEventListener("click",()=>{
   }
  }
  function updateChronoProgress(){
-  const answered=$$('.chrono-answer').filter(input=>input.value!=='').length;
+  const answered=$$('.chrono-answer').filter(input=>input.value.trim()!=='').length;
   $('#question-count').textContent=`${answered} / ${session.questions.length} réponses`;
   $('#round-progress').setAttribute('aria-valuenow',String(answered));
   $('#progress-fill').style.width=`${answered/session.questions.length*100}%`;
@@ -273,6 +283,8 @@ soundBtn.addEventListener("click",()=>{
  function renderChrono(){
   const grid=$('#chrono-grid');
   grid.replaceChildren();
+  chronoField=null;
+  $('#chrono-space').hidden=false;
   $('#chrono-check').hidden=false;
   $('#chrono-results').hidden=true;
   $('#chrono-feedback').textContent='';
@@ -295,11 +307,12 @@ soundBtn.addEventListener("click",()=>{
      input.className='chrono-answer';
      input.inputMode='numeric';
      input.autocomplete='off';
-     input.maxLength=6;
+     input.maxLength=9;
+     input.addEventListener('focus',()=>{chronoField=input;});
      input.setAttribute('aria-label',`Réponse ${index+1} : ${q.parts.map(p=>p??'…').join('')}`);
      input.addEventListener('input',()=>{
-      input.value=input.value.replace(/\D/g,'');
-      if(!session.clockStarted&&input.value!==''){
+      input.value=input.value.replace(/[^0-9 \u00a0\u202f]/g,'');
+      if(!session.clockStarted&&input.value.trim()!==''){
        session.clockStarted=true;
        session.lastTick=Date.now();
       }
@@ -330,7 +343,7 @@ soundBtn.addEventListener("click",()=>{
   if(!s||s.completed||s.paused)return;
   s.records=$$('.chrono-answer').map((input,index)=>{
    const q=s.questions[index],response=input.value;
-   const unanswered=response==='',correct=isCorrect(response,q.answer);
+   const unanswered=response.trim()==='',correct=isCorrect(response,q.answer);
    const feedback=document.createElement('span');
    feedback.id=`chrono-mark-${index+1}`;
    feedback.className='chrono-mark';
@@ -355,6 +368,7 @@ soundBtn.addEventListener("click",()=>{
   playCorrection(correct>0,s.records.some(r=>!r.correct&&!r.unanswered));
   finish(expired,true);
   $('#chrono-check').hidden=true;
+  $('#chrono-space').hidden=true;
   $('#chrono-results').hidden=false;
   $('#chrono-feedback').textContent=`${expired?'Temps écoulé ! ':''}Score : ${correct} / ${s.questions.length}.`;
   $('#pause-button').disabled=true;
@@ -372,7 +386,7 @@ soundBtn.addEventListener("click",()=>{
   const right=s.records.filter(r=>r.correct).length;$('#right-count').textContent=`${right} trouvé${right>1?'s':''}`;
   $('#question-kicker').textContent=q.parts.some(p=>p===null)&&q.parts[q.parts.length-1]!==null?'Quel nombre manque ?':'À toi de trouver !';
   const equation=$('#equation');equation.replaceChildren();equation.classList.toggle('word-equation',q.parts.some(p=>typeof p==='string'&&/[a-zA-ZÀ-ÿ]/.test(p)));
-  q.parts.forEach(part=>{if(part===null){const input=document.createElement('input');input.type='text';input.inputMode='numeric';input.pattern='[0-9]*';input.autocomplete='off';input.spellcheck=false;input.maxLength=6;input.className='answer-input';input.id='answer';input.placeholder='?';input.setAttribute('aria-label','Ta réponse, le nombre manquant');input.setAttribute('aria-describedby','answer-error');input.addEventListener('input',()=>{input.value=input.value.replace(/\D/g,'').slice(0,6);$('#answer-error').hidden=true;input.removeAttribute('aria-invalid');});equation.append(input);}else{const span=document.createElement('span');span.textContent=part.trim();if(/^\d/.test(span.textContent))span.className='operand';equation.append(span);}});
+  q.parts.forEach(part=>{if(part===null){const input=document.createElement('input');input.type='text';input.inputMode='numeric';input.autocomplete='off';input.spellcheck=false;input.maxLength=9;input.className='answer-input';input.id='answer';input.placeholder='?';input.setAttribute('aria-label','Ta réponse, le nombre manquant');input.setAttribute('aria-describedby','answer-error');input.addEventListener('input',()=>{input.value=input.value.replace(/[^0-9 \u00a0\u202f]/g,'');$('#answer-error').hidden=true;input.removeAttribute('aria-invalid');});equation.append(input);}else{const span=document.createElement('span');span.textContent=part.trim();if(/^\d/.test(span.textContent))span.className='operand';equation.append(span);}});
   $('#practice-keypad').hidden=false;$('#validate-button').hidden=false;$('#next-button').hidden=true;$('#answer-feedback').hidden=true;$('#answer-error').hidden=true;$('#hint-box').hidden=true;$('#hint-button').hidden=false;$('#hint-button').textContent='✧ Un petit coup de pouce';renderTime();focusAnswer();
  }
  function focusAnswer(){if(window.innerWidth>600)$('#answer')?.focus({preventScroll:true});}
@@ -380,7 +394,7 @@ soundBtn.addEventListener("click",()=>{
  function feedback(cls,title,detail){const box=$('#answer-feedback');box.className='answer-feedback '+cls;box.replaceChildren();const strong=document.createElement('strong');strong.textContent=title;box.append(strong,document.createTextNode(detail));box.hidden=false;}
  function submit(){
   const s=session;if(!s||s.paused||s.solved)return;const input=$('#answer'),value=input.value.trim(),q=s.questions[s.index];
-  if(!/^\d+$/.test(value)){$('#answer-error').hidden=false;input.setAttribute('aria-invalid','true');input.focus();return;}
+  if(normalizeAnswer(value)===null){$('#answer-error').hidden=false;input.setAttribute('aria-invalid','true');input.focus();return;}
   s.attempts++;const correct=isCorrect(value,q.answer);playCorrection(correct,!correct);
   if(correct){s.records.push({q,correct:true,first:s.attempts===1&&!s.hint,hinted:s.hint,response:value,attempts:s.attempts});feedback('success',s.attempts===1&&!s.hint?'Bien joué, ça pousse !':'Trouvé ! Tu as persévéré.',q.solution);input.classList.remove('incorrect');input.classList.add('correct');completeQuestion();}
   else if(s.attempts===1){input.classList.add('incorrect');feedback('retry','Un petit détour… on essaie encore ?',`Ta réponse ${value} ne complète pas ce calcul. Voici une astuce pour t’aider.`);showHint();input.value='';focusAnswer();}
@@ -417,9 +431,33 @@ soundBtn.addEventListener("click",()=>{
  $$('[data-family]').forEach(b=>b.addEventListener('click',()=>{family=b.dataset.family;$$('[data-family]').forEach(btn=>{const active=btn===b;btn.classList.toggle('active',active);btn.setAttribute('aria-pressed',String(active));});renderMissions();}));
  $('#journey').addEventListener('change',e=>{stage=e.target.value;renderMissions();});$('#show-all').addEventListener('click',()=>{stage='all';$('#journey').value='all';renderMissions();});
  $('#resume-button').addEventListener('click',()=>start(garden.lastMission));$('#validate-button').addEventListener('click',submit);$('#answer-form').addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.id==='answer'){e.preventDefault();e.stopPropagation();submit();}});$('#next-button').addEventListener('click',next);$('#hint-button').addEventListener('click',showHint);
- $$('[data-key]').forEach(b=>b.addEventListener('click',()=>{if(!session||session.solved||session.paused)return;const input=$('#answer'),k=b.dataset.key;input.value=k==='clear'?'':k==='back'?input.value.slice(0,-1):(input.value+k).slice(0,6);$('#answer-error').hidden=true;input.removeAttribute('aria-invalid');}));
+ function editAnswer(input,key){
+  if(!input||input.disabled)return;
+  let start=input.selectionStart ?? input.value.length;
+  let end=input.selectionEnd ?? input.value.length;
+  let insert=key==='space'?' ':key;
+  if(key==='clear'){start=0;end=input.value.length;insert='';}
+  if(key==='back'){if(start===end)start=Math.max(0,start-1);insert='';}
+  if(input.value.length-(end-start)+insert.length>input.maxLength)return;
+  input.setRangeText(insert,start,end,'end');
+  input.dispatchEvent(new Event('input',{bubbles:true}));
+ }
+ $$('[data-key]').forEach(button=>{
+  button.addEventListener('pointerdown',event=>event.preventDefault());
+  button.addEventListener('click',()=>{
+   if(!session||session.solved||session.paused)return;
+   editAnswer($('#answer'),button.dataset.key);
+  });
+ });
+ $('#chrono-space').addEventListener('pointerdown',event=>event.preventDefault());
+ $('#chrono-space').addEventListener('click',()=>{
+  if(!session||session.paused||session.completed)return;
+  const input=chronoField||$('.chrono-answer');
+  editAnswer(input,'space');
+  input.focus({preventScroll:true});
+ });
  $('#chrono-check').addEventListener('click',()=>checkChrono());$('#chrono-results').addEventListener('click',showResults);
- $('#pause-button').addEventListener('click',pause);$('#game-back').addEventListener('click',()=>session?.completed?goHome():pause());$('#resume-game').addEventListener('click',resume);$('#quit-game').addEventListener('click',()=>{$('#pause-dialog').close();goHome();});$('#pause-dialog').addEventListener('cancel',e=>{e.preventDefault();resume();});
+ $('#pause-button').addEventListener('click',pause);$('#game-back').addEventListener('click',goHome);$('#resume-game').addEventListener('click',resume);$('#quit-game').addEventListener('click',()=>{$('#pause-dialog').close();goHome();});$('#pause-dialog').addEventListener('cancel',e=>{e.preventDefault();resume();});
  $('#replay-button').addEventListener('click',()=>start(session.id));$('#result-home').addEventListener('click',goHome);
  $('#help-open').addEventListener('click',()=>{if(session&&!$('#game-view').hidden)session.paused=true;openDialog('help-dialog');});$('#garden-open').addEventListener('click',()=>{if(session&&!$('#game-view').hidden)session.paused=true;showGarden();});$('#source-open').addEventListener('click',()=>{if(session&&!$('#game-view').hidden)session.paused=true;openDialog('source-dialog');});
  $$('[data-close]').forEach(b=>b.addEventListener('click',()=>closeDialog(b.closest('dialog'))));

@@ -281,6 +281,10 @@
   const actions = document.createElement('div');
   actions.className = 'actions';
   const submitKey = addKey(check, 'submit');
+  if (loader.hasAttribute('data-numeric-pad-spaces')) {
+    const space = {fr: 'Espace', en: 'Space', es: 'Espacio', zh: '空格'}[language] || 'Espace';
+    actions.append(addKey(space, 'space'));
+  }
   actions.append(addKey(close, 'close'), submitKey);
   pad.append(actions);
 
@@ -378,7 +382,7 @@
     let start = field.selectionStart ?? value.length;
     const end = field.selectionEnd ?? value.length;
     if (action === 'backspace' && start === end) start = Math.max(0, start - 1);
-    const insert = action ? '' : digit;
+    const insert = action === 'space' ? ' ' : action ? '' : digit;
     const next = action === 'clear' ? '' : value.slice(0, start) + insert + value.slice(end);
     if (next === value || (insert && field.maxLength >= 0 && next.length > field.maxLength)) return;
     field.value = next;
