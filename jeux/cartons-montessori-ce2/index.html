@@ -25,8 +25,41 @@ function format(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,' ')}
 function values(v){return [Math.floor(v/1000)*1000,Math.floor(v/100)%10*100,Math.floor(v/10)%10*10,v%10].filter(x=>x>0)}
 function choose(){let v;do{if(level==='three'){v=(1+Math.floor(Math.random()*9))*100+(1+Math.floor(Math.random()*9))*10+1+Math.floor(Math.random()*9)}else if(level==='four'){v=(1+Math.floor(Math.random()*9))*1000+(1+Math.floor(Math.random()*9))*100+(1+Math.floor(Math.random()*9))*10+1+Math.floor(Math.random()*9)}else{const a=[1+Math.floor(Math.random()*9),Math.floor(Math.random()*10),Math.floor(Math.random()*10),Math.floor(Math.random()*10)];a[1+Math.floor(Math.random()*3)]=0;v=a[0]*1000+a[1]*100+a[2]*10+a[3]}}while(used.has(v));used.add(v);return v}
 function textColor(place){return ['#83b8ff','#ffbf72','#adf07a','#cbb0ff'][place]}
-function draw(){parts=values(n);const unit=64,widths=parts.map(v=>String(v).length*unit+28),total=widths.reduce((a,b)=>a+b,0)+(parts.length-1)*63;let x=(1120-total)/2,svg='';parts.forEach((v,i)=>{const d=String(v),w=widths[i],closed=700-w,open=x;svg+=`<g class="card" data-closed="${closed}" data-open="${open}" transform="translate(${mode==='decomp'?closed:open},68)"><path d="M0 0 H${w-25} L${w} 47 L${w-25} 94 H0 Z"/><text y="64" font-family="Arial,sans-serif" font-size="51" font-weight="600">${d.split('').map((digit,j)=>`<tspan x="${12+j*unit}" fill="${textColor(d.length-1-j)}">${digit}</tspan>`).join('')}</text></g>`;x+=w;if(i<parts.length-1){svg+=`<text class="plus" text-anchor="middle" x="${x+31.5}" y="129" opacity="${mode==='decomp'?0:1}">+</text>`;x+=63}});$('stage').innerHTML=svg;$('stage').setAttribute('aria-label',mode==='decomp'?'Cartons superposés : '+format(n):'Cartons séparés : '+parts.map(format).join(' plus '))}
-function layout(open){document.querySelectorAll('.card').forEach(el=>el.style.transform=`translate(${open?el.dataset.open:el.dataset.closed}px,68px)`);document.querySelectorAll('.plus').forEach(el=>el.style.opacity=open?1:0);$('stage').setAttribute('aria-label',open?parts.map(format).join(' plus '):format(n))}
+function draw(){
+  parts=values(n);
+  // Comme dans « La magie des nombres » : environ 40 % des recompositions
+  // présentent les cartons dans le désordre, sans changer le résultat.
+  if(mode==='recomp'&&parts.length>1&&Math.random()<0.4){
+    const ordered=[...parts];
+    for(let i=parts.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[parts[i],parts[j]]=[parts[j],parts[i]]}
+    if(parts.every((v,i)=>v===ordered[i]))parts.push(parts.shift());
+  }
+  const unit=64,widths=parts.map(v=>String(v).length*unit+28);
+  const total=widths.reduce((a,b)=>a+b,0)+(parts.length-1)*63;
+  let x=(1120-total)/2,plus='';
+  const cards=[];
+  parts.forEach((v,i)=>{
+    const d=String(v),w=widths[i],closed=700-w,open=x;
+    const digits=d.split('').map((digit,j)=>`<tspan x="${12+j*unit}" fill="${textColor(d.length-1-j)}">${digit}</tspan>`).join('');
+    cards.push({value:v,markup:`<g class="card" data-closed="${closed}" data-open="${open}" transform="translate(${mode==='decomp'?closed:open},68)"><path d="M0 0 H${w-25} L${w} 47 L${w-25} 94 H0 Z"/><text y="64" font-family="Arial,sans-serif" font-size="51" font-weight="600">${digits}</text></g>`});
+    x+=w;
+    if(i<parts.length-1){plus+=`<text class="plus" text-anchor="middle" x="${x+31.5}" y="129" opacity="${mode==='decomp'?0:1}">+</text>`;x+=63}
+  });
+  // SVG peint le dernier élément au-dessus des autres. Les milliers sont
+  // au fond, puis les centaines, les dizaines et enfin les unités : chaque
+  // carton recouvre uniquement les zéros correspondant à son rang.
+  $('stage').innerHTML=cards.sort((a,b)=>b.value-a.value).map(card=>card.markup).join('')+plus;
+  $('stage').setAttribute('aria-label',mode==='decomp'?'Cartons superposés : '+format(n):'Cartons séparés : '+parts.map(format).join(' plus '));
+}
+function layout(open){
+  document.querySelectorAll('#stage .card').forEach(el=>{
+    el.style.visibility='visible';
+    el.style.opacity='1';
+    el.style.transform=`translate(${open?el.dataset.open:el.dataset.closed}px,68px)`;
+  });
+  document.querySelectorAll('#stage .plus').forEach(el=>el.style.opacity=open?1:0);
+  $('stage').setAttribute('aria-label',open?parts.map(format).join(' plus '):format(n));
+}
 function makeInput(v,label){return `<input aria-label="${label}" inputmode="numeric" autocomplete="off" maxlength="6" data-answer="${v}">`}
 function render(){clearTimers();document.body.classList.remove('celebrate','isanimating');failed=false;solved=false;busy=false;complete=false;draw();$('instruction').textContent=mode==='decomp'?'Quelle est la valeur de chaque chiffre ?':'Quel nombre forment les cartons ?';$('guide').textContent=mode==='decomp'?'Les pointes sont superposées. Écris les valeurs cachées.':'Additionne les valeurs, puis regarde les pointes se rejoindre.';$('answerlabel').textContent=mode==='decomp'?'Complète la décomposition.':'Écris le nombre recomposé.';const labels=['unités','dizaines','centaines','milliers'];$('equation').innerHTML=mode==='decomp'?`<span class="answerGiven">${format(n)} =</span><span class="answerTerms">${parts.map((v,i)=>(i?'<span>+</span>':'')+makeInput(v,'Valeur des '+labels[String(v).length-1])).join('')}</span>`:`<span class="answerGiven sumGiven">${parts.map(format).join(' + ')} =</span>${makeInput(n,'Nombre recomposé')}`;$('feedback').textContent='';$('feedback').className='feedback';['next','replay','correction','result'].forEach(id=>$(id).hidden=true);$('check').hidden=false;$('erase').hidden=false;$('check').disabled=false;update();}
 function update(){const p=places[step-1];$('progress').textContent=custom?'Nombre choisi':`Défi ${step} / 10`;$('score').textContent=`${score} / 10`;$('missionTag').textContent=custom?'DÉMONSTRATION':p.tag.toLocaleUpperCase('fr');$('destination').textContent=custom?'Observatoire':p.name;$('destinationDot').style.setProperty('--planet',p.color);$('dots').innerHTML=Array.from({length:10},(_,i)=>`<i class="${i<step-1?'done':''} ${i===step-1?'current':''}"></i>`).join('');$('travelbar').style.width=(step-1)*100/9+'%';$('rankMode').value=mode;$('rankLevel').value=level;}
