@@ -60,7 +60,7 @@ document.querySelectorAll('a[href]').forEach(link=>{if(ce2HorizontalLinks[link.h
 document.querySelectorAll('[data-game-url]').forEach(el=>{if(ce2HorizontalLinks[el.dataset.gameUrl])el.dataset.gameUrl=ce2HorizontalLinks[el.dataset.gameUrl];});
 
 if(document.body.dataset.page!=='catalog')return;
-const initial={niveau:document.body.dataset.level||'CE1',matiere:document.body.dataset.subject||'toutes',domaine:document.body.dataset.group||'tous',competence:'toutes',q:'',collection:'tous',tri:'selection'};
+const initial={niveau:document.body.dataset.level||'CE1',matiere:document.body.dataset.subject||'toutes',domaine:document.body.dataset.group||'tous',competence:'toutes',q:'',collection:'tous',tri:'popularite'};
 const validCollections=['tous','nouveautes','semaine','favoris'];
 const groupNames={numeration:'Numération',mental:'Calcul mental',pose:'Calcul posé',codage:'Codage',geometrie:'Géométrie',problemes:'Problèmes',lecture:'Lecture',orthographe:'Orthographe et dictées',grammaire:'Grammaire',vocabulaire:'Vocabulaire',ecriture:'Production d’écrit'};
 const controls={niveau:$('#level-filter'),matiere:$('#subject-filter'),domaine:$('#group-filter'),competence:$('#skill-filter'),q:$('#game-search'),tri:$('#sort-filter')};
@@ -83,7 +83,7 @@ function readState(){
  if(!['toutes','Mathématiques','Français'].includes(s.matiere))s.matiere='toutes';
  if(s.domaine!=='tous'&&!groupNames[s.domaine])s.domaine='tous';
  if(!validCollections.includes(s.collection))s.collection='tous';
- if(!['selection','az'].includes(s.tri))s.tri='selection';
+ if(!['popularite','selection','az'].includes(s.tri))s.tri='popularite';
  if(s.competence!=='toutes'&&!catalog.some(g=>g.skill===s.competence))s.competence='toutes';
  return s;
 }
@@ -118,7 +118,7 @@ function filteredGames(){
  return catalog.filter(g=>{
   const hay=normalize([g.title,g.description,g.subject,g.groupName,g.skillName,g.objective,g.levels.join(' ')].join(' '));
   return (state.niveau==='tous'||g.levels.includes(state.niveau))&&(state.matiere==='toutes'||g.subject===state.matiere)&&(state.domaine==='tous'||g.group===state.domaine)&&(state.competence==='toutes'||g.skill===state.competence)&&(state.collection!=='nouveautes'||g.new)&&(state.collection!=='semaine'||g.weekly)&&(state.collection!=='favoris'||favorites.has(g.id))&&terms.every(term=>hay.includes(term));
- }).sort(state.tri==='az'?(a,b)=>a.title.localeCompare(b.title,'fr'):state.niveau==='CE2'?(a,b)=>Number(b.level==='CE2')-Number(a.level==='CE2'):()=>0);
+ }).sort(state.tri==='popularite'?(a,b)=>(Number.isInteger(b.playClicks)?b.playClicks:-1)-(Number.isInteger(a.playClicks)?a.playClicks:-1):state.tri==='az'?(a,b)=>a.title.localeCompare(b.title,'fr'):state.niveau==='CE2'?(a,b)=>Number(b.level==='CE2')-Number(a.level==='CE2'):()=>0);
 }
 function render(){
  syncControls();const games=filteredGames(),visible=state.niveau==='CE2'?games:games.slice(0,shown),visibleIds=new Set(visible.map(g=>g.id));
@@ -170,7 +170,7 @@ function updateSidebarCounts(){
   const description=label+' : '+count+' jeu'+(count===1?'':'x');link.setAttribute('aria-label',description);link.title=description;
  });
 }
-fetch('/assets/catalogue-v2/catalogue.json?v=cp-montessori-20261113').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
+fetch('/assets/catalogue-v2/catalogue.json?v=popularite-20261113').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
  toast('Les filtres sont indisponibles. Tous les liens vers les jeux restent accessibles.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();
