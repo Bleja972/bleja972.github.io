@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://bleja972.github.io/sitemap.xml
+Sitemap: https://bleja972.github.io/sitemap-images.xml
