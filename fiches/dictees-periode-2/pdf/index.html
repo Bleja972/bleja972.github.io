@@ -1,0 +1,68 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fiches PDF · Dictées 7 à 12 · CE1</title><meta name="robots" content="index,follow"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script><style>*{box-sizing:border-box}body{font:16px/1.5 Arial,Helvetica,sans-serif;background:#fafaf7;color:#203527;margin:0}main{max-width:840px;margin:24px auto;padding:24px}h1{font-size:clamp(24px,4vw,34px)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px}.pdf-btn{border:2px solid #b96807;border-top-color:#fff0aa;color:#402405;background:linear-gradient(180deg,#ffe792,#ffb629);border-radius:16px;padding:16px 12px;box-shadow:0 6px 0 #a8660b,0 9px 15px #0002;cursor:pointer;font:700 17px Arial;min-height:90px}.pdf-btn:nth-child(2n){border-color:#176d9e;border-top-color:#d4f6ff;background:linear-gradient(#a5eaff,#32adf0);box-shadow:0 6px 0 #11618e,0 9px 15px #0002;color:#103753}.pdf-btn:active{transform:translateY(5px);box-shadow:0 1px 0 #a8660b}.pdf-btn:disabled{opacity:.6}.pdf-btn small{display:block;font-size:12px;margin-top:5px}.back{display:inline-block;margin-bottom:10px}#status{min-height:24px;margin-top:26px;color:#354658}.note{font-size:14px;color:#586258}button:focus-visible{outline:3px solid #266dae;outline-offset:4px}</style></head><body><main><a class="back" href="/fiches/dictees-periode-2/">← Revenir aux dictées de période 2</a><h1>Dictées 7 à 12 · CE1</h1><p>Télécharge la fiche A4 de ton choix avec les mots à compléter, des illustrations et la correction à découper pour les parents.</p><div class="grid" id="buttons"></div><p id="status" role="status"></p><p class="note">Les PDF sont générés à la demande. Une connexion est nécessaire au premier chargement. Les fichiers obtenus peuvent être imprimés hors connexion.</p></main><script>
+const D={
+7:["Je range {les} {affaires} de mon {frère} dans son sac {neuf}.","Puis je prends {des} {photos} avec mon {téléphone}.","{Enfin}, je dessine {une} {femme} avec un grand {front}.","{Une} {femme} {a} {des} {photos} {de} {mon} {frère} {dans} {ses} {affaires}."],
+8:["Des {élèves} prennent {souvent} des {livres} à la bibliothèque de la {ville}.","Des canes vont {vers} l’étang {avec} leurs {vingt} canetons.","La {vie} du papillon est courte.","{Vingt} {élèves} {ont} des {livres} {neufs}."],
+9:["« Écrivez {trois}, {sept} {et} {huit} en chiffres », dit le maître.","Il y a du bruit, j’ai mal à la {tête}.","Le facteur a {trop} de {lettres} à {mettre} dans la même boîte.","Le chat va {attraper} une souris.","Le {verbe} « {attraper} » {a} {huit} {lettres}, « {mettre} » {a} {six} {lettres}."],
+10:["{Demain}, tu iras {donner} un {cadeau} à tes {deux} amis.","En classe, on lève le {doigt} pour {demander} la parole.","{Dehors}, l’endroit le plus agréable est le {jardin}.","{Dans} la {ville}, {nous} {avons} {deux} {jardins}."],
+11:["L’{homme} {donne} de l’{eau} à des {oiseaux}, même en {automne}.","Quand le {Soleil} est {haut} dans le ciel, il fait aussitôt très chaud dans l’{auto}.","{En} {automne}, {il} {y} {a} {souvent} du {soleil} {et} {toujours} des {oiseaux}."],
+12:["Pendant des {heures}, ma {sœur} dessine des {fleurs} : on dirait des {cœurs} !","Assis près du {feu} sur un {vieux} canapé {bleu}, nous jouons à un {jeu} de cartes.","{À} {deux} {heures}, ma {sœur} {va} {à} un {jeu} {de} {loto} {avec} son {vieux} {vélo} {bleu}."]
+};
+const ICON={'affaires':0,'frère':1,'neuf':2,'neufs':2,'photos':3,'téléphone':4,'femme':5,'front':6,'élèves':7,'livres':8,'ville':9,'vie':10,'tête':11,'lettres':12,'mettre':13,'attraper':14,'verbe':15,'cadeau':16,'donner':17,'doigt':18,'demander':19,'jardin':20,'jardins':20,'homme':21,'eau':22,'oiseaux':23,'automne':24,'soleil':25,'Soleil':25,'auto':26,'heures':27,'sœur':28,'fleurs':29,'cœurs':30,'feu':31,'vieux':32,'jeu':33,'loto':34,'vélo':35};
+const NUM={trois:'3',sept:'7',huit:'8',six:'6',vingt:'20',deux:'2'};
+const status=document.getElementById('status');const buttons=document.getElementById('buttons');
+for(let n=7;n<=12;n++){const b=document.createElement('button');b.className='pdf-btn';b.innerHTML='📄 Dictée '+n+'<small>Télécharger le PDF</small>';b.onclick=()=>generate(n,b);buttons.appendChild(b)}
+let atlasPromise=null;
+async function loadAtlas(){
+ if(atlasPromise)return atlasPromise;
+ atlasPromise=(async()=>{const r=await fetch('/dictees_periode2/?pdf-images='+Date.now());if(!r.ok)throw Error('Les illustrations ne sont pas accessibles.');const html=await r.text();const match=html.match(/const ATLAS="(data:image\/webp;base64,[^"]+)"/);if(!match)throw Error('Illustrations introuvables dans le jeu.');return await new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=reject;img.src=match[1]})})();
+ return atlasPromise;
+}
+function splitSentence(s){const out=[];let pos=0;const re=/\{([^}]+)\}/g;let m;while((m=re.exec(s))){if(m.index>pos)out.push({t:s.slice(pos,m.index),blank:false});out.push({t:m[1],blank:true});pos=m.index+m[0].length}if(pos<s.length)out.push({t:s.slice(pos),blank:false});return out}
+function imageCell(img,i){const src=document.createElement('canvas');const w=img.naturalWidth/6,h=img.naturalHeight/6;src.width=120;src.height=120;const ctx=src.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,120,120);ctx.drawImage(img,(i%6)*w,Math.floor(i/6)*h,w,h,0,0,120,120);return src.toDataURL('image/jpeg',.83)}
+function makeLines(pdf,s,maxX=194,fs=11){pdf.setFont('helvetica','normal');pdf.setFontSize(fs);let lines=[[]],x=16;for(const item of splitSentence(s)){const units=item.blank?[item]:item.t.split(/(\s+)/).filter(Boolean).map(t=>({t,blank:false}));for(const u of units){let w=u.blank?Math.max(22,Math.min(35,11+u.t.length*2.15)):pdf.getTextWidth(u.t);if(x+w>maxX&&x>19&&u.t.trim()){lines.push([]);x=16}if(!u.blank&&!u.t.trim()&&x===16)continue;lines[lines.length-1].push({...u,x,w});x+=w+(u.blank?1.3:0)}}}return lines}
+async function generate(n,b){
+ b.disabled=true;status.textContent='Création du PDF de la dictée '+n+'…';
+ try{
+  if(!window.jspdf)throw Error('Le module PDF n’a pas chargé. Recharge la page.');
+  const source=await loadAtlas(),pdf=new window.jspdf.jsPDF({orientation:'portrait',unit:'mm',format:'a4',compress:true});
+  const cache={};const picture=k=>{let idx=ICON[k];if(idx===undefined)return null;if(!(idx in cache))cache[idx]=imageCell(source,idx);return cache[idx]};
+  pdf.setTextColor(20,20,20);pdf.setFont('helvetica','bold');pdf.setFontSize(12);pdf.text('CE1  ·  ORTHOGRAPHE  ·  PÉRIODE 2',16,17);
+  pdf.setFontSize(17);pdf.text('Dictée '+n+' : je complète les phrases',16,29);
+  pdf.setDrawColor(160);pdf.setLineWidth(.25);pdf.line(16,33,194,33);
+  pdf.setFont('helvetica','normal');pdf.setFontSize(10);pdf.text('Prénom : ........................................',16,41);pdf.text('Date : ............................',119,41);
+  pdf.setFontSize(9.5);pdf.text('Écoute la dictée et complète les mots. Pense aux accents et aux majuscules.',16,48);
+  let y=53;const rowHeight=n===9?13:14;
+  let allCount=0;
+  for(let i=0;i<D[n].length;i++){
+   const s=D[n][i],ls=makeLines(pdf,s,195,10.8);
+   pdf.setFont('helvetica','bold');pdf.setFontSize(10);pdf.text(String(i+1)+'.',12,y+9);
+   for(let j=0;j<ls.length;j++){
+    const by=y+12+j*rowHeight;
+    for(const it of ls[j]){
+     if(it.blank){
+      allCount++;
+      pdf.setDrawColor(100);pdf.setLineDashPattern([.6,.7],0);pdf.line(it.x,by,it.x+it.w,by);pdf.setLineDashPattern([],0);
+      const num=NUM[it.t.toLowerCase()];if(num){pdf.setFont('helvetica','bold');pdf.setFontSize(13);pdf.text(num,it.x+it.w/2,by-6,{align:'center'})}
+      else{const pic=picture(it.t);if(pic)pdf.addImage(pic,'JPEG',it.x+it.w/2-4.5,by-10.5,9,9)}
+     }else if(it.t.trim()){pdf.setFont('helvetica','normal');pdf.setFontSize(10.8);pdf.text(it.t,it.x,by)}
+    }
+   }
+   y+=Math.max(22,12+rowHeight*(ls.length-1)+8);
+   pdf.setDrawColor(220);pdf.line(16,y,194,y);y+=2;
+  }
+  pdf.setFont('helvetica','normal');pdf.setFontSize(9);pdf.text('Je relis les mots, les accents et les majuscules.',16,y+5);pdf.text('Mots réussis : ..... / '+allCount,144,y+5);
+  let cut=y+12;pdf.setLineDashPattern([2,1.5],0);pdf.setDrawColor(60);pdf.line(16,cut,194,cut);pdf.setLineDashPattern([],0);
+  pdf.setFont('helvetica','bold');pdf.setFontSize(11);pdf.text('✂  CORRECTION POUR LES PARENTS',16,cut+8);
+  pdf.setFont('helvetica','normal');pdf.setFontSize(8.5);pdf.text('Les mots en gras correspondent aux trous à compléter.',16,cut+14);
+  let cy=cut+21;pdf.setFontSize(9.1);
+  for(let i=0;i<D[n].length;i++){
+   const full=D[n][i].replace(/\{([^}]+)\}/g,'$1');const wrapped=pdf.splitTextToSize(String(i+1)+'. '+full,176);
+   pdf.text(wrapped,17,cy);cy+=wrapped.length*4.7+2;
+  }
+  if(cy>286)throw Error('La correction dépasse la page. Contacte-nous pour une version adaptée.');
+  pdf.save('Dictee_'+n+'_CE1_Periode_2.pdf');
+  status.textContent='PDF de la dictée '+n+' créé. Vérifie les paramètres de téléchargement de ton navigateur.';
+ }catch(e){status.textContent='Téléchargement impossible : '+(e?.message||e)}
+ finally{b.disabled=false}
+}
+</script></body></html>
