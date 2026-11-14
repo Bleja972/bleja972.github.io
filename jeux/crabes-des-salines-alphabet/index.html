@@ -4,7 +4,7 @@
 <title>Les crabes des Salines · Ordre alphabétique CE1</title>
 <link rel="canonical" href="https://bleja972.github.io/jeux/crabes-des-salines-alphabet/">
 <style>
-*{box-sizing:border-box} [hidden]{display:none!important}
+*{box-sizing:border-box} [hidden]{display:none!important}.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 body{margin:0;color:#183e3e;font:16px/1.5 Arial,Helvetica,sans-serif;background:#ecd3a8 url('/jeux/crabes-des-salines/sable-salines.webp') center/cover fixed}
 main{max-width:1100px;margin:0 auto;padding:14px clamp(10px,3vw,28px) 35px}
 nav a{color:#145653;font-weight:700}header{padding:12px 0}h1{font-size:clamp(26px,5.4vw,49px);line-height:1.1;margin:8px 0}h2{margin:0 0 10px}
@@ -19,13 +19,13 @@ button:hover{filter:brightness(1.06)}button:focus-visible,a:focus-visible{outlin
 .level strong,.level small{display:block}.level strong{font-size:20px}.level small{font-size:13px;font-weight:normal;margin-top:8px}
 .level[aria-pressed=true]{box-shadow:0 5px 0 #aa7b31,0 7px 12px #0002}
 .beach{aspect-ratio:1264/590;background:url('/jeux/crabes-des-salines/plage.webp') center top/cover no-repeat;border-radius:17px 17px 0 0}
-.sand{background:linear-gradient(#f6d688,#fff1c6);padding:10px 7px 15px;border-radius:0 0 17px 17px}
-.zone{display:flex;justify-content:space-between;font-size:13px;color:#654826;font-weight:800;gap:10px;margin:2px 6px 10px}
+.sand{background:linear-gradient(180deg,rgba(243,210,144,.20),rgba(227,178,103,.15)),url('/jeux/crabes-des-salines/sable-salines.webp') center bottom/cover no-repeat;padding:12px 9px 22px;border-radius:0 0 17px 17px;border-top:2px solid #e4c18b;box-shadow:inset 0 7px 13px #6b492222}
+.zone{display:flex;justify-content:space-between;font-size:13px;color:#5a3615;font-weight:800;gap:10px;margin:2px 6px 10px;text-shadow:0 1px 1px #fff9}
 .lane{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(4px,1.5vw,14px);align-items:start}
 .crab{background:transparent!important;border:none!important;padding:1px 0!important;min-width:0;display:flex;flex-direction:column;align-items:center;color:#482b13;position:relative}
 .crab svg{display:block;width:100%;max-width:132px;height:auto;overflow:visible;filter:drop-shadow(0 2px 1px #63361633)}
 .sign{width:100%;min-height:53px;border-radius:12px;border:2px solid #90602c;background:#fffef5;display:grid;place-items:center;padding:4px 2px;font:800 clamp(10px,2vw,22px)/1.1 Arial,sans-serif;overflow-wrap:anywhere;text-align:center;box-shadow:0 3px 0 #ac7a3b3d}
-.crab.picked .sign{background:#ddfbe5;border-color:#24704b}
+.crab.picked .sign{background:#ddfbe5;border-color:#24704b}.crab.picked{cursor:default}.crab{will-change:transform}.lane .crab:focus-visible{outline:3px solid #d17a25;outline-offset:2px}
 .crab.error .sign{border-color:#b12c23;background:#ffdbd5}
 .crab.walk svg{animation:scuttle .14s ease-in-out 5 alternate}
 @keyframes scuttle{to{transform:translateY(-7px) rotate(6deg)}}
@@ -59,8 +59,8 @@ footer{font-size:13px;margin-top:20px}
 <div class="hud"><span id="round">Série 1 / 8</span><span id="score">Score : 0 / 8</span><span id="level-name"></span></div>
 <div class="progress"><span id="progress"></span></div>
 <h2 class="instruction">Clique sur les mots du premier au dernier dans l’ordre alphabétique.</h2>
-<div class="beach" aria-hidden="true"></div><div class="sand"><div class="zone"><span>← Ordre choisi</span><span>Crabes à ranger →</span></div><div class="lane" id="lane" aria-label="Mots à ranger"></div></div>
-<div id="ordered" aria-live="polite" aria-label="Mots déjà choisis"></div>
+<div class="beach" aria-hidden="true"></div><div class="sand"><div class="zone"><span>← Crabes rangés</span><span>Crabes à choisir →</span></div><div class="lane" id="lane" aria-label="Mots à ranger"></div></div>
+<div id="ordered" class="sr-only" aria-live="polite" aria-label="Mots déjà choisis"></div>
 <p id="feedback" role="status"></p>
 <div class="actions"><button id="clear">Effacer</button><button id="check" class="primary">Vérifier</button><button id="next" class="primary" hidden>Série suivante</button><button id="back">Menu</button></div>
 </section>
@@ -84,7 +84,7 @@ const collator=new Intl.Collator('fr',{sensitivity:'base',ignorePunctuation:true
 const sortWords=arr=>[...arr].sort((a,b)=>collator.compare(a,b));
 const first=w=>w.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()[0];
 const shuffle=a=>{let x=[...a];for(let i=x.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[x[i],x[j]]=[x[j],x[i]]}return x};
-let level=1,round=0,score=0,picked=[],current=[],rounds=[],mistake=false,validated=false,started=0;
+let level=1,round=0,score=0,picked=[],current=[],rounds=[],mistake=false,validated=false,started=0,crabNodes=new Map();
 let validPairs=sameInitial.filter(g=>g.every(w=>bank.includes(w)));
 let validPrefix=sharedPrefix.filter(g=>g.every(w=>bank.includes(w)));
 function makeRound(n,index){
@@ -109,32 +109,60 @@ function showMenu(){
  $('menu').hidden=false;$('game').hidden=true;$('end').hidden=true;$('feedback').textContent='';
 }
 function render(){
- current=rounds[round];picked=[];mistake=false;validated=false;
+ current=rounds[round];picked=[];mistake=false;validated=false;crabNodes=new Map();
  $('menu').hidden=true;$('game').hidden=false;$('end').hidden=true;
  $('round').textContent='Série '+(round+1)+' / 8';$('score').textContent='Score : '+score+' / 8';$('level-name').textContent='Niveau '+level;
  $('progress').style.width=(round/8*100)+'%';
  $('feedback').textContent='';$('feedback').className='';
- $('check').hidden=false;$('clear').hidden=false;$('next').hidden=true;
- let lane=$('lane');lane.replaceChildren();
- current.forEach((w,i)=>{const b=document.createElement('button');b.type='button';b.className='crab';b.dataset.i=String(i);
- b.setAttribute('aria-label','Choisir le mot '+w);b.innerHTML='<span class="sign"></span>'+crab;
- b.querySelector('.sign').textContent=w;
- b.onclick=()=>select(i);
- lane.appendChild(b)});
+ $('check').hidden=false;$('clear').hidden=false;$('clear').disabled=true;$('next').hidden=true;
+ const lane=$('lane');lane.replaceChildren();
+ current.forEach((w,i)=>{
+  const b=document.createElement('button');b.type='button';b.className='crab';b.dataset.i=String(i);
+  b.setAttribute('aria-label','Choisir le mot '+w);b.innerHTML='<span class="sign"></span>'+crab;
+  b.querySelector('.sign').textContent=w;b.onclick=()=>select(i);
+  crabNodes.set(i,b);lane.appendChild(b);
+ });
  drawPicked();
 }
-function drawPicked(){
- let o=$('ordered');o.replaceChildren();
- picked.forEach((i,j)=>{let span=document.createElement('span');span.textContent=(j+1)+'. '+current[i];o.append(span)});
- [...$('lane').children].forEach((b,i)=>{b.classList.toggle('picked',picked.includes(i));b.disabled=validated;b.setAttribute('aria-pressed',String(picked.includes(i)))});
+function drawPicked(moved){
+ const lane=$('lane');
+ [...crabNodes.values()].forEach(el=>el.classList.remove('error'));
+ // Comme dans le jeu de numération : les crabes choisis se déplacent à gauche,
+ // les autres restent cliquables à droite dans leur ordre initial.
+ const previous=new Map([...lane.children].map(el=>[el,el.getBoundingClientRect()]));
+ const order=[...picked,...current.map((_,i)=>i).filter(i=>!picked.includes(i))];
+ lane.replaceChildren(...order.map(i=>crabNodes.get(i)));
+ const announcer=$('ordered');announcer.replaceChildren();
+ picked.forEach((i,j)=>{const span=document.createElement('span');span.textContent=(j+1)+'. '+current[i];announcer.appendChild(span)});
+ order.forEach(i=>{
+  const el=crabNodes.get(i),chosen=picked.includes(i);
+  el.classList.toggle('picked',chosen);
+  el.disabled=chosen||validated;
+  el.setAttribute('aria-pressed',String(chosen));
+ });
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  for(const i of order){
+   const el=crabNodes.get(i),before=previous.get(el);
+   if(!before)continue;
+   const after=el.getBoundingClientRect();
+   const dx=before.left-after.left,dy=before.top-after.top;
+   if((Math.abs(dx)>.5||Math.abs(dy)>.5)&&typeof el.animate==='function'){
+    el.getAnimations().forEach(anim=>anim.cancel());
+    el.animate([{transform:`translate(${dx}px,${dy}px)`},{transform:'translate(0,0)'}],{duration:440,easing:'cubic-bezier(.22,.8,.18,1)'});
+   }
+  }
+  if(moved!==undefined){const el=crabNodes.get(moved);el.classList.remove('walk');void el.offsetWidth;el.classList.add('walk');}
+ }
+ $('clear').disabled=!picked.length||validated;
 }
 function select(i){
- if(validated)return;
- if(picked.includes(i)){picked.splice(picked.indexOf(i),1)}else if(picked.length<current.length)picked.push(i);
- $('feedback').textContent='';$('feedback').className='';
- drawPicked();
+ if(validated||picked.includes(i))return;
+ picked.push(i);
+ $('feedback').textContent=picked.length===5?'Tous les crabes sont rangés. Vérifie ton ordre !':'Crabes rangés : '+picked.length+' sur 5.';
+ $('feedback').className='';
+ drawPicked(i);
 }
-function clear(){if(validated)return;picked=[];drawPicked();$('feedback').textContent=''}
+function clear(){if(validated)return;picked=[];drawPicked();$('feedback').textContent='Recommence ton rangement.'}
 function check(){
  if(validated)return;
  if(picked.length!==5){$('feedback').textContent='Sélectionne les cinq crabes avant de vérifier.';$('feedback').className='bad';return}
@@ -147,7 +175,7 @@ function check(){
  drawPicked();
  }else{
  mistake=true;$('feedback').textContent='Ce n’est pas encore le bon ordre. Compare les mots lettre par lettre et recommence.';$('feedback').className='bad';
- const firstWrong=actual.findIndex((w,i)=>w!==expected[i]);$('ordered').children[firstWrong]?.setAttribute('style','background:#ffddda;border-color:#a42b27');
+ const firstWrong=actual.findIndex((w,i)=>w!==expected[i]);if(firstWrong>=0)crabNodes.get(picked[firstWrong])?.classList.add('error');
  }
 }
 function finish(){
