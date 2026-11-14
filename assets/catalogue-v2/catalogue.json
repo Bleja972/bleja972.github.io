@@ -2550,7 +2550,7 @@
   {
     "title": "Les poissons des nombres",
     "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-61",
-    "description": "S’entraîner à plusieurs procédures de calcul mental.",
+    "description": "Jeu de calcul mental avec poissons animés sur le récif ultra réaliste de Bulles de corail : huit séries successives de cinq opérations (+1, -1, +10, -10, +100 et -100). Réponses à saisir, vérification sans révéler les solutions, score et interface adaptée aux téléphones.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2562,16 +2562,16 @@
     "group": "mental",
     "slug": "les-poissons-des-nombres",
     "path": "/fiches/les-poissons-des-nombres/",
-    "objective": "S’entraîner à plusieurs procédures de calcul mental.",
+    "objective": "Enchaîner des additions et soustractions de 1, 10 et 100 sans aide par affichage des solutions.",
     "skillName": "Calcul mental varié",
     "groupName": "Calcul mental",
     "levels": [
       "CE1",
       "CE2"
     ],
-    "short": "S’entraîner à plusieurs procédures de calcul mental.",
+    "short": "Anime les poissons du récif en résolvant 8 séries de calculs, une après l’autre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-61.webp",
-    "imageAlt": "Aperçu de Les poissons des nombres : s’entraîner à plusieurs procédures de calcul mental.",
+    "imageAlt": "Jeu des poissons des nombres, avec récif sous-marin Bulles de corail et calculs successifs.",
     "playClicks": 1
   },
   {
