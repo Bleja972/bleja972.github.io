@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Les crabes des Salines rangent les mots des dictées CE1 1 à 12 dans l'ordre alphabétique. Trois niveaux et huit séries par niveau.">
-<title>Les crabes des Salines · Ordre alphabétique CE1</title>
+<title>Les crabes des Salines · Ordre alphabétique CP CE1 CE2</title>
 <link rel="canonical" href="https://bleja972.github.io/jeux/crabes-des-salines-alphabet/">
 <style>
 *{box-sizing:border-box} [hidden]{display:none!important}.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
@@ -44,13 +44,13 @@ footer{font-size:13px;margin-top:20px}
 @media(prefers-reduced-motion:reduce){.crab.walk svg{animation:none}.progress>span{transition:none}}
 </style></head><body><main>
 <nav><a href="/">← Retour au blog</a> · <a href="/jeux/crabes-des-salines/">Crabes des Salines (nombres)</a></nav>
-<header><div class="kicker">CE1 · FRANÇAIS · VOCABULAIRE · DICTÉES 1 À 12</div><h1>Les crabes des Salines</h1><p>Range les mots dans <strong>l’ordre alphabétique</strong> pour faire traverser le tombolo aux crabes !</p></header>
+<header><div class="kicker">CP · CE1 · CE2 · FRANÇAIS · VOCABULAIRE</div><h1>Les crabes des Salines</h1><p>Range les mots dans <strong>l’ordre alphabétique</strong> pour faire traverser le tombolo aux crabes !</p></header>
 <section class="panel" id="menu"><div class="beach" role="img" aria-label="La plage des Salines en Martinique"></div>
 <h2>Choisis ton niveau</h2>
 <div class="levels">
-<button class="level" data-level="1" aria-pressed="true"><strong>🦀 Niveau 1</strong><small>Chaque mot commence par une lettre différente.</small></button>
-<button class="level" data-level="2" aria-pressed="false"><strong>🦀 Niveau 2</strong><small>Certains mots commencent par la même lettre.</small></button>
-<button class="level" data-level="3" aria-pressed="false"><strong>🦀 Niveau 3</strong><small>Certains mots ont les 2 ou 3 premières lettres identiques.</small></button>
+<button class="level" data-level="1" aria-pressed="true"><strong>🦀 CP · Niveau 1</strong><small>Chaque mot commence par une lettre différente.</small></button>
+<button class="level" data-level="2" aria-pressed="false"><strong>🦀 CE1 · Niveau 2</strong><small>Certains mots commencent par la même lettre.</small></button>
+<button class="level" data-level="3" aria-pressed="false"><strong>🦀 CE2 · Niveau 3</strong><small>Certains mots ont les 2 ou 3 premières lettres identiques.</small></button>
 </div>
 <p class="instructions">Huit séries de cinq mots. Clique sur les crabes dans l’ordre alphabétique, puis sur <strong>Vérifier</strong>. Une série réussie dès le premier essai rapporte un point.</p>
 <div class="actions"><button class="primary" id="start">Commencer la traversée</button></div>
@@ -84,7 +84,8 @@ const collator=new Intl.Collator('fr',{sensitivity:'base',ignorePunctuation:true
 const sortWords=arr=>[...arr].sort((a,b)=>collator.compare(a,b));
 const first=w=>w.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()[0];
 const shuffle=a=>{let x=[...a];for(let i=x.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[x[i],x[j]]=[x[j],x[i]]}return x};
-let level=1,round=0,score=0,picked=[],current=[],rounds=[],mistake=false,validated=false,started=0,crabNodes=new Map();
+const requestedGrade=(new URLSearchParams(location.search).get('niveau')||'').toUpperCase();
+let level=({CP:1,CE1:2,CE2:3})[requestedGrade]||1,round=0,score=0,picked=[],current=[],rounds=[],mistake=false,validated=false,started=0,crabNodes=new Map();
 let validPairs=sameInitial.filter(g=>g.every(w=>bank.includes(w)));
 let validPrefix=sharedPrefix.filter(g=>g.every(w=>bank.includes(w)));
 function makeRound(n,index){
@@ -195,5 +196,6 @@ function start(){round=0;score=0;started=Date.now();prepare();render()}
 $('start').onclick=start;$('clear').onclick=clear;$('check').onclick=check;$('next').onclick=()=>{round++;if(round===8)finish();else render()};
 $('back').onclick=showMenu;$('backend').onclick=showMenu;$('again').onclick=start;
 document.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>{level=Number(b.dataset.level);document.querySelectorAll('[data-level]').forEach(x=>x.setAttribute('aria-pressed',String(Number(x.dataset.level)===level)))});
+document.querySelectorAll('[data-level]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.level)===level)));
 showBoard();
 </script></body></html>
