@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PDF · Additions posées avec retenues · 7 niveaux CE1</title>
+<meta name="description" content="Fiches à imprimer pour le jeu Les additions en orbite : 42 additions posées, 7 niveaux progressifs, cercles de retenue et corrigés.">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>*{box-sizing:border-box}body{background:#f6f7f3;color:#21392f;font:17px/1.5 Arial,sans-serif;margin:0}.wrap{max-width:760px;margin:32px auto;padding:22px;background:#fff;border:1px solid #ddd;border-radius:18px}h1{font-size:clamp(23px,4vw,34px);line-height:1.2}.button{display:inline-flex;align-items:center;justify-content:center;min-height:55px;margin:10px 0;padding:14px 22px;border:2px solid #b76b12;border-top-color:#ffefad;border-radius:14px;background:linear-gradient(#ffeaa0,#ffba32);box-shadow:0 5px 0 #a4640b,0 9px 16px #0002;color:#382807;font:700 18px Arial,sans-serif;text-decoration:none;cursor:pointer}.button:active{transform:translateY(4px);box-shadow:0 1px 0 #a4640b}.button:disabled{opacity:.5;cursor:default}.note{font-size:14px;color:#566a5e}.levels{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:20px 0}.levels div{border:1px solid #d8ddd6;border-radius:8px;padding:10px}#status{min-height:25px}a{color:#19694e}</style></head>
+<body><main class="wrap">
+<p><a href="/jeux/additions-en-orbite/">← Retour au jeu « Les additions en orbite »</a></p>
+<h1>Additions posées avec retenues · CE1</h1>
+<p><strong>42 exercices, 7 niveaux progressifs, et les corrigés.</strong> Une fiche A4 par niveau et trois pages de correction. Fond blanc, grands espaces d’écriture et cercles pour les retenues.</p>
+<button class="button" id="download">📄 Télécharger le PDF · 7 niveaux</button>
+<p class="note" id="status" role="status" aria-live="polite">Les fiches sont préparées directement dans le navigateur. Aucun compte nécessaire.</p>
+<div class="levels">
+<div><strong>Niveau 1</strong><br>Une retenue vers les dizaines (2 chiffres)</div>
+<div><strong>Niveau 2</strong><br>Une retenue vers les centaines (3 chiffres)</div>
+<div><strong>Niveau 3</strong><br>Deux retenues successives</div>
+<div><strong>Niveau 4</strong><br>Poser une addition à 2 chiffres</div>
+<div><strong>Niveau 5</strong><br>Poser une addition à 3 chiffres</div>
+<div><strong>Niveau 6</strong><br>Poser 3 chiffres + 2 ou 1 chiffre</div>
+<div><strong>Niveau 7</strong><br>Deux nombres à 3 chiffres, une retenue uniquement dans les dizaines</div>
+</div>
+<p class="note">Sur téléphone, utilise « Télécharger le PDF » puis ouvre le fichier dans l’application PDF de ton choix.</p>
+</main>
+<script>
+const levels=[
+{title:"NIVEAU 1",subtitle:"J'échange 10 unités contre 1 dizaine.",hint:"J'écris la retenue dans le cercle au-dessus des dizaines.",type:"posed",carry:["D"],pairs:[[47,28],[36,57],[58,16],[29,34],[65,18],[43,29]]},
+{title:"NIVEAU 2",subtitle:"J'échange 10 dizaines contre 1 centaine.",hint:"J'écris la retenue dans le cercle au-dessus des centaines.",type:"posed",carry:["C"],pairs:[[251,382],[342,281],[174,263],[523,281],[241,362],[415,391]]},
+{title:"NIVEAU 3",subtitle:"J'échange les unités, puis les dizaines.",hint:"J'écris chaque retenue dans le cercle de sa nouvelle colonne.",type:"posed",carry:["D","C"],pairs:[[267,158],[348,274],[159,267],[476,157],[283,348],[365,287]]},
+{title:"NIVEAU 4",subtitle:"Je pose des additions à deux chiffres.",hint:"J'aligne les unités et les dizaines, puis je calcule.",type:"topose",pairs:[[38,47],[56,29],[64,18],[27,58],[45,39],[73,19]]},
+{title:"NIVEAU 5",subtitle:"Je pose des additions à trois chiffres.",hint:"Je place les nombres dans les colonnes, avec une ou deux retenues.",type:"topose",pairs:[[245,138],[362,271],[187,236],[458,176],[294,357],[536,287]]},
+{title:"NIVEAU 6",subtitle:"Je pose des additions de longueurs différentes.",hint:"J'aligne bien les unités : 3 chiffres + 2 ou 1 chiffre.",type:"topose",pairs:[[178,7],[246,58],[375,48],[482,9],[568,47],[692,8]]},
+{title:"NIVEAU 7",subtitle:"Nombres à trois chiffres : une seule retenue dans les dizaines.",hint:"J'échange 10 unités contre 1 dizaine. J'écris 1 dans le cercle des dizaines.",type:"posed",carry:["D"],pairs:[[246,317],[352,218],[164,327],[527,314],[435,216],[613,258]]}
+];
+function flags(a,b){const u=(a%10+b%10)>=10,d=((Math.floor(a/10)%10)+(Math.floor(b/10)%10)+(u?1:0))>=10;return {u,d};}
+function validate(){
+ levels.forEach((l,i)=>l.pairs.forEach(([a,b])=>{
+ const f=flags(a,b);
+ if(i===0 && (!f.u||f.d))throw Error("Invalid level 1");
+ if(i===1 && (f.u||!f.d))throw Error("Invalid level 2");
+ if(i===2 && (!f.u||!f.d))throw Error("Invalid level 3");
+ if(i===6 && (!f.u||f.d))throw Error("Invalid level 7");
+ }));
+}
+function draw(pdf){
+ pdf.setLineWidth(.25);pdf.setDrawColor(20);pdf.setTextColor(20);
+ const mm=0.352778; const pt=n=>n*mm;
+ const label=(x,y,s,size=12,bold=false,align="left")=>{pdf.setFont("helvetica",bold?"bold":"normal");pdf.setFontSize(size);pdf.text(String(s),pt(x),pt(842-y),{align});};
+ const line=(x1,y1,x2,y2,width=1)=>{pdf.setLineWidth(pt(width));pdf.setDrawColor(30);pdf.line(pt(x1),pt(842-y1),pt(x2),pt(842-y2));};
+ const circle=(x,y,r=10)=>{pdf.setLineWidth(pt(.85));pdf.circle(pt(x),pt(842-y),pt(r));};
+ const box=(x,y,w,h)=>{pdf.setLineWidth(pt(.7));pdf.rect(pt(x),pt(842-y-h),pt(w),pt(h));};
+ const rect=(x,y,w,h)=>{box(x,y,w,h)};
+ const op=(x,top,a,b,l)=>{
+ const ux=x+183,dx=ux-38,hx=dx-38, posed=l.type==="posed",cols=Math.max(a,b)<100?2:3;
+ if(posed){
+  for(const target of l.carry) circle(target==="D"?dx:hx,top-48);
+  [[a,top-82],[b,top-118]].forEach(([num,y])=>String(num).split("").reverse().forEach((d,k)=>label(ux-k*38,y,d,25,false,"center")));
+  label((cols===2?dx:hx)-30,top-118,"+",24);
+  line((cols===2?dx:hx)-20,top-128,ux+20,top-128,1.3);
+  for(let k=0;k<cols;k++)rect(ux-k*38-14.5,top-161.5,29,29);
+ }else{
+  label(x+14,top-40,a+" + "+b+" =",17,true);
+  circle(hx,top-47,9);circle(dx,top-47,9);
+  [top-87,top-121].forEach(y=>[hx,dx,ux].forEach(cx=>rect(cx-16,y-7,32,32)));
+  label(hx-29,top-115,"+",23);
+  line(hx-19,top-131,ux+19,top-131,1.3);
+  [hx,dx,ux].forEach(cx=>rect(cx-15,top-169,30,30));
+ }
+ };
+ levels.forEach((l,i)=>{
+  if(i)pdf.addPage();
+  label(38,799,"MATHEMATIQUES · CE1",11,true);
+  label(38,769,"Additions posees avec retenues",18,true);
+  line(38,757,557,757,.7);
+  label(38,737,"Prenom : ........................................................",10.5);
+  label(383,737,"Date : ........................",10.5);
+  label(38,705,l.title,14,true);
+  label(38,683,l.subtitle,11.4);
+  label(38,665,l.hint,9.4);
+  const top0=649,rh=178,cw=251,gap=17;
+  l.pairs.forEach(([a,b],j)=>{
+   const col=j%2,row=Math.floor(j/2),x=38+col*(cw+gap),top=top0-row*rh;
+   pdf.setDrawColor(185);pdf.setLineWidth(pt(.6));
+   pdf.roundedRect(pt(x),pt(842-(top-rh+8)-(rh-13)),pt(cw),pt(rh-13),pt(7),pt(7));
+   label(x+13,top-24,(j+1)+".",11,true);
+   op(x,top,a,b,l);
+  });
+  label(38,50,l.type==="topose"?"Methode : unites sous unites, dizaines sous dizaines, centaines sous centaines.":"Methode : je note les retenues dans les cercles.",9);
+  label(537,50,(i+1)+" / 7",9,false,"center");
+ });
+ const corrections=(a,b)=>{
+ pdf.addPage();label(38,794,"CORRIGE - ADDITIONS AVEC RETENUES",15,true);line(38,779,557,779);
+ let y=743;
+ for(let i=a;i<b;i++){
+  const l=levels[i];label(38,y,l.title+" · "+(l.type==="topose"?"A poser":"Deja posees"),12,true);y-=25;
+  l.pairs.forEach(([aa,bb],j)=>{
+   const cx=44+(j%2)*263;if(j%2===0)y-=25;
+   label(cx,y,(j+1)+".  "+aa+" + "+bb+" = "+(aa+bb),11);
+  });
+  y-=42;
+  line(38,y+19,557,y+19,.4);
+ }
+ label(38,38,"D : retenue dans les dizaines · C : retenue dans les centaines",9);
+ };
+ corrections(0,3);corrections(3,6);corrections(6,7);
+}
+document.getElementById("download").addEventListener("click",async()=>{
+ const b=document.getElementById("download"),st=document.getElementById("status");
+ b.disabled=true;st.textContent="Création du PDF en cours…";
+ try{
+  if(!window.jspdf)throw Error("Le module PDF n'a pas chargé. Actualise la page et réessaie.");
+  validate();
+  const pdf=new window.jspdf.jsPDF({format:"a4",unit:"mm",compress:true});
+  draw(pdf);
+  pdf.save("Additions_posees_retenues_7_niveaux_CE1_corrige.pdf");
+  st.textContent="Le PDF de 7 niveaux et les 3 pages de corrigés est prêt.";
+ }catch(e){st.textContent="Impossible de produire le PDF : "+e.message}
+ finally{b.disabled=false}
+});
+</script></body></html>
