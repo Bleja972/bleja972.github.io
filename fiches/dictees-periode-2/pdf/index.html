@@ -10,7 +10,9 @@ const D={
 const ICON={'affaires':0,'frère':1,'neuf':2,'neufs':2,'photos':3,'téléphone':4,'femme':5,'front':6,'élèves':7,'livres':8,'ville':9,'vie':10,'tête':11,'lettres':12,'mettre':13,'attraper':14,'verbe':15,'cadeau':16,'donner':17,'doigt':18,'demander':19,'jardin':20,'jardins':20,'homme':21,'eau':22,'oiseaux':23,'automne':24,'soleil':25,'Soleil':25,'auto':26,'heures':27,'sœur':28,'fleurs':29,'cœurs':30,'feu':31,'vieux':32,'jeu':33,'loto':34,'vélo':35};
 const NUM={trois:'3',sept:'7',huit:'8',six:'6',vingt:'20',deux:'2'};
 const status=document.getElementById('status');const buttons=document.getElementById('buttons');
+const autoOpen=Number((location.hash.match(/dictee-(\d+)/)||[])[1]);
 for(let n=7;n<=12;n++){const b=document.createElement('button');b.className='pdf-btn';b.innerHTML='📄 Dictée '+n+'<small>Télécharger le PDF</small>';b.onclick=()=>generate(n,b);buttons.appendChild(b)}
+window.addEventListener('load',()=>{if(autoOpen>=7&&autoOpen<=12){const index=autoOpen-7;const btn=buttons.children[index];if(btn)btn.click();}});
 let atlasPromise=null;
 async function loadAtlas(){
  if(atlasPromise)return atlasPromise;
