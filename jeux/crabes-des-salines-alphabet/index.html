@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Les crabes des Salines rangent les mots des dictées CE1 1 à 12 dans l'ordre alphabétique. Trois niveaux et huit séries par niveau.">
+<title>Les crabes des Salines · Ordre alphabétique CE1</title>
+<link rel="canonical" href="https://bleja972.github.io/jeux/crabes-des-salines-alphabet/">
+<style>
+*{box-sizing:border-box} [hidden]{display:none!important}
+body{margin:0;color:#183e3e;font:16px/1.5 Arial,Helvetica,sans-serif;background:#ecd3a8 url('/jeux/crabes-des-salines/sable-salines.webp') center/cover fixed}
+main{max-width:1100px;margin:0 auto;padding:14px clamp(10px,3vw,28px) 35px}
+nav a{color:#145653;font-weight:700}header{padding:12px 0}h1{font-size:clamp(26px,5.4vw,49px);line-height:1.1;margin:8px 0}h2{margin:0 0 10px}
+.kicker{font-size:13px;letter-spacing:1.2px;font-weight:800;color:#135f60}
+.panel{margin:16px 0;padding:clamp(12px,3vw,24px);background:#fffcf4f5;border:1px solid #c1dcd3;border-radius:22px;box-shadow:0 8px 26px #614a2b24}
+.actions,.hud{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+button{font:700 16px Arial,sans-serif;border:2px solid #246b67;border-radius:12px;background:#fff;color:#174a48;min-height:45px;padding:10px 15px;cursor:pointer;touch-action:manipulation}
+button:hover{filter:brightness(1.06)}button:focus-visible,a:focus-visible{outline:3px solid #a7500b;outline-offset:3px}
+.primary{background:#166b60;color:white}button[aria-pressed=true]{background:linear-gradient(#fdefb7,#f7cc6d);border-color:#a76c21;color:#593a09}
+.levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:22px 0}
+.level{padding:18px 12px;min-height:128px;text-align:left;box-shadow:0 5px 0 #347b71,0 7px 12px #0002}
+.level strong,.level small{display:block}.level strong{font-size:20px}.level small{font-size:13px;font-weight:normal;margin-top:8px}
+.level[aria-pressed=true]{box-shadow:0 5px 0 #aa7b31,0 7px 12px #0002}
+.beach{aspect-ratio:1264/590;background:url('/jeux/crabes-des-salines/plage.webp') center top/cover no-repeat;border-radius:17px 17px 0 0}
+.sand{background:linear-gradient(#f6d688,#fff1c6);padding:10px 7px 15px;border-radius:0 0 17px 17px}
+.zone{display:flex;justify-content:space-between;font-size:13px;color:#654826;font-weight:800;gap:10px;margin:2px 6px 10px}
+.lane{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(4px,1.5vw,14px);align-items:start}
+.crab{background:transparent!important;border:none!important;padding:1px 0!important;min-width:0;display:flex;flex-direction:column;align-items:center;color:#482b13;position:relative}
+.crab svg{display:block;width:100%;max-width:132px;height:auto;overflow:visible;filter:drop-shadow(0 2px 1px #63361633)}
+.sign{width:100%;min-height:53px;border-radius:12px;border:2px solid #90602c;background:#fffef5;display:grid;place-items:center;padding:4px 2px;font:800 clamp(10px,2vw,22px)/1.1 Arial,sans-serif;overflow-wrap:anywhere;text-align:center;box-shadow:0 3px 0 #ac7a3b3d}
+.crab.picked .sign{background:#ddfbe5;border-color:#24704b}
+.crab.error .sign{border-color:#b12c23;background:#ffdbd5}
+.crab.walk svg{animation:scuttle .14s ease-in-out 5 alternate}
+@keyframes scuttle{to{transform:translateY(-7px) rotate(6deg)}}
+.hud{justify-content:space-between;font-weight:800}
+#feedback{min-height:45px;font-size:17px;font-weight:800}#feedback.good{color:#14664f}#feedback.bad{color:#a1261e}
+.instruction{font-size:clamp(18px,3vw,26px);font-weight:850}
+.resultbig{font-size:45px;font-weight:850;color:#125e55;margin:10px 0}
+.progress{height:10px;width:100%;background:#d3e1da;border-radius:20px;overflow:hidden;margin:15px 0}
+.progress>span{display:block;width:0%;height:100%;background:#229078;transition:width .3s}
+#ordered{display:flex;gap:6px;flex-wrap:wrap;min-height:34px;margin:8px 0 18px}
+#ordered span{padding:5px 9px;border-radius:9px;background:#e1f5ec;border:1px solid #5b9d80;font-size:14px;font-weight:bold}
+.instructions{background:#f4f9ed;border-left:4px solid #32836f;padding:12px 15px;border-radius:10px}
+table{width:100%;border-collapse:collapse}th,td{padding:8px;text-align:left;border-bottom:1px solid #d4e5dd}
+footer{font-size:13px;margin-top:20px}
+@media(max-width:630px){main{padding:10px}.panel{padding:11px}.levels{grid-template-columns:1fr}.level{min-height:77px;padding:12px}.level strong{font-size:17px}.level small{margin-top:2px}.crab svg{width:100%}.sign{font-size:clamp(9px,2.65vw,15px);min-height:43px;padding:2px 0}.lane{gap:3px}.zone{font-size:11px}button{font-size:14px}.actions button{flex:1}.beach{aspect-ratio:1264/590}}
+@media(prefers-reduced-motion:reduce){.crab.walk svg{animation:none}.progress>span{transition:none}}
+</style></head><body><main>
+<nav><a href="/">← Retour au blog</a> · <a href="/jeux/crabes-des-salines/">Crabes des Salines (nombres)</a></nav>
+<header><div class="kicker">CE1 · FRANÇAIS · VOCABULAIRE · DICTÉES 1 À 12</div><h1>Les crabes des Salines</h1><p>Range les mots dans <strong>l’ordre alphabétique</strong> pour faire traverser le tombolo aux crabes !</p></header>
+<section class="panel" id="menu"><div class="beach" role="img" aria-label="La plage des Salines en Martinique"></div>
+<h2>Choisis ton niveau</h2>
+<div class="levels">
+<button class="level" data-level="1" aria-pressed="true"><strong>🦀 Niveau 1</strong><small>Chaque mot commence par une lettre différente.</small></button>
+<button class="level" data-level="2" aria-pressed="false"><strong>🦀 Niveau 2</strong><small>Certains mots commencent par la même lettre.</small></button>
+<button class="level" data-level="3" aria-pressed="false"><strong>🦀 Niveau 3</strong><small>Certains mots ont les 2 ou 3 premières lettres identiques.</small></button>
+</div>
+<p class="instructions">Huit séries de cinq mots. Clique sur les crabes dans l’ordre alphabétique, puis sur <strong>Vérifier</strong>. Une série réussie dès le premier essai rapporte un point.</p>
+<div class="actions"><button class="primary" id="start">Commencer la traversée</button></div>
+</section>
+<section class="panel" id="game" hidden>
+<div class="hud"><span id="round">Série 1 / 8</span><span id="score">Score : 0 / 8</span><span id="level-name"></span></div>
+<div class="progress"><span id="progress"></span></div>
+<h2 class="instruction">Clique sur les mots du premier au dernier dans l’ordre alphabétique.</h2>
+<div class="beach" aria-hidden="true"></div><div class="sand"><div class="zone"><span>← Ordre choisi</span><span>Crabes à ranger →</span></div><div class="lane" id="lane" aria-label="Mots à ranger"></div></div>
+<div id="ordered" aria-live="polite" aria-label="Mots déjà choisis"></div>
+<p id="feedback" role="status"></p>
+<div class="actions"><button id="clear">Effacer</button><button id="check" class="primary">Vérifier</button><button id="next" class="primary" hidden>Série suivante</button><button id="back">Menu</button></div>
+</section>
+<section class="panel" id="end" hidden><h2>Traversée terminée !</h2><p class="resultbig" id="final"></p><p id="end-message"></p>
+<div class="actions"><button id="again" class="primary">Rejouer</button><button id="backend">Choisir un autre niveau</button></div></section>
+<section class="panel"><h2>Meilleurs scores de cet appareil</h2><p>Classement enregistré sur cet appareil uniquement.</p><table><thead><tr><th>Rang</th><th>Niveau</th><th>Score</th><th>Temps</th></tr></thead><tbody id="leader"></tbody></table></section>
+<footer>Mots issus de <a href="https://bleja972.github.io/orthographe_periode1/">l’orthographe de la période 1</a>, du jeu <a href="https://bleja972.github.io/dictee1/">Les mots en images</a> et des <a href="https://bleja972.github.io/dictees_periode2/">dictées 7 à 12</a>. Les mots sont mélangés à chaque partie.</footer>
+</main>
+<script>
+"use strict";
+const $=id=>document.getElementById(id);
+const crab='<svg aria-hidden="true" viewBox="0 0 128 76"><g fill="none" stroke="#8e4a14" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="m47 48-24 1-12 14m35-9-22 7-7 10m62-23 24 1 12 14m-35-9 22 7 7 10M41 42 22 33l-3-13m68 22 19-9 3-13"/></g><g fill="#ffae21" stroke="#8e4a14" stroke-width="2"><path d="M22 33C4 31 3 12 17 4c-2 8 1 12 5 13l7-11c10 11 7 24-7 27Z"/><path d="M106 33c18-2 19-21 5-29 2 8-1 12-5 13l-7-11c-10 11-7 24 7 27Z"/><ellipse cx="64" cy="48" rx="31" ry="21"/></g><g fill="#38271b"><path d="M53 33v-9m22 9v-9" stroke="#38271b" stroke-width="3"/><circle cx="53" cy="23" r="4"/><circle cx="75" cy="23" r="4"/></g><path d="M58 51q6 6 12 0" stroke="#78360b" stroke-width="2" fill="none"/></svg>';
+// Banque vérifiée dans les jeux des dictées, avec suppression des déterminants et doublons.
+const words1=['beaucoup','neige','lunettes','loin','frère','six','dix','colle','derrière','école','cahier','rouge','hier','vert','marron','vélo','éléphant','étoile','carré','forêt','lit','château','gâteau'];
+const words2=['affaires','frère','neuf','photos','téléphone','enfin','femme','front','élèves','souvent','livres','ville','vingt','vie','neufs','trois','sept','huit','tête','trop','lettres','mettre','attraper','verbe','demain','donner','cadeau','deux','doigt','demander','dehors','jardin','jardins','homme','eau','oiseaux','automne','soleil','haut','auto','toujours','heures','sœur','fleurs','cœurs','feu','vieux','bleu','jeu','loto'];
+const bank=[...new Set([...words1,...words2])];
+// Groupes explicitement vérifiés : même première lettre pour le niveau 2, premières 2 ou 3 lettres identiques au niveau 3.
+const sameInitial=[['marron','mettre'],['femme','frère'],['photos','papillon'],['bleu','beaucoup'],['ville','vert'],['livres','lettres'],['souvent','six'],['cadeau','colle'],['tête','trop'],['gâteau','garde']];
+const sharedPrefix=[['frère','front'],['trois','trop'],['vie','ville','vingt'],['automne','auto'],['lettres','les'],['demain','demander'],['donner','doigt'],['jardin','jardins'],['neuf','neufs'],['dehors','deux'],['soleil','souvent']];
+const collator=new Intl.Collator('fr',{sensitivity:'base',ignorePunctuation:true});
+const sortWords=arr=>[...arr].sort((a,b)=>collator.compare(a,b));
+const first=w=>w.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()[0];
+const shuffle=a=>{let x=[...a];for(let i=x.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[x[i],x[j]]=[x[j],x[i]]}return x};
+let level=1,round=0,score=0,picked=[],current=[],rounds=[],mistake=false,validated=false,started=0;
+let validPairs=sameInitial.filter(g=>g.every(w=>bank.includes(w)));
+let validPrefix=sharedPrefix.filter(g=>g.every(w=>bank.includes(w)));
+function makeRound(n,index){
+ if(n===1){
+  let out=[],letters=new Set();
+  for(let w of shuffle(bank)){let f=first(w);if(!letters.has(f)){letters.add(f);out.push(w)}if(out.length===5)break}
+  return out;
+ }
+ const group=n===2?validPairs[index%validPairs.length]:validPrefix[index%validPrefix.length];
+ let chosen=[...group];
+ let pool=shuffle(bank.filter(w=>!chosen.includes(w)));
+ for(let w of pool){if(chosen.length>=5)break;chosen.push(w)}
+ return chosen;
+}
+function prepare(){
+ const used=new Set();rounds=[];
+ for(let i=0;i<8;i++){let arr,tries=0;do{arr=makeRound(level,i);tries++}while(used.has(sortWords(arr).join('|'))&&tries<60);
+ used.add(sortWords(arr).join('|'));rounds.push(shuffle(arr))
+ }
+}
+function showMenu(){
+ $('menu').hidden=false;$('game').hidden=true;$('end').hidden=true;$('feedback').textContent='';
+}
+function render(){
+ current=rounds[round];picked=[];mistake=false;validated=false;
+ $('menu').hidden=true;$('game').hidden=false;$('end').hidden=true;
+ $('round').textContent='Série '+(round+1)+' / 8';$('score').textContent='Score : '+score+' / 8';$('level-name').textContent='Niveau '+level;
+ $('progress').style.width=(round/8*100)+'%';
+ $('feedback').textContent='';$('feedback').className='';
+ $('check').hidden=false;$('clear').hidden=false;$('next').hidden=true;
+ let lane=$('lane');lane.replaceChildren();
+ current.forEach((w,i)=>{const b=document.createElement('button');b.type='button';b.className='crab';b.dataset.i=String(i);
+ b.setAttribute('aria-label','Choisir le mot '+w);b.innerHTML='<span class="sign"></span>'+crab;
+ b.querySelector('.sign').textContent=w;
+ b.onclick=()=>select(i);
+ lane.appendChild(b)});
+ drawPicked();
+}
+function drawPicked(){
+ let o=$('ordered');o.replaceChildren();
+ picked.forEach((i,j)=>{let span=document.createElement('span');span.textContent=(j+1)+'. '+current[i];o.append(span)});
+ [...$('lane').children].forEach((b,i)=>{b.classList.toggle('picked',picked.includes(i));b.disabled=validated;b.setAttribute('aria-pressed',String(picked.includes(i)))});
+}
+function select(i){
+ if(validated)return;
+ if(picked.includes(i)){picked.splice(picked.indexOf(i),1)}else if(picked.length<current.length)picked.push(i);
+ $('feedback').textContent='';$('feedback').className='';
+ drawPicked();
+}
+function clear(){if(validated)return;picked=[];drawPicked();$('feedback').textContent=''}
+function check(){
+ if(validated)return;
+ if(picked.length!==5){$('feedback').textContent='Sélectionne les cinq crabes avant de vérifier.';$('feedback').className='bad';return}
+ const actual=picked.map(i=>current[i]),expected=sortWords(current);
+ const good=actual.every((w,i)=>w===expected[i]);
+ if(good){validated=true;if(!mistake)score++;$('score').textContent='Score : '+score+' / 8';
+ $('feedback').textContent=mistake?'Bravo ! Tu as trouvé le bon ordre.':'Bravo ! Tous les crabes sont bien rangés !';
+ $('feedback').className='good';[...$('lane').children].forEach(b=>b.classList.add('walk'));
+ $('next').textContent=round===7?'Voir mon résultat':'Série suivante';$('next').hidden=false;$('check').hidden=true;$('clear').hidden=true;
+ drawPicked();
+ }else{
+ mistake=true;$('feedback').textContent='Ce n’est pas encore le bon ordre. Compare les mots lettre par lettre et recommence.';$('feedback').className='bad';
+ const firstWrong=actual.findIndex((w,i)=>w!==expected[i]);$('ordered').children[firstWrong]?.setAttribute('style','background:#ffddda;border-color:#a42b27');
+ }
+}
+function finish(){
+ $('game').hidden=true;$('end').hidden=false;$('progress').style.width='100%';
+ $('final').textContent=score+' / 8 · '+Math.round(score/8*100)+' %';
+ $('end-message').textContent=score===8?'Super ! Toutes les séries ont été réussies du premier coup.':'Tu as terminé les huit séries. Tu peux rejouer pour t’améliorer.';
+ try{let a=JSON.parse(localStorage.getItem('salines-alphabet-scores-v1')||'[]');if(!Array.isArray(a))a=[];
+ a.push({level,score,time:Math.round((Date.now()-started)/1000)});a.sort((x,y)=>y.score-x.score||x.time-y.time);localStorage.setItem('salines-alphabet-scores-v1',JSON.stringify(a.slice(0,10)))}catch{}
+ showBoard();
+}
+function showBoard(){
+ let b=$('leader');b.replaceChildren();let scores=[];try{scores=JSON.parse(localStorage.getItem('salines-alphabet-scores-v1')||'[]')}catch{}
+ if(!scores.length){b.innerHTML='<tr><td colspan="4">Aucun score pour le moment.</td></tr>';return}
+ scores.forEach((r,i)=>{let tr=document.createElement('tr');[i+1,'Niveau '+r.level,r.score+'/8',Math.floor(r.time/60)+' min '+String(r.time%60).padStart(2,'0')+' s'].forEach(v=>{let td=document.createElement('td');td.textContent=String(v);tr.append(td)});b.append(tr)});
+}
+function start(){round=0;score=0;started=Date.now();prepare();render()}
+$('start').onclick=start;$('clear').onclick=clear;$('check').onclick=check;$('next').onclick=()=>{round++;if(round===8)finish();else render()};
+$('back').onclick=showMenu;$('backend').onclick=showMenu;$('again').onclick=start;
+document.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>{level=Number(b.dataset.level);document.querySelectorAll('[data-level]').forEach(x=>x.setAttribute('aria-pressed',String(Number(x.dataset.level)===level)))});
+showBoard();
+</script></body></html>
