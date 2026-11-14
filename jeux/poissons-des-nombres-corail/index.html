@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07485d">
+<title>Les poissons des nombres · Récif de corail · Calcul mental CE1</title>
+<meta name="description" content="Huit séries de cinq calculs avec des poissons animés dans le récif ultra réaliste Bulles de corail, sans solutions affichées.">
+<style>
+:root{--deep:#063547;--ocean:#075974;--light:#e9ffff;--sand:#ffda77;--correct:#95ffce;--error:#ffbcb2}
+*{box-sizing:border-box}
+html{min-height:100%;background:#063f59}
+body{margin:0;min-height:100vh;font:17px/1.42 Arial,sans-serif;color:#efffff;background:linear-gradient(#002e4270,#002a4388),url('/assets/bulles-corail/recif.webp') center center/cover fixed no-repeat}
+button,input{font:inherit}
+button{cursor:pointer;touch-action:manipulation}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #fff19c;outline-offset:3px}
+[hidden]{display:none!important}
+.wrap{max-width:1180px;margin:auto;padding:12px clamp(9px,2vw,23px) 30px}
+.navline{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.back{color:#fff9d6;background:#073949dd;text-decoration:none;border:1px solid #a7f0ef65;border-radius:12px;padding:9px 13px;font-weight:700}
+.hero{margin-top:12px;padding:16px 21px;border:1px solid #79e5e188;border-radius:21px;background:linear-gradient(120deg,#023d52e8,#03647bca);box-shadow:0 12px 35px #001b3480;backdrop-filter:blur(7px)}
+h1{font-size:clamp(23px,4vw,37px);margin:0 0 6px}
+.subtitle{margin:0;color:#dcf9fb;line-height:1.5}
+.hud{margin-top:13px;display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+.pill{border:1px solid #7cb9b2c2;border-radius:12px;background:#023344b8;color:#fff;padding:8px 13px;font-size:15px;font-weight:800}
+.toolbar{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:13px 0}
+.action{border-radius:12px;min-height:46px;padding:11px 17px;color:#063849;font-weight:800;border:1px solid #c7f9eb;background:linear-gradient(#eafff6,#89e6d8);box-shadow:0 4px 0 #136f79,0 7px 15px #0004}
+.action.secondary{background:#0a5872;color:white;border:1px solid #8bccd2;box-shadow:0 4px 0 #033647,0 7px 15px #0004}
+.action.gold{background:linear-gradient(#fff2af,#ffb941);border-color:#ffe3a1;box-shadow:0 4px 0 #ad7013,0 7px 15px #0004}
+.action:active{transform:translateY(3px);box-shadow:none}
+.action:disabled{opacity:.55;cursor:not-allowed}
+.progress{height:10px;border-radius:30px;background:#9debf555;margin:13px 0 3px;overflow:hidden}
+.progress span{height:100%;display:block;width:0;background:linear-gradient(90deg,#a6ffdb,#ffefad);transition:width .2s}
+.board{position:relative;isolation:isolate;padding:16px clamp(10px,2vw,21px) 20px;margin-top:13px;border:1px solid #a0f5f880;border-radius:23px;background:linear-gradient(180deg,#06415cb3,#05344caa);box-shadow:0 18px 45px #001e3280;overflow:hidden}
+.board::before{content:"";position:absolute;inset:0;z-index:-2;background:url('/assets/bulles-corail/recif.webp') center/cover no-repeat;opacity:.5}
+.board::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(#023c5999,#002b4680)}
+.board h2{font-size:clamp(19px,3vw,26px);margin:0 0 5px}
+.hint{margin:0 0 15px;color:#d1f9fe}
+.fish-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(9px,1.5vw,18px)}
+.step{position:relative;min-width:0;min-height:192px;display:flex;flex-direction:column;align-items:center;gap:5px;padding:6px;background:#002f4682;border:1px solid #82bfc477;border-radius:18px}
+.op{color:#fff3b3;font-weight:900;font-size:20px;text-shadow:0 2px 3px #001d3a}
+.step.first .op{font-size:16px}
+.fish{width:min(100%,194px);height:118px;position:relative;display:grid;place-items:center;background:transparent url('https://bleja972.github.io/chainesdecalculspoissons/poisson_detaille.png') center/contain no-repeat;animation:fishFloat 3.4s ease-in-out infinite;filter:drop-shadow(0 4px 10px #001b2b66)}
+.step:nth-child(2n) .fish{animation-delay:-1.8s;animation-duration:4s}
+.step:nth-child(3n) .fish{animation-delay:-.7s;animation-duration:3.7s}
+@keyframes fishFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+.fish input,.fish .start{width:clamp(64px,58%,103px);height:53px;border-radius:12px;background:#fffefd;border:2px solid #b8e9e3;text-align:center;color:#123e48;font-weight:900;font-size:clamp(20px,2.5vw,28px);box-shadow:0 3px 8px #0003}
+.fish .start{display:grid;place-items:center}
+.fish input:focus{background:#fff4ca}
+.step.good .fish input{border:4px solid #67e5ad;background:#ecfff3}
+.step.bad .fish input{border:4px solid #ff9787;background:#fff1ed}
+.step small{font-weight:700;font-size:12px;color:#c1eaf0}
+.feedback{min-height:30px;margin:14px 0 3px;font-weight:800;font-size:17px}
+.feedback.ok{color:#abffd4}.feedback.bad{color:#ffbcad}
+.actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin:12px 0 2px}
+.fizz{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.fizz i{position:absolute;bottom:-34px;left:var(--x);width:var(--sz);height:var(--sz);border:1px solid #c7ffff7a;border-radius:50%;box-shadow:inset 0 0 7px #bffaff82;animation:bubbleRise var(--t) linear infinite;animation-delay:var(--delay)}
+@keyframes bubbleRise{to{transform:translate(25px,-660px);opacity:0}}
+#done{text-align:center;padding:30px 20px}
+#done h2{font-size:clamp(25px,4vw,40px)}
+#done .big{font-size:clamp(45px,8vw,75px);font-weight:900;color:#b5ffda}
+.note{font-size:13px;color:#c0e8e9}
+@media(max-width:780px){.fish-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.step{min-height:162px}.fish{height:102px}.board{padding:12px 9px}.hero{padding:13px}body{background-attachment:scroll}.fish input,.fish .start{height:47px}}
+@media(max-width:380px){.fish-grid{gap:6px}.step{padding:5px;min-height:151px}.fish{height:92px}.op{font-size:17px}.fish input,.fish .start{width:80px;height:43px;font-size:20px}.action{flex:1}}
+@media(min-width:1050px){.fish-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.step{min-height:178px}.fish{height:120px}.step .fish input{width:76px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="navline"><a class="back" href="https://bleja972.github.io/" target="_top">⌂ Tous les jeux</a><span class="pill">CALCUL MENTAL · CE1 / CE2</span></div>
+<header class="hero">
+<h1>🐠 Les poissons des nombres</h1>
+<p class="subtitle">Suis les opérations et écris le nombre dans chaque poisson. <strong>8 séries de 5 calculs</strong>, une série à la fois. Les réponses ne sont jamais affichées.</p>
+<div class="hud"><span class="pill" id="seriesLabel">Série 1 / 8</span><span class="pill" id="scoreBox">Séries réussies : 0 / 8</span></div>
+<div class="progress"><span id="progress"></span></div>
+</header>
+<section class="board" id="exercise" aria-label="Exercices de calcul">
+<div class="fizz" aria-hidden="true"><i style="--x:8%;--sz:20px;--t:8s;--delay:-3s"></i><i style="--x:27%;--sz:12px;--t:6s;--delay:-2s"></i><i style="--x:56%;--sz:18px;--t:9s;--delay:-5s"></i><i style="--x:80%;--sz:13px;--t:7s;--delay:-4s"></i><i style="--x:91%;--sz:22px;--t:10s;--delay:-7s"></i></div>
+<h2 id="prompt">Complète les poissons dans l’ordre.</h2>
+<p class="hint">Le premier poisson donne le nombre de départ. Pour chaque poisson suivant, effectue l’opération indiquée.</p>
+<div class="fish-grid" id="fishGrid"></div>
+<p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+<div class="actions">
+<button class="action secondary" id="clear" type="button">Effacer les réponses</button>
+<button class="action gold" id="verify" type="button">Vérifier la série</button>
+<button class="action" id="next" type="button" hidden>Série suivante</button>
+<button class="action secondary" id="newGame" type="button">Nouvelle partie</button>
+</div>
+</section>
+<section class="board" id="done" hidden>
+<h2>Bravo, tu as terminé les huit séries !</h2>
+<div class="big" id="final"></div>
+<p id="finalMessage"></p>
+<button class="action gold" id="restart" type="button">Recommencer</button>
+</section>
+<p class="note">Jeu adapté aux téléphones, tablettes et ordinateurs. Les corrections signalent les cases à revoir sans donner les résultats.</p>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const patterns=[
+['+10','+100','-1','-10','-100'],['+100','-10','+1','-100','+10'],
+['+10','+10','-1','+100','-10'],['+1','+10','+100','-10','-100'],
+['+100','-1','-10','+10','+1'],['+10','-10','+100','-100','+1'],
+['+1','+1','+10','-1','+100'],['+100','+10','-10','-1','-100']
+];
+let series=[],index=0,points=0,hadMistake=false,completed=false,locked=false;
+function apply(n,op){return n+Number(op)}
+function random(min,max){return Math.floor(Math.random()*(max-min+1))+min}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=random(0,i);[a[i],a[j]]=[a[j],a[i]]}return a}
+function makeSeries(i){
+ for(let tries=0;tries<500;tries++){
+  const ops=patterns[(i+tries)%patterns.length];
+  const start=random(120,780);
+  let prev=start,answers=[],ok=true;
+  for(const op of ops){prev=apply(prev,op);if(prev<0||prev>999){ok=false;break}answers.push(prev)}
+  if(ok)return {start,ops:[...ops],answers};
+ }
+ throw Error('Impossible de générer la série');
+}
+function newGame(){
+ series=Array.from({length:8},(_,i)=>makeSeries(i));index=0;points=0;completed=false;
+ $('exercise').hidden=false;$('done').hidden=true;render();
+}
+function render(){
+ const s=series[index];hadMistake=false;locked=false;
+ $('seriesLabel').textContent='Série '+(index+1)+' / 8';
+ $('scoreBox').textContent='Séries réussies : '+points+' / 8';
+ $('progress').style.width=(index/8*100)+'%';
+ $('feedback').textContent='';$('feedback').className='feedback';
+ $('verify').hidden=false;$('next').hidden=true;$('clear').hidden=false;
+ const grid=$('fishGrid');grid.replaceChildren();
+ const create=(label,value,j)=>{
+  const card=document.createElement('div');card.className='step'+(j===0?' first':'');
+  const op=document.createElement('div');op.className='op';op.textContent=label;
+  const fish=document.createElement('div');fish.className='fish';
+  if(j===0){const el=document.createElement('div');el.className='start';el.textContent=value;fish.appendChild(el)}
+  else {
+   const input=document.createElement('input');input.type='text';input.inputMode='numeric';input.maxLength=3;
+   input.autocomplete='off';input.spellcheck=false;input.setAttribute('aria-label','Résultat '+j+' après '+label);
+   input.addEventListener('input',()=>{input.value=input.value.replace(/[^0-9]/g,'').slice(0,3);card.classList.remove('good','bad');if(!locked){$('feedback').textContent='';$('feedback').className='feedback'}});
+   input.addEventListener('keydown',e=>{if(e.key==='Enter'){const all=[...grid.querySelectorAll('input')];const next=all[all.indexOf(input)+1];if(next)next.focus();else verify()}});
+   fish.appendChild(input);
+  }
+  const small=document.createElement('small');small.textContent=j===0?'Départ':'Poisson '+j;
+  card.append(op,fish,small);return card;
+ };
+ grid.appendChild(create('DÉPART',s.start,0));
+ s.ops.forEach((op,j)=>grid.appendChild(create(op,'',j+1)));
+ $('fishGrid').querySelector('input')?.focus({preventScroll:true});
+}
+function verify(){
+ if(locked)return;
+ const s=series[index],inputs=[...$('fishGrid').querySelectorAll('input')];
+ const missing=inputs.some(inp=>inp.value==='');
+ if(missing){$('feedback').textContent='Complète les 5 poissons avant de vérifier.';$('feedback').className='feedback bad';return}
+ let correct=0;
+ inputs.forEach((input,j)=>{
+  const ok=Number(input.value)===s.answers[j],card=input.closest('.step');card.classList.remove('good','bad');card.classList.add(ok?'good':'bad');if(ok)correct++;
+ });
+ if(correct<5){
+  hadMistake=true;
+  $('feedback').textContent=correct+' / 5 bonnes réponses. Les poissons à corriger sont entourés en rouge. Aucun résultat n’est dévoilé.';
+  $('feedback').className='feedback bad';
+  return;
+ }
+ locked=true;completed=true;
+ if(!hadMistake)points++;
+ $('scoreBox').textContent='Séries réussies : '+points+' / 8';
+ $('feedback').textContent=hadMistake?'Bravo ! Tu as réussi après correction.':'Bravo ! Série réussie du premier coup : 5 / 5 !';
+ $('feedback').className='feedback ok';
+ inputs.forEach(inp=>inp.disabled=true);
+ $('verify').hidden=true;$('clear').hidden=true;$('next').hidden=false;
+ $('next').textContent=index===7?'Voir mon score':'Série suivante';
+}
+function finish(){
+ $('exercise').hidden=true;$('done').hidden=false;$('progress').style.width='100%';
+ $('seriesLabel').textContent='8 séries terminées';
+ $('scoreBox').textContent='Séries réussies : '+points+' / 8';
+ $('final').textContent=points+' / 8 · '+Math.round(points/8*100)+' %';
+ $('finalMessage').textContent=points===8?'Excellent ! Toutes les séries ont été réussies du premier coup.':'Tu as terminé toutes les séries. Rejoue pour améliorer ton score !';
+ $('done').scrollIntoView({behavior:'smooth',block:'start'});
+}
+$('verify').onclick=verify;
+$('clear').onclick=()=>{
+ if(locked)return;
+ $('fishGrid').querySelectorAll('input').forEach(i=>{i.value='';i.closest('.step').classList.remove('good','bad')});
+ $('feedback').textContent='';hadMistake=true;
+ $('fishGrid').querySelector('input')?.focus({preventScroll:true});
+};
+$('next').onclick=()=>{if(!locked)return;if(index===7)finish();else{index++;render()}};
+$('newGame').onclick=newGame;$('restart').onclick=newGame;
+newGame();
+</script>
+</body>
+</html>
