@@ -1,0 +1,95 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiches de soustractions avec matériel de numération · CE1</title>
+<meta name="description" content="Fiches à imprimer avec matériel de numération : sans cassage, cassage d'une dizaine et d'une centaine, corrigés.">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+*{box-sizing:border-box}body{background:#f7f7f3;color:#23362c;font:16px/1.5 Arial,sans-serif;margin:0}main{max-width:800px;padding:28px;margin:28px auto;background:white;border:1px solid #e0e0d6;border-radius:18px}h1{font-size:clamp(23px,4vw,34px)}.btn{cursor:pointer;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(#fff0a6,#ffbf34);border:2px solid #b87b19;border-top-color:#fff8cb;border-radius:15px;padding:13px 23px;color:#443006;font:800 17px Arial;box-shadow:0 5px 0 #ad7213,0 8px 15px #0002;min-height:56px}.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #ad7213}.btn:disabled{opacity:.5}.note{color:#5d675c;font-size:14px}.list{padding:0 0 0 20px}#status{min-height:26px}a{color:#17684b}
+</style></head><body><main>
+<p><a href="/jouer/calcul-ce1/?jeu=jeu-49">← Retour au jeu avec le matériel de numération</a></p>
+<h1>Soustractions avec le matériel de numération</h1>
+<p>Fiches d'entraînement CE1 à imprimer : <strong>4 soustractions sans cassage</strong> et <strong>11 soustractions par cassage</strong>, avec matériel à barrer, échanges à représenter et corrigés.</p>
+<button class="btn" id="download" type="button">📄 Télécharger les exercices en PDF</button>
+<p class="note" id="status" role="status">PDF généré à partir des exercices du blog. Une connexion est nécessaire au premier chargement.</p>
+<p><strong>Progression :</strong></p>
+<ol class="list"><li>Soustraire sans cassage : 98 − 46, 76 − 23, 987 − 242, 864 − 321</li><li>Casser une dizaine en 10 unités : nombres à deux chiffres</li><li>Avec trois chiffres : échanger une dizaine</li><li>Casser une centaine puis une dizaine, y compris avec un zéro</li></ol>
+<p class="note">Les illustrations du matériel sont dessinées dans le PDF en noir sur blanc pour être barrées facilement au crayon. Cette fiche en ligne reprend les exercices du document, avec une présentation adaptée au téléchargement.</p>
+</main>
+<script>
+const P=[
+{title:"Découverte — Sans cassage",sub:"Je barre le matériel retiré, puis je compte ce qui reste.",items:[[98,46],[76,23],[987,242],[864,321]],kind:"no"},
+{title:"Niveau 1 — Je casse une dizaine",sub:"1 dizaine = 10 unités",items:[[52,27],[64,38],[73,46],[81,54],[95,67],[43,18]],kind:"ten"},
+{title:"Niveau 2 — Nombres à trois chiffres",sub:"Je casse une dizaine en 10 unités.",items:[[352,126],[463,237]],kind:"ten"},
+{title:"Niveau 3 — Deux cassages",sub:"1 centaine = 10 dizaines, puis 1 dizaine = 10 unités.",items:[[342,157],[621,254]],kind:"both"},
+{title:"Niveau 4 — Je travaille avec un zéro",sub:"Je casse une centaine en 10 dizaines, puis une dizaine en 10 unités.",items:[[405,168]],kind:"both"}
+];
+function generate(){
+ const {jsPDF}=window.jspdf;if(!jsPDF)throw Error("Le module PDF ne s'est pas chargé.");
+ const pdf=new jsPDF({format:"a4",unit:"mm",compress:true});
+ let page=0;
+ const t=(x,y,v,s=10,b=false)=>{pdf.setFont("helvetica",b?"bold":"normal");pdf.setFontSize(s);pdf.text(String(v),x,y)};
+ const ln=(x1,y1,x2,y2)=>{pdf.setLineWidth(.25);pdf.line(x1,y1,x2,y2)};
+ function frame(title,sub){
+  if(page++)pdf.addPage();
+  pdf.setTextColor(25);pdf.setDrawColor(60);pdf.setLineWidth(.28);
+  t(14,14,"CE1 · MATHEMATIQUES · SOUSTRACTIONS",9,true);
+  t(14,24,title,15,true);ln(14,28,196,28);
+  t(14,35,"Prenom : ................................................",9);
+  t(126,35,"Date : ..........................",9);
+  t(14,43,sub,9);
+ }
+ function one(x,y,sz=3.1){pdf.setDrawColor(60);pdf.rect(x,y,sz,sz);}
+ function ten(x,y,scale=1){for(let k=0;k<10;k++)one(x+(k%5)*3.05*scale,y+Math.floor(k/5)*3.05*scale,3.05*scale);}
+ function hundred(x,y,scale=.60){for(let rr=0;rr<10;rr++)for(let cc=0;cc<10;cc++)one(x+cc*2.18*scale,y+rr*2.18*scale,2.18*scale);}
+ function material(x,y,a,cols){
+  let C=Math.floor(a/100),D=Math.floor(a/10)%10,U=a%10;
+  const colWidth=cols===3?56:80;
+  const headers=cols===3?["CENTAINES (C)","DIZAINES (D)","UNITES (U)"]:["DIZAINES (D)","UNITES (U)"];
+  headers.forEach((h,i)=>{let start=x+i*colWidth;t(start+3,y,h,8,true);ln(start,y+3,start+colWidth-3,y+3)});
+  const shift=cols===3?0:1;
+  for(let i=0;i<C;i++){let k=i%3,row=Math.floor(i/3);hundred(x+2+k*17,y+10+row*16,.67)}
+  const d0=x+colWidth*(1-shift);
+  for(let i=0;i<D;i++){let col=i%3,row=Math.floor(i/3);ten(d0+2+col*17,y+10+row*10,.95)}
+  const u0=x+colWidth*(2-shift);
+  for(let i=0;i<U;i++){let col=i%5,row=Math.floor(i/5);one(u0+4+col*7.3,y+10+row*7.3,4.9)}
+ }
+ function exercise(y,n,a,b,kind){
+  const cols=a>=100?3:2;
+  t(15,y,n+".  "+a+" - "+b+" = ...................",13,true);
+  t(15,y+8,kind==="no"?"Barre le materiel que tu soustrais.":"Observe le materiel, realise les echanges, puis barre ce que tu retires.",8.2);
+  material(17,y+20,a,cols);
+  if(kind!=="no"){
+   t(17,y+75,kind==="both"?"Echanges : 1 C = 10 D ; 1 D = 10 U":"Echange : 1 D = 10 U",8);
+   t(17,y+84,"Je dessine le materiel obtenu apres le cassage :",8);
+   pdf.setDrawColor(150);pdf.rect(17,y+88,175,26);
+   t(17,y+122,"Il reste : C ____   D ____   U ____",8.5);
+  } else {
+   t(17,y+76,cols===3?"Il reste : C ____  D ____  U ____":"Il reste : D ____  U ____",9);
+  }
+  const bx=156,by=kind==="no"?y+75:y+119;
+  pdf.setDrawColor(50);pdf.rect(bx,by,36,15);t(bx+3,by+5,"Resultat :",8);
+ }
+ // One exercise per sheet keeps proportional base-ten material readable
+ P.forEach((group)=>{
+  group.items.forEach(([a,b],i)=>{
+   frame(group.title,group.sub);
+   exercise(52,i+1,a,b,group.kind);
+   t(15,278,"Matériel de numération : plaque = 100 · barre = 10 · petit carré = 1.",8);
+  });
+ });
+ frame("CORRECTION","Solutions des soustractions sans cassage et avec cassage");
+ let y=57;
+ P.forEach(g=>{
+  t(15,y,g.title,11,true);y+=10;
+  g.items.forEach(([a,b],i)=>{t(20,y,(i+1)+".  "+a+" - "+b+" = "+(a-b),10);y+=7;});
+  y+=8;
+  if(y>265){frame("CORRECTION (suite)","Résultats des soustractions");y=57}
+ });
+ pdf.save("Soustractions_materiel_numeration_CE1_fiches_imprimables.pdf");
+}
+document.getElementById("download").onclick=()=>{
+const b=document.getElementById("download"),s=document.getElementById("status");b.disabled=true;
+try{generate();s.textContent="PDF généré. Ouvre tes téléchargements pour l'imprimer."}
+catch(e){s.textContent="Téléchargement indisponible : "+e.message}
+finally{b.disabled=false}
+};
+</script></body></html>
