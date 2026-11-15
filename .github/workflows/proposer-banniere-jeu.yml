@@ -64,6 +64,7 @@ jobs:
           python scripts/generer-banniere-jeu.py "${flags[@]}"
       - name: Proposer les changements pour validation
         if: steps.banner.outputs.generated == 'true'
+        continue-on-error: true  # Le dépôt peut interdire la création automatique des PR.
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ github.token }}
@@ -82,3 +83,11 @@ jobs:
             - Fusionner cette pull request uniquement après validation.
 
             Aucune capture d'un jeu présent avant l'installation ne doit être remplacée.
+
+      - name: Ouvrir la proposition manuellement si nécessaire
+        if: steps.banner.outputs.generated == 'true'
+        run: |
+          echo "L'image a été générée et déposée sur la branche de proposition."
+          echo "Consulter https://github.com/Bleja972/bleja972.github.io/pull/4"
+          echo "Si cette proposition n'existe plus, ouvrir https://github.com/Bleja972/bleja972.github.io/pull/new/automation/banniere-nouveau-jeu"
+          echo "Ne jamais fusionner sans vérifier l'image."
