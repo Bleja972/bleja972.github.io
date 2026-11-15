@@ -16,7 +16,7 @@ button:focus-visible,input:focus-visible{outline:3px solid #fff0a4;outline-offse
 /* Bannière pleine largeur : pas de limite en vh qui la rétrécissait à 600 px.
    Aucune coupe des bords : le titre 3D reste entier. */
 .game-banner{width:min(100%,1120px);margin:0 auto clamp(12px,2vw,22px);flex:none;display:flex;justify-content:center;position:relative;z-index:1}
-.game-banner img{display:block;width:100%;height:auto;object-fit:contain;border-radius:15px;border:1px solid #d9fbff8c;box-shadow:0 8px 24px #001c325b;background:#034a6275}
+.game-banner img{display:block;width:100%;height:auto;object-fit:contain;border-radius:15px;border:1px solid #d9fbff8c;box-shadow:0 8px 24px #001c325b;background:transparent}
 @media(max-width:600px){.game-banner{width:min(100%,390px);margin-bottom:8px}.game-banner img{border-radius:10px}}
 @media(orientation:landscape) and (max-height:540px){.game-banner{width:min(100%,560px)}}
 #exercise{width:100%;max-width:1280px;margin:0 auto}
@@ -57,7 +57,7 @@ button:focus-visible,input:focus-visible{outline:3px solid #fff0a4;outline-offse
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}}
 </style></head><body>
 <main class="game">
-<header class="game-banner"><img src="/assets/images/bannieres/jeu-61-apercu.webp?v=20261115" alt="Les poissons des nombres : titre entier en lettres 3D au-dessus des poissons du récif" width="1200" height="630" fetchpriority="high"></header>
+<header class="game-banner"><img src="/assets/images/bannieres/jeu-61-titre-3d.svg?v=20261115" alt="Titre Les poissons des nombres en lettres 3D bleues et dorées, sans poissons ni coraux" width="1600" height="550" fetchpriority="high"></header>
 <div class="fizz" aria-hidden="true"><i style="--x:10%;--s:19px;--t:8s;--d:-4s"></i><i style="--x:30%;--s:13px;--t:6s;--d:-2s"></i><i style="--x:61%;--s:25px;--t:10s;--d:-6s"></i><i style="--x:87%;--s:16px;--t:7s;--d:-3s"></i></div>
 <section id="exercise" aria-label="Calculs avec les poissons">
 <div class="fish-grid" id="fishGrid"></div>
