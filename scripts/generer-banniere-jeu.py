@@ -156,6 +156,11 @@ def main() -> int:
     baseline["existingGameIds"] = sorted(existing)
     save(CATALOGUE, games)
     save(BASELINE, baseline)
+    output_file = os.environ.get("GITHUB_OUTPUT")
+    if output_file:
+        with open(output_file, "a", encoding="utf-8") as output:
+            output.write(f"generated=true\n")
+            output.write(f"game_id={game_id}\n")
     print("Proposition prête : ", target.relative_to(ROOT), "et catalogue mis à jour.")
     print("Publication uniquement après validation et fusion de la pull request.")
     return 0
