@@ -66,13 +66,27 @@ const groupNames={numeration:'Numération',mental:'Calcul mental',pose:'Calcul p
 const controls={niveau:$('#level-filter'),matiere:$('#subject-filter'),domaine:$('#group-filter'),competence:$('#skill-filter'),q:$('#game-search'),tri:$('#sort-filter')};
 const cardNodes=$$('[data-game]',$('#game-grid'));const cardMap=new Map(cardNodes.map(n=>[n.dataset.game,n]));
 // Build missing cards from the catalogue so new games also work on older landing pages.
+function addOriginalScreenshotLink(game,card){
+ if(!game.screenshotUrl || !card)return;
+ const actions=card.querySelector('.card-actions');
+ if(!actions || actions.querySelector('[data-original-screenshot]'))return;
+ const link=document.createElement('a');
+ link.className='card-detail';
+ link.dataset.originalScreenshot='true';
+ link.href=game.screenshotUrl;
+ link.target='_blank';
+ link.rel='noopener';
+ link.textContent='Voir la capture réelle du jeu ↗';
+ actions.append(link);
+}
 function ensureCatalogCards(){
  const escape=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
  for(const g of catalog){
-  if(cardMap.has(g.id)){const existing=cardMap.get(g.id),play=$('.play',existing),preview=$('[data-game-url]',existing);if(play)play.href=g.url;if(preview)preview.dataset.gameUrl=g.url;const img=$('.game-cover img',cardMap.get(g.id));if(img){if(g.imageAlt)img.alt=g.imageAlt;if(g.thumb)img.src=g.thumb;}if(preview&&g.thumb)preview.dataset.src=g.thumb;const meta=$('.card-meta',cardMap.get(g.id));if(meta)meta.textContent=g.levels.join(' · ')+' · '+g.groupName;if(g.pdfUrl){const card=cardMap.get(g.id),actions=$('.card-actions',card);if(actions&&![...actions.querySelectorAll('a')].some(a=>new URL(a.href,location.href).pathname===new URL(g.pdfUrl,location.href).pathname)){const pdf=document.createElement('a');pdf.className='card-detail';pdf.href=g.pdfUrl;pdf.download='';pdf.textContent='↓ '+(g.pdfLabel||'Fiche à imprimer (PDF)');actions.append(pdf);}}continue;}
+  if(cardMap.has(g.id)){const existing=cardMap.get(g.id),play=$('.play',existing),preview=$('[data-game-url]',existing);if(play)play.href=g.url;if(preview)preview.dataset.gameUrl=g.url;const img=$('.game-cover img',cardMap.get(g.id));if(img){if(g.imageAlt)img.alt=g.imageAlt;if(g.thumb)img.src=g.thumb;}if(preview&&g.thumb)preview.dataset.src=g.thumb;const meta=$('.card-meta',cardMap.get(g.id));if(meta)meta.textContent=g.levels.join(' · ')+' · '+g.groupName;if(g.pdfUrl){const card=cardMap.get(g.id),actions=$('.card-actions',card);if(actions&&![...actions.querySelectorAll('a')].some(a=>new URL(a.href,location.href).pathname===new URL(g.pdfUrl,location.href).pathname)){const pdf=document.createElement('a');pdf.className='card-detail';pdf.href=g.pdfUrl;pdf.download='';pdf.textContent='↓ '+(g.pdfLabel||'Fiche à imprimer (PDF)');actions.append(pdf);}}addOriginalScreenshotLink(g,existing);continue;}
   const card=document.createElement('article');card.className='game-card';card.dataset.game=g.id;
   card.innerHTML=`<div class="game-cover"><button class="capture-button" type="button" data-preview data-src="${escape(g.thumb)}" data-title="${escape(g.title)}" data-game-url="${escape(g.url)}" aria-label="Agrandir l’aperçu du jeu ${escape(g.title)}"><img src="${escape(g.thumb)}" alt="${escape(g.imageAlt||g.title)}" width="1000" height="650" loading="lazy"><span class="capture-zoom" aria-hidden="true">Agrandir ⛶</span></button><div class="cover-badges">${g.new?'<span class="badge new">Nouveau</span>':''}</div><button class="game-fav" data-favorite="${escape(g.id)}" aria-label="Ajouter ${escape(g.title)} aux favoris" aria-pressed="false">♡</button></div><div class="game-info"><div class="card-meta">${escape(g.levels.join(' · '))} · ${escape(g.groupName)}</div><h3><a href="${escape(g.path||g.url)}">${escape(g.title)}</a></h3><p>${escape(g.short||g.description)}</p><div class="card-actions"><a class="play" href="${escape(g.url)}" target="_blank" rel="noopener">Jouer à ${escape(g.title)} <span aria-hidden="true">↗</span></a></div></div>`;
   if(g.pdfUrl){const pdf=document.createElement('a');pdf.className='card-detail';pdf.href=g.pdfUrl;pdf.download='';pdf.textContent='↓ '+(g.pdfLabel||'Fiche à imprimer (PDF)');$('.card-actions',card).append(pdf);}
+  addOriginalScreenshotLink(g,card);
   const tracked=previousTracking[g.url];if(tracked)for(const [key,value] of Object.entries(tracked))$('.play',card).setAttribute(key,value);
   cardNodes.push(card);cardMap.set(g.id,card);$('#game-grid').append(card);
  }
