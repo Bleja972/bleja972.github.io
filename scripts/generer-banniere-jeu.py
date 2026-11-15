@@ -18,7 +18,7 @@ import sys
 import urllib.error
 import urllib.request
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageFilter, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOGUE = ROOT / "assets/catalogue-v2/catalogue.json"
@@ -97,10 +97,19 @@ def generate(prompt: str, api_key: str) -> bytes:
 def optimize(image_bytes: bytes, destination: Path) -> None:
     with Image.open(io.BytesIO(image_bytes)) as im:
         im = ImageOps.exif_transpose(im).convert("RGB")
-        # Miniature 1200 x 630, conserve un cadrage équilibré.
-        im = ImageOps.fit(im, (1200, 630), method=Image.Resampling.LANCZOS, centering=(0.5, 0.5))
+        # Préserve l'image entière pour éviter les titres coupés.
+        # Le fond flouté remplit les marges latérales du format 1200 x 630.
+        size = (1200, 630)
+        background = ImageOps.fit(
+            im, size, method=Image.Resampling.LANCZOS,
+            centering=(0.5, 0.5)
+        ).filter(ImageFilter.GaussianBlur(radius=26))
+        foreground = ImageOps.contain(im, size, method=Image.Resampling.LANCZOS)
+        x = (size[0] - foreground.width) // 2
+        y = (size[1] - foreground.height) // 2
+        background.paste(foreground, (x, y))
         destination.parent.mkdir(parents=True, exist_ok=True)
-        im.save(destination, format="WEBP", quality=83, method=6)
+        background.save(destination, format="WEBP", quality=83, method=6)
 
 
 def main() -> int:
@@ -152,7 +161,8 @@ def main() -> int:
         f"Bannière immersive et photoréaliste pour un jeu éducatif français de primaire. "
         f"Titre : {title}. Thème pédagogique : {category}. "
         "Créer une scène forte, vivante, très détaillée et adaptée à l'univers du titre. "
-        "Composition cinématographique panoramique 1.91:1, sujet principal lisible même en miniature, "
+        "Composition cinématographique panoramique, sujet principal lisible même en miniature, "
+        "garder les éléments importants dans les 75 pour cent centraux de l'image, "
         "éclairage soigné et couleurs lumineuses, esthétique haut de gamme pour enfant. "
         "Ne mettre aucun mot, chiffre, logo, bouton, interface, filigrane ou texte dans l'image. "
         "Ne pas imiter une capture d'écran. Pas d'identité personnelle."
@@ -162,8 +172,9 @@ def main() -> int:
             "Bannière ultra réaliste et spectaculaire pour un jeu pédagogique de calcul mental intitulé "
             "'Les poissons des nombres'. Récif de corail tropical très détaillé, mer turquoise, "
             "rayons de soleil sous-marins, six magnifiques poissons tropicaux réalistes alignés, "
-            "titre exact 'Les poissons des nombres' en lettres 3D bleu et doré dans un bandeau élégant. "
-            "Des chiffres simples dans quelques bulles, composition 16:9 vive et lisible en miniature, "
+            "titre exact 'Les poissons des nombres' en lettres 3D bleu et doré dans un bandeau élégant, "
+            "entièrement visible avec une marge de sécurité de 15 pour cent sur les quatre côtés. "
+            "Des chiffres simples dans quelques bulles, composition vive et lisible en miniature, "
             "aucun logo, aucune identité personnelle, sans fausse capture de fonctionnement du jeu."
         )
     optimize(generate(brief, key), target)
