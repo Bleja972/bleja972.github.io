@@ -99,8 +99,8 @@
     "subject": "Français",
     "weekly": false,
     "new": true,
-    "thumb": "/jeux/genre-des-noms-ce1/apercu.svg",
-    "imageAlt": "Le genre des noms : un colibri et une fleur, masculin ou féminin.",
+    "thumb": "/assets/images/bannieres/openai/genre-des-noms-ce1.webp?v=bannieres-20261115",
+    "imageAlt": "Bannière du jeu Le genre des noms — Masculin ou féminin ?",
     "pdfUrl": "/pdf/Le_genre_des_noms_CE1_exercices_et_correction.pdf",
     "pdfLabel": "Fiche à imprimer + correction (PDF)",
     "playClicks": 0
@@ -126,8 +126,8 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/jeux/ours-de-la-banquise/banquise.webp",
-    "imageAlt": "Paysage de banquise arctique, décor du jeu de codage."
+    "thumb": "/assets/images/bannieres/openai/ours-de-la-banquise.webp?v=bannieres-20261115",
+    "imageAlt": "Bannière du jeu L’ours de la banquise"
   },
   {
     "id": "chemin-du-kangourou",
@@ -150,8 +150,8 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/jeux/chemin-du-kangourou/australie.webp",
-    "imageAlt": "Kangourou et spinifex dans le désert australien.",
+    "thumb": "/assets/images/bannieres/openai/chemin-du-kangourou.webp?v=bannieres-20261115",
+    "imageAlt": "Bannière du jeu Le chemin du kangourou",
     "playClicks": 0
   },
   {
@@ -229,8 +229,8 @@
     "slug": "popeye-ligne-graduee",
     "objective": "Trouver un nombre sur une ligne graduée de 10 à 100 au CP, de 50 à 1 000 au CE1 ou de 250 à 10 000 au CE2.",
     "short": "Trouve le nombre pointé par la flèche pour aider Popeye à rejoindre Olive.",
-    "thumb": "/jeux/popeye-ligne-graduee/apercu.webp",
-    "imageAlt": "Popeye et Olive aux extrémités d’une ligne graduée, avec un point d’interrogation au milieu.",
+    "thumb": "/assets/images/bannieres/openai/popeye-ligne-graduee.webp?v=bannieres-20261115",
+    "imageAlt": "Bannière du jeu Popeye sur la ligne graduée",
     "playClicks": 4
   },
   {
@@ -381,8 +381,8 @@
     "slug": "fritz-encadrements-ce1",
     "objective": "Trouver les deux bornes d’un nombre à l’unité, à la dizaine ou à la centaine.",
     "short": "Trois niveaux pour encadrer les nombres de 71 à 999 sur la planète de Fritz.",
-    "thumb": "/assets/fritz-encadrements/apercu.webp",
-    "imageAlt": "Illustration de Fritz détouré sur sa planète extraterrestre.",
+    "thumb": "/assets/images/bannieres/openai/fritz-encadrements-ce1.webp?v=bannieres-20261115",
+    "imageAlt": "Bannière du jeu La planète de Fritz — Encadrer les nombres",
     "pdfUrl": "/pdf/Fritz_encadrements_CE1_exercices_et_correction.pdf",
     "pdfLabel": "Encadrements : 30 exercices + corrigé (PDF)",
     "playClicks": 2
@@ -712,8 +712,8 @@
     "slug": "vallee-des-moities",
     "objective": "Calculer les moitiés des nombres pairs de 4 à 50 et de 100 à 200.",
     "short": "Quatre niveaux de moitiés, uniquement des nombres pairs, des bulles qui accélèrent et une musique féerique.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-84.webp",
-    "imageAlt": "Bulle demandant une moitié au-dessus d’un chaudron fluorescent, dans une vallée elfique aux cascades.",
+    "thumb": "/assets/images/bannieres/openai/vallee-des-moities.webp?v=bannieres-20261115",
+    "imageAlt": "Bannière du jeu La vallée des moitiés — Moitiés",
     "playClicks": 4
   },
   {
@@ -738,8 +738,8 @@
     "slug": "temple-des-doubles",
     "objective": "Calculer rapidement les doubles des nombres de 3 à 50 et de 100 à 200.",
     "short": "Quatre niveaux de doubles, un chaudron fluorescent, des bulles qui accélèrent et une musique d’aventure.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-83.webp",
-    "imageAlt": "Bulle demandant un double au-dessus d’un chaudron fluorescent, dans un temple au cœur de la jungle.",
+    "thumb": "/assets/images/bannieres/openai/temple-des-doubles.webp?v=bannieres-20261115",
+    "imageAlt": "Bannière du jeu Le temple des doubles — Doubles",
     "playClicks": 5
   },
   {
@@ -954,7 +954,7 @@
     "description": "Éclate les bulles de nombres pairs au niveau 1, puis impairs au niveau 2, avant qu’elles atteignent la surface. La vitesse augmente progressivement.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/bulles-corail/capture.webp",
-    "imageAlt": "Aperçu de Bulles de corail — Pairs et impairs : reconnaître les nombres pairs et les nombres impairs.",
+    "imageAlt": "Bannière du jeu Bulles de corail — Pairs et impairs",
     "category": "numeration",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -972,7 +972,7 @@
       "CE1"
     ],
     "short": "Reconnaître les nombres pairs et les nombres impairs.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-2.webp",
+    "thumb": "/assets/images/bannieres/openai/bulles-de-corail-pairs-impairs.webp?v=bannieres-20261115",
     "playClicks": 3
   },
   {
@@ -1035,7 +1035,7 @@
     "description": "Saisis rapidement les compléments à 100 avec des unités différentes de zéro. Un défi de 90 secondes dans le Nautilus, avec des créatures animées au hublot.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/nautilus/capture.webp",
-    "imageAlt": "Aperçu de Mission Nautilus — Compléments à 100 : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
+    "imageAlt": "Bannière du jeu Mission Nautilus — Compléments à 100",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -1053,7 +1053,7 @@
       "CE2"
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-5.webp",
+    "thumb": "/assets/images/bannieres/openai/mission-nautilus.webp?v=bannieres-20261115",
     "playClicks": 0
   },
   {
@@ -1090,7 +1090,7 @@
     "description": "90 secondes pour rejoindre Mars : réussis les additions, gagne des points de rapidité et évite le martien qui surgit en riant à chaque erreur.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/mars/capture.webp",
-    "imageAlt": "Aperçu de Mission Mars — Additions de 11 à 19 : utiliser des résultats connus pour calculer une addition mentalement.",
+    "imageAlt": "Bannière du jeu Mission Mars — Additions de 11 à 19",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -1109,7 +1109,7 @@
       "CE2"
     ],
     "short": "Utiliser des résultats connus pour calculer une addition mentalement.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-7.webp",
+    "thumb": "/assets/images/bannieres/openai/mission-mars.webp?v=bannieres-20261115",
     "playClicks": 1
   },
   {
