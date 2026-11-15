@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Génération d'une bannière pour un NOUVEAU jeu du catalogue GitHub Pages.
 
-La génération est opt-in lorsque le jeu possède déjà une vignette : autoBanner: true.
-Ne touche jamais aux jeux présents dans l'inventaire initial, ni aux autres images.
+La génération courante ne modifie jamais les images de jeux existants.
+Un aperçu manuel ciblé sur jeu-61 peut être généré sans modifier le catalogue.
 Aucune publication directe : les fichiers produits doivent être examinés dans une PR.
 """
 from __future__ import annotations
@@ -107,6 +107,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--game-id", default="", help="ID d'un jeu ajouté depuis l'inventaire initial")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--preview-existing", action="store_true", help="Aperçu exceptionnel et non publié du jeu-61")
     args = parser.parse_args()
 
     games = load(CATALOGUE)
@@ -114,8 +115,17 @@ def main() -> int:
         raise RuntimeError("Le catalogue doit être une liste JSON.")
     baseline = load(BASELINE)
     existing = set(baseline["existingGameIds"])
-    found = list(candidates(games, existing, args.game_id))
-    print(f"Nouveaux jeux admissibles : {len(found)}")
+    # Une seule exception autorisée : jeu-61, demandé manuellement et hors catalogue.
+    preview = args.preview_existing
+    if preview:
+        if args.game_id != "jeu-61":
+            raise ValueError("L'aperçu d'un jeu existant est uniquement autorisé pour jeu-61.")
+        found = [g for g in games if g.get("id") == "jeu-61"]
+        if len(found) != 1:
+            raise ValueError("La fiche jeu-61 est introuvable ou dupliquée.")
+    else:
+        found = list(candidates(games, existing, args.game_id))
+    print(f"Jeux admissibles : {len(found)}")
     for game in found[:10]:
         print(" -", game["id"], "|", game["title"])
     if args.game_id and not found:
@@ -130,7 +140,7 @@ def main() -> int:
 
     game = found[0]  # Au maximum une génération payante par exécution.
     game_id = game["id"]
-    file_name = safe_slug(game_id) + ".webp"
+    file_name = safe_slug(game_id) + ("-apercu.webp" if preview else ".webp")
     target = IMAGES_DIR / file_name
     if target.exists():
         print("Une bannière existe déjà : aucune nouvelle génération.", file_name)
@@ -147,7 +157,26 @@ def main() -> int:
         "Ne mettre aucun mot, chiffre, logo, bouton, interface, filigrane ou texte dans l'image. "
         "Ne pas imiter une capture d'écran. Pas d'identité personnelle."
     )
+    if preview:
+        brief = (
+            "Bannière ultra réaliste et spectaculaire pour un jeu pédagogique de calcul mental intitulé "
+            "'Les poissons des nombres'. Récif de corail tropical très détaillé, mer turquoise, "
+            "rayons de soleil sous-marins, six magnifiques poissons tropicaux réalistes alignés, "
+            "titre exact 'Les poissons des nombres' en lettres 3D bleu et doré dans un bandeau élégant. "
+            "Des chiffres simples dans quelques bulles, composition 16:9 vive et lisible en miniature, "
+            "aucun logo, aucune identité personnelle, sans fausse capture de fonctionnement du jeu."
+        )
     optimize(generate(brief, key), target)
+    if preview:
+        print("Aperçu créé : ", target.relative_to(ROOT))
+        print("La capture et le catalogue du jeu-61 restent inchangés.")
+        output_file = os.environ.get("GITHUB_OUTPUT")
+        if output_file:
+            with open(output_file, "a", encoding="utf-8") as output:
+                output.write("generated=true\n")
+                output.write("game_id=jeu-61\n")
+                output.write("preview_only=true\n")
+        return 0
     game["thumb"] = "/assets/images/bannieres/" + file_name
     game["imageAlt"] = f"Illustration de couverture générée pour {title}."
     game["bannerSource"] = "auto-generated"
