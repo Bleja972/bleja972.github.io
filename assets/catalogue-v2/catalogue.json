@@ -2570,9 +2570,11 @@
       "CE2"
     ],
     "short": "Anime les poissons du récif en résolvant 8 séries de calculs, une après l’autre.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-61-actualise.svg?v=20261114b",
-    "imageAlt": "Aperçu actualisé des poissons des nombres : poissons tropicaux réalistes sur le récif de corail, opérations et cases de réponses vertes ou rouges avec solution sous le poisson.",
-    "playClicks": 1
+    "thumb": "/assets/images/bannieres/jeu-61-apercu.webp?v=20261115",
+    "imageAlt": "Bannière des Poissons des nombres : titre 3D entièrement visible au-dessus de six poissons tropicaux et d'un récif corallien.",
+    "playClicks": 1,
+    "screenshotUrl": "/assets/catalogue-v2/captures/jeu-61-actualise.svg?v=20261114b",
+    "bannerSource": "approved-generated"
   },
   {
     "title": "La course des calculs",
