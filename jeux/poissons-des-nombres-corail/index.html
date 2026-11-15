@@ -26,7 +26,7 @@ button:focus-visible,input:focus-visible{outline:3px solid #fff0a4;outline-offse
 .fish svg{display:none}
 .step.corrected .value input{background:#ffe2d9ef;border:4px solid #c83324;color:#5b1710;box-shadow:0 0 0 3px #f65d5280,0 2px 8px #00314e61}
 .step.good .value input{background:#d0ffe5f5;border:4px solid #168e53;box-shadow:0 0 0 3px #3de29566,0 2px 8px #00314e61}
-.answer-below{margin-top:3px;min-height:30px;display:flex;align-items:center;justify-content:center;gap:6px;padding:4px 11px;border-radius:13px;border:2px solid #bdfed3;background:#064d39d9;color:#fff9c5;backdrop-filter:blur(5px);font-size:clamp(15px,2vw,21px);font-weight:900;text-shadow:0 1px 3px #002b26;box-shadow:0 3px 8px #002f395e}
+.answer-below{margin-top:6px;min-height:34px;display:flex;align-items:center;justify-content:center;gap:6px;padding:4px 11px;border-radius:13px;border:2px solid #bdfed3;background:#064d39d9;color:#fff9c5;backdrop-filter:blur(5px);font-size:clamp(13px,1.7vw,19px);font-weight:900;text-shadow:0 1px 3px #002b26;box-shadow:0 3px 8px #002f395e}
 .answer-below[hidden]{display:none!important}
 .step.corrected .fish{filter:drop-shadow(0 9px 12px #803e2780)}
 .value{position:absolute;inset:0;display:flex;justify-content:center;align-items:center;padding-left:16%;padding-bottom:5%;pointer-events:none}
@@ -123,22 +123,26 @@ function verify(){
  inputs.forEach((input,i)=>{
   const card=input.closest('.step'),correction=card.querySelector('.answer-below');
   card.classList.remove('good','bad','corrected');
-  const actual=Number(input.value);
+  // Lire la réponse de l'élève sans jamais remplacer le contenu du champ.
+  const writtenAnswer=input.value;
+  const actual=Number(writtenAnswer);
+  input.setAttribute('data-reponse-eleve',writtenAnswer);
   if(actual===answers[i]){
    card.classList.add('good');
    correction.hidden=true;
    correction.textContent='';
   }else{
    errors++;
-   // Conserver la réponse de l'élève dans le poisson ; afficher la solution en dessous.
    card.classList.add('corrected');
-   correction.textContent='✓ '+answers[i];
+   correction.textContent='Bonne réponse : '+answers[i];
    correction.hidden=false;
   }
+  // En lecture seule, la réponse écrite reste visible pendant la correction.
+  input.readOnly=true;
  });
  locked=true;
  if(errors===0)points++;
- inputs.forEach(input=>input.disabled=true);
+ inputs.forEach(input=>input.readOnly=true);
  $('verify').hidden=true;
  $('clear').hidden=true;
  $('next').hidden=false;
