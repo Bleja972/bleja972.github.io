@@ -11,11 +11,8 @@ button{cursor:pointer;touch-action:manipulation}
 button:focus-visible,input:focus-visible{outline:3px solid #fff0a4;outline-offset:3px}
 [hidden]{display:none!important}
 .sr-only{position:absolute!important;width:1px;height:1px;clip:rect(0 0 0 0);overflow:hidden;white-space:nowrap}
-.game{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;padding:clamp(10px,2vw,24px);position:relative;isolation:isolate}
+.game{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;align-items:stretch;padding:clamp(10px,2vw,24px);position:relative;isolation:isolate}
 .game::before{content:"";position:fixed;inset:0;background:linear-gradient(180deg,#003d5317,#062b4525 60%,#002b421c);pointer-events:none;z-index:-1}
-.game-banner{width:min(100%,520px);margin:0 auto 10px;flex:none;position:relative;z-index:1}
-.game-banner img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid #d9fbff8c;box-shadow:0 8px 24px #001c325b}
-@media(max-width:600px){.game-banner{width:min(100%,340px);margin-bottom:5px}.game-banner img{border-radius:11px}}
 #exercise{width:100%;max-width:1280px;margin:0 auto}
 .fish-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));align-items:center;gap:clamp(7px,1.3vw,19px);padding:12px 1px 8px}
 .step{min-width:0;display:flex;flex-direction:column;align-items:center;gap:3px;position:relative}
@@ -54,7 +51,6 @@ button:focus-visible,input:focus-visible{outline:3px solid #fff0a4;outline-offse
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}}
 </style></head><body>
 <main class="game">
-<div class="game-banner" aria-label="Bannière Les poissons des nombres"><img src="/assets/images/bannieres/jeu-61-apercu.webp?v=20261115" alt="Les poissons des nombres, titre 3D et poissons tropicaux dans un récif corallien" width="1200" height="630" decoding="async"></div>
 <div class="fizz" aria-hidden="true"><i style="--x:10%;--s:19px;--t:8s;--d:-4s"></i><i style="--x:30%;--s:13px;--t:6s;--d:-2s"></i><i style="--x:61%;--s:25px;--t:10s;--d:-6s"></i><i style="--x:87%;--s:16px;--t:7s;--d:-3s"></i></div>
 <section id="exercise" aria-label="Calculs avec les poissons">
 <div class="fish-grid" id="fishGrid"></div>
