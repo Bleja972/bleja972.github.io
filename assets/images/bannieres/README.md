@@ -55,6 +55,23 @@ sur la branche `main`. À chaque exécution, **une seule image au maximum**
 est générée, pour limiter les dépenses. Cette première version n'effectue
 pas de génération rétroactive pour les anciens jeux.
 
+## Essai manuel sur « Les poissons des nombres » (jeu-61)
+
+Une exception **uniquement manuelle** autorise la génération d'un aperçu
+`jeu-61-apercu.webp` pour ce jeu déjà présent.
+
+1. Ouvrir **Actions > Proposer une bannière pour un nouveau jeu > Run workflow**.
+2. Choisir la branche `main`.
+3. Renseigner **game_id = jeu-61**.
+4. Pour une simulation gratuite, laisser **dry_run = true**.
+5. Pour générer UNE image avec l'API payante, choisir **dry_run = false**.
+6. Examiner la pull request créée avant de décider de publier une image.
+
+**Important :** même en fusionnant cette PR, l'aperçu de jeu-61
+ne remplace pas la capture existante : seul le nouveau fichier WebP est proposé.
+Le fichier `catalogue.json` reste inchangé pour ce test.
+La génération via l'API peut être facturée séparément.
+
 ## Essai gratuit de la logique (sans génération d'image)
 
 Aller dans **Actions > Proposer une bannière pour un nouveau jeu >
