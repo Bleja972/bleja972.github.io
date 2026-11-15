@@ -58,6 +58,9 @@ jobs:
           if [[ "$EVENT_NAME" == "workflow_dispatch" && "$DRY_RUN" == "true" ]]; then
             flags+=(--dry-run)
           fi
+          if [[ "$EVENT_NAME" == "workflow_dispatch" && "$GAME_ID" == "jeu-61" ]]; then
+            flags+=(--preview-existing)
+          fi
           python scripts/generer-banniere-jeu.py "${flags[@]}"
       - name: Proposer les changements pour validation
         if: steps.banner.outputs.generated == 'true'
@@ -70,9 +73,9 @@ jobs:
           commit-message: "Proposer une bannière pour un nouveau jeu"
           branch: automation/banniere-nouveau-jeu
           delete-branch: true
-          title: "Bannière proposée pour un nouveau jeu — à vérifier"
+          title: "Bannière proposée — aperçu à vérifier (aucune publication automatique)"
           body: |
-            Une bannière a été générée en WebP et ajoutée au catalogue en proposition.
+            Une bannière WebP a été générée dans une branche de proposition.\n\n            Si le fichier est `jeu-61-apercu.webp`, il s’agit d’un aperçu **sans modification du catalogue**.
 
             - Vérifier que l'image correspond au jeu et qu'elle est de bonne qualité.
             - Vérifier le fichier assets/catalogue-v2/catalogue.json.
