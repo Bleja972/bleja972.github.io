@@ -2574,7 +2574,9 @@
     "imageAlt": "Bannière des Poissons des nombres : titre 3D entièrement visible au-dessus de six poissons tropicaux et d'un récif corallien.",
     "playClicks": 1,
     "screenshotUrl": "/assets/catalogue-v2/captures/jeu-61-actualise.svg?v=20261114b",
-    "bannerSource": "approved-generated"
+    "bannerSource": "approved-generated",
+    "pdfUrl": "/pdf/Les_poissons_des_nombres_CE1_exercices_et_corrige_sans_fond.pdf",
+    "pdfLabel": "Exercices CE1 — +1, −1, +10, −10, +100, −100 et corrigé (PDF)"
   },
   {
     "title": "La course des calculs",
