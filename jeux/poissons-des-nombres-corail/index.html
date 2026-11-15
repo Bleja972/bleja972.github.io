@@ -13,10 +13,12 @@ button:focus-visible,input:focus-visible{outline:3px solid #fff0a4;outline-offse
 .sr-only{position:absolute!important;width:1px;height:1px;clip:rect(0 0 0 0);overflow:hidden;white-space:nowrap}
 .game{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;padding:clamp(10px,2vw,24px);position:relative;isolation:isolate}
 .game::before{content:"";position:fixed;inset:0;background:linear-gradient(180deg,#003d5317,#062b4525 60%,#002b421c);pointer-events:none;z-index:-1}
-.game-banner{width:min(100%,760px);max-height:26vh;margin:0 auto clamp(8px,1.6vh,16px);flex:none;display:flex;justify-content:center;align-items:center;position:relative;z-index:1}
-.game-banner img{display:block;width:100%;height:auto;max-height:26vh;object-fit:contain;border-radius:14px;border:1px solid #d9fbff8c;box-shadow:0 8px 24px #001c325b;background:#034a6275}
-@media(max-width:600px){.game-banner{width:min(100%,390px);max-height:21vh;margin-bottom:5px}.game-banner img{max-height:21vh;border-radius:10px}}
-@media(orientation:landscape) and (max-height:540px){.game-banner,.game-banner img{max-height:18vh}}
+/* Bannière pleine largeur : pas de limite en vh qui la rétrécissait à 600 px.
+   Aucune coupe des bords : le titre 3D reste entier. */
+.game-banner{width:min(100%,1120px);margin:0 auto clamp(12px,2vw,22px);flex:none;display:flex;justify-content:center;position:relative;z-index:1}
+.game-banner img{display:block;width:100%;height:auto;object-fit:contain;border-radius:15px;border:1px solid #d9fbff8c;box-shadow:0 8px 24px #001c325b;background:#034a6275}
+@media(max-width:600px){.game-banner{width:min(100%,390px);margin-bottom:8px}.game-banner img{border-radius:10px}}
+@media(orientation:landscape) and (max-height:540px){.game-banner{width:min(100%,560px)}}
 #exercise{width:100%;max-width:1280px;margin:0 auto}
 .fish-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));align-items:center;gap:clamp(7px,1.3vw,19px);padding:12px 1px 8px}
 .step{min-width:0;display:flex;flex-direction:column;align-items:center;gap:3px;position:relative}
