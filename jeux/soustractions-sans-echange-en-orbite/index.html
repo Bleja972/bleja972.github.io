@@ -98,6 +98,45 @@ button.primary,#verify,#advance,#again{background:linear-gradient(165deg,#1b9a9b
 .result.zero-unused{border:1px dashed #77d9e466!important;background:transparent!important;box-shadow:none!important}
 .result.zero-unused::after{content:"";width:22px;height:2px;background:#ffffff55;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
 @media(prefers-reduced-motion:reduce){.levels button{animation:none}button{transition:none!important}}
+
+/* Style arcade inspiré de Pygame : boutons cockpit sculptés, néons et éclats */
+#play button,#menu .levels button,#end button{
+ --arcade:#61efff;--arcade-dark:#03283d;--arcade-glow:#37dbff;
+ position:relative!important;overflow:hidden!important;isolation:isolate;
+ background:linear-gradient(160deg,#2b6591 0%,#104575 35%,#081a3b 100%)!important;
+ border:3px solid var(--arcade)!important;border-top-color:#cfffff!important;border-bottom-color:#1b6a9f!important;
+ border-radius:10px 22px 10px 22px!important;min-height:58px;
+ color:#f6fcff!important;font-weight:950!important;letter-spacing:.04em;
+ text-shadow:0 2px #001b33,0 0 10px var(--arcade)!important;
+ box-shadow:0 7px 0 var(--arcade-dark),0 12px 24px #000b,0 0 15px var(--arcade-glow),inset 0 3px #fff9,inset 0 -7px 10px #0007!important;
+ transition:transform .1s,filter .15s,box-shadow .15s!important;touch-action:manipulation;
+}
+#play button::before,#menu .levels button::before,#end button::before{
+ content:"";position:absolute;inset:3px 5px 52% 5px;border-radius:8px 16px 4px 6px;
+ background:linear-gradient(#ffffff50,transparent);pointer-events:none;z-index:-1;
+}
+#play button::after,#menu .levels button::after,#end button::after{
+ content:"";position:absolute;inset:-60% -100%;background:linear-gradient(110deg,transparent 42%,#fff8 50%,transparent 58%);
+ transform:translateX(-85%);animation:arcadeLightSweep 5s linear infinite;pointer-events:none;z-index:-1;
+}
+@keyframes arcadeLightSweep{0%,65%{transform:translateX(-85%)}100%{transform:translateX(85%)}}
+#play button:hover,#menu .levels button:hover,#end button:hover{filter:brightness(1.22)!important}
+#play button:active,#menu .levels button:active,#end button:active{
+ transform:translateY(5px) scale(.985)!important;
+ box-shadow:0 2px 0 var(--arcade-dark),0 4px 10px #000b,0 0 24px var(--arcade-glow),inset 0 3px 10px #0006!important;
+}
+#play button:focus-visible,#menu .levels button:focus-visible,#end button:focus-visible{outline:3px solid #fff58d;outline-offset:5px}
+#verify,#advance,#again{--arcade:#92ffcf!important;--arcade-dark:#063d44!important;--arcade-glow:#3cffac!important;background:linear-gradient(155deg,#1a9b99,#0b696c,#043444)!important}
+#erase{--arcade:#f8a4ff!important;--arcade-dark:#3e135d!important;--arcade-glow:#df52ff!important;background:linear-gradient(155deg,#ac50ce,#68238e,#2f174f)!important}
+#helpButton{--arcade:#ffe78e!important;--arcade-dark:#55340c!important;--arcade-glow:#ffd24b!important;background:linear-gradient(155deg,#d69a29,#94601a,#54300e)!important}
+#menuButton,#back{--arcade:#a6c7ff!important;--arcade-dark:#16265b!important;--arcade-glow:#729aff!important}
+#keypad button{min-height:60px!important;font-size:26px!important;color:#fff17c!important;text-shadow:0 0 10px #ffed69!important;border-radius:9px 17px 9px 17px!important}
+#menu .levels button{min-height:165px!important}
+#menu .levels button strong{color:#e1ffff;font-size:clamp(20px,3vw,26px);text-shadow:0 0 12px #43ebff}
+#menu .levels button .example{color:#ffeb75;text-shadow:0 0 12px #ffda4b}
+@media(prefers-reduced-motion:reduce){#play button::after,#menu .levels button::after,#end button::after{animation:none}}
+@media(max-width:450px){#play button,#end button{min-height:52px!important;font-size:14px!important;padding:10px!important}#menu .levels button{min-height:125px!important}}
+
 </style></head>
 <body>
 <canvas id="orbit-fx" aria-hidden="true" style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5"></canvas>
