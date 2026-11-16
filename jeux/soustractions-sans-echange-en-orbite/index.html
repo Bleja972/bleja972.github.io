@@ -150,19 +150,28 @@ button.primary,#verify,#advance,#again{background:linear-gradient(165deg,#1b9a9b
 }
 @keyframes noticeAppear{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
 @media(prefers-reduced-motion:reduce){#zeroMessage.zero-explanation{animation:none}}
+
+/* Bouton PDF arcade 3D, cyan-or, visible sur ordinateur et mobile */
+.pdf-arcade{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:55px;padding:13px 22px;margin:12px auto 6px;box-sizing:border-box;border:3px solid #fff5a4;border-top-color:#fffef0;border-bottom-color:#ad6a19;border-radius:11px 23px 11px 23px;background:linear-gradient(155deg,#ffdc61 0%,#ffac35 52%,#cc6518 100%);color:#392009!important;font-size:clamp(16px,2.7vw,20px);font-weight:950;letter-spacing:.01em;text-decoration:none!important;text-align:center;text-shadow:0 1px 0 #fff5bb91;box-shadow:0 7px 0 #874209,0 11px 22px #000a,0 0 16px #ffd650a6,inset 0 3px 0 #fff9,inset 0 -4px 9px #78350977;transition:transform .13s,box-shadow .13s,filter .13s;position:relative;overflow:hidden}
+.pdf-arcade:hover{filter:brightness(1.13);box-shadow:0 7px 0 #874209,0 12px 23px #000b,0 0 27px #ffe66bbf,inset 0 3px #fff9}
+.pdf-arcade:active{transform:translateY(5px);box-shadow:0 2px 0 #874209,0 4px 9px #0009,0 0 19px #ffe66bbf}
+.pdf-arcade:focus-visible{outline:3px solid #88f9ff;outline-offset:4px}
+.pdf-download-row{text-align:center;margin:12px auto}
+@media(max-width:420px){.pdf-arcade{width:100%;padding:12px}}
+
 </style></head>
 <body>
 <canvas id="orbit-fx" aria-hidden="true" style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5"></canvas>
 <nav style="position:relative;z-index:9;text-align:center;padding:9px;background:#031527cf"><a href="https://bleja972.github.io/" style="color:#c1fcff;font-weight:800;text-decoration:none">⌂ Tous les jeux</a></nav>
 <header class="top"><small>MISSION ORBITALE • CE1</small><h1>Soustractions en orbite</h1><p>Pose et calcule des soustractions <strong>sans échange</strong>, colonne par colonne.</p></header>
 <main><section class="panel" id="menu">
-<h2>Choisis ton niveau</h2><div class="levels">
+<h2>Choisis ton niveau</h2><div class="pdf-download-row"><a class="pdf-arcade" href="/pdf/Soustractions_CE1_sans_echange_tableaux_noir_blanc.pdf" target="_blank" rel="noopener" aria-label="Ouvrir le PDF des exercices de soustractions posées sans échange, tableaux C D U et corrigés">📄 Exercices à imprimer <span aria-hidden="true">↓</span></a></div><div class="levels">
 <button data-level="2"><strong>Niveau 1 • 2 chiffres</strong><span>10 soustractions sans échange</span><span class="example">78 − 34</span></button>
 <button data-level="3"><strong>Niveau 2 • 3 chiffres</strong><span>10 soustractions, avec parfois un nombre à 2 chiffres en bas</span><span class="example">389 − 234<br>678 − 34</span></button>
 </div><p class="rule">Commence par les unités, puis les dizaines et les centaines. Il n’y a <strong>jamais d’emprunt</strong>. Pour chaque colonne, écris la différence et vérifie ta réponse.</p>
 </section>
 <section class="panel" id="play" hidden>
-<div id="workStatus"><strong id="step">Opération 1 / 10</strong><strong id="score">Réussite : 0 / 10</strong><button id="soundToggle" type="button" aria-pressed="false">🔇 Son désactivé</button></div>
+<div class="pdf-download-row"><a class="pdf-arcade" href="/pdf/Soustractions_CE1_sans_echange_tableaux_noir_blanc.pdf" target="_blank" rel="noopener" aria-label="Ouvrir le PDF des exercices de soustractions posées sans échange, tableaux C D U et corrigés">📄 Exercices à imprimer <span aria-hidden="true">↓</span></a></div><div id="workStatus"><strong id="step">Opération 1 / 10</strong><strong id="score">Réussite : 0 / 10</strong><button id="soundToggle" type="button" aria-pressed="false">🔇 Son désactivé</button></div>
 <div id="progressBar"><span id="progressFill"></span></div><h2 id="stage">Les unités</h2>
 <div id="operation" class="operation" aria-label="Soustraction posée"></div>
 <p id="columnHint"></p><p id="zeroMessage" class="zero-explanation" role="status" aria-live="polite" hidden></p>
@@ -172,7 +181,7 @@ button.primary,#verify,#advance,#again{background:linear-gradient(165deg,#1b9a9b
 <div class="actions"><button id="verify" class="primary">✓ Vérifier</button><button id="erase">Effacer</button><button id="helpButton">Un coup de pouce</button><button id="menuButton">Menu</button></div>
 <p id="help" class="help" hidden></p><p id="history"></p><div class="actions"><button id="advance" class="primary" hidden>Soustraction suivante →</button></div>
 </section>
-<section class="panel center" id="end" hidden><h2>Mission terminée !</h2><p class="big-score" id="finalScore"></p><p id="finalPercent"></p><div class="review-list" id="review"></div><div class="actions"><button id="again" class="primary">Rejouer</button><button id="back">Menu</button></div></section>
+<section class="panel center" id="end" hidden><h2>Mission terminée !</h2><div class="pdf-download-row"><a class="pdf-arcade" href="/pdf/Soustractions_CE1_sans_echange_tableaux_noir_blanc.pdf" target="_blank" rel="noopener" aria-label="Ouvrir le PDF des exercices de soustractions posées sans échange, tableaux C D U et corrigés">📄 Exercices à imprimer <span aria-hidden="true">↓</span></a></div><p class="big-score" id="finalScore"></p><p id="finalPercent"></p><div class="review-list" id="review"></div><div class="actions"><button id="again" class="primary">Rejouer</button><button id="back">Menu</button></div></section>
 </main>
 <script>
 (()=>{
