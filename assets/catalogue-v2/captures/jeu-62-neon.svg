@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 750" role="img" aria-labelledby="title desc">
+<title id="title">La course des calculs CE1 — aperçu futuriste</title><desc id="desc">Opérations lumineuses dans un laboratoire orbital, vaisseau bleu et soucoupe violette en course</desc>
+<defs>
+<linearGradient id="dark" x2=".8" y2="1"><stop stop-color="#041527" stop-opacity=".55"/><stop offset="1" stop-color="#010612" stop-opacity=".92"/></linearGradient>
+<linearGradient id="tile" x2="1" y2="1"><stop stop-color="#163b57" stop-opacity=".96"/><stop offset="1" stop-color="#051124" stop-opacity=".97"/></linearGradient>
+<linearGradient id="grid" x2="0" y2="1"><stop stop-color="#0a2c49"/><stop offset="1" stop-color="#010b18"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<image href="https://bleja972.github.io/jeux/calcul-mental-periode-2/jouer/laboratoire-orbital.webp" width="1100" height="750" preserveAspectRatio="xMidYMid slice"/>
+<rect width="1100" height="750" fill="url(#dark)"/>
+<rect x="13" y="13" width="1074" height="724" rx="26" fill="none" stroke="#67ecff" stroke-width="4"/>
+<text x="48" y="73" fill="#b9fbff" font-family="Arial,sans-serif" font-weight="900" font-size="37" filter="url(#glow)">⚡ LA COURSE DES CALCULS</text>
+<text x="49" y="111" fill="#b9fbff" font-family="Arial,sans-serif" font-size="20" letter-spacing="3">MISSION NÉON • CE1</text>
+<g font-family="Arial,sans-serif" font-weight="bold" font-size="22" text-anchor="middle">
+<rect x="674" y="36" width="132" height="62" rx="14" fill="#082337" stroke="#5fe9ff" stroke-width="2"/><text x="740" y="75" fill="#fff287">Score : 5</text>
+<rect x="820" y="36" width="114" height="62" rx="14" fill="#082337" stroke="#5fe9ff" stroke-width="2"/><text x="877" y="75" fill="#fff287">Vies : 3</text>
+<rect x="948" y="36" width="118" height="62" rx="14" fill="#082337" stroke="#5fe9ff" stroke-width="2"/><text x="1007" y="75" fill="#fff287">Vitesse 2</text>
+</g>
+<g font-family="Arial,sans-serif" text-anchor="middle" font-weight="900">
+<g transform="translate(65 161)"><rect width="268" height="130" rx="18" fill="url(#tile)" stroke="#6df3ff" stroke-width="3"/><text x="134" y="36" fill="#8deaff" font-size="16">DOUBLE</text><text x="134" y="94" fill="#fff28a" font-size="49">7 + 7 =</text></g>
+<g transform="translate(416 209)"><rect width="275" height="130" rx="18" fill="url(#tile)" stroke="#6df3ff" stroke-width="3"/><text x="137" y="36" fill="#8deaff" font-size="16">COMPLÉMENT À 10</text><text x="137" y="94" fill="#fff28a" font-size="44">6 + ? = 10</text></g>
+<g transform="translate(746 151)"><rect width="268" height="130" rx="18" fill="url(#tile)" stroke="#d66eff" stroke-width="3"/><text x="134" y="36" fill="#e3b6ff" font-size="16">AJOUTER DES DIZAINES</text><text x="134" y="94" fill="#fff28a" font-size="42">34 + 20 =</text></g>
+</g>
+<g transform="translate(45 413)">
+<rect width="420" height="187" rx="20" fill="#061729" fill-opacity=".94" stroke="#80efff" stroke-width="3"/>
+<text x="24" y="34" fill="#c7fdff" font-family="Arial" font-size="24" font-weight="bold">COURSE SPATIALE</text>
+<path d="M65 88 H378 M65 145 H378" stroke="#28ccf7" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+<g transform="translate(255 65)"><path d="M0 22 34 13 46 0 51 13 76 22 51 29 46 43 34 29Z" fill="#55dfff" stroke="#c4ffff" stroke-width="2"/><circle cx="47" cy="21" r="5" fill="#fff68a"/><path d="M1 25-10 29 1 32Z" fill="#fff18d"/></g>
+<g transform="translate(155 119)"><path d="M18 21Q18 -3 48 -3Q77 -3 77 21Z" fill="#7b34b1" stroke="#f0bcff" stroke-width="2"/><ellipse cx="48" cy="24" rx="46" ry="12" fill="#dd67ff" stroke="#ffe0ff" stroke-width="2"/><ellipse cx="48" cy="27" rx="25" ry="5" fill="#672aa4"/><circle cx="16" cy="24" r="4" fill="#fff29f"/><circle cx="48" cy="33" r="4" fill="#fff29f"/><circle cx="80" cy="24" r="4" fill="#fff29f"/></g>
+<g stroke="#ffe3ae" stroke-width="3"><path d="M385 67V102"/><path d="M385 124V158"/></g><g fill="#ff5b9c"><path d="M387 70l17 7-17 8Z"/><path d="M387 127l17 7-17 8Z"/></g>
+</g>
+<g filter="url(#glow)"><circle cx="510" cy="401" r="7" fill="#fff58d"/><circle cx="546" cy="376" r="5" fill="#54edff"/><circle cx="581" cy="425" r="8" fill="#fff58d"/><circle cx="619" cy="383" r="5" fill="#ff78df"/></g>
+<rect x="481" y="513" width="589" height="124" rx="21" fill="#061a30" fill-opacity=".96" stroke="#83edff" stroke-width="2"/>
+<text x="510" y="555" fill="#c7faff" font-family="Arial" font-weight="bold" font-size="22">Écris une réponse :</text>
+<rect x="759" y="534" width="270" height="76" rx="16" fill="#031223" stroke="#fff08f" stroke-width="3"/>
+<text x="894" y="588" fill="#fff18a" font-family="Arial" font-size="54" font-weight="bold" text-anchor="middle">14</text>
+<path d="M20 664H1080" stroke="#54eaff" stroke-width="7" filter="url(#glow)"/>
+<text x="550" y="711" fill="#b6ffff" font-family="Arial" font-size="27" font-weight="bold" text-anchor="middle">BRAVO ! ⚡ LE VAISSEAU AVANCE !</text>
+</svg>
