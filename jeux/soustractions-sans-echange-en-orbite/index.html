@@ -130,7 +130,7 @@ function renderColumn(){
  put('','');for(let i=level-1;i>=0;i--){const cl=['u','d','c'][i];put('colhead '+cl,'',true).innerHTML='<strong>'+['U','D','C'][i]+'</strong>'+names[i];}
  put('','');for(let i=level-1;i>=0;i--)put('digit',String(digit(a,i)));
  put('minus','−');for(let i=level-1;i>=0;i--){let showDigit=level===2||i!==2||b>=100;put('digit',showDigit?String(digit(b,i)):'');}
- put('sumline','');for(let i=level-1;i>=0;i--){const c=put('result'+(i===place?' active':answers[i]!==null?' solved':''),'');if(answers[i]!==null){c.textContent=answers[i]}else if(i===place){const inp=document.createElement('input');inp.type='text';inp.inputMode='numeric';inp.maxLength=1;inp.autocomplete='off';inp.setAttribute('aria-label','Résultat des '+names[i]);inp.oninput=()=>{inp.value=inp.value.replace(/\D/g,'').slice(0,1);const line=$('columnInput');if(line)line.value=inp.value};inp.onkeydown=e=>{if(e.key==='Enter')verify()};c.append(inp);}}
+ put('sumline','');put('','');for(let i=level-1;i>=0;i--){const c=put('result'+(i===place?' active':answers[i]!==null?' solved':''),'');if(answers[i]!==null){c.textContent=answers[i]}else if(i===place){const inp=document.createElement('input');inp.type='text';inp.inputMode='numeric';inp.maxLength=1;inp.autocomplete='off';inp.setAttribute('aria-label','Résultat des '+names[i]);inp.oninput=()=>{inp.value=inp.value.replace(/\D/g,'').slice(0,1);const line=$('columnInput');if(line)line.value=inp.value};inp.onkeydown=e=>{if(e.key==='Enter')verify()};c.append(inp);}}
  $('stage').textContent=(place+1)+'. Les '+names[place];
  $('columnHint').textContent='Calcule les '+names[place]+'. Aucun échange n’est nécessaire.';
  const d1=digit(a,place),d2=digit(b,place);$('calculation').replaceChildren();
