@@ -137,6 +137,19 @@ button.primary,#verify,#advance,#again{background:linear-gradient(165deg,#1b9a9b
 @media(prefers-reduced-motion:reduce){#play button::after,#menu .levels button::after,#end button::after{animation:none}}
 @media(max-width:450px){#play button,#end button{min-height:52px!important;font-size:14px!important;padding:10px!important}#menu .levels button{min-height:125px!important}}
 
+
+/* Affichage réellement vide pour les zéros superflus à gauche */
+#operation .result.zero-unused{visibility:hidden!important;border:0!important;background:none!important;box-shadow:none!important}
+#operation .result.zero-unused::after{display:none!important;content:none!important}
+#zeroMessage.zero-explanation:not([hidden]){
+ display:block!important;width:min(100%,720px);margin:8px auto 14px;padding:15px 18px;
+ color:#fff5a5!important;background:#102f4cf2;border:3px solid #fff08a;
+ border-radius:16px;text-align:center;font-weight:900;font-size:clamp(16px,2.8vw,21px);
+ box-shadow:0 0 17px #ffdf67a0,inset 0 0 14px #ffe76b25;
+ animation:noticeAppear .4s ease-out;
+}
+@keyframes noticeAppear{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){#zeroMessage.zero-explanation{animation:none}}
 </style></head>
 <body>
 <canvas id="orbit-fx" aria-hidden="true" style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5"></canvas>
@@ -152,7 +165,7 @@ button.primary,#verify,#advance,#again{background:linear-gradient(165deg,#1b9a9b
 <div id="workStatus"><strong id="step">Opération 1 / 10</strong><strong id="score">Réussite : 0 / 10</strong><button id="soundToggle" type="button" aria-pressed="false">🔇 Son désactivé</button></div>
 <div id="progressBar"><span id="progressFill"></span></div><h2 id="stage">Les unités</h2>
 <div id="operation" class="operation" aria-label="Soustraction posée"></div>
-<p id="columnHint"></p><p id="zeroMessage" role="status" aria-live="polite"></p>
+<p id="columnHint"></p><p id="zeroMessage" class="zero-explanation" role="status" aria-live="polite" hidden></p>
 <div id="calculation" class="inline-calculation"></div>
 <p id="feedback" role="status" aria-live="polite"></p>
 <div class="keypad" id="keypad"></div>
@@ -182,7 +195,7 @@ function draw(){requestAnimationFrame(draw);ctx.clearRect(0,0,canvas.width,canva
 function digit(n,p){return Math.floor(n/10**p)%10;}
 function show(id){for(const name of ['menu','play','end'])$(name).hidden=name!==id}
 function start(lvl){level=lvl;problems=gen(lvl);index=0;score=0;history=[];show('play');renderRound();}
-function renderRound(){place=0;correctFirst=true;answers=Array(level).fill(null);$('step').textContent='Opération '+(index+1)+' / 10';$('score').textContent='Réussite : '+score+' / 10';$('progressFill').style.width=(index/10*100)+'%';$('history').textContent='';$('zeroMessage').textContent='';$('advance').hidden=true;$('help').hidden=true;renderColumn();}
+function renderRound(){place=0;correctFirst=true;answers=Array(level).fill(null);$('step').textContent='Opération '+(index+1)+' / 10';$('score').textContent='Réussite : '+score+' / 10';$('progressFill').style.width=(index/10*100)+'%';$('history').textContent='';$('zeroMessage').textContent='';$('zeroMessage').hidden=true;$('advance').hidden=true;$('help').hidden=true;renderColumn();}
 function renderColumn(){
  const {a,b}=problems[index],container=$('operation');container.style.setProperty('--cols',level);container.replaceChildren();
  const put=(cls,text,html=false)=>{const d=document.createElement('div');d.className=cls;if(html)d.innerHTML=text;else d.textContent=text;container.append(d);return d};
@@ -206,28 +219,41 @@ function verify(){const input=$('columnInput');if(!input)return;const value=inpu
  $('history').textContent='✓ '+names[place]+' validées';
  const old=place;place++;if(place<level){setTimeout(()=>{if(old+1===place)renderColumn()},600)}else{const p=problems[index];if(correctFirst)score++;history.push({p,first:correctFirst});$('score').textContent='Réussite : '+score+' / 10';$('advance').hidden=false;$('advance').textContent=index===9?'Voir le bilan ★':'Soustraction suivante →';renderFinalColumn();}}
 function renderFinalColumn(){
- const p=$('operation').querySelector('.result.active');
- if(p){p.classList.remove('active');p.classList.add('solved');p.replaceChildren(document.createTextNode(String(answers[level-1])))}
- // Les colonnes de résultat sont affichées de la plus grande à la plus petite.
- // Seuls les zéros en tête sont inutiles : les zéros intérieurs ou finaux restent visibles.
+ const {a,b}=problems[index],difference=a-b;
  const cells=Array.from($('operation').querySelectorAll('.result'));
+ // On affiche les chiffres de droite à gauche, puis on masque TOUS les zéros
+ // situés avant le premier chiffre non nul. Les zéros internes restent visibles.
+ const resultDigits=String(difference);
  let removed=0;
- for(let i=0;i<cells.length-1;i++){
-   if(answers[level-1-i]!==0)break;
-   cells[i].textContent='';
-   cells[i].classList.remove('solved');
-   cells[i].classList.add('zero-unused');
-   cells[i].setAttribute('aria-label','Zéro initial inutile, supprimé');
-   removed++;
+ for(let i=0;i<level;i++){
+   const position=level-1-i;
+   const cell=cells[i];
+   const digitValue=answers[position];
+   cell.replaceChildren();
+   cell.classList.remove('active','solved','zero-unused');
+   if(i<level-resultDigits.length && digitValue===0){
+     cell.classList.add('zero-unused');
+     cell.setAttribute('aria-label','Case vide : zéro initial inutile');
+     removed++;
+   }else{
+     cell.classList.add('solved');
+     cell.textContent=String(digitValue);
+     cell.removeAttribute('aria-label');
+   }
  }
  $('calculation').replaceChildren();
  $('columnHint').textContent='Soustraction terminée !';
- const {a,b}=problems[index],difference=a-b;
- $('feedback').textContent='Bravo ! '+a+' − '+b+' = '+difference+'.';
- $('zeroMessage').textContent=removed
-  ?'💡 Le zéro à gauche est inutile : on ne l’écrit pas. Le résultat est '+difference+'.'
-  :'';
+ const explanation=removed
+   ?'💡 Le zéro placé tout à gauche est inutile : on ne l’écrit pas. '+String(difference).padStart(level,'0')+' s’écrit '+difference+'.'
+   :'';
+ $('zeroMessage').textContent=explanation;
+ $('zeroMessage').hidden=!removed;
+ $('feedback').className='feedback goodtext';
+ $('feedback').textContent=removed
+  ?'Bravo ! '+a+' − '+b+' = '+difference+'. Regarde : le zéro inutile à gauche a disparu !'
+  :'Bravo ! '+a+' − '+b+' = '+difference+'.';
 }
+
 function finish(){sound('finish');show('end');$('finalScore').textContent=score+' / 10';$('finalPercent').textContent=score*10+' % de soustractions réussies au premier essai';$('review').replaceChildren();history.forEach(x=>{const d=document.createElement('div');d.textContent=(x.first?'✓ ':'À revoir : ')+x.p.a+' − '+x.p.b+' = '+(x.p.a-x.p.b);$('review').append(d)})}
 document.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>start(Number(b.dataset.level)));
 $('verify').onclick=verify;$('erase').onclick=()=>{const i=$('columnInput');if(i){i.value='';const p=$('operation').querySelector('.result.active input');if(p)p.value='';i.focus()}};
