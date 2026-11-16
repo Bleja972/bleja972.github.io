@@ -2242,6 +2242,30 @@
     "playClicks": 2
   },
   {
+    "id": "soustractions-sans-echange-en-orbite",
+    "slug": "soustractions-sans-echange-en-orbite",
+    "title": "Soustractions en orbite — Sans échange",
+    "url": "https://bleja972.github.io/jeux/soustractions-sans-echange-en-orbite/",
+    "path": "/jeux/soustractions-sans-echange-en-orbite/",
+    "description": "Soustractions posées sans échange à deux ou trois chiffres. Calcule colonne par colonne avec des boutons néon, et découvre pourquoi un zéro à gauche du résultat est inutile.",
+    "short": "Soustractions posées sans échange, à 2 et 3 chiffres, dans un décor spatial futuriste.",
+    "objective": "Poser et calculer une soustraction sans échange en alignant les unités, dizaines et centaines.",
+    "skill": "soustractions-posees",
+    "skillName": "Soustractions posées",
+    "category": "calculs",
+    "group": "pose",
+    "groupName": "Calcul posé",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/soustractions-en-orbite-capture%20(1).webp",
+    "imageAlt": "Capture réelle du jeu Soustractions en orbite CE1 montrant 32 − 11, le calcul des dizaines et les boutons futuristes."
+  },
+  {
     "title": "Les additions sans échange en orbite",
     "url": "https://bleja972.github.io/jeux/additions-sans-echange-en-orbite/",
     "description": "Trois missions sans retenue : deux chiffres, trois chiffres et nombres à aligner. Dix additions par partie, calcul colonne par colonne, décor spatial, bruitages, néons et bouton paysage Android.",
