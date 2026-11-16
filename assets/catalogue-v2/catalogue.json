@@ -1356,29 +1356,28 @@
   },
   {
     "title": "Compléments à 1 000 — le défi de l’araignée",
-    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-17",
-    "description": "Complète 1 000 avec des centaines entières.",
+    "url": "https://bleja972.github.io/jeux/complements-1000-toile-realiste/",
+    "description": "Complète 1 000 avec des centaines entières dans une toile photoréaliste. 20 calculs, araignée animée et score.",
     "weekly": true,
-    "image": "https://bleja972.github.io/assets/capture-complements_a_1000.webp",
-    "imageAlt": "Aperçu de Compléments à 1 000 — le défi de l’araignée : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
+    "image": "/assets/catalogue-v2/captures/jeu-17-toile-realiste.svg?v=20261116",
+    "imageAlt": "Nouvelle toile d’araignée réaliste dans une forêt nocturne avec l’opération 600 + ? = 1 000 et des boutons de réponses.",
     "category": "calculs",
     "level": "CE1",
     "subject": "Mathématiques",
     "id": "jeu-17",
-    "new": false,
+    "new": true,
     "skill": "complements",
     "group": "mental",
     "slug": "complements-a-1-000-le-defi-de-laraignee",
     "path": "/fiches/complements-a-1-000-le-defi-de-laraignee/",
-    "objective": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
+    "objective": "Trouver le complément à 1 000 d’une centaine entière.",
     "skillName": "Compléments",
     "groupName": "Calcul mental",
     "levels": [
-      "CE1",
-      "CE2"
+      "CE1"
     ],
-    "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-17.webp",
+    "short": "20 calculs de compléments à 1 000, sur une toile d’araignée réaliste.",
+    "thumb": "/assets/catalogue-v2/captures/jeu-17-toile-realiste.svg?v=20261116",
     "playClicks": 0
   },
   {
