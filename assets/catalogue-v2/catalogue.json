@@ -2263,7 +2263,9 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/soustractions-en-orbite-capture%20(1).webp",
-    "imageAlt": "Capture réelle du jeu Soustractions en orbite CE1 montrant 32 − 11, le calcul des dizaines et les boutons futuristes."
+    "imageAlt": "Capture réelle du jeu Soustractions en orbite CE1 montrant 32 − 11, le calcul des dizaines et les boutons futuristes.",
+    "pdfUrl": "/pdf/Soustractions_CE1_sans_echange_tableaux_noir_blanc.pdf",
+    "pdfLabel": "Fiches de soustractions C–D–U + corrigé (PDF)"
   },
   {
     "title": "Les additions sans échange en orbite",
