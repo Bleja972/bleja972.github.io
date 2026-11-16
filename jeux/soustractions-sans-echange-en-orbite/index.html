@@ -78,6 +78,26 @@ h1,h2,.big-score{color:#d5faff;text-shadow:0 0 12px #38d9ff}button{background:#0
 #history{text-align:center;font-size:14px;color:#b4ebed}
 #soundToggle{float:right}
 @media(max-width:600px){.top{padding:13px 10px}.panel{padding:13px}main{padding:0 8px 25px}.operation{--cell:min(17.5vw,68px);gap:4px;grid-template-columns:22px repeat(var(--cols),var(--cell))}.result{min-height:57px}.result input{font-size:32px}.digit{font-size:34px}.colhead{padding:5px 0;font-size:10px}.colhead strong{font-size:19px}#soundToggle{float:none}.levels button{padding:14px}.keypad{gap:5px}}
+
+/* Commandes d'arcade lumineuses 3D, utilisables au tactile */
+:root{--arcade-cyan:#66f4ff;--arcade-pink:#ff83e9;--arcade-lime:#88ffd3}
+button{position:relative;isolation:isolate;border:2px solid #77ecff!important;border-top-color:#c7ffff!important;border-radius:15px!important;background:linear-gradient(165deg,#215c83 0%,#123c65 48%,#06223e 100%)!important;color:#f7ffff!important;box-shadow:0 5px 0 #031629,0 9px 18px #0008,0 0 15px #42deff65,inset 0 2px 0 #ddffff6e,inset 0 -3px 9px #0006!important;text-shadow:0 0 10px #a8fbff90!important;transition:transform .12s ease,box-shadow .15s ease,filter .15s ease!important;touch-action:manipulation}
+button::before{content:"";position:absolute;inset:2px 4px auto;height:35%;border-radius:12px;background:linear-gradient(#ffffff27,transparent);pointer-events:none;z-index:-1}
+button:hover{filter:brightness(1.2);box-shadow:0 5px 0 #031629,0 0 23px #4cfaffbb,inset 0 2px #eaffff89!important}
+button:active{transform:translateY(4px) scale(.99);box-shadow:0 1px 0 #031629,0 2px 10px #0007,0 0 18px #48efffae!important}
+button:focus-visible{outline:3px solid #fff193;outline-offset:3px}
+button.primary,#verify,#advance,#again{background:linear-gradient(165deg,#1b9a9b,#076f83 55%,#084361)!important;border-color:#98ffe0!important;box-shadow:0 5px 0 #043a49,0 9px 18px #0008,0 0 17px #52ffdb8c,inset 0 2px #b7fff8bb!important}
+#erase{background:linear-gradient(160deg,#914c9c,#612b83,#35154e)!important;border-color:#f4a0ff!important;box-shadow:0 5px 0 #290f43,0 9px 18px #0007,0 0 16px #ed71ff85!important}
+#helpButton{background:linear-gradient(160deg,#b07920,#825520,#523315)!important;border-color:#ffe086!important;box-shadow:0 5px 0 #533411,0 9px 18px #0007,0 0 16px #ffca5785!important}
+#menuButton,#back{background:linear-gradient(160deg,#415c94,#243e71,#13234c)!important;border-color:#afc9ff!important}
+.keypad button{font:900 25px/1 Arial,sans-serif!important;color:#fff388!important;border-radius:14px!important;text-shadow:0 0 10px #fff36aaa!important;min-height:56px}
+.levels button{animation:arcadeBreath 3s ease-in-out infinite alternate}
+.levels button:nth-child(2){animation-delay:1s}
+@keyframes arcadeBreath{to{box-shadow:0 5px 0 #031629,0 10px 22px #0009,0 0 26px #77eaffaa,inset 0 2px #d4ffff6b}}
+#zeroMessage{min-height:24px;text-align:center;color:#fff2a0;font-size:clamp(15px,2.7vw,19px);font-weight:900;text-shadow:0 0 11px #e5ad43}
+.result.zero-unused{border:1px dashed #77d9e466!important;background:transparent!important;box-shadow:none!important}
+.result.zero-unused::after{content:"";width:22px;height:2px;background:#ffffff55;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+@media(prefers-reduced-motion:reduce){.levels button{animation:none}button{transition:none!important}}
 </style></head>
 <body>
 <canvas id="orbit-fx" aria-hidden="true" style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5"></canvas>
@@ -93,7 +113,7 @@ h1,h2,.big-score{color:#d5faff;text-shadow:0 0 12px #38d9ff}button{background:#0
 <div id="workStatus"><strong id="step">Opération 1 / 10</strong><strong id="score">Réussite : 0 / 10</strong><button id="soundToggle" type="button" aria-pressed="false">🔇 Son désactivé</button></div>
 <div id="progressBar"><span id="progressFill"></span></div><h2 id="stage">Les unités</h2>
 <div id="operation" class="operation" aria-label="Soustraction posée"></div>
-<p id="columnHint"></p>
+<p id="columnHint"></p><p id="zeroMessage" role="status" aria-live="polite"></p>
 <div id="calculation" class="inline-calculation"></div>
 <p id="feedback" role="status" aria-live="polite"></p>
 <div class="keypad" id="keypad"></div>
@@ -123,7 +143,7 @@ function draw(){requestAnimationFrame(draw);ctx.clearRect(0,0,canvas.width,canva
 function digit(n,p){return Math.floor(n/10**p)%10;}
 function show(id){for(const name of ['menu','play','end'])$(name).hidden=name!==id}
 function start(lvl){level=lvl;problems=gen(lvl);index=0;score=0;history=[];show('play');renderRound();}
-function renderRound(){place=0;correctFirst=true;answers=Array(level).fill(null);$('step').textContent='Opération '+(index+1)+' / 10';$('score').textContent='Réussite : '+score+' / 10';$('progressFill').style.width=(index/10*100)+'%';$('history').textContent='';$('advance').hidden=true;$('help').hidden=true;renderColumn();}
+function renderRound(){place=0;correctFirst=true;answers=Array(level).fill(null);$('step').textContent='Opération '+(index+1)+' / 10';$('score').textContent='Réussite : '+score+' / 10';$('progressFill').style.width=(index/10*100)+'%';$('history').textContent='';$('zeroMessage').textContent='';$('advance').hidden=true;$('help').hidden=true;renderColumn();}
 function renderColumn(){
  const {a,b}=problems[index],container=$('operation');container.style.setProperty('--cols',level);container.replaceChildren();
  const put=(cls,text,html=false)=>{const d=document.createElement('div');d.className=cls;if(html)d.innerHTML=text;else d.textContent=text;container.append(d);return d};
@@ -146,7 +166,29 @@ function verify(){const input=$('columnInput');if(!input)return;const value=inpu
  $('feedback').className='feedback goodtext';$('feedback').textContent='Bravo ! '+digit(a,place)+' − '+digit(b,place)+' = '+expected+'.';
  $('history').textContent='✓ '+names[place]+' validées';
  const old=place;place++;if(place<level){setTimeout(()=>{if(old+1===place)renderColumn()},600)}else{const p=problems[index];if(correctFirst)score++;history.push({p,first:correctFirst});$('score').textContent='Réussite : '+score+' / 10';$('advance').hidden=false;$('advance').textContent=index===9?'Voir le bilan ★':'Soustraction suivante →';renderFinalColumn();}}
-function renderFinalColumn(){const p=$('operation').querySelector('.result.active');if(p){p.classList.remove('active');p.classList.add('solved');p.replaceChildren(document.createTextNode(String(answers[level-1])))}$('calculation').replaceChildren();$('columnHint').textContent='Soustraction terminée !';$('feedback').textContent='Bravo ! '+problems[index].a+' − '+problems[index].b+' = '+(problems[index].a-problems[index].b)+'.'}
+function renderFinalColumn(){
+ const p=$('operation').querySelector('.result.active');
+ if(p){p.classList.remove('active');p.classList.add('solved');p.replaceChildren(document.createTextNode(String(answers[level-1])))}
+ // Les colonnes de résultat sont affichées de la plus grande à la plus petite.
+ // Seuls les zéros en tête sont inutiles : les zéros intérieurs ou finaux restent visibles.
+ const cells=Array.from($('operation').querySelectorAll('.result'));
+ let removed=0;
+ for(let i=0;i<cells.length-1;i++){
+   if(answers[level-1-i]!==0)break;
+   cells[i].textContent='';
+   cells[i].classList.remove('solved');
+   cells[i].classList.add('zero-unused');
+   cells[i].setAttribute('aria-label','Zéro initial inutile, supprimé');
+   removed++;
+ }
+ $('calculation').replaceChildren();
+ $('columnHint').textContent='Soustraction terminée !';
+ const {a,b}=problems[index],difference=a-b;
+ $('feedback').textContent='Bravo ! '+a+' − '+b+' = '+difference+'.';
+ $('zeroMessage').textContent=removed
+  ?'💡 Le zéro à gauche est inutile : on ne l’écrit pas. Le résultat est '+difference+'.'
+  :'';
+}
 function finish(){sound('finish');show('end');$('finalScore').textContent=score+' / 10';$('finalPercent').textContent=score*10+' % de soustractions réussies au premier essai';$('review').replaceChildren();history.forEach(x=>{const d=document.createElement('div');d.textContent=(x.first?'✓ ':'À revoir : ')+x.p.a+' − '+x.p.b+' = '+(x.p.a-x.p.b);$('review').append(d)})}
 document.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>start(Number(b.dataset.level)));
 $('verify').onclick=verify;$('erase').onclick=()=>{const i=$('columnInput');if(i){i.value='';const p=$('operation').querySelector('.result.active input');if(p)p.value='';i.focus()}};
