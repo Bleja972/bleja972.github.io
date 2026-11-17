@@ -28,6 +28,11 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Tester le calcul du classement sans réseau
+        run: |
+          python -m py_compile scripts/actualiser_top10_goatcounter.py
+          python -m unittest discover -s scripts -p 'test_top10_*.py' -v
+
       - name: Vérifier la présence de la clé API
         env:
           GOATCOUNTER_TOKEN: ${{ secrets.GOATCOUNTER_TOKEN }}
