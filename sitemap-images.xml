@@ -106,5 +106,38 @@
     <image:image><image:loc>https://bleja972.github.io/assets/catalogue-v2/captures/jeu-73.webp</image:loc></image:image>
     <image:image><image:loc>https://bleja972.github.io/assets/catalogue-v2/captures/jeu-74.webp</image:loc></image:image>
     <image:image><image:loc>https://bleja972.github.io/assets/catalogue-v2/captures/jeu-75.webp</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/openai/genre-des-noms-ce1.webp</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/openai/ours-de-la-banquise.webp</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/openai/chemin-du-kangourou.webp</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/openai/popeye-ligne-graduee.webp</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/openai/fritz-encadrements-ce1.webp</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/openai/vallee-des-moities.webp</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/openai/temple-des-doubles.webp</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/openai/bulles-de-corail-pairs-impairs.webp</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/openai/mission-nautilus.webp</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/openai/mission-mars.webp</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/catalogue-v2/captures/jeu-15-toile-realiste.svg</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/catalogue-v2/captures/jeu-16-toile-realiste.svg</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/catalogue-v2/captures/jeu-17-toile-realiste.svg</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/jeux/crabes-des-salines-alphabet/capture-originale-haute-qualite.webp</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/catalogue-v2/captures/soustractions-en-orbite-capture%20(1).webp</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/catalogue-v2/captures/additions-posees-tableau-operation.webp</image:loc></image:image>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/jeu-61-apercu.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://bleja972.github.io/fiches/bulles-de-corail-pairs-et-impairs/</loc>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/openai/bulles-de-corail-pairs-impairs.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://bleja972.github.io/fiches/mission-nautilus-complements-a-100/</loc>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/openai/mission-nautilus.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://bleja972.github.io/fiches/mission-mars-additions-de-11-a-19/</loc>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/openai/mission-mars.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://bleja972.github.io/fiches/les-poissons-des-nombres/</loc>
+    <image:image><image:loc>https://bleja972.github.io/assets/images/bannieres/jeu-61-apercu.webp</image:loc></image:image>
   </url>
 </urlset>
