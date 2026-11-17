@@ -56,6 +56,7 @@ def api_hits() -> list[dict]:
             headers={
                 "Authorization": "Bearer " + TOKEN,
                 "Accept": "application/json",
+                "Content-Type": "application/json",
             },
         )
         try:
