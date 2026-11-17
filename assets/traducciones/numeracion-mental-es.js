@@ -142,6 +142,48 @@ const T={
 'Exercices à imprimer':'Ejercicios para imprimir',
 '↓ Télécharger les exercices et le corrigé (PDF)':'↓ Descargar ejercicios y soluciones (PDF)'
 };
+
+Object.assign(T,{
+'✧ Effets réduits':'✧ Efectos reducidos',
+'♫ Sons coupés':'♫ Sonido desactivado',
+'Additionne les valeurs des deux cartons. Le nombre obtenu a toujours une unité de 1 à 9.':'Suma los valores de las dos tarjetas. El número resultante siempre tiene una unidad del 1 al 9.',
+'Écris le nombre recomposé.':'Escribe el número formado.',
+'Valeur des unités':'Valor de las unidades',
+'Nombre recomposé':'Número formado',
+'Essaie encore : écris la valeur du chiffre, avec ses zéros.':'Inténtalo de nuevo: escribe el valor de la cifra, con sus ceros.',
+'Impossible de créer le parcours':'No se puede crear el recorrido',
+'Pas encore : vérifie les bonds et colorie toutes les cases du chemin, sans diagonale.':'Todavía no: comprueba los saltos y colorea todas las casillas del camino, sin diagonales.',
+'Bravo, les trois crabes ont traversé !':'¡Muy bien! ¡Los tres cangrejos han cruzado!',
+'Choisis encore un crabe avant de vérifier.':'Elige otro cangrejo antes de comprobar.',
+'Bravo, les crabes sont bien rangés !':'¡Muy bien! Los cangrejos están bien ordenados.',
+'Vérifie le pseudo et le pays choisis.':'Comprueba el apodo y el país elegidos.',
+'Score enregistré pour ':'Puntuación guardada para ',
+'Crabes rangés : ':'Cangrejos ordenados: ',
+'Aucune partie terminée.':'Ninguna partida terminada.',
+'Dernière partie':'Última partida',
+'Non renseigné':'No especificado',
+'Pélican':'Pelícano','Éclair':'Rayo','Étoile':'Estrella','Comète':'Cometa',
+'Décroissant':'Descendente','Mélangé':'Mezclado',
+'Tu peux réessayer avec le bouton Réécouter ou afficher la consigne.':'Puedes pulsar Escuchar de nuevo o mostrar la instrucción.',
+'Écoute bien…':'Escucha atentamente…',
+'Essaie encore ! Tu peux réécouter la consigne.':'Inténtalo otra vez. Puedes escuchar la instrucción de nuevo.',
+'Bravo ! Tu as trouvé ':'¡Bravo! Has encontrado ',
+'Écris un nombre dans chacune des deux cases.':'Escribe un número en cada casilla.',
+'Nombre précédent':'Número anterior',
+'Dizaine précédente':'Decena anterior',
+'Centaine précédente':'Centena anterior',
+'Écris un nombre pour valider.':'Escribe un número para comprobar.',
+'Bravo ! La flèche montre ':'¡Bravo! La flecha señala ',
+'Répondre ':'Responder ',
+' · Aide utilisée':' · Pista utilizada',
+'✓ Du premier coup':'✓ Al primer intento',
+'✓ Après ':'✓ Después de ',
+'Défi suivant →':'Siguiente reto →',
+'Cartons superposés : ':'Tarjetas superpuestas: ',
+'Cartons séparés : ':'Tarjetas separadas: ',
+'Le château des nombres · CP':'El castillo de los números · CP'
+});
+
 const patterns=[
 [/^Niveau (\d+)(.*)$/i,(_,n,rest)=>'Nivel '+n+translateRest(rest)],
 [/^Série (\d+)(.*)$/i,(_,n,rest)=>'Serie '+n+translateRest(rest)],
@@ -154,6 +196,9 @@ const patterns=[
 [/^Bravo, ([\d\s]+) est (pair|impair) !$/i,(_,n,k)=>'¡Muy bien! '+n+' es '+(k==='pair'?'par':'impar')+'.'],
 [/^Bravo, les trois crabes ont traversé !$/i,()=> '¡Muy bien! Los tres cangrejos han cruzado.'],
 [/^(\d+) bonnes? réponses?(.*)$/i,(_,n,rest)=>n+' respuestas correctas'+translateRest(rest)],
+[/^Défi (\d+) \/ (\d+)$/i,(_,a,b)=>'Reto '+a+' / '+b],
+[/^Série terminée ! (\d+) \/ 10, soit (\d+) % de réussite sans erreur\..*$/i,(_,n,p)=>'¡Serie terminada! '+n+' de 10, es decir '+p+' % de aciertos sin errores. ¡Vuelve a jugar para practicar!'],
+[/^Cartons superposés : (.+)$/i,(_,n)=>'Tarjetas superpuestas: '+n],
 [/^Défi (\d+) \/ (\d+)$/i,(_,a,b)=>'Reto '+a+' / '+b],
 [/^(\d+) réussites?$/i,(_,n)=>n+' aciertos']
 ];
