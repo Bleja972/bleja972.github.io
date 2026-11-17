@@ -173,7 +173,7 @@ const generic=[
 [/\bprécédent\b/g,'anterior'],[/\bjuste\b/g,'correcto'],
 [/\bRéponse\b/g,'Respuesta'],[/\bréponse\b/g,'respuesta'],
 [/\bChoisir\b/g,'Elegir'],[/\bChoisis\b/g,'Elige'],
-[/\bCommencer\b/g,'Empezar'],[/\bBravo\b/g,'¡Bravo'],
+[/\bCommencer\b/g,'Empezar'],[/^Bravo(?=[ !,])/g,'¡Bien hecho'],
 [/\bErreur\b/g,'Error'],[/\bÉcris\b/g,'Escribe'],[/\bÉcoute\b/g,'Escucha'],
 [/\bDÉPART\b/g,'SALIDA'],[/\bARRIVÉE\b/g,'LLEGADA'],
 [/\bAccueil\b/g,'Inicio'],[/\bAide\b/g,'Ayuda']
