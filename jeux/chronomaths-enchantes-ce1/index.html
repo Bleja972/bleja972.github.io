@@ -4,25 +4,8 @@
 /* VERSION 2 : eau animée et brume réellement visibles au premier plan du décor.
    Les contrôles du jeu restent au-dessus et cliquables. */
 .ambient-world{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2;isolation:isolate}
-.ambient-water{position:absolute;left:-2%;right:-2%;bottom:-2%;height:40%;overflow:hidden;
- background:linear-gradient(180deg,#59c5dd00 0%,#84ddf32e 13%,#2e9dbb66 29%,#0e557fa8 58%,#072a4fdb 100%);
- box-shadow:inset 0 18px 33px #a9faff30,0 -12px 35px #b0fbff2c;mask-image:linear-gradient(transparent,#000 24%)}
-.ambient-water:before,.ambient-water:after{content:"";position:absolute;inset:-35% -30%;pointer-events:none}
-.ambient-water:before{
- background:repeating-radial-gradient(ellipse at 45% 112%,transparent 0 16px,#d4fdffab 17px 18px,transparent 19px 36px);
- filter:drop-shadow(0 0 3px #d3ffffa8);opacity:.85;
- transform:scaleY(.24) rotate(-2deg);animation:water-current 6s linear infinite}
-.ambient-water:after{
- background:repeating-linear-gradient(173deg,transparent 0 24px,#ffffff10 25px,#e4ffffb5 26px,#8ee9ff20 29px,transparent 31px 52px);
- transform:scaleY(.48);filter:blur(.35px);opacity:.68;
- animation:water-sheen 4.7s ease-in-out infinite alternate}
-.ambient-water__glow{position:absolute;inset:-15% -10%;background:
- radial-gradient(ellipse at 12% 58%,#ffe19b90 0%,#ffc55d30 22%,transparent 37%),
- radial-gradient(ellipse at 78% 47%,#f8df9892 0%,#ffd16c36 18%,transparent 35%);
- mix-blend-mode:screen;animation:water-reflections 3.7s ease-in-out infinite alternate}
-.ambient-ripple{position:absolute;left:var(--x);top:var(--y);width:var(--w);height:16px;border:2px solid #e3ffffb3;
- border-radius:50%;box-shadow:0 0 8px #b5fcffb8,inset 0 0 9px #b5fcff73;transform:scale(.25,.45);
- animation:water-ripple 5s ease-out infinite;animation-delay:var(--delay);opacity:0}
+.ambient-water{position:absolute;inset:auto 0 0;height:36%;overflow:hidden;background:linear-gradient(transparent 0%,#0b32401c 30%,#0c3b5028 70%,#041c3333);mask-image:linear-gradient(transparent,#000 22%);-webkit-mask-image:linear-gradient(transparent,#000 22%)}
+.water-surface{display:block;width:100%;height:100%;mix-blend-mode:screen;opacity:.96}
 .ambient-fog{position:absolute;left:-60%;width:155%;height:24%;border-radius:50%;pointer-events:none;
  background:radial-gradient(ellipse at 52% 48%,#f4fdffaf 0%,#d8eff1aa 21%,#c4dce17a 44%,#b1d9e12e 67%,transparent 78%);
  filter:blur(17px);opacity:.62;will-change:transform;
@@ -42,15 +25,11 @@
 .ambient-lantern--four{top:45%;left:8%;transform:scale(.48);animation-duration:2s;animation-delay:-1.1s}
 .scene>.veil{z-index:1}
 .scene>.home,.scene>.result,.scene>#game{position:relative;z-index:3}
-@keyframes water-current{0%{translate:-5% 0;opacity:.55}50%{opacity:1}100%{translate:5% -24%;opacity:.65}}
-@keyframes water-sheen{0%{translate:-5% 2%;opacity:.38}100%{translate:5% -8%;opacity:.93}}
-@keyframes water-reflections{0%{translate:-3% 0;opacity:.5}100%{translate:4% -4%;opacity:1}}
-@keyframes water-ripple{0%{opacity:0;transform:scale(.2,.35)}15%{opacity:.9}65%{opacity:.55}100%{opacity:0;transform:scale(2.4,1.1)}}
 @keyframes fog-sweep{0%{transform:translate3d(-9%,6%,0) scale(1);opacity:.5}50%{opacity:.8}100%{transform:translate3d(31%,-12%,0) scale(1.2);opacity:.55}}
 @keyframes enchanted-flicker{0%,100%{opacity:.82;filter:brightness(1)}9%{opacity:1;filter:brightness(1.7)}18%{opacity:.55;filter:brightness(.67)}32%{opacity:1;filter:brightness(1.8)}48%{opacity:.72}59%{opacity:1;filter:brightness(1.35)}75%{opacity:.58;filter:brightness(.72)}91%{opacity:.98}}
 @media(max-width:550px){.ambient-water{height:32%}.ambient-fog{filter:blur(12px)}.ambient-lantern--three,.ambient-lantern--four{display:none}}
-@media(prefers-reduced-motion:reduce){.ambient-water:before,.ambient-water:after,.ambient-water__glow,.ambient-ripple,.ambient-fog,.ambient-lantern{animation:none!important;will-change:auto}.ambient-ripple{opacity:.55;transform:scale(1,.65)}}
-</style><link rel="canonical" href="https://bleja972.github.io/jeux/chronomaths-enchantes-ce1/"><script defer src="https://bleja972.github.io/assets/affichage-horizontal.js?v=all-languages-20261108"></script></head><body><div class="horizontal-tools"><button id="horizontal-toggle" type="button" aria-pressed="false">↻ Affichage horizontal</button><p id="horizontal-status" role="status" aria-live="polite" hidden></p></div><main class="shell"><div class="top"><div class="brand">✨ Chronomaths enchantés · CE1</div><a href="https://bleja972.github.io/">← Blog des jeux</a></div><div class="scene"><div class="ambient-world" aria-hidden="true"><div class="ambient-water"><div class="ambient-water__glow"></div><span class="ambient-ripple" style="--x:16%;--y:23%;--w:120px;--delay:-1s"></span><span class="ambient-ripple" style="--x:57%;--y:37%;--w:175px;--delay:-3s"></span><span class="ambient-ripple" style="--x:32%;--y:58%;--w:95px;--delay:-4.5s"></span><span class="ambient-ripple" style="--x:78%;--y:66%;--w:115px;--delay:-2s"></span></div><div class="ambient-fog ambient-fog--one"></div><div class="ambient-fog ambient-fog--two"></div><div class="ambient-fog ambient-fog--three"></div><div class="ambient-lantern ambient-lantern--one"></div><div class="ambient-lantern ambient-lantern--two"></div><div class="ambient-lantern ambient-lantern--three"></div><div class="ambient-lantern ambient-lantern--four"></div></div><div class="veil"></div>
+@media(prefers-reduced-motion:reduce){.ambient-fog,.ambient-lantern{animation:none!important;will-change:auto}.ambient-ripple{opacity:.55;transform:scale(1,.65)}}
+</style><link rel="canonical" href="https://bleja972.github.io/jeux/chronomaths-enchantes-ce1/"><script defer src="https://bleja972.github.io/assets/affichage-horizontal.js?v=all-languages-20261108"></script></head><body><div class="horizontal-tools"><button id="horizontal-toggle" type="button" aria-pressed="false">↻ Affichage horizontal</button><p id="horizontal-status" role="status" aria-live="polite" hidden></p></div><main class="shell"><div class="top"><div class="brand">✨ Chronomaths enchantés · CE1</div><a href="https://bleja972.github.io/">← Blog des jeux</a></div><div class="scene"><div class="ambient-world" aria-hidden="true"><div class="ambient-water"><canvas id="water-surface" class="water-surface" aria-hidden="true"></canvas></div><div class="ambient-fog ambient-fog--one"></div><div class="ambient-fog ambient-fog--two"></div><div class="ambient-fog ambient-fog--three"></div><div class="ambient-lantern ambient-lantern--one"></div><div class="ambient-lantern ambient-lantern--two"></div><div class="ambient-lantern ambient-lantern--three"></div><div class="ambient-lantern ambient-lantern--four"></div></div><div class="veil"></div>
 <section id="home" class="home"><div class="eyebrow">La forêt des calculs</div><h1>Chronomaths enchantés</h1><p>Réussis les 15 calculs avant la fin des <strong>3 minutes</strong> !</p><div class="picker"><label>Choisis ta série<select id="series" aria-label="Choisir un Chronomaths"></select></label><button id="start" class="primary" type="button">✨ Commencer !</button></div><p class="hint">Le chrono démarre quand tu écris ton premier chiffre. Une bulle ratée revient plus tard : la partie continue !</p></section>
 <section id="game" hidden><div class="hud"><div><small>SÉRIE</small><strong id="series-label"></strong></div><div><small>TEMPS RESTANT</small><strong id="clock" class="clock">03:00</strong></div><div><small>CALCULS RÉUSSIS</small><strong id="progress">0 / 15</strong></div><button type="button" class="secondary" id="home-button">🏠 Accueil</button></div><div class="game-scene" id="game-scene"><div class="boundary"></div><div id="bubble" class="bubble" aria-live="polite"></div><div id="waiting" class="waiting">Écris ton premier chiffre pour commencer !</div><div id="feedback" class="feedback" role="status" aria-live="polite"></div></div><form class="dock" id="answer-form"><label for="answer">Ma réponse :</label><input id="answer" type="text" inputmode="numeric" autocomplete="off" maxlength="5" aria-label="Ma réponse"><button class="primary" type="submit">Valider</button><button class="secondary" id="clear" type="button">Effacer</button></form></section>
 <section id="result" class="result" hidden><div class="eyebrow">Fin du défi</div><h2 id="result-title"></h2><div class="score" id="score"></div><p id="result-detail"></p><details><summary>Voir mes 15 calculs</summary><ol class="list" id="review"></ol></details><div class="actions" style="margin-top:18px"><button id="replay" class="primary" type="button">Rejouer cette série</button><button id="menu" class="secondary" type="button">Choisir une série</button></div></section></div><a class="blog" href="https://bleja972.github.io/">← Tous les jeux du blog</a></main>
@@ -82,4 +61,46 @@ function check(e){e.preventDefault();if(!active||bursting)return;const raw=$('an
 function finish(completed){if(!active)return;stop();const count=solved.filter(Boolean).length,firstCount=first.filter(x=>x===true).length;$('result-title').textContent=completed?'Bravo, défi réussi !':'Les 3 minutes sont écoulées !';$('score').textContent=count+' / 15';$('result-detail').textContent='Calculs réussis : '+Math.round(count/15*100)+' %. Au premier essai : '+firstCount+' sur 15.';$('review').innerHTML=source[series].map((q,i)=>'<li>'+(solved[i]?'✅ ':first[i]===null?'⏳ ':'🔁 ')+parse(q).correction+(solved[i]&&attemptCount[i]>1?' (réussi après une nouvelle tentative)':'')+'</li>').join('');screen('result')}
 $('answer').addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'');startTimer()});$('answer-form').addEventListener('submit',check);$('clear').addEventListener('click',()=>{$('answer').value='';$('answer').focus()});$('start').addEventListener('click',start);$('replay').addEventListener('click',start);$('menu').addEventListener('click',goHome);$('home-button').addEventListener('click',goHome);window.addEventListener('resize',tick);
 fetch('./data.json').then(r=>{if(!r.ok)throw Error('Chargement impossible');return r.json()}).then(data=>{if(data.length!==20||data.some(a=>a.length!==15))throw Error('Séries incomplètes');data.flat().forEach(parse);source=data;$('series').innerHTML=data.map((_,i)=>'<option value="'+i+'">Chronomaths '+(i+1)+'</option>').join('')}).catch(()=>{$('start').disabled=true;document.querySelector('.hint').textContent='Impossible de charger les calculs. Recharge la page.'});
+
+(function(){
+ const canvas=document.getElementById('water-surface'),ctx=canvas?.getContext('2d',{alpha:true});
+ if(!ctx)return;
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+ const hash=i=>{let v=Math.sin(i*127.1+78.233)*43758.5453;return v-Math.floor(v)};
+ let w=1,h=1,raf=0,last=0;
+ function resize(){const b=canvas.getBoundingClientRect();w=Math.max(1,Math.round(b.width));h=Math.max(1,Math.round(b.height));const d=Math.min(devicePixelRatio||1,1.5);canvas.width=Math.round(w*d);canvas.height=Math.round(h*d);ctx.setTransform(d,0,0,d,0,0);draw(performance.now()/1000)}
+ function draw(t){
+  ctx.clearRect(0,0,w,h);
+  for(const x of [.18,.83]){
+   const glow=ctx.createRadialGradient(w*x,h*.58,0,w*x,h*.58,w*.19);
+   glow.addColorStop(0,'rgba(255,190,100,.11)');glow.addColorStop(.48,'rgba(235,180,110,.035)');glow.addColorStop(1,'rgba(255,190,100,0)');
+   ctx.fillStyle=glow;ctx.fillRect(0,0,w,h);
+  }
+  // Une multitude de crêtes irrégulières et fines, pas de cercles.
+  const count=Math.max(80,Math.min(190,Math.round(w*.19)));
+  for(let i=0;i<count;i++){
+   const z=Math.pow((i+.5)/count,.78),y=h*(.1+.9*z),seed=hash(i+32),seed2=hash(i+208);
+   const x=w*(seed*.96+.02)+Math.sin(t*.46+i*.67)*(1+z*5);
+   const width=w*(.008+seed2*.034)*(.5+z*1.7);
+   const flutter=.5+.5*Math.sin(t*.85+i*.91+seed*6);
+   const alpha=(.07+.28*z)*(.36+.64*flutter);
+   const warm=Math.abs(x-w*.18)<w*.09||Math.abs(x-w*.83)<w*.09;
+   ctx.beginPath();ctx.moveTo(x-width/2,y);
+   ctx.bezierCurveTo(x-width*.2,y-1*z,x+width*.15,y+Math.sin(t*.7+i)*z*1.9,x+width/2,y);
+   ctx.strokeStyle=warm?'rgba(255,213,153,'+(alpha*.86).toFixed(3)+')':'rgba(195,240,246,'+alpha.toFixed(3)+')';
+   ctx.lineWidth=.48+z*1.1;ctx.lineCap='round';ctx.stroke();
+  }
+  // Bandes souples à très faible opacité, qui reflètent les lanternes.
+  for(let i=0;i<13;i++){
+   const z=(i+1)/14,y=h*(.2+.7*z),width=w*(.07+.12*z),x=w*(.12+hash(i+555)*.76)+Math.sin(t*.5+i*1.4)*w*.011;
+   ctx.beginPath();ctx.moveTo(x-width/2,y);ctx.bezierCurveTo(x-width*.1,y-2*z,x+width*.22,y+z,x+width/2,y);
+   ctx.strokeStyle='rgba(170,230,239,'+(.022+.068*z).toFixed(3)+')';ctx.lineWidth=.5+z;ctx.stroke();
+  }
+ }
+ function animate(time){if(!document.hidden&&time-last>=35){draw(time/1000);last=time}raf=requestAnimationFrame(animate)}
+ if(typeof ResizeObserver!=='undefined')new ResizeObserver(resize).observe(canvas);
+ window.addEventListener('resize',resize,{passive:true});
+ if(reduced.addEventListener)reduced.addEventListener('change',()=>{cancelAnimationFrame(raf);resize();if(!reduced.matches)raf=requestAnimationFrame(animate)});
+ resize();if(!reduced.matches)raf=requestAnimationFrame(animate);
+})();
 </script><script defer src="/assets/statistiques.js"></script><script data-goatcounter="https://lesjeuxdemathsetdefrancais.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script defer src="https://chronomaths-classement.arcaneokapi129.chatgpt.site/chronomaths-scores.js?v=1" data-level="CE1"></script><script src="/assets/jeux-conseilles.js?v=parcours-20261104" data-recommendations="{&quot;selector&quot;: &quot;#result&quot;, &quot;games&quot;: [{&quot;url&quot;: &quot;https://bleja972.github.io/CHRONOMATHS_CE1/&quot;, &quot;title&quot;: &quot;Chronomaths CE1 — 20 défis&quot;}, {&quot;url&quot;: &quot;https://bleja972.github.io/calcul_mental_P1_/&quot;, &quot;title&quot;: &quot;Calcul mental — Période 1&quot;}, {&quot;url&quot;: &quot;/competences/mental/?niveau=CE1#catalogue&quot;, &quot;title&quot;: &quot;Tous les jeux de Calcul mental · CE1&quot;}]}"></script></body></html>
