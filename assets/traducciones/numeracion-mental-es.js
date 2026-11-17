@@ -195,6 +195,39 @@ function start(){
  try{d=iframe.contentDocument;w=iframe.contentWindow;if(!d?.body)throw Error('body unavailable');}
  catch(e){document.getElementById('translation-status').textContent='No se pudo traducir este juego. Abre la versión francesa mediante el enlace superior.';return}
  d.documentElement.lang='es';
+ // El castillo utiliza grabaciones francesas. En la versión española
+ // se sustituyen únicamente esos audios por lectura en español.
+ if(/\/chateau-nombres-(?:exterieur-)?cp\//.test(iframe.getAttribute('src')||'')){
+  const originalAudio=w.Audio;
+  const sayInSpanish=(src)=>{
+   let m,part=String(src||'');
+   if((m=part.match(/family-(\d+)\.mp3/)))return 'Busca los números de la familia del '+(Number(m[1])*10)+'.';
+   if((m=part.match(/number-(\d+)\.mp3/)))return 'Encuentra el número '+Number(m[1])+'.';
+   if(part.includes('retry.mp3'))return 'Inténtalo otra vez.';
+   if(part.includes('finish.mp3'))return '¡Misión completada!';
+   if(part.includes('bravo.mp3'))return '¡Muy bien!';
+   return null;
+  };
+  w.Audio=function(src){
+   const esText=sayInSpanish(src);
+   if(!esText)return new originalAudio(src);
+   const audio={src,paused:true,onplaying:null,onended:null,onerror:null,
+    pause(){this.paused=true;try{w.speechSynthesis?.cancel()}catch(e){}},
+    play(){this.paused=false;
+     if(!w.speechSynthesis||!w.SpeechSynthesisUtterance){this.onerror?.();return Promise.resolve()}
+     const voice=new w.SpeechSynthesisUtterance(esText);voice.lang='es-ES';voice.rate=.85;
+     const preferred=w.speechSynthesis.getVoices().find(v=>/^es(?:[-_]|$)/i.test(v.lang));
+     if(preferred)voice.voice=preferred;
+     voice.onstart=()=>this.onplaying?.();
+     voice.onend=()=>{this.paused=true;this.onended?.()};
+     voice.onerror=()=>{this.paused=true;this.onerror?.()};
+     try{w.speechSynthesis.speak(voice)}catch(e){this.onerror?.()}
+     return Promise.resolve();
+    }};
+   return audio;
+  };
+ }
+
  const names=['aria-label','title','placeholder'];
  const pending=new Set();
  function walk(el){
