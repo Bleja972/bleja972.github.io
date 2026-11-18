@@ -1,0 +1,191 @@
+<!doctype html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#06536c">
+<title>Les poissons des nombres CP — calcul mental jusqu’à 99</title>
+<meta name="description" content="Jeu de calcul mental CP avec les poissons du récif : chaînes de +1, −1, +10 et −10, nombres strictement inférieurs à 100.">
+<link rel="canonical" href="https://bleja972.github.io/jeux/poissons-des-nombres-cp/">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;width:100%;font-family:Arial,Helvetica,sans-serif;color:#fff}
+body{min-height:100vh;min-height:100dvh;background:#07576a url("/assets/bulles-corail/recif.webp") center center/cover fixed no-repeat;overflow-x:hidden}
+button,input{font:inherit}
+button{cursor:pointer;touch-action:manipulation}
+button:focus-visible,input:focus-visible{outline:3px solid #fff0a4;outline-offset:3px}
+[hidden]{display:none!important}
+.sr-only{position:absolute!important;width:1px;height:1px;clip:rect(0 0 0 0);overflow:hidden;white-space:nowrap}
+.game{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;padding:clamp(10px,2vw,24px);position:relative;isolation:isolate}
+.game::before{content:"";position:fixed;inset:0;background:linear-gradient(180deg,#003d5317,#062b4525 60%,#002b421c);pointer-events:none;z-index:-1}
+/* Bannière pleine largeur : pas de limite en vh qui la rétrécissait à 600 px.
+   Aucune coupe des bords : le titre 3D reste entier. */
+.game-banner{width:min(100%,1120px);margin:0 auto clamp(12px,2vw,22px);flex:none;display:flex;justify-content:center;position:relative;z-index:1}
+.game-banner img{display:block;width:100%;height:auto;object-fit:contain;border-radius:15px;border:1px solid #d9fbff8c;box-shadow:0 8px 24px #001c325b;background:transparent}
+@media(max-width:600px){.game-banner{width:min(100%,390px);margin-bottom:8px}.game-banner img{border-radius:10px}}
+@media(orientation:landscape) and (max-height:540px){.game-banner{width:min(100%,560px)}}
+#exercise{width:100%;max-width:1280px;margin:0 auto}
+.fish-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));align-items:center;gap:clamp(7px,1.3vw,19px);padding:12px 1px 8px}
+.step{min-width:0;display:flex;flex-direction:column;align-items:center;gap:3px;position:relative}
+.op{color:#fff4a8;font-weight:900;font-size:clamp(19px,2.9vw,32px);line-height:1.1;text-shadow:0 2px 9px #01354f,0 0 8px #003c52;min-height:33px}
+.step.first .op{visibility:hidden}
+.fish{position:relative;width:100%;max-width:220px;height:auto;aspect-ratio:210/150;display:grid;place-items:center;animation:float 3.4s ease-in-out infinite;filter:drop-shadow(0 12px 10px #00233271)}
+.step:nth-child(2n) .fish{animation-delay:-1.3s;animation-duration:4s}
+.step:nth-child(3n) .fish{animation-delay:-2.5s;animation-duration:3s}
+@keyframes float{0%,100%{transform:translateY(2px) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+.fish{background-image:url("/jeux/poissons-des-nombres-corail/poissons-realistes.webp?v=1");background-repeat:no-repeat;background-size:300% 200%;background-position:var(--fish-x,0%) var(--fish-y,0%)}
+.fish svg{display:none}
+.step.corrected .value input{background:#ffe2d9ef;border:4px solid #c83324;color:#5b1710;box-shadow:0 0 0 3px #f65d5280,0 2px 8px #00314e61}
+.step.good .value input{background:#d0ffe5f5;border:4px solid #168e53;box-shadow:0 0 0 3px #3de29566,0 2px 8px #00314e61}
+.answer-below{margin-top:6px;min-height:34px;display:flex;align-items:center;justify-content:center;gap:6px;padding:4px 11px;border-radius:13px;border:1px solid #ddfff599;background:rgba(5,76,84,.24);color:#fff9c5;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);font-size:clamp(13px,1.7vw,19px);font-weight:900;text-shadow:0 1px 3px #002b26;box-shadow:0 3px 8px #002f392b}
+.answer-below[hidden]{display:none!important}
+.step.corrected .fish{filter:drop-shadow(0 9px 12px #803e2780)}
+.value{position:absolute;inset:0;display:flex;justify-content:center;align-items:center;padding-left:16%;padding-bottom:5%;pointer-events:none}
+.value input,.value .start{pointer-events:auto;color:#082c37;font-size:clamp(17px,2.15vw,27px);font-weight:900;line-height:1;text-align:center;width:clamp(48px,53%,100px);height:clamp(39px,4vw,55px);border:2px solid #ffffffbe;border-radius:14px;background:#e8fffbcd;box-shadow:inset 0 1px 5px #ffffffab,0 2px 8px #00314e61;backdrop-filter:blur(3px)}
+.value .start{display:flex;align-items:center;justify-content:center}
+.value input:focus{background:#fff0b8f5}
+.step.good .value input{background:#b7ffdbf0;border:4px solid #0d9b63}
+.step.bad .value input{background:#ffe2d9ef;border:4px solid #c83324}
+.controls{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:clamp(7px,2vw,16px);margin:clamp(12px,3vw,28px) auto 0;padding:12px;border-radius:21px;background:rgba(4,39,56,.18);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+.action{min-height:50px;padding:10px clamp(11px,2vw,22px);color:#fff;font-weight:850;font-size:clamp(14px,1.65vw,18px);border:1px solid #e1ffff90;border-radius:15px;background:linear-gradient(150deg,#c6f8ff47,#07829b31);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 1px #ffffff80,0 4px 0 #01314775,0 7px 17px #001e3855;text-shadow:0 2px 3px #003447}
+.action:hover{background:rgba(153,249,235,.42)}
+.action:active{transform:translateY(3px);box-shadow:0 1px 2px #0034475c}
+.action:disabled{opacity:.5;cursor:default}
+.end{display:flex;justify-content:center;flex-wrap:wrap;align-items:center;gap:16px;padding:16px;background:rgba(3,40,61,.28);border-radius:20px;backdrop-filter:blur(5px);max-width:max-content;margin:auto}
+.final-numbers{font-size:clamp(28px,6vw,60px);font-weight:900;text-shadow:0 3px 7px #002737}
+.fizz{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:-1}
+.fizz i{position:absolute;bottom:-30px;left:var(--x);width:var(--s);height:var(--s);border-radius:50%;border:1px solid #ddffff6e;box-shadow:inset 0 2px 7px #c2ffff8c;animation:rise var(--t) linear infinite;animation-delay:var(--d)}
+@keyframes rise{to{transform:translate(20px,-110vh);opacity:0}}
+@media(max-width:1030px){.fish-grid{grid-template-columns:repeat(3,minmax(0,1fr));max-width:760px;margin:auto;row-gap:10px}.fish{max-width:225px}.value input,.value .start{font-size:25px}.op{font-size:29px}}
+@media(max-width:600px){body{background-attachment:scroll}.game{padding:7px 8px;justify-content:center}.fish-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:3px 8px;max-width:440px}.fish{max-width:190px}.op{font-size:23px;min-height:27px}.value input,.value .start{font-size:clamp(18px,5vw,25px);height:45px;min-width:65px}.controls{gap:7px;padding:8px 3px;background:transparent;backdrop-filter:none;margin-top:10px}.action{flex:1 1 40%;min-height:47px;padding:9px 5px;font-size:14px}.fish-grid{padding:0}.game{padding-bottom:16px}}
+@media(max-width:355px){.fish{max-width:164px}.value input,.value .start{min-width:55px;height:42px}.action{font-size:13px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}}
+.fish-pdf-3d{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:46px;padding:10px 18px;border:2px solid #f6df79;border-bottom-color:#97600a;border-radius:14px;background:linear-gradient(180deg,#fff1a2 0%,#ffcf47 44%,#f69b18 100%);box-shadow:0 5px 0 #915411,0 9px 17px #001d3a8c,inset 0 2px 0 #fff8c9;color:#423005;text-decoration:none;text-shadow:0 1px 0 #fff1aa;font-weight:900;font-size:clamp(13px,1.7vw,17px);transition:transform .15s,box-shadow .15s;max-width:100%;text-align:center}.fish-pdf-3d:hover{transform:translateY(-2px);filter:brightness(1.07)}.fish-pdf-3d:active{transform:translateY(4px);box-shadow:0 1px 0 #915411,0 3px 6px #001d3a8c}.fish-pdf-3d:focus-visible{outline:3px solid white;outline-offset:4px}@media(max-width:600px){.fish-pdf-3d{width:100%;font-size:13px;padding:10px}}
+</style></head><body>
+<main class="game">
+<header class="game-banner"><img src="/assets/images/bannieres/jeu-61-titre-3d.svg?v=20261115" alt="Titre Les poissons des nombres en lettres 3D bleues et dorées, sans poissons ni coraux" width="1600" height="550" fetchpriority="high"></header>
+<div class="fizz" aria-hidden="true"><i style="--x:10%;--s:19px;--t:8s;--d:-4s"></i><i style="--x:30%;--s:13px;--t:6s;--d:-2s"></i><i style="--x:61%;--s:25px;--t:10s;--d:-6s"></i><i style="--x:87%;--s:16px;--t:7s;--d:-3s"></i></div>
+<section id="exercise" aria-label="Calculs avec les poissons pour le CP">
+<p class="sr-only">CP : ajoute ou retire 1 ou 10. Tous les nombres sont inférieurs à 100.</p>
+<div class="fish-grid" id="fishGrid"></div>
+<div id="feedback" class="sr-only" role="status" aria-live="polite"></div>
+<div class="controls">
+<button id="clear" class="action" type="button">Effacer</button>
+<button id="verify" class="action" type="button">Vérifier</button>
+<button id="next" class="action" type="button" hidden>Série suivante</button>
+<button id="newGame" class="action" type="button">Nouvelle partie</button>
+
+</div>
+</section>
+<section class="end" id="done" hidden>
+<div class="final-numbers" id="final" aria-label="Résultat final"></div>
+<button id="restart" class="action" type="button">Rejouer</button>
+</section>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+// Les opérations restent adaptées au CP ; aucune valeur atteinte n'est supérieure à 99.
+const patterns=[
+ ['+10','-1','-10','+1','+10'],
+ ['+1','+10','-1','-10','+1'],
+ ['-10','+1','+10','+10','-1'],
+ ['+10','+1','-10','-1','+10'],
+ ['-1','-10','+1','+10','-1'],
+ ['+1','+1','+10','-1','-10'],
+ ['+10','-10','+1','+10','-1'],
+ ['-10','+10','+1','-1','+10']
+];
+let series=[],index=0,points=0,hadMistake=false,locked=false;
+// Les six poissons réalistes sont isolés dans une seule image WebP transparente.
+function fishPosition(i){return {x:[0,50,100][i%3]+'%',y:i<3?'0%':'100%'}}
+const random=(min,max)=>Math.floor(Math.random()*(max-min+1))+min;
+function makeSeries(i){
+ for(let trial=0;trial<500;trial++){
+  const ops=patterns[(i+trial)%patterns.length],start=random(10,89);let x=start,answers=[],ok=true;
+  for(const op of ops){x+=Number(op);if(x<0||x>99){ok=false;break}answers.push(x)}
+  if(ok)return {start,ops:[...ops],answers};
+ }
+ throw Error('Impossible de générer la série');
+}
+function newGame(){
+ series=Array.from({length:8},(_,i)=>makeSeries(i));index=0;points=0;
+ $('exercise').hidden=false;$('done').hidden=true;render();
+}
+function render(){
+ const s=series[index];hadMistake=false;locked=false;
+ $('verify').hidden=false;$('clear').hidden=false;$('next').hidden=true;
+ $('feedback').textContent='';
+ const grid=$('fishGrid');grid.replaceChildren();
+ function addFish(op,num,i){
+  const step=document.createElement('div');step.className='step'+(i===0?' first':'');
+  const label=document.createElement('div');label.className='op';label.textContent=op;
+  const fish=document.createElement('div');fish.className='fish';const pos=fishPosition(i);fish.style.setProperty('--fish-x',pos.x);fish.style.setProperty('--fish-y',pos.y);
+  const value=document.createElement('div');value.className='value';
+  if(i===0){const start=document.createElement('div');start.className='start';start.textContent=String(num);value.append(start)}
+  else{
+   const input=document.createElement('input');input.type='text';input.inputMode='numeric';input.maxLength=2;input.autocomplete='off';input.spellcheck=false;input.setAttribute('aria-label','Poisson '+i+' : '+op);
+   input.addEventListener('input',()=>{input.value=input.value.replace(/\D/g,'').slice(0,2);step.classList.remove('good','bad','corrected');const correction=step.querySelector('.answer-below');if(correction){correction.hidden=true;correction.textContent=''}$('feedback').textContent=''});
+   input.addEventListener('keydown',e=>{if(e.key==='Enter'){const all=[...grid.querySelectorAll('input')],next=all[all.indexOf(input)+1];if(next)next.focus();else verify()}});
+   value.append(input);
+  }
+  fish.append(value);step.append(label,fish);if(i>0){const correction=document.createElement('div');correction.className='answer-below';correction.hidden=true;correction.setAttribute('aria-label','Bonne réponse');step.append(correction)}grid.append(step);
+ }
+ addFish('',s.start,0);
+ s.ops.forEach((op,i)=>addFish(op,null,i+1));
+}
+function verify(){
+ if(locked)return;
+ const answers=series[index].answers;
+ const inputs=[...$('fishGrid').querySelectorAll('input')];
+ const missing=inputs.find(input=>!input.value.trim());
+ if(missing){
+  $('feedback').textContent='Complète les cinq poissons avant de vérifier.';
+  missing.focus();
+  return;
+ }
+ let errors=0;
+ inputs.forEach((input,i)=>{
+  const card=input.closest('.step'),correction=card.querySelector('.answer-below');
+  card.classList.remove('good','bad','corrected');
+  // Lire la réponse de l'élève sans jamais remplacer le contenu du champ.
+  const writtenAnswer=input.value;
+  const actual=Number(writtenAnswer);
+  input.setAttribute('data-reponse-eleve',writtenAnswer);
+  if(actual===answers[i]){
+   card.classList.add('good');
+   correction.hidden=true;
+   correction.textContent='';
+  }else{
+   errors++;
+   card.classList.add('corrected');
+   correction.textContent='Bonne réponse : '+answers[i];
+   correction.hidden=false;
+  }
+  // En lecture seule, la réponse écrite reste visible pendant la correction.
+  input.readOnly=true;
+ });
+ locked=true;
+ if(errors===0)points++;
+ inputs.forEach(input=>input.readOnly=true);
+ $('verify').hidden=true;
+ $('clear').hidden=true;
+ $('next').hidden=false;
+ $('next').textContent=index===7?'Résultat':'Série suivante';
+ $('feedback').textContent=errors>0
+  ?errors+' réponses incorrectes. Les réponses saisies restent dans les cadres rouges ; les bonnes réponses figurent dessous.'
+  :'Toutes les réponses sont correctes : cadres verts.';
+}
+function finish(){
+ $('exercise').hidden=true;$('done').hidden=false;
+ $('final').textContent=points+' / 8 · '+Math.round(points/8*100)+' %';
+}
+$('clear').addEventListener('click',()=>{
+ if(locked)return;
+ $('fishGrid').querySelectorAll('input').forEach(input=>{input.value='';input.closest('.step').classList.remove('good','bad','corrected')});
+ $('feedback').textContent='';hadMistake=true;$('fishGrid').querySelector('input')?.focus();
+});
+$('verify').addEventListener('click',verify);
+$('next').addEventListener('click',()=>{if(!locked)return;if(index===7)finish();else{index++;render()}});
+$('newGame').addEventListener('click',newGame);
+$('restart').addEventListener('click',newGame);
+newGame();
+</script>
+</body></html>
