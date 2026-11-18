@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="750" viewBox="0 0 1100 750">
+<defs>
+<radialGradient id="bg"><stop stop-color="#162140"/><stop offset="1" stop-color="#03050d"/></radialGradient>
+<linearGradient id="neon" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e6faff"/><stop offset="1" stop-color="#83aaff"/></linearGradient>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1100" height="750" fill="url(#bg)"/>
+<g opacity=".17" stroke="#4ddfff"><path d="M0 80H1100 M0 160H1100 M0 240H1100 M0 320H1100 M0 400H1100 M0 480H1100 M0 560H1100 M0 640H1100 M0 720H1100 M100 0V750 M200 0V750 M300 0V750 M400 0V750 M500 0V750 M600 0V750 M700 0V750 M800 0V750 M900 0V750 M1000 0V750"/></g>
+<text x="550" y="113" text-anchor="middle" font-size="60" font-family="Arial,sans-serif" font-weight="900" fill="#eff8ff" filter="url(#glow)">MISSION NÉGATION</text>
+<text x="550" y="165" text-anchor="middle" font-size="30" font-family="Arial,sans-serif" letter-spacing="7" fill="#ffe774">GRAMMAIRE · CE1</text>
+<rect x="95" y="230" width="910" height="178" rx="30" fill="#080f20" stroke="#41eaff" stroke-width="5" filter="url(#glow)"/>
+<text x="550" y="296" font-size="32" font-family="Arial,sans-serif" text-anchor="middle" fill="#cdd9f5">Place les mots de la négation</text>
+<text x="550" y="358" font-size="41" font-family="Arial,sans-serif" text-anchor="middle" font-weight="bold" fill="#ffffff">La souris  ···  mange  ···  du fromage.</text>
+<g font-family="Arial,sans-serif" font-size="61" text-anchor="middle" font-weight="900">
+<rect x="141" y="494" width="234" height="126" rx="28" fill="#12365e" stroke="#35eaff" stroke-width="8" filter="url(#glow)"/>
+<text x="258" y="574" fill="#edfeff">ne</text>
+<rect x="433" y="494" width="234" height="126" rx="28" fill="#531b59" stroke="#ff55ce" stroke-width="8" filter="url(#glow)"/>
+<text x="550" y="574" fill="#ffffff">n’</text>
+<rect x="725" y="494" width="234" height="126" rx="28" fill="#60450a" stroke="#ffdc53" stroke-width="8" filter="url(#glow)"/>
+<text x="842" y="574" fill="#fff9d2">pas</text>
+</g>
+<text x="550" y="694" text-anchor="middle" font-size="27" font-family="Arial,sans-serif" fill="#e1edf8">8 défis · Sons futuristes · Score final</text>
+</svg>
