@@ -1,5 +1,30 @@
 [
   {
+    "id": "mission-calcul-cm1-livret-2",
+    "slug": "mission-calcul-cm1-livret-2",
+    "title": "Mission Calcul CM1 — Livret 2",
+    "url": "/jeux/mission-calcul-cm1-livret-2/",
+    "path": "/jeux/mission-calcul-cm1-livret-2/",
+    "description": "Jeu de calcul mental CM1 : séquences 8 à 14, tables de multiplication, calculs sur les dizaines et centaines, stratégies autour de 9/19/29/39, multiplication par 10/100/1 000 et distributivité. 21 exercices, chronomètres, corrections et sons. Interface noire avec boutons 3D et néons multicolores.",
+    "short": "21 exercices CM1 · Calcul mental du livret 2 · Néons et bruitages futuristes.",
+    "objective": "Automatiser les procédures de calcul mental et s'entraîner aux techniques de multiplication.",
+    "skill": "calcul-mental-cm1",
+    "skillName": "Calcul mental CM1 — Livret 2",
+    "category": "calcul-mental",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "level": "CM1",
+    "levels": [
+      "CM1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/jeu-76.webp",
+    "imageAlt": "Aperçu de jeu de calcul mental futuriste avec boutons lumineux et opérations.",
+    "playClicks": 0
+  },
+  {
     "id": "cartons-montessori-ce2",
     "slug": "cartons-montessori-ce2",
     "title": "Les nombres en orbite — Cartons Montessori CE2",
