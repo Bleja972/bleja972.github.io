@@ -1,5 +1,30 @@
 [
   {
+    "id": "jeu-104",
+    "slug": "mission-negation-ce1",
+    "title": "Mission Négation — CE1",
+    "url": "/jeux/mission-negation-ce1/",
+    "path": "/jeux/mission-negation-ce1/",
+    "description": "Transforme 8 phrases au présent en phrases négatives en plaçant ne, n’ et pas entre les mots.",
+    "short": "Place ne, n’ et pas au bon endroit, puis vérifie ta phrase négative.",
+    "objective": "Identifier et placer les deux éléments de la négation dans une phrase au présent.",
+    "skill": "grammaire",
+    "skillName": "Construire une phrase négative",
+    "category": "grammaire",
+    "group": "grammaire",
+    "groupName": "Grammaire",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Français",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-negation-ce1.svg",
+    "imageAlt": "Aperçu du jeu Mission Négation : 8 phrases et trois boutons néon ne, n’ et pas.",
+    "playClicks": 0
+  },
+  {
     "id": "mission-calcul-cm1-livret-2",
     "slug": "mission-calcul-cm1-livret-2",
     "title": "Mission Calcul CM1 — Livret 2",
