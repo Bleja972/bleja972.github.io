@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#06070f">
+<title>Mission Négation – CE1</title>
+<style>
+:root{--bg:#06070f;--text:#f5f7ff;--cyan:#29eaff;--pink:#ff51c8;--gold:#ffde4b;--danger:#ff637f;--ok:#68f5cc}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Trebuchet MS,Arial,sans-serif;color:var(--text)}
+body{background:radial-gradient(ellipse at 13% 11%,#19204380 0,transparent 37%),radial-gradient(ellipse at 91% 80%,#35134870 0,transparent 42%),linear-gradient(150deg,#03050a,#0a0916 54%,#020409);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(#6ae7ff07 1px,transparent 1px),linear-gradient(90deg,#6ae7ff07 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,transparent,#000 26%,#000 75%,transparent)}
+.glow{position:fixed;z-index:0;pointer-events:none;border-radius:100%;filter:blur(65px);opacity:.24}.glow.one{width:370px;height:370px;background:#00baff;top:10%;left:-240px}.glow.two{width:410px;height:410px;background:#ff2bb9;bottom:-230px;right:-230px}
+.wrap{position:relative;z-index:1;max-width:1060px;margin:auto;padding:22px 18px 40px}.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.eyebrow{font-size:13px;font-weight:900;letter-spacing:3px;color:var(--cyan);text-shadow:0 0 12px #00dfff}.main-title{font-weight:1000;font-size:clamp(33px,6vw,59px);line-height:1.04;margin:9px 0 7px;text-transform:uppercase;letter-spacing:1px;text-shadow:0 0 18px #29eaff69,0 5px 1px #182340}.lead{margin:0;font-size:16px;color:#d2dcff;line-height:1.5}.top-actions{display:flex;gap:10px;align-items:center}
+.sound,.restart{appearance:none;cursor:pointer;color:#edf7ff;background:#151b34;border:2px solid #5d6fb8;border-radius:14px;font-weight:900;padding:10px 13px;box-shadow:0 5px 0 #080b1c,0 0 12px #4765b95b}.sound:focus-visible,.restart:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.panel{margin-top:23px;position:relative;border:2px solid #3deaff;border-radius:26px;background:linear-gradient(160deg,#101629ef,#0b0c1be8);box-shadow:0 0 25px #25deff45,inset 0 0 26px #1dbefb14,0 18px 45px #0009;overflow:hidden}
+.panel:before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,transparent,var(--cyan),var(--pink),var(--gold),transparent)}
+.panel-inner{padding:clamp(15px,3.7vw,38px)}.status{display:flex;align-items:center;gap:14px;justify-content:space-between;flex-wrap:wrap}.chip{font-size:14px;font-weight:900;color:#f6fcff;border:1px solid #4da6bc;background:#121d35;border-radius:100px;padding:9px 15px;letter-spacing:.3px}.score{color:#ffe46b;border-color:#b89422}.progress{height:11px;background:#11192f;border:1px solid #526494;border-radius:20px;margin:19px 0 28px;overflow:hidden}.bar{height:100%;width:0;background:linear-gradient(90deg,#23eaff,#ff53c7,#ffe449);border-radius:20px;box-shadow:0 0 15px #29eaff;transition:width .25s}
+.prompt{font-weight:900;text-align:center;color:#ecf4ff;font-size:clamp(17px,2.6vw,22px);margin:2px 0 4px}.hint{text-align:center;color:#b5c9de;font-size:14px;line-height:1.55;margin:0 auto 26px;max-width:710px}
+.button-heading{text-align:center;font-size:15px;font-weight:900;color:#bcd4f0;margin:0 0 18px}.choices{display:flex;align-items:center;justify-content:center;gap:clamp(12px,3vw,30px);flex-wrap:wrap;margin:10px 0 23px}
+.word-button{min-width:116px;min-height:68px;appearance:none;cursor:pointer;position:relative;user-select:none;border-radius:17px;font-size:clamp(24px,4vw,32px);font-weight:1000;letter-spacing:1px;color:white;text-shadow:0 2px 0 #17172a;transform:translateY(0);transition:transform .13s,filter .13s,box-shadow .13s}.word-button:focus-visible{outline:3px solid white;outline-offset:5px}.word-button:hover:not(:disabled){transform:translateY(-4px);filter:brightness(1.17)}.word-button:active:not(:disabled){transform:translateY(5px)}.word-button:disabled{cursor:default;opacity:.66}
+.word-button.cyan{--glow:#24e6ff;--edge:#085988;background:linear-gradient(140deg,#077fae,#073459 60%,#04192f);border:3px solid #5de9ff;box-shadow:0 7px 0 #03466a,0 10px 0 #02253d,0 0 19px #24e6ff99,inset 0 1px 16px #9cf5ff3a}
+.word-button.pink{--glow:#ff52d0;--edge:#782059;background:linear-gradient(140deg,#c02b97,#631c5a 62%,#3b103a);border:3px solid #ff85dc;box-shadow:0 7px 0 #782059,0 10px 0 #3d1532,0 0 19px #ff52d099,inset 0 1px 16px #ffcbff45}
+.word-button.gold{--glow:#ffdf43;--edge:#815516;background:linear-gradient(140deg,#c6910b,#85520e 62%,#50310c);border:3px solid #ffe575;box-shadow:0 7px 0 #805313,0 10px 0 #4d310b,0 0 19px #ffdc4799,inset 0 1px 16px #ffdf9055}
+.word-button.selected{transform:translateY(4px);outline:3px solid #fff;outline-offset:4px;box-shadow:0 2px 0 var(--edge),0 0 32px var(--glow),inset 0 0 18px #fff7}.word-button.selected:hover{transform:translateY(4px)}
+.sentence-label{font-size:13px;color:#b8d5e6;font-weight:900;letter-spacing:1px;text-transform:uppercase;text-align:center;margin:5px 0 14px}.sentence{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;row-gap:16px;column-gap:2px;padding:25px 8px;min-height:115px;border:1px solid #32436a;border-radius:16px;background:linear-gradient(#040a19a3,#121a34ac);box-shadow:inset 0 0 35px #111a3c;line-height:1.7}
+.token{font-weight:900;font-size:clamp(19px,3.5vw,29px);white-space:nowrap}.token.last{margin-right:5px}
+.slot{cursor:pointer;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;min-width:29px;width:29px;height:46px;color:#3fe6fa;background:#102840;border:2px dashed #24bff5;box-shadow:0 0 12px #21e2ff31;transition:all .13s;font-size:21px;font-weight:1000;vertical-align:middle}
+.slot:not(.filled):after{content:'+';opacity:.62}.slot:hover:not(:disabled),.slot:focus-visible{background:#19456b;border-color:#fff;box-shadow:0 0 15px #26eaff;outline:0}.slot.filled{width:auto;min-width:57px;padding:0 8px;border-style:solid;color:#fff;background:#132a41;border-color:#51eaff;box-shadow:0 0 15px #36eaff80;text-shadow:0 0 9px #20e4ff}.slot.filled[data-word="pas"]{border-color:#ff82dd;background:#3c193f;box-shadow:0 0 12px #ff4dcc76}.slot:disabled{cursor:default}
+.controls{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:23px}.control{appearance:none;cursor:pointer;border-radius:13px;min-height:53px;padding:12px 20px;font-size:17px;font-weight:1000;transition:transform .13s,filter .13s}.control:hover:not(:disabled){filter:brightness(1.15);transform:translateY(-2px)}.control:disabled{opacity:.46;cursor:not-allowed}.verify{color:#161322;background:linear-gradient(130deg,#faff65,#ffc751);border:2px solid #fffa9f;box-shadow:0 5px 0 #886116,0 0 13px #ffe94f75}.clear{color:#f6eaff;background:linear-gradient(130deg,#503a84,#221848);border:2px solid #bfa6ff;box-shadow:0 5px 0 #21113d,0 0 13px #8e65e066}.next{color:#071e2a;background:linear-gradient(130deg,#52e9ff,#42f4bd);border:2px solid #9effff;box-shadow:0 5px 0 #07556a,0 0 15px #45ffefaa}
+.feedback{text-align:center;min-height:58px;margin:17px auto 3px;max-width:780px;font-size:17px;line-height:1.5;font-weight:900}.feedback.error{color:#ff9ba9;text-shadow:0 0 9px #ef275d55}.feedback.good{color:#96ffdf;text-shadow:0 0 9px #3fffbb66}.feedback.info{color:#fce78d}.pulse-error{animation:shake .28s linear 1}.pulse-good{animation:flash .45s ease 1}@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}@keyframes flash{45%{filter:drop-shadow(0 0 24px #6bffcf)}}
+.end{display:none;text-align:center;padding:30px 12px}.end h2{font-size:clamp(26px,4vw,46px);margin:8px 0;color:#ffe660;text-shadow:0 0 20px #ffca5266}.final-score{font-size:clamp(46px,8vw,85px);font-weight:1000;color:#86fff4;text-shadow:0 0 30px #22efff}.end p{font-size:19px;color:#d6e4fb}.footer-note{text-align:center;font-size:12px;color:#93aac5;margin:19px auto 0}.muted{opacity:.7}
+@media(max-width:560px){.wrap{padding:14px 9px 32px}.panel-inner{padding:16px 11px}.choices{gap:10px}.word-button{min-width:90px;min-height:60px}.sentence{padding:18px 4px;row-gap:12px}.slot{min-width:25px;width:25px;height:42px}.token{font-size:20px}.control{font-size:16px;padding:11px 14px}.top-actions{width:100%;justify-content:flex-end}.feedback{font-size:15px}.chip{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="glow one"></div><div class="glow two"></div>
+<div class="wrap">
+<header class="top"><div><div class="eyebrow">MISSION GRAMMAIRE · CE1</div><h1 class="main-title">⚡ La phrase négative</h1><p class="lead">Place <strong>ne</strong> ou <strong>n’</strong> avant le verbe, et <strong>pas</strong> après le verbe.</p></div><div class="top-actions"><button class="sound" type="button" id="sound" aria-pressed="true">🔊 Sons : OUI</button><button class="restart" type="button" id="restart">↻ Recommencer</button></div></header>
+<section class="panel" aria-label="Jeu de grammaire"><div class="panel-inner">
+<div id="game"><div class="status"><span class="chip" id="level">PHRASE 1 / 8</span><span class="chip score" id="score">⭐ 0 point</span></div><div class="progress" role="progressbar" aria-label="Progression" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0" id="progress"><div class="bar" id="bar"></div></div>
+<p class="prompt">Transforme cette phrase affirmative en phrase négative.</p><p class="hint">1. Choisis un bouton. &nbsp; 2. Clique sur un <strong>+</strong> entre les mots. &nbsp; 3. Clique sur <strong>Vérifier</strong>.<br>Tu peux cliquer sur un mot ajouté pour l’enlever.</p>
+<p class="button-heading">CHOISIS LE MOT À PLACER</p><div class="choices" role="group" aria-label="Mots de la négation"><button type="button" class="word-button cyan" data-word="ne">ne</button><button type="button" class="word-button pink" data-word="n’">n’</button><button type="button" class="word-button gold" data-word="pas">pas</button></div>
+<p class="sentence-label">Clique dans la phrase pour placer les mots de la négation</p><div class="sentence" id="sentence" aria-live="polite"></div>
+<div class="controls"><button class="control clear" type="button" id="clear">✕ Effacer</button><button class="control verify" type="button" id="verify">✓ Vérifier</button><button class="control next" type="button" id="next" hidden>Suivant ➜</button></div>
+<div class="feedback" id="feedback" role="status" aria-live="polite"></div></div>
+<div class="end" id="end"><div class="eyebrow">MISSION TERMINÉE</div><h2>Bravo, explorateur des phrases !</h2><div class="final-score" id="final-score">0 / 8</div><p id="final-message"></p><button class="control next" type="button" id="again">↻ Rejouer les 8 phrases</button></div>
+</div></section><p class="footer-note">Jeu CE1 · Présent · Verbes du 1er groupe, être et avoir · Fonctionne sans connexion une fois ouvert</p></div>
+<script>
+'use strict';
+// Le sujet et le groupe verbal restent visibles. L’élève place les deux éléments de la négation.
+// before = position avant le verbe ; after = position juste après le verbe.
+const EXERCISES=[
+ {tokens:['La','souris','grignote','le','fromage.'],before:2,after:3,first:'ne',answer:'La souris ne grignote pas le fromage.'},
+ {tokens:['Les','colibris','visitent','les','fleurs.'],before:2,after:3,first:'ne',answer:'Les colibris ne visitent pas les fleurs.'},
+ {tokens:['La','mangouste','a','une','longue','queue.'],before:2,after:3,first:'n’',answer:'La mangouste n’a pas une longue queue.'},
+ {tokens:['Les','chauves-souris','sont','dans','la','grotte.'],before:2,after:3,first:'ne',answer:'Les chauves-souris ne sont pas dans la grotte.'},
+ {tokens:['Le','colibri','est','fatigué.'],before:2,after:3,first:'n’',answer:'Le colibri n’est pas fatigué.'},
+ {tokens:['Les','souris','jouent','dans','le','jardin.'],before:2,after:3,first:'ne',answer:'Les souris ne jouent pas dans le jardin.'},
+ {tokens:['La','chauve-souris','attrape','des','insectes.'],before:2,after:3,first:'n’',answer:'La chauve-souris n’attrape pas des insectes.'},
+ {tokens:['Les','mangoustes','ont','faim.'],before:2,after:3,first:'n’',answer:'Les mangoustes n’ont pas faim.'}
+];
+const $=id=>document.getElementById(id);
+const buttons=[...document.querySelectorAll('[data-word]')];
+let idx=0,score=0,selected=null,placed={},completed=false,soundOn=true,ctx=null;
+// Audio synthétisé : aucun fichier externe, aucune autorisation de lecture automatique nécessaire.
+function tone(freq=440,duration=.12,type='sine',volume=.07,delay=0){if(!soundOn)return;try{ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();if(ctx.state==='suspended')ctx.resume();const o=ctx.createOscillator(),g=ctx.createGain();const now=ctx.currentTime+delay;o.type=type;o.frequency.setValueAtTime(freq,now);g.gain.setValueAtTime(.0001,now);g.gain.exponentialRampToValueAtTime(volume,now+.015);g.gain.exponentialRampToValueAtTime(.0001,now+duration);o.connect(g);g.connect(ctx.destination);o.start(now);o.stop(now+duration+.03)}catch(_){}}
+function fx(type){if(type==='select'){tone(430,.07,'triangle',.045)}else if(type==='place'){tone(600,.09,'sine',.055);tone(810,.11,'sine',.04,.055)}else if(type==='error'){tone(230,.14,'sawtooth',.045);tone(160,.19,'triangle',.04,.12)}else if(type==='good'){tone(500,.12,'triangle',.05);tone(690,.14,'triangle',.055,.12);tone(920,.23,'sine',.06,.24)}else if(type==='finish'){[490,620,740,980].forEach((f,i)=>tone(f,.26,'triangle',.045,i*.13))}}
+function feedback(text='',kind=''){const e=$('feedback');e.textContent=text;e.className='feedback '+kind}
+function clearSelection(){selected=null;buttons.forEach(b=>{b.classList.remove('selected');b.setAttribute('aria-pressed','false')})}
+function refresh(){const e=EXERCISES[idx];$('sentence').replaceChildren();
+ for(let pos=0;pos<=e.tokens.length;pos++){
+  if(pos>0){const space=document.createTextNode(' ');$('sentence').append(space)}
+  const slot=document.createElement('button');slot.type='button';slot.className='slot'+(placed[pos]?' filled':'');slot.setAttribute('aria-label',placed[pos]?`Retirer ${placed[pos]} à cet endroit`:`Placer un mot avant ${e.tokens[pos]||'la fin de la phrase'}`);slot.title=placed[pos]?'Clique pour retirer ce mot':'Clique pour insérer le mot choisi';slot.dataset.position=pos;
+  if(placed[pos]){slot.dataset.word=placed[pos];slot.textContent=placed[pos]}
+  slot.disabled=completed;
+  slot.addEventListener('click',()=>onSlot(pos));$('sentence').append(slot);
+  if(pos<e.tokens.length){const token=document.createElement('span');token.className='token';token.textContent=e.tokens[pos];$('sentence').append(token)}
+ }
+ $('level').textContent=`PHRASE ${idx+1} / ${EXERCISES.length}`;$('score').textContent=`⭐ ${score} point${score>1?'s':''}`;
+ $('bar').style.width=`${idx/EXERCISES.length*100}%`;$('progress').setAttribute('aria-valuenow',String(idx));
+ $('verify').disabled=completed;buttons.forEach(b=>b.disabled=completed);
+}
+function choose(word){if(completed)return;selected=selected===word?null:word;buttons.forEach(b=>{const v=b.dataset.word===selected;b.classList.toggle('selected',v);b.setAttribute('aria-pressed',String(v))});fx('select');if(selected)feedback('Clique maintenant sur un + à l’endroit voulu.','info');else feedback()}
+function onSlot(pos){if(completed)return;if(placed[pos]){delete placed[pos];fx('select');feedback('Mot retiré. Tu peux choisir un autre emplacement.','info');refresh();return}if(!selected){feedback('Choisis d’abord le bouton ne, n’ ou pas.','info');fx('error');return}if(Object.values(placed).includes(selected)){feedback(`Tu as déjà placé « ${selected} ». Clique dessus pour le déplacer.`,'info');fx('error');return}if(Object.keys(placed).length>=2){feedback('Deux mots suffisent. Clique sur un mot déjà placé pour le changer.','info');fx('error');return}placed[pos]=selected;fx('place');clearSelection();feedback();refresh()}
+function verify(){if(completed)return;const e=EXERCISES[idx];const expected={[e.before]:e.first,[e.after]:'pas'};
+ const keys=Object.keys(placed);const correct=keys.length===2&&keys.every(k=>placed[k]===expected[k]);
+ if(correct){score++;completed=true;fx('good');$('sentence').classList.remove('pulse-error');void $('sentence').offsetWidth;$('sentence').classList.add('pulse-good');feedback('✅ BRAVO ! La négation est bien placée.','good');$('verify').hidden=true;$('clear').hidden=true;$('next').hidden=false;$('next').textContent=idx===EXERCISES.length-1?'Voir mon score 🏆':'Phrase suivante ➜';refresh()}
+ else{fx('error');$('sentence').classList.remove('pulse-error');void $('sentence').offsetWidth;$('sentence').classList.add('pulse-error');
+  let msg='❌ Regarde bien : ';if(keys.length!==2)msg+='il faut placer deux mots.';else if(placed[e.before]!==e.first)msg+=`place « ${e.first} » juste avant le verbe.`;else msg+='place « pas » juste après le verbe.';feedback(msg+' Essaie encore !','error')}
+}
+function next(){if(!completed)return;if(idx===EXERCISES.length-1){$('game').hidden=true;$('end').style.display='block';$('final-score').textContent=`${score} / ${EXERCISES.length}`;$('final-message').textContent=score===8?'Tu as réussi les 8 phrases ! Tu maîtrises la négation.':'Continue à t’entraîner à placer les mots de la négation.';fx('finish');return}
+ idx++;placed={};completed=false;$('next').hidden=true;$('clear').hidden=false;$('verify').hidden=false;clearSelection();feedback();$('sentence').classList.remove('pulse-good','pulse-error');refresh()}
+function reset(){idx=0;score=0;placed={};completed=false;$('game').hidden=false;$('end').style.display='none';$('next').hidden=true;$('clear').hidden=false;$('verify').hidden=false;clearSelection();feedback();$('sentence').classList.remove('pulse-good','pulse-error');refresh()}
+buttons.forEach(b=>b.addEventListener('click',()=>choose(b.dataset.word)));
+$('verify').addEventListener('click',verify);$('next').addEventListener('click',next);$('restart').addEventListener('click',reset);$('again').addEventListener('click',reset);
+$('clear').addEventListener('click',()=>{if(completed)return;placed={};clearSelection();fx('select');feedback('Les mots de la négation ont été effacés.','info');refresh()});
+$('sound').addEventListener('click',()=>{soundOn=!soundOn;$('sound').textContent=soundOn?'🔊 Sons : OUI':'🔇 Sons : NON';$('sound').setAttribute('aria-pressed',String(soundOn));if(soundOn)fx('select')});
+reset();
+</script>
+</body>
+</html>
