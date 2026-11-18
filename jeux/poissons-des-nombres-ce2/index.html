@@ -63,10 +63,12 @@ button:focus-visible,input:focus-visible{outline:3px solid #fff0a4;outline-offse
 .fish-pdf-3d{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:48px;padding:10px 18px;border:2px solid #fff1a1;border-bottom-color:#94600c;border-radius:14px;background:linear-gradient(180deg,#fff4a8 0%,#ffd04c 45%,#ef9418 100%);box-shadow:0 5px 0 #91520e,0 9px 18px #001b3480,inset 0 2px 0 #fffbe0;color:#422d09!important;font-weight:900;text-decoration:none;text-align:center;text-shadow:0 1px 0 #fff6c8;transition:transform .15s,box-shadow .15s}
 .fish-pdf-3d:hover{filter:brightness(1.08);transform:translateY(-2px)}.fish-pdf-3d:active{transform:translateY(4px);box-shadow:0 1px 0 #91520e}
 @media(max-width:600px){.fish-pdf-3d{flex:1 1 100%;width:100%}}
+.ce2-label{position:relative;z-index:3;margin:0 auto 12px;width:fit-content;max-width:100%;padding:10px 19px;border-radius:14px;background:linear-gradient(135deg,#062c49ed,#0b4d68df);color:#c7faff;border:2px solid #71e9ff;box-shadow:0 0 20px #3fdcf755,0 5px 0 #052d49;font:bold clamp(16px,2.6vw,25px)/1.4 Arial,sans-serif;text-align:center;text-shadow:0 0 11px #5adfff}.ce2-label span{font-size:.65em;color:#fff;display:inline-block}@media(max-width:600px){.ce2-label{padding:8px 11px;margin-bottom:10px}}
 </style></head><body>
 <main class="game">
 <header class="game-banner"><img src="/assets/images/bannieres/jeu-61-titre-3d.svg?v=20261115" alt="Titre Les poissons des nombres en lettres 3D bleues et dorées, sans poissons ni coraux" width="1600" height="550" fetchpriority="high"></header>
 <div class="fizz" aria-hidden="true"><i style="--x:10%;--s:19px;--t:8s;--d:-4s"></i><i style="--x:30%;--s:13px;--t:6s;--d:-2s"></i><i style="--x:61%;--s:25px;--t:10s;--d:-6s"></i><i style="--x:87%;--s:16px;--t:7s;--d:-3s"></i></div>
+<div class="ce2-label" role="heading" aria-level="2">DÉFI CE2 <span>· Nombres de 1 000 à 9 999 · Calculs jusqu'aux milliers</span></div>
 <section id="exercise" aria-label="Calcul mental CE2 avec les poissons">
 <p class="sr-only">Niveau CE2. Effectue les opérations avec les unités, les dizaines, les centaines et les milliers. Tous les nombres sont compris entre 0 et 9 999.</p><div class="fish-grid" id="fishGrid"></div>
 <div id="feedback" class="sr-only" role="status" aria-live="polite"></div>
@@ -104,7 +106,7 @@ const random=(min,max)=>Math.floor(Math.random()*(max-min+1))+min;
 function makeSeries(i){
  for(let trial=0;trial<500;trial++){
   const ops=patterns[(i+trial)%patterns.length],start=random(1200,8500);let x=start,answers=[],ok=true;
-  for(const op of ops){x+=Number(op);if(x<0||x>9999){ok=false;break}answers.push(x)}
+  for(const op of ops){x+=Number(op);if(x<1000||x>9999){ok=false;break}answers.push(x)}
   if(ok)return {start,ops:[...ops],answers};
  }
  throw Error('Impossible de générer la série');
