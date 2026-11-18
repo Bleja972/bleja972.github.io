@@ -93,7 +93,7 @@ function ensureCatalogCards(){
 }
 function readState(){
  const p=new URLSearchParams(location.search),s={...initial};Object.keys(s).forEach(k=>{if(p.has(k))s[k]=p.get(k)});
- if(!['tous','CP','CE1','CE2'].includes(s.niveau))s.niveau=initial.niveau;
+ if(!['tous','CP','CE1','CE2','CM1'].includes(s.niveau))s.niveau=initial.niveau;
  if(!['toutes','Mathématiques','Français'].includes(s.matiere))s.matiere='toutes';
  if(s.domaine!=='tous'&&!groupNames[s.domaine])s.domaine='tous';
  if(!validCollections.includes(s.collection))s.collection='tous';
@@ -132,18 +132,18 @@ function filteredGames(){
  return catalog.filter(g=>{
   const hay=normalize([g.title,g.description,g.subject,g.groupName,g.skillName,g.objective,g.levels.join(' ')].join(' '));
   return (state.niveau==='tous'||g.levels.includes(state.niveau))&&(state.matiere==='toutes'||g.subject===state.matiere)&&(state.domaine==='tous'||g.group===state.domaine)&&(state.competence==='toutes'||g.skill===state.competence)&&(state.collection!=='nouveautes'||g.new)&&(state.collection!=='semaine'||g.weekly)&&(state.collection!=='favoris'||favorites.has(g.id))&&terms.every(term=>hay.includes(term));
- }).sort(state.tri==='popularite'?(a,b)=>(Number.isInteger(b.playClicks)?b.playClicks:-1)-(Number.isInteger(a.playClicks)?a.playClicks:-1):state.tri==='az'?(a,b)=>a.title.localeCompare(b.title,'fr'):state.niveau==='CE2'?(a,b)=>Number(b.level==='CE2')-Number(a.level==='CE2'):()=>0);
+ }).sort(state.tri==='popularite'?(a,b)=>(Number.isInteger(b.playClicks)?b.playClicks:-1)-(Number.isInteger(a.playClicks)?a.playClicks:-1):state.tri==='az'?(a,b)=>a.title.localeCompare(b.title,'fr'):['CE2','CM1'].includes(state.niveau)?(a,b)=>Number(b.level===state.niveau)-Number(a.level===state.niveau):()=>0);
 }
 function render(){
- syncControls();const games=filteredGames(),visible=state.niveau==='CE2'?games:games.slice(0,shown),visibleIds=new Set(visible.map(g=>g.id));
+ syncControls();const games=filteredGames(),visible=['CE2','CM1'].includes(state.niveau)?games:games.slice(0,shown),visibleIds=new Set(visible.map(g=>g.id));
  cardNodes.forEach(n=>n.hidden=!visibleIds.has(n.dataset.game));
  const fragment=document.createDocumentFragment();games.forEach(g=>fragment.append(cardMap.get(g.id)));$('#game-grid').append(fragment);
- const count=games.length,displayed=state.niveau==='CE2'?count:Math.min(shown,count);$('#result-count').textContent=count+' jeu'+(count===1?'':'x')+' trouvé'+(count===1?'':'s')+(state.q?' pour « '+state.q+' »':'');
+ const count=games.length,displayed=['CE2','CM1'].includes(state.niveau)?count:Math.min(shown,count);$('#result-count').textContent=count+' jeu'+(count===1?'':'x')+' trouvé'+(count===1?'':'s')+(state.q?' pour « '+state.q+' »':'');
  const labels={tous:'Tous les jeux',nouveautes:'Les nouveautés',semaine:'Les jeux de la semaine',favoris:'Mes jeux favoris'};
- $('#catalog-title').textContent=state.collection==='tous'&&state.domaine!=='tous'?'Les jeux de '+groupNames[state.domaine].toLowerCase():state.collection==='tous'&&state.niveau==='CE2'?'Tous les jeux CE2':labels[state.collection];
+ $('#catalog-title').textContent=state.collection==='tous'&&state.domaine!=='tous'?'Les jeux de '+groupNames[state.domaine].toLowerCase():state.collection==='tous'&&['CE2','CM1'].includes(state.niveau)?'Tous les jeux '+state.niveau:labels[state.collection];
  $('#empty-state').hidden=count>0;$('#empty-title').textContent=state.collection==='favoris'?'Ta sélection attend ses premiers jeux':'Aucun jeu trouvé';
  $('#empty-text').textContent=state.collection==='favoris'?(favorites.size?'Tes favoris ne correspondent pas à ces filtres. Élargis ta recherche.':'Touche le cœur d’un jeu pour le retrouver ici. Les favoris sont gardés sur cet appareil.'):'Essaie un autre mot ou élargis les filtres pour trouver ton prochain jeu.';
- $('#show-more').hidden=state.niveau==='CE2'||count<=shown;$('#show-more').textContent='Voir '+Math.min(12,count-shown)+' jeux de plus ↓';$('#shown-count').textContent=count?displayed+' sur '+count+' jeu'+(count===1?'':'x'):'';
+ $('#show-more').hidden=['CE2','CM1'].includes(state.niveau)||count<=shown;$('#show-more').textContent='Voir '+Math.min(12,count-shown)+' jeux de plus ↓';$('#shown-count').textContent=count?displayed+' sur '+count+' jeu'+(count===1?'':'x'):'';
  $('.weekly-section')?.toggleAttribute('hidden',state.collection!=='tous'||state.q!==''||state.matiere!=='toutes'||state.domaine!=='tous'||state.niveau!=='CE1');
  updateFavorites();
 }
