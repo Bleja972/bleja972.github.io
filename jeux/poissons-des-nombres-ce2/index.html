@@ -119,8 +119,8 @@ function render(){
   const value=document.createElement('div');value.className='value';
   if(i===0){const start=document.createElement('div');start.className='start';start.textContent=String(num);value.append(start)}
   else{
-   const input=document.createElement('input');input.type='text';input.inputMode='numeric';input.maxLength=4;input.autocomplete='off';input.spellcheck=false;input.setAttribute('aria-label','Poisson '+i+' : '+op);
-   input.addEventListener('input',()=>{input.value=input.value.replace(/\D/g,'').slice(0,4);step.classList.remove('good','bad','corrected');const correction=step.querySelector('.answer-below');if(correction){correction.hidden=true;correction.textContent=''}$('feedback').textContent=''});
+   const input=document.createElement('input');input.type='text';input.inputMode='numeric';input.maxLength=5;input.autocomplete='off';input.spellcheck=false;input.setAttribute('aria-label','Poisson '+i+' : '+op);
+   input.addEventListener('input',()=>{input.value=input.value.replace(/[\u00a0\u202f]/g,' ').replace(/[^0-9 ]/g,'').slice(0,5);step.classList.remove('good','bad','corrected');const correction=step.querySelector('.answer-below');if(correction){correction.hidden=true;correction.textContent=''}$('feedback').textContent=''});
    input.addEventListener('keydown',e=>{if(e.key==='Enter'){const all=[...grid.querySelectorAll('input')],next=all[all.indexOf(input)+1];if(next)next.focus();else verify()}});
    value.append(input);
   }
@@ -145,7 +145,7 @@ function verify(){
   card.classList.remove('good','bad','corrected');
   // Lire la réponse de l'élève sans jamais remplacer le contenu du champ.
   const writtenAnswer=input.value;
-  const actual=Number(writtenAnswer);
+  const actual=Number(writtenAnswer.replace(/\s/g,''));
   input.setAttribute('data-reponse-eleve',writtenAnswer);
   if(actual===answers[i]){
    card.classList.add('good');
