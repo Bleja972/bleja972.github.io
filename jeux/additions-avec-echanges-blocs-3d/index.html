@@ -151,13 +151,13 @@ input:disabled { opacity: .66; }
 }
 .op-grid.direct .carry-slot { display:grid; place-items:center; }
 .op-grid .retain-entry,
-.op-grid .confirmed-retain,
-.op-grid .carry-slot:empty::before {
+.op-grid .confirmed-retain {
   box-sizing:border-box; width:36px; height:36px; border-radius:50%;
   background:#fff; color:#0d233a; border:2px solid #fff;
   text-shadow:none; box-shadow:0 0 9px #ffffff70;
 }
-.op-grid .carry-slot:empty::before { content:''; }
+.op-grid .retain-entry:disabled { opacity:1; cursor:default; }
+.op-grid .retain-entry:enabled { cursor:text; border-color:#ffce63; color-scheme:light; }
 .op-grid .confirmed-retain { display:grid; place-items:center; font-size:1.3rem; }
 .op-grid .retain-entry:focus { border-color:#ffce63; }
 </style></head><body><main><div class="top"><div><h1>Additions avec échanges</h1><div class="subtitle">Vaisseau extraterrestre • blocs de numération en 3D</div></div><div class="info"><span id="progress">Addition 1 / 8</span><span id="score">Réussites : 0</span></div></div><div class="levels" role="group" aria-label="Niveau">
@@ -213,7 +213,13 @@ function drawOperation() {
         cell.className='carry';
         if(column===1) cell.id='carryHundreds';
         if(column===2) cell.id='carryTens';
-        if(direct && cell.id) cell.classList.add('carry-slot');
+        if(direct && cell.id) {
+          cell.classList.add('carry-slot');
+          const label=column===1?'Retenue des centaines':'Retenue des dizaines';
+          const input=createDirectInput(label,'digit-entry retain-entry');
+          input.disabled=true;
+          cell.append(input);
+        }
       }
       if(rowIndex===3 && column>0) {
         cell.className='result';
@@ -287,23 +293,29 @@ function openDirectField(focus) {
   }
   phase='direct';
   show('checkDirect');
+  const cell=$(step.id);
+  const input=step.retention ? cell.querySelector('input') : createDirectInput(step.label,'digit-entry');
+  if(step.retention) input.disabled=false;
+  else cell.replaceChildren(input);
+  $('checkDirect').textContent=step.retention?'Valider la retenue':'Valider le chiffre';
+  setNotice(step.retention
+    ? 'Écris 1 dans le disque blanc au-dessus de la colonne suivante.'
+    : 'Écris le '+step.label+' sous la barre.');
+  if(focus) input.focus();
+}
+function createDirectInput(label,className) {
   const input=document.createElement('input');
-  input.className=step.retention?'digit-entry retain-entry':'digit-entry';
+  input.className=className;
   input.inputMode='numeric';
   input.maxLength=1;
-  input.setAttribute('aria-label',step.label);
+  input.setAttribute('aria-label',label);
   input.addEventListener('input',()=>{input.value=input.value.replace(/[^0-9]/g,'').slice(0,1);});
   input.addEventListener('keydown',event=>{
     if(event.key!=='Enter') return;
     event.preventDefault();
     if(!event.repeat) checkDirect();
   });
-  $(step.id).replaceChildren(input);
-  $('checkDirect').textContent=step.retention?'Valider la retenue':'Valider le chiffre';
-  setNotice(step.retention
-    ? 'Écris la retenue dans le disque au-dessus de la colonne suivante.'
-    : 'Écris le '+step.label+' sous la barre.');
-  if(focus) input.focus();
+  return input;
 }
 function checkDirect() {
   if(!direct || locked || phase!=='direct') return;
