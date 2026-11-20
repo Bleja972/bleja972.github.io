@@ -163,7 +163,7 @@ input:disabled { opacity: .66; }
 </style></head><body><main><div class="top"><div><h1>Additions avec échanges</h1><div class="subtitle">Vaisseau extraterrestre • blocs de numération en 3D</div></div><div class="info"><span id="progress">Addition 1 / 8</span><span id="score">Réussites : 0</span></div></div><div class="levels" role="group" aria-label="Niveau">
 <button type="button" id="guidedLevel" aria-pressed="true">Niveau 1 · Avec calcul en ligne</button>
 <button type="button" id="directLevel" aria-pressed="false">Niveau 2 · Opération posée</button>
-</div><div class="panel"><div class="operation" id="operation"></div><div class="mat"><section class="place" data-col="h"><div class="heading">Centaines</div><div class="tokens" id="hundreds"></div></section><section class="place" data-col="t"><div class="heading">Dizaines</div><div class="tokens" id="tens"></div></section><section class="place" data-col="u"><div class="heading">Unités</div><div class="tokens" id="units"></div></section></div><div class="notice" id="notice" aria-live="polite"></div><div class="steps panel2" id="steps"><div class="step" id="stepUnits"><span class="stepLabel">Addition en ligne des unités :</span><span id="unitsExpr" class="expr"></span><input id="unitsSum" inputmode="numeric" maxlength="2" aria-label="Résultat des unités"><button id="checkUnits" class="good">Valider</button></div><div class="step hidden" id="stepTens"><span class="stepLabel">Addition en ligne des dizaines :</span><span id="tensExpr" class="expr"></span><input id="tensSum" inputmode="numeric" maxlength="2" aria-label="Résultat des dizaines"><button id="checkTens" class="good">Valider</button></div><div class="step hidden" id="stepHundreds"><span class="stepLabel">Addition en ligne des centaines :</span><span id="hundredsExpr" class="expr"></span><input id="hundredsSum" inputmode="numeric" maxlength="1" aria-label="Résultat des centaines"><button id="checkHundreds">Valider</button></div></div><div class="controls"><button id="exchange">✦ Échanger 10 unités → 1 dizaine</button><button id="exchangeTens" class="hidden">✦ Échanger 10 dizaines → 1 centaine</button><button id="checkDirect" class="good hidden">Valider le chiffre</button><button id="restart" class="alt">↻ Nouvelle partie</button></div><div class="controls hidden" id="nextControls"><button id="next">Addition suivante →</button></div><div id="end" class="summary hidden"></div></div></main><script>
+</div><div class="panel"><div class="operation" id="operation"></div><div class="mat"><section class="place" data-col="h"><div class="heading">Centaines</div><div class="tokens" id="hundreds"></div></section><section class="place" data-col="t"><div class="heading">Dizaines</div><div class="tokens" id="tens"></div></section><section class="place" data-col="u"><div class="heading">Unités</div><div class="tokens" id="units"></div></section></div><div class="notice" id="notice" aria-live="polite" tabindex="-1"></div><div class="steps panel2" id="steps"><div class="step" id="stepUnits"><span class="stepLabel">Addition en ligne des unités :</span><span id="unitsExpr" class="expr"></span><input id="unitsSum" inputmode="numeric" maxlength="2" aria-label="Résultat des unités"><button id="checkUnits" class="good">Valider</button></div><div class="step hidden" id="stepTens"><span class="stepLabel">Addition en ligne des dizaines :</span><span id="tensExpr" class="expr"></span><input id="tensSum" inputmode="numeric" maxlength="2" aria-label="Résultat des dizaines"><button id="checkTens" class="good">Valider</button></div><div class="step hidden" id="stepHundreds"><span class="stepLabel">Addition en ligne des centaines :</span><span id="hundredsExpr" class="expr"></span><input id="hundredsSum" inputmode="numeric" maxlength="1" aria-label="Résultat des centaines"><button id="checkHundreds">Valider</button></div></div><div class="controls"><button id="exchange">✦ Échanger 10 unités → 1 dizaine</button><button id="exchangeTens" class="hidden">✦ Échanger 10 dizaines → 1 centaine</button><button id="checkDirect" class="good hidden">Valider le chiffre</button><button id="restart" class="alt">↻ Nouvelle partie</button></div><div class="controls hidden" id="nextControls"><button id="next">Addition suivante →</button></div><div id="end" class="summary hidden"></div></div></main><script>
 const $=id=>document.getElementById(id);const pause=ms=>new Promise(r=>setTimeout(r,ms));let games=[],pos=0,success=0,phase='unitsInput',locked=false,current={};
 let direct=false, directSteps=[], stepIndex=0;
 function token(n,which='first',extra=''){const e=document.createElement('span');e.className=`token ${n===100?'h':n===10?'t':'u'} ${which} ${extra}`;e.setAttribute('role','img');e.setAttribute('aria-label',n===100?'Plaque de 100':n===10?'Barre de 10':'Cube unité');return e}
@@ -294,7 +294,9 @@ function openDirectField(focus) {
   input.setAttribute('aria-label',step.label);
   input.addEventListener('input',()=>{input.value=input.value.replace(/[^0-9]/g,'').slice(0,1);});
   input.addEventListener('keydown',event=>{
-    if(event.key==='Enter') checkDirect();
+    if(event.key!=='Enter') return;
+    event.preventDefault();
+    if(!event.repeat) checkDirect();
   });
   $(step.id).replaceChildren(input);
   $('checkDirect').textContent=step.retention?'Valider la retenue':'Valider le chiffre';
@@ -341,7 +343,7 @@ function advanceDirect() {
   }
   show('checkDirect',false);
   completeAddition();
-  $('next').focus();
+  $('notice').focus({preventScroll:true});
 }
 function checkUnits(){if(locked||phase!=='unitsInput')return;const v=$('unitsSum').value.trim();if(!/^\d{1,2}$/.test(v)){setNotice('Complète le résultat des unités.');return}if(Number(v)!==current.unitsTotal){setNotice('Ce n’est pas le bon résultat pour les unités.','error');return}$('unitsSum').disabled=true;$('checkUnits').disabled=true;if(current.unitsCarry){phase='unitsExchange';show('exchange',true);setNotice(`Bravo ! ${current.au} + ${current.bu} = ${current.unitsTotal}. Maintenant, échange 10 unités contre 1 dizaine.`);}else{phase='tensInput';show('stepTens',true);revealDigit('Units',current.unitsTotal % 10);setNotice(`Bravo ! ${current.au} + ${current.bu} = ${current.unitsTotal}. Passe aux dizaines.`);}}
 async function exchangeUnits() {
@@ -432,7 +434,11 @@ $('checkDirect').addEventListener('click',checkDirect);
 function restart(){games=direct?generateDirect():generate();pos=0;success=0;render()}
 $('exchange').addEventListener('click',()=>direct?exchangeDirect('exchange'):exchangeUnits());$('exchangeTens').addEventListener('click',()=>direct?exchangeDirect('exchangeTens'):exchangeTens());$('checkUnits').addEventListener('click',checkUnits);$('checkTens').addEventListener('click',checkTens);$('checkHundreds').addEventListener('click',checkHundreds);$('next').addEventListener('click',nextAddition);$('restart').addEventListener('click',restart);for(let id of ['unitsSum','tensSum','hundredsSum'])$(id).addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,e.target.maxLength||2)});
 for(const [input,action] of [['unitsSum',checkUnits],['tensSum',checkTens],['hundredsSum',checkHundreds]]) {
-  $(input).addEventListener('keydown',event=>{ if(event.key==='Enter') action(); });
+  $(input).addEventListener('keydown',event=>{
+    if(event.key!=='Enter') return;
+    event.preventDefault();
+    if(!event.repeat) action();
+  });
 }
 restart();</script></body></html>
 
