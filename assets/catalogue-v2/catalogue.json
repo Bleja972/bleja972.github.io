@@ -2397,6 +2397,31 @@
     "playClicks": 5
   },
   {
+    "title": "Additions avec échanges — Blocs 3D",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-106",
+    "description": "Échange 10 cubes rouges contre une barre jaune, puis 10 barres contre une plaque bleue pour calculer une addition posée.",
+    "weekly": false,
+    "category": "calculs",
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "id": "jeu-106",
+    "new": true,
+    "skill": "additions-posees",
+    "group": "pose",
+    "slug": "additions-avec-echanges-blocs-3d",
+    "path": "/fiches/additions-avec-echanges-blocs-3d/",
+    "objective": "Aligner les colonnes et calculer une addition posée.",
+    "skillName": "Additions posées",
+    "groupName": "Calcul posé",
+    "levels": [
+      "CE1"
+    ],
+    "short": "Échange 10 cubes rouges contre une barre jaune, puis 10 barres contre une plaque bleue pour calculer une addition posée.",
+    "thumb": "/assets/catalogue-v2/captures/jeu-106.webp",
+    "imageAlt": "Plaque bleue de centaine, barres jaunes de dizaines et cubes rouges dans le cockpit.",
+    "playClicks": 0
+  },
+  {
     "title": "Additions avec passage par 10",
     "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-53",
     "description": "Utiliser des résultats connus pour calculer une addition mentalement.",
