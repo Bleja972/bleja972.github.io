@@ -170,9 +170,9 @@ function token(n,which='first',extra=''){const e=document.createElement('span');
 function generateDirect() {
   const problems=[];
   const seen=new Set();
-  // Deux additions de chaque type, en commençant par les échanges d’unités.
-  for(const [units,tens] of [[1,0],[0,0],[0,1],[1,1]]) {
-    for(let count=0; count<2;) {
+  // Quatre additions à une retenue, puis quatre à deux retenues.
+  for(const [units,tens,total] of [[1,0,2],[0,1,2],[1,1,4]]) {
+    for(let count=0; count<total;) {
       const a=110+Math.floor(Math.random()*170);
       const b=100+Math.floor(Math.random()*180);
       const key=a+'-'+b;
