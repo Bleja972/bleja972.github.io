@@ -257,23 +257,38 @@ function render(){current=buildCurrent(games[pos].a,games[pos].b);phase='unitsIn
 function startDirect() {
   phase='direct';
   const {unitsTotal,unitsCarry,tensBase,tensCarry,hundredsTotal}=current;
-  directSteps=[{id:'resultUnits',value:unitsTotal%10,label:'chiffre des unités'}];
-  if(unitsCarry) {
-    directSteps.push({id:'carryTens',value:1,label:'retenue des dizaines',exchange:['units','tens',10,'carryTens']});
-  }
+  directSteps=[];
+  if(unitsCarry) directSteps.push({button:'exchange',exchange:['units','tens',10,'carryTens']});
+  directSteps.push({id:'resultUnits',value:unitsTotal%10,label:'chiffre des unités'});
+  if(unitsCarry) directSteps.push({id:'carryTens',value:1,label:'retenue des dizaines',retention:true});
+  if(tensCarry) directSteps.push({button:'exchangeTens',exchange:['tens','hundreds',100,'carryHundreds']});
   directSteps.push({id:'resultTens',value:tensBase%10,label:'chiffre des dizaines'});
-  if(tensCarry) {
-    directSteps.push({id:'carryHundreds',value:1,label:'retenue des centaines',exchange:['tens','hundreds',100,'carryHundreds']});
-  }
+  if(tensCarry) directSteps.push({id:'carryHundreds',value:1,label:'retenue des centaines',retention:true});
   directSteps.push({id:'resultHundreds',value:hundredsTotal,label:'chiffre des centaines'});
   stepIndex=0;
-  show('checkDirect');
+  for(const id of ['exchange','exchangeTens']) {
+    show(id);
+    $(id).disabled=true;
+  }
   openDirectField(false);
 }
 function openDirectField(focus) {
   const step=directSteps[stepIndex];
+  if(step.exchange) {
+    phase='directExchange';
+    const button=$(step.button);
+    button.disabled=false;
+    show('checkDirect',false);
+    setNotice(step.button==='exchange'
+      ? 'Échange 10 unités contre 1 dizaine avant d’écrire le chiffre des unités.'
+      : 'Échange 10 dizaines contre 1 centaine avant d’écrire le chiffre des dizaines.');
+    if(focus) button.focus();
+    return;
+  }
+  phase='direct';
+  show('checkDirect');
   const input=document.createElement('input');
-  input.className=step.exchange?'digit-entry retain-entry':'digit-entry';
+  input.className=step.retention?'digit-entry retain-entry':'digit-entry';
   input.inputMode='numeric';
   input.maxLength=1;
   input.setAttribute('aria-label',step.label);
@@ -282,34 +297,43 @@ function openDirectField(focus) {
     if(event.key==='Enter') checkDirect();
   });
   $(step.id).replaceChildren(input);
-  $('checkDirect').textContent=step.exchange?'Valider la retenue':'Valider le chiffre';
-  setNotice(step.exchange
+  $('checkDirect').textContent=step.retention?'Valider la retenue':'Valider le chiffre';
+  setNotice(step.retention
     ? 'Écris la retenue dans le disque au-dessus de la colonne suivante.'
     : 'Écris le '+step.label+' sous la barre.');
   if(focus) input.focus();
 }
-async function checkDirect() {
+function checkDirect() {
   if(!direct || locked || phase!=='direct') return;
   const step=directSteps[stepIndex];
   const cell=$(step.id);
   const input=cell.querySelector('input');
   if(input.value!==String(step.value)) {
-    setNotice(step.exchange?'Vérifie la retenue à écrire dans le disque.':'Vérifie le '+step.label+'.','error');
+    setNotice(step.retention?'Vérifie la retenue à écrire dans le disque.':'Vérifie le '+step.label+'.','error');
     input.focus();
     input.select();
     return;
   }
-  if(step.exchange) {
+  if(step.retention) {
     const disk=document.createElement('span');
     disk.className='confirmed-retain';
     disk.textContent=input.value;
     cell.replaceChildren(disk);
-    lockGame(true);
-    await animateExchange(...step.exchange);
-    lockGame(false);
   } else {
     revealDigit(step.id.slice('result'.length),step.value);
   }
+  advanceDirect();
+}
+async function exchangeDirect(buttonId) {
+  if(locked || phase!=='directExchange' || $(buttonId).disabled) return;
+  const step=directSteps[stepIndex];
+  $(buttonId).disabled=true;
+  lockGame(true);
+  await animateExchange(...step.exchange);
+  lockGame(false);
+  advanceDirect();
+}
+function advanceDirect() {
   stepIndex++;
   if(stepIndex<directSteps.length) {
     openDirectField(true);
@@ -406,7 +430,7 @@ $('guidedLevel').addEventListener('click',()=>selectLevel(false));
 $('directLevel').addEventListener('click',()=>selectLevel(true));
 $('checkDirect').addEventListener('click',checkDirect);
 function restart(){games=direct?generateDirect():generate();pos=0;success=0;render()}
-$('exchange').addEventListener('click',exchangeUnits);$('exchangeTens').addEventListener('click',exchangeTens);$('checkUnits').addEventListener('click',checkUnits);$('checkTens').addEventListener('click',checkTens);$('checkHundreds').addEventListener('click',checkHundreds);$('next').addEventListener('click',nextAddition);$('restart').addEventListener('click',restart);for(let id of ['unitsSum','tensSum','hundredsSum'])$(id).addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,e.target.maxLength||2)});
+$('exchange').addEventListener('click',()=>direct?exchangeDirect('exchange'):exchangeUnits());$('exchangeTens').addEventListener('click',()=>direct?exchangeDirect('exchangeTens'):exchangeTens());$('checkUnits').addEventListener('click',checkUnits);$('checkTens').addEventListener('click',checkTens);$('checkHundreds').addEventListener('click',checkHundreds);$('next').addEventListener('click',nextAddition);$('restart').addEventListener('click',restart);for(let id of ['unitsSum','tensSum','hundredsSum'])$(id).addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,e.target.maxLength||2)});
 for(const [input,action] of [['unitsSum',checkUnits],['tensSum',checkTens],['hundredsSum',checkHundreds]]) {
   $(input).addEventListener('keydown',event=>{ if(event.key==='Enter') action(); });
 }
