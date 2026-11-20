@@ -172,6 +172,15 @@ $('#show-more').addEventListener('click',()=>{const prior=shown;shown+=12;render
 document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();controls.q.focus();$('#catalogue').scrollIntoView({block:'start'});}});
 addEventListener('popstate',()=>{state=readState();shown=12;render();});
 function updateSidebarCounts(){
+ const heroCounts={
+  all:catalog.length,
+  ce2:catalog.filter(game=>game.levels.includes('CE2')).length,
+  'ce2-only':catalog.filter(game=>game.levels.length===1&&game.levels[0]==='CE2').length
+ };
+ $$('[data-catalog-count]').forEach(label=>{
+  const count=heroCounts[label.dataset.catalogCount];
+  label.textContent=count+' jeu'+(count===1?'':'x');
+ });
  const totals={},subjects={};catalog.forEach(game=>{totals[game.group]=(totals[game.group]||0)+1;subjects[game.subject]=(subjects[game.subject]||0)+1;});
  for(const [path,subject] of [['mathematiques','Mathématiques'],['francais','Français']]){
   const badge=$('.side-subject[href="/matieres/'+path+'/"] .count');if(badge)badge.textContent=String(subjects[subject]||0);
@@ -184,7 +193,7 @@ function updateSidebarCounts(){
   const description=label+' : '+count+' jeu'+(count===1?'':'x');link.setAttribute('aria-label',description);link.title=description;
  });
 }
-fetch('/assets/catalogue-v2/catalogue.json?v=soustractions-vaisseau-20261119').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
+fetch('/assets/catalogue-v2/catalogue.json?v=compteurs-catalogue').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;ensureCatalogCards();updateSidebarCounts();state=readState();render();}).catch(()=>{
  toast('Les filtres sont indisponibles. Tous les liens vers les jeux restent accessibles.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();
