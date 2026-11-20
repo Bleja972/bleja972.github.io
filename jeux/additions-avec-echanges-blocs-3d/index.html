@@ -149,14 +149,17 @@ input:disabled { opacity: .66; }
 .op-grid .digit-entry {
   width:42px; height:42px; padding:0; font-size:1.35rem;
 }
-.op-grid .retain-entry {
-  width:36px; height:36px; border-radius:50%; border:2px solid #ffdd76;
-  box-shadow:0 0 9px #ffcf6988;
+.op-grid.direct .carry-slot { display:grid; place-items:center; }
+.op-grid .retain-entry,
+.op-grid .confirmed-retain,
+.op-grid .carry-slot:empty::before {
+  box-sizing:border-box; width:36px; height:36px; border-radius:50%;
+  background:#fff; color:#0d233a; border:2px solid #fff;
+  text-shadow:none; box-shadow:0 0 9px #ffffff70;
 }
-.op-grid .confirmed-retain {
-  display:inline-grid; place-items:center; width:36px; height:36px;
-  border:2px solid #ffdd76; border-radius:50%; font-size:1.3rem;
-}
+.op-grid .carry-slot:empty::before { content:''; }
+.op-grid .confirmed-retain { display:grid; place-items:center; font-size:1.3rem; }
+.op-grid .retain-entry:focus { border-color:#ffce63; }
 </style></head><body><main><div class="top"><div><h1>Additions avec échanges</h1><div class="subtitle">Vaisseau extraterrestre • blocs de numération en 3D</div></div><div class="info"><span id="progress">Addition 1 / 8</span><span id="score">Réussites : 0</span></div></div><div class="levels" role="group" aria-label="Niveau">
 <button type="button" id="guidedLevel" aria-pressed="true">Niveau 1 · Avec calcul en ligne</button>
 <button type="button" id="directLevel" aria-pressed="false">Niveau 2 · Opération posée</button>
@@ -210,6 +213,7 @@ function drawOperation() {
         cell.className='carry';
         if(column===1) cell.id='carryHundreds';
         if(column===2) cell.id='carryTens';
+        if(direct && cell.id) cell.classList.add('carry-slot');
       }
       if(rowIndex===3 && column>0) {
         cell.className='result';
