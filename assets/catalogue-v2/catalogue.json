@@ -2422,6 +2422,31 @@
     "playClicks": 0
   },
   {
+    "title": "Additions avec échanges — Blocs 3D (CP)",
+    "url": "https://bleja972.github.io/jeux/additions-avec-echanges-blocs-3d-cp/",
+    "description": "Échange 10 cubes rouges contre une barre jaune pour poser une addition dont le résultat est inférieur à 100.",
+    "weekly": false,
+    "category": "calculs",
+    "level": "CP",
+    "subject": "Mathématiques",
+    "id": "jeu-107",
+    "new": true,
+    "skill": "additions-posees",
+    "group": "pose",
+    "slug": "additions-avec-echanges-blocs-3d-cp",
+    "path": "/jeux/additions-avec-echanges-blocs-3d-cp/",
+    "objective": "Aligner les colonnes et calculer une addition posée.",
+    "skillName": "Additions posées",
+    "groupName": "Calcul posé",
+    "levels": [
+      "CP"
+    ],
+    "short": "Échange 10 cubes rouges contre une barre jaune pour poser une addition dont le résultat est inférieur à 100.",
+    "thumb": "/assets/catalogue-v2/captures/jeu-107.webp",
+    "imageAlt": "Barres jaunes de dizaines et cubes rouges d’unités dans le cockpit.",
+    "playClicks": 0
+  },
+  {
     "title": "Additions avec passage par 10",
     "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-53",
     "description": "Utiliser des résultats connus pour calculer une addition mentalement.",
