@@ -2422,6 +2422,31 @@
     "playClicks": 0
   },
   {
+    "title": "Additions avec échanges — Blocs 3D (CE2)",
+    "url": "https://bleja972.github.io/jeux/additions-avec-echanges-blocs-3d-ce2/",
+    "description": "Pose des additions à quatre chiffres et échange 10 centaines contre un cube rouge de 1 000.",
+    "weekly": false,
+    "category": "calculs",
+    "level": "CE2",
+    "subject": "Mathématiques",
+    "id": "jeu-108",
+    "new": true,
+    "skill": "additions-posees",
+    "group": "pose",
+    "slug": "additions-avec-echanges-blocs-3d-ce2",
+    "path": "/jeux/additions-avec-echanges-blocs-3d-ce2/",
+    "objective": "Aligner les colonnes et calculer une addition posée.",
+    "skillName": "Additions posées",
+    "groupName": "Calcul posé",
+    "levels": [
+      "CE2"
+    ],
+    "short": "Pose des additions à quatre chiffres et échange 10 centaines contre un cube rouge de 1 000.",
+    "thumb": "/assets/catalogue-v2/captures/jeu-108.webp",
+    "imageAlt": "Cube rouge de 1 000 et blocs de numération dans le cockpit.",
+    "playClicks": 0
+  },
+  {
     "title": "Additions avec échanges — Blocs 3D (CP)",
     "url": "https://bleja972.github.io/jeux/additions-avec-echanges-blocs-3d-cp/",
     "description": "Échange 10 cubes rouges contre une barre jaune pour poser une addition dont le résultat est inférieur à 100.",
