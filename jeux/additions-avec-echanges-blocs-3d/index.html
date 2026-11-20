@@ -170,8 +170,8 @@ function token(n,which='first',extra=''){const e=document.createElement('span');
 function generateDirect() {
   const problems=[];
   const seen=new Set();
-  // Deux additions de chaque type : aucun échange, unités, dizaines, puis deux échanges.
-  for(const [units,tens] of [[0,0],[1,0],[0,1],[1,1]]) {
+  // Deux additions de chaque type, en commençant par les échanges d’unités.
+  for(const [units,tens] of [[1,0],[0,0],[0,1],[1,1]]) {
     for(let count=0; count<2;) {
       const a=110+Math.floor(Math.random()*170);
       const b=100+Math.floor(Math.random()*180);
@@ -259,11 +259,11 @@ function startDirect() {
   const {unitsTotal,unitsCarry,tensBase,tensCarry,hundredsTotal}=current;
   directSteps=[];
   if(unitsCarry) directSteps.push({button:'exchange',exchange:['units','tens',10,'carryTens']});
-  directSteps.push({id:'resultUnits',value:unitsTotal%10,label:'chiffre des unités'});
   if(unitsCarry) directSteps.push({id:'carryTens',value:1,label:'retenue des dizaines',retention:true});
+  directSteps.push({id:'resultUnits',value:unitsTotal%10,label:'chiffre des unités'});
   if(tensCarry) directSteps.push({button:'exchangeTens',exchange:['tens','hundreds',100,'carryHundreds']});
-  directSteps.push({id:'resultTens',value:tensBase%10,label:'chiffre des dizaines'});
   if(tensCarry) directSteps.push({id:'carryHundreds',value:1,label:'retenue des centaines',retention:true});
+  directSteps.push({id:'resultTens',value:tensBase%10,label:'chiffre des dizaines'});
   directSteps.push({id:'resultHundreds',value:hundredsTotal,label:'chiffre des centaines'});
   stepIndex=0;
   for(const id of ['exchange','exchangeTens']) {
