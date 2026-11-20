@@ -263,14 +263,17 @@ function render(){current=buildCurrent(games[pos].a,games[pos].b);phase='unitsIn
 function startDirect() {
   phase='direct';
   const {unitsTotal,unitsCarry,tensBase,tensCarry,hundredsTotal}=current;
-  directSteps=[];
+  directSteps=[{line:'Units',value:unitsTotal,label:'unités'}];
   if(unitsCarry) directSteps.push({button:'exchange',exchange:['units','tens',10,'carryTens']});
   if(unitsCarry) directSteps.push({id:'carryTens',value:1,label:'retenue des dizaines',retention:true});
   directSteps.push({id:'resultUnits',value:unitsTotal%10,label:'chiffre des unités'});
+  directSteps.push({line:'Tens',value:tensBase,label:'dizaines'});
   if(tensCarry) directSteps.push({button:'exchangeTens',exchange:['tens','hundreds',100,'carryHundreds']});
   if(tensCarry) directSteps.push({id:'carryHundreds',value:1,label:'retenue des centaines',retention:true});
   directSteps.push({id:'resultTens',value:tensBase%10,label:'chiffre des dizaines'});
+  directSteps.push({line:'Hundreds',value:hundredsTotal,label:'centaines'});
   directSteps.push({id:'resultHundreds',value:hundredsTotal,label:'chiffre des centaines'});
+  prepareHundredsExpression();
   stepIndex=0;
   for(const id of ['exchange','exchangeTens']) {
     show(id);
@@ -280,6 +283,15 @@ function startDirect() {
 }
 function openDirectField(focus) {
   const step=directSteps[stepIndex];
+  show('steps',Boolean(step.line));
+  for(const column of ['Units','Tens','Hundreds']) show('step'+column,step.line===column);
+  if(step.line) {
+    phase='directLine';
+    show('checkDirect',false);
+    setNotice('Complète d’abord le calcul en ligne des '+step.label+'.');
+    if(focus) $(step.line.toLowerCase()+'Sum').focus();
+    return;
+  }
   if(step.exchange) {
     phase='directExchange';
     const button=$(step.button);
@@ -316,6 +328,18 @@ function createDirectInput(label,className) {
     if(!event.repeat) checkDirect();
   });
   return input;
+}
+function checkDirectLine(column) {
+  const step=directSteps[stepIndex];
+  if(locked || phase!=='directLine' || step.line!==column) return;
+  const field=$(column.toLowerCase()+'Sum');
+  const answer=field.value.trim();
+  if(!/^\d{1,2}$/.test(answer) || Number(answer)!==step.value) {
+    setNotice('Vérifie le calcul en ligne des '+step.label+'.','error');
+    field.focus();
+    return;
+  }
+  advanceDirect();
 }
 function checkDirect() {
   if(!direct || locked || phase!=='direct') return;
@@ -357,7 +381,9 @@ function advanceDirect() {
   completeAddition();
   $('notice').focus({preventScroll:true});
 }
-function checkUnits(){if(locked||phase!=='unitsInput')return;const v=$('unitsSum').value.trim();if(!/^\d{1,2}$/.test(v)){setNotice('Complète le résultat des unités.');return}if(Number(v)!==current.unitsTotal){setNotice('Ce n’est pas le bon résultat pour les unités.','error');return}$('unitsSum').disabled=true;$('checkUnits').disabled=true;if(current.unitsCarry){phase='unitsExchange';show('exchange',true);setNotice(`Bravo ! ${current.au} + ${current.bu} = ${current.unitsTotal}. Maintenant, échange 10 unités contre 1 dizaine.`);}else{phase='tensInput';show('stepTens',true);revealDigit('Units',current.unitsTotal % 10);setNotice(`Bravo ! ${current.au} + ${current.bu} = ${current.unitsTotal}. Passe aux dizaines.`);}}
+function checkUnits() {
+  if(direct) return checkDirectLine('Units');
+  if(locked||phase!=='unitsInput')return;const v=$('unitsSum').value.trim();if(!/^\d{1,2}$/.test(v)){setNotice('Complète le résultat des unités.');return}if(Number(v)!==current.unitsTotal){setNotice('Ce n’est pas le bon résultat pour les unités.','error');return}$('unitsSum').disabled=true;$('checkUnits').disabled=true;if(current.unitsCarry){phase='unitsExchange';show('exchange',true);setNotice(`Bravo ! ${current.au} + ${current.bu} = ${current.unitsTotal}. Maintenant, échange 10 unités contre 1 dizaine.`);}else{phase='tensInput';show('stepTens',true);revealDigit('Units',current.unitsTotal % 10);setNotice(`Bravo ! ${current.au} + ${current.bu} = ${current.unitsTotal}. Passe aux dizaines.`);}}
 async function exchangeUnits() {
   if(locked||phase!=='unitsExchange') return;
   lockGame(true);
@@ -371,7 +397,9 @@ async function exchangeUnits() {
   show('stepTens');
   setNotice('10 unités deviennent 1 dizaine. Ajoute la retenue dans le calcul des dizaines.');
 }
-function checkTens(){if(locked||phase!=='tensInput')return;const v=$('tensSum').value.trim();if(!/^\d{1,2}$/.test(v)){setNotice('Complète le résultat des dizaines.');return}if(Number(v)!==current.tensBase){setNotice('Ce n’est pas le bon résultat pour les dizaines. N’oublie pas la retenue.','error');return}$('tensSum').disabled=true;$('checkTens').disabled=true;if(current.tensCarry){phase='tensExchange';show('exchangeTens',true);setNotice(`Bravo ! ${$('tensExpr').textContent} ${current.tensBase}. Maintenant, échange 10 dizaines contre 1 centaine.`);}else{revealDigit('Tens',current.tensBase % 10); showHundreds();}}
+function checkTens() {
+  if(direct) return checkDirectLine('Tens');
+  if(locked||phase!=='tensInput')return;const v=$('tensSum').value.trim();if(!/^\d{1,2}$/.test(v)){setNotice('Complète le résultat des dizaines.');return}if(Number(v)!==current.tensBase){setNotice('Ce n’est pas le bon résultat pour les dizaines. N’oublie pas la retenue.','error');return}$('tensSum').disabled=true;$('checkTens').disabled=true;if(current.tensCarry){phase='tensExchange';show('exchangeTens',true);setNotice(`Bravo ! ${$('tensExpr').textContent} ${current.tensBase}. Maintenant, échange 10 dizaines contre 1 centaine.`);}else{revealDigit('Tens',current.tensBase % 10); showHundreds();}}
 async function exchangeTens() {
   if(locked||phase!=='tensExchange') return;
   lockGame(true);
@@ -392,15 +420,20 @@ function revealDigit(column,value) {
 }
 function showHundreds(message='Le chiffre des dizaines est inscrit. Calcule maintenant les centaines.') {
   phase='hundredsInput';
+  prepareHundredsExpression();
+  show('stepHundreds');
+  setNotice(message);
+}
+function prepareHundredsExpression() {
   const {ah,bh,tensCarry}=current;
   const parts=[[ah,'first h'],[' + ',''],[bh,'second h']];
   if(tensCarry) parts.push([' + ',''],[1,'carry']);
   parts.push([' =','']);
   coloredExpression('hundredsExpr',parts);
-  show('stepHundreds');
-  setNotice(message);
 }
 function checkHundreds() {
+  if(direct) return checkDirectLine('Hundreds');
+  
   if(locked||phase!=='hundredsInput') return;
   const field=$('hundredsSum');
   if(!/^\d$/.test(field.value)) {
