@@ -281,6 +281,31 @@
     "playClicks": 0
   },
   {
+    "id": "ours-de-la-banquise-neon",
+    "slug": "ours-de-la-banquise-neon",
+    "title": "L’ours de la banquise — Mission Néon",
+    "url": "/jeux/ours-de-la-banquise-neon/",
+    "path": "/jeux/ours-de-la-banquise-neon/",
+    "description": "Nouvelle version du jeu de codage CE1 : 20 défis, ours polaire et poissons, cases interdites marquées par de grandes croix rouges lumineuses, flèches néon multicolores et boutons futuristes 3D. Décor polaire, animation du programme et bruitages de réussite ou d’erreur.",
+    "short": "Programme le trajet de l’ours sur la glace en évitant les croix rouges lumineuses.",
+    "objective": "Programmer une suite de déplacements et d’actions sur une grille.",
+    "skill": "programmer-deplacements",
+    "skillName": "Programmer des déplacements",
+    "category": "codage",
+    "group": "codage",
+    "groupName": "Codage",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/ours-de-la-banquise-neon.svg",
+    "imageAlt": "Aperçu illustré de Mission Néon : grille polaire, cases interdites avec croix rouges brillantes et flèches 3D colorées.",
+    "playClicks": 0
+  },
+  {
     "id": "chemin-du-kangourou",
     "slug": "chemin-du-kangourou",
     "title": "Le chemin du kangourou",
