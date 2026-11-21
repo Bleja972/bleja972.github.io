@@ -338,6 +338,31 @@ body>nav{background:#000!important;color:#f1f7ff!important;border-bottom:1px sol
  #ours-banquise .program .instruction{width:58px!important;min-width:58px!important;height:58px!important;min-height:58px!important;flex-basis:58px!important;font-size:42px!important;border-radius:12px!important}
  #ours-banquise .program .instruction.collect{font-size:27px!important}
 }
+
+/* BRAVO net et parfaitement lisible : couleurs franches, aucun halo néon. */
+#ours-banquise .message.good .bravo-rainbow{
+ font-family:Arial,'Arial Black',system-ui,sans-serif!important;
+ font-weight:900!important;
+ font-size:clamp(36px,5vw,58px)!important;
+ letter-spacing:.045em!important;
+ line-height:1.2!important;
+ text-shadow:none!important;
+ filter:none!important;
+ -webkit-text-stroke:0!important;
+ paint-order:normal!important;
+ animation:bravo-net 1.8s steps(1,end) infinite!important;
+}
+@keyframes bravo-net{
+ 0%,100%{color:#ffe34c}
+ 20%{color:#ff6b91}
+ 40%{color:#67dfff}
+ 60%{color:#78e6a8}
+ 80%{color:#d5a1ff}
+}
+#ours-banquise .message.good .bravo-detail{text-shadow:none!important;filter:none!important;color:#f6f6f6!important}
+@media(prefers-reduced-motion:reduce){
+ #ours-banquise .message.good .bravo-rainbow{animation:none!important;color:#ffe34c!important;text-shadow:none!important}
+}
 </style>
 <div class="header"><div class="hero-brand"><img class="title-robot" data-title-robot alt="Petit robot futuriste du jeu"><h1>MISSION NÉON <span>LE ROBOT DES CRISTAUX</span></h1></div><p class="intro">Programme ton robot, évite les croix rouges et récupère tous les cristaux !</p></div>
 <div class="shell"><section class="panel"><div class="head"><strong>⚡ Grille noire · cases interdites <span style="color:#ff537f;text-shadow:0 0 9px #ff2448,0 0 20px #ff2448">✕</span></strong><label>Défi <select data-level aria-label="Choisir le défi"></select></label></div><div class="grid" data-grid role="grid" aria-label="Grille de la banquise"></div><p class="small" data-fish></p></section><section class="panel"><div class="head"><strong>⚡ Console de pilotage</strong><span class="small" data-count>0 / 24</span></div><div class="mode" role="group" aria-label="Choisir les règles"><button type="button" data-mode="auto" aria-pressed="true">Collecte automatique</button></div><div class="program" data-program aria-label="Instructions du programme"></div><div class="controls" aria-label="Commandes et lancement du programme"><button type="button" class="btn arrow up" data-add="U" aria-label="Haut">↑</button><button type="button" class="btn arrow left" data-add="L" aria-label="Gauche">←</button><button type="button" class="btn run" data-run aria-label="Exécuter le programme" title="Lancer le programme">GO</button><button type="button" class="btn arrow" data-add="D" aria-label="Bas">↓</button><button type="button" class="btn arrow" data-add="R" aria-label="Droite">→</button><button type="button" class="btn eat" data-add="E" hidden>💎 Collecter</button></div><div class="buttons"><button type="button" class="btn" data-undo>Effacer la dernière</button><button type="button" class="btn" data-clear>Tout effacer</button></div><div class="buttons"><button type="button" class="btn next" data-next>Défi suivant →</button></div><p class="message" role="status" aria-live="polite" data-msg>Guide ton robot vers les cristaux à l’aide des flèches.</p><p class="small">Chaque flèche déplace le robot d’une case. Maximum : 24 instructions.</p></section></div>
