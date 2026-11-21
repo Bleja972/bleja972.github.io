@@ -50,6 +50,31 @@
     "playClicks": 0
   },
   {
+    "id": "mission-calcul-cm1-livret-4",
+    "slug": "mission-calcul-cm1-livret-4",
+    "title": "Mission Calcul CM1 — Livret 4",
+    "url": "/jeux/mission-calcul-cm1-livret-4/",
+    "path": "/jeux/mission-calcul-cm1-livret-4/",
+    "description": "Calcul mental CM1 : livret 4, séquences 22 à 28, 198 calculs. Ajouter et soustraire 8, 18, 28, 38 ; tables de multiplication dans les deux sens ; multiplication par 5 ; décompositions de 60 ; stratégies de calcul. Chronomètres, corrections, sons et effets néon 3D.",
+    "short": "21 exercices · 198 calculs · Chronomètres et correction immédiate.",
+    "objective": "Automatiser les tables, les décompositions multiplicatives et des stratégies efficaces de calcul mental.",
+    "skill": "calcul-mental-cm1",
+    "skillName": "Calcul mental CM1 — Livret 4",
+    "category": "calcul-mental",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "level": "CM1",
+    "levels": [
+      "CM1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-4.svg",
+    "imageAlt": "Vignette illustrée du jeu Mission Calcul CM1 Livret 4 en cours, avec les missions 22 à 28 et les calculs 75 moins 8, 26 plus 38 et 91 moins 38.",
+    "playClicks": 0
+  },
+  {
     "id": "mission-calcul-cm1-livret-3",
     "slug": "mission-calcul-cm1-livret-3",
     "title": "Mission Calcul CM1 — Livret 3",
