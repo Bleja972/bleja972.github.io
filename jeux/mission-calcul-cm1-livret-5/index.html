@@ -78,6 +78,12 @@ body::after{background:repeating-linear-gradient(transparent 0px,transparent 5px
 .fraction .fraction-input{width:54px;height:39px;min-width:0;font-size:20px;padding:2px 3px}
 .problem:has(.fraction){min-height:100px}
 @media(max-width:680px){.fraction-top,.fraction-bottom{min-height:23px;padding:2px 3px}.fraction .fraction-input{width:48px;height:34px;font-size:18px}.problem:has(.fraction){min-height:96px}}
+
+.fraction-answer{min-width:58px}
+.fraction-answer .fraction-bar{height:3px;background:#fff;box-shadow:0 0 8px #77edff88}
+.fraction-answer .fraction-top,.fraction-answer .fraction-bottom{min-height:38px}
+.fraction-answer input{border-color:#66ecff;box-shadow:0 0 10px #66ecff30}
+@media(max-width:680px){.fraction-answer{min-width:52px}.fraction-answer .fraction-top,.fraction-answer .fraction-bottom{min-height:34px}}
 </style>
 </head><body>
 <canvas id="stars" aria-hidden="true"></canvas>
@@ -92,7 +98,7 @@ body::after{background:repeating-linear-gradient(transparent 0px,transparent 5px
 <script>const SOURCE_DATA={"29":{"title":"Fractions usuelles : quarts, demis et unité","subtitle":"Séquence 29 — Fractions usuelles : quarts, demis et unité","times":[0,120,60],"groups":[[{"text":"1/2 + 1/2 = _","answer":1},{"text":"1/4 + 1/4 = _","answer":"1/2"},{"text":"1/4 + _ = 1/2","answer":"1/4"},{"text":"1 = _/4","answer":4},{"text":"1/2 − 1/4 = _","answer":"1/4"},{"text":"1 = _/2","answer":2},{"text":"1 − 1/2 = _","answer":"1/2"},{"text":"1/2 = _/4","answer":2}],[{"text":"1/2 + _ = 1","answer":"1/2"},{"text":"1/2 + 1/2 = _","answer":1},{"text":"1/4 + 1/4 = _","answer":"1/2"},{"text":"1/4 + 1/4 + 1/4 + 1/4 = _","answer":1},{"text":"1/2 − 1/4 = _","answer":"1/4"},{"text":"1/2 = _/4","answer":2},{"text":"1 = _/4","answer":4},{"text":"1 − 1/2 = _","answer":"1/2"},{"text":"1/2 − 1/4 = _","answer":"1/4"},{"text":"1 = _/2","answer":2}],[{"text":"1/4 + 1/4 = _","answer":"1/2"},{"text":"1/2 = _/4","answer":2},{"text":"1/2 + 1/2 = _","answer":1},{"text":"1 = _/2","answer":2},{"text":"1 − 1/2 = _","answer":"1/2"},{"text":"1/4 + _ = 1/2","answer":"1/4"},{"text":"1/4 + 1/4 + 1/4 + 1/4 = _","answer":1},{"text":"1 = _/4","answer":4},{"text":"1/2 − 1/4 = _","answer":"1/4"},{"text":"1/2 + _ = 1","answer":"1/2"}]]},"30":{"title":"Fractions décimales : dixièmes, centièmes et unité","subtitle":"Séquence 30 — Fractions décimales : dixièmes, centièmes et unité","times":[0,120,60],"groups":[[{"text":"1 = _/10","answer":10},{"text":"1 = _/100","answer":100},{"text":"0,1 = 1/_","answer":10},{"text":"10/100 = _/10","answer":1},{"text":"1 = 100/_","answer":100},{"text":"0,01 = _/100","answer":1},{"text":"100/100 = _","answer":1},{"text":"1 = 10/_","answer":10}],[{"text":"1 = 10/_","answer":10},{"text":"1 = _/4","answer":4},{"text":"1/2 − 1/4 = _","answer":"1/4"},{"text":"1/4 + 1/4 = _","answer":"1/2"},{"text":"0,01 = 1/_","answer":100},{"text":"1 = _/100","answer":100},{"text":"0,1 = _/10","answer":1},{"text":"1 = _/10","answer":10},{"text":"1 − 1/2 = _","answer":"1/2"},{"text":"10/100 = _/10","answer":1}],[{"text":"1 − 1/2 = _","answer":"1/2"},{"text":"1 = _/10","answer":10},{"text":"10/100 = _/10","answer":1},{"text":"0,1 = 1/_","answer":10},{"text":"1/2 + 1/2 = _","answer":1},{"text":"1 = 10/_","answer":10},{"text":"1 = _/2","answer":2},{"text":"0,01 = 1/_","answer":100},{"text":"1 = _/4","answer":4},{"text":"10/100 = 1/_","answer":10}]]},"31":{"title":"Tables de multiplication dans les deux sens","subtitle":"Séquence 31 — Tables de multiplication dans les deux sens","times":[0,60,45],"groups":[[{"text":"7 × 5 = _","answer":35},{"text":"5 × _ = 35","answer":7},{"text":"8 × _ = 16","answer":2},{"text":"_ × 9 = 63","answer":7},{"text":"4 × 4 = _","answer":16},{"text":"5 × 9 = _","answer":45},{"text":"36 = _ × 6","answer":6},{"text":"3 × 8 = _","answer":24}],[{"text":"54 = _ × 6","answer":9},{"text":"_ × 9 = 81","answer":9},{"text":"56 : 7 = _","answer":8},{"text":"63 : 9 = _","answer":7},{"text":"72 = _ × 9","answer":8},{"text":"48 = _ × 8","answer":6},{"text":"_ × 3 = 18","answer":6},{"text":"24 : 3 = _","answer":8},{"text":"7 × 7 = _","answer":49},{"text":"6 × _ = 36","answer":6}],[{"text":"7 × _ = 42","answer":6},{"text":"_ × 9 = 54","answer":6},{"text":"_ = 9 × 4","answer":36},{"text":"24 : 4 = _","answer":6},{"text":"35 = _ × 7","answer":5},{"text":"64 = _ × 8","answer":8},{"text":"_ × 8 = 72","answer":9},{"text":"56 = 8 × _","answer":7},{"text":"18 : 6 = _","answer":3},{"text":"32 : 4 = _","answer":8}]]},"32":{"title":"Choisir une procédure efficace : série 32","subtitle":"Séquence 32 — Choisir une procédure efficace : série 32","times":[0,240,180],"groups":[[{"text":"370 + _ = 400","answer":30},{"text":"1,74 − 0,4 = _","answer":1.34},{"text":"7,5 + 0,04 = _","answer":7.54},{"text":"12 × _ = 60","answer":5},{"text":"86 − 18 = _","answer":68},{"text":"100 × 17 = _","answer":1700},{"text":"658,2 − 200 = _","answer":458.2},{"text":"0,07 + 4,32 = _","answer":4.39},{"text":"2 × 75 = _","answer":150},{"text":"19 + 167 = _","answer":186}],[{"text":"20 + 59,7 = _","answer":79.7},{"text":"36 × _ = 3600","answer":100},{"text":"2 × _ = 120","answer":60},{"text":"658 − 39 = _","answer":619},{"text":"0,7 + 6,09 = _","answer":6.79},{"text":"1642 + 300 = _","answer":1942},{"text":"800 + 93,5 = _","answer":893.5},{"text":"84,2 + 0,04 = _","answer":84.24},{"text":"60 : 2 = _","answer":30},{"text":"23,69 + 60 = _","answer":83.69}],[{"text":"160,56 − 40 = _","answer":120.56},{"text":"0,03 + 4,1 = _","answer":4.13},{"text":"0,7 + 4,27 = _","answer":4.97},{"text":"20 × 9 = _","answer":180},{"text":"97 − 8 = _","answer":89},{"text":"72 − 19 = _","answer":53},{"text":"970 + _ = 1000","answer":30},{"text":"29 + 151 = _","answer":180},{"text":"45 × 2 = _","answer":90},{"text":"480 : 2 = _","answer":240}]]},"33":{"title":"Choisir une procédure efficace : série 33","subtitle":"Séquence 33 — Choisir une procédure efficace : série 33","times":[0,240,180],"groups":[[{"text":"76 × 10 = _","answer":760},{"text":"100 × 57 = _","answer":5700},{"text":"100 × 490 = _","answer":49000},{"text":"15 × 4 = _","answer":60},{"text":"10 × 29,47 = _","answer":294.7},{"text":"500 = 2 × _","answer":250},{"text":"_ × 100 = 4500","answer":45},{"text":"10 × 64 = _","answer":640},{"text":"473 + 9 = _","answer":482},{"text":"_ + 740 = 800","answer":60}],[{"text":"1000 × 13 = _","answer":13000},{"text":"42 × 100 = _","answer":4200},{"text":"43 + 28 = _","answer":71},{"text":"84 × _ = 8400","answer":100},{"text":"9900 = 10 × _","answer":990},{"text":"52,07 + 0,8 = _","answer":52.87},{"text":"243 + 70 = _","answer":313},{"text":"100 × 135 = _","answer":13500},{"text":"35 × 2 = _","answer":70},{"text":"150 : 2 = _","answer":75}],[{"text":"100 × 95 = _","answer":9500},{"text":"0,2 + 73,44 = _","answer":73.64},{"text":"3300 + _ = 4000","answer":700},{"text":"1300 = _ × 10","answer":130},{"text":"733 × 10 = _","answer":7330},{"text":"604 × 10 = _","answer":6040},{"text":"39 + 214 = _","answer":253},{"text":"2 × 600 = _","answer":1200},{"text":"75 × 10 = _","answer":750},{"text":"12 × 5 = _","answer":60}]]},"34":{"title":"Choisir une procédure efficace : série 34","subtitle":"Séquence 34 — Choisir une procédure efficace : série 34","times":[0,240,180],"groups":[[{"text":"80 × 4 = _","answer":320},{"text":"7 × 600 = _","answer":4200},{"text":"50 × 5 = _","answer":250},{"text":"300 × 9 = _","answer":2700},{"text":"54,21 + 0,7 = _","answer":54.91},{"text":"28 − 14 = _","answer":14},{"text":"281 × 10 = _","answer":2810},{"text":"80 × 8 = _","answer":640},{"text":"200 + _ = 1000","answer":800},{"text":"187 − 29 = _","answer":158}],[{"text":"40 × 3 = _","answer":120},{"text":"92 − 39 = _","answer":53},{"text":"100 × 271 = _","answer":27100},{"text":"790,5 − 60 = _","answer":730.5},{"text":"5 × 600 = _","answer":3000},{"text":"38 + 45 = _","answer":83},{"text":"7 × 70 = _","answer":490},{"text":"1957 − 600 = _","answer":1357},{"text":"90 × 9 = _","answer":810},{"text":"400 × 9 = _","answer":3600}],[{"text":"7 × 90 = _","answer":630},{"text":"500 + 389 = _","answer":889},{"text":"25 + _ = 100","answer":75},{"text":"60 × 3 = _","answer":180},{"text":"30 × 7 = _","answer":210},{"text":"39 + 425 = _","answer":464},{"text":"800 × 4 = _","answer":3200},{"text":"700 × 5 = _","answer":3500},{"text":"10 × 730 = _","answer":7300},{"text":"20 × 90 = _","answer":1800}]]},"35":{"title":"Choisir une procédure efficace : série 35","subtitle":"Séquence 35 — Choisir une procédure efficace : série 35","times":[0,180,120],"groups":[[{"text":"650 : 10 = _","answer":65},{"text":"39 + 236 = _","answer":275},{"text":"5,8 : 10 = _","answer":0.58},{"text":"95 : 10 = _","answer":9.5},{"text":"23,5 : 10 = _","answer":2.35},{"text":"0,1 : 10 = _","answer":0.01},{"text":"7 × 60 = _","answer":420},{"text":"100 × 608 = _","answer":60800}],[{"text":"10,8 : 10 = _","answer":1.08},{"text":"300 × 9 = _","answer":2700},{"text":"3 : 10 = _","answer":0.3},{"text":"490,6 : 10 = _","answer":49.06},{"text":"340 + 600 = _","answer":940},{"text":"62 × 100 = _","answer":6200},{"text":"230,6 : 10 = _","answer":23.06},{"text":"1245 : 10 = _","answer":124.5},{"text":"136 − 19 = _","answer":117},{"text":"3,46 + 0,5 = _","answer":3.96}],[{"text":"0,9 : 10 = _","answer":0.09},{"text":"73 : 10 = _","answer":7.3},{"text":"6,4 : 10 = _","answer":0.64},{"text":"87 + 29 = _","answer":116},{"text":"4 × 80 = _","answer":320},{"text":"321,4 : 10 = _","answer":32.14},{"text":"940 : 10 = _","answer":94},{"text":"10 × 7,7 = _","answer":77},{"text":"2700 + _ = 3000","answer":300},{"text":"100,9 : 10 = _","answer":10.09}]]}};</script>
 <script>
 (()=>{'use strict';
-const $=id=>document.getElementById(id),seqs=Object.keys(SOURCE_DATA).map(Number);let seq=29,exercise=0,inputs=[],evaluated=false,scores={},timingStarted=false,deadline=0,interval=null,audioCtx=null,muted=false;
+const $=id=>document.getElementById(id),seqs=Object.keys(SOURCE_DATA).map(Number);let seq=29,exercise=0,inputs=[],answerGroups=[],evaluated=false,scores={},timingStarted=false,deadline=0,interval=null,audioCtx=null,muted=false;
 const fmt=n=>String(n).includes('/')?String(n):Number(n).toLocaleString('fr-FR',{maximumFractionDigits:5}).replace(/[\u202f\u00a0]/g,' ');
 function audioStart(){if(muted)return null;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();return audioCtx}catch{return null}}
 function beep(freq,dur,type='sine',gain=.07,delay=0,slide=0){const a=audioStart();if(!a)return;const t=a.currentTime+delay,o=a.createOscillator(),g=a.createGain();o.type=type;o.frequency.setValueAtTime(freq,t);if(slide)o.frequency.exponentialRampToValueAtTime(Math.max(35,freq+slide),t+dur);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(gain,t+.012);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g).connect(a.destination);o.start(t);o.stop(t+dur+.02)}
@@ -114,7 +120,7 @@ function splitFractionExpr(expr){
  if(last<expr.length)parts.push(expr.slice(last));
  return parts;
 }
-function answerInput(card,index,seconds){
+function answerInput(card,index,seconds,cardInputs){
  const inp=document.createElement('input');
  inp.type='text';inp.inputMode=(seq===29||seq===30)?'text':'decimal';inp.autocomplete='off';inp.autocorrect='off';inp.spellcheck=false;
  inp.maxLength=14;inp.setAttribute('aria-label','Opération '+(index+1)+', réponse à écrire');
@@ -125,27 +131,83 @@ function answerInput(card,index,seconds){
   if(!evaluated){updateCounter();card.classList.remove('good','bad','skip');$('feedback').textContent=''}
  });
  inp.addEventListener('keydown',e=>{if(e.key==='Enter'){const idx=inputs.indexOf(inp);(inputs[idx+1]||$('verify')).focus()}});
- inputs.push(inp);return inp;
+ inputs.push(inp);cardInputs.push(inp);return inp;
 }
-function render(){clearInterval(interval);interval=null;timingStarted=false;evaluated=false;inputs=[];renderMenu();const d=getData(),data=getGroup(),t=d.times[exercise];$('seqHeading').textContent=`Séquence ${seq} · ${d.title}`;$('seqSub').textContent=d.subtitle;$('seqHud').textContent=`${String(seq).padStart(2,'0')} / 35`;$('exHud').textContent=`${exercise+1} / ${d.groups.length}`;$('timerBox').classList.remove('danger');$('timer').textContent=t?`${Math.floor(t/60)}:${String(t%60).padStart(2,'0')}`:'LIBRE';$('counter').textContent=`0 / ${data.length}`;$('progressbar').style.width='0%';$('results').hidden=true;$('questions').hidden=false;$('mission').hidden=false;$('tabs').replaceChildren();for(let i=0;i<d.groups.length;i++){let btn=document.createElement('button');btn.className='tab'+(i===exercise?' active':'');btn.innerHTML=`EXERCICE ${i+1}<small>${timeLabel(d.times[i])}</small>`;btn.onclick=()=>{exercise=i;render();sound('tap')};$('tabs').append(btn)}
+function render(){clearInterval(interval);interval=null;timingStarted=false;evaluated=false;inputs=[];answerGroups=[];renderMenu();const d=getData(),data=getGroup(),t=d.times[exercise];$('seqHeading').textContent=`Séquence ${seq} · ${d.title}`;$('seqSub').textContent=d.subtitle;$('seqHud').textContent=`${String(seq).padStart(2,'0')} / 35`;$('exHud').textContent=`${exercise+1} / ${d.groups.length}`;$('timerBox').classList.remove('danger');$('timer').textContent=t?`${Math.floor(t/60)}:${String(t%60).padStart(2,'0')}`:'LIBRE';$('counter').textContent=`0 / ${data.length}`;$('progressbar').style.width='0%';$('results').hidden=true;$('questions').hidden=false;$('mission').hidden=false;$('tabs').replaceChildren();for(let i=0;i<d.groups.length;i++){let btn=document.createElement('button');btn.className='tab'+(i===exercise?' active':'');btn.innerHTML=`EXERCICE ${i+1}<small>${timeLabel(d.times[i])}</small>`;btn.onclick=()=>{exercise=i;render();sound('tap')};$('tabs').append(btn)}
 $('mission').innerHTML=`<strong>${t===0?'Calcule.':'Défi de rapidité.'}</strong> ${t?`Tu disposes de <strong>${timeLabel(t)}</strong> à partir du premier chiffre saisi.`:'Prends le temps de réfléchir : il n’y a pas de chronomètre.'}`;
-const qbox=$('questions');qbox.replaceChildren();data.forEach((item,i)=>{const card=document.createElement('div');card.className='problem';const number=document.createElement('span');number.className='n';number.textContent=i+1;const formula=document.createElement('div');formula.className='formula';let parts=(seq===29||seq===30)?splitFractionExpr(item.text):splitExpr(item.text);
+const qbox=$('questions');qbox.replaceChildren();data.forEach((item,i)=>{const card=document.createElement('div');card.className='problem';const number=document.createElement('span');number.className='n';number.textContent=i+1;const formula=document.createElement('div');formula.className='formula';const cardInputs=[];let parts=(seq===29||seq===30)?splitFractionExpr(item.text):splitExpr(item.text);
 parts.forEach(p=>{
  if(typeof p==='object'){
   const frac=document.createElement('span');frac.className='fraction';
   frac.setAttribute('aria-label',p.top+' sur '+p.bottom);
   const top=document.createElement('span'),bar=document.createElement('span'),bottom=document.createElement('span');
   top.className='fraction-top';bar.className='fraction-bar';bottom.className='fraction-bottom';bar.setAttribute('aria-hidden','true');
-  if(p.top==='_'){const inp=answerInput(card,i,t);inp.classList.add('fraction-input');top.append(inp)}else top.textContent=p.top;
-  if(p.bottom==='_'){const inp=answerInput(card,i,t);inp.classList.add('fraction-input');bottom.append(inp)}else bottom.textContent=p.bottom;
+  if(p.top==='_'){const inp=answerInput(card,i,t,cardInputs);inp.classList.add('fraction-input');top.append(inp)}else top.textContent=p.top;
+  if(p.bottom==='_'){const inp=answerInput(card,i,t,cardInputs);inp.classList.add('fraction-input');bottom.append(inp)}else bottom.textContent=p.bottom;
   frac.append(top,bar,bottom);formula.append(frac);
- }else if(p==='_'){formula.append(answerInput(card,i,t))}
+  }else if(p==='_'){
+  const wholeFraction=(seq===29||seq===30)&&typeof item.answer==='string'&&/^\d+\/\d+$/.test(item.answer);
+  if(wholeFraction){
+   const fraction=document.createElement('span');fraction.className='fraction fraction-answer';
+   fraction.setAttribute('aria-label','Réponse fractionnaire : numérateur et dénominateur');
+   const top=document.createElement('span'),bar=document.createElement('span'),bottom=document.createElement('span');
+   top.className='fraction-top';bar.className='fraction-bar';bottom.className='fraction-bottom';
+   bar.setAttribute('aria-hidden','true');
+   const num=answerInput(card,i,t,cardInputs),den=answerInput(card,i,t,cardInputs);
+   num.classList.add('fraction-input');den.classList.add('fraction-input');
+   num.inputMode='numeric';den.inputMode='numeric';
+   num.setAttribute('aria-label','Opération '+(i+1)+' : numérateur');
+   den.setAttribute('aria-label','Opération '+(i+1)+' : dénominateur');
+   num.maxLength=5;den.maxLength=5;
+   top.append(num);bottom.append(den);fraction.append(top,bar,bottom);formula.append(fraction);
+  }else formula.append(answerInput(card,i,t,cardInputs));
+ }
  else{const s=document.createElement('span');s.className='symbol';s.textContent=p.replaceAll(/(\d{1,3})(?=(\d{3})+(?!\d))/g,'$1 ');formula.append(s)}
-});const note=document.createElement('p');note.className='answer-note';card.append(number,formula,note);qbox.append(card)});
-$('verify').hidden=false;$('clear').hidden=false;$('next').hidden=true;$('retry').hidden=true;$('feedback').textContent='';$('feedback').className='feedback';$('footnote').textContent=t?'Départ au premier chiffre · Pour les fractions, écris par exemple 1/2 ; pour les décimaux, utilise la virgule.':'Les fractions peuvent être écrites comme 1/2 et les décimaux avec une virgule. Il n’y a pas de limite de temps.';}
-function updateCounter(){const n=inputs.filter(e=>/\d/.test(e.value)).length;$('counter').textContent=`${n} / ${inputs.length}`;$('progressbar').style.width=`${Math.round(n/inputs.length*100)}%`}
+});const note=document.createElement('p');note.className='answer-note';card.append(number,formula,note);qbox.append(card);answerGroups.push({card,inputs:cardInputs,answer:item.answer})});
+$('verify').hidden=false;$('clear').hidden=false;$('next').hidden=true;$('retry').hidden=true;$('feedback').textContent='';$('feedback').className='feedback';$('footnote').textContent=t?'Départ au premier chiffre · Pour les réponses en fraction, complète le numérateur et le dénominateur.':'Pour les réponses en fraction, complète les deux cases. Les décimaux acceptent la virgule. Il n’y a pas de limite de temps.';}
+function updateCounter(){
+ const filled=answerGroups.filter(g=>g.inputs.every(inp=>/\d/.test(inp.value))).length;
+ $('counter').textContent=`${filled} / ${answerGroups.length}`;
+ $('progressbar').style.width=(answerGroups.length?Math.round(filled/answerGroups.length*100):0)+'%';
+}
 function startTimer(t){timingStarted=true;deadline=Date.now()+t*1000;interval=setInterval(()=>{const remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));$('timer').textContent=`${Math.floor(remaining/60)}:${String(remaining%60).padStart(2,'0')}`;$('timerBox').classList.toggle('danger',remaining<=15);if(remaining===0){clearInterval(interval);interval=null;evaluate(true)}},200)}
-function evaluate(expired=false){if(evaluated)return;evaluated=true;clearInterval(interval);interval=null;const group=getGroup();let good=0,missing=0;inputs.forEach((input,i)=>{const answer=group[i].answer,raw=input.value.trim().replace(/\s/g,''),card=input.closest('.problem');const parseAnswer=s=>{if(!/^\d+(?:[,.]\d+)?(?:\/\d+)?$/.test(s))return NaN;const a=s.replace(',','.').split('/');return Number(a[0])/(a[1]?Number(a[1]):1)};const valid=raw!==''&&Math.abs(parseAnswer(raw)-parseAnswer(String(answer)))<0.000001;if(valid){good++;card.classList.add('good');particles(card,true)}else{if(!raw)missing++;card.classList.add(raw?'bad':'skip');card.querySelector('.answer-note').textContent=`Bonne réponse : ${fmt(answer)}`;if(raw)particles(card,false)}input.readOnly=true});const total=inputs.length,percent=Math.round(good/total*100);scores[`${seq}-${exercise}`]={good,total,percent};$('counter').textContent=`${good} / ${total}`;$('progressbar').style.width=(good/total*100)+'%';$('verify').hidden=true;$('clear').hidden=true;$('next').hidden=false;$('next').textContent=exercise===getData().groups.length-1?'Mission suivante →':'Exercice suivant →';$('retry').hidden=false;$('feedback').textContent=`${expired?'Temps écoulé ! ':'Correction terminée ! '}${good}/${total} réussites (${percent} %). ${missing?'Les cases non remplies sont indiquées.':''}`;$('feedback').className='feedback '+(good===total?'success':'error');if(good===total)sound('end');else if(good>0){sound('good');setTimeout(()=>sound('bad'),420)}else sound('bad');if(exercise===getData().groups.length-1)finishScreen(good,total,percent)}
+function numericAnswer(value){
+ const raw=String(value).trim().replace(/[\s\u00a0\u202f]/g,'').replace(',','.');
+ if(!/^\d+(?:\.\d+)?(?:\/\d+)?$/.test(raw))return NaN;
+ const parts=raw.split('/');
+ const n=Number(parts[0]),d=parts.length===2?Number(parts[1]):1;
+ return d===0?NaN:n/d;
+}
+function evaluate(expired=false){
+ if(evaluated)return;
+ evaluated=true;clearInterval(interval);interval=null;
+ let good=0,missing=0;
+ answerGroups.forEach(({card,inputs:fields,answer})=>{
+  const parts=fields.map(inp=>inp.value.trim().replace(/[\s\u00a0\u202f]/g,''));
+  const filled=parts.every(s=>s!==''),raw=fields.length===2?parts.join('/'):parts[0]||'';
+  const parsed=numericAnswer(raw),expected=numericAnswer(answer);
+  const valid=filled&&Number.isFinite(parsed)&&Number.isFinite(expected)&&Math.abs(parsed-expected)<0.000001;
+  if(valid){good++;card.classList.add('good');particles(card,true)}
+  else{
+   if(!filled)missing++;
+   card.classList.add(filled?'bad':'skip');
+   card.querySelector('.answer-note').textContent='Bonne réponse : '+fmt(answer);
+   if(filled)particles(card,false);
+  }
+  fields.forEach(inp=>inp.readOnly=true);
+ });
+ const total=answerGroups.length,percent=total?Math.round(good/total*100):0;
+ scores[seq+'-'+exercise]={good,total,percent};
+ $('counter').textContent=good+' / '+total;
+ $('progressbar').style.width=percent+'%';
+ $('verify').hidden=true;$('clear').hidden=true;$('next').hidden=false;
+ $('next').textContent=exercise===getData().groups.length-1?'Mission suivante →':'Exercice suivant →';
+ $('retry').hidden=false;
+ $('feedback').textContent=(expired?'Temps écoulé ! ':'Correction terminée ! ')+good+'/'+total+' réussites ('+percent+' %). '+(missing?'Les cases non remplies sont indiquées.':'');
+ $('feedback').className='feedback '+(good===total?'success':'error');
+ if(good===total)sound('end');else if(good>0){sound('good');setTimeout(()=>sound('bad'),420)}else sound('bad');
+ if(exercise===getData().groups.length-1)finishScreen(good,total,percent);
+}
 function finishScreen(good,total,percent){const box=$('results');box.hidden=false;box.innerHTML=`<h3>★ Mission ${seq} terminée ★</h3><div class="big">${percent} %</div><p>Exercice ${exercise+1} : ${good} bonnes réponses sur ${total}.<br>Tu peux consulter les corrections au-dessus, recommencer ou changer de mission.</p><div class="actions"><button type="button" class="btn orange" id="finishNext">Mission suivante →</button></div>`;box.querySelector('#finishNext').onclick=next;}
 function next(){if(exercise<getData().groups.length-1){exercise++;render()}else{seq=seq===35?29:seq+1;exercise=0;render()}sound('tap');document.querySelector('.arena').scrollIntoView({behavior:'smooth',block:'start'})}
 $('verify').onclick=()=>evaluate(false);$('clear').onclick=()=>{if(evaluated)return;inputs.forEach(input=>{input.value='';input.closest('.problem').classList.remove('good','bad','skip')});updateCounter();$('feedback').textContent='Réponses effacées. Le chronomètre continue si tu l’as lancé.';inputs[0]?.focus();sound('tap')};$('retry').onclick=()=>{render();sound('tap')};$('next').onclick=next;
