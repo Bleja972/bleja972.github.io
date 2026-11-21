@@ -43,7 +43,7 @@ const controls={niveau:$('#level-filter'),matiere:$('#subject-filter'),domaine:$
 const cardNodes=$$('[data-game]',$('#game-grid'));const cardMap=new Map(cardNodes.map(n=>[n.dataset.game,n]));
 function readState(){
  const p=new URLSearchParams(location.search),s={...initial};Object.keys(s).forEach(k=>{if(p.has(k))s[k]=p.get(k)});
- if(!['tous','CP','CE1','CE2'].includes(s.niveau))s.niveau=initial.niveau;
+ if(!['tous','CP','CE1','CE2','CM1'].includes(s.niveau))s.niveau=initial.niveau;
  if(!['toutes','Mathématiques','Français'].includes(s.matiere))s.matiere='toutes';
  if(s.domaine!=='tous'&&!groupNames[s.domaine])s.domaine='tous';
  if(!validCollections.includes(s.collection))s.collection='tous';
@@ -71,7 +71,7 @@ function syncControls(){
  const chips=$('#active-filters');chips.replaceChildren();
  for(const key of ['niveau','matiere','domaine','competence']){
   const val=state[key];if(['tous','toutes'].includes(val))continue;
-  const display={CP:'Year 2',CE1:'Year 3',CE2:'Year 4',Mathématiques:'Maths',Français:'French'};const text=key==='domaine'?groupNames[val]:key==='competence'?controls.competence.selectedOptions[0]?.text:(display[val]||val);
+  const display={CP:'Year 2',CE1:'Year 3',CE2:'Year 4',CM1:'Year 5 (CM1)',Mathématiques:'Maths',Français:'French'};const text=key==='domaine'?groupNames[val]:key==='competence'?controls.competence.selectedOptions[0]?.text:(display[val]||val);
   const button=document.createElement('button');button.type='button';button.className='active-chip';button.textContent=text+' ×';button.setAttribute('aria-label','Remove filter '+text);button.addEventListener('click',()=>change({[key]:key==='niveau'||key==='domaine'?'tous':'toutes'}));chips.append(button);
  }
 }
@@ -129,7 +129,7 @@ function updateSidebarCounts(){
   const description=label+' : '+count+' game'+(count===1?'':'s');link.setAttribute('aria-label',description);link.title=description;
  });
 }
-fetch('/assets/catalogue-v2/catalogue-en.json?v=booklet3-en-20261121').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;updateSidebarCounts();state=readState();render();}).catch(()=>{
+fetch('/assets/catalogue-v2/catalogue-en.json?v=cm1-booklets-visible-20261121').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(data=>{catalog=data;updateSidebarCounts();state=readState();render();}).catch(()=>{
  toast('Filters are unavailable. All game links remain accessible.');$('#filter-panel').hidden=true;$('.filter-row').hidden=true;$('#search-form').hidden=true;
 });
 })();
