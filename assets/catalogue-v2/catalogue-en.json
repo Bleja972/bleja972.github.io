@@ -10,9 +10,9 @@
     "objective": "Practise mental calculation with multiplication, decimal place value and multiples of 25.",
     "skill": "calcul-mental",
     "skillName": "Mental calculation",
-    "category": "calcul",
-    "group": "calcul",
-    "groupName": "Calculation",
+    "category": "mental",
+    "group": "mental",
+    "groupName": "Mental maths",
     "level": "CM1",
     "levels": [
       "CM1"
@@ -35,9 +35,9 @@
     "objective": "Practice Grade 4 multiplication, mental addition and subtraction, and the distributive property.",
     "skill": "calcul-mental",
     "skillName": "Mental calculation",
-    "category": "calcul",
-    "group": "calcul",
-    "groupName": "Calculation",
+    "category": "mental",
+    "group": "mental",
+    "groupName": "Mental maths",
     "level": "CM1",
     "levels": [
       "CM1"
@@ -60,9 +60,9 @@
     "objective": "Practice multiplication facts, addition, subtraction and complements to the next hundred.",
     "skill": "calcul-mental",
     "skillName": "Mental calculation",
-    "category": "calcul",
-    "group": "calcul",
-    "groupName": "Calculation",
+    "category": "mental",
+    "group": "mental",
+    "groupName": "Mental maths",
     "level": "CM1",
     "levels": [
       "CM1"
