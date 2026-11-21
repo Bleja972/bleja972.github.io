@@ -50,6 +50,31 @@
     "playClicks": 0
   },
   {
+    "id": "mission-calcul-cm1-livret-5",
+    "slug": "mission-calcul-cm1-livret-5",
+    "title": "Mission Calcul CM1 — Livret 5",
+    "url": "/jeux/mission-calcul-cm1-livret-5/",
+    "path": "/jeux/mission-calcul-cm1-livret-5/",
+    "description": "Livret 5 de calcul mental CM1, séquences 29 à 35 : fractions usuelles, fractions décimales, tables de multiplication et procédures de calcul. 202 questions, 21 exercices, chronomètres de 45 secondes à 4 minutes, scores, corrections et néons 3D.",
+    "short": "21 exercices · 202 questions · Fractions, décimaux et stratégies de calcul.",
+    "objective": "Comprendre les fractions simples et décimales et automatiser des procédures de calcul mental.",
+    "skill": "calcul-mental-cm1",
+    "skillName": "Calcul mental CM1 — Livret 5",
+    "category": "calcul-mental",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "level": "CM1",
+    "levels": [
+      "CM1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-5.svg",
+    "imageAlt": "Aperçu illustré du jeu Mission Calcul CM1 Livret 5 avec les missions 29 à 35 et des opérations sur les demis et les quarts.",
+    "playClicks": 0
+  },
+  {
     "id": "mission-calcul-cm1-livret-4",
     "slug": "mission-calcul-cm1-livret-4",
     "title": "Mission Calcul CM1 — Livret 4",
