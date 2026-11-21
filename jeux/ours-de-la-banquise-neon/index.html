@@ -284,6 +284,60 @@ body>nav{background:#000!important;color:#f1f7ff!important;border-bottom:1px sol
  #ours-banquise .controls .arrow{font-size:66px!important}
 }
 @media(prefers-reduced-motion:reduce){#ours-banquise .bravo-rainbow{animation:none!important;color:#ffe851!important;text-shadow:0 0 18px #ffe851!important}}
+
+/* CORRECTION : ce sont les instructions du programme qui deviennent XXL.
+   Les quatre touches autour de GO retrouvent leur taille précédente. */
+#ours-banquise .controls{display:grid!important;grid-template-columns:repeat(3,78px)!important;width:auto!important;max-width:none!important;gap:12px!important;justify-content:center!important;justify-items:center!important;margin:19px auto!important}
+#ours-banquise .controls .arrow{
+ width:78px!important;height:78px!important;min-width:78px!important;max-width:78px!important;
+ min-height:78px!important;aspect-ratio:1!important;font-size:53px!important;
+ border-radius:15px!important;padding:0!important;
+}
+#ours-banquise .controls .run{
+ width:78px!important;height:78px!important;min-width:78px!important;max-width:78px!important;
+ min-height:78px!important;aspect-ratio:1!important;font-size:25px!important;
+}
+/* Rectangle d'affichage des déplacements programmés. */
+#ours-banquise .program{
+ background:#000!important;
+ border:2px solid #ff2f5e!important;
+ box-shadow:inset 0 0 24px #2b0210,0 0 18px #ff174455,0 0 34px #ff174422!important;
+ min-height:120px!important;
+ padding:14px!important;
+ display:flex!important;flex-wrap:wrap!important;gap:12px!important;
+ align-content:flex-start!important;align-items:center!important;
+}
+#ours-banquise .program .instruction{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ min-width:72px!important;width:72px!important;min-height:72px!important;height:72px!important;
+ padding:0!important;margin:0!important;flex:0 0 72px!important;
+ border-radius:16px!important;
+ background:linear-gradient(160deg,#18181d 0%,#050507 45%,#000 100%)!important;
+ border:2px solid #ff416c!important;
+ box-shadow:inset 0 2px 2px #ffd3dc55,inset 0 -4px 8px #000,0 6px 0 #4a0719,0 0 14px #ff1e4f,0 0 28px #ff1e4f66!important;
+ color:#ff2a57!important;font-size:54px!important;font-weight:900!important;line-height:1!important;
+ text-shadow:0 0 4px #fff,0 0 10px #ff2a57,0 0 22px #ff003c,0 0 40px #ff003c!important;
+}
+#ours-banquise .program .instruction.active{
+ background:linear-gradient(160deg,#2a0a13 0%,#080103 45%,#000 100%)!important;
+ border-color:#ff9bb2!important;
+ box-shadow:inset 0 2px 2px #ffe2e955,0 0 20px #ff4f76,0 0 36px #ff003c!important;
+ transform:translateY(-2px) scale(1.06);
+}
+#ours-banquise .program .instruction.done{color:#ff8aa3!important;border-color:#ff6b8d!important;opacity:.92}
+#ours-banquise .program .instruction.collect{
+ font-size:30px!important;color:#ffd86a!important;border-color:#ffcf52!important;
+ text-shadow:0 0 4px #fff,0 0 10px #ffcf3f,0 0 20px #ffb300!important;
+ box-shadow:inset 0 2px 2px #fff3c955,0 6px 0 #5a3b08,0 0 14px #ffbf2f,0 0 28px #ffbf2f55!important;
+}
+@media(max-width:680px){
+ #ours-banquise .controls{grid-template-columns:repeat(3,70px)!important;gap:10px!important}
+ #ours-banquise .controls .arrow,#ours-banquise .controls .run{width:70px!important;height:70px!important;min-width:70px!important;max-width:70px!important;min-height:70px!important}
+ #ours-banquise .controls .arrow{font-size:49px!important}
+ #ours-banquise .program{min-height:105px!important;padding:12px!important;gap:10px!important}
+ #ours-banquise .program .instruction{width:58px!important;min-width:58px!important;height:58px!important;min-height:58px!important;flex-basis:58px!important;font-size:42px!important;border-radius:12px!important}
+ #ours-banquise .program .instruction.collect{font-size:27px!important}
+}
 </style>
 <div class="header"><div class="hero-brand"><img class="title-robot" data-title-robot alt="Petit robot futuriste du jeu"><h1>MISSION NÉON <span>LE ROBOT DES CRISTAUX</span></h1></div><p class="intro">Programme ton robot, évite les croix rouges et récupère tous les cristaux !</p></div>
 <div class="shell"><section class="panel"><div class="head"><strong>⚡ Grille noire · cases interdites <span style="color:#ff537f;text-shadow:0 0 9px #ff2448,0 0 20px #ff2448">✕</span></strong><label>Défi <select data-level aria-label="Choisir le défi"></select></label></div><div class="grid" data-grid role="grid" aria-label="Grille de la banquise"></div><p class="small" data-fish></p></section><section class="panel"><div class="head"><strong>⚡ Console de pilotage</strong><span class="small" data-count>0 / 24</span></div><div class="mode" role="group" aria-label="Choisir les règles"><button type="button" data-mode="auto" aria-pressed="true">Collecte automatique</button></div><div class="program" data-program aria-label="Instructions du programme"></div><div class="controls" aria-label="Commandes et lancement du programme"><button type="button" class="btn arrow up" data-add="U" aria-label="Haut">↑</button><button type="button" class="btn arrow left" data-add="L" aria-label="Gauche">←</button><button type="button" class="btn run" data-run aria-label="Exécuter le programme" title="Lancer le programme">GO</button><button type="button" class="btn arrow" data-add="D" aria-label="Bas">↓</button><button type="button" class="btn arrow" data-add="R" aria-label="Droite">→</button><button type="button" class="btn eat" data-add="E" hidden>💎 Collecter</button></div><div class="buttons"><button type="button" class="btn" data-undo>Effacer la dernière</button><button type="button" class="btn" data-clear>Tout effacer</button></div><div class="buttons"><button type="button" class="btn next" data-next>Défi suivant →</button></div><p class="message" role="status" aria-live="polite" data-msg>Guide ton robot vers les cristaux à l’aide des flèches.</p><p class="small">Chaque flèche déplace le robot d’une case. Maximum : 24 instructions.</p></section></div>
@@ -343,7 +397,7 @@ function say(t,c=''){
   msg.append(bravo,detail);
  }else msg.textContent=t;
  if(c==='good'||c==='error')sonic(c);
-}function resetPosition(){position=board.start;fish=new Set(board.targets);eaten=new Set;const row=Math.floor(position/8),col=position%8;const nearest=board.targets.reduce((best,p)=>Math.abs(Math.floor(p/8)-row)+Math.abs(p%8-col)<Math.abs(Math.floor(best/8)-row)+Math.abs(best%8-col)?p:best,board.targets[0]);const dy=Math.floor(nearest/8)-row,dx=nearest%8-col;facing=Math.abs(dy)>=Math.abs(dx)?(dy<0?'U':'D'):(dx<0?'L':'R');runIndex=-1}function draw(){grid.replaceChildren();for(let i=0;i<64;i++){let d=document.createElement('div');d.className='cell'+(board.water.has(i)?' water':'')+(position===i?' bear':'')+((fish.has(i)||eaten.has(i))?' fishing-hole':'');d.setAttribute('role','gridcell');let names=[];if(board.water.has(i))names.push('case interdite');else names.push('case noire');if(fish.has(i))names.push('cristal d’énergie');if(position===i)names.push('robot');d.setAttribute('aria-label',names.join(', '));if(eaten.has(i))names.push('énergie collectée');if(fish.has(i)||eaten.has(i)){let f=document.createElement('img');f.className='sprite ground-image';f.src=fish.has(i)?sprites.poisson:sprites.aretes;f.alt='';d.append(f)}if(position===i){let bear=document.createElement('img');bear.className='sprite bear-image';bear.src=facing==='U'?sprites.dos:facing==='D'?sprites.face:sprites.ours;bear.style.transform=facing==='L'?'scaleX(-1)':'';bear.alt='';d.append(bear)}d.setAttribute('aria-label',names.join(', '));grid.append(d)}q('[data-fish]').textContent='Cristaux restants : '+fish.size;let p=q('[data-program]');p.replaceChildren();program.forEach((v,i)=>{let el=document.createElement('span');el.className='instruction'+(i===runIndex?' active':i<runIndex?' done':'');el.textContent=arrows[v];el.setAttribute('aria-label',({U:'haut',D:'bas',L:'gauche',R:'droite',E:'collecter'})[v]);p.append(el)});q('[data-count]').textContent=program.length+' / 24';root.querySelectorAll('button,select').forEach(x=>{x.disabled=busy});q('[data-add="E"]').hidden=mode!=='eat'}
+}function resetPosition(){position=board.start;fish=new Set(board.targets);eaten=new Set;const row=Math.floor(position/8),col=position%8;const nearest=board.targets.reduce((best,p)=>Math.abs(Math.floor(p/8)-row)+Math.abs(p%8-col)<Math.abs(Math.floor(best/8)-row)+Math.abs(best%8-col)?p:best,board.targets[0]);const dy=Math.floor(nearest/8)-row,dx=nearest%8-col;facing=Math.abs(dy)>=Math.abs(dx)?(dy<0?'U':'D'):(dx<0?'L':'R');runIndex=-1}function draw(){grid.replaceChildren();for(let i=0;i<64;i++){let d=document.createElement('div');d.className='cell'+(board.water.has(i)?' water':'')+(position===i?' bear':'')+((fish.has(i)||eaten.has(i))?' fishing-hole':'');d.setAttribute('role','gridcell');let names=[];if(board.water.has(i))names.push('case interdite');else names.push('case noire');if(fish.has(i))names.push('cristal d’énergie');if(position===i)names.push('robot');d.setAttribute('aria-label',names.join(', '));if(eaten.has(i))names.push('énergie collectée');if(fish.has(i)||eaten.has(i)){let f=document.createElement('img');f.className='sprite ground-image';f.src=fish.has(i)?sprites.poisson:sprites.aretes;f.alt='';d.append(f)}if(position===i){let bear=document.createElement('img');bear.className='sprite bear-image';bear.src=facing==='U'?sprites.dos:facing==='D'?sprites.face:sprites.ours;bear.style.transform=facing==='L'?'scaleX(-1)':'';bear.alt='';d.append(bear)}d.setAttribute('aria-label',names.join(', '));grid.append(d)}q('[data-fish]').textContent='Cristaux restants : '+fish.size;let p=q('[data-program]');p.replaceChildren();program.forEach((v,i)=>{let el=document.createElement('span');el.className='instruction'+(v==='E'?' collect':'')+(i===runIndex?' active':i<runIndex?' done':'');el.textContent=arrows[v];el.setAttribute('aria-label',({U:'haut',D:'bas',L:'gauche',R:'droite',E:'collecter'})[v]);p.append(el)});q('[data-count]').textContent=program.length+' / 24';root.querySelectorAll('button,select').forEach(x=>{x.disabled=busy});q('[data-add="E"]').hidden=mode!=='eat'}
 function load(){token++;busy=false;board=levels[level];program=[];resetPosition();sel.value=String(level);say('Guide ton robot vers les cristaux à l’aide des flèches.');draw()}
 root.querySelectorAll('[data-add]').forEach(b=>b.onclick=()=>{if(program.length>=24){say('Le programme est limité à 24 instructions.','error');return}program.push(b.dataset.add);say('');draw()});q('[data-undo]').onclick=()=>{program.pop();say('');draw()};q('[data-clear]').onclick=()=>{program=[];resetPosition();say('Programme effacé.');draw()};sel.onchange=()=>{level=+sel.value;load()};q('[data-next]').onclick=()=>{level=(level+1)%20;load()};root.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;root.querySelectorAll('[data-mode]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));program=[];resetPosition();say(mode==='eat'?'Ajoute « Collecter » sur chaque case contenant un cristal.':'Les cristaux sont récupérés automatiquement.');draw()});
 q('[data-run]').onclick=async()=>{if(!program.length){say('Ajoute au moins une instruction.','error');return}resetPosition();busy=true;let current=++token;say('C’est parti !');draw();for(let i=0;i<program.length;i++){runIndex=i;draw();await new Promise(r=>setTimeout(r,500));if(current!==token)return;let action=program[i];if(action==='E'){if(fish.has(position)){fish.delete(position);eaten.add(position)}else if(!eaten.has(position)){busy=false;say('Aucun cristal sur cette case. Modifie ton programme et réessaie.','error');draw();return}}else{let [dy,dx]=delta[action],y=Math.floor(position/8)+dy,x=position%8+dx;if(y<0||y>7||x<0||x>7||board.water.has(y*8+x)){busy=false;say('Plouf ! Le robot a touché une case interdite ou quitté la grille. Modifie ton programme.','error');draw();return}position=y*8+x;facing=action;if(mode==='auto'&&fish.delete(position))eaten.add(position)}draw();if(fish.size===0)break;if(eaten.size>0&&fish.size>0)say('Encore '+fish.size+' cristal'+(fish.size>1?'s':'')+' à collecter : le robot continue son chemin.')}busy=false;runIndex=program.length;if(fish.size===0)say('Bravo ! Le robot a récupéré tous les cristaux ! 💎','good');else say('Il reste '+fish.size+' cristal'+(fish.size>1?'s':'')+' à collecter. Ajoute des flèches après la dernière instruction, puis appuie sur GO.','error');draw()};load();})();
