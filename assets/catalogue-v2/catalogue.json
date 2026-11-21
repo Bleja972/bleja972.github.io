@@ -50,6 +50,31 @@
     "playClicks": 0
   },
   {
+    "id": "mission-calcul-cm1-livret-3",
+    "slug": "mission-calcul-cm1-livret-3",
+    "title": "Mission Calcul CM1 — Livret 3",
+    "url": "/jeux/mission-calcul-cm1-livret-3/",
+    "path": "/jeux/mission-calcul-cm1-livret-3/",
+    "description": "196 calculs CM1 du livret 3 : multiplier par 4 et 8, additions et soustractions de décimaux, multiplier et diviser par 10, multiples de 25. 21 exercices, chronomètres, corrections, scores, sons et boutons 3D lumineux.",
+    "short": "21 exercices CM1 · 196 calculs · Décimaux, multiplications et chronos.",
+    "objective": "Automatiser les calculs avec les entiers et les décimaux et maîtriser les multiples de 25.",
+    "skill": "calcul-mental-cm1",
+    "skillName": "Calcul mental CM1 — Livret 3",
+    "category": "calcul-mental",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "level": "CM1",
+    "levels": [
+      "CM1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-3.svg",
+    "imageAlt": "Illustration du jeu Mission Calcul CM1 Livret 3 montrant la séquence 15 et des opérations de multiplication par quatre, avec des boutons lumineux.",
+    "playClicks": 0
+  },
+  {
     "id": "mission-calcul-cm1-livret-2",
     "slug": "mission-calcul-cm1-livret-2",
     "title": "Mission Calcul CM1 — Livret 2",
