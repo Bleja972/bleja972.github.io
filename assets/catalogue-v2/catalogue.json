@@ -283,11 +283,11 @@
   {
     "id": "ours-de-la-banquise-neon",
     "slug": "ours-de-la-banquise-neon",
-    "title": "L’ours de la banquise — Mission Néon",
+    "title": "Mission Néon — Le robot des cristaux",
     "url": "/jeux/ours-de-la-banquise-neon/",
     "path": "/jeux/ours-de-la-banquise-neon/",
-    "description": "Nouvelle version du jeu de codage CE1 : 20 défis, ours polaire et poissons, cases interdites marquées par de grandes croix rouges lumineuses, flèches néon multicolores et boutons futuristes 3D. Décor polaire, animation du programme et bruitages de réussite ou d’erreur.",
-    "short": "Programme le trajet de l’ours sur la glace en évitant les croix rouges lumineuses.",
+    "description": "Jeu de codage CE1 futuriste avec 20 défis : programme un robot lumineux pour ramasser de petites créatures-cristaux. Cases noires aux contours néon cyan, violet, rose et vert, croix rouges brillantes sur les cases interdites, commandes lumineuses et boutons 3D.",
+    "short": "Guide un robot à travers une grille noire lumineuse et récupère les cristaux en évitant les croix rouges.",
     "objective": "Programmer une suite de déplacements et d’actions sur une grille.",
     "skill": "programmer-deplacements",
     "skillName": "Programmer des déplacements",
@@ -302,7 +302,7 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/ours-de-la-banquise-neon.svg",
-    "imageAlt": "Aperçu illustré de Mission Néon : grille polaire, cases interdites avec croix rouges brillantes et flèches 3D colorées.",
+    "imageAlt": "Aperçu du jeu de codage Mission Néon, avec des cases noires bordées de lumières multicolores, le robot et les cristaux d’énergie.",
     "playClicks": 0
   },
   {
