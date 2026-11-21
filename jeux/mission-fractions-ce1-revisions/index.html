@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mission Fractions CE1 — Révisions · Jeu Pygame</title>
+<meta name="description" content="Jeu CE1 sur les fractions : 10 missions inspirées de la fiche de révisions Les fractions. Figures coloriées, comparer, ranger, additions et soustractions, correction immédiate et effets arcade.">
+<link rel="canonical" href="https://bleja972.github.io/jeux/mission-fractions-ce1-revisions/">
+<style>
+:root{color-scheme:dark;--cyan:#35ecff;--pink:#ff56ce;--yellow:#ffe057;--red:#ff486e}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#000;color:#f5fcff;font-family:system-ui,Arial,sans-serif}
+body{background:radial-gradient(ellipse at 12% 0,#122454,transparent 36%),radial-gradient(ellipse at 90% 12%,#301038,transparent 35%),#000;overflow-x:hidden}
+#stars{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65}
+main{position:relative;max-width:1320px;margin:0 auto;padding:16px 16px 64px}
+.back{display:inline-block;color:#bbf8ff;margin:3px 0 12px;text-decoration:none;font-weight:800}
+header{position:relative;border:2px solid var(--cyan);border-radius:22px;background:linear-gradient(140deg,#070d1b,#000 65%,#150721);padding:22px;text-align:center;box-shadow:0 0 25px #00e5ff66,inset 0 0 23px #08e1ff13}
+h1{margin:0;font-size:clamp(29px,5.2vw,65px);font-family:Impact,'Arial Black',sans-serif;font-weight:1000;letter-spacing:.07em;color:#000;-webkit-text-stroke:1.7px #7cf7ff;text-shadow:0 0 7px #ccffff,0 0 23px #07dbff,0 0 39px #008dff}
+h1 span{display:block;font-size:.42em;margin:10px 0 0;color:#fff;-webkit-text-stroke:0;text-shadow:0 0 12px #ff53ca;letter-spacing:.12em}
+header p{font-size:clamp(14px,1.8vw,18px);color:#fff1b1;margin:14px 0 5px}
+.arcade{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:15px 0}
+.pill{background:#030713;border:1.5px solid #43dfff;color:#ccfcff;padding:7px 12px;border-radius:40px;font-weight:850;box-shadow:0 0 13px #12caff55}
+.layout{display:grid;grid-template-columns:minmax(185px,240px) minmax(0,1fr);gap:18px;margin-top:16px}
+.sidebar,.play{border:2px solid #315f8b;background:linear-gradient(155deg,#07101eea,#020308ef);border-radius:20px;padding:16px;box-shadow:0 0 22px #08d7ff31;min-width:0}
+.sidebar h2{font-size:17px;margin:4px 0 13px;color:#f5deff}.mission-list{display:grid;gap:10px}
+button{font:inherit;cursor:pointer;touch-action:manipulation;transition:transform .13s,filter .13s}
+button:focus-visible,input:focus-visible{outline:3px solid #ffe65b;outline-offset:3px}
+button:disabled{opacity:.56;cursor:default}
+.mission-btn,.btn,.choice,.sort-option{color:#eefaff;background:linear-gradient(150deg,#151c2d,#020409 68%);border:2px solid #34dfff;border-top-color:#b3faff;border-radius:13px;font-weight:900;text-shadow:0 0 8px #22cfff;box-shadow:inset 0 2px #a7f7ff42,0 5px 0 #072944,0 0 14px #11cfff6b;min-height:47px;padding:9px 12px}
+.mission-btn{width:100%;text-align:left;display:flex;align-items:center;gap:11px;font-size:13px}
+.mission-btn .number{font-size:19px;color:#ffe170}.mission-btn.active{border-color:#ff70d4;color:#fff;box-shadow:0 0 18px #ff39be90,0 5px 0 #571044}
+button:hover:not(:disabled){filter:brightness(1.24);transform:translateY(-2px)}
+button:active:not(:disabled){transform:translateY(3px)}
+.playhead{display:flex;align-items:start;justify-content:space-between;gap:10px;flex-wrap:wrap}
+#title{margin:2px 0 7px;font-family:Impact,'Arial Black',sans-serif;font-size:clamp(24px,3.6vw,42px);letter-spacing:.04em;color:#fff;text-shadow:0 0 13px #ff63da}
+#subtitle{margin:0;color:#e0f7ff;font-size:15px;max-width:620px}.score{border:2px solid #fece57;border-radius:13px;color:#ffe776;padding:9px 13px;font-size:20px;font-weight:900;box-shadow:0 0 16px #ffc63d75}
+.progress{margin:18px 0;border:1px solid #295c87;background:#040b17;height:14px;border-radius:12px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#14f3ea,#b453ff,#fe64b9);box-shadow:0 0 16px #57e6ff;transition:width .35s}
+#questions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.problem{background:linear-gradient(155deg,#0b1527,#02050b);border:1.6px solid #376a91;border-radius:18px;padding:14px;min-width:0;box-shadow:inset 0 0 15px #1395ff19}
+.problem.ok{border-color:#37ffb1;box-shadow:0 0 16px #1afd9d70}.problem.no{border-color:#ff466a;box-shadow:0 0 16px #ff2b5b72}
+.problem-head{font-size:14px;color:#b5ecff;font-weight:900;margin-bottom:10px}.problem-body{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:13px;font-size:20px;font-weight:800;min-height:80px}
+.figure{width:140px;height:130px;max-width:100%;filter:drop-shadow(0 0 4px #5ff0ff65)}
+.statement{max-width:100%;line-height:1.55;text-align:center}.statement strong{color:#ffe16a}
+.frac{display:inline-flex;vertical-align:middle;flex-direction:column;align-items:center;justify-content:center;min-width:37px;line-height:1.12;font-size:1.13em;margin:0 4px}.frac .bar{width:100%;border-top:3px solid currentColor;margin:3px 0}.frac .top,.frac .bottom{min-height:21px}
+.answer{display:inline-flex;flex-direction:column;vertical-align:middle;align-items:center;width:63px;margin:0 5px}
+.answer input{width:60px;height:43px;max-width:100%;background:#000;color:#ffe36c;font-size:23px;font-weight:900;text-align:center;border:2px solid #4eeaff;border-radius:10px;box-shadow:0 0 11px #20dfff55;outline-offset:3px}
+.answer .bar{width:55px;border-top:3px solid #fff;margin:5px 0}
+.answer input:disabled{opacity:1}
+.choices{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;width:100%;margin:10px 0 2px}
+.choice{min-width:85px;font-size:17px}.choice.selected{border-color:#ffdc52;box-shadow:0 0 17px #ffd44c}
+.sort-options{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:8px 0}.sort-option{font-size:20px;min-width:70px}.sort-option.used{opacity:.38}
+.sort-seq{min-height:56px;margin-top:9px;padding:10px;border:2px dashed #ed9cfa;border-radius:12px;color:#ffe36b;font-size:24px;font-weight:900;text-align:center}
+.note{min-height:22px;margin-top:12px;font-size:14px;color:#b8e9ff;text-align:center}.ok .note{color:#65ffbf}.no .note{color:#ffb3bf}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.actions .btn{min-width:150px;flex:1 1 180px;font-size:16px}
+.btn.primary{border-color:#ffcf60;color:#fff0bd;text-shadow:0 0 12px #ffbe3f;box-shadow:inset 0 2px #ffeab16c,0 5px 0 #6b3a04,0 0 17px #ffbb4970}
+.btn.pink{border-color:#f78aff;color:#ffe5ff;text-shadow:0 0 10px #e94fff;box-shadow:inset 0 2px #fff5,0 5px 0 #5b206f,0 0 17px #ea70ff72}
+#result{margin-top:16px;background:#000;border:2px solid #2dffb6;border-radius:15px;box-shadow:0 0 22px #18ffa05e;padding:17px;text-align:center;font-size:18px;font-weight:850}
+#result[hidden]{display:none}#result .big{font-size:clamp(36px,5vw,58px);font-family:Impact,sans-serif;color:#ffe36b;text-shadow:none}
+#result.perfect .big{animation:flash 1.5s steps(1,end) infinite}
+@keyframes flash{0%,100%{color:#ffde47}25%{color:#ff6290}50%{color:#64e9ff}75%{color:#b58bff}}
+footer{margin:17px auto 0;text-align:center;color:#aad6e5;font-size:13px}
+@media(max-width:980px){.layout{grid-template-columns:1fr}.mission-list{grid-template-columns:repeat(5,minmax(0,1fr));display:grid}.mission-btn{display:grid;justify-items:center;text-align:center;gap:3px;padding:7px 3px;font-size:11px}.mission-btn .number{font-size:22px}}
+@media(max-width:640px){main{padding:9px 8px 35px}header{padding:18px 9px;border-radius:14px}.sidebar,.play{padding:10px;border-radius:14px}.mission-list{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}#questions{grid-template-columns:minmax(0,1fr)}.problem{padding:11px}.figure{width:112px;height:110px}.problem-body{font-size:18px}.answer input{width:53px;height:43px}.answer{width:55px}.frac{min-width:29px}.mission-btn{min-height:49px}.actions .btn{min-width:110px}.playhead{align-items:center}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style></head><body><canvas id="stars" aria-hidden="true"></canvas><main>
+<a class="back" href="https://bleja972.github.io/">← Retour aux jeux</a>
+<header><h1>MISSION FRACTIONS <span>RÉVISIONS CE1 • ARCADE NÉON</span></h1><p>10 missions tirées du livret « 11. Les fractions — Révisions » : observe, compare, range et calcule.</p><div class="arcade"><span class="pill">🔷 Figures interactives</span><span class="pill">⚡ Effets arcade</span><span class="pill">🏅 Scores & corrections</span><span class="pill">📱 Mobile & tablette</span></div></header>
+<div class="layout"><aside class="sidebar"><h2>CHOISIS TA MISSION</h2><div class="mission-list" id="missions"></div></aside><section class="play"><div class="playhead"><div><h2 id="title"></h2><p id="subtitle"></p></div><div class="score" id="score">0 / 0</div></div><div class="progress"><div class="fill" id="fill"></div></div><div id="questions"></div><div class="actions"><button class="btn primary" id="verify">✓ VÉRIFIER</button><button class="btn" id="reset">↺ RECOMMENCER</button><button class="btn pink" id="next">MISSION SUIVANTE →</button></div><div id="result" hidden aria-live="polite"></div></section></div>
+<footer>Révisions des fractions CE1 — jeu adapté pour l’entraînement à partir des compétences des 10 exercices du document fourni. Figures redessinées pour l’interactivité.</footer>
+</main>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s);
+const lesson=[
+{title:'Reconnaître un demi et un quart',sub:'Choisis OUI si exactement la fraction annoncée est coloriée.',q:[
+ {type:'choice',label:'a) Un demi est-il colorié ?',shape:'bar',n:2,k:1,expect:'Oui'},
+ {type:'choice',label:'a) Un demi est-il colorié ?',shape:'wedge',n:2,k:1,expect:'Oui'},
+ {type:'choice',label:'a) Un demi est-il colorié ?',shape:'triangle',n:2,k:1,expect:'Oui'},
+ {type:'choice',label:'a) Un demi est-il colorié ?',shape:'circle',n:2,k:1,expect:'Oui'},
+ {type:'choice',label:'b) Un quart est-il colorié ?',shape:'square',n:4,k:1,expect:'Oui'},
+ {type:'choice',label:'b) Un quart est-il colorié ?',shape:'bar',n:2,k:1,expect:'Non'},
+ {type:'choice',label:'b) Un quart est-il colorié ?',shape:'wedge',n:4,k:1,expect:'Oui'},
+ {type:'choice',label:'b) Un quart est-il colorié ?',shape:'circle',n:4,k:1,expect:'Oui'}]},
+{title:'Lire la partie coloriée',sub:'Écris le numérateur au-dessus de la barre et le dénominateur en dessous.',q:[
+ {type:'fraction',label:'a) Hexagone',shape:'hex',n:6,k:1,expect:'1/6'},
+ {type:'fraction',label:'b) Carré',shape:'wedge',n:8,k:1,expect:'1/8'},
+ {type:'fraction',label:'c) Rectangle',shape:'bar',n:5,k:1,expect:'1/5'}]},
+{title:'Former un tout',sub:'Complète la fraction pour qu’elle soit égale à 1.',q:[
+ {type:'fraction',label:'a) Un tout en trois tiers',statement:'1 tout =',expect:'3/3',fixedDen:3},
+ {type:'fraction',label:'b) Sept parts font un tout',statement:'1 tout =',expect:'7/7',fixedNum:7}]},
+{title:'Le complément à 1',sub:'Trouve la fraction manquante pour obtenir un tout.',q:[
+ {type:'fraction',label:'a) Complète',statement:'2/6 + ___ = 1',expect:'4/6'},
+ {type:'fraction',label:'b) Complète',statement:'7/8 + ___ = 1',expect:'1/8'}]},
+{title:'La partie d’un tout',sub:'Chaque petit triangle colorié représente quelle fraction de la figure entière ?',q:[
+ {type:'fraction',label:'a) Un triangle dans un rectangle de six demi-parts',shape:'bar',n:6,k:1,expect:'1/6'},
+ {type:'fraction',label:'b) Un triangle dans une figure de sept demi-parts',shape:'bar',n:7,k:1,expect:'1/7'}]},
+{title:'Comparer les fractions',sub:'Choisis la plus petite ou la plus grande fraction.',q:[
+ {type:'compare',label:'a) La plus petite',options:['1/2','1/4'],expect:'1/4'},
+ {type:'compare',label:'b) La plus petite',options:['1/3','1/2'],expect:'1/3'},
+ {type:'compare',label:'c) La plus grande',options:['1/8','1/6'],expect:'1/6'},
+ {type:'compare',label:'d) La plus grande',options:['1/3','1/8'],expect:'1/3'}]},
+{title:'Fractions de carrés',sub:'Lis les carrés, puis classe les fractions de la plus grande à la plus petite.',q:[
+ {type:'fraction',label:'a) Carré 1',shape:'square',n:4,k:1,expect:'1/4'},
+ {type:'fraction',label:'a) Carré 2',shape:'square',n:4,k:3,expect:'3/4'},
+ {type:'fraction',label:'a) Carré 3',shape:'square',n:4,k:2,expect:'2/4'},
+ {type:'order',label:'b) Du plus grand au plus petit',options:['1/4','3/4','2/4'],expect:'3/4|2/4|1/4',sign:'>'}]},
+{title:'Fractions de disques',sub:'Observe les huitièmes, puis range les fractions de la plus petite à la plus grande.',q:[
+ {type:'fraction',label:'a) Disque 1',shape:'circle',n:8,k:4,expect:'4/8',fixedDen:8},
+ {type:'fraction',label:'a) Disque 2',shape:'circle',n:8,k:3,expect:'3/8',fixedDen:8},
+ {type:'fraction',label:'a) Disque 3',shape:'circle',n:8,k:6,expect:'6/8',fixedDen:8},
+ {type:'order',label:'b) Du plus petit au plus grand',options:['4/8','3/8','6/8'],expect:'3/8|4/8|6/8',sign:'<'}]},
+{title:'Additionner des fractions',sub:'Additionne les numérateurs. Le dénominateur reste identique.',q:[
+ {type:'fraction',label:'a) Calcul',statement:'1/5 + 2/5 =',expect:'3/5'},
+ {type:'fraction',label:'b) Calcul',statement:'4/7 + 3/7 =',expect:'7/7'},
+ {type:'fraction',label:'c) Calcul',statement:'2/8 + 3/8 =',expect:'5/8'},
+ {type:'fraction',label:'d) Calcul',statement:'4/9 + 5/9 =',expect:'9/9'}]},
+{title:'Soustraire des fractions',sub:'Soustrais les numérateurs lorsque les dénominateurs sont identiques.',q:[
+ {type:'fraction',label:'a) Calcul',statement:'4/7 − 2/7 =',expect:'2/7'},
+ {type:'fraction',label:'b) Calcul',statement:'1 − 7/8 =',expect:'1/8'},
+ {type:'fraction',label:'c) Calcul',statement:'4/5 − 3/5 =',expect:'1/5'},
+ {type:'fraction',label:'d) Calcul',statement:'1 − 4/9 =',expect:'5/9'}]}
+];
+let mission=0,finished=false,state=[],audio=null,scores={};
+const nameList=['Demi et quart','Fraction coloriée','Un tout','Compléments à 1','Partie d’un tout','Comparer','Carrés','Disques','Additions','Soustractions'];
+function beep(kind){try{audio=audio||new (window.AudioContext||window.webkitAudioContext)();if(audio.state==='suspended')audio.resume();const seq=kind==='win'?[523,659,784]:kind==='bad'?[230,180]:[420];seq.forEach((f,i)=>{const o=audio.createOscillator(),g=audio.createGain(),t=audio.currentTime+i*.09;o.type=kind==='bad'?'sawtooth':'triangle';o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.035,t+.012);g.gain.exponentialRampToValueAtTime(.0001,t+.16);o.connect(g).connect(audio.destination);o.start(t);o.stop(t+.17)})}catch(e){}}
+function fracHtml(str){const a=String(str).split('/');return a.length!==2?str:'<span class="frac"><span class="top">'+a[0]+'</span><span class="bar"></span><span class="bottom">'+a[1]+'</span></span>'}
+function mathHtml(s){return String(s).replace(/\d+\/\d+/g,t=>fracHtml(t)).replaceAll('___','<strong>?</strong>')}
+function pathSlice(cx,cy,r,start,end){const a=start*Math.PI/180,b=end*Math.PI/180;const x1=cx+r*Math.cos(a),y1=cy+r*Math.sin(a),x2=cx+r*Math.cos(b),y2=cy+r*Math.sin(b);return 'M'+cx+' '+cy+'L'+x1+' '+y1+'A'+r+' '+r+' 0 '+(end-start>180?1:0)+' 1 '+x2+' '+y2+'Z'}
+function figureSvg(shape,n,k){
+ let body='',col='#91c4ff',empty='#080f23',stroke='#d5efff';
+ if(shape==='bar'){for(let j=0;j<n;j++){const hh=96/n;body+='<rect x="28" y="'+(17+j*hh)+'" width="74" height="'+hh+'" fill="'+(j<k?col:empty)+'" stroke="'+stroke+'" stroke-width="1.6"/>'}}
+ else if(shape==='square'){for(let i=0;i<4;i++){const x=23+(i%2)*42,y=23+Math.floor(i/2)*42;body+='<rect x="'+x+'" y="'+y+'" width="42" height="42" fill="'+(i<k?col:empty)+'" stroke="'+stroke+'" stroke-width="1.8"/>'}}
+ else if(shape==='triangle'){body='<path d="M65 18L112 103H18Z" fill="'+empty+'" stroke="'+stroke+'" stroke-width="2"/><path d="M65 18L65 103H18Z" fill="'+col+'" stroke="'+stroke+'" stroke-width="1.3"/><path d="M65 18V103" stroke="'+stroke+'" stroke-dasharray="4 3"/>'}
+ else if(shape==='hex'){for(let i=0;i<6;i++){const a=i*60-90,b=a+60;body+='<path d="'+pathSlice(65,65,47,a,b)+'" fill="'+(i<k?col:empty)+'" stroke="'+stroke+'" stroke-width="1.6"/>'}}
+ else{let slices=shape==='wedge'?n:n;for(let i=0;i<slices;i++){let a=-90+i*360/slices,b=a+360/slices;body+='<path d="'+pathSlice(65,65,45,a,b)+'" fill="'+(i<k?col:empty)+'" stroke="'+stroke+'" stroke-width="1.6"/>'}}
+ if(shape==='wedge'){body+='<rect x="18" y="18" width="94" height="94" rx="0" fill="none" stroke="'+stroke+'" stroke-width="1.7"/>'}
+ return '<svg class="figure" viewBox="0 0 130 130" role="img" aria-label="'+k+' parts coloriées sur '+n+'">'+body+'</svg>'
+}
+function answerHtml(q){const [num,den]=q.expect.split('/');return '<span class="answer"><input inputmode="numeric" pattern="[0-9]*" aria-label="Numérateur" data-num type="text" maxlength="3" '+(q.fixedNum?'value="'+q.fixedNum+'" readonly':'')+'><span class="bar"></span><input inputmode="numeric" pattern="[0-9]*" aria-label="Dénominateur" data-den type="text" maxlength="3" '+(q.fixedDen?'value="'+q.fixedDen+'" readonly':'')+'></span>'}
+function renderCard(q,i){let content='',controls='';
+ if(q.shape)content+=figureSvg(q.shape,q.n,q.k);
+ if(q.statement)content+='<span class="statement">'+mathHtml(q.statement)+'</span>';
+ if(q.type==='fraction'){controls=answerHtml(q)}
+ else if(q.type==='choice'||q.type==='compare')controls='<div class="choices">'+(q.options||['Oui','Non']).map((x,j)=>'<button type="button" class="choice" data-select="'+j+'" aria-pressed="false">'+(x.includes('/')?fracHtml(x):x)+'</button>').join('')+'</div>';
+ else if(q.type==='order')controls='<div class="sort-options">'+q.options.map((x,j)=>'<button type="button" class="sort-option" data-sort="'+j+'">'+fracHtml(x)+'</button>').join('')+'</div><div class="sort-seq" aria-label="Ordre choisi">Choisis les trois fractions</div><button type="button" class="btn undo" data-undo style="min-height:39px;font-size:12px;margin-top:8px">↶ Effacer le dernier choix</button>';
+ return '<article class="problem" data-q="'+i+'"><div class="problem-head">'+(i+1)+'. '+q.label+'</div><div class="problem-body">'+content+controls+'</div><div class="note" aria-live="polite"></div></article>'
+}
+function scoreProgress(){const l=lesson[mission].q;let answered=state.filter((s,i)=>{let card=document.querySelector('[data-q="'+i+'"]');if(l[i].type==='fraction')return Array.from(card.querySelectorAll('input')).every(x=>x.value.trim()!=='');if(l[i].type==='order')return s.length===3;return s!==null}).length;$('#fill').style.width=Math.round(answered/l.length*100)+'%';$('#score').textContent=answered+' / '+l.length}
+function render(){finished=false;state=lesson[mission].q.map(q=>q.type==='order'?[]:null);$('#title').textContent='MISSION '+(mission+1)+' · '+lesson[mission].title.toUpperCase();$('#subtitle').textContent=lesson[mission].sub;$('#missions').innerHTML=nameList.map((s,i)=>'<button class="mission-btn '+(i===mission?'active':'')+'" data-m="'+i+'"><span class="number">'+String(i+1).padStart(2,'0')+'</span><span>'+s+'</span></button>').join('');$('#questions').innerHTML=lesson[mission].q.map(renderCard).join('');$('#fill').style.width='0%';$('#score').textContent='0 / '+lesson[mission].q.length;$('#result').hidden=true;$('#result').className='';$('#verify').disabled=false;$('#next').textContent=mission===9?'REVENIR À LA MISSION 1 ↻':'MISSION SUIVANTE →';attach()}
+function attach(){
+ document.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{mission=+b.dataset.m;beep('tap');render()});
+ document.querySelectorAll('[data-q]').forEach(card=>{
+ let i=+card.dataset.q,q=lesson[mission].q[i];
+ card.querySelectorAll('input').forEach(input=>input.addEventListener('input',()=>{input.value=input.value.replace(/\D/g,'').slice(0,3);scoreProgress()}));
+ card.querySelectorAll('[data-select]').forEach(btn=>btn.onclick=()=>{if(finished)return;card.querySelectorAll('[data-select]').forEach(b=>{b.classList.toggle('selected',b===btn);b.setAttribute('aria-pressed',String(b===btn))});state[i]=q.type==='choice'?['Oui','Non'][+btn.dataset.select]:q.options[+btn.dataset.select];beep('tap');scoreProgress()});
+ function renderSort(){card.querySelectorAll('[data-sort]').forEach(b=>b.classList.toggle('used',state[i].includes(q.options[+b.dataset.sort])));card.querySelector('.sort-seq').innerHTML=state[i].length?state[i].map(fracHtml).join('<span style="color:#fff;padding:0 6px">'+q.sign+'</span>'):'Choisis les trois fractions';scoreProgress()}
+ card.querySelectorAll('[data-sort]').forEach(b=>b.onclick=()=>{if(finished)return;const v=q.options[+b.dataset.sort];if(state[i].includes(v)||state[i].length>=q.options.length)return;state[i].push(v);renderSort();beep('tap')});
+ const undo=card.querySelector('[data-undo]');if(undo)undo.onclick=()=>{if(finished)return;state[i].pop();renderSort();beep('tap')};
+ })}
+function verify(){if(finished)return;finished=true;let right=0;lesson[mission].q.forEach((q,i)=>{const card=document.querySelector('[data-q="'+i+'"]');let actual;if(q.type==='fraction'){const a=card.querySelector('[data-num]').value.trim(),b=card.querySelector('[data-den]').value.trim();actual=a&&b?a+'/'+b:''}
+ else if(q.type==='order')actual=state[i].join('|');else actual=state[i]||'';
+ const good=actual===q.expect;if(good)right++;card.classList.add(good?'ok':'no');card.querySelector('.note').innerHTML=good?'✓ BRAVO !':'Réponse attendue : '+(q.type==='order'?q.expect.split('|').map(fracHtml).join(' '+q.sign+' '):q.expect.includes('/')?fracHtml(q.expect):q.expect);card.querySelectorAll('input').forEach(el=>el.readOnly=true);card.querySelectorAll('button').forEach(el=>el.disabled=true)});
+ const n=lesson[mission].q.length,pct=Math.round(100*right/n);scores[mission]=pct;$('#score').textContent=right+' / '+n;$('#fill').style.width='100%';$('#verify').disabled=true;const perfect=right===n;$('#result').className=perfect?'perfect':'';$('#result').hidden=false;$('#result').innerHTML='<div class="big">'+(perfect?'BRAVO !':pct+' %')+'</div><div>'+right+' bonnes réponses sur '+n+' · '+pct+' %</div><p style="font-size:14px;font-weight:600">Les corrections sont indiquées sous les questions.</p>';beep(perfect?'win':right>0?'tap':'bad');if(perfect)confetti()}
+function confetti(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const colors=['#44faff','#ffe352','#ff62cf','#61ffb0','#9c81ff'];for(let i=0;i<28;i++){let s=document.createElement('span');s.style.cssText='position:fixed;z-index:30;pointer-events:none;width:8px;height:15px;border-radius:3px;left:'+Math.random()*100+'vw;top:-10px;background:'+colors[i%5]+';transition:transform 1.6s ease-in,opacity 1.6s';document.body.append(s);requestAnimationFrame(()=>{s.style.transform='translate('+(Math.random()*200-100)+'px,100vh) rotate(680deg)';s.style.opacity='0'});setTimeout(()=>s.remove(),1800)}}
+$('#verify').onclick=verify;$('#reset').onclick=()=>{render();beep('tap')};$('#next').onclick=()=>{mission=(mission+1)%10;render();beep('tap');document.querySelector('.play').scrollIntoView({behavior:'smooth',block:'start'})};
+const canvas=$('#stars'),ctx=canvas.getContext('2d');if(ctx&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){let dots=[],w=0,h=0;function size(){w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;dots=Array.from({length:Math.min(85,Math.max(30,Math.floor(w*h/14500)))},()=>({x:Math.random()*w,y:Math.random()*h,s:.15+Math.random()*.36,r:.5+Math.random()*1.2}))}size();window.addEventListener('resize',size,{passive:true});function draw(){ctx.clearRect(0,0,w,h);ctx.fillStyle='#a4dfff';dots.forEach(s=>{s.y=(s.y+s.s)%h;ctx.globalAlpha=.12+.24*(s.r/1.7);ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill()});requestAnimationFrame(draw)}requestAnimationFrame(draw)}
+render();
+})();
+</script></body></html>
