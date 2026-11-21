@@ -1,5 +1,30 @@
 [
   {
+    "id": "en-mission-calcul-cm1-livret-3",
+    "slug": "math-mission-grade4-booklet-3",
+    "title": "Math Mission — Grade 4 · Booklet 3",
+    "url": "/en/games/math-mission-grade4-booklet-3/",
+    "path": "/en/games/math-mission-grade4-booklet-3/",
+    "description": "Seven orbital arcade missions with 196 calculations: multiplication by 4 and 8, adding and subtracting whole and decimal quantities, multiplying and dividing decimals by 10, and multiples of 25. Original timings, scores and corrections are preserved.",
+    "short": "7 missions · 196 problems · Decimals and multiplication.",
+    "objective": "Practise mental calculation with multiplication, decimal place value and multiples of 25.",
+    "skill": "calcul-mental",
+    "skillName": "Mental calculation",
+    "category": "calcul",
+    "group": "calcul",
+    "groupName": "Calculation",
+    "level": "CM1",
+    "levels": [
+      "CM1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-1.svg",
+    "imageAlt": "Grade 4 orbital arcade mathematics game with bright panels and multiplication and decimal calculations.",
+    "sourceId": "mission-calcul-cm1-livret-3"
+  },
+  {
     "id": "en-mission-calcul-cm1-livret-2",
     "slug": "math-mission-grade4-booklet-2",
     "title": "Math Mission — Grade 4 · Booklet 2",
