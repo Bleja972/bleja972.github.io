@@ -1,5 +1,30 @@
 [
   {
+    "id": "en-mission-calcul-cm1-livret-1",
+    "slug": "math-mission-grade4-booklet-1",
+    "title": "Math Mission — Grade 4 · Booklet 1",
+    "url": "/en/games/math-mission-grade4-booklet-1/",
+    "path": "/en/games/math-mission-grade4-booklet-1/",
+    "description": "Seven arcade math missions with 250 calculations, multiplication tables, adding or subtracting 9, 19 and 29, number complements, timed exercises, correction and scores.",
+    "short": "7 missions · 250 calculations · Timed arcade challenges.",
+    "objective": "Practice multiplication facts, addition, subtraction and complements to the next hundred.",
+    "skill": "calcul-mental",
+    "skillName": "Mental calculation",
+    "category": "calcul",
+    "group": "calcul",
+    "groupName": "Calculation",
+    "level": "CM1",
+    "levels": [
+      "CM1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-1.svg",
+    "imageAlt": "Math Mission Grade 4 Booklet 1 — orbital arcade mental calculation game.",
+    "sourceId": "mission-calcul-cm1-livret-1"
+  },
+  {
     "id": "en-montessori-number-cards",
     "slug": "cartons-montessori-ce1",
     "title": "Number magic — Montessori cards",
