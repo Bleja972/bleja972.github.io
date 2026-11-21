@@ -1,5 +1,30 @@
 [
   {
+    "id": "en-mission-calcul-cm1-livret-2",
+    "slug": "math-mission-grade4-booklet-2",
+    "title": "Math Mission — Grade 4 · Booklet 2",
+    "url": "/en/games/math-mission-grade4-booklet-2/",
+    "path": "/en/games/math-mission-grade4-booklet-2/",
+    "description": "Seven orbital arcade missions with 178 calculations, multiplication facts, addition and subtraction, multiplying by powers of ten, and the distributive property. Identical timers and exercises to the French Booklet 2.",
+    "short": "7 missions · 178 problems · Timed challenges and arcade effects.",
+    "objective": "Practice Grade 4 multiplication, mental addition and subtraction, and the distributive property.",
+    "skill": "calcul-mental",
+    "skillName": "Mental calculation",
+    "category": "calcul",
+    "group": "calcul",
+    "groupName": "Calculation",
+    "level": "CM1",
+    "levels": [
+      "CM1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-1.svg",
+    "imageAlt": "Orbital arcade mathematics game in English with luminous buttons and calculation exercises.",
+    "sourceId": "mission-calcul-cm1-livret-2"
+  },
+  {
     "id": "en-mission-calcul-cm1-livret-1",
     "slug": "math-mission-grade4-booklet-1",
     "title": "Math Mission — Grade 4 · Booklet 1",
