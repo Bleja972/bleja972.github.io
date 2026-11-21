@@ -1,5 +1,30 @@
 [
   {
+    "id": "mission-fractions-ce1-revisions",
+    "slug": "mission-fractions-ce1-revisions",
+    "title": "Mission Fractions CE1 — Révisions",
+    "url": "/jeux/mission-fractions-ce1-revisions/",
+    "path": "/jeux/mission-fractions-ce1-revisions/",
+    "description": "Jeu CE1 sur les fractions inspiré de la fiche 11 Les fractions — Révisions : 10 missions pour reconnaître un demi et un quart, lire des figures coloriées, former un tout, compléter, comparer et ranger des fractions, additionner et soustraire. Réponses verticales, scores, corrections, sons et interface arcade néon 3D.",
+    "short": "10 missions CE1 · Fractions coloriées, comparer, ranger et calculer · Effets arcade.",
+    "objective": "Identifier, écrire, comparer, ordonner, additionner et soustraire des fractions simples.",
+    "skill": "fractions-ce1",
+    "skillName": "Fractions simples",
+    "category": "numeration",
+    "group": "numeration",
+    "groupName": "Numération",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-fractions-ce1-revisions.svg",
+    "imageAlt": "Vignette du jeu Mission Fractions CE1 : interface noire futuriste, figures partagées et fractions verticales, boutons néon et score.",
+    "playClicks": 0
+  },
+  {
     "id": "jeu-104",
     "slug": "mission-negation-ce1",
     "title": "Mission Négation — CE1",
