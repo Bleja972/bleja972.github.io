@@ -386,6 +386,75 @@ body>nav{background:#000!important;color:#f1f7ff!important;border-bottom:1px sol
  font-weight:900!important;letter-spacing:.04em;
 }
 #ours-banquise .controls .eat:hover:not(:disabled){box-shadow:inset 0 2px #fff6ca88,0 7px 0 #51370b,0 0 24px #ffd568!important}
+
+/* ADAPTATION RESPONSIVE : smartphones, tablettes, orientation portrait et paysage */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+#ours-banquise{width:100%;max-width:100%;box-sizing:border-box;overflow-x:clip}
+#ours-banquise *,#ours-banquise *::before,#ours-banquise *::after{box-sizing:border-box}
+#ours-banquise .shell{min-width:0}
+#ours-banquise .panel{min-width:0}
+#ours-banquise .grid{width:100%;max-width:520px;min-width:0;aspect-ratio:1;grid-template-columns:repeat(8,minmax(0,1fr));grid-template-rows:repeat(8,minmax(0,1fr))}
+#ours-banquise .grid .cell{min-width:0;min-height:0;aspect-ratio:1}
+#ours-banquise .program{max-width:100%;min-width:0;overflow-wrap:anywhere}
+#ours-banquise button,#ours-banquise select{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+#ours-banquise .head select{max-width:140px}
+@media(min-width:681px) and (max-width:1100px){
+ #ours-banquise{padding:clamp(10px,2vw,18px)!important}
+ #ours-banquise .shell{grid-template-columns:1fr!important;gap:18px!important}
+ #ours-banquise .panel{padding:clamp(12px,2vw,18px)!important}
+ #ours-banquise .grid{max-width:min(70vw,560px)!important;margin-inline:auto}
+ #ours-banquise .controls{grid-template-columns:repeat(3,82px)!important;gap:14px!important}
+ #ours-banquise .controls .arrow,#ours-banquise .controls .run{width:82px!important;height:82px!important;min-width:82px!important;max-width:82px!important;min-height:82px!important}
+ #ours-banquise .controls .arrow{font-size:57px!important}
+ #ours-banquise .program .instruction{width:72px!important;height:72px!important;min-width:72px!important;min-height:72px!important;flex:0 0 72px!important;font-size:54px!important}
+}
+@media(max-width:680px){
+ #ours-banquise{padding:10px!important;border-radius:0!important;min-height:100dvh!important}
+ #ours-banquise .shell{grid-template-columns:minmax(0,1fr)!important;gap:13px!important}
+ #ours-banquise .panel{padding:clamp(8px,2.7vw,12px)!important;border-radius:13px!important}
+ #ours-banquise .header{padding:10px 9px!important;margin-bottom:12px!important}
+ #ours-banquise .hero-brand{gap:8px!important;min-height:70px!important}
+ #ours-banquise .title-robot{width:clamp(49px,16vw,78px)!important;height:clamp(61px,18vw,88px)!important}
+ #ours-banquise .hero-brand h1{font-size:clamp(19px,6vw,32px)!important;letter-spacing:.01em!important;line-height:1.16!important}
+ #ours-banquise .hero-brand h1 span{font-size:.47em!important;letter-spacing:.045em!important}
+ #ours-banquise .intro{font-size:clamp(12px,3.4vw,15px);margin:7px 0 0!important}
+ #ours-banquise .head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+ #ours-banquise .head strong{font-size:clamp(14px,4vw,19px)!important}
+ #ours-banquise .head label{display:flex;align-items:center;gap:6px;font-size:14px}
+ #ours-banquise .head select{min-height:44px;max-width:120px;padding:8px!important;font-size:14px}
+ #ours-banquise .grid{width:min(100%,500px)!important;max-width:500px!important;gap:clamp(1px,.35vw,3px)!important;padding:3px!important}
+ #ours-banquise .grid .cell{border-width:1px!important;border-radius:3px!important;min-width:0;min-height:0}
+ #ours-banquise .grid .cell.water::after{font-size:clamp(20px,7vw,37px)!important}
+ #ours-banquise .mode{margin-bottom:10px!important}
+ #ours-banquise .mode button{width:100%;min-height:48px!important;font-size:15px}
+ #ours-banquise .program{min-height:94px!important;padding:9px!important;gap:7px!important}
+ #ours-banquise .program .instruction{width:clamp(43px,12.4vw,60px)!important;min-width:clamp(43px,12.4vw,60px)!important;height:clamp(43px,12.4vw,60px)!important;min-height:clamp(43px,12.4vw,60px)!important;flex:0 0 clamp(43px,12.4vw,60px)!important;font-size:clamp(32px,9vw,46px)!important;border-radius:10px!important}
+ #ours-banquise .program .instruction.collect{font-size:clamp(23px,6vw,30px)!important}
+ #ours-banquise .controls{grid-template-columns:repeat(3,clamp(65px,21vw,82px))!important;gap:clamp(8px,2.5vw,14px)!important;margin:14px auto 20px!important}
+ #ours-banquise .controls .arrow,#ours-banquise .controls .run{width:clamp(65px,21vw,82px)!important;min-width:clamp(65px,21vw,82px)!important;max-width:clamp(65px,21vw,82px)!important;height:clamp(65px,21vw,82px)!important;min-height:clamp(65px,21vw,82px)!important}
+ #ours-banquise .controls .arrow{font-size:clamp(48px,15vw,64px)!important;border-radius:13px!important}
+ #ours-banquise .controls .run{font-size:25px!important}
+ #ours-banquise .controls .eat{width:100%!important;min-height:54px!important;font-size:clamp(14px,4.2vw,18px)!important}
+ #ours-banquise .buttons{display:flex;flex-wrap:wrap;gap:10px!important}
+ #ours-banquise .buttons button{min-width:0;flex:1 1 130px;min-height:48px!important;padding:10px 9px!important;font-size:clamp(12px,3.5vw,15px)!important}
+ #ours-banquise .message{font-size:clamp(13px,3.7vw,17px);padding:11px!important}
+ #ours-banquise .small{font-size:clamp(12px,3.3vw,14px)}
+}
+@media(max-width:360px){
+ #ours-banquise{padding:6px!important}
+ #ours-banquise .panel{padding:7px!important}
+ #ours-banquise .head{gap:5px}
+ #ours-banquise .head strong{font-size:13px!important}
+ #ours-banquise .head select{max-width:102px}
+ #ours-banquise .controls{grid-template-columns:repeat(3,65px)!important;gap:9px!important}
+ #ours-banquise .controls .arrow,#ours-banquise .controls .run{width:65px!important;height:65px!important;min-width:65px!important;max-width:65px!important;min-height:65px!important}
+ #ours-banquise .controls .arrow{font-size:48px!important}
+ #ours-banquise .program .instruction{width:43px!important;min-width:43px!important;height:43px!important;min-height:43px!important;flex-basis:43px!important;font-size:33px!important}
+}
+@media(min-width:681px) and (max-height:650px) and (orientation:landscape){
+ #ours-banquise .shell{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)!important;align-items:start}
+ #ours-banquise .grid{max-width:min(48vw,460px)!important}
+}
 </style>
 <div class="header"><div class="hero-brand"><img class="title-robot" data-title-robot alt="Petit robot futuriste du jeu"><h1>MISSION NÉON <span>LE ROBOT DES CRISTAUX</span></h1></div><p class="intro">Programme ton robot, évite les croix rouges et récupère tous les cristaux !</p></div>
 <div class="shell"><section class="panel"><div class="head"><strong>⚡ Grille noire · cases interdites <span style="color:#ff537f;text-shadow:0 0 9px #ff2448,0 0 20px #ff2448">✕</span></strong><label>Défi <select data-level aria-label="Choisir le défi"></select></label></div><div class="grid" data-grid role="grid" aria-label="Grille de la banquise"></div><p class="small" data-fish></p></section><section class="panel"><div class="head"><strong>⚡ Console de pilotage</strong><span class="small" data-count>0 / 24</span></div><div class="mode" role="group" aria-label="Choisir les règles"><button type="button" data-mode="eat" aria-pressed="true">💎 Collecte manuelle</button></div><div class="program" data-program aria-label="Instructions du programme"></div><div class="controls" aria-label="Commandes et lancement du programme"><button type="button" class="btn arrow up" data-add="U" aria-label="Haut">↑</button><button type="button" class="btn arrow left" data-add="L" aria-label="Gauche">←</button><button type="button" class="btn run" data-run aria-label="Exécuter le programme" title="Lancer le programme">GO</button><button type="button" class="btn arrow" data-add="D" aria-label="Bas">↓</button><button type="button" class="btn arrow" data-add="R" aria-label="Droite">→</button><button type="button" class="btn eat" data-add="E" aria-label="Ajouter l’instruction Collecter">💎 COLLECTER</button></div><div class="buttons"><button type="button" class="btn" data-undo>Effacer la dernière</button><button type="button" class="btn" data-clear>Tout effacer</button></div><div class="buttons"><button type="button" class="btn next" data-next>Défi suivant →</button></div><p class="message" role="status" aria-live="polite" data-msg>Guide ton robot vers les cristaux à l’aide des flèches.</p><p class="small">Chaque flèche déplace le robot d’une case. Sur un cristal, ajoute 💎 COLLECTER dans ton programme. Maximum : 24 instructions.</p></section></div>
