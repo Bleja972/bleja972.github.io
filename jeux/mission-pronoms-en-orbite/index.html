@@ -100,6 +100,24 @@ main::before,main::after{
  100%{--frame-hue:547}
 }
 @media(prefers-reduced-motion:reduce){main{animation:none}}
+
+/* La mascotte garde sa place quand elle lève ses trois bras. */
+.scene{grid-template-columns:minmax(0,1fr) minmax(88px,25%);min-height:146px}
+.scene h2{padding-inline:10px;overflow-wrap:anywhere}
+.alien{position:relative;width:102px;height:120px;justify-self:center;isolation:isolate;pointer-events:none;filter:drop-shadow(0 2px 8px #ffda6644)}
+.alien-body{position:absolute;z-index:1;left:29px;top:38px;width:48px;height:69px;border-radius:58% 58% 46% 55%;transform:rotate(9deg);background:radial-gradient(ellipse at 29% 20%,#fff7b8,#ffe255 42%,#de7e13 92%);box-shadow:inset -4px -5px 8px #a65a2590,inset 2px 2px 4px #fffbe2}
+.alien-body::before{content:"";position:absolute;left:16px;top:-7px;width:12px;height:11px;border-radius:5px 6px 3px 3px;background:linear-gradient(110deg,#aade45,#507e24)}
+.alien-body::after{content:"";position:absolute;left:14px;top:37px;width:16px;height:7px;border-bottom:3px solid #592c38;border-radius:50%}
+.alien-eye{position:absolute;top:23px;width:9px;height:13px;border-radius:50%;background:radial-gradient(circle at 36% 29%,white 0 18%,#19333a 26% 100%)}
+.alien-eye:first-child{left:10px}.alien-eye:last-child{right:10px}
+.alien-arm{position:absolute;left:var(--x);top:var(--y);height:35px;width:9px;border-radius:8px;transform-origin:50% 5px;transform:rotate(var(--rest));background:linear-gradient(90deg,#e98923,#fff39a 57%,#f6bd33);transition:transform .3s cubic-bezier(.25,.75,.28,1.32)}
+.alien-arm::after{content:"";position:absolute;bottom:-4px;left:-2px;width:13px;height:11px;border-radius:50%;background:#fff190}
+.alien-arm.left{--x:30px;--y:65px;--rest:44deg;--raised:139deg}
+.alien-arm.right{--x:68px;--y:73px;--rest:-39deg;--raised:-134deg}
+.alien-arm.third{--x:64px;--y:53px;--rest:-73deg;--raised:-177deg}
+.alien.celebrate .alien-arm{transform:rotate(var(--raised))}
+.alien.celebrate .alien-body::after{height:10px;background:#592c38}
+@media(max-width:520px){.alien{transform:scale(.77)}.scene{min-height:128px}}
 </style>
 <main>
 <header><h1>Mission Pronoms : en orbite ! · CE1</h1><button class="utility" id="sound" aria-pressed="true">Son activé</button></header>
@@ -108,7 +126,7 @@ main::before,main::after{
 <div class="status"><span id="progressText"></span><span id="score"></span></div>
 <progress id="progress" max="20" value="0" aria-label="Réponses validées"></progress>
 <p>Remplace le groupe nominal par le bon pronom.</p>
-<div class="scene"><canvas id="effects" aria-hidden="true"></canvas><h2 id="noun" tabindex="-1"></h2></div>
+<div class="scene"><canvas id="effects" aria-hidden="true"></canvas><h2 id="noun" tabindex="-1"></h2><div id="alien" class="alien" aria-hidden="true"><span class="alien-arm left"></span><span class="alien-arm right"></span><span class="alien-arm third"></span><span class="alien-body"><span class="alien-eye"></span><span class="alien-eye"></span></span></div></div>
 <div class="answers" role="group" aria-label="Pronoms proposés">
 <button class="pronoun" style="--h:192" data-answer="il">il</button>
 <button class="pronoun" style="--h:322" data-answer="elle">elle</button>
@@ -194,6 +212,7 @@ function status(){
 }
 function showQuestion(focus){
  attempted=false;solved=false;
+ $('alien').classList.remove('celebrate');
  $('noun').textContent=deck[index].noun;
  $('feedback').textContent='';
  $('feedback').dataset.tone='';
@@ -234,6 +253,7 @@ function answer(button){
  if(!attempted)score++;
  solved=true;
  button.classList.add('good');
+ $('alien').classList.add('celebrate');
  answers.forEach(choice=>choice.setAttribute('aria-disabled','true'));
  $('feedback').textContent=`Bravo ! « ${question.noun} » se remplace par « ${question.answer} ».`;
  $('next').textContent=index+1===deck.length?'Voir le bilan →':'Groupe suivant →';
