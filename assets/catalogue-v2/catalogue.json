@@ -3129,5 +3129,30 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-105.webp",
     "imageAlt": "Soustraction posée dans le cockpit, avec jetons 3D et résultat sous la barre.",
     "playClicks": 1
+  },
+  {
+    "id": "jeu-109",
+    "slug": "mission-pronoms-en-orbite",
+    "title": "Mission Pronoms : en orbite !",
+    "url": "/jeux/mission-pronoms-en-orbite/",
+    "path": "/jeux/mission-pronoms-en-orbite/",
+    "description": "Remplace un groupe nominal par il, elle, ils ou elles. Deux parties de 20 groupes nominaux pour le CE1.",
+    "short": "Remplace un groupe nominal par il, elle, ils ou elles. Deux parties de 20 groupes nominaux pour le CE1.",
+    "objective": "Choisir un pronom personnel sujet selon le genre et le nombre du groupe nominal.",
+    "skill": "pronoms-personnels-sujets",
+    "skillName": "Pronoms personnels sujets",
+    "category": "grammaire",
+    "group": "grammaire",
+    "groupName": "Grammaire",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Français",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/jeu-109.webp",
+    "imageAlt": "Cockpit du jeu Mission Pronoms et boutons il, elle, ils, elles.",
+    "playClicks": 0
   }
 ]
