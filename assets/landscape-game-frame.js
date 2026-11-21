@@ -16,7 +16,7 @@ try{
  const game=games[key],url=new URL(game.url,'https://bleja972.github.io/');if(!['http:','https:'].includes(url.protocol))throw Error('invalid url');
  document.title=game.title;$('game-title').textContent=game.title;$('direct-link').href=url.href;$('direct-link').hidden=false;
  const pdfLink=$('game-pdf-link');
- if(pdfLink&&game.pdfUrl){pdfLink.href=game.pdfUrl;pdfLink.hidden=false;if(id==='jeu-75'){pdfLink.removeAttribute('download');pdfLink.textContent='📄 PDF · Dictées 7 à 12';pdfLink.classList.add('dict-pdf-nav-3d');pdfLink.target='_blank';pdfLink.rel='noopener noreferrer';}}
+ if(pdfLink&&game.pdfUrl){pdfLink.href=game.pdfUrl;if(id==='jeu-27'){pdfLink.textContent='📄 Exercices PDF à imprimer';pdfLink.classList.add('pronoms-pdf-nav-3d');pdfLink.target='_blank';pdfLink.rel='noopener noreferrer';pdfLink.removeAttribute('download');try{const pdfCheck=await fetch(game.pdfUrl,{method:'HEAD'});pdfLink.hidden=!pdfCheck.ok;}catch{pdfLink.hidden=true;}}else{pdfLink.hidden=false;}if(id==='jeu-75'){pdfLink.removeAttribute('download');pdfLink.textContent='📄 PDF · Dictées 7 à 12';pdfLink.classList.add('dict-pdf-nav-3d');pdfLink.target='_blank';pdfLink.rel='noopener noreferrer';}}
  const frame=document.createElement('iframe');frame.title=game.title;frame.src=url.href;frame.allow='fullscreen; autoplay';frame.allowFullscreen=true;frame.dataset.blejaGameFrame='';$('game-container').replaceChildren(frame);
 }catch{$('missing').textContent=text.error;}
 })();
