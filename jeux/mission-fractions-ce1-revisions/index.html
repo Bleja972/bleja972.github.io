@@ -105,20 +105,20 @@ const lesson=[
  {type:'choice',label:'b) Un quart est-il colorié ?',shape:'square',n:4,k:1,expect:'Oui'},
  {type:'choice',label:'b) Un quart est-il colorié ?',shape:'bar',n:2,k:1,expect:'Non'},
  {type:'choice',label:'b) Un quart est-il colorié ?',shape:'wedge',n:4,k:1,expect:'Oui'},
- {type:'choice',label:'b) Un quart est-il colorié ?',shape:'circle',n:4,k:1,expect:'Oui'}]},
+ {type:'choice',label:'b) Un quart est-il colorié ?',shape:'diamond',n:4,k:1,expect:'Oui'}]},
 {title:'Lire la partie coloriée',sub:'Écris le numérateur au-dessus de la barre et le dénominateur en dessous.',q:[
- {type:'fraction',label:'a) Hexagone',shape:'hex',n:6,k:1,expect:'1/6'},
- {type:'fraction',label:'b) Carré',shape:'wedge',n:8,k:1,expect:'1/8'},
- {type:'fraction',label:'c) Rectangle',shape:'bar',n:5,k:1,expect:'1/5'}]},
+ {type:'fraction',label:'',shape:'hex',n:6,k:1,expect:'1/6'},
+ {type:'fraction',label:'',shape:'wedge',n:8,k:1,expect:'1/8'},
+ {type:'fraction',label:'',shape:'bar',n:5,k:1,expect:'1/5'}]},
 {title:'Former un tout',sub:'Complète la fraction pour qu’elle soit égale à 1.',q:[
  {type:'fraction',label:'a) Un tout en trois tiers',statement:'1 tout =',expect:'3/3',fixedDen:3},
  {type:'fraction',label:'b) Sept parts font un tout',statement:'1 tout =',expect:'7/7',fixedNum:7}]},
 {title:'Le complément à 1',sub:'Trouve la fraction manquante pour obtenir un tout.',q:[
  {type:'fraction',label:'a) Complète',statement:'2/6 + ___ = 1',expect:'4/6'},
  {type:'fraction',label:'b) Complète',statement:'7/8 + ___ = 1',expect:'1/8'}]},
-{title:'La partie d’un tout',sub:'Chaque petit triangle colorié représente quelle fraction de la figure entière ?',q:[
- {type:'fraction',label:'a) Un triangle dans un rectangle de six demi-parts',shape:'bar',n:6,k:1,expect:'1/6'},
- {type:'fraction',label:'b) Un triangle dans une figure de sept demi-parts',shape:'bar',n:7,k:1,expect:'1/7'}]},
+{title:'La partie d’un tout',sub:'',q:[
+ {type:'fraction',label:'',shape:'bar',n:6,k:1,expect:'1/6'},
+ {type:'fraction',label:'',shape:'bar',n:7,k:1,expect:'1/7'}]},
 {title:'Comparer les fractions',sub:'Choisis la plus petite ou la plus grande fraction.',q:[
  {type:'compare',label:'a) La plus petite',options:['1/2','1/4'],expect:'1/4'},
  {type:'compare',label:'b) La plus petite',options:['1/3','1/2'],expect:'1/3'},
@@ -158,6 +158,14 @@ function figureSvg(shape,n,k,index=0){
  if(shape==='bar'){for(let j=0;j<n;j++){const hh=96/n;body+='<rect x="28" y="'+(17+j*hh)+'" width="74" height="'+hh+'" fill="'+(j<k?col:empty)+'" stroke="'+stroke+'" stroke-width="1.8"/>'}}
  else if(shape==='square'){for(let i=0;i<4;i++){const x=23+(i%2)*42,y=23+Math.floor(i/2)*42;body+='<rect x="'+x+'" y="'+y+'" width="42" height="42" fill="'+(i<k?col:empty)+'" stroke="'+stroke+'" stroke-width="1.8"/>'}}
  else if(shape==='triangle'){body='<path d="M65 18L112 103H18Z" fill="'+empty+'" stroke="'+stroke+'" stroke-width="2"/><path d="M65 18L65 103H18Z" fill="'+col+'" stroke="'+stroke+'" stroke-width="1.3"/><path d="M65 18V103" stroke="'+stroke+'" stroke-dasharray="4 3"/>'}
+ else if(shape==='diamond'){
+  // Un losange en quatre triangles égaux : distinct du disque de la question 7.
+  const triangles=[
+   '65,13 117,65 65,65','117,65 65,117 65,65',
+   '65,117 13,65 65,65','13,65 65,13 65,65'
+  ];
+  triangles.forEach((pts,i)=>{body+='<polygon points="'+pts+'" fill="'+(i<k?col:empty)+'" stroke="'+stroke+'" stroke-width="2"/>'});
+ }
  else if(shape==='hex'){for(let i=0;i<6;i++){const a=i*60-90,b=a+60;body+='<path d="'+pathSlice(65,65,47,a,b)+'" fill="'+(i<k?col:empty)+'" stroke="'+stroke+'" stroke-width="1.8"/>'}}
  else{for(let i=0;i<n;i++){const a=-90+i*360/n,b=a+360/n;const shift=(mission===7&&shape==='circle')?[1,4,6][index%3]:0;const colored=((i-shift+n)%n)<k;body+='<path d="'+pathSlice(65,65,45,a,b)+'" fill="'+(colored?col:empty)+'" stroke="'+stroke+'" stroke-width="1.8"/>'}}
  // Les disques sont circulaires : ne pas ajouter un carré autour.
@@ -174,7 +182,7 @@ function renderCard(q,i){let content='',controls='';
  if(q.type==='fraction'){controls=(mission===3)?'':answerHtml(q)}
  else if(q.type==='choice'||q.type==='compare')controls='<div class="choices">'+(q.options||['Oui','Non']).map((x,j)=>'<button type="button" class="choice" data-select="'+j+'" aria-pressed="false">'+(x.includes('/')?fracHtml(x):x)+'</button>').join('')+'</div>';
  else if(q.type==='order')controls='<div class="sort-options">'+q.options.map((x,j)=>'<button type="button" class="sort-option" data-sort="'+j+'">'+fracHtml(x)+'</button>').join('')+'</div><div class="sort-seq" aria-label="Ordre choisi">Choisis les trois fractions</div><button type="button" class="btn undo" data-undo style="min-height:39px;font-size:12px;margin-top:8px">↶ Effacer le dernier choix</button>';
- return '<article class="problem" data-q="'+i+'"><div class="problem-head">'+q.label.replace(/^[a-d]\)\s*/i,'')+'</div><div class="problem-body">'+content+controls+'</div><div class="note" aria-live="polite"></div></article>'
+ return '<article class="problem" data-q="'+i+'">'+(q.label?'<div class="problem-head">'+q.label.replace(/^[a-d]\)\s*/i,'')+'</div>':'')+'<div class="problem-body">'+content+controls+'</div><div class="note" aria-live="polite"></div></article>'
 }
 function scoreProgress(){const l=lesson[mission].q;let answered=state.filter((s,i)=>{let card=document.querySelector('[data-q="'+i+'"]');if(l[i].type==='fraction')return Array.from(card.querySelectorAll('input')).every(x=>x.value.trim()!=='');if(l[i].type==='order')return s.length===3;return s!==null}).length;$('#fill').style.width=Math.round(answered/l.length*100)+'%';$('#score').textContent=answered+' / '+l.length}
 function render(){document.body.classList.toggle('mission-one',mission===0);finished=false;state=lesson[mission].q.map(q=>q.type==='order'?[]:null);$('#title').textContent='MISSION '+(mission+1)+' · '+lesson[mission].title.toUpperCase();$('#subtitle').textContent=lesson[mission].sub;$('#missions').innerHTML=nameList.map((s,i)=>'<button class="mission-btn '+(i===mission?'active':'')+'" data-m="'+i+'"><span class="number">'+String(i+1).padStart(2,'0')+'</span><span>'+s+'</span></button>').join('');$('#questions').innerHTML=lesson[mission].q.map(renderCard).join('');$('#fill').style.width='0%';$('#score').textContent='0 / '+lesson[mission].q.length;$('#result').hidden=true;$('#result').className='';$('#verify').disabled=false;$('#next').textContent=mission===9?'REVENIR À LA MISSION 1 ↻':'MISSION SUIVANTE →';attach()}
