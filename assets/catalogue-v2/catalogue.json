@@ -25,6 +25,31 @@
     "playClicks": 0
   },
   {
+    "id": "mission-calcul-cm1-livret-1",
+    "slug": "mission-calcul-cm1-livret-1",
+    "title": "Mission Calcul CM1 — Livret 1",
+    "url": "/jeux/mission-calcul-cm1-livret-1/",
+    "path": "/jeux/mission-calcul-cm1-livret-1/",
+    "description": "Calcul mental CM1 : 7 séquences et 250 opérations du livret 1 (tables, ajouter/soustraire 9, 19 et 29, petits retraits, compléments à la centaine et tables de 6 et 7). 25 exercices avec chronomètres de 1 à 3 minutes, corrections, scores, sons et boutons néon 3D.",
+    "short": "25 exercices CM1 · 250 calculs · Défis chronométrés et corrections.",
+    "objective": "Consolider les automatismes et les stratégies de calcul mental du livret CM1 n°1.",
+    "skill": "calcul-mental-cm1",
+    "skillName": "Calcul mental CM1 — Livret 1",
+    "category": "calcul-mental",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "level": "CM1",
+    "levels": [
+      "CM1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-1.svg",
+    "imageAlt": "Aperçu illustré d'une partie de Mission Calcul CM1 livret 1 : missions 1 à 7, exercices et calculs de multiplication à compléter, avec boutons lumineux.",
+    "playClicks": 0
+  },
+  {
     "id": "mission-calcul-cm1-livret-2",
     "slug": "mission-calcul-cm1-livret-2",
     "title": "Mission Calcul CM1 — Livret 2",
