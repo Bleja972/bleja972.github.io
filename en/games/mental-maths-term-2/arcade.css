@@ -126,3 +126,98 @@ h1{color:#f5fbff;text-shadow:0 0 5px #29eaff40}
 .arcade-fruit{filter:drop-shadow(0 0 5px var(--fruit-color,#00efff))}
 .arcade-fruit::before{box-shadow:0 0 5px var(--fruit-color,#00efff)}
 @keyframes arcade-correct{0%{filter:brightness(1)}35%{filter:brightness(1.12);box-shadow:0 0 10px #aaff6b60}100%{filter:brightness(1)}}
+
+/* Palette diversifiée, luminosité douce : 10 couleurs alternées, sans flash agressif. */
+:root{
+  --arcade-palette-1:#53b9dd; /* turquoise */
+  --arcade-palette-2:#d67bad; /* rose */
+  --arcade-palette-3:#a5c86c; /* vert pomme */
+  --arcade-palette-4:#e1a76d; /* abricot */
+  --arcade-palette-5:#a78cdb; /* lavande */
+  --arcade-palette-6:#e5ca72; /* jaune */
+  --arcade-palette-7:#65c9b4; /* menthe */
+  --arcade-palette-8:#dc8b83; /* corail */
+  --arcade-palette-9:#85a9eb; /* bleu pervenche */
+  --arcade-palette-10:#c29ad6; /* mauve */
+}
+.exercise-menu .exbtn:nth-child(10n+1),
+.grid .calc:nth-child(10n+1){--tone:#53b9dd;--tone-bg:#0d1e27}
+.exercise-menu .exbtn:nth-child(10n+2),
+.grid .calc:nth-child(10n+2){--tone:#d67bad;--tone-bg:#241622}
+.exercise-menu .exbtn:nth-child(10n+3),
+.grid .calc:nth-child(10n+3){--tone:#a5c86c;--tone-bg:#192315}
+.exercise-menu .exbtn:nth-child(10n+4),
+.grid .calc:nth-child(10n+4){--tone:#e1a76d;--tone-bg:#271c14}
+.exercise-menu .exbtn:nth-child(10n+5),
+.grid .calc:nth-child(10n+5){--tone:#a78cdb;--tone-bg:#1c182c}
+.exercise-menu .exbtn:nth-child(10n+6),
+.grid .calc:nth-child(10n+6){--tone:#e5ca72;--tone-bg:#25220f}
+.exercise-menu .exbtn:nth-child(10n+7),
+.grid .calc:nth-child(10n+7){--tone:#65c9b4;--tone-bg:#10241f}
+.exercise-menu .exbtn:nth-child(10n+8),
+.grid .calc:nth-child(10n+8){--tone:#dc8b83;--tone-bg:#251817}
+.exercise-menu .exbtn:nth-child(10n+9),
+.grid .calc:nth-child(10n+9){--tone:#85a9eb;--tone-bg:#141e33}
+.exercise-menu .exbtn:nth-child(10n),
+.grid .calc:nth-child(10n){--tone:#c29ad6;--tone-bg:#211829}
+.exercise-menu .exbtn{
+  --button-neon:var(--tone);
+  background:linear-gradient(165deg,var(--tone-bg),#09090d 88%);
+  border:1.5px solid var(--tone);
+  color:#fbfdff;
+  text-shadow:none;
+  box-shadow:0 3px 0 #010205,0 0 4px color-mix(in srgb,var(--tone) 20%,transparent);
+}
+.exercise-menu .exbtn:hover,
+.exercise-menu .exbtn:focus-visible{
+  filter:brightness(1.08);
+  box-shadow:0 4px 0 #010205,0 0 8px color-mix(in srgb,var(--tone) 29%,transparent);
+}
+.grid .calc{
+  background:linear-gradient(150deg,var(--tone-bg),#08090c 85%);
+  border:1.5px solid var(--tone);
+  box-shadow:0 0 4px color-mix(in srgb,var(--tone) 18%,transparent);
+}
+.grid .calc:focus-within{
+  border-color:var(--tone);
+  box-shadow:0 0 8px color-mix(in srgb,var(--tone) 38%,transparent);
+}
+.grid .calc input{
+  border-color:var(--tone);
+  box-shadow:none;
+}
+.grid .calc input:focus{
+  border-color:#f0d78d;
+  box-shadow:0 0 6px #f0d78d40;
+}
+.actions .check{--button-neon:#a5c86c;--button-top:#1a2b19}
+.actions .next{--button-neon:#53b9dd;--button-top:#112c3c}
+.actions .restart{--button-neon:#a78cdb;--button-top:#241d38}
+.actions .menu{--button-neon:#e1a76d;--button-top:#312112}
+.actions button,.end button{
+  border:1.5px solid var(--button-neon);
+  box-shadow:0 3px 0 #020307,0 0 4px color-mix(in srgb,var(--button-neon) 20%,transparent);
+}
+.actions button:hover,.end button:hover{
+  filter:brightness(1.08);
+  box-shadow:0 4px 0 #020307,0 0 7px color-mix(in srgb,var(--button-neon) 33%,transparent);
+}
+.box,.box:nth-child(2),.box:nth-child(3){
+  border-width:1.5px;
+  box-shadow:none;
+}
+.shell{box-shadow:0 3px 12px #0008}
+header{box-shadow:none}
+.progress>div{background:linear-gradient(90deg,#53b9dd,#a78cdb,#d67bad,#a5c86c,#e1a76d);box-shadow:none}
+.arcade-fruit{
+  filter:drop-shadow(0 0 3px color-mix(in srgb,var(--fruit-color) 30%,transparent));
+}
+.arcade-fruit::before{
+  border-width:1px;
+  box-shadow:none;
+}
+@keyframes arcade-correct{
+  0%{filter:brightness(1)}
+  35%{filter:brightness(1.07);box-shadow:0 0 7px #9ac86c45}
+  100%{filter:brightness(1)}
+}
