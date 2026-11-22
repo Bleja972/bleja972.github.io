@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-label="English Mental maths Term 2 Pygame with twelve live calculation boxes in ten soft neon colours"><defs><linearGradient id="hdr"><stop stop-color="#050608"/><stop offset=".6" stop-color="#101017"/><stop offset="1" stop-color="#170c1b"/></linearGradient></defs>
+<rect x="0" y="0" width="1440" height="960" rx="0" fill="#000"/>
+<rect x="161" y="18" width="1118" height="922" rx="22" fill="#050609" stroke="#28718c" stroke-width="2"/>
+<rect x="163" y="20" width="1114" height="131" rx="20" fill="url(#hdr)"/>
+<text x="720" y="55" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="15" fill="#a9dcf0" text-anchor="middle">M E N T A L   M A T H S   C H A L L E N G E S</text>
+<text x="720" y="106" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="43" fill="#fff" text-anchor="middle">Mental maths review - Term 2</text>
+<text x="720" y="133" font-family="Arial,Helvetica,sans-serif" font-weight="600" font-size="16" fill="#e5edf5" text-anchor="middle">3 minutes per exercise • the timer starts with the first answer entered</text>
+<rect x="163" y="150" width="1114" height="2" rx="0" fill="#347990"/>
+<rect x="180" y="173" width="350" height="82" rx="12" fill="#080a11" stroke="#27778d" stroke-width="1.5"/>
+<text x="355" y="196" font-family="Arial,Helvetica,sans-serif" font-weight="600" font-size="17" fill="#f2f6fd" text-anchor="middle">Exercise</text>
+<text x="355" y="233" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="29" fill="#fff" text-anchor="middle">3 / 14</text>
+<rect x="550" y="173" width="350" height="82" rx="12" fill="#080a11" stroke="#907338" stroke-width="1.5"/>
+<text x="725" y="196" font-family="Arial,Helvetica,sans-serif" font-weight="600" font-size="17" fill="#f2f6fd" text-anchor="middle">Time</text>
+<text x="725" y="233" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="29" fill="#ffe16c" text-anchor="middle">2:44</text>
+<rect x="920" y="173" width="350" height="82" rx="12" fill="#080a11" stroke="#4d8b47" stroke-width="1.5"/>
+<text x="1095" y="196" font-family="Arial,Helvetica,sans-serif" font-weight="600" font-size="17" fill="#f2f6fd" text-anchor="middle">Score</text>
+<text x="1095" y="233" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="29" fill="#fff" text-anchor="middle">0 / 12</text>
+<rect x="179" y="274" width="1082" height="14" rx="7" fill="#15141c" stroke="#286078" stroke-width="1"/>
+<rect x="179" y="275" width="212" height="12" rx="6" fill="#92b6d7"/>
+<text x="180" y="331" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="28" fill="#fff" text-anchor="start">Add a number less than 9</text>
+<rect x="923" y="302" width="336" height="36" rx="10" fill="#15101e" stroke="#c35d9b" stroke-width="1.5"/>
+<text x="1091" y="327" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="16" fill="#f4d5ec" text-anchor="middle">Add a number less than 9 to a number</text>
+<rect x="180" y="354" width="1080" height="42" rx="10" fill="#11100a" stroke="#a38643" stroke-width="2"/>
+<text x="195" y="383" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="18" fill="#ffe7ac" text-anchor="start">Complete as many calculations as you can.</text>
+<text x="720" y="421" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="17" fill="#a7efff" text-anchor="middle">Timer running.</text>
+<rect x="180" y="440" width="352" height="76" rx="13" fill="#0d1e27" stroke="#53b9dd" stroke-width="1.5"/>
+<text x="263" y="489" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="24" fill="#f9fdff" text-anchor="start">33 + 8 =</text>
+<rect x="356" y="457" width="86" height="45" rx="7" fill="#060c17" stroke="#53b9dd" stroke-width="2"/>
+<rect x="550" y="440" width="352" height="76" rx="13" fill="#241622" stroke="#d67bad" stroke-width="1.5"/>
+<text x="633" y="489" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="24" fill="#f9fdff" text-anchor="start">67 + 4 =</text>
+<rect x="726" y="457" width="86" height="45" rx="7" fill="#060c17" stroke="#d67bad" stroke-width="2"/>
+<rect x="920" y="440" width="352" height="76" rx="13" fill="#192315" stroke="#a5c86c" stroke-width="1.5"/>
+<text x="1003" y="489" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="24" fill="#f9fdff" text-anchor="start">6 + 89 =</text>
+<rect x="1096" y="457" width="86" height="45" rx="7" fill="#060c17" stroke="#a5c86c" stroke-width="2"/>
+<rect x="180" y="530" width="352" height="76" rx="13" fill="#271c14" stroke="#e1a76d" stroke-width="1.5"/>
+<text x="263" y="579" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="24" fill="#f9fdff" text-anchor="start">7 + 78 =</text>
+<rect x="356" y="547" width="86" height="45" rx="7" fill="#060c17" stroke="#e1a76d" stroke-width="2"/>
+<rect x="550" y="530" width="352" height="76" rx="13" fill="#1c182c" stroke="#a78cdb" stroke-width="1.5"/>
+<text x="633" y="579" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="24" fill="#f9fdff" text-anchor="start">157 + 7 =</text>
+<rect x="726" y="547" width="86" height="45" rx="7" fill="#060c17" stroke="#a78cdb" stroke-width="2"/>
+<rect x="920" y="530" width="352" height="76" rx="13" fill="#25220f" stroke="#e5ca72" stroke-width="1.5"/>
+<text x="978" y="579" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="24" fill="#f9fdff" text-anchor="start">352 +</text>
+<rect x="1097" y="547" width="86" height="45" rx="7" fill="#060c17" stroke="#e5ca72" stroke-width="2"/>
+<text x="1194" y="579" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="21" fill="#fff" text-anchor="start">= 360</text>
+<rect x="180" y="620" width="352" height="76" rx="13" fill="#10241f" stroke="#65c9b4" stroke-width="1.5"/>
+<text x="263" y="669" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="24" fill="#f9fdff" text-anchor="start">438 + 5 =</text>
+<rect x="356" y="637" width="86" height="45" rx="7" fill="#060c17" stroke="#65c9b4" stroke-width="2"/>
+<rect x="550" y="620" width="352" height="76" rx="13" fill="#251817" stroke="#dc8b83" stroke-width="1.5"/>
+<text x="608" y="669" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="24" fill="#f9fdff" text-anchor="start">798 +</text>
+<rect x="727" y="637" width="86" height="45" rx="7" fill="#060c17" stroke="#dc8b83" stroke-width="2"/>
+<text x="824" y="669" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="21" fill="#fff" text-anchor="start">= 800</text>
+<rect x="920" y="620" width="352" height="76" rx="13" fill="#141e33" stroke="#85a9eb" stroke-width="1.5"/>
+<text x="1003" y="669" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="24" fill="#f9fdff" text-anchor="start">514 + 8 =</text>
+<rect x="1096" y="637" width="86" height="45" rx="7" fill="#060c17" stroke="#85a9eb" stroke-width="2"/>
+<rect x="180" y="710" width="352" height="76" rx="13" fill="#211829" stroke="#c29ad6" stroke-width="1.5"/>
+<text x="263" y="759" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="24" fill="#f9fdff" text-anchor="start">945 + 6 =</text>
+<rect x="356" y="727" width="86" height="45" rx="7" fill="#060c17" stroke="#c29ad6" stroke-width="2"/>
+<rect x="550" y="710" width="352" height="76" rx="13" fill="#0d1e27" stroke="#53b9dd" stroke-width="1.5"/>
+<text x="633" y="759" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="24" fill="#f9fdff" text-anchor="start">7 + 289 =</text>
+<rect x="726" y="727" width="86" height="45" rx="7" fill="#060c17" stroke="#53b9dd" stroke-width="2"/>
+<rect x="920" y="710" width="352" height="76" rx="13" fill="#241622" stroke="#d67bad" stroke-width="1.5"/>
+<text x="1003" y="759" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="24" fill="#f9fdff" text-anchor="start">3 + 678 =</text>
+<rect x="1096" y="727" width="86" height="45" rx="7" fill="#060c17" stroke="#d67bad" stroke-width="2"/>
+<rect x="392" y="829" width="128" height="50" rx="11" fill="#0c1016" stroke="#a5c86c" stroke-width="1.5"/>
+<text x="456" y="862" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="18" fill="#faffff" text-anchor="middle">Check now</text>
+<rect x="532" y="829" width="102" height="50" rx="11" fill="#0c1016" stroke="#a78cdb" stroke-width="1.5"/>
+<text x="583" y="862" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="18" fill="#faffff" text-anchor="middle">Restart</text>
+<rect x="647" y="829" width="205" height="50" rx="11" fill="#0c1016" stroke="#e1a76d" stroke-width="1.5"/>
+<text x="749.5" y="862" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="18" fill="#faffff" text-anchor="middle">Choose an exercise</text>
+<rect x="865" y="829" width="150" height="50" rx="11" fill="#0c1016" stroke="#53b9dd" stroke-width="1.5"/>
+<text x="940" y="862" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="18" fill="#faffff" text-anchor="middle">Next exercise</text>
+</svg>
