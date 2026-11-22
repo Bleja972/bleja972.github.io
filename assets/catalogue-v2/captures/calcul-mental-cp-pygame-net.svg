@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1427 937" width="1427" height="937" role="img" aria-label="Mission Calcul mental CP version Pygame, mission 8 : soustraire un nombre à un nombre entier de dizaines, exercices en cours"><defs>
+<linearGradient id="bg" x2="0" y2="1"><stop stop-color="#03080f"/><stop offset="1" stop-color="#00070c"/></linearGradient>
+<linearGradient id="card" x2="0" y2="1"><stop stop-color="#0a1d2b"/><stop offset="1" stop-color="#030710"/></linearGradient>
+<linearGradient id="cyan" x2="0" y2="1"><stop stop-color="#024b59"/><stop offset="1" stop-color="#03121a"/></linearGradient>
+<linearGradient id="pink" x2="0" y2="1"><stop stop-color="#2a0b26"/><stop offset="1" stop-color="#050813"/></linearGradient>
+<linearGradient id="green" x2="0" y2="1"><stop stop-color="#153016"/><stop offset="1" stop-color="#050813"/></linearGradient>
+<filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="5"/></filter></defs>
+<rect x="0" y="0" width="1427" height="937" rx="0" fill="url(#bg)" stroke="#01080d" stroke-width="1"/>
+<rect x="16" y="8" width="318" height="770" rx="28" fill="#01080f" stroke="#1d91b2" stroke-width="1"/>
+<rect x="355" y="8" width="1056" height="943" rx="27" fill="#03070f" stroke="#208eb1" stroke-width="1"/>
+<text x="41" y="51" fill="#99e6ff" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="800" text-anchor="start">C H O I S I R   L A   M I S S I O N</text>
+<rect x="35" y="57" width="260" height="45" rx="17" fill="url(#card)" stroke="#27d9ff" stroke-width="1.8"/>
+<rect x="49" y="72" width="44" height="44" rx="12" fill="#060b17" stroke="#27d9ff" stroke-width="1.3"/>
+<text x="71" y="101" fill="#27d9ff" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" text-anchor="middle">1</text>
+<text x="106" y="86" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="start">Ajouter ou soustraire 1</text>
+<rect x="35" y="109" width="260" height="85" rx="17" fill="url(#card)" stroke="#fc65ba" stroke-width="1.8"/>
+<rect x="49" y="124" width="44" height="44" rx="12" fill="#060b17" stroke="#fc65ba" stroke-width="1.3"/>
+<text x="71" y="153" fill="#fc65ba" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" text-anchor="middle">2</text>
+<text x="106" y="133" fill="#85cdeb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="800" text-anchor="start">MISSION 2</text>
+<text x="106" y="154" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="start">Les presque doubles</text>
+<rect x="35" y="196" width="260" height="85" rx="17" fill="url(#card)" stroke="#b78aff" stroke-width="1.8"/>
+<rect x="49" y="211" width="44" height="44" rx="12" fill="#060b17" stroke="#b78aff" stroke-width="1.3"/>
+<text x="71" y="240" fill="#b78aff" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" text-anchor="middle">3</text>
+<text x="106" y="220" fill="#85cdeb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="800" text-anchor="start">MISSION 3</text>
+<text x="106" y="241" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="start">Ajouter ou soustraire 1</text>
+<text x="106" y="260" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="start">ou 2</text>
+<rect x="35" y="290" width="260" height="85" rx="17" fill="url(#card)" stroke="#ffb537" stroke-width="1.8"/>
+<rect x="49" y="305" width="44" height="44" rx="12" fill="#060b17" stroke="#ffb537" stroke-width="1.3"/>
+<text x="71" y="334" fill="#ffb537" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" text-anchor="middle">4</text>
+<text x="106" y="314" fill="#85cdeb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="800" text-anchor="start">MISSION 4</text>
+<text x="106" y="335" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="start">Doubler les nombres</text>
+<text x="106" y="354" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="start">jusqu’à 10</text>
+<rect x="35" y="384" width="260" height="85" rx="17" fill="url(#card)" stroke="#a7fc3b" stroke-width="1.8"/>
+<rect x="49" y="399" width="44" height="44" rx="12" fill="#060b17" stroke="#a7fc3b" stroke-width="1.3"/>
+<text x="71" y="428" fill="#a7fc3b" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" text-anchor="middle">5</text>
+<text x="106" y="408" fill="#85cdeb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="800" text-anchor="start">MISSION 5</text>
+<text x="106" y="429" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="start">Compléter à la dizaine</text>
+<text x="106" y="448" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="start">supérieure</text>
+<rect x="35" y="477" width="260" height="85" rx="17" fill="url(#card)" stroke="#ff6487" stroke-width="1.8"/>
+<rect x="49" y="492" width="44" height="44" rx="12" fill="#060b17" stroke="#ff6487" stroke-width="1.3"/>
+<text x="71" y="521" fill="#ff6487" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" text-anchor="middle">6</text>
+<text x="106" y="501" fill="#85cdeb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="800" text-anchor="start">MISSION 6</text>
+<text x="106" y="522" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="start">Ajouter ou soustraire 10</text>
+<rect x="35" y="566" width="260" height="85" rx="17" fill="url(#card)" stroke="#fce44e" stroke-width="1.8"/>
+<rect x="49" y="581" width="44" height="44" rx="12" fill="#060b17" stroke="#fce44e" stroke-width="1.3"/>
+<text x="71" y="610" fill="#fce44e" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" text-anchor="middle">7</text>
+<text x="106" y="590" fill="#85cdeb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="800" text-anchor="start">MISSION 7</text>
+<text x="106" y="611" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="start">Méli-mélo de calculs</text>
+<rect x="35" y="654" width="260" height="105" rx="17" fill="url(#cyan)" stroke="#26e7ff" stroke-width="2.6"/>
+<rect x="49" y="669" width="44" height="44" rx="12" fill="#060b17" stroke="#26e7ff" stroke-width="1.3"/>
+<text x="71" y="698" fill="#26e7ff" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" text-anchor="middle">8</text>
+<text x="106" y="678" fill="#85cdeb" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="800" text-anchor="start">MISSION 8</text>
+<text x="106" y="699" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="start">Soustraire un nombre à</text>
+<text x="106" y="718" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="start">un nombre entier de</text>
+<text x="106" y="737" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" text-anchor="start">dizaines</text>
+<rect x="305" y="59" width="11" height="711" rx="5" fill="#061926" stroke="#072f3c" stroke-width="1"/>
+<rect x="306" y="115" width="9" height="413" rx="5" fill="#2999b8" stroke="#2999b8" stroke-width="1"/>
+<text x="382" y="67" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="33" font-weight="800" text-anchor="start">Mission 8 · Soustraire un nombre à un nombre entier de</text>
+<text x="382" y="108" fill="#f4faff" font-family="Arial,Helvetica,sans-serif" font-size="33" font-weight="800" text-anchor="start">dizaines</text>
+<text x="382" y="139" fill="#b7dbe8" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" text-anchor="start">Défi 22 sur 34</text>
+<rect x="382" y="161" width="169" height="63" rx="13" fill="url(#card)" stroke="#59bedf" stroke-width="2"/>
+<text x="400" y="201" fill="#f7fbff" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="800" text-anchor="start">♫ Sons : ON</text>
+<rect x="382" y="240" width="238" height="78" rx="13" fill="#030b14" stroke="#268db0" stroke-width="1.3"/>
+<text x="397" y="265" fill="#a0e9fb" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="800" text-anchor="start">MISSION</text>
+<text x="397" y="300" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="800" text-anchor="start">8 / 12</text>
+<rect x="635" y="240" width="238" height="78" rx="13" fill="#030b14" stroke="#268db0" stroke-width="1.3"/>
+<text x="650" y="265" fill="#a0e9fb" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="800" text-anchor="start">EXERCICE</text>
+<text x="650" y="300" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="800" text-anchor="start">1 / 3</text>
+<rect x="888" y="240" width="238" height="78" rx="13" fill="#030b14" stroke="#268db0" stroke-width="1.3"/>
+<text x="903" y="265" fill="#a0e9fb" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="800" text-anchor="start">CHRONOMÈTRE</text>
+<text x="903" y="300" fill="#ffd756" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="800" text-anchor="start">3:00</text>
+<rect x="1143" y="240" width="238" height="78" rx="13" fill="#030b14" stroke="#268db0" stroke-width="1.3"/>
+<text x="1158" y="265" fill="#a0e9fb" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="800" text-anchor="start">RÉPONSES</text>
+<text x="1158" y="300" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="800" text-anchor="start">0 / 12</text>
+<rect x="381" y="335" width="1005" height="8" rx="4" fill="#053348" stroke="#1c7290" stroke-width="0.7"/>
+<rect x="356" y="361" width="1054" height="1" rx="0" fill="#1f789a" stroke="#1f789a" stroke-width="1"/>
+<rect x="382" y="386" width="327" height="94" rx="14" fill="url(#cyan)" stroke="#00e5f8" stroke-width="2.8"/>
+<text x="546" y="431" fill="#f5fcff" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="800" text-anchor="middle">Exercice 1</text>
+<text x="546" y="454" fill="#f6faff" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="650" text-anchor="middle">Soustraire un nombre à un nombre entier de</text>
+<text x="546" y="471" fill="#f6faff" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="650" text-anchor="middle">dizaines</text>
+<rect x="721" y="386" width="327" height="94" rx="14" fill="url(#pink)" stroke="#f665be" stroke-width="2.8"/>
+<text x="885" y="431" fill="#f5fcff" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="800" text-anchor="middle">Exercice 2</text>
+<text x="885" y="454" fill="#f6faff" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="650" text-anchor="middle">Connaître les presque doubles</text>
+<rect x="1060" y="386" width="327" height="94" rx="14" fill="url(#green)" stroke="#a4ff53" stroke-width="2.8"/>
+<text x="1224" y="431" fill="#f5fcff" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="800" text-anchor="middle">Exercice 3</text>
+<text x="1224" y="454" fill="#f6faff" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="650" text-anchor="middle">Maîtriser les sommes inférieures à 10</text>
+<rect x="381" y="506" width="1005" height="59" rx="15" fill="#040d15" stroke="#2389a9" stroke-width="1.2"/>
+<text x="399" y="543" fill="#ffd452" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="800" text-anchor="start">À toi de jouer.</text>
+<text x="546" y="543" fill="#e8f2f9" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" text-anchor="start">Écris tes réponses, puis clique sur Vérifier. Le chrono démarre au premier chiffre.</text>
+<rect x="381" y="587" width="492" height="100" rx="15" fill="#030b15" stroke="#287fa3" stroke-width="1.5"/>
+<rect x="396" y="621" width="30" height="30" rx="15" fill="#062f44" stroke="#2a9abc" stroke-width="1"/>
+<text x="411" y="642" fill="#a8e9ff" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="800" text-anchor="middle">1</text>
+<text x="435" y="649" fill="#f9fdff" font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="800" text-anchor="start">30 − 6 =</text>
+<rect x="566" y="609" width="132" height="54" rx="10" fill="#06223d" stroke="#26d8fb" stroke-width="2"/>
+<rect x="891" y="587" width="492" height="100" rx="15" fill="#030b15" stroke="#287fa3" stroke-width="1.5"/>
+<rect x="906" y="621" width="30" height="30" rx="15" fill="#062f44" stroke="#2a9abc" stroke-width="1"/>
+<text x="921" y="642" fill="#a8e9ff" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="800" text-anchor="middle">2</text>
+<text x="945" y="649" fill="#f9fdff" font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="800" text-anchor="start">30 − 4 =</text>
+<rect x="1076" y="609" width="132" height="54" rx="10" fill="#06223d" stroke="#26d8fb" stroke-width="2"/>
+<rect x="381" y="701" width="492" height="100" rx="15" fill="#030b15" stroke="#287fa3" stroke-width="1.5"/>
+<rect x="396" y="735" width="30" height="30" rx="15" fill="#062f44" stroke="#2a9abc" stroke-width="1"/>
+<text x="411" y="756" fill="#a8e9ff" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="800" text-anchor="middle">3</text>
+<text x="435" y="763" fill="#f9fdff" font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="800" text-anchor="start">10 − 6 =</text>
+<rect x="566" y="723" width="132" height="54" rx="10" fill="#06223d" stroke="#26d8fb" stroke-width="2"/>
+<rect x="891" y="701" width="492" height="100" rx="15" fill="#030b15" stroke="#287fa3" stroke-width="1.5"/>
+<rect x="906" y="735" width="30" height="30" rx="15" fill="#062f44" stroke="#2a9abc" stroke-width="1"/>
+<text x="921" y="756" fill="#a8e9ff" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="800" text-anchor="middle">4</text>
+<text x="945" y="763" fill="#f9fdff" font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="800" text-anchor="start">10 − 2 =</text>
+<rect x="1076" y="723" width="132" height="54" rx="10" fill="#06223d" stroke="#26d8fb" stroke-width="2"/>
+<rect x="381" y="815" width="492" height="100" rx="15" fill="#030b15" stroke="#287fa3" stroke-width="1.5"/>
+<rect x="396" y="849" width="30" height="30" rx="15" fill="#062f44" stroke="#2a9abc" stroke-width="1"/>
+<text x="411" y="870" fill="#a8e9ff" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="800" text-anchor="middle">5</text>
+<text x="435" y="877" fill="#f9fdff" font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="800" text-anchor="start">40 − 8 =</text>
+<rect x="566" y="837" width="132" height="54" rx="10" fill="#06223d" stroke="#26d8fb" stroke-width="2"/>
+<rect x="891" y="815" width="492" height="100" rx="15" fill="#030b15" stroke="#287fa3" stroke-width="1.5"/>
+<rect x="906" y="849" width="30" height="30" rx="15" fill="#062f44" stroke="#2a9abc" stroke-width="1"/>
+<text x="921" y="870" fill="#a8e9ff" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="800" text-anchor="middle">6</text>
+<text x="945" y="877" fill="#f9fdff" font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="800" text-anchor="start">40 − 5 =</text>
+<rect x="1076" y="837" width="132" height="54" rx="10" fill="#06223d" stroke="#26d8fb" stroke-width="2"/>
+</svg>
