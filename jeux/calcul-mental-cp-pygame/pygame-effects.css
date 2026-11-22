@@ -1,0 +1,90 @@
+@import url("/jeux/calcul-mental-cp/arcade.css?v=1");
+
+/* Version française Pygame : mêmes positions et dimensions, seulement des effets visuels. */
+body.pygame-fr {
+  --arcade-cyan:#00f0ff;
+  --arcade-pink:#ff4bd8;
+  --arcade-lime:#a9ff43;
+  --arcade-orange:#ffb22c;
+  --arcade-violet:#aa78ff;
+  background:
+    radial-gradient(ellipse 32% 26% at 12% 12%,#02f1ff20,transparent 80%),
+    radial-gradient(ellipse 30% 34% at 90% 17%,#fa47d51c,transparent 75%),
+    radial-gradient(ellipse 33% 30% at 75% 86%,#9efd3f15,transparent 75%),
+    radial-gradient(ellipse 90% 80% at 50% 0%,#143662 0%,#07152f 45%,#030c1e 95%);
+}
+body.pygame-fr .mast,body.pygame-fr .menu,body.pygame-fr .arena {
+  box-shadow: 0 7px 0 #01050c, 0 0 25px #12cafa24, inset 0 1px 0 #ffffff40;
+}
+body.pygame-fr .seq-btn {
+  animation:pg-neon-breathe 4.4s ease-in-out infinite alternate;
+}
+body.pygame-fr .seq-btn:nth-child(5n+1){--pg-color:#00efff;--pg-rgb:0,239,255}
+body.pygame-fr .seq-btn:nth-child(5n+2){--pg-color:#ff5ac9;--pg-rgb:255,90,201}
+body.pygame-fr .seq-btn:nth-child(5n+3){--pg-color:#ad82ff;--pg-rgb:173,130,255}
+body.pygame-fr .seq-btn:nth-child(5n+4){--pg-color:#ffb332;--pg-rgb:255,179,50}
+body.pygame-fr .seq-btn:nth-child(5n){--pg-color:#a7ff45;--pg-rgb:167,255,69}
+body.pygame-fr .seq-btn {
+  border-color:var(--pg-color);
+  box-shadow:0 4px 0 #02050b,0 0 10px rgba(var(--pg-rgb),.50),0 0 23px rgba(var(--pg-rgb),.20),inset 0 1px 0 #fff5;
+}
+body.pygame-fr .seq-btn:is(:hover,:focus-visible,.active) {
+  border-color:var(--pg-color);
+  box-shadow:0 4px 0 #010409,0 0 16px rgba(var(--pg-rgb),.90),0 0 32px rgba(var(--pg-rgb),.55),0 0 53px rgba(var(--pg-rgb),.25),inset 0 1px 0 #fff8;
+}
+body.pygame-fr .seq-btn .seq-num {border-color:var(--pg-color);color:var(--pg-color);text-shadow:0 0 10px rgba(var(--pg-rgb),.65)}
+body.pygame-fr .tabs .tab:nth-child(3n+1){--pg-color:#00efff;--pg-rgb:0,239,255}
+body.pygame-fr .tabs .tab:nth-child(3n+2){--pg-color:#ff59c7;--pg-rgb:255,89,199}
+body.pygame-fr .tabs .tab:nth-child(3n){--pg-color:#a8ff49;--pg-rgb:168,255,73}
+body.pygame-fr .tabs .tab {
+  border:2px solid var(--pg-color); color:#fff;
+  background:linear-gradient(160deg,rgba(var(--pg-rgb),.21),#040814 88%);
+  text-shadow:0 0 10px rgba(var(--pg-rgb),.46);
+  box-shadow:0 5px 0 #02050b,0 0 10px rgba(var(--pg-rgb),.62),0 0 30px rgba(var(--pg-rgb),.30),inset 0 1px 0 #fff4;
+  animation:pg-neon-breathe 3.4s ease-in-out infinite alternate;
+}
+body.pygame-fr .tabs .tab.active,body.pygame-fr .tabs .tab:hover {
+  color:#fff;border-color:var(--pg-color);
+  background:linear-gradient(140deg,rgba(var(--pg-rgb),.40),#040711 86%);
+  box-shadow:0 5px 0 #02050b,0 0 17px rgba(var(--pg-rgb),.95),0 0 44px rgba(var(--pg-rgb),.65),inset 0 1px 0 #fff8;
+}
+body.pygame-fr .btn {
+  --pg-color:#00eaff;--pg-rgb:0,234,255;
+  border:2px solid var(--pg-color); color:#faffff;
+  background:linear-gradient(165deg,rgba(var(--pg-rgb),.26),#07101e 77%);
+  text-shadow:0 0 8px rgba(var(--pg-rgb),.40);
+  box-shadow:0 5px 0 #020611,0 0 12px rgba(var(--pg-rgb),.60),0 0 28px rgba(var(--pg-rgb),.28),inset 0 1px 0 #fff5;
+  transition:transform .14s,box-shadow .2s,filter .2s;
+}
+body.pygame-fr .btn:is(:hover,:focus-visible) {
+  filter:brightness(1.12);
+  box-shadow:0 7px 0 #020611,0 0 19px rgba(var(--pg-rgb),.95),0 0 43px rgba(var(--pg-rgb),.48),inset 0 1px 0 #fff9;
+}
+body.pygame-fr .btn:active{transform:translateY(3px)}
+body.pygame-fr #verify{--pg-color:#90ff37;--pg-rgb:144,255,55}
+body.pygame-fr #clear{--pg-color:#ff577b;--pg-rgb:255,87,123}
+body.pygame-fr #next{--pg-color:#22ecff;--pg-rgb:34,236,255}
+body.pygame-fr #retry{--pg-color:#ffae27;--pg-rgb:255,174,39}
+body.pygame-fr #help{--pg-color:#ffd63b;--pg-rgb:255,214,59}
+body.pygame-fr #speak{--pg-color:#c97cff;--pg-rgb:201,124,255}
+body.pygame-fr #keypadToggle{--pg-color:#27f4da;--pg-rgb:39,244,218}
+body.pygame-fr #sound{--pg-color:#58bdff;--pg-rgb:88,189,255}
+body.pygame-fr .keypad .btn:nth-child(5n+1){--pg-color:#00eaff;--pg-rgb:0,234,255}
+body.pygame-fr .keypad .btn:nth-child(5n+2){--pg-color:#ff61c9;--pg-rgb:255,97,201}
+body.pygame-fr .keypad .btn:nth-child(5n+3){--pg-color:#abff52;--pg-rgb:171,255,82}
+body.pygame-fr .keypad .btn:nth-child(5n+4){--pg-color:#ffb442;--pg-rgb:255,180,66}
+body.pygame-fr .keypad .btn:nth-child(5n){--pg-color:#a080ff;--pg-rgb:160,128,255}
+body.pygame-fr .problem:focus-within {box-shadow:0 0 18px #2deafa50,inset 0 0 13px #2deafa19}
+body.pygame-fr .problem.good{animation:pg-correct-glow .72s ease-out}
+body.pygame-fr .progressbar{background:linear-gradient(90deg,#00eaff,#a0ff43,#ff68d9,#00eaff);background-size:240% 100%;animation:pg-progress-flow 5s linear infinite}
+.pg-fruit {position:fixed;top:0;left:0;z-index:9999;pointer-events:none;user-select:none;white-space:nowrap;
+ font-size:clamp(28px,3vw,43px);
+ filter:drop-shadow(0 0 7px #fff) drop-shadow(0 0 15px var(--fruit-glow,#00eaff));
+ animation:pg-fruit-launch 1250ms cubic-bezier(.15,.65,.3,1) forwards;
+}
+.pg-fruit::before {content:"";position:absolute;inset:4px;border:2px solid var(--fruit-glow,#00eaff);border-radius:50%;opacity:.9;box-shadow:0 0 12px var(--fruit-glow,#00eaff),0 0 24px var(--fruit-glow,#00eaff);z-index:-1}
+@keyframes pg-fruit-launch {0%{opacity:0;transform:translate(-50%,-50%) scale(.3) rotate(-18deg)}18%{opacity:1;transform:translate(calc(-50% + var(--dx)*.2),calc(-50% - 15px)) scale(1.2) rotate(0deg)}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(.76) rotate(var(--spin))}}
+@keyframes pg-neon-breathe {from{filter:brightness(.96)}to{filter:brightness(1.15)}}
+@keyframes pg-correct-glow {0%{box-shadow:0 0 0 transparent}35%{box-shadow:0 0 24px #5bffbe,0 0 40px #00eaff80}100%{box-shadow:0 0 0 transparent}}
+@keyframes pg-progress-flow{to{background-position:240% 0}}
+@media (prefers-reduced-motion:reduce){body.pygame-fr .seq-btn,body.pygame-fr .tab,body.pygame-fr .progressbar,body.pygame-fr .problem.good{animation:none!important}.pg-fruit{animation:none!important;display:none!important}}
