@@ -675,3 +675,21 @@ body:has(dialog[open]) { overflow: hidden; }
   .header-inner { column-gap: 6px; }
   .language-links > * { min-width: 26px; padding-inline: 3px; }
 }
+
+:lang(en) .level-name { white-space: nowrap; }
+
+@media (max-width: 620px) {
+  :lang(en) .level-button {
+    display: grid;
+    grid-template-columns: 31px minmax(0, 1fr);
+    gap: 2px 8px;
+  }
+  :lang(en) .level-mark { grid-row: span 2; }
+  :lang(en) .level-count { grid-column: 2; }
+  :lang(en) .hero h1 { font-size: clamp(2.8rem, 9vw, 4.65rem); }
+}
+
+@media (max-width: 355px) {
+  :lang(en) .top-nav { font-size: .81rem; }
+  :lang(en) .weekly-heading { flex-wrap: wrap; }
+}
