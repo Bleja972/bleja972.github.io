@@ -1,0 +1,90 @@
+/* English Term 2 mental maths — arcade neon skin, preserving the original grid and controls. */
+:root{
+  color-scheme:dark;
+  --navy:#e9f9ff;--orange:#ffb744;--cream:#0b0b0d;--green:#a3ff50;
+  --red:#ff5b83;--blue:#101316;--yellow:#ffe15a;--purple:#b07bff;
+  --glow-cyan:#00efff;--glow-pink:#ff5aca;--glow-green:#a6ff52;--glow-orange:#ffb641;
+}
+html{background:#000!important}
+body{
+  color:#f5fbff;
+  background:#000!important;
+  background-image:none!important;
+}
+body::before{background:none!important}
+.app{position:relative}
+.shell{background:#060609;border:2px solid #1796bb;border-radius:21px;
+  box-shadow:0 0 28px #11d9ff4b,0 0 70px #ff41c51b,inset 0 0 21px #0c9cdd20}
+header{background:linear-gradient(115deg,#060608,#09090e 55%,#170c1b);
+  border-bottom:2px solid #ff6ed3;box-shadow:0 0 22px #ff5ac958,inset 0 0 17px #43daff24}
+.brand{color:#8cf2ff;text-shadow:0 0 10px #00dfff9e;letter-spacing:2px}
+h1{color:#fff;text-shadow:0 0 11px #29eaff9a,0 0 25px #b859ff70}
+.sub{color:#dceaf5}
+.box{background:#090b12;color:#f4fcff;border:2px solid #13dffc;border-radius:12px;
+  box-shadow:0 0 10px #00eaff88,inset 0 0 16px #00eaff18;text-shadow:0 0 9px #55eaff61}
+.box:nth-child(2){border-color:#ffce45;box-shadow:0 0 14px #ffcf5680,inset 0 0 12px #ffc94724}
+.box:nth-child(3){border-color:#a5ff57;box-shadow:0 0 14px #a5ff577a,inset 0 0 12px #a5ff5722}
+.box strong{color:#fff}
+.timer{color:#ffe16c!important;text-shadow:0 0 14px #ffca4bb9}
+.timer.danger{color:#ff6d9d!important;text-shadow:0 0 15px #ff326e}
+.progress{background:#14121b;border:1px solid #1f8baa;border-radius:12px;box-shadow:0 0 9px #1ed6f952}
+.progress>div{background:linear-gradient(90deg,#09edff,#ff5bca,#b2ff50,#ffba4b,#09edff);
+ background-size:250% 100%;box-shadow:0 0 15px #12e9ff;animation:arcade-rainbow 5s linear infinite}
+.exercise-title{color:#fff;text-shadow:0 0 9px #08e9ffad}
+.skill{background:#15101e;color:#ffd8f5;border:2px solid #ff5ac9;border-radius:11px;box-shadow:0 0 15px #ff5ac966}
+.notice{background:#11100a;color:#ffe7ac;border:2px solid #ffc947;border-radius:11px;box-shadow:0 0 13px #ffca4560}
+.startnote{color:#a7efff;text-shadow:0 0 9px #2beaff55}
+.calc{position:relative;background:#080b12;color:#f5fbff;border:2px solid #138cb6;border-radius:14px;
+ box-shadow:0 0 10px #00eaff40,inset 0 0 13px #00eaff11;
+ transition:border-color .18s,box-shadow .18s,transform .18s}
+.calc:nth-child(4n+1){border-color:#00efff;box-shadow:0 0 13px #00efff68}
+.calc:nth-child(4n+2){border-color:#ff59d0;box-shadow:0 0 13px #ff59d066}
+.calc:nth-child(4n+3){border-color:#a6ff52;box-shadow:0 0 13px #a6ff525e}
+.calc:nth-child(4n){border-color:#ffc247;box-shadow:0 0 13px #ffc24766}
+.calc:focus-within{box-shadow:0 0 16px #37eaffd6,0 0 33px #fa4acd70,inset 0 0 16px #29eaff2e}
+.calc input{background:#050c16;color:#fff;border:3px solid #35e1ff;border-radius:9px;
+ box-shadow:0 0 10px #00dfff80,inset 0 0 9px #4bcfff28}
+.calc input:focus{border-color:#ffe05b;box-shadow:0 0 17px #ffe05bd6,0 0 30px #e4a94465}
+.calc input.good{background:#0c2a17;border-color:#a1ff52;color:#e9ffd8;box-shadow:0 0 17px #a1ff5290}
+.calc input.bad{background:#2d0c1e;border-color:#ff507e;color:#ffeaf0;box-shadow:0 0 15px #ff507e90}
+.actions button,.exercise-menu button,.end button{
+ border:2px solid var(--button-neon,#00eaff);border-radius:13px;
+ background:linear-gradient(165deg,var(--button-top,#11344b),#070812 80%);
+ color:#fff;text-shadow:0 0 9px var(--button-neon,#00eaff);
+ box-shadow:0 5px 0 #010207,0 0 13px var(--button-neon,#00eaff),inset 0 1px 0 #ffffff55;
+ transition:transform .15s,box-shadow .2s,filter .2s}
+button:hover{filter:brightness(1.18)}
+.actions button:hover,.exercise-menu button:hover,.end button:hover{
+ transform:translateY(-2px);
+ box-shadow:0 7px 0 #010207,0 0 21px var(--button-neon,#00eaff),0 0 37px var(--button-neon,#00eaff),inset 0 1px 0 #fff9}
+.actions button:active,.exercise-menu button:active,.end button:active{transform:translateY(2px)}
+button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.check{--button-neon:#a6ff52;--button-top:#235627}
+.next{--button-neon:#00efff;--button-top:#09536c}
+.restart{--button-neon:#c08aff;--button-top:#45306d}
+.menu{--button-neon:#ffba4c;--button-top:#694016}
+.exbtn{--button-neon:#00efff;--button-top:#0a344c}
+.exbtn:nth-child(4n+2){--button-neon:#ff5ac9;--button-top:#4a164a}
+.exbtn:nth-child(4n+3){--button-neon:#a9ff54;--button-top:#294b22}
+.exbtn:nth-child(4n){--button-neon:#ffc947;--button-top:#534014}
+.menuview,.content{color:#f5fbff}
+.feedback{color:#eef9ff;text-shadow:0 0 10px #22dfff67}
+.end{color:#f6faff;background:#040508}
+.end h2{color:#abff73;text-shadow:0 0 20px #a0ff55a3}
+.arcade-fruit{position:fixed;left:0;top:0;z-index:9999;pointer-events:none;user-select:none;
+ font-size:clamp(23px,3vw,38px);
+ filter:drop-shadow(0 0 7px #ffffff) drop-shadow(0 0 16px var(--fruit-color,#00efff));
+ animation:arcade-fruit-pop 1300ms ease-out forwards}
+.arcade-fruit::before{content:"";position:absolute;inset:2px;border-radius:50%;border:2px solid var(--fruit-color,#00efff);
+ box-shadow:0 0 14px var(--fruit-color,#00efff);z-index:-1}
+.calc.correct-flash{animation:arcade-correct .7s ease-out}
+@keyframes arcade-rainbow{to{background-position:250% 0}}
+@keyframes arcade-correct{0%{filter:brightness(1)}35%{filter:brightness(1.5);box-shadow:0 0 30px #aaff6b,0 0 46px #00efff}100%{filter:brightness(1)}}
+@keyframes arcade-fruit-pop{0%{opacity:0;transform:translate(-50%,-50%) scale(.4) rotate(-15deg)}
+ 15%{opacity:1;transform:translate(-50%,-75%) scale(1.13)}
+ 100%{opacity:0;transform:translate(calc(-50% + var(--fx)),calc(-50% + var(--fy))) scale(.75) rotate(var(--rot))}}
+@media(prefers-reduced-motion:reduce){
+ .progress>div,.arcade-fruit,.calc.correct-flash{animation:none!important}
+ .arcade-fruit{display:none}
+ .actions button,.exercise-menu button,.end button{transition:none}
+}
