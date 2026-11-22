@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <title>Mission Calcul mental CP — Version Pygame</title>
+  <link rel="stylesheet" href="/jeux/calcul-mental-cp/arcade.css?v=1">
+  <script defer src="/jeux/calcul-mental-cp/jeu.js?v=1"></script>
+  <script defer data-bleja-share src="/assets/partager-jeu.js?v=share-v1"></script>
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <header class="mast">
+      <div class="mastbar">
+        <div class="masttext">
+          <span class="eyebrow">Laboratoire orbital · CP</span>
+          <h1>Mission <em>Calcul</em></h1>
+          <p>34 défis · Jusqu’à 12 calculs par série · Chronomètre de 3 minutes</p>
+        </div>
+        <div class="status-pill"><i aria-hidden="true"></i> SYSTÈME ACTIF</div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="menu" aria-label="Choix de la mission">
+        <h2>Choisir la mission</h2>
+        <div id="seqList" class="seq-list"></div>
+      </aside>
+      <main class="arena" id="arena">
+        <div class="arena-head">
+          <div class="arena-top">
+            <div>
+              <h2 id="seqHeading"></h2>
+              <p id="seqSub" class="sub"></p>
+            </div>
+            <button class="btn ghost" id="sound" aria-pressed="true" type="button">♫ Sons : ON</button>
+          </div>
+          <div class="hud">
+            <div class="hud-box"><span>Mission</span><strong id="seqHud"></strong></div>
+            <div class="hud-box"><span>Exercice</span><strong id="exHud"></strong></div>
+            <div class="hud-box timer" id="timerBox"><span>Chronomètre</span><strong id="timer">3:00</strong></div>
+            <div class="hud-box"><span>Réponses</span><strong id="counter"></strong></div>
+          </div>
+          <div class="progressrail" aria-hidden="true"><div class="progressbar" id="progressbar"></div></div>
+        </div>
+
+        <div class="panel">
+          <div class="tabs" id="tabs" role="group" aria-label="Exercices de la mission"></div>
+          <p id="mission" class="mission"><strong>À toi de jouer.</strong> Écris tes réponses, puis clique sur Vérifier. Le chrono démarre au premier chiffre.</p>
+          <div id="questions" class="equations"></div>
+
+          <section id="results" class="results" aria-labelledby="resultTitle" hidden>
+            <h3 id="resultTitle" tabindex="-1"></h3>
+            <div class="big" id="score"></div>
+            <p id="best"></p>
+            <nav class="related" aria-label="Jeux conseillés">
+              <a href="/jouer/?lang=fr&amp;jeu=jeu-86" target="_top">Problèmes CP · Période 2</a>
+              <a href="/petites_additions/" target="_top">Les petites additions</a>
+              <a href="/complements_a_10/" target="_top">Les compléments à 10</a>
+            </nav>
+          </section>
+
+          <p class="feedback" id="feedback" role="status"></p>
+          <div class="actions" id="actionBar">
+            <button class="btn primary" id="verify" type="button">✓ Vérifier</button>
+            <button class="btn ghost" id="clear" type="button">↻ Effacer</button>
+            <button class="btn orange" id="next" type="button" hidden>Exercice suivant</button>
+            <button class="btn pink" id="retry" type="button" hidden>Recommencer</button>
+          </div>
+          <div class="actions" id="assistance">
+            <button class="btn ghost" id="help" type="button" aria-controls="hint" aria-expanded="false">Une aide</button>
+            <button class="btn ghost" id="speak" type="button">Écouter le calcul</button>
+            <button class="btn ghost" id="keypadToggle" type="button" aria-controls="keypad" aria-expanded="false">Pavé numérique</button>
+          </div>
+          <p id="hint" class="mission hint" role="status" hidden></p>
+          <div class="keypad" id="keypad" role="group" aria-label="Pavé numérique" hidden></div>
+          <p class="tiny">Choisis une case avant d’utiliser l’aide, la lecture ou le pavé numérique.</p>
+        </div>
+      </main>
+    </div>
+    <noscript><p>Active JavaScript pour jouer au calcul mental.</p></noscript>
+  </div>
+</body>
+</html>
