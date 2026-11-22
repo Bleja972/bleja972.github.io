@@ -1,5 +1,30 @@
 [
   {
+    "id": "en-mission-calcul-cm1-livret-4",
+    "slug": "math-mission-grade4-booklet-4",
+    "title": "Math Mission — Grade 4 · Booklet 4",
+    "url": "/en/games/math-mission-grade4-booklet-4/",
+    "path": "/en/games/math-mission-grade4-booklet-4/",
+    "description": "Seven arcade maths missions with 198 calculations: adding and subtracting 8, 18, 28 or 38, multiplication facts and divisions, multiplying by 5, factor pairs of 60, and efficient calculation strategies.",
+    "short": "7 missions · 198 problems · Multiplication and mental arithmetic.",
+    "objective": "Practise multiplication facts, division, addition, subtraction and efficient mental strategies.",
+    "skill": "calcul-mental",
+    "skillName": "Mental calculation",
+    "category": "mental",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "level": "CM1",
+    "levels": [
+      "CM1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-1.svg",
+    "imageAlt": "Orbit-themed Grade 4 arcade mental maths game with glowing controls.",
+    "sourceId": "mission-calcul-cm1-livret-4"
+  },
+  {
     "id": "en-mission-calcul-cm1-livret-3",
     "slug": "math-mission-grade4-booklet-3",
     "title": "Math Mission — Grade 4 · Booklet 3",
