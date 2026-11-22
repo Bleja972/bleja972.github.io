@@ -4,6 +4,17 @@ const isEnglish = document.documentElement.lang.startsWith('en');
 const language = isEnglish ? 'en' : 'fr';
 const localise = (french, english) => isEnglish ? english : french;
 const languageLinks = document.querySelector('.language-links');
+
+function playHref(id, href) {
+  const target = new URL(href, location.href);
+  if (target.pathname.startsWith('/jouer/')) return href;
+  return '/jouer/?' + new URLSearchParams({ lang: language, jeu: id });
+}
+
+document.querySelectorAll('article[data-game] a.play, article[data-ranked-game] a[data-goatcounter-click^="jouer-top10-"]').forEach(link => {
+  const card = link.closest('article');
+  link.href = playHref(card.dataset.game || card.dataset.rankedGame, link.getAttribute('href'));
+});
 try {
   localStorage.setItem('bleja-blog-language', language);
 } catch {}
@@ -242,7 +253,7 @@ function activateCatalogue(source) {
         <h3 class="card-title">${escape(game.title)}</h3>
         <p class="card-description">${escape(game.short)}</p>
         <div class="card-actions">
-          <a class="control control-outline play" href="${escape(game.url)}" target="_blank" rel="noopener" aria-label="${localise('Jouer à ', 'Play ')}${escape(game.title)}"${trackingAttributes(game.tracking)}>${icon('play')} ${localise('Jouer', 'Play')}</a>
+          <a class="control control-outline play" href="${escape(playHref(game.id, game.url))}" target="_blank" rel="noopener" aria-label="${localise('Jouer à ', 'Play ')}${escape(game.title)}"${trackingAttributes(game.tracking)}>${icon('play')} ${localise('Jouer', 'Play')}</a>
           ${game.extras.map(link => link.outerHTML).join('')}
           ${game.pdf && !game.extras.some(link => link.getAttribute('href') === game.pdf)
             ? `<a class="quiet-link card-pdf" href="${escape(game.pdf)}" target="_blank" rel="noopener" aria-label="${localise('Fiche PDF de ', 'Printable PDF for ')}${escape(game.title)}">${localise('Fiche PDF', 'Printable PDF')}</a>` : ''}
@@ -383,7 +394,7 @@ function activateCatalogue(source) {
     preview.setAttribute('src', game.image);
     preview.alt = game.alt || game.title;
     const play = $('#preview-play');
-    play.href = game.url;
+    play.href = playHref(game.id, game.url);
     const tracking = game.tracking;
     if (tracking?.goatcounterClick) {
       play.dataset.goatcounterClick = tracking.goatcounterClick;

@@ -1,0 +1,142 @@
+.arcade-player {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.arcade-player .arcade-player-bar {
+  position: relative;
+  isolation: isolate;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  padding: max(8px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) 10px max(14px, env(safe-area-inset-left));
+  border-bottom: 1px solid #355b94;
+  background: linear-gradient(105deg, #101b38, #080c18 65%, #18102a);
+  box-shadow: 0 3px 22px #478dff32;
+  pointer-events: auto;
+}
+
+.arcade-player-bar::after {
+  position: absolute;
+  inset: auto 0 -1px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--cyan), var(--violet) 55%, var(--pink));
+  box-shadow: 0 0 8px #73eaff9a;
+  content: '';
+  pointer-events: none;
+}
+
+.arcade-player-bar .arcade-sparks {
+  opacity: .35;
+}
+
+.arcade-player-home {
+  flex: none;
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.arcade-player-home img {
+  width: 38px;
+  height: 38px;
+  filter: drop-shadow(0 0 7px #ffa18b6c);
+}
+
+.arcade-player-title {
+  flex: 1 1 16rem;
+  min-width: 0;
+  font-size: clamp(1.05rem, 2vw, 1.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.arcade-player-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px 9px;
+}
+
+.arcade-player-links .control,
+.arcade-player .arcade-player-bar #horizontal-toggle {
+  min-height: 42px;
+  padding: 7px 11px;
+  font: 800 .9rem/1.2 Barlow, Arial, sans-serif;
+}
+
+.arcade-player .arcade-player-bar #horizontal-toggle {
+  border: 1px solid var(--light);
+  background: linear-gradient(180deg, var(--light), var(--face) 47%, var(--lower));
+  color: #08182c;
+  box-shadow: inset 0 1px #ffffffb3, inset 0 -2px #09122635, 0 4px var(--bevel), 0 0 18px var(--halo);
+}
+
+.arcade-player .arcade-player-bar #horizontal-toggle:active {
+  box-shadow: inset 0 1px #ffffffb3, 0 1px var(--bevel), 0 0 8px var(--halo);
+}
+
+.arcade-player-links .arcade-player-sheet {
+  --light: #ffe9af;
+  --face: #ffd480;
+  --lower: #f2b95f;
+  --bevel: #835523;
+  --halo: #ffce7155;
+}
+
+.arcade-player .arcade-player-bar #horizontal-status {
+  border: 1px solid #7261ac;
+  background: #17172c;
+  color: var(--text);
+  font-family: Barlow, Arial, sans-serif;
+}
+
+.arcade-player #game-container {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 7px 8px max(7px, env(safe-area-inset-bottom));
+  overflow: auto;
+  border: 1px solid #2b4063;
+  border-radius: 8px;
+  background: var(--background);
+}
+
+.arcade-player iframe {
+  display: block;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #0a1121;
+}
+
+.arcade-player #missing {
+  margin: auto;
+  padding: 20px;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .arcade-player .arcade-player-bar { gap: 4px 8px; }
+  .arcade-player-title { flex-basis: 55%; }
+  .arcade-player-links { width: 100%; }
+  .arcade-player #game-container { margin-inline: 3px; border-radius: 5px; }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .arcade-player .arcade-player-bar { padding-block: 4px 6px; }
+  .arcade-player-home { min-width: 34px; min-height: 34px; }
+  .arcade-player-home img { width: 30px; height: 30px; }
+  .arcade-player-links .control,
+  .arcade-player .arcade-player-bar #horizontal-toggle { min-height: 34px; padding: 4px 8px; font-size: .82rem; }
+  .arcade-player #game-container { margin-block: 3px; }
+}

@@ -42,12 +42,14 @@ function init(){
  @media(orientation:landscape) and (max-height:600px){.bleja-landscape-tools{padding-top:6px;padding-bottom:6px}.bleja-landscape-tools #horizontal-toggle{min-height:36px;padding:6px 12px;font-size:12px}.bleja-landscape-tools #horizontal-status{font-size:12px}}
  `;document.head.append(style);
  // Fixed game menus and flex-based bodies must not hide or push this control off screen.
- const body=document.body,originalPadding=parseFloat(getComputedStyle(body).paddingTop)||0;
- body.style.boxSizing='border-box';
- function reserveSpace(){body.style.paddingTop=(originalPadding+tools.getBoundingClientRect().height)+'px';}
- reserveSpace();
- if(window.ResizeObserver)new ResizeObserver(reserveSpace).observe(tools);
- else addEventListener('resize',reserveSpace);
+ if(!tools.hasAttribute('data-landscape-in-flow')){
+  const body=document.body,originalPadding=parseFloat(getComputedStyle(body).paddingTop)||0;
+  body.style.boxSizing='border-box';
+  function reserveSpace(){body.style.paddingTop=(originalPadding+tools.getBoundingClientRect().height)+'px';}
+  reserveSpace();
+  if(window.ResizeObserver)new ResizeObserver(reserveSpace).observe(tools);
+  else addEventListener('resize',reserveSpace);
+ }
  const isFull=()=>!!(document.fullscreenElement||document.webkitFullscreenElement);
  const landscape=()=>matchMedia('(orientation:landscape)').matches;
  function message(value){status.textContent=value;status.hidden=!value;}

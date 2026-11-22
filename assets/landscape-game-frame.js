@@ -1,22 +1,116 @@
-(async()=>{
-'use strict';
-const labels={
- fr:{back:'← Tous les jeux',direct:'Ouvrir directement le jeu ↗',missing:'Choisis un jeu depuis le catalogue.',error:'Ce jeu ne peut pas être chargé. Reviens au catalogue pour choisir un jeu.',navigation:'Navigation du jeu'},
- en:{back:'← All games',direct:'Open the game directly ↗',missing:'Choose a game from the catalogue.',error:'This game could not be loaded. Return to the catalogue to choose a game.',navigation:'Game navigation'},
- es:{back:'← Todos los juegos',direct:'Abrir el juego directamente ↗',missing:'Elige un juego del catálogo.',error:'No se pudo cargar este juego. Vuelve al catálogo para elegir un juego.',navigation:'Navegación del juego'},
- zh:{back:'← 所有游戏',direct:'直接打开游戏 ↗',missing:'请从目录中选择一个游戏。',error:'无法加载此游戏。请返回目录选择游戏。',navigation:'游戏导航'}
-};
-const lang=document.documentElement.lang in labels?document.documentElement.lang:'fr',text=labels[lang],$=id=>document.getElementById(id);
-$('catalogue-link').href=lang==='fr'?'/?lang=fr':'/'+lang+'/?lang='+lang;
-$('catalogue-link').textContent=text.back;$('direct-link').textContent=text.direct;document.querySelector('.game-links').setAttribute('aria-label',text.navigation);$('missing').textContent=text.missing;
-const id=new URLSearchParams(location.search).get('jeu');if(!id)return;
-try{
- const response=await fetch('/assets/landscape-game-links.json?v=pronoms-pdf-20261121');if(!response.ok)throw Error('manifest');
- const games=await response.json(),key=lang+':'+id;if(!Object.hasOwn(games,key))throw Error('unknown game');
- const game=games[key],url=new URL(game.url,'https://bleja972.github.io/');if(!['http:','https:'].includes(url.protocol))throw Error('invalid url');
- document.title=game.title;$('game-title').textContent=game.title;$('direct-link').href=url.href;$('direct-link').hidden=false;
- const pdfLink=$('game-pdf-link');
- if(pdfLink&&game.pdfUrl){pdfLink.href=game.pdfUrl;if(id==='jeu-27'){pdfLink.textContent='📄 Exercices PDF à imprimer';pdfLink.classList.add('pronoms-pdf-nav-3d');pdfLink.target='_blank';pdfLink.rel='noopener noreferrer';pdfLink.removeAttribute('download');try{const pdfCheck=await fetch(game.pdfUrl,{method:'HEAD'});pdfLink.hidden=!pdfCheck.ok;}catch{pdfLink.hidden=true;}}else{pdfLink.hidden=false;}if(id==='jeu-75'){pdfLink.removeAttribute('download');pdfLink.textContent='📄 PDF · Dictées 7 à 12';pdfLink.classList.add('dict-pdf-nav-3d');pdfLink.target='_blank';pdfLink.rel='noopener noreferrer';}}
- const frame=document.createElement('iframe');frame.title=game.title;frame.src=url.href;frame.allow='fullscreen; autoplay';frame.allowFullscreen=true;frame.dataset.blejaGameFrame='';$('game-container').replaceChildren(frame);
-}catch{$('missing').textContent=text.error;}
+(async () => {
+  'use strict';
+
+  const labels = {
+    fr: {
+      back: 'Catalogue', home: 'Accueil', direct: 'Ouvrir le jeu seul',
+      pdf: 'PDF à imprimer', navigation: 'Navigation du jeu',
+      missing: 'Choisis un jeu depuis le catalogue.', error: 'Impossible de charger ce jeu.',
+    },
+    en: {
+      back: 'Catalogue', home: 'Home', direct: 'Open the game on its own',
+      pdf: 'Printable PDF', navigation: 'Game navigation',
+      missing: 'Choose a game from the catalogue.', error: 'This game could not be loaded.',
+    },
+    es: {
+      back: 'Catálogo', home: 'Inicio', direct: 'Abrir solo el juego',
+      pdf: 'PDF para imprimir', navigation: 'Navegación del juego',
+      missing: 'Elige un juego del catálogo.', error: 'No se pudo cargar este juego.',
+    },
+    zh: {
+      back: '游戏目录', home: '首页', direct: '单独打开游戏',
+      pdf: '打印 PDF', navigation: '游戏导航',
+      missing: '请从目录中选择一个游戏。', error: '无法加载此游戏。',
+    },
+  };
+  const lang = document.documentElement.lang;
+  const text = labels[lang] || labels.fr;
+  const home = document.querySelector('.arcade-player-home');
+  const get = id => document.getElementById(id);
+  const back = get('catalogue-link');
+  const direct = get('direct-link');
+  const missing = get('missing');
+  const params = new URLSearchParams(location.search);
+  const id = params.get('jeu');
+  const cataloguePath = lang === 'fr' ? '/assets/catalogue-v2/catalogue.json' : '/assets/catalogue-v2/catalogue-' + lang + '.json';
+  const homePath = lang === 'fr' ? '/' : '/' + lang + '/';
+
+  home.href = homePath + '?lang=' + lang;
+  home.setAttribute('aria-label', text.home);
+  back.href = home.href + '#catalogue';
+  back.textContent = text.back;
+  direct.textContent = text.direct;
+  document.querySelector('.game-links').setAttribute('aria-label', text.navigation);
+
+  if (!id) {
+    missing.textContent = text.missing;
+    return;
+  }
+
+  async function json(url) {
+    const response = await fetch(url);
+    if (!response.ok) throw Error('Catalogue indisponible');
+    return response.json();
+  }
+
+  async function findGame() {
+    // The legacy links resolve older aliases and include their printable sheets.
+    const legacyGames = json('/assets/landscape-game-links.json?v=pronoms-pdf-20261121').catch(() => ({}));
+    const catalogue = json(cataloguePath).catch(() => []);
+    const legacy = await legacyGames;
+    return legacy[lang + ':' + id] || (await catalogue).find(game => game.id === id);
+  }
+
+  function showPdf(game) {
+    const link = get('game-pdf-link');
+    if (!game.pdfUrl) return;
+    link.href = game.pdfUrl;
+    link.textContent = text.pdf;
+    link.hidden = lang === 'fr' && id === 'jeu-27';
+
+    if (lang === 'fr' && (id === 'jeu-27' || id === 'jeu-75')) {
+      link.textContent = id === 'jeu-27' ? 'Exercices PDF à imprimer' : 'PDF · Dictées 7 à 12';
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.removeAttribute('download');
+    }
+
+    if (lang === 'fr' && id === 'jeu-27') {
+      fetch(link.href, { method: 'HEAD' })
+        .then(response => { link.hidden = !response.ok; })
+        .catch(() => { link.hidden = true; });
+    }
+  }
+
+  try {
+    const game = await findGame();
+    if (!game) throw Error('Jeu introuvable');
+    const url = new URL(game.url, location.origin);
+    if (!['https:', 'http:'].includes(url.protocol)) throw Error('Adresse invalide');
+
+    if (url.host === location.host || url.host === 'bleja972.github.io') {
+      if (['/jouer/calcul-ce1/', '/jouer/calcul-ce2/', '/jouer/numeration-ce1/'].includes(url.pathname)) {
+        // Keep the existing launchers for their synchronised URLs and PDFs.
+        location.replace(url.pathname + url.search + url.hash);
+        return;
+      }
+      if (url.pathname === '/jouer/' || url.pathname === '/jouer/index.html') throw Error('Jeu introuvable');
+    }
+
+    document.title = game.title;
+    get('game-title').textContent = game.title;
+    direct.href = url.href;
+    direct.hidden = false;
+    showPdf(game);
+
+    const frame = document.createElement('iframe');
+    frame.title = game.title;
+    frame.src = url.href;
+    frame.allow = 'fullscreen; autoplay';
+    frame.allowFullscreen = true;
+    frame.dataset.blejaGameFrame = '';
+    get('game-container').replaceChildren(frame);
+  } catch {
+    missing.textContent = text.error;
+  }
 })();
