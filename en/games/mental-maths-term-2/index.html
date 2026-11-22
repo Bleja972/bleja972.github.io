@@ -52,7 +52,8 @@ button{border:none;padding:13px 18px;font-size:18px;font-weight:900;cursor:point
 @media(max-width:760px){.topbar{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.exercise-menu{grid-template-columns:1fr}}
 @media(max-width:500px){.grid{grid-template-columns:1fr}.calc{font-size:22px}}
 </style>
-<script defer src="https://bleja972.github.io/assets/affichage-horizontal.js?v=all-languages-20261108"></script><script defer src="/assets/english-game-backgrounds.js?v=20261117"></script></head>
+<link rel="stylesheet" href="/en/games/mental-maths-term-2/arcade.css?v=pygame-neon-20261122">
+<script defer src="https://bleja972.github.io/assets/affichage-horizontal.js?v=all-languages-20261108"></script></head>
 <body><nav aria-label="Blog navigation" style="text-align:center;padding:12px"><a href="/en/" style="display:inline-block;padding:10px 18px;border-radius:12px;background:#17664e;color:white;font:bold 16px Arial,sans-serif;text-decoration:none">⌂ English blog</a></nav>
 <div class="app"><div class="shell">
 <header>
@@ -316,6 +317,24 @@ function updateTimer(){
   if(seconds<=30)timer.classList.add("danger");
   else if(seconds<=60)timer.classList.add("warn");
 }
+function launchFuturisticFruit(card){
+ if(!card||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const b=card.getBoundingClientRect();
+ if(b.bottom<0||b.top>window.innerHeight)return;
+ const fruits=['🍎','🍊','🍋','🍇','🍉','🍒','🍍','🥝'];
+ const colors=['#00efff','#ff5ac9','#a9ff52','#ffc947','#b087ff'];
+ for(let i=0;i<3;i++){
+  const fruit=document.createElement('span');
+  fruit.className='arcade-fruit';fruit.setAttribute('aria-hidden','true');
+  fruit.textContent=fruits[Math.floor(Math.random()*fruits.length)];
+  fruit.style.left=(b.left+b.width/2)+'px';fruit.style.top=(b.top+b.height/2)+'px';
+  fruit.style.setProperty('--fruit-color',colors[Math.floor(Math.random()*colors.length)]);
+  fruit.style.setProperty('--fx',(Math.random()*170-85).toFixed(0)+'px');
+  fruit.style.setProperty('--fy',(-60-Math.random()*110).toFixed(0)+'px');
+  fruit.style.setProperty('--rot',(Math.random()*120-60).toFixed(0)+'deg');
+  document.body.appendChild(fruit);setTimeout(()=>fruit.remove(),1350);
+ }
+}
 function finishExercise(timeUp=false){
   if(locked)return;
   locked=true;
@@ -328,13 +347,15 @@ function finishExercise(timeUp=false){
     if(inp.value!=="")answered++;
     if(inp.value!==""&&Number(inp.value)===ex.items[i].ans){
       good++;inp.classList.add("good");
+      inp.closest(".calc")?.classList.add("correct-flash");
+      launchFuturisticFruit(inp.closest(".calc"));
     }else if(inp.value!==""){
       inp.classList.add("bad");
     }
   });
   score.textContent=`${good} / ${ex.items.length}`;
   feedback.style.color=good===ex.items.length?"var(--green)":"var(--navy)";
-  feedback.textContent=(timeUp?"Time is up! ":"")+`Tu as ${good} answer${good>1?"s":""} correct${good>1?"s":""} out of ${ex.items.length}. ${answered} calcul${answered>1?"s":""} answered${answered>1?"s":""}.`;
+  feedback.textContent=(timeUp?"Time is up! ":"")+`${good} correct answer${good===1?"":"s"} out of ${ex.items.length}. ${answered} calculation${answered===1?"":"s"} answered.`;
   startNote.textContent="Exercise complete.";
   progressBar.style.width=`${((exIndex+1)/exercises.length)*100}%`;
 }
