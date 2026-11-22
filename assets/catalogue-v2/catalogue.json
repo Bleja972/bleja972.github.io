@@ -1916,10 +1916,10 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame.svg",
-    "imageAlt": "Capture réelle de Mission Calcul mental CP version Pygame : mission 8, exercices et calculs en cours, encadrés et boutons néon.",
+    "thumb": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg",
+    "imageAlt": "Vue nette de Mission Calcul mental CP, version Pygame : mission 8, tableau des exercices et calculs avec boutons néon.",
     "playClicks": 0,
-    "image": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame.svg"
+    "image": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg"
   },
   {
     "title": "Chronomaths CE2 — 20 défis",
