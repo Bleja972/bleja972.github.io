@@ -1896,6 +1896,31 @@
     "playClicks": 20
   },
   {
+    "id": "calcul-mental-cp-neon-un-calcul",
+    "slug": "calcul-mental-cp-neon",
+    "title": "Calcul mental CP — Arcade néon (1 calcul)",
+    "url": "/jeux/calcul-mental-cp-neon/",
+    "path": "/jeux/calcul-mental-cp-neon/",
+    "description": "Version Pygame du calcul mental CP avec une seule opération à la fois, la mise en page et les touches du jeu classique, un arrière-plan sombre, boutons 3D aux néons multicolores et fruits futuristes à chaque bonne réponse. 34 défis, chrono 3 minutes, lecture et aides.",
+    "short": "Une opération à la fois · Boutons néon, fruits et effets de lumière.",
+    "objective": "S'entraîner au calcul mental CP avec une opération par écran et un pavé numérique.",
+    "skill": "calcul-mental",
+    "skillName": "Calcul mental",
+    "category": "calcul-mental-cp",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "level": "CP",
+    "levels": [
+      "CP"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg",
+    "imageAlt": "Jeu de calcul mental CP sur fond sombre et aux boutons néon.",
+    "playClicks": 0
+  },
+  {
     "id": "calcul-mental-cp-pygame",
     "slug": "calcul-mental-cp-pygame",
     "title": "Mission Calcul mental CP — Version Pygame",
