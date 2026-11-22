@@ -1,5 +1,30 @@
 [
   {
+    "id": "en-mission-calcul-cm1-livret-5",
+    "slug": "math-mission-grade4-booklet-5",
+    "title": "Math Mission — Grade 4 · Booklet 5",
+    "url": "/en/games/math-mission-grade4-booklet-5/",
+    "path": "/en/games/math-mission-grade4-booklet-5/",
+    "description": "Seven orbital arcade maths missions with 202 problems across common and decimal fractions, multiplication facts, and efficient mental calculation strategies. Fraction answers use numerator and denominator boxes, with scores and timed challenges.",
+    "short": "7 missions · 202 problems · Fractions and mental maths.",
+    "objective": "Practice common fractions, decimal fractions, multiplication facts and efficient mental calculations.",
+    "skill": "calcul-mental",
+    "skillName": "Mental calculation",
+    "category": "mental",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "level": "CM1",
+    "levels": [
+      "CM1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-1.svg",
+    "imageAlt": "Math Mission orbital arcade game showing calculations and neon mission buttons.",
+    "sourceId": "mission-calcul-cm1-livret-5"
+  },
+  {
     "id": "en-mission-calcul-cm1-livret-4",
     "slug": "math-mission-grade4-booklet-4",
     "title": "Math Mission — Grade 4 · Booklet 4",
