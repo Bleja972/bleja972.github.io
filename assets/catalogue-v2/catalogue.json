@@ -1896,6 +1896,31 @@
     "playClicks": 20
   },
   {
+    "id": "calcul-mental-cp-pygame",
+    "slug": "calcul-mental-cp-pygame",
+    "title": "Mission Calcul mental CP — Version Pygame",
+    "url": "/jeux/calcul-mental-cp-pygame/",
+    "path": "/jeux/calcul-mental-cp-pygame/",
+    "description": "Version arcade Pygame du calcul mental CP : 34 défis, jusqu’à 12 opérations par série, 3 minutes de chronomètre, aide, lecture vocale, pavé numérique et boutons néon 3D. L’ancienne version reste disponible séparément.",
+    "short": "34 défis CP · Arcade Pygame, néons, aides et chrono de 3 minutes.",
+    "objective": "S’entraîner au calcul mental dans une interface futuriste tout en conservant la version classique.",
+    "skill": "calcul-mental",
+    "skillName": "Calcul mental",
+    "category": "calcul-mental-cp",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "level": "CP",
+    "levels": [
+      "CP"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/jeu-28.webp",
+    "imageAlt": "Capture du jeu Calcul mental CP ; la version Pygame ajoute une interface futuriste à boutons néon.",
+    "playClicks": 0
+  },
+  {
     "title": "Chronomaths CE2 — 20 défis",
     "url": "https://bleja972.github.io/jouer/calcul-ce2/?jeu=jeu-29",
     "description": "Entraîne-toi avec 20 Chronomaths de 20 calculs en 3 minutes. Le chronomètre démarre au premier chiffre saisi et le score ainsi que le pourcentage s’affichent à la fin.",
