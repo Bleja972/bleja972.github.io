@@ -2,6 +2,18 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
+  <script>
+  /* Keep the requested language and the actual homepage in sync. */
+  (function () {
+    var language = new URLSearchParams(window.location.search).get('lang');
+    if (language === 'en') {
+      var params = new URLSearchParams(window.location.search);
+      params.delete('lang');
+      var query = params.toString();
+      window.location.replace('/en/' + (query ? '?' + query : '') + window.location.hash);
+    }
+  }());
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#000000">
@@ -57,7 +69,7 @@
       </nav>
       <nav class="language-links" aria-label="Langue">
         <span aria-current="page" title="Français">FR</span>
-        <a lang="en" href="/en/?lang=en" aria-label="English">EN</a>
+        <a lang="en" href="/en/index.html?lang=en" aria-label="English homepage" hreflang="en">EN</a>
         <a lang="es" href="/es/?lang=es" aria-label="Español">ES</a>
         <a lang="zh-Hans" href="/zh/?lang=zh" aria-label="中文">中文</a>
       </nav>
