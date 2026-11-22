@@ -1833,7 +1833,7 @@
     "id": "en-61",
     "title": "Mental maths — Term 2",
     "url": "/en/games/mental-maths-term-2/",
-    "description": "",
+    "description": "English mental maths game for Term 2, with 14 timed exercises, a black Pygame-style arcade interface, 10 softly glowing button colours, and futuristic fruit celebrations for correct answers.",
     "levels": [
       "CE1"
     ],
@@ -1843,12 +1843,13 @@
     "groupName": "Mental maths",
     "skill": "mental",
     "skillName": "Mental maths",
-    "objective": "",
+    "objective": "Practise addition and subtraction strategies with timed exercises and instant visual feedback.",
     "weekly": false,
-    "new": false,
+    "new": true,
     "thumb": "/assets/catalogue-v2/captures/jeu-64.webp",
     "imageAlt": "Screenshot of Mental maths — Term 2",
-    "sourceId": "jeu-64"
+    "sourceId": "jeu-64",
+    "short": "14 timed exercises · 10 soft neon colours · Arcade effects."
   },
   {
     "id": "en-62",
