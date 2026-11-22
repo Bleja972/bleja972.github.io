@@ -83,7 +83,7 @@ body.pygame-fr .progressbar{background:linear-gradient(90deg,#00eaff,#a0ff43,#ff
  animation:pg-fruit-launch 1250ms cubic-bezier(.15,.65,.3,1) forwards;
 }
 .pg-fruit::before {content:"";position:absolute;inset:4px;border:2px solid var(--fruit-glow,#00eaff);border-radius:50%;opacity:.9;box-shadow:0 0 12px var(--fruit-glow,#00eaff),0 0 24px var(--fruit-glow,#00eaff);z-index:-1}
-@keyframes pg-fruit-launch {0%{opacity:0;transform:translate(-50%,-50%) scale(.3) rotate(-18deg)}18%{opacity:1;transform:translate(calc(-50% + var(--dx)*.2),calc(-50% - 15px)) scale(1.2) rotate(0deg)}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(.76) rotate(var(--spin))}}
+@keyframes pg-fruit-launch {0%{opacity:0;transform:translate(-50%,-50%) scale(.3) rotate(-18deg)}18%{opacity:1;transform:translate(-50%,calc(-50% - 15px)) scale(1.2) rotate(0deg)}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(.76) rotate(var(--spin))}}
 @keyframes pg-neon-breathe {from{filter:brightness(.96)}to{filter:brightness(1.15)}}
 @keyframes pg-correct-glow {0%{box-shadow:0 0 0 transparent}35%{box-shadow:0 0 24px #5bffbe,0 0 40px #00eaff80}100%{box-shadow:0 0 0 transparent}}
 @keyframes pg-progress-flow{to{background-position:240% 0}}
