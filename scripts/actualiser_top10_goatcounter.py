@@ -141,49 +141,76 @@ def escape(value: object) -> str:
     return html.escape(str(value), quote=True)
 
 
+def play_url(game: dict) -> str:
+    url = game.get("url") or ""
+    parsed = urllib.parse.urlsplit(url)
+    if parsed.netloc in ("", "bleja972.github.io") and parsed.path.startswith("/jouer/"):
+        return url
+    return "/jouer/?" + urllib.parse.urlencode({"lang": "fr", "jeu": game["id"]})
+
+
 def build_section(games: list[dict], now: dt.datetime) -> str:
     ranked = sorted(
         games, key=lambda g: (-g.get("playClicks", 0), g["title"].casefold())
     )[:10]
-    label = now.strftime("%d/%m/%Y à %H:%M")
+    label = escape(now.strftime("%d/%m/%Y à %H:%M"))
     cards = []
     for game in ranked:
-        rank = 1 + sum(g["playClicks"] > game["playClicks"] for g in games)
-        tied = sum(g["playClicks"] == game["playClicks"] for g in games) > 1
+        count = game["playClicks"]
+        rank = 1 + sum(g["playClicks"] > count for g in games)
+        tied = sum(g["playClicks"] == count for g in games) > 1
         badge = f"N° {rank}" + (" ex æquo" if tied else "")
         title = escape(game["title"])
-        url = escape(game.get("url") or game.get("path") or "/")
-        detail = escape(game.get("path") or game.get("url") or "/")
-        screenshot = escape(game.get("thumb") or game.get("image") or "")
-        alt = escape(game.get("imageAlt") or ("Aperçu de " + game["title"]))
-        levels = " · ".join(game.get("levels") or [game.get("level", "")])
-        skill = game.get("groupName") or game.get("skillName") or game.get("subject") or ""
-        meta = escape(levels + " · " + skill)
-        count = game["playClicks"]
-        event = escape("jouer-top10-" + game["id"])
-        cards.append(
-            f'<article class="week-card" data-ranked-game="{escape(game["id"])}" data-play-clicks="{count}">'
-            f'<a class="week-image" href="{detail}" aria-label="Découvrir {title}">'
-            f'<img src="{screenshot}" alt="{alt}" width="400" height="225" loading="lazy"/>'
-            f'<span class="week-number">{escape(badge)}</span></a>'
-            f'<div class="week-body"><span class="mini-subject">{meta}</span>'
-            f'<h3><a href="{detail}">{title}</a></h3>'
-            f'<div class="week-bottom"><span><strong>{count}</strong> clics sur « Jouer »</span>'
-            f'<a href="{url}" target="_blank" rel="noopener" data-goatcounter-click="{event}"'
-            f' data-goatcounter-title="Classement : {title}">Jouer <span aria-hidden="true">↗</span></a>'
-            '</div></div></article>'
+        game_id = escape(game["id"])
+        event = "jouer-top10-" + game_id
+        attributes = (
+            f'href="{escape(play_url(game))}" target="_blank" rel="noopener"'
+            f' data-goatcounter-click="{event}" data-goatcounter-title="Classement : {title}"'
         )
-    return (
-        '<section aria-labelledby="popular-title" class="weekly-section" id="jeux-les-plus-joues">'
-        '<div class="section-head"><div><h2 id="popular-title"><span aria-hidden="true">★</span>'
-        ' Top 10 des jeux les plus joués</h2>'
-        '<p>Classement des clics sur « Jouer » depuis le blog, actualisé automatiquement '
-        f'le <strong>{escape(label)} (Martinique)</strong> avec GoatCounter. '
-        'Les accès directs ne sont pas comptés. Les ex æquo sont conservés.</p>'
-        '</div><a class="text-link" href="/?niveau=tous&amp;tri=popularite#catalogue">'
-        'Voir tout le classement <span aria-hidden="true">→</span></a></div>'
-        '<div class="weekly-grid">' + ''.join(cards) + '</div></section>'
-    )
+        screenshot = game.get("thumb") or game.get("image")
+        if screenshot:
+            alt = escape(game.get("imageAlt") or ("Aperçu de " + game["title"]))
+            image = f'<img src="{escape(screenshot)}" alt="{alt}" width="400" height="225" loading="lazy" decoding="async">'
+        else:
+            image = '<span class="image-placeholder" aria-hidden="true"></span>'
+        levels = escape(" · ".join(game.get("levels") or [game.get("level", "")]))
+        skill = escape(game.get("groupName") or game.get("skillName") or game.get("subject") or "")
+        detail = game.get("path") or ""
+        detail_link = ""
+        if detail.startswith("/fiches/"):
+            detail_link = f'<a class="quiet-link rank-detail" href="{escape(detail)}" aria-label="Fiche de {title}">Fiche</a>'
+        play_unit = "clic pour jouer" if count == 1 else "clics pour jouer"
+        cards.append(f"""
+          <article class="game-card rank-card" data-ranked-game="{game_id}" data-rank="{rank}" data-play-clicks="{count}">
+            <div class="game-image rank-image">
+              <a class="image-button" {attributes} aria-label="Lancer {title}">
+                {image}
+                <span class="rank-badge">{escape(badge)}</span>
+              </a>
+            </div>
+            <div class="card-body">
+              <p class="card-meta"><span class="card-levels">{levels}</span> <span>{skill}</span></p>
+              <h3 class="card-title"><a {attributes}>{title}</a></h3>
+              <p class="rank-count"><strong>{count}</strong> {play_unit}</p>
+              <div class="card-actions">
+                <a class="control control-primary rank-play" {attributes} aria-label="Jouer à {title}">
+                  <svg class="icon" aria-hidden="true"><use href="#i-play"/></svg> Jouer
+                </a>
+                {detail_link}
+              </div>
+            </div>
+          </article>""")
+    return f"""<section aria-labelledby="popular-title" class="weekly-section" id="jeux-les-plus-joues">
+        <div class="section-heading">
+          <div>
+            <h2 id="popular-title">Top 10 des jeux les plus joués</h2>
+            <p class="rank-updated">Clics pour jouer depuis le blog. Dernière actualisation le <strong>{label} (Martinique)</strong>.</p>
+          </div>
+          <a class="quiet-link" href="/?niveau=tous&amp;tri=popularite#catalogue">Voir tout le classement</a>
+        </div>
+        <div class="game-grid ranked-grid">{''.join(cards)}
+        </div>
+      </section>"""
 
 
 def main() -> None:

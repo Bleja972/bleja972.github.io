@@ -584,80 +584,68 @@ body:has(dialog[open]) { overflow: hidden; }
   background: var(--background);
 }
 
-#jeux-les-plus-joues .section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 12px 20px;
-  margin-bottom: 15px;
-}
-
-#jeux-les-plus-joues h2 {
-  font-size: clamp(1.7rem, 2.9vw, 2.7rem);
-  line-height: 1.07;
-  letter-spacing: -.04em;
-}
-
-#jeux-les-plus-joues .section-head p {
-  margin-top: 8px;
-  color: var(--muted);
-}
-
-#jeux-les-plus-joues .text-link {
-  flex: 0 0 auto;
-  text-underline-offset: 4px;
-}
-
-#jeux-les-plus-joues .weekly-grid {
-  display: grid;
+#jeux-les-plus-joues .ranked-grid {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
 }
 
-.week-card {
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--paper);
+.rank-updated, .rank-count {
+  color: var(--muted);
+  font-size: .9rem;
 }
 
-.week-image {
-  display: block;
-  position: relative;
-  aspect-ratio: 16 / 9;
-  background: var(--dark);
+.rank-updated { margin-top: 6px; }
+
+.rank-card {
+  --rank-accent: var(--violet);
+  border-color: #484375;
 }
 
-.week-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.rank-card[data-rank="1"] { --rank-accent: var(--amber); }
+.rank-card[data-rank="2"] { --rank-accent: var(--cyan); }
+.rank-card[data-rank="3"] { --rank-accent: var(--pink); }
+
+.rank-card:focus-within, .rank-card:hover {
+  border-color: var(--rank-accent);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--rank-accent) 22%, transparent);
 }
 
-.week-number {
+.rank-image .image-button { display: block; }
+.rank-image .image-button:focus-visible { outline-offset: -4px; }
+
+.rank-badge {
   position: absolute;
   top: 8px;
   left: 8px;
-  padding: 3px 7px;
-  color: #142033;
-  background: var(--amber);
+  padding: 4px 7px;
+  color: #101325;
+  background: var(--rank-accent);
   border-radius: 4px;
-  font: 500 .76rem var(--mono);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--rank-accent) 48%, transparent);
+  font: 600 .76rem var(--mono);
 }
 
-.week-body { padding: 12px; }
-.week-body h3 { margin: 4px 0 8px; line-height: 1.2; }
-.week-body a { text-underline-offset: 3px; }
-.week-body .mini-subject { color: var(--cyan); font-size: .85rem; }
-.week-bottom { display: flex; flex-wrap: wrap; align-items: center; gap: 3px 10px; color: var(--muted); font-size: .89rem; }
-.week-bottom a { color: var(--text); padding-block: 9px; font-weight: 700; }
+.rank-card .card-title a { text-decoration: none; }
+.rank-card .card-title a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.rank-count { margin-bottom: 8px; }
+.rank-count strong { color: var(--text); }
+.rank-card .rank-play {
+  --light: color-mix(in srgb, var(--rank-accent) 65%, white);
+  --face: var(--rank-accent);
+  --lower: color-mix(in srgb, var(--rank-accent) 84%, #282757);
+  --bevel: color-mix(in srgb, var(--rank-accent) 36%, #15192a);
+  --halo: color-mix(in srgb, var(--rank-accent) 34%, transparent);
+}
+
+.rank-card .rank-play .icon { color: currentColor; }
+.rank-detail { min-height: 42px; }
 
 .path-section { margin-top: 44px; }
 .public-counter { display: grid; justify-items: start; }
 .public-counter [data-counter-breakdown] { font-size: .85rem; color: var(--muted); }
 
 @media (max-width: 1000px) {
-  #jeux-les-plus-joues .weekly-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #jeux-les-plus-joues .ranked-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 760px) {
@@ -667,8 +655,8 @@ body:has(dialog[open]) { overflow: hidden; }
 
 @media (max-width: 620px) {
   .catalogue-toolbar .exercise-control { grid-column: 1 / -1; }
-  #jeux-les-plus-joues .section-head { align-items: start; flex-direction: column; }
-  #jeux-les-plus-joues .weekly-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #jeux-les-plus-joues .section-heading { align-items: start; flex-direction: column; }
+  #jeux-les-plus-joues .ranked-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 390px) {

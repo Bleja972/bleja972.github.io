@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Tests sans accès réseau du classement GoatCounter."""
 import datetime as dt
+import re
 import unittest
 import actualiser_top10_goatcounter as top
 
@@ -40,6 +41,18 @@ class Top10Tests(unittest.TestCase):
         self.assertIn("N° 2 ex æquo", page)
         self.assertIn("jeu-3", page)
         self.assertIn("16/11/2026", page)
+
+    def test_top10_ouvre_le_lecteur_arcade(self):
+        self.games[1]["url"] = "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-2"
+        page = top.build_section(self.games, dt.datetime(2026, 11, 16, 6, 15))
+        links = [top.attrs(tag) for tag in re.findall(r"<a\b[^>]+>", page)]
+        for event, url in [
+            ("jouer-top10-jeu-1", "/jouer/?lang=fr&jeu=jeu-1"),
+            ("jouer-top10-jeu-2", self.games[1]["url"]),
+        ]:
+            with self.subTest(event=event):
+                routes = [link["href"] for link in links if link.get("data-goatcounter-click") == event]
+                self.assertEqual(routes, [url, url, url])
 
 
 if __name__ == "__main__":
