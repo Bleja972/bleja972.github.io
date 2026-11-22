@@ -1846,10 +1846,11 @@
     "objective": "Practise addition and subtraction strategies with timed exercises and instant visual feedback.",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/catalogue-v2/captures/jeu-64.webp",
-    "imageAlt": "Screenshot of Mental maths — Term 2",
+    "thumb": "/assets/catalogue-v2/captures/en-61-pygame-colours.svg",
+    "imageAlt": "Mental maths Term 2 in progress: twelve calculations on a black arcade interface with ten softly coloured neon outlines and a three-minute timer.",
     "sourceId": "jeu-64",
-    "short": "14 timed exercises · 10 soft neon colours · Arcade effects."
+    "short": "14 timed exercises · 10 soft neon colours · Arcade effects.",
+    "screenshotUrl": "/assets/catalogue-v2/captures/en-61-pygame-colours.svg"
   },
   {
     "id": "en-62",
