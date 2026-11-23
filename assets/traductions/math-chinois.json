@@ -341,5 +341,12 @@
   "Échange 10 unités contre 1 dizaine avant d’écrire le chiffre des unités.": "先把10个一换成1个十，再写个位数字。",
   "Échange 10 dizaines contre 1 centaine avant d’écrire le chiffre des dizaines.": "先把10个十换成1个百，再写十位数字。",
   "Échange 10 centaines contre 1 millier avant d’écrire le chiffre des centaines.": "先把10个百换成1个千，再写百位数字。",
-  "Écris 1 dans le disque blanc au-dessus de la colonne suivante.": "在左边一列上方的白色圆片中写1。"
+  "Écris 1 dans le disque blanc au-dessus de la colonne suivante.": "在左边一列上方的白色圆片中写1。",
+  "Ajouter ou soustraire 1 ou 2": "加上或减去1或2",
+  "Retenue des unités": "个位进位",
+  "Retenue des dizaines": "十位进位",
+  "Retenue des centaines": "百位进位",
+  "Retenue des milliers": "千位进位",
+  "tableaux C D U et corrigés": "百位、十位、个位表和答案",
+  "Réponse correcte": "回答正确"
 }

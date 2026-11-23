@@ -17,7 +17,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/zh-captures/mission-fractions-ce1-revisions-gameplay.webp",
+    "thumb": "/assets/zh-captures/mission-fractions-ce1-revisions-zh-gameplay.webp",
     "imageAlt": "游戏截图：分数任务：复习"
   },
   {
@@ -206,7 +206,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/zh-captures/ours-de-la-banquise-gameplay.webp",
+    "thumb": "/assets/zh-captures/ours-de-la-banquise-zh-gameplay.webp",
     "imageAlt": "游戏截图：冰原上的北极熊"
   },
   {
@@ -227,7 +227,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/zh-captures/ours-de-la-banquise-neon-gameplay.webp",
+    "thumb": "/assets/zh-captures/ours-de-la-banquise-neon-zh-gameplay.webp",
     "imageAlt": "游戏截图：霓虹任务：水晶机器人"
   },
   {
@@ -441,7 +441,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/zh-captures/jeu-96-gameplay.webp",
+    "thumb": "/assets/zh-captures/jeu-96-zh-gameplay.webp",
     "imageAlt": "游戏截图：火星镜像：轴对称"
   },
   {
@@ -1496,7 +1496,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/zh-captures/calcul-mental-cp-neon-un-calcul-gameplay.webp",
+    "thumb": "/assets/zh-captures/calcul-mental-cp-neon-un-calcul-zh-gameplay.webp",
     "imageAlt": "游戏截图：霓虹口算：每次一道题"
   },
   {
@@ -1517,7 +1517,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/zh-captures/calcul-mental-cp-pygame-gameplay.webp",
+    "thumb": "/assets/zh-captures/calcul-mental-cp-pygame-zh-gameplay.webp",
     "imageAlt": "游戏截图：口算任务：街机版"
   },
   {
@@ -2082,7 +2082,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/zh-captures/soustractions-sans-echange-en-orbite-gameplay.webp",
+    "thumb": "/assets/zh-captures/soustractions-sans-echange-en-orbite-zh-gameplay.webp",
     "imageAlt": "游戏截图：轨道减法：不退位"
   },
   {
@@ -2183,7 +2183,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/zh-captures/jeu-106-gameplay.webp",
+    "thumb": "/assets/zh-captures/jeu-106-zh-gameplay.webp",
     "imageAlt": "游戏截图：进位加法：立体积木"
   },
   {
@@ -2204,7 +2204,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/zh-captures/jeu-108-gameplay.webp",
+    "thumb": "/assets/zh-captures/jeu-108-zh-gameplay.webp",
     "imageAlt": "游戏截图：进位加法：立体积木（三年级）"
   },
   {
@@ -2225,7 +2225,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/zh-captures/jeu-107-gameplay.webp",
+    "thumb": "/assets/zh-captures/jeu-107-zh-gameplay.webp",
     "imageAlt": "游戏截图：进位加法：立体积木（一年级）"
   },
   {
@@ -2792,7 +2792,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/zh-captures/jeu-105-gameplay.webp",
+    "thumb": "/assets/zh-captures/jeu-105-zh-gameplay.webp",
     "imageAlt": "游戏截图：太空飞船：不退位减法"
   }
 ]
