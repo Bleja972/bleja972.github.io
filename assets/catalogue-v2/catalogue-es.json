@@ -19,7 +19,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/Capture%20d'%C3%A9cran%202026-11-21%20142814.png",
-    "imageAlt": "Imagen de Misión Fracciones — Repaso"
+    "imageAlt": "Imagen de Misión Fracciones — Repaso",
+    "playClicks": 0
   },
   {
     "id": "mission-calcul-cm1-livret-1",
@@ -40,7 +41,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/es-captures/mision-calculo-cuaderno-1.webp",
-    "imageAlt": "Cuaderno 1 de Misión de cálculo en plena partida"
+    "imageAlt": "Cuaderno 1 de Misión de cálculo en plena partida",
+    "playClicks": 0
   },
   {
     "id": "mission-calcul-cm1-livret-5",
@@ -61,7 +63,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/es-captures/mision-calculo-cuaderno-5.webp",
-    "imageAlt": "Cuaderno 5 de Misión de cálculo en plena partida"
+    "imageAlt": "Cuaderno 5 de Misión de cálculo en plena partida",
+    "playClicks": 0
   },
   {
     "id": "mission-calcul-cm1-livret-4",
@@ -82,7 +85,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/es-captures/mision-calculo-cuaderno-4.webp",
-    "imageAlt": "Cuaderno 4 de Misión de cálculo en plena partida"
+    "imageAlt": "Cuaderno 4 de Misión de cálculo en plena partida",
+    "playClicks": 0
   },
   {
     "id": "mission-calcul-cm1-livret-3",
@@ -103,7 +107,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/es-captures/mision-calculo-cuaderno-3.webp",
-    "imageAlt": "Cuaderno 3 de Misión de cálculo en plena partida"
+    "imageAlt": "Cuaderno 3 de Misión de cálculo en plena partida",
+    "playClicks": 0
   },
   {
     "id": "mission-calcul-cm1-livret-2",
@@ -124,7 +129,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/es-captures/mision-calculo-cuaderno-2.webp",
-    "imageAlt": "Cuaderno 2 de Misión de cálculo en plena partida"
+    "imageAlt": "Cuaderno 2 de Misión de cálculo en plena partida",
+    "playClicks": 0
   },
   {
     "id": "cartons-montessori-ce2",
@@ -145,7 +151,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/jeux/cartons-montessori-ce2/apercu.webp",
-    "imageAlt": "Imagen de Los números en órbita — Tarjetas Montessori CE2"
+    "imageAlt": "Imagen de Los números en órbita — Tarjetas Montessori CE2",
+    "playClicks": 2
   },
   {
     "id": "cartons-montessori-cp",
@@ -166,7 +173,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/jeux/cartons-montessori-cp/apercu.svg",
-    "imageAlt": "Imagen de La magia de los números — CP"
+    "imageAlt": "Imagen de La magia de los números — CP",
+    "playClicks": 0
   },
   {
     "id": "cartons-montessori-ce1",
@@ -187,7 +195,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/jeux/cartons-montessori-ce1/apercu.webp",
-    "imageAlt": "Imagen de La magia de los números — CE1"
+    "imageAlt": "Imagen de La magia de los números — CE1",
+    "playClicks": 4
   },
   {
     "id": "ours-de-la-banquise",
@@ -209,7 +218,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/images/bannieres/openai/ours-de-la-banquise.webp?v=bannieres-20261115",
-    "imageAlt": "Imagen de El oso del hielo"
+    "imageAlt": "Imagen de El oso del hielo",
+    "playClicks": 0
   },
   {
     "id": "ours-de-la-banquise-neon",
@@ -231,7 +241,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/ours-de-la-banquise-neon.svg?v=robot-mobile-20261121",
-    "imageAlt": "Imagen de Misión Neón — El robot de los cristales"
+    "imageAlt": "Imagen de Misión Neón — El robot de los cristales",
+    "playClicks": 0
   },
   {
     "id": "chemin-du-kangourou",
@@ -252,7 +263,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/images/bannieres/openai/chemin-du-kangourou.webp?v=bannieres-20261115",
-    "imageAlt": "Imagen de El camino del canguro"
+    "imageAlt": "Imagen de El camino del canguro",
+    "playClicks": 0
   },
   {
     "id": "crabes-du-tombolo",
@@ -273,7 +285,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/jeux/crabes-du-tombolo/apercu.svg",
-    "imageAlt": "Imagen de Los cangrejos del tómbolo"
+    "imageAlt": "Imagen de Los cangrejos del tómbolo",
+    "playClicks": 1
   },
   {
     "id": "jeu-103",
@@ -296,7 +309,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/images/bannieres/openai/popeye-ligne-graduee.webp?v=bannieres-20261115",
-    "imageAlt": "Imagen de Popeye en la recta numérica"
+    "imageAlt": "Imagen de Popeye en la recta numérica",
+    "playClicks": 7
   },
   {
     "id": "jeu-102",
@@ -319,7 +333,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/jeux/crabes-des-salines/plage.webp",
-    "imageAlt": "Imagen de Los cangrejos de las Salinas"
+    "imageAlt": "Imagen de Los cangrejos de las Salinas",
+    "playClicks": 3
   },
   {
     "id": "jeu-101",
@@ -340,7 +355,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/jeux/chateau-nombres-exterieur-cp/assets/apercu.webp",
-    "imageAlt": "Imagen de El castillo de los números — Exterior"
+    "imageAlt": "Imagen de El castillo de los números — Exterior",
+    "playClicks": 1
   },
   {
     "id": "jeu-100",
@@ -361,7 +377,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/jeux/chateau-nombres-cp/assets/apercu.webp",
-    "imageAlt": "Imagen de El castillo de los números — CP"
+    "imageAlt": "Imagen de El castillo de los números — CP",
+    "playClicks": 0
   },
   {
     "id": "jeu-99",
@@ -382,7 +399,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/fritz-encadrements/apercu.webp",
-    "imageAlt": "Imagen de El planeta de Fritz — CE2"
+    "imageAlt": "Imagen de El planeta de Fritz — CE2",
+    "playClicks": 1
   },
   {
     "id": "jeu-98",
@@ -403,7 +421,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/fritz-encadrements/apercu.webp",
-    "imageAlt": "Imagen de El planeta de Fritz — CP"
+    "imageAlt": "Imagen de El planeta de Fritz — CP",
+    "playClicks": 1
   },
   {
     "id": "jeu-97",
@@ -424,7 +443,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/images/bannieres/openai/fritz-encadrements-ce1.webp?v=bannieres-20261115",
-    "imageAlt": "Imagen de El planeta de Fritz — CE1"
+    "imageAlt": "Imagen de El planeta de Fritz — CE1",
+    "playClicks": 2
   },
   {
     "id": "jeu-96",
@@ -446,7 +466,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/symetrie-mars-ce2.webp",
-    "imageAlt": "Imagen de Los marcianos espejo"
+    "imageAlt": "Imagen de Los marcianos espejo",
+    "playClicks": 2
   },
   {
     "id": "jeu-95",
@@ -467,7 +488,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/droite-t-rex-ce1.svg",
-    "imageAlt": "Imagen de Las rectas numéricas del T-Rex — CE1"
+    "imageAlt": "Imagen de Las rectas numéricas del T-Rex — CE1",
+    "playClicks": 2
   },
   {
     "id": "jeu-94",
@@ -488,7 +510,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/droite-t-rex-anime-cp.svg",
-    "imageAlt": "Imagen de Las 42 rectas animadas del T-Rex"
+    "imageAlt": "Imagen de Las 42 rectas animadas del T-Rex",
+    "playClicks": 6
   },
   {
     "id": "jeu-93",
@@ -509,7 +532,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/droite-t-rex-cp.svg",
-    "imageAlt": "Imagen de La recta numérica del T-Rex — CP"
+    "imageAlt": "Imagen de La recta numérica del T-Rex — CP",
+    "playClicks": 2
   },
   {
     "id": "jeu-92",
@@ -535,7 +559,8 @@
     "short": "Multiplicaciones y divisiones mezcladas, burbujas para estallar y dinosaurios animados.",
     "thumb": "/assets/catalogue-v2/captures/dino-calculs.webp",
     "imageAlt": "Captura de Dino Cálculos — Multiplicaciones y divisiones",
-    "sourceId": "jeu-92"
+    "sourceId": "jeu-92",
+    "playClicks": 2
   },
   {
     "id": "jeu-91",
@@ -561,7 +586,8 @@
     "short": "20 series de 15 cálculos en el bosque encantado, con vueltas de los cálculos fallados.",
     "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
     "imageAlt": "Captura de Cronomates encantados CE1",
-    "sourceId": "jeu-91"
+    "sourceId": "jeu-91",
+    "playClicks": 9
   },
   {
     "id": "jeu-90",
@@ -586,7 +612,8 @@
     "short": "20 series de 20 cálculos: las burbujas falladas regresan antes del final del crono.",
     "thumb": "/assets/catalogue-v2/captures/jeu-82.webp",
     "imageAlt": "Captura de Cronomates galácticos CE2",
-    "sourceId": "jeu-90"
+    "sourceId": "jeu-90",
+    "playClicks": 10
   },
   {
     "id": "jeu-89",
@@ -611,7 +638,8 @@
     "short": "Todas las mesas del 1 al 10 y las mesas mezcladas en un bosque mágico.",
     "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
     "imageAlt": "Captura de Las tablas encantadas CE2",
-    "sourceId": "jeu-89"
+    "sourceId": "jeu-89",
+    "playClicks": 0
   },
   {
     "id": "jeu-88",
@@ -636,7 +664,8 @@
     "short": "Coloque los números y el punto de interrogación en las barras.",
     "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-2.svg",
     "imageAlt": "Captura de Problemas CP — Completar las barras",
-    "sourceId": "jeu-88"
+    "sourceId": "jeu-88",
+    "playClicks": 2
   },
   {
     "id": "jeu-87",
@@ -661,7 +690,8 @@
     "short": "42 problemas a resolver con los modelos en barras y una lectura de las declaraciones.",
     "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-1.svg",
     "imageAlt": "Captura de Problemas CP — Periodo 1",
-    "sourceId": "jeu-87"
+    "sourceId": "jeu-87",
+    "playClicks": 3
   },
   {
     "id": "jeu-86",
@@ -686,7 +716,8 @@
     "short": "18 problemas a resolver con modelos en barras y ayuda para la lectura.",
     "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-2.svg",
     "imageAlt": "Captura de Problemas CP — Periodo 2",
-    "sourceId": "jeu-86"
+    "sourceId": "jeu-86",
+    "playClicks": 5
   },
   {
     "id": "jeu-85",
@@ -712,7 +743,8 @@
     "short": "Tres niveles de cálculo mental en 90 segundos, en el laboratorio de un científico farfelu.",
     "thumb": "/assets/catalogue-v2/captures/jeu-85.webp",
     "imageAlt": "Operación en un matraz de El laboratorio de cálculo",
-    "sourceId": "jeu-85"
+    "sourceId": "jeu-85",
+    "playClicks": 6
   },
   {
     "id": "jeu-84",
@@ -738,7 +770,8 @@
     "short": "Cuatro niveles de mitades, sólo números pares, burbujas que aceleran y música mágica.",
     "thumb": "/assets/images/bannieres/openai/vallee-des-moities.webp?v=bannieres-20261115",
     "imageAlt": "Ilustración de El valle de las mitades",
-    "sourceId": "jeu-84"
+    "sourceId": "jeu-84",
+    "playClicks": 4
   },
   {
     "id": "jeu-83",
@@ -764,7 +797,8 @@
     "short": "Cuatro niveles de dobles, un caldero fluorescente, burbujas que aceleran y música de aventura.",
     "thumb": "/assets/images/bannieres/openai/temple-des-doubles.webp?v=bannieres-20261115",
     "imageAlt": "Captura de El templo de los dobles",
-    "sourceId": "jeu-83"
+    "sourceId": "jeu-83",
+    "playClicks": 5
   },
   {
     "id": "jeu-82",
@@ -790,7 +824,8 @@
     "short": "Seis niveles, burbujas cada vez más rápidas y música espacial en una nave.",
     "thumb": "/assets/catalogue-v2/captures/jeu-82.webp",
     "imageAlt": "Captura de Divisiones galácticas",
-    "sourceId": "jeu-82"
+    "sourceId": "jeu-82",
+    "playClicks": 2
   },
   {
     "id": "jeu-81",
@@ -816,7 +851,8 @@
     "short": "Seis niveles, burbujas cada vez más rápidas y música suave en un bosque encantado.",
     "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
     "imageAlt": "Captura de Las tablas encantadas",
-    "sourceId": "jeu-81"
+    "sourceId": "jeu-81",
+    "playClicks": 7
   },
   {
     "id": "jeu-80",
@@ -842,7 +878,8 @@
     "short": "Dos niveles, tres modos y cigarrillos animados para calcular con 9, 19, 29, 39 y 49.",
     "thumb": "/assets/catalogue-v2/captures/jeu-80.webp",
     "imageAlt": "Captura de Burbujas mágicas — Sumar y restar 9, 19…",
-    "sourceId": "jeu-80"
+    "sourceId": "jeu-80",
+    "playClicks": 3
   },
   {
     "id": "jeu-79",
@@ -868,7 +905,8 @@
     "short": "54 objetos a observar para reconocer cubo, pavimentado recto, pirámide, bola, cilindro y cono.",
     "thumb": "/assets/catalogue-v2/captures/jeu-79.webp",
     "imageAlt": "Captura de Los cuerpos geométricos que nos rodean",
-    "sourceId": "jeu-79"
+    "sourceId": "jeu-79",
+    "playClicks": 1
   },
   {
     "id": "jeu-78",
@@ -894,7 +932,8 @@
     "short": "36 objetos a observar para reconocer cuadrado, rectángulo, círculo y triángulo.",
     "thumb": "/assets/catalogue-v2/captures/jeu-78.webp",
     "imageAlt": "Captura de Las formas que nos rodean",
-    "sourceId": "jeu-78"
+    "sourceId": "jeu-78",
+    "playClicks": 0
   },
   {
     "title": "Geometría CE1 — Colorear las figuras",
@@ -918,7 +957,8 @@
     ],
     "short": "Coloria las figuras según su forma y evita las figuras trampa.",
     "imageAlt": "Captura de Geometría CE1 — Colorear las figuras",
-    "sourceId": "jeu-77"
+    "sourceId": "jeu-77",
+    "playClicks": 1
   },
   {
     "title": "Calcul Pop! — Cálculo mental CE2",
@@ -944,7 +984,8 @@
     ],
     "short": "30 misiones de cálculo mental, a tu ritmo o en 3 minutos, con trucos y correcciones.",
     "thumb": "/assets/catalogue-v2/captures/jeu-76.webp",
-    "sourceId": "jeu-76"
+    "sourceId": "jeu-76",
+    "playClicks": 10
   },
   {
     "title": "Burbujas en pareja — Comparar números",
@@ -970,7 +1011,8 @@
     ],
     "short": "Comparar dos números y reconocer el más grande.",
     "thumb": "/assets/catalogue-v2/captures/jeu-1.webp",
-    "sourceId": "jeu-1"
+    "sourceId": "jeu-1",
+    "playClicks": 24
   },
   {
     "title": "Burbujas de coral — Pares e impares",
@@ -997,7 +1039,8 @@
     ],
     "short": "Reconocer los números pares y los números impares.",
     "thumb": "/assets/images/bannieres/openai/bulles-de-corail-pairs-impairs.webp?v=bannieres-20261115",
-    "sourceId": "jeu-2"
+    "sourceId": "jeu-2",
+    "playClicks": 4
   },
   {
     "title": "La isla misteriosa — Restas",
@@ -1024,7 +1067,8 @@
     ],
     "short": "Encontrar un resultado retirando una cantidad.",
     "thumb": "/assets/catalogue-v2/captures/jeu-3.webp",
-    "sourceId": "jeu-3"
+    "sourceId": "jeu-3",
+    "playClicks": 6
   },
   {
     "title": "La vuelta al mundo en 80 días — Complementos a 1 000",
@@ -1051,7 +1095,8 @@
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-4.webp",
-    "sourceId": "jeu-4"
+    "sourceId": "jeu-4",
+    "playClicks": 2
   },
   {
     "title": "Misión Nautilus — Complementos a 100",
@@ -1078,7 +1123,8 @@
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/images/bannieres/openai/mission-nautilus.webp?v=bannieres-20261115",
-    "sourceId": "jeu-5"
+    "sourceId": "jeu-5",
+    "playClicks": 0
   },
   {
     "title": "Viaje al centro de la Tierra — Casi dobles",
@@ -1106,7 +1152,8 @@
     ],
     "short": "Usar los dobles para calcular más fácilmente.",
     "thumb": "/assets/catalogue-v2/captures/jeu-6.webp",
-    "sourceId": "jeu-6"
+    "sourceId": "jeu-6",
+    "playClicks": 2
   },
   {
     "title": "Misión Marte — Sumas de 11 a 19",
@@ -1134,7 +1181,8 @@
     ],
     "short": "Usar resultados conocidos para calcular una adición mental.",
     "thumb": "/assets/images/bannieres/openai/mission-mars.webp?v=bannieres-20261115",
-    "sourceId": "jeu-7"
+    "sourceId": "jeu-7",
+    "playClicks": 1
   },
   {
     "title": "Misión Abismos — Sumas de 11 a 19",
@@ -1162,7 +1210,8 @@
     ],
     "short": "Usar resultados conocidos para calcular una adición mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-8.webp",
-    "sourceId": "jeu-8"
+    "sourceId": "jeu-8",
+    "playClicks": 1
   },
   {
     "title": "Halloween — Complementos a 10",
@@ -1188,7 +1237,8 @@
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-9.webp",
-    "sourceId": "jeu-9"
+    "sourceId": "jeu-9",
+    "playClicks": 3
   },
   {
     "title": "Halloween — Complementos a 100",
@@ -1215,7 +1265,8 @@
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-10.webp",
-    "sourceId": "jeu-10"
+    "sourceId": "jeu-10",
+    "playClicks": 0
   },
   {
     "title": "Halloween — Complementos a 1 000",
@@ -1242,7 +1293,8 @@
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-11.webp",
-    "sourceId": "jeu-11"
+    "sourceId": "jeu-11",
+    "playClicks": 1
   },
   {
     "title": "La carrera de la bruja — Complementos a 10",
@@ -1268,7 +1320,8 @@
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-12.webp",
-    "sourceId": "jeu-12"
+    "sourceId": "jeu-12",
+    "playClicks": 2
   },
   {
     "title": "La carrera de la bruja — Complementos a 100",
@@ -1295,7 +1348,8 @@
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-13.webp",
-    "sourceId": "jeu-13"
+    "sourceId": "jeu-13",
+    "playClicks": 1
   },
   {
     "title": "La carrera de la bruja — Complementos a 1 000",
@@ -1322,7 +1376,8 @@
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-14.webp",
-    "sourceId": "jeu-14"
+    "sourceId": "jeu-14",
+    "playClicks": 0
   },
   {
     "title": "El reto de la araña — Complementos a 10",
@@ -1349,7 +1404,8 @@
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-15-toile-realiste.svg?v=20261116",
-    "sourceId": "jeu-15"
+    "sourceId": "jeu-15",
+    "playClicks": 10
   },
   {
     "title": "El reto de la araña — Complementos a 100",
@@ -1375,7 +1431,8 @@
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-16-toile-realiste.svg?v=20261116",
-    "sourceId": "jeu-16"
+    "sourceId": "jeu-16",
+    "playClicks": 3
   },
   {
     "title": "El reto de la araña — Complementos a 1 000",
@@ -1401,7 +1458,8 @@
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-17-toile-realiste.svg?v=20261116",
-    "sourceId": "jeu-17"
+    "sourceId": "jeu-17",
+    "playClicks": 0
   },
   {
     "title": "Repaso de los números hasta 1 000",
@@ -1427,7 +1485,8 @@
     "short": "Leer, escribir, comparar y desglosar los números hasta 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-18.webp",
     "imageAlt": "Captura de Repaso de los números hasta 1 000",
-    "sourceId": "jeu-18"
+    "sourceId": "jeu-18",
+    "playClicks": 38
   },
   {
     "title": "Problemas — Periodo 1",
@@ -1454,7 +1513,8 @@
     "short": "Entender una situación y elegir un cálculo para resolverla.",
     "thumb": "/assets/catalogue-v2/captures/jeu-19.webp",
     "imageAlt": "Captura de Problemas — Periodo 1",
-    "sourceId": "jeu-19"
+    "sourceId": "jeu-19",
+    "playClicks": 34
   },
   {
     "title": "Cálculo mental CP",
@@ -1479,7 +1539,8 @@
     "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-28.webp",
     "imageAlt": "Captura de Cálculo mental CP",
-    "sourceId": "jeu-28"
+    "sourceId": "jeu-28",
+    "playClicks": 20
   },
   {
     "id": "calcul-mental-cp-neon-un-calcul",
@@ -1501,7 +1562,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg",
-    "imageAlt": "Imagen de Cálculo mental — Arcade neón"
+    "imageAlt": "Imagen de Cálculo mental — Arcade neón",
+    "playClicks": 0
   },
   {
     "id": "calcul-mental-cp-pygame",
@@ -1523,7 +1585,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg",
-    "imageAlt": "Imagen de Misión de cálculo mental — Arcade Pygame"
+    "imageAlt": "Imagen de Misión de cálculo mental — Arcade Pygame",
+    "playClicks": 0
   },
   {
     "title": "Cronomates CE2 — 20 retos",
@@ -1548,7 +1611,8 @@
     "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-29.webp",
     "imageAlt": "Captura de Cronomates CE2 — 20 retos",
-    "sourceId": "jeu-29"
+    "sourceId": "jeu-29",
+    "playClicks": 15
   },
   {
     "title": "Talleres de problemas CE2",
@@ -1573,7 +1637,8 @@
     "short": "Entender una situación y elegir un cálculo para resolverla.",
     "thumb": "/assets/catalogue-v2/captures/jeu-30.webp",
     "imageAlt": "Captura de Talleres de problemas CE2",
-    "sourceId": "jeu-30"
+    "sourceId": "jeu-30",
+    "playClicks": 4
   },
   {
     "title": "Contar una colección",
@@ -1599,7 +1664,8 @@
     "short": "Organizar una colección para averiguar cuántos elementos contiene.",
     "thumb": "/assets/catalogue-v2/captures/jeu-31.webp",
     "imageAlt": "Captura de Contar una colección",
-    "sourceId": "jeu-31"
+    "sourceId": "jeu-31",
+    "playClicks": 18
   },
   {
     "title": "Comparar dos números",
@@ -1625,7 +1691,8 @@
     "short": "Comparar dos números y reconocer el más grande.",
     "thumb": "/assets/catalogue-v2/captures/jeu-32.webp",
     "imageAlt": "Captura de Comparar dos números",
-    "sourceId": "jeu-32"
+    "sourceId": "jeu-32",
+    "playClicks": 10
   },
   {
     "title": "Ordenar números",
@@ -1651,7 +1718,8 @@
     "short": "Ordenar números del menor al mayor.",
     "thumb": "/assets/catalogue-v2/captures/jeu-33.webp",
     "imageAlt": "Captura de Ordenar números",
-    "sourceId": "jeu-33"
+    "sourceId": "jeu-33",
+    "playClicks": 4
   },
   {
     "title": "Leer y escribir números",
@@ -1677,7 +1745,8 @@
     "short": "Combinar una escritura en números y una escritura en letras.",
     "thumb": "/assets/catalogue-v2/captures/jeu-34.webp",
     "imageAlt": "Captura de Leer y escribir números",
-    "sourceId": "jeu-34"
+    "sourceId": "jeu-34",
+    "playClicks": 7
   },
   {
     "title": "Dictado de números",
@@ -1703,7 +1772,8 @@
     "short": "Escuchar un número y escribir en números.",
     "thumb": "/assets/catalogue-v2/captures/jeu-35.webp",
     "imageAlt": "Captura de Dictado de números",
-    "sourceId": "jeu-35"
+    "sourceId": "jeu-35",
+    "playClicks": 5
   },
   {
     "title": "Contar de distintas maneras",
@@ -1729,7 +1799,8 @@
     "short": "Encontrar la regla y seguir una serie de números.",
     "thumb": "/assets/catalogue-v2/captures/jeu-36.webp",
     "imageAlt": "Captura de Contar de distintas maneras",
-    "sourceId": "jeu-36"
+    "sourceId": "jeu-36",
+    "playClicks": 4
   },
   {
     "title": "Componer y descomponer números",
@@ -1755,7 +1826,8 @@
     "short": "Cientos, decenas y unidades se unen para componer o descomponer un número.",
     "thumb": "/assets/catalogue-v2/captures/jeu-37.webp",
     "imageAlt": "Captura de Componer y descomponer números",
-    "sourceId": "jeu-37"
+    "sourceId": "jeu-37",
+    "playClicks": 8
   },
   {
     "title": "Reconocer números pares e impares",
@@ -1781,7 +1853,8 @@
     "short": "Reconocer los números pares y los números impares.",
     "thumb": "/assets/catalogue-v2/captures/jeu-38.webp",
     "imageAlt": "Captura de Reconocer números pares e impares",
-    "sourceId": "jeu-38"
+    "sourceId": "jeu-38",
+    "playClicks": 3
   },
   {
     "title": "Completar secuencias",
@@ -1807,7 +1880,8 @@
     "short": "Encontrar la regla y seguir una serie de números.",
     "thumb": "/assets/catalogue-v2/captures/jeu-39.webp",
     "imageAlt": "Captura de Completar secuencias",
-    "sourceId": "jeu-39"
+    "sourceId": "jeu-39",
+    "playClicks": 4
   },
   {
     "title": "La recta numérica misteriosa",
@@ -1833,7 +1907,8 @@
     "short": "Identificar el lugar de un número en una línea recta.",
     "thumb": "/assets/catalogue-v2/captures/jeu-40.webp",
     "imageAlt": "Captura de La recta numérica misteriosa",
-    "sourceId": "jeu-40"
+    "sourceId": "jeu-40",
+    "playClicks": 5
   },
   {
     "title": "El reto de la recta numérica",
@@ -1859,7 +1934,8 @@
     "short": "Identificar el lugar de un número en una línea recta.",
     "thumb": "/assets/catalogue-v2/captures/jeu-41.webp",
     "imageAlt": "Captura de El reto de la recta numérica",
-    "sourceId": "jeu-41"
+    "sourceId": "jeu-41",
+    "playClicks": 1
   },
   {
     "title": "Descomponer un número",
@@ -1885,7 +1961,8 @@
     "short": "Cientos, decenas y unidades se unen para componer o descomponer un número.",
     "thumb": "/assets/catalogue-v2/captures/jeu-42.webp",
     "imageAlt": "Captura de Descomponer un número",
-    "sourceId": "jeu-42"
+    "sourceId": "jeu-42",
+    "playClicks": 3
   },
   {
     "title": "Componer un número",
@@ -1911,7 +1988,8 @@
     "short": "Cientos, decenas y unidades se unen para componer o descomponer un número.",
     "thumb": "/assets/catalogue-v2/captures/jeu-43.webp",
     "imageAlt": "Captura de Componer un número",
-    "sourceId": "jeu-43"
+    "sourceId": "jeu-43",
+    "playClicks": 0
   },
   {
     "title": "Secuencias de números",
@@ -1937,7 +2015,8 @@
     "short": "Encontrar la regla y seguir una serie de números.",
     "thumb": "/assets/catalogue-v2/captures/jeu-44.webp",
     "imageAlt": "Captura de Secuencias de números",
-    "sourceId": "jeu-44"
+    "sourceId": "jeu-44",
+    "playClicks": 1
   },
   {
     "title": "Representar los números",
@@ -1963,7 +2042,8 @@
     "short": "Reconocer diferentes representaciones de un mismo número.",
     "thumb": "/assets/catalogue-v2/captures/jeu-45.webp",
     "imageAlt": "Captura de Representar los números",
-    "sourceId": "jeu-45"
+    "sourceId": "jeu-45",
+    "playClicks": 5
   },
   {
     "title": "Poner los números en orden",
@@ -1989,7 +2069,8 @@
     "short": "Ordenar números del menor al mayor.",
     "thumb": "/assets/catalogue-v2/captures/jeu-46.webp",
     "imageAlt": "Captura de Poner los números en orden",
-    "sourceId": "jeu-46"
+    "sourceId": "jeu-46",
+    "playClicks": 1
   },
   {
     "title": "Cronomates CE1 — 20 retos",
@@ -2015,7 +2096,8 @@
     "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-47.webp",
     "imageAlt": "Captura de Cronomates CE1 — 20 retos",
-    "sourceId": "jeu-47"
+    "sourceId": "jeu-47",
+    "playClicks": 11
   },
   {
     "title": "Restas descomponiendo",
@@ -2041,7 +2123,8 @@
     "short": "Usar cientos, decenas y unidades para sustraerse.",
     "thumb": "/assets/catalogue-v2/captures/jeu-48.webp",
     "imageAlt": "Captura de Restas descomponiendo",
-    "sourceId": "jeu-48"
+    "sourceId": "jeu-48",
+    "playClicks": 11
   },
   {
     "title": "Restas con bloques de numeración",
@@ -2067,7 +2150,8 @@
     "short": "Usar cientos, decenas y unidades para sustraerse.",
     "thumb": "/assets/catalogue-v2/captures/jeu-49.webp",
     "imageAlt": "Captura de Restas con bloques de numeración",
-    "sourceId": "jeu-49"
+    "sourceId": "jeu-49",
+    "playClicks": 5
   },
   {
     "id": "soustractions-sans-echange-en-orbite",
@@ -2089,7 +2173,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/soustractions-en-orbite-capture%20(1).webp",
-    "imageAlt": "Imagen de Restas en órbita — Sin reagrupación"
+    "imageAlt": "Imagen de Restas en órbita — Sin reagrupación",
+    "playClicks": 0
   },
   {
     "title": "Sumas en columna sin llevadas",
@@ -2116,7 +2201,8 @@
     "short": "Sumar a dos o tres dígitos, sin intercambio.",
     "thumb": "/assets/catalogue-v2/captures/additions-sans-echange-orbite.webp",
     "imageAlt": "Captura de Sumas en columna sin llevadas",
-    "sourceId": "jeu-50"
+    "sourceId": "jeu-50",
+    "playClicks": 6
   },
   {
     "title": "Sumas en columna con llevadas",
@@ -2143,7 +2229,8 @@
     "short": "Comprender y calcular las adiciones con uno o dos intercambios.",
     "thumb": "/assets/catalogue-v2/captures/additions-posees-tableau-operation.webp?v=orbite-translucide-20261107",
     "imageAlt": "Captura de Sumas en columna con llevadas",
-    "sourceId": "jeu-51"
+    "sourceId": "jeu-51",
+    "playClicks": 16
   },
   {
     "title": "Sumas con cambios — Fichas 3D",
@@ -2169,7 +2256,8 @@
     "short": "Alinear las columnas y calcular una adición colocada.",
     "thumb": "/assets/catalogue-v2/captures/jeu-52.webp",
     "imageAlt": "Captura de Sumas con cambios — Fichas 3D",
-    "sourceId": "jeu-52"
+    "sourceId": "jeu-52",
+    "playClicks": 5
   },
   {
     "id": "jeu-106",
@@ -2191,7 +2279,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/jeu-106.webp",
-    "imageAlt": "Imagen de Sumas con reagrupación — Bloques 3D"
+    "imageAlt": "Imagen de Sumas con reagrupación — Bloques 3D",
+    "playClicks": 0
   },
   {
     "id": "jeu-108",
@@ -2213,7 +2302,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/jeu-108.webp",
-    "imageAlt": "Imagen de Sumas con reagrupación — Bloques 3D"
+    "imageAlt": "Imagen de Sumas con reagrupación — Bloques 3D",
+    "playClicks": 0
   },
   {
     "id": "jeu-107",
@@ -2235,7 +2325,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/jeu-107.webp",
-    "imageAlt": "Imagen de Sumas con reagrupación — Bloques 3D"
+    "imageAlt": "Imagen de Sumas con reagrupación — Bloques 3D",
+    "playClicks": 0
   },
   {
     "title": "Sumar pasando por 10",
@@ -2263,7 +2354,8 @@
     "short": "Usar resultados conocidos para calcular una adición mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-53.webp",
     "imageAlt": "Captura de Sumar pasando por 10",
-    "sourceId": "jeu-53"
+    "sourceId": "jeu-53",
+    "playClicks": 4
   },
   {
     "title": "Restar a 10",
@@ -2291,7 +2383,8 @@
     "short": "Encontrar un resultado retirando una cantidad.",
     "thumb": "/assets/catalogue-v2/captures/jeu-54.webp",
     "imageAlt": "Captura de Restar a 10",
-    "sourceId": "jeu-54"
+    "sourceId": "jeu-54",
+    "playClicks": 2
   },
   {
     "title": "Los dobles",
@@ -2319,7 +2412,8 @@
     "short": "Usar los dobles para calcular más fácilmente.",
     "thumb": "/assets/catalogue-v2/captures/jeu-55.webp",
     "imageAlt": "Captura de Los dobles",
-    "sourceId": "jeu-55"
+    "sourceId": "jeu-55",
+    "playClicks": 6
   },
   {
     "title": "Los casi dobles",
@@ -2347,7 +2441,8 @@
     "short": "Usar los dobles para calcular más fácilmente.",
     "thumb": "/assets/catalogue-v2/captures/jeu-56.webp",
     "imageAlt": "Captura de Los casi dobles",
-    "sourceId": "jeu-56"
+    "sourceId": "jeu-56",
+    "playClicks": 3
   },
   {
     "title": "Los complementos a 10",
@@ -2375,7 +2470,8 @@
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-57.webp",
     "imageAlt": "Captura de Los complementos a 10",
-    "sourceId": "jeu-57"
+    "sourceId": "jeu-57",
+    "playClicks": 3
   },
   {
     "title": "Sumar y restar decenas",
@@ -2402,7 +2498,8 @@
     "short": "Encontrar un resultado retirando una cantidad.",
     "thumb": "/assets/catalogue-v2/captures/jeu-58.webp",
     "imageAlt": "Captura de Sumar y restar decenas",
-    "sourceId": "jeu-58"
+    "sourceId": "jeu-58",
+    "playClicks": 2
   },
   {
     "title": "Pequeñas sumas",
@@ -2430,7 +2527,8 @@
     "short": "Usar resultados conocidos para calcular una adición mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-59.webp",
     "imageAlt": "Captura de Pequeñas sumas",
-    "sourceId": "jeu-59"
+    "sourceId": "jeu-59",
+    "playClicks": 5
   },
   {
     "title": "Cálculo mental — Periodo 1",
@@ -2457,7 +2555,8 @@
     "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
     "thumb": "/assets/catalogue-v2/captures/calcul-mental-ce1-periode-1-orbite.webp",
     "imageAlt": "Captura de Cálculo mental — Periodo 1",
-    "sourceId": "jeu-60"
+    "sourceId": "jeu-60",
+    "playClicks": 19
   },
   {
     "title": "Los peces de los números",
@@ -2484,7 +2583,8 @@
     "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
     "thumb": "/assets/images/bannieres/jeu-61-apercu.webp?v=20261115",
     "imageAlt": "Captura de Los peces de los números",
-    "sourceId": "jeu-61"
+    "sourceId": "jeu-61",
+    "playClicks": 5
   },
   {
     "title": "La carrera de los cálculos",
@@ -2512,7 +2612,8 @@
     "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-62.webp",
     "imageAlt": "Captura de La carrera de los cálculos",
-    "sourceId": "jeu-62"
+    "sourceId": "jeu-62",
+    "playClicks": 4
   },
   {
     "title": "Complementos a 10, 100 y 1 000",
@@ -2539,7 +2640,8 @@
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-63.webp",
     "imageAlt": "Captura de Complementos a 10, 100 y 1 000",
-    "sourceId": "jeu-63"
+    "sourceId": "jeu-63",
+    "playClicks": 2
   },
   {
     "title": "Cálculo mental — Periodo 2",
@@ -2566,7 +2668,8 @@
     "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
     "thumb": "/assets/catalogue-v2/captures/calcul-mental-ce1-periode-2-orbite.webp",
     "imageAlt": "Captura de Cálculo mental — Periodo 2",
-    "sourceId": "jeu-64"
+    "sourceId": "jeu-64",
+    "playClicks": 25
   },
   {
     "title": "Encontrar el total",
@@ -2593,7 +2696,8 @@
     "short": "Entender una situación y elegir un cálculo para resolverla.",
     "thumb": "/assets/catalogue-v2/captures/jeu-65.webp",
     "imageAlt": "Captura de Encontrar el total",
-    "sourceId": "jeu-65"
+    "sourceId": "jeu-65",
+    "playClicks": 4
   },
   {
     "title": "Encontrar una parte",
@@ -2620,7 +2724,8 @@
     "short": "Entender una situación y elegir un cálculo para resolverla.",
     "thumb": "/assets/catalogue-v2/captures/jeu-66.webp",
     "imageAlt": "Captura de Encontrar una parte",
-    "sourceId": "jeu-66"
+    "sourceId": "jeu-66",
+    "playClicks": 1
   },
   {
     "title": "Sumar, ganar, avanzar",
@@ -2647,7 +2752,8 @@
     "short": "Entender una situación y elegir un cálculo para resolverla.",
     "thumb": "/assets/catalogue-v2/captures/jeu-67.webp",
     "imageAlt": "Captura de Sumar, ganar, avanzar",
-    "sourceId": "jeu-67"
+    "sourceId": "jeu-67",
+    "playClicks": 1
   },
   {
     "title": "Restar, perder, retroceder",
@@ -2674,7 +2780,8 @@
     "short": "Entender una situación y elegir un cálculo para resolverla.",
     "thumb": "/assets/catalogue-v2/captures/jeu-68.webp",
     "imageAlt": "Captura de Restar, perder, retroceder",
-    "sourceId": "jeu-68"
+    "sourceId": "jeu-68",
+    "playClicks": 1
   },
   {
     "title": "Resolver en dos pasos",
@@ -2701,7 +2808,8 @@
     "short": "Entender una situación y elegir un cálculo para resolverla.",
     "thumb": "/assets/catalogue-v2/captures/jeu-69.webp",
     "imageAlt": "Captura de Resolver en dos pasos",
-    "sourceId": "jeu-69"
+    "sourceId": "jeu-69",
+    "playClicks": 2
   },
   {
     "title": "Comparar dos cantidades",
@@ -2728,7 +2836,8 @@
     "short": "Entender una situación y elegir un cálculo para resolverla.",
     "thumb": "/assets/catalogue-v2/captures/jeu-70.webp",
     "imageAlt": "Captura de Comparar dos cantidades",
-    "sourceId": "jeu-70"
+    "sourceId": "jeu-70",
+    "playClicks": 0
   },
   {
     "title": "Problemas con modelos de barras — Taller 4",
@@ -2755,7 +2864,8 @@
     "short": "Entender una situación y elegir un cálculo para resolverla.",
     "thumb": "/assets/catalogue-v2/captures/jeu-71.webp",
     "imageAlt": "Captura de Problemas con modelos de barras — Taller 4",
-    "sourceId": "jeu-71"
+    "sourceId": "jeu-71",
+    "playClicks": 2
   },
   {
     "title": "Problemas — Periodo 2",
@@ -2781,7 +2891,8 @@
     "short": "Entender una situación y elegir un cálculo para resolverla.",
     "thumb": "/assets/catalogue-v2/captures/jeu-72.webp",
     "imageAlt": "Captura de Problemas — Periodo 2",
-    "sourceId": "jeu-72"
+    "sourceId": "jeu-72",
+    "playClicks": 4
   },
   {
     "id": "jeu-105",
@@ -2803,6 +2914,7 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/jeu-105.webp",
-    "imageAlt": "Imagen de Restas sin reagrupación — Nave espacial"
+    "imageAlt": "Imagen de Restas sin reagrupación — Nave espacial",
+    "playClicks": 1
   }
 ]
