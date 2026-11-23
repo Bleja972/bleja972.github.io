@@ -939,7 +939,7 @@
     "url": "/en/games/compare-number-bubbles/",
     "description": "Choose the larger number in each pair of rising bubbles. Three levels with two- and three-digit numbers.",
     "weekly": false,
-    "imageAlt": "English gameplay screenshot of Number bubble pairs — Compare numbers",
+    "imageAlt": "Number Bubble Pairs in play: compare the numbers on the bubbles in the coral reef",
     "category": "numeration",
     "level": "CE1",
     "subject": "Mathématiques",
@@ -956,7 +956,7 @@
       "CE1"
     ],
     "short": "Choose the larger number in each pair of rising bubbles. Three levels with two- and three-digit numbers.",
-    "thumb": "/assets/en-captures/compare-number-bubbles-gameplay.webp",
+    "thumb": "/assets/en-captures/number-bubble-pairs-in-play.webp",
     "sourceId": "jeu-1"
   },
   {
