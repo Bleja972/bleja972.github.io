@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="zh-Hans" translate="no" class="notranslate">
-<head><base href="https://bleja972.github.io/evaluation_periode1_numeration/">
-<meta charset="utf-8"><meta name="google" content="notranslate"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>复习1000以内的数</title>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复习 1 000 以内的数</title>
 <style>
 :root{--b:#163a59;--g:#2c9b58;--o:#ed8a2f;--v:#7355c8;--r:#d94b4b}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(#dff5ff,#fff0bd);color:#243746}
@@ -399,55 +399,86 @@ h1{font-size:clamp(1.35rem,3vw,1.8rem);line-height:1.2}
   text-align:center;
 }
 
-</style><script defer src="https://bleja972.github.io/assets/affichage-horizontal.js?v=all-languages-20261108"></script></head><body>
-<nav id="ce1-blog-navigation" aria-label="所有游戏" style="position:relative;z-index:1000;display:flex;justify-content:center;padding:10px 14px;background:#173f30"><a href="/zh/?lang=zh" target="_top" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:12px;background:#fff6cf;color:#173f30;font:700 17px/1.3 system-ui,sans-serif;text-decoration:none;min-height:46px;box-shadow:0 2px 5px #0002">所有游戏</a></nav>
-<div class="app">
-<section id="menu"><div class="card"><div class="brand">小CE1挑战</div><h1>复习1000以内的数</h1><div class="muted">最多1 000人——每个技能8次练习。在电脑、平板电脑或电话上玩</div></div>
-<div class="menu">
-<button class="skill" data-s="mn1"><strong>计数</strong></button>
-<button class="skill" data-s="mn2"><strong>比较对比器</strong></button>
-<button class="skill" data-s="mn3"><strong>游骑</strong></button>
-<button class="skill" data-s="mn4"><strong>读/写</strong></button>
-<button class="skill" data-s="mn5"><strong>脱插</strong></button>
-<button class="skill" data-s="mn6"><strong>比较器</strong></button>
-<button class="skill" data-s="mn7"><strong>撰写/分区</strong></button>
-<button class="skill" data-s="mn8"><strong>对对/ 奇</strong></button>
-<button class="skill" data-s="mn9"><strong>套套件套件</strong></button>
-<button class="skill eval" data-s="eval"><strong>全面做法</strong><span>9种技能各一次。</span></button>
-</div></section>
-
-<section id="game" class="hidden">
-<div class="card"><div class="top"><div><div class="brand">CE1实践</div><b id="skillName"></b></div><div class="badges"><div class="badge" id="count"></div><div class="badge" id="score"></div></div></div><div class="progress"><div id="prog"></div></div></div>
-<div class="card game"><div class="title" id="exTitle"></div><div id="ex"></div><div class="feedback" id="fb"></div><div class="actions"><button class="btn orange" id="check">检查答案</button><button class="btn green hidden" id="next">下一题</button><button class="btn navy" id="back">菜单</button></div></div>
-</section></div>
-<script>function enNumber(n){n=Number(n);const d=['零','一','二','三','四','五','六','七','八','九'];if(n<0)return '负'+enNumber(-n);if(n<10)return d[n];if(n<100)return (n<20?'':d[Math.floor(n/10)])+'十'+(n%10?d[n%10]:'');if(n<1000)return d[Math.floor(n/100)]+'百'+(n%100?(n%100<10?'零':'')+enNumber(n%100):'');if(n===1000)return '一千';return String(n)}
-
+</style>
+<link rel="stylesheet" href="/evaluation_periode1_numeration/arcade.css?v=mission-orbitale-1">
+<style>
+/* Mission 7 : les signes restent centrés entre les cases. */
+#game .decomp-parts {
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,5.5rem) max-content) minmax(0,5.5rem);
+  align-items:center;
+  gap:clamp(4px,1.5vw,12px);
+  margin-inline:0;
+}
+#game .decomp-parts .smallin {
+  width:100%;
+  min-width:0;
+  height:clamp(44px,8vw,58px);
+}
+#game .decomp-parts > span {
+  display:grid;
+  place-items:center;
+  line-height:1;
+  font-size:clamp(1.15rem,3vw,1.65rem);
+}
+</style>
+</head><body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="wrap">
+<header class="mast"><div class="mastbar"><div class="masttext">
+<span class="eyebrow">轨道实验室 · 二年级 · 数与数位</span>
+<h1>数与数位<em>任务</em></h1>
+<p>复习 1 000 以内的数 · 9 项技能 · 综合挑战</p>
+</div><a class="status-pill" href="/zh/" target="_top"><i></i> 全部游戏</a></div></header>
+<div class="layout">
+<aside id="menu" class="menu" aria-label="选择任务">
+<h2>选择任务</h2><div class="seq-list">
+<button type="button" class="skill seq-btn" data-s="mn1" aria-pressed="false"><span class="seq-num">01</span><span class="seq-title"><small>技能 1</small>数积木</span></button>
+<button type="button" class="skill seq-btn" data-s="mn2" aria-pressed="false"><span class="seq-num">02</span><span class="seq-title"><small>技能 2</small>比较大小</span></button>
+<button type="button" class="skill seq-btn" data-s="mn3" aria-pressed="false"><span class="seq-num">03</span><span class="seq-title"><small>技能 3</small>排列数字</span></button>
+<button type="button" class="skill seq-btn" data-s="mn4" aria-pressed="false"><span class="seq-num">04</span><span class="seq-title"><small>技能 4</small>读数与写数</span></button>
+<button type="button" class="skill seq-btn" data-s="mn5" aria-pressed="false"><span class="seq-num">05</span><span class="seq-title"><small>技能 5</small>数字听写</span></button>
+<button type="button" class="skill seq-btn" data-s="mn6" aria-pressed="false"><span class="seq-num">06</span><span class="seq-title"><small>技能 6</small>跳着数</span></button>
+<button type="button" class="skill seq-btn" data-s="mn7" aria-pressed="false"><span class="seq-num">07</span><span class="seq-title"><small>技能 7</small>组成与分解</span></button>
+<button type="button" class="skill seq-btn" data-s="mn8" aria-pressed="false"><span class="seq-num">08</span><span class="seq-title"><small>技能 8</small>奇数与偶数</span></button>
+<button type="button" class="skill seq-btn" data-s="mn9" aria-pressed="false"><span class="seq-num">09</span><span class="seq-title"><small>技能 9</small>数列</span></button>
+<button type="button" class="skill seq-btn" data-s="eval" aria-pressed="false"><span class="seq-num">10</span><span class="seq-title"><small>挑战</small>🏆 综合挑战</span></button>
+</div></aside>
+<main id="game" class="arena">
+<div class="arena-head"><div class="arena-top"><div>
+<h2 id="skillName" tabindex="-1"></h2><p class="sub">数与数位练习 · 二年级</p>
+</div><button class="btn ghost" id="sound" aria-pressed="true" type="button">♫ 音效：开</button></div>
+<div class="hud">
+<div class="hud-box"><span>技能</span><strong id="skillCounter"></strong></div>
+<div class="hud-box"><span>练习</span><strong id="count"></strong></div>
+<div class="hud-box timer"><span>计时</span><strong>不限时</strong></div>
+<div class="hud-box"><span>答对题数</span><strong id="score"></strong></div>
+</div><div class="progressrail"><div class="progressbar" id="prog"></div></div></div>
+<div class="panel">
+<div class="mission" id="exTitle"></div><div class="problem" id="ex"></div>
+<div class="feedback" id="fb" role="status" aria-live="polite"></div>
+<div class="actions"><button class="btn primary" id="check" type="button">✓ 检查</button><button class="btn orange hidden" id="next" type="button">下一题 →</button><button class="btn ghost" id="back" type="button">选择任务</button></div>
+</div>
+</main></div></div>
+<script>
 (()=>{
 const $=x=>document.getElementById(x), rnd=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
-let mode='mn1',i=0,score=0,current=null,evalSkills=[];
-const names={mn1:"MN1 数",mn2:"MN2 比较",mn3:"MN3 MN3 • 命令",mn4:"MN4 读/写",mn5:"MN5 插口",mn6:"MN6 计算",mn7:"MN7 • 复合/分区",mn8:"MN8 平均/奇数",mn9:"MN9 序列"};
-const one=["零","一","二","三","四","五","六","七","八","九","十","十一","十二","十三","十四","十五","十六"];
-function two(n){return enNumber(n)}
-function fr(n){return enNumber(n)}
-function norm(s){
-  return String(s).toLowerCase().normalize("NFDNFD 国民国防军")
-    .replace(/[\u0300-\u036f]/g,'')
-    .replace(/[’']/g,'-')
-    .replace(/\s*-\s*/g,'-')
-    .replace(/\s+/g,' ')
-    .trim();
-}
+let mode='mn1',i=0,score=0,current=null,eval技能s=[];
+const names={mn1:'MN1 • 数积木',mn2:'MN2 • 比较大小',mn3:'MN3 • 排列数字',mn4:'MN4 • 读数与写数',mn5:'MN5 • 数字听写',mn6:'MN6 • 跳着数',mn7:'MN7 • 组成与分解',mn8:'MN8 • 奇数与偶数',mn9:'MN9 • 数列'};
 function total(){
   if(mode==='eval') return 9;
+  if(mode==='mn4') return readingTasks.length;
   if(mode==='mn7') return 18;
   return 8;
-}function sk(){return mode==='eval'?evalSkills[i]:mode}
-function inp(id='a',ph="你的答案"){return `<div class="center"><input id="${id}" class="answer" autocomplete="off" placeholder="${ph}"></div>`}
+}function sk(){return mode==='eval'?eval技能s[i]:mode}
+function inp(id='a',ph='你的答案'){return `<div class="center"><input id="${id}" class="answer" autocomplete="off" placeholder="${ph}"></div>`}
 function chooseSetup(){document.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-v]').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');current.sel=b.dataset.v})}
 function matGroup(cls,count){
-  if(count<=0)return '';
-  if(count<=5)return `<div class="remainder-group">${`<div class="${cls}"></div>`.repeat(count)}</div>`;
-  return `<div class="five-group">${`<div class="${cls}"></div>`.repeat(5)}</div><div class="remainder-group">${`<div class="${cls}"></div>`.repeat(count-5)}</div>`;
+  if (count <= 0) return '';
+  const labels = { block100: '百位方板', block10: '十位长条', block1: '个位小方块' };
+  const block = `<span class="${cls}" role="img" aria-label="${labels[cls]}"></span>`;
+  if (count <= 5) return `<div class="remainder-group">${block.repeat(count)}</div>`;
+  return `<div class="five-group">${block.repeat(5)}</div><div class="remainder-group">${block.repeat(count-5)}</div>`;
 }
 function mn1(){
   const values=[215,310,153,300,251,305,531,150];
@@ -459,7 +490,7 @@ function mn1(){
     <div class="mat-cat">${matGroup('block1',u)}</div>
   </div>`;
   return{
-    t:"基点 10 区块代表哪个数字?",
+    t:'这些十进制积木表示哪个数？',
     h:blocks+inp(),
     c:()=>+$('a').value===n,
     a:n
@@ -478,7 +509,7 @@ function fritzHTML(a,b){
         <button class="fritzNumBtn choice" data-v="${b}">${b}</button>
       </div>
     </div>
-    <div class="fritzHint">单击更大的数字。</div>`;
+    <div class="fritzHint">选出较大的数。</div>`;
 }
 function mn2(){
   const pairs=[
@@ -488,7 +519,7 @@ function mn2(){
   const [a,b]=pairs[i % pairs.length];
   const ans=Math.max(a,b);
   return{
-    t:"单击更大的数字。",
+    t:'选出较大的数。',
     h:fritzHTML(a,b),
     s:()=>{
       document.querySelectorAll('[data-v]').forEach(btn=>btn.onclick=()=>{
@@ -517,10 +548,10 @@ function mn3(){
   const target=[...nums].sort((a,b)=>item.asc?a-b:b-a);
   const order=[];
   return{
-    t:`命令从 ${item.asc?"最小至最大":"最大至最小"}.`,
+    t:`把这些数按${item.asc?'从小到大':'从大到小'}的顺序排列。`,
     h:`<div class="order">${nums.map(n=>`<button class="chip" style="color:#12324a" data-n="${n}">${n}</button>`).join('')}</div>
        <div class="order">${target.map(()=>'<div class="slot">?</div>').join('')}</div>
-       <div class="mn3tools"><button type="button" class="eraseBtn" id="eraseOrder">清空</button></div>`,
+       <div class="mn3tools"><button type="button" class="eraseBtn" id="eraseOrder">清除</button></div>`,
     s:()=>{
       current.order=order;
       const slots=[...document.querySelectorAll('.slot')];
@@ -548,31 +579,17 @@ function mn3(){
     a:target.join(' – ')
   }
 }
-function canonWords(s){return norm(s).replace(/\band\b/g,'').replace(/[\s-]+/g,'')} 
+const readingTasks = [
+  {label:'六百二十', answer:620},
+  {label:'三百零七', answer:307},
+  {label:'九百', answer:900},
+  {label:'七百四十二', answer:742},
+];
 function mn4(){
-  const tasks=[
-    {type:'toWords',n:235,answer:"二百三十五"},
-    {type:'toWords',n:881,answer:"八百八十一"},
-    {type:'toWords',n:412,answer:"四百十二"},
-    {type:'toDigits',label:"六百二十",answer:620},
-    {type:'toDigits',label:"三百零七",answer:307},
-    {type:'toDigits',label:"九百",answer:900},
-    {type:'toWords',n:574,answer:"五百七十四"},
-    {type:'toDigits',label:"七百四十二",answer:742}
-  ];
-  const task=tasks[i % tasks.length];
-  if(task.type==='toWords'){
-    return{
-      t:"将这个数字写成文字 。连字符是可选的。",
-      h:`<div class="prompt">${task.n}</div>
-         <div class="center"><textarea id="a" class="answer wordsAnswer" rows="2" autocomplete="off" placeholder="以单词写入数字"></textarea></div>`,
-      c:()=>canonWords($('a').value)===canonWords(task.answer),
-      a:task.answer
-    };
-  }
-  return{
-    t:"将这个数字写入数字 。",
-    h:`<div class="prompt">${task.label}</div>`+inp(),
+  const task = readingTasks[i % readingTasks.length];
+  return {
+    t:'用数字写出这个数。',
+    h:'<div class="prompt">' + task.label + '</div>' + inp(),
     c:()=>+$('a').value===task.answer,
     a:task.answer
   };
@@ -581,20 +598,29 @@ function mn5(){
   const values=[342,431,800,610,1000,506,101,980];
   const n=values[i % values.length];
   const speak=()=>{
-    if(!('speechSynthesis' in window))return;
-    speechSynthesis.cancel();
-    const u=new SpeechSynthesisUtterance(String(n));
-    u.lang='zh-CN';
-    u.rate=.72;
-    speechSynthesis.speak(u);
+    const synth = window.speechSynthesis;
+    if (!synth || !window.SpeechSynthesisUtterance) return;
+    const voices = synth.getVoices().filter(voice => /^zh(?:-|$)/i.test(voice.lang));
+    const natural = /natural|naturel|neural|enhanced|premium|google|siri/i;
+    const france = voices.filter(voice => /^zh-CN$/i.test(voice.lang));
+    const voice = france.find(voice => natural.test(voice.name))
+      || voices.find(voice => natural.test(voice.name))
+      || france[0] || voices[0];
+    const words = ["三百四十二", "四百三十一", "八百", "六百一十", "一千", "五百零六", "一百零一", "九百八十"][i % values.length];
+    const utterance = new SpeechSynthesisUtterance(words);
+    if (voice) utterance.voice = voice;
+    utterance.lang = voice?.lang || 'zh-CN';
+    utterance.rate = .9;
+    synth.cancel();
+    synth.speak(utterance);
   };
   return{
-    t:"写下你听到的号码",
-    h:`<div class="center"><button class="speaker" id="speakBtn" type="button" aria-label="监听数字">🔊</button></div>${inp()}`,
+    t:'写出你听到的数。',
+    h:`<div class="center"><button class="speaker" id="speakBtn" type="button" aria-label="听数字">🔊</button></div>${inp()}`,
     s:()=>{
       const b=$('speakBtn');
       if(b)b.onclick=speak;
-      setTimeout(speak,250);
+      speak();
     },
     c:()=>+$('a').value===n,
     a:n
@@ -619,7 +645,7 @@ function mn6(){
   const hiddenIdx=item.vals.map((_,idx)=>idx).filter(idx=>!item.shown.includes(idx));
 
   return{
-    t:`以步骤计数 ${item.step} en ${item.step}.`,
+    t:`每次加 ${item.step}，把数列补完整。`,
     h:`<div class="seq">
         ${item.vals.map((v,k)=>
           item.shown.includes(k)
@@ -636,21 +662,21 @@ function mn7(){
 
   const composeCases=[
     // Les 3 exemples du PDF
-    {label:"2 百,7 10和5 1", answer:275},
-    {label:"3百,12万和4个1", answer:424},
-    {label:"25个和7个", answer:257},
+    {label:'2个百, 7个十和5个一', answer:275},
+    {label:'3个百, 12个十和4个一', answer:424},
+    {label:'25个十和7个一', answer:257},
 
     // 7 nouveaux cas
-    {label:"4百,6华和3一", answer:463},
-    {label:"5百,13万和2个", answer:632},
-    {label:"32个和6个", answer:326},
-    {label:"7百,4万和8亿", answer:748},
-    {label:"6百、15万和3个1", answer:753},
-    {label:"41个和9个", answer:419},
-    {label:"8 百, 2 万和5 个", answer:825}
+    {label:'4个百, 6个十和3个一', answer:463},
+    {label:'5个百, 13个十和2个一', answer:632},
+    {label:'32个十和6个一', answer:326},
+    {label:'7个百, 4个十和8个一', answer:748},
+    {label:'6个百, 15个十和3个一', answer:753},
+    {label:'41个十和9个一', answer:419},
+    {label:'8个百, 2个十和5个一', answer:825}
   ];
 
-  // Exercices 1 à 8 : décomposer
+  // 练习s 1 à 8 : décomposer
   if(i < 8){
     const n=decompNums[i];
     const h=Math.floor(n/100)*100;
@@ -659,9 +685,9 @@ function mn7(){
     const expected=[h,d,u].filter(x=>x!==0).sort((a,b)=>a-b);
 
     return{
-      t:"练习1 • 把这个数分解成加法算式。",
+      t:'练习 1 · 把这个数分解成加法算式。',
       h:`<div class="prompt">${n}</div>
-         <div class="parts">
+         <div class="parts decomp-parts">
            <input class="smallin" id="p1" inputmode="numeric">
            <span>+</span>
            <input class="smallin" id="p2" inputmode="numeric">
@@ -680,14 +706,14 @@ function mn7(){
     };
   }
 
-  // Exercices 9 à 18 : composer un nombre
+  // 练习s 9 à 18 : composer un nombre
   const item=composeCases[(i-8) % composeCases.length];
 
   return{
-    t:"练习2 - 你打哪个号码?",
+    t:'练习 2 · 你组成了哪个数？',
     h:`<div class="prompt">${item.label}</div>
        <div class="center">
-         <input id="a" class="answer" inputmode="numeric" autocomplete="off" placeholder="写入编号">
+         <input id="a" class="answer" inputmode="numeric" autocomplete="off" placeholder="输入数字">
        </div>`,
     c:()=>+$('a').value===item.answer,
     a:item.answer
@@ -706,7 +732,7 @@ function parityModel(n){
 function pairUnitRows(n){
   const top=Math.ceil(n/2);
   const bottom=Math.floor(n/2);
-  const row=(count)=>`<div class="unitRow">${'<span class="unitSquare"></span>'.repeat(count)}</div>`;
+  const row=(count)=>`<div class="unitRow">${'<span class="unitSquare" role="img" aria-label="个位小方块"></span>'.repeat(count)}</div>`;
   return `<div class="pairModel">
     ${row(top)}
     ${row(bottom)}
@@ -716,17 +742,17 @@ function pairUnitRows(n){
 function mn8(){
   const values=[15,4,22,11,14,13,18,27];
   const n=values[i % values.length];
-  const ans=n%2===0?"even":"odd";
+  const ans=n%2===0?'even':'odd';
 
   return{
-    t:"看看那些:如果一个人没有伴侣, 数字是奇怪的。否则,就扯平了。",
+    t:'观察这些小方块。两两配对后，如果剩下一个，就是奇数。如果都能配对，就是偶数。',
     h:`<div class="parityWrap">
         <div class="parityCard">
           <div class="parityNumber">${n}</div>
           ${pairUnitRows(n)}
           <div class="parityButtons">
-            <button data-v="even">${n} 偶为</button>
-            <button data-v="odd">${n} 奇数</button>
+            <button data-v="even">${n} 是偶数</button>
+            <button data-v="odd">${n} 是奇数</button>
           </div>
         </div>
       </div>`,
@@ -738,41 +764,68 @@ function mn8(){
       });
     },
     c:()=>current.sel===ans,
-    a:ans
+    a:ans==='even'?'偶数':'奇数'
   }
 }
-function mn9(){let step=[2,3,5,10][rnd(0,3)],start=rnd(100,700),vals=Array.from({length:8},(_,k)=>start+k*step),bl=[0,3,4,7];return{t:"看看顺序 完成它。",h:`<div class="seq">${vals.map((v,k)=>bl.includes(k)?`<input class="smallin" data-a="${v}" inputmode="numeric">`:`<div class="slot">${v}</div>`).join('')}</div>`,c:()=>[...document.querySelectorAll('[data-a]')].every(x=>+x.value===+x.dataset.a),a:bl.map(k=>vals[k]).join(', ')}}
+function mn9(){let step=[2,3,5,10][rnd(0,3)],start=rnd(100,700),vals=Array.from({length:8},(_,k)=>start+k*step),bl=[0,3,4,7];return{t:'补全数列。',h:`<div class="seq">${vals.map((v,k)=>bl.includes(k)?`<input class="smallin" data-a="${v}" inputmode="numeric">`:`<div class="slot">${v}</div>`).join('')}</div>`,c:()=>[...document.querySelectorAll('[data-a]')].every(x=>+x.value===+x.dataset.a),a:bl.map(k=>vals[k]).join(', ')}}
 const gen={mn1,mn2,mn3,mn4,mn5,mn6,mn7,mn8,mn9};
-function render(){let s=sk();current=gen[s]();$('skillName').textContent=mode==='eval'?"全面做法":names[s];$('exTitle').textContent=current.t;$('ex').innerHTML=current.h;$('fb').textContent='';$('count').textContent=`演习演练 ${i+1} / ${total()}`;$("score").textContent=`得分 ${score}`;$('prog').style.width=`${i/total()*100}%`;$("check").classList.remove('hidden');$("next").classList.add('hidden');if(current.s)current.s();let f=document.querySelector('#ex input');if(f)setTimeout(()=>f.focus(),50)}
-function start(s){mode=s;i=0;score=0;evalSkills=['mn1','mn2','mn3','mn4','mn5','mn6','mn7','mn8','mn9'].sort(()=>Math.random()-.5);$("menu").classList.add('hidden');$('game').classList.remove('hidden');render()}
-document.querySelectorAll('.skill').forEach(b=>b.onclick=()=>start(b.dataset.s));
-$("check").onclick=()=>{
+const missions = [...document.querySelectorAll('.seq-btn')];
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+function render(){let s=sk();
+  $('skillCounter').textContent = s.slice(-1).padStart(2,'0') + ' / 09';
+  for (const button of missions) {
+    const active = button.dataset.s === mode;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-pressed', String(active));
+  }
+current=gen[s]();$('skillName').textContent=mode==='eval'?'🏆 综合挑战':names[s].substring(6);$('exTitle').textContent=current.t;$('ex').innerHTML=current.h;$('fb').classList.remove('arcade-correct','arcade-incorrect');$('fb').textContent='';$('count').textContent=`练习 ${i+1} / ${total()}`;$('score').textContent=`得分： ${score}`;$('prog').style.width=`${i/total()*100}%`;$('check').classList.remove('hidden');$('next').classList.add('hidden');if(current.s)current.s();let f=document.querySelector('#ex input');if(f && document.activeElement !== document.body)setTimeout(()=>f.focus({preventScroll:true}),50)}
+function start(s){mode=s;i=0;score=0;eval技能s=['mn1','mn2','mn3','mn4','mn5','mn6','mn7','mn8','mn9'].sort(()=>Math.random()-.5);render()}
+for (const button of missions) button.onclick = () => {
+  window.speechSynthesis?.cancel();
+  start(button.dataset.s);
+  sound('tap');
+  $('skillName').focus({ preventScroll: true });
+  $('game').scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start' });
+};
+$('check').onclick=()=>{
   let ok=current.c();
   if(ok)score++;
   const done=i+1;
   const pct=Math.round((score/done)*100);
   $('fb').innerHTML=ok
-    ? `<span class="good">真棒！</span><span class="successPct">成功率: ${pct} %</span>`
-    : `<span class="bad">预期答复: ${current.a}</span><span class="successPct">成功率: ${pct} %</span>`;
-  $("score").textContent=`得分 ${score}`;
-  $("check").classList.add('hidden');
-  $("next").classList.remove('hidden');
+    ? `<span class="good">答对了！</span><span class="successPct">正确率： ${pct} %</span>`
+    : `<span class="bad">正确答案： ${current.a}</span><span class="successPct">正确率： ${pct} %</span>`;
+  sound(ok ? 'good' : 'bad');
+  $('score').textContent=`得分： ${score}`;
+  $('check').classList.add('hidden');
+  $('next').classList.remove('hidden');
 };
-$("next").onclick=()=>{
+$('next').onclick=()=>{
   if(i<total()-1){
     i++;
     render();
   }else{
     const pct=Math.round((score/total())*100);
     $('prog').style.width='100%';
-    $('exTitle').textContent="程序完成完成";
-    $('ex').innerHTML=`<div class="prompt">得分 ${score} / ${total()}</div><div class="finalPct">成功率: ${pct} %</div>`;
+    $('exTitle').textContent='挑战完成';
+    $('ex').innerHTML=`<div class="prompt">得分： ${score} / ${total()}</div><div class="finalPct">正确率： ${pct} %</div>`;
     $('fb').innerHTML=score>=Math.ceil(total()*.75)
-      ? "<span class=\"good\">优秀的练习!</span>"
-      : "<span class=\"bad\">运用你再次发现困难的技能。</span>";
-    $("next").classList.add('hidden');
+      ? '<span class="good">做得很好！</span>'
+      : '<span class="bad">再练一练你觉得困难的技能。</span>';
+    $('next').classList.add('hidden');
   }
 };
-$("back").onclick=()=>{if(window.speechSynthesis)speechSynthesis.cancel();$('game').classList.add('hidden');$("menu").classList.remove('hidden')};
+$('back').onclick = () => {
+  window.speechSynthesis?.cancel();
+  document.querySelector('.seq-btn.active')?.focus();
+  $('menu').scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start' });
+};
+let audioCtx, muted = false;
+function audioStart(){if(muted)return null;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();return audioCtx}catch{return null}}
+function beep(freq,dur,type='sine',gain=.07,delay=0,slide=0){const a=audioStart();if(!a)return;const t=a.currentTime+delay,o=a.createOscillator(),g=a.createGain();o.type=type;o.frequency.setValueAtTime(freq,t);if(slide)o.frequency.exponentialRampToValueAtTime(Math.max(35,freq+slide),t+dur);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(gain,t+.012);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g).connect(a.destination);o.start(t);o.stop(t+dur+.02)}
+function sound(kind){if(kind==='good'){beep(490,.12,'triangle',.055);beep(740,.14,'sine',.065,.105);beep(988,.2,'triangle',.055,.22)}else if(kind==='bad'){beep(235,.16,'sawtooth',.035,0,-105);beep(140,.2,'triangle',.043,.14,-60)}else if(kind==='end'){[440,587,740,988].forEach((f,i)=>beep(f,.15,'triangle',.065,i*.105))}else beep(360,.08,'sine',.033,0,105)}
+$('sound').onclick=()=>{muted=!muted;$('sound').textContent=muted?'♫ 音效：关':'♫ 音效：开';$('sound').setAttribute('aria-pressed',String(!muted));if(!muted)sound('tap')};
+const canvas=$('stars'),ctx=canvas.getContext('2d');if(ctx&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){let stars=[],w=0,h=0;function resize(){w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;stars=Array.from({length:Math.min(95,Math.max(25,Math.floor(w*h/11000)))},()=>({x:Math.random()*w,y:Math.random()*h,r:.4+Math.random()*1.25,s:.15+Math.random()*.45,p:Math.random()*6.28}))}window.addEventListener('resize',resize,{passive:true});resize();function draw(now){ctx.clearRect(0,0,w,h);stars.forEach(s=>{s.y+=s.s;if(s.y>h+3)s.y=-3;const alpha=.18+.35*(1+Math.sin(now*.001+s.p))/2;ctx.fillStyle=`rgba(118,232,255,${alpha})`;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill()});requestAnimationFrame(draw)}requestAnimationFrame(draw)}
+start('mn1');
 })();
-</script><script src="/assets/catalogue-v2/runtime-zh.js?v=1" defer></script></body></html>
+</script></body></html>
