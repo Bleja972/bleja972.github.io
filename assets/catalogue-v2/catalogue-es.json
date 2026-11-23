@@ -197,7 +197,7 @@
     "objective": "Añadir y restar 1, 10 o 100 a los números hasta 999.",
     "short": "Tres niveles de cálculo mental en 90 segundos, en el laboratorio de un científico farfelu.",
     "thumb": "/assets/catalogue-v2/captures/jeu-85.webp",
-    "imageAlt": "Captura de El laboratorio de cálculo",
+    "imageAlt": "Operación en un matraz de El laboratorio de cálculo",
     "sourceId": "jeu-85"
   },
   {
@@ -221,8 +221,8 @@
     "slug": "vallee-des-moities",
     "objective": "Calcular las mitades de los números pares de 4 a 50 y de 100 a 200.",
     "short": "Cuatro niveles de mitades, sólo números pares, burbujas que aceleran y música mágica.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-84.webp",
-    "imageAlt": "Captura de El valle de las mitades",
+    "thumb": "/assets/images/bannieres/openai/vallee-des-moities.webp?v=bannieres-20261115",
+    "imageAlt": "Ilustración de El valle de las mitades",
     "sourceId": "jeu-84"
   },
   {
