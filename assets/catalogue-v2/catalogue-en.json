@@ -1360,7 +1360,7 @@
   {
     "id": "en-jeu-28",
     "title": "Year 2 Mental Maths",
-    "url": "https://bleja972.github.io/jeux/calcul-mental-cp/",
+    "url": "/en/games/year-2-mental-maths/",
     "description": "Practise addition, subtraction, doubles, halves and number bonds to 10.",
     "levels": [
       "CP"
@@ -1375,14 +1375,13 @@
     "weekly": false,
     "new": false,
     "sourceId": "jeu-28",
-    "contentLanguage": "fr",
-    "thumb": "/assets/catalogue-v2/captures/jeu-28.webp",
-    "imageAlt": "French gameplay screenshot of Year 2 Mental Maths"
+    "thumb": "/assets/en-captures/year-2-mental-maths-gameplay.webp",
+    "imageAlt": "English gameplay screenshot of Year 2 Mental Maths"
   },
   {
     "id": "en-calcul-mental-cp-neon-un-calcul",
     "title": "Neon Arcade Mental Maths — One Calculation at a Time",
-    "url": "/jeux/calcul-mental-cp-neon/",
+    "url": "/en/games/year-2-neon-mental-maths/",
     "description": "Work through one calculation at a time in the neon arcade.",
     "levels": [
       "CP"
@@ -1397,9 +1396,8 @@
     "weekly": false,
     "new": true,
     "sourceId": "calcul-mental-cp-neon-un-calcul",
-    "contentLanguage": "fr",
-    "thumb": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg",
-    "imageAlt": "French gameplay screenshot of Neon Arcade Mental Maths — One Calculation at a Time"
+    "thumb": "/assets/en-captures/year-2-neon-mental-maths-gameplay.webp",
+    "imageAlt": "English gameplay screenshot of Neon Arcade Mental Maths — One Calculation at a Time"
   },
   {
     "id": "en-calcul-mental-cp-pygame",
