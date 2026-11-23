@@ -639,8 +639,51 @@
     box-shadow:0 8px 20px rgba(190,140,0,.20);
   }
 
+
+
+html{background:#030b19}
+body{color:#eafbff;background:linear-gradient(#011225d9,#010612e8),url("https://bleja972.github.io/jeux/calcul-mental-periode-2/jouer/laboratoire-orbital.webp") center/cover fixed no-repeat}
+#ce1-blog-navigation{background:#031426ed!important;border-bottom:1px solid #60ebff}
+#ce1-blog-navigation a{background:#0a3048!important;color:#d6faff!important;border:1px solid #68efff!important;box-shadow:0 0 15px #37ddff80!important}
+.title{color:#acffff;text-shadow:0 0 12px #12caff}
+.badge{background:linear-gradient(135deg,#09283fe8,#031325f5);color:#fff18b;border:1px solid #66eaff;box-shadow:0 0 14px #28d8ff72,inset 0 0 12px #2beaff22}
+.game{isolation:isolate;background:linear-gradient(#03192a65,#0108188a),url("https://bleja972.github.io/jeux/calcul-mental-periode-2/jouer/laboratoire-orbital.webp") center/cover no-repeat!important;border:3px solid #5df0ff;box-shadow:0 0 28px #23dcff96,0 0 65px #075faf55,inset 0 0 60px #020c1a99}
+.game::before{background:linear-gradient(120deg,#6efaff12,transparent 45%,#ea5aff12),radial-gradient(ellipse at 50% 12%,#88ffff1a,transparent 60%);z-index:2}
+.game::after{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;background:linear-gradient(105deg,transparent 35%,#b8fbff12 50%,transparent 65%);background-size:250% 100%;animation:scanLight 9s linear infinite}
+@keyframes scanLight{to{background-position:-250% 0}}
+.sun,.cloud,.mount,.village,.palm,.sea-wave,.sand-strip,.flowers,.spark{display:none!important}
+.floor{background:linear-gradient(#071f38ed,#010715f9);border-top:4px solid #8cf8ff;box-shadow:0 -7px 23px #1bdbff89}
+.pit{height:10px;background:linear-gradient(90deg,#00eaff,#ff7bec,#00eaff);background-size:200% 100%;box-shadow:0 0 18px #42faff;animation:railLight 3s linear infinite}
+@keyframes railLight{to{background-position:200% 0}}
+.operation{background:linear-gradient(150deg,#10314aeF,#071428f5)!important;border:2px solid #73f4ff!important;color:#fff17a!important;border-radius:17px;text-shadow:0 0 13px #ffe833a9!important;box-shadow:0 0 21px #35d9ff99,inset 0 0 22px #36dfff33!important;backdrop-filter:blur(6px)}
+.operation::before{border-color:#acfbff76}.operation::after{background:linear-gradient(90deg,transparent,#a3fdff8a,transparent)}
+.operation.danger{background:#43192beE!important;border-color:#ff65a4!important;color:#ffdae8!important;box-shadow:0 0 20px #ff3d91a8!important}
+.racePanel{background:#061d34eD;color:#e9fbff;border:2px solid #77efff;box-shadow:0 0 20px #32dbff8c;backdrop-filter:blur(8px)}
+.track{background:linear-gradient(90deg,#10618b,#51ecff);box-shadow:0 0 12px #3beeff}
+.track.pink{background:linear-gradient(90deg,#73358e,#ff5eda);box-shadow:0 0 12px #ff5eda}
+.dock-label{background:#071f35eb;color:#e9ffff;border:1px solid #66eaff;box-shadow:0 0 16px #36dfff7b}
+.answer{background:#041c31;color:#fff178;box-shadow:0 0 0 3px #60eaff,0 0 20px #36dfff9a,inset 0 0 10px #2ccaff36;text-shadow:0 0 9px #fce348}
+.answer:focus{box-shadow:0 0 0 3px #fff38e,0 0 25px #4cecff}
+.speedHint{background:#061f38e9;color:#adf8ff;border:1px solid #69f1ff;box-shadow:0 0 13px #38dbff}
+.speedHint.goldMode{background:#312b11eb;color:#fff08a;border-color:#ffe45d;box-shadow:0 0 21px #ffdf55}
+.btnIcon,.startBtn{border:1px solid #a4f6ff;box-shadow:0 0 16px #32cfff9b,inset 0 2px 0 #fff7}
+.blue{background:linear-gradient(#2191bc,#0a356c)}.red{background:linear-gradient(#db507a,#681d55)}
+.startBtn{background:linear-gradient(#26dabb,#086a88)}
+.overlay{background:#010a1cbb;backdrop-filter:blur(7px)}
+.card{color:#eafbff;background:linear-gradient(155deg,#0c304beF,#051427f9);border:2px solid #77f3ff;box-shadow:0 0 34px #34ddffa2}
+.card h1,.card h2{color:#b8fcff;text-shadow:0 0 15px #28e5ff}.card #medalText{color:#ffef82!important}
+.good{color:#93ffd8}.bad{color:#ffc4d8}.feedback{text-shadow:0 0 15px currentColor}
+.arcade-spark{position:absolute;z-index:78;pointer-events:none;width:9px;height:9px;border-radius:50%;background:#fff475;box-shadow:0 0 15px #fff475;animation:arcadeBurst .65s ease-out forwards}
+@keyframes arcadeBurst{to{transform:translate(var(--dx),var(--dy)) scale(.15);opacity:0}}
+.game.arcade-flash{animation:arcadeFlash .25s ease-out}
+@keyframes arcadeFlash{50%{box-shadow:0 0 46px #8fffff,0 0 85px #23dfff,inset 0 0 75px #20bffb66}}
+@media(max-width:600px){.app{padding:7px}.title{font-size:1.05rem}.badge{padding:6px;min-width:92px}.game{height:740px}.operation{min-width:110px;padding:8px;font-size:1.35rem}.operation>div:first-child{font-size:.55rem!important}.racePanel{left:4%;width:min(92%,300px);bottom:165px}.dock{bottom:12px}.dock-label{font-size:.82rem;padding:9px}.answer{height:55px;width:min(180px,52vw)}.controls{left:7px;top:7px;gap:5px}.btnIcon{height:45px;width:45px;font-size:1.2rem}.speedHint{max-width:140px;font-size:.8rem;right:7px;top:10px}.card{padding:15px}.card h1{font-size:1.55rem}}
+@media(prefers-reduced-motion:reduce){.game::after,.pit{animation:none}.arcade-spark{display:none}}
+
+.runner{top:12px;width:49px;height:36px;display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 0 7px #55efff)!important}.runner .race-ship{width:49px;height:34px;overflow:visible}.runner#rival{filter:drop-shadow(0 0 8px #f168ff)!important}.laneLabel{font-size:1.4rem}.racePanel .lane{overflow:hidden}.racePanel .track{right:29px}.racePanel .flag{right:20px}@media(max-width:600px){.runner,.runner .race-ship{width:40px}.racePanel .track{right:25px}}
+
 </style>
-<script defer src="https://bleja972.github.io/assets/affichage-horizontal.js?v=all-languages-20261108"></script><script defer src="/assets/english-game-backgrounds.js?v=20261117"></script></head>
+<script defer src="https://bleja972.github.io/assets/affichage-horizontal.js?v=all-languages-20261108"></script></head>
 <body>
 <nav id="ce1-blog-navigation" aria-label="All games" style="position:relative;z-index:1000;display:flex;justify-content:center;padding:10px 14px;background:#173f30"><a href="/en/" target="_top" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:12px;background:#fff6cf;color:#173f30;font:700 17px/1.3 system-ui,sans-serif;text-decoration:none;min-height:46px;box-shadow:0 2px 5px #0002">🏠 See all games</a></nav>
 
@@ -903,7 +946,15 @@
     active = active.filter(o => o !== op);
   }
 
+  function arcadeBurst(op){
+ if(!op.el||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const game=$('game'),rect=game.getBoundingClientRect(),r=op.el.getBoundingClientRect(),x=r.left-rect.left+r.width/2,y=r.top-rect.top+r.height/2;
+ game.classList.remove('arcade-flash');void game.offsetWidth;game.classList.add('arcade-flash');
+ for(let i=0;i<14;i++){const p=document.createElement('i'),a=i*Math.PI/7,d=35+Math.random()*65;p.className='arcade-spark';p.style.left=x+'px';p.style.top=y+'px';p.style.setProperty('--dx',Math.cos(a)*d+'px');p.style.setProperty('--dy',Math.sin(a)*d+'px');game.appendChild(p);setTimeout(()=>p.remove(),800);}
+}
+
   function markGood(op){
+    arcadeBurst(op);
     score++;
     round++;
     playerProgress = Math.min(1, playerProgress + 1/12);
