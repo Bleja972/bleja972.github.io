@@ -48,16 +48,11 @@ h2 { margin:0 0 .65em; font-size:clamp(1.25rem,3vw,2rem) }
 .home,.end { text-align:center }
 .card,.challenge { background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:clamp(12px,2vw,24px) }
 .intro { margin:0 auto 1em; max-width:50ch; font-size:clamp(1.1rem,2vw,1.35rem); line-height:1.55 }
-.nameInput {
-  display:block; width:min(100%,360px); margin:0 auto 16px; padding:12px;
-  border:2px solid #3af; border-radius:12px; background:#081e32; color:var(--ink);
-  font:inherit; text-align:center;
-}
 button {
   --accent:var(--cyan); font:inherit; font-weight:850; color:var(--ink);
   cursor:pointer; touch-action:manipulation;
 }
-button:focus-visible,input:focus-visible { outline:3px solid var(--yellow); outline-offset:3px }
+button:focus-visible { outline:3px solid var(--yellow); outline-offset:3px }
 .startBtn,.actionBtn,.secondary {
   min-height:46px; padding:10px 16px; border:1px solid var(--accent); border-radius:13px;
   background:linear-gradient(145deg,#132d3e,#090c14); box-shadow:0 4px 0 #000,0 0 12px color-mix(in srgb,var(--accent) 29%,transparent);
@@ -132,7 +127,6 @@ aside button { margin-top:15px; width:100% }
       Observe seulement le nombre du début et celui de la fin.
       À toi de trouver comment la droite avance, puis de placer le nombre demandé.
     </p>
-    <input aria-label="Mon prénom" id="name" class="nameInput" maxlength="18" placeholder="Mon prénom">
     <button id="startBtn" class="startBtn">▶ COMMENCER</button>
   </div>
 </section>
@@ -191,7 +185,7 @@ aside button { margin-top:15px; width:100% }
 const TOTAL=10;
 const POSSIBLE_STEPS=[1,2,5,10];
 
-let score=0,streak=0,qIndex=0,player="Champion";
+let score=0,streak=0,qIndex=0;
 let start=10,step=1,target=0,targetIndex=0,selectedIndex=null,locked=false;
 
 const $=id=>document.getElementById(id);
@@ -285,7 +279,6 @@ function renderLine(){
 }
 
 function startGame(){
-  player=$("name").value.trim()||player||"Champion";
   score=0;
   streak=0;
   qIndex=0;
@@ -367,7 +360,7 @@ $("nextBtn").addEventListener("click",()=>{
 function finish(){
   show("end");
   $("endText").textContent=
-    player+", tu as placé correctement "+score+
+    "Tu as placé correctement "+score+
     " nombre"+(score>1?"s":"")+" sur 10.";
 
   if(score===10){
