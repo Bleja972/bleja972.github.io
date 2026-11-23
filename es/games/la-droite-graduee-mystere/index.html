@@ -1,188 +1,147 @@
-<!doctype html>
-<html lang="es" translate="no" class="notranslate">
-<head><base href="https://jeu-de-la-droite-graduee.netlify.app/">
-<meta charset="UTF-8"><meta name="google" content="notranslate">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0b8fa3">
-<title>La recta numérica misteriosa</title>
+<meta name="theme-color" content="#05070a">
+<title>La recta numérica misteriosa — 2.º de primaria</title>
 <style>
-:root{
-  --ink:#17324d;
-  --blue:#0b8fa3;
-  --good:#2f9e44;
-  --bad:#d94841;
-  --orange:#ffd18a;
-  --cream:#fff6e2;
+:root {
+  color-scheme: dark;
+  --bg:#06080c; --panel:#0a111a; --ink:#edf8ff; --muted:#a7d9e8;
+  --cyan:#53e5ff; --border:#28627a; --yellow:#ffdb62;
+  --good:#8bfb91; --bad:#ff819d;
 }
-*{box-sizing:border-box}
-html,body{
-  margin:0;min-height:100%;
-  font-family:Arial,Helvetica,sans-serif;color:var(--ink)
+* { box-sizing:border-box }
+body {
+  margin:0; min-height:100vh; color:var(--ink);
+  font-family:system-ui, sans-serif;
+  background:radial-gradient(ellipse at 12% 0%,#0b2934,transparent 55%),var(--bg);
 }
-body{
-  min-height:100vh;min-height:100dvh;
-  background:linear-gradient(#c8efff 0 58%,#5dc6dc 58% 68%,#f3d998 68%);
-  display:flex;justify-content:center
+.app { max-width:1440px; margin:auto; padding:clamp(10px,2.4vw,34px) }
+header {
+  padding:clamp(16px,3vw,40px); border:1px solid var(--border); border-radius:26px;
+  background:radial-gradient(circle at 95% 65%,#09131e 0 14%,#102131 14% 16%,#05060b 16%);
+  box-shadow:0 6px 0 #0009,0 0 22px #2ad6ff26;
 }
-.app{
-  width:100%;max-width:820px;min-height:100vh;min-height:100dvh;
-  background:rgba(255,255,255,.95);display:flex;flex-direction:column
+.eyebrow, aside h2 {
+  text-transform:uppercase; color:var(--cyan); letter-spacing:.14em;
+  font-size:.84rem; font-weight:850;
 }
-header{
-  text-align:center;padding:13px 14px 10px;
-  background:linear-gradient(90deg,#fff0c2,#ffe0a0);
-  border-bottom:3px solid white
+h1 { margin:.2em 0 0; font-size:clamp(1.85rem,5vw,3.8rem); line-height:1.06; font-weight:900 }
+h1 em { color:var(--yellow); font-style:normal; text-shadow:0 0 17px #ffcc4b40 }
+header p { margin:.6em 0 0; color:var(--muted) }
+.layout { display:grid; grid-template-columns:minmax(185px,23%) minmax(0,1fr); gap:18px; margin-top:20px }
+aside, main { background:#080c13; border:1px solid var(--border); border-radius:22px; padding:clamp(14px,2vw,24px); min-width:0 }
+aside { align-self:start }
+aside h2 { margin:0 0 12px }
+.mission {
+  display:flex; align-items:center; gap:12px; padding:12px;
+  border:1px solid var(--cyan); border-radius:14px;
+  background:#0d2734; box-shadow:0 0 14px #47def146;
 }
-.school{font-weight:900;color:#086a74;font-size:clamp(16px,4vw,21px)}
-h1{margin:4px 0 0;color:var(--blue);font-size:clamp(28px,7vw,45px)}
-.screen{display:none;flex:1}
-.screen.active{display:flex;flex-direction:column}
-.home{justify-content:center;padding:20px;text-align:center}
-.card{
-  background:var(--orange);border-radius:28px;padding:22px 18px;
-  box-shadow:0 12px 30px rgba(0,0,0,.12)
+.mission span { color:var(--cyan); font-size:1.25rem; font-weight:900 }
+.screen { display:none }
+.screen.active { display:block }
+h2 { margin:0 0 .65em; font-size:clamp(1.25rem,3vw,2rem) }
+.home,.end { text-align:center }
+.card,.challenge { background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:clamp(12px,2vw,24px) }
+.intro { margin:0 auto 1em; max-width:50ch; font-size:clamp(1.1rem,2vw,1.35rem); line-height:1.55 }
+button {
+  --accent:var(--cyan); font:inherit; font-weight:850; color:var(--ink);
+  cursor:pointer; touch-action:manipulation;
 }
-.hero{font-size:58px}
-.intro{font-size:19px;font-weight:800;line-height:1.45}
-.nameInput{
-  width:100%;border:3px solid #c98928;border-radius:17px;text-align:center;
-  padding:14px;font-size:24px;outline:none;margin:8px 0 15px;background:#fff4de
+button:focus-visible { outline:3px solid var(--yellow); outline-offset:3px }
+.startBtn,.actionBtn,.secondary {
+  min-height:46px; padding:10px 16px; border:1px solid var(--accent); border-radius:13px;
+  background:linear-gradient(145deg,#132d3e,#090c14); box-shadow:0 4px 0 #000,0 0 12px color-mix(in srgb,var(--accent) 29%,transparent);
 }
-.startBtn,.actionBtn,.tickBtn{
-  touch-action:manipulation;-webkit-tap-highlight-color:transparent;cursor:pointer
+button:active:not(:disabled) { transform:translateY(2px) }
+aside button { margin-top:15px; width:100% }
+.top { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px }
+.stat { border:1px solid var(--border); border-radius:12px; padding:8px; color:var(--muted); font-weight:800 }
+.stat span { color:var(--ink); font-size:1.3rem }
+.progress { height:8px; margin:14px 0; background:#102d41; border-radius:12px; overflow:hidden }
+.bar { height:100%; width:0; background:linear-gradient(90deg,#28dfff,var(--good)); transition:width .25s }
+.prompt,.target { text-align:center; font-weight:900; color:var(--yellow) }
+.prompt { font-size:clamp(1.1rem,2.4vw,1.6rem) }
+.target { font-size:clamp(3rem,9vw,5rem); line-height:1.15; margin:4px 0 12px; text-shadow:0 0 18px #ffd85345 }
+.lineCard { background:#080e18; border:1px solid var(--border); border-radius:15px; padding:14px 3px 10px }
+.numberLine { position:relative; --tick-height:50px }
+.lineTrack {
+  position:absolute; left:calc(100% / 22); right:calc(100% / 22); top:23px;
+  height:4px; background:var(--cyan); border-radius:4px; box-shadow:0 0 12px #34dafa77;
 }
-.startBtn{
-  width:100%;min-height:66px;border:0;border-radius:20px;background:var(--blue);
-  color:white;font-size:clamp(23px,6vw,31px);font-weight:900;box-shadow:0 7px 0 #076d79
+.ticks { display:grid; grid-template-columns:repeat(11,minmax(0,1fr)); position:relative }
+.tickCol { display:flex; flex-direction:column; align-items:center; min-width:0 }
+.tickBtn { width:100%; height:var(--tick-height); border:0; padding:0; background:none; display:grid; place-items:center }
+.tickBtn:disabled { cursor:default }
+.tickMark { width:4px; height:24px; border-radius:4px; background:#b7f5ff }
+.tickBtn.selected .tickMark { height:36px; background:var(--yellow); box-shadow:0 0 10px var(--yellow) }
+.tickBtn.correct .tickMark { height:38px; width:7px; background:var(--good); box-shadow:0 0 12px var(--good); animation:correct-glow .55s ease-in-out 3 alternate }
+.tickBtn.wrong .tickMark { height:38px; width:7px; background:var(--bad); box-shadow:0 0 9px var(--bad) }
+@keyframes correct-glow { to { opacity:.5 } }
+.tickLabel.endpoint { color:var(--yellow); font-size:clamp(.83rem,2.8vw,1.5rem); font-weight:900; white-space:nowrap }
+.selectedText,.hintBox,.feedback { text-align:center; font-weight:750; margin-top:12px }
+.hintBox { display:none; padding:10px; border:1px dashed var(--yellow); border-radius:12px; color:var(--yellow) }
+.actions,.endBtns { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:16px }
+.hint { --accent:var(--yellow) }
+.next { --accent:var(--good); display:none }
+.feedback { min-height:1.5em; color:var(--muted) }
+.stars { font-size:2.5rem }
+@media(max-width:660px) {
+  .layout { grid-template-columns:minmax(0,1fr); gap:10px; margin-top:12px }
+  aside { display:flex; align-items:center; gap:8px; padding:8px }
+  aside h2 { display:none }
+  aside button { margin:0; width:auto; flex:none; padding-inline:9px }
+  .mission { flex:1; padding:7px; font-size:.85rem }
+  main { padding:9px }
+  .challenge { padding:9px }
 }
-.game{padding:10px 14px 16px}
-.top{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
-.stat{
-  background:var(--orange);border-radius:16px;text-align:center;padding:10px 4px;
-  font-weight:900;box-shadow:0 5px 12px rgba(0,0,0,.06)
-}
-.progress{
-  height:12px;background:#e7eef0;border-radius:999px;overflow:hidden;margin-bottom:14px
-}
-.bar{
-  height:100%;width:0;background:linear-gradient(90deg,#55c3da,#2f9e44);transition:width .3s
-}
-.challenge{
-  background:var(--cream);border:4px solid white;border-radius:26px;
-  padding:20px 12px;box-shadow:0 9px 20px rgba(0,0,0,.10)
-}
-.prompt{text-align:center;font-size:21px;font-weight:900}
-.target{
-  text-align:center;font-size:clamp(50px,14vw,78px);font-weight:900;
-  color:#0b7180;margin:4px 0 18px
-}
-.lineCard{
-  background:var(--orange);border-radius:22px;padding:28px 12px 24px;
-  box-shadow:inset 0 0 0 2px #e1a24a;
-  overflow-x:auto
-}
-.numberLine{
-  min-width:560px;display:grid;align-items:start;position:relative;padding:0 12px 22px
-}
-.lineTrack{
-  height:8px;background:#17324d;border-radius:999px;
-  position:absolute;left:28px;right:28px;top:24px
-}
-.ticks{
-  display:grid;grid-template-columns:repeat(11,1fr);
-  position:relative;z-index:2
-}
-.tickCol{
-  display:flex;flex-direction:column;align-items:center;min-width:0
-}
-.tickBtn{
-  width:44px;height:52px;border:0;background:transparent;position:relative;
-  display:flex;align-items:flex-start;justify-content:center;padding:0
-}
-.tickMark{
-  width:4px;height:26px;background:#17324d;border-radius:3px;transition:.15s
-}
-.tickBtn.selected .tickMark{height:40px;background:#ff9800}
-.tickBtn.correct .tickMark{height:42px;background:var(--good);width:7px}
-.tickBtn.wrong .tickMark{height:42px;background:var(--bad);width:7px}
-.tickLabel{
-  min-height:44px;margin-top:4px;font-size:0;color:transparent
-}
-.tickLabel.endpoint{
-  min-height:72px;width:72px;height:72px;margin-top:8px;
-  font-size:23px;font-weight:900;color:#17324d;background:#ffb64d;
-  border:3px solid #b96e00;display:flex;align-items:center;justify-content:center;
-  transform:rotate(45deg);border-radius:10px;
-  box-shadow:0 6px 14px rgba(0,0,0,.08)
-}
-.tickLabel.endpoint span{
-  transform:rotate(-45deg);display:block
-}
-.selectedText{
-  text-align:center;font-size:20px;font-weight:900;min-height:32px;margin-top:12px
-}
-.hintBox{
-  display:none;margin:14px auto 0;max-width:590px;background:var(--orange);
-  border-radius:16px;padding:12px;text-align:center;font-size:19px;font-weight:800;
-  border:2px dashed #b96e00
-}
-.actions{
-  display:grid;grid-template-columns:1fr 1fr;gap:9px;
-  max-width:520px;margin:14px auto 0
-}
-.actionBtn{
-  border:0;border-radius:16px;min-height:54px;font-size:18px;font-weight:900
-}
-.hint{background:#ffde92;color:#725000}
-.check{background:var(--blue);color:white}
-.next{background:#2f9e44;color:white;display:none}
-.feedback{
-  min-height:52px;text-align:center;font-size:22px;font-weight:900;margin-top:10px
-}
-.end{justify-content:center;text-align:center;padding:20px}
-.stars{font-size:48px}
-.end h2{font-size:37px;margin:6px 0}
-.end p{font-size:20px;font-weight:800}
-.endBtns{display:grid;gap:9px}
-.secondary{
-  border:3px solid #b96e00;border-radius:17px;padding:13px;background:var(--orange);
-  font-size:18px;font-weight:900;cursor:pointer
-}
-@media(min-width:650px){
-  .app{box-shadow:0 0 35px rgba(0,0,0,.16)}
+@media(prefers-reduced-motion:reduce) {
+  .tickBtn.correct .tickMark { animation:none }
+  .bar { transition:none }
 }
 </style>
-<style id="decouvrir-autre-jeu-style">.decouvrir-autre-jeu{margin:20px 0 8px;padding:16px;border:2px solid #cde9dc;border-radius:16px;background:#f0faf3;color:#163f31;text-align:center;font-family:Arial,sans-serif}.decouvrir-autre-jeu strong{display:block;font-size:17px;line-height:1.35;margin-bottom:6px}.decouvrir-autre-jeu span{display:block;font-size:15px;margin-bottom:11px}.decouvrir-autre-jeu a{display:inline-block;background:#f9bb3d!important;color:#332300!important;border:2px solid #b97b10;border-radius:11px;padding:10px 15px;font-weight:800;text-decoration:none;box-shadow:0 3px 0 #ac750f}.decouvrir-autre-jeu a:focus-visible{outline:3px solid #1769aa;outline-offset:3px}[data-end]>.panel{max-height:95%;overflow-y:auto}</style><script defer src="https://bleja972.github.io/assets/affichage-horizontal.js?v=all-languages-20261108"></script></head>
-<body><nav aria-label="Juegos en inglés" style="display:flex;justify-content:center;padding:10px;background:#173f30"><a href="/es/?lang=es" style="padding:10px 18px;border-radius:12px;background:#fff6cf;color:#173f30;text-decoration:none;font:bold 17px Arial,sans-serif">Todos los juegos</a></nav>
+</head>
+<body>
 <div class="app">
 <header>
-  <div class="school">Escuela Émile Nabéti</div>
-  <h1>La recta numérica misteriosa</h1>
+  <div class="eyebrow">Laboratorio orbital · 2.º de primaria · Numeración</div>
+  <h1>La recta numérica <em>misteriosa</em></h1>
+  <p>10 preguntas · Saltos de 1, 2, 5 o 10</p>
 </header>
 
+<div class="layout">
+<aside aria-label="Misión">
+  <h2>Misión</h2>
+  <div class="mission"><span aria-hidden="true">01</span><strong>Colocar un número en la recta</strong></div>
+  <button id="soundBtn" class="actionBtn secondary" type="button" aria-pressed="true">♫ Sonido: activado</button>
+</aside>
+<main>
 <section id="home" class="screen active home">
   <div class="card">
-    <div class="hero">📍 ───── 🔢</div>
+    <h2>¿Todo listo para la misión?</h2>
     <p class="intro">
-      Mira sólo los números primero y último.
-      Encuentre el paso a lo largo de la línea numérica, luego coloque el número solicitado.
+      Mira los números de los dos extremos de la recta. Averigua cuánto aumenta el número en cada salto y coloca el número indicado.
     </p>
-    <input id="name" class="nameInput" maxlength="18" placeholder="Mi nombre de pila">
-    <button id="startBtn" class="startBtn">Empezar</button>
+    <button id="startBtn" class="startBtn">▶ EMPEZAR</button>
   </div>
 </section>
 
 <section id="game" class="screen game">
+  <h2>Coloca el número indicado</h2>
   <div class="top">
     <div class="stat">Puntuación<br><span id="score">0</span>/10</div>
     <div class="stat">Pregunta<br><span id="qnum">1</span>/10</div>
-    <div class="stat"> ⁇  Streak<br><span id="streak">0</span></div>
+    <div class="stat">Racha<br><span id="streak">0</span></div>
   </div>
 
-  <div class="progress"><div id="bar" class="bar"></div></div>
+  <div class="progress" aria-hidden="true"><div id="bar" class="bar"></div></div>
 
   <div class="challenge">
-    <div class="prompt">Coloque este número en la línea de números:</div>
+    <div class="prompt">Coloca este número en la recta:</div>
     <div id="target" class="target">54</div>
 
     <div class="lineCard">
@@ -193,18 +152,18 @@ h1{margin:4px 0 0;color:var(--blue);font-size:clamp(28px,7vw,45px)}
     </div>
 
     <div id="selectedText" class="selectedText">
-      Haga clic en la marca donde pertenece el número.
+      Elige la marca donde va este número.
     </div>
 
     <div id="hintBox" class="hintBox"></div>
 
     <div class="actions">
-      <button id="hintBtn" type="button" class="actionBtn hint">Pista</button>
-      <button id="checkBtn" type="button" class="actionBtn check">Comprobar</button>
-      <button id="nextBtn" type="button" class="actionBtn next">Siguiente</button>
+      <button id="hintBtn" type="button" class="actionBtn hint">💡 Pista</button>
+      <button id="checkBtn" type="button" class="actionBtn check">✅ Comprobar</button>
+      <button id="nextBtn" type="button" class="actionBtn next">➡️ Siguiente</button>
     </div>
 
-    <div id="feedback" class="feedback"></div>
+    <div id="feedback" class="feedback" role="status"></div>
   </div>
 </section>
 
@@ -213,21 +172,28 @@ h1{margin:4px 0 0;color:var(--blue);font-size:clamp(28px,7vw,45px)}
   <h2 id="endTitle">¡Muy bien!</h2>
   <p id="endText"></p>
   <div class="endBtns">
-    <button class="startBtn" id="replayBtn">Volver a jugar</button>
+    <button class="startBtn" id="replayBtn">🎮 VOLVER A JUGAR</button>
     <button class="secondary" id="homeBtn">Inicio</button>
   </div>
-<div class="decouvrir-autre-jeu"><strong>¿Listo para otro juego?</strong><span>El desafío de la línea numérica</span><a href="/es/games/le-defi-de-la-droite-graduee/">Descubre este juego →</a></div></section>
+</section>
+</main>
+</div>
 </div>
 
-<script>function enNumber(n){n=Number(n);if(n<0)return 'menos '+enNumber(-n);const u=['cero','uno','dos','tres','cuatro','cinco','seis','siete','ocho','nueve','diez','once','doce','trece','catorce','quince','dieciséis','diecisiete','dieciocho','diecinueve','veinte','veintiuno','veintidós','veintitrés','veinticuatro','veinticinco','veintiséis','veintisiete','veintiocho','veintinueve'];if(n<30)return u[n];if(n<100)return ['','','','treinta','cuarenta','cincuenta','sesenta','setenta','ochenta','noventa'][Math.floor(n/10)]+(n%10?' y '+u[n%10]:'');if(n===100)return 'cien';if(n<1000)return ['','ciento','doscientos','trescientos','cuatrocientos','quinientos','seiscientos','setecientos','ochocientos','novecientos'][Math.floor(n/100)]+(n%100?' '+enNumber(n%100):'');if(n===1000)return 'mil';return String(n)}
-
+<script>
 const TOTAL=10;
 const POSSIBLE_STEPS=[1,2,5,10];
 
-let score=0,streak=0,qIndex=0,player="Campeón";
+let score=0,streak=0,qIndex=0;
 let start=10,step=1,target=0,targetIndex=0,selectedIndex=null,locked=false;
 
 const $=id=>document.getElementById(id);
+let soundEnabled=true;
+$("soundBtn").addEventListener("click",()=>{
+  soundEnabled=!soundEnabled;
+  $("soundBtn").setAttribute("aria-pressed",String(soundEnabled));
+  $("soundBtn").textContent="♫ Sonido: "+(soundEnabled?"activado":"desactivado");
+});
 
 function show(id){
   document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
@@ -274,7 +240,8 @@ function renderLine(){
     btn.type="button";
     btn.className="tickBtn";
     btn.dataset.index=i;
-    btn.setAttribute("aria-label","Graduación "+i);
+    btn.setAttribute("aria-label","Marca "+(i+1)+(i===0||i===10?": "+(start+i*step):""));
+    btn.setAttribute("aria-pressed","false");
 
     const mark=document.createElement("div");
     mark.className="tickMark";
@@ -295,9 +262,13 @@ function renderLine(){
     btn.addEventListener("click",()=>{
       if(locked) return;
       selectedIndex=i;
-      document.querySelectorAll(".tickBtn").forEach(b=>b.classList.remove("selected"));
+      ticks.querySelectorAll(".tickBtn").forEach(b=>{
+        b.classList.remove("selected");
+        b.setAttribute("aria-pressed","false");
+      });
       btn.classList.add("selected");
-      $("selectedText").textContent="Usted seleccionó esta marca.";
+      btn.setAttribute("aria-pressed","true");
+      $("selectedText").textContent="Has elegido esta marca.";
     });
 
     col.appendChild(btn);
@@ -307,7 +278,6 @@ function renderLine(){
 }
 
 function startGame(){
-  player=$("name").value.trim()||player||"Campeón";
   score=0;
   streak=0;
   qIndex=0;
@@ -326,7 +296,7 @@ function newQuestion(){
   $("target").textContent=target;
   $("qnum").textContent=qIndex+1;
   $("bar").style.width=(qIndex/TOTAL*100)+"%";
-  $("selectedText").textContent="Haga clic en la marca donde pertenece el número.";
+  $("selectedText").textContent="Elige la marca donde va este número.";
   $("feedback").textContent="";
   $("hintBox").style.display="none";
   $("checkBtn").style.display="block";
@@ -337,8 +307,7 @@ $("hintBtn").addEventListener("click",()=>{
   if(locked) return;
   const end=start+(10*step);
   $("hintBox").textContent=
-    " ⁇  Contar los intervalos entre "+start+" and "+end+
-    ", luego calcular el tamaño de cada paso.";
+    `💡 Cuenta los espacios entre ${start} y ${end}. Luego averigua cuánto aumenta el número en cada salto.`;
   $("hintBox").style.display="block";
 });
 
@@ -346,7 +315,7 @@ $("checkBtn").addEventListener("click",()=>{
   if(locked) return;
 
   if(selectedIndex===null){
-    $("feedback").textContent="Haga clic en una garrapata primero.";
+    $("feedback").textContent="📍 Elige primero una marca.";
     return;
   }
 
@@ -364,12 +333,12 @@ $("checkBtn").addEventListener("click",()=>{
   if(ok){
     score++;
     streak++;
-    $("feedback").textContent="¡Muy bien! "+target+" está en el lugar correcto.";
+    $("feedback").textContent=`✅ ¡Muy bien! El ${target} está en el lugar correcto.`;
     beep(720,.12);
   }else{
     streak=0;
     $("feedback").textContent=
-      " ⁇  Mira la garrapata verde: ahí es donde debe colocar "+target+".";
+      `💡 Mira la marca verde. Ahí va el ${target}.`;
     beep(220,.18);
   }
 
@@ -389,22 +358,22 @@ $("nextBtn").addEventListener("click",()=>{
 function finish(){
   show("end");
   $("endText").textContent=
-    player+", usted correctamente colocado "+score+
-    " number"+(score===1?"":"s")+" de 10.";
+    `Has colocado bien ${score} de 10 números.`;
 
   if(score===10){
     $("stars").textContent="⭐⭐⭐";
-    $("endTitle").textContent="¡Campeón de la línea número!";
+    $("endTitle").textContent="¡Dominas la recta numérica!";
   }else if(score>=7){
     $("stars").textContent="⭐⭐";
-    $("endTitle").textContent="¡Excelente trabajo!";
+    $("endTitle").textContent="¡Buen trabajo!";
   }else{
     $("stars").textContent="⭐";
-    $("endTitle").textContent="¡Sigan, están mejorando!";
+    $("endTitle").textContent="¡Sigue así, vas mejorando!";
   }
 }
 
 function beep(freq,dur){
+  if(!soundEnabled) return;
   try{
     const ctx=new (window.AudioContext||window.webkitAudioContext)();
     const osc=ctx.createOscillator();
@@ -422,5 +391,5 @@ $("startBtn").addEventListener("click",startGame);
 $("replayBtn").addEventListener("click",startGame);
 $("homeBtn").addEventListener("click",()=>show("home"));
 </script>
-<script src="/assets/catalogue-v2/runtime-es.js?v=1" defer></script></body>
+</body>
 </html>
