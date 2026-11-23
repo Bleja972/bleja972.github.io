@@ -1,7 +1,7 @@
 'use strict';
 
 const iframe = document.querySelector('#math-game');
-const dictionary = fetch('/assets/traductions/math-chinois.json').then(response => {
+const dictionary = fetch('/assets/traductions/math-chinois.json?v=2').then(response => {
   if (!response.ok) throw new Error('Translation unavailable');
   return response.json();
 });
@@ -21,6 +21,9 @@ const patterns = [
   [/Échanger 10 unités → 1 dizaine/i, '把10个一换成1个十'],
   [/Échanger 10 dizaines → 1 centaine/i, '把10个十换成1个百'],
   [/Échanger 10 centaines → 1 millier/i, '把10个百换成1个千'],
+  [/^Écris le chiffre des (unités|dizaines|centaines|milliers) sous la barre\./i, (_, p) => '在横线下填写' + places[p.toLowerCase()] + '数字。'],
+  [/^Vérifie le chiffre des (unités|dizaines|centaines|milliers)\./i, (_, p) => '请检查' + places[p.toLowerCase()] + '的数字。'],
+  [/^Le résultat est (\d+)\./i, '结果是 $1。'],
   [/^Calcule les (unités|dizaines|centaines|milliers)\./i, (_, p) => '计算' + places[p.toLowerCase()] + '。'],
   [/^Complète (?:d’abord )?le (?:résultat|calcul en ligne) des (unités|dizaines|centaines|milliers)\./i, (_, p) => '请先完成' + places[p.toLowerCase()] + '的计算。'],
   [/^Vérifie le calcul en ligne des (unités|dizaines|centaines|milliers)\./i, (_, p) => '请检查' + places[p.toLowerCase()] + '的横式计算。'],
@@ -89,6 +92,7 @@ function localize(doc, lexicon) {
     synth.speak = utterance => {
       utterance.lang = 'zh-CN';
       utterance.text = utterance.text
+        .replace(/quelle est la moitié de (\d+)\s*\?/gi, '$1 的一半是多少？')
         .replace(/combien faut-il ajouter à/gi, '要加多少才能让')
         .replace(/plus combien égale/gi, '加上几等于')
         .replace(/plus|\+/gi, '加')
