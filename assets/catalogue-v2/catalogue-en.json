@@ -368,7 +368,7 @@
   {
     "id": "en-jeu-101",
     "title": "Number Castle — Outside View",
-    "url": "https://bleja972.github.io/jeux/chateau-nombres-exterieur-cp/",
+    "url": "/en/games/number-castle-outside/",
     "description": "Explore the numbers from 0 to 99 outside the castle.",
     "levels": [
       "CP"
@@ -383,14 +383,13 @@
     "weekly": false,
     "new": true,
     "sourceId": "jeu-101",
-    "contentLanguage": "fr",
-    "thumb": "/jeux/chateau-nombres-exterieur-cp/assets/apercu.webp",
-    "imageAlt": "French gameplay screenshot of Number Castle — Outside View"
+    "thumb": "/assets/en-captures/number-castle-outside-gameplay.webp",
+    "imageAlt": "English gameplay screenshot of Number Castle — Outside View"
   },
   {
     "id": "en-jeu-100",
     "title": "Number Castle",
-    "url": "https://bleja972.github.io/jeux/chateau-nombres-cp/",
+    "url": "/en/games/number-castle/",
     "description": "Find and recognise numbers from 0 to 99.",
     "levels": [
       "CP"
@@ -405,14 +404,13 @@
     "weekly": false,
     "new": true,
     "sourceId": "jeu-100",
-    "contentLanguage": "fr",
-    "thumb": "/jeux/chateau-nombres-cp/assets/apercu.webp",
-    "imageAlt": "French gameplay screenshot of Number Castle"
+    "thumb": "/assets/en-captures/number-castle-gameplay.webp",
+    "imageAlt": "English gameplay screenshot of Number Castle"
   },
   {
     "id": "en-jeu-99",
     "title": "Fritz’s Planet — Find the Bounds",
-    "url": "https://bleja972.github.io/jeux/fritz-encadrements-ce2/",
+    "url": "/en/games/fritz-number-bounds-ce2/",
     "description": "Find the integers, tens, hundreds or thousands around a number.",
     "levels": [
       "CE2"
@@ -427,14 +425,13 @@
     "weekly": false,
     "new": true,
     "sourceId": "jeu-99",
-    "contentLanguage": "fr",
-    "thumb": "/assets/fritz-encadrements/apercu.webp",
-    "imageAlt": "French gameplay screenshot of Fritz’s Planet — Find the Bounds"
+    "thumb": "/assets/en-captures/fritz-number-bounds-ce2-gameplay.webp",
+    "imageAlt": "English gameplay screenshot of Fritz’s Planet — Find the Bounds"
   },
   {
     "id": "en-jeu-98",
     "title": "Fritz’s Planet — Find the Bounds",
-    "url": "https://bleja972.github.io/jeux/fritz-encadrements-cp/",
+    "url": "/en/games/fritz-number-bounds-cp/",
     "description": "Find the numbers on either side of a given number.",
     "levels": [
       "CP"
@@ -449,9 +446,8 @@
     "weekly": false,
     "new": true,
     "sourceId": "jeu-98",
-    "contentLanguage": "fr",
-    "thumb": "/assets/fritz-encadrements/apercu.webp",
-    "imageAlt": "French gameplay screenshot of Fritz’s Planet — Find the Bounds"
+    "thumb": "/assets/en-captures/fritz-number-bounds-cp-gameplay.webp",
+    "imageAlt": "English gameplay screenshot of Fritz’s Planet — Find the Bounds"
   },
   {
     "id": "en-fritz-number-bounds",
@@ -899,7 +895,7 @@
   {
     "id": "en-jeu-77",
     "title": "Geometry — Colour the Shapes",
-    "url": "https://bleja972.github.io/jeux/geometrie-ce1/",
+    "url": "/en/games/colour-the-shapes/",
     "description": "Colour the squares, rectangles, triangles and circles.",
     "levels": [
       "CE1"
@@ -914,8 +910,8 @@
     "weekly": false,
     "new": true,
     "sourceId": "jeu-77",
-    "contentLanguage": "fr",
-    "imageAlt": ""
+    "imageAlt": "English gameplay screenshot of Geometry — Colour the Shapes",
+    "thumb": "/assets/en-captures/colour-the-shapes-gameplay.webp"
   },
   {
     "id": "en-3",
