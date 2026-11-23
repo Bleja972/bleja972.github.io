@@ -114,7 +114,11 @@ function activateCatalogue(source) {
   function readFavorites() {
     try {
       const stored = JSON.parse(localStorage.getItem(storageKey) || '[]');
-      return new Set(Array.isArray(stored) ? stored.filter(id => typeof id === 'string') : []);
+      return new Set(Array.isArray(stored) ? stored.filter(id => typeof id === 'string').map(id => {
+      if (id === 'en-41') return 'en-1';
+      if (id === 'en-2') return 'en-calcul-mental-cp-pygame';
+      return id;
+    }) : []);
     } catch {
       return new Set();
     }
@@ -236,6 +240,8 @@ function activateCatalogue(source) {
     }).join('');
   }
 
+  const playLabel = game => localise('Jouer', game.contentLanguage === 'fr' ? 'Play in French' : 'Play');
+
   function card(game, eager = false) {
     const image = game.image
       ? `<button data-preview="${game.id}" class="image-button" type="button" aria-label="${previewLabel}${escape(game.title)}">
@@ -253,7 +259,7 @@ function activateCatalogue(source) {
         <h3 class="card-title">${escape(game.title)}</h3>
         <p class="card-description">${escape(game.short)}</p>
         <div class="card-actions">
-          <a class="control control-outline play" href="${escape(playHref(game.id, game.url))}" target="_blank" rel="noopener" aria-label="${localise('Jouer à ', 'Play ')}${escape(game.title)}"${trackingAttributes(game.tracking)}>${icon('play')} ${localise('Jouer', 'Play')}</a>
+          <a class="control control-outline play" href="${escape(playHref(game.id, game.url))}" target="_blank" rel="noopener" aria-label="${playLabel(game)}: ${escape(game.title)}"${trackingAttributes(game.tracking)}>${icon('play')} ${playLabel(game)}</a>
           ${game.extras.map(link => link.outerHTML).join('')}
           ${game.pdf && !game.extras.some(link => link.getAttribute('href') === game.pdf)
             ? `<a class="quiet-link card-pdf" href="${escape(game.pdf)}" target="_blank" rel="noopener" aria-label="${localise('Fiche PDF de ', 'Printable PDF for ')}${escape(game.title)}">${localise('Fiche PDF', 'Printable PDF')}</a>` : ''}
@@ -395,6 +401,7 @@ function activateCatalogue(source) {
     preview.alt = game.alt || game.title;
     const play = $('#preview-play');
     play.href = playHref(game.id, game.url);
+    play.lastChild.textContent = ' ' + playLabel(game);
     const tracking = game.tracking;
     if (tracking?.goatcounterClick) {
       play.dataset.goatcounterClick = tracking.goatcounterClick;

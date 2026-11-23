@@ -125,5 +125,13 @@
   "en:en-76": {
     "title": "Dictations — Term 2",
     "url": "/dictees_periode2/"
+  },
+  "en:en-41": {
+    "title": "Number bonds to 10 — spider challenge",
+    "url": "/en/games/complements1_a_10/"
+  },
+  "en:en-2": {
+    "title": "Maths Mission — Pygame Arcade",
+    "url": "/en/games/cp-mental-maths/"
   }
 }
