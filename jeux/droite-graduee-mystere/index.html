@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#05070a">
+<title>La droite graduée mystère — CE1</title>
+<style>
+:root {
+  color-scheme: dark;
+  --bg:#06080c; --panel:#0a111a; --ink:#edf8ff; --muted:#a7d9e8;
+  --cyan:#53e5ff; --border:#28627a; --yellow:#ffdb62;
+  --good:#8bfb91; --bad:#ff819d;
+}
+* { box-sizing:border-box }
+body {
+  margin:0; min-height:100vh; color:var(--ink);
+  font-family:system-ui, sans-serif;
+  background:radial-gradient(ellipse at 12% 0%,#0b2934,transparent 55%),var(--bg);
+}
+.app { max-width:1440px; margin:auto; padding:clamp(10px,2.4vw,34px) }
+header {
+  padding:clamp(16px,3vw,40px); border:1px solid var(--border); border-radius:26px;
+  background:radial-gradient(circle at 95% 65%,#09131e 0 14%,#102131 14% 16%,#05060b 16%);
+  box-shadow:0 6px 0 #0009,0 0 22px #2ad6ff26;
+}
+.eyebrow, aside h2 {
+  text-transform:uppercase; color:var(--cyan); letter-spacing:.14em;
+  font-size:.84rem; font-weight:850;
+}
+h1 { margin:.2em 0 0; font-size:clamp(1.85rem,5vw,3.8rem); line-height:1.06; font-weight:900 }
+h1 em { color:var(--yellow); font-style:normal; text-shadow:0 0 17px #ffcc4b40 }
+header p { margin:.6em 0 0; color:var(--muted) }
+.layout { display:grid; grid-template-columns:minmax(185px,23%) minmax(0,1fr); gap:18px; margin-top:20px }
+aside, main { background:#080c13; border:1px solid var(--border); border-radius:22px; padding:clamp(14px,2vw,24px); min-width:0 }
+aside { align-self:start }
+aside h2 { margin:0 0 12px }
+.mission {
+  display:flex; align-items:center; gap:12px; padding:12px;
+  border:1px solid var(--cyan); border-radius:14px;
+  background:#0d2734; box-shadow:0 0 14px #47def146;
+}
+.mission span { color:var(--cyan); font-size:1.25rem; font-weight:900 }
+.screen { display:none }
+.screen.active { display:block }
+h2 { margin:0 0 .65em; font-size:clamp(1.25rem,3vw,2rem) }
+.home,.end { text-align:center }
+.card,.challenge { background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:clamp(12px,2vw,24px) }
+.intro { margin:0 auto 1em; max-width:50ch; font-size:clamp(1.1rem,2vw,1.35rem); line-height:1.55 }
+.nameInput {
+  display:block; width:min(100%,360px); margin:0 auto 16px; padding:12px;
+  border:2px solid #3af; border-radius:12px; background:#081e32; color:var(--ink);
+  font:inherit; text-align:center;
+}
+button {
+  --accent:var(--cyan); font:inherit; font-weight:850; color:var(--ink);
+  cursor:pointer; touch-action:manipulation;
+}
+button:focus-visible,input:focus-visible { outline:3px solid var(--yellow); outline-offset:3px }
+.startBtn,.actionBtn,.secondary {
+  min-height:46px; padding:10px 16px; border:1px solid var(--accent); border-radius:13px;
+  background:linear-gradient(145deg,#132d3e,#090c14); box-shadow:0 4px 0 #000,0 0 12px color-mix(in srgb,var(--accent) 29%,transparent);
+}
+button:active:not(:disabled) { transform:translateY(2px) }
+aside button { margin-top:15px; width:100% }
+.top { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px }
+.stat { border:1px solid var(--border); border-radius:12px; padding:8px; color:var(--muted); font-weight:800 }
+.stat span { color:var(--ink); font-size:1.3rem }
+.progress { height:8px; margin:14px 0; background:#102d41; border-radius:12px; overflow:hidden }
+.bar { height:100%; width:0; background:linear-gradient(90deg,#28dfff,var(--good)); transition:width .25s }
+.prompt,.target { text-align:center; font-weight:900; color:var(--yellow) }
+.prompt { font-size:clamp(1.1rem,2.4vw,1.6rem) }
+.target { font-size:clamp(3rem,9vw,5rem); line-height:1.15; margin:4px 0 12px; text-shadow:0 0 18px #ffd85345 }
+.lineCard { background:#080e18; border:1px solid var(--border); border-radius:15px; padding:14px 3px 10px }
+.numberLine { position:relative; --tick-height:50px }
+.lineTrack {
+  position:absolute; left:calc(100% / 22); right:calc(100% / 22); top:23px;
+  height:4px; background:var(--cyan); border-radius:4px; box-shadow:0 0 12px #34dafa77;
+}
+.ticks { display:grid; grid-template-columns:repeat(11,minmax(0,1fr)); position:relative }
+.tickCol { display:flex; flex-direction:column; align-items:center; min-width:0 }
+.tickBtn { width:100%; height:var(--tick-height); border:0; padding:0; background:none; display:grid; place-items:center }
+.tickBtn:disabled { cursor:default }
+.tickMark { width:4px; height:24px; border-radius:4px; background:#b7f5ff }
+.tickBtn.selected .tickMark { height:36px; background:var(--yellow); box-shadow:0 0 10px var(--yellow) }
+.tickBtn.correct .tickMark { height:38px; width:7px; background:var(--good); box-shadow:0 0 12px var(--good); animation:correct-glow .55s ease-in-out 3 alternate }
+.tickBtn.wrong .tickMark { height:38px; width:7px; background:var(--bad); box-shadow:0 0 9px var(--bad) }
+@keyframes correct-glow { to { opacity:.5 } }
+.tickLabel.endpoint { color:var(--yellow); font-size:clamp(.83rem,2.8vw,1.5rem); font-weight:900; white-space:nowrap }
+.selectedText,.hintBox,.feedback { text-align:center; font-weight:750; margin-top:12px }
+.hintBox { display:none; padding:10px; border:1px dashed var(--yellow); border-radius:12px; color:var(--yellow) }
+.actions,.endBtns { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:16px }
+.hint { --accent:var(--yellow) }
+.next { --accent:var(--good); display:none }
+.feedback { min-height:1.5em; color:var(--muted) }
+.stars { font-size:2.5rem }
+@media(max-width:660px) {
+  .layout { grid-template-columns:minmax(0,1fr); gap:10px; margin-top:12px }
+  aside { display:flex; align-items:center; gap:8px; padding:8px }
+  aside h2 { display:none }
+  aside button { margin:0; width:auto; flex:none; padding-inline:9px }
+  .mission { flex:1; padding:7px; font-size:.85rem }
+  main { padding:9px }
+  .challenge { padding:9px }
+}
+@media(prefers-reduced-motion:reduce) {
+  .tickBtn.correct .tickMark { animation:none }
+  .bar { transition:none }
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="eyebrow">Laboratoire orbital · CE1 · Numération</div>
+  <h1>La droite graduée <em>mystère</em></h1>
+  <p>10 questions · Pas de 1, 2, 5 ou 10</p>
+</header>
+
+<div class="layout">
+<aside aria-label="Mission">
+  <h2>Mission</h2>
+  <div class="mission"><span aria-hidden="true">01</span><strong>Placer un nombre sur la droite</strong></div>
+  <button id="soundBtn" class="actionBtn secondary" type="button" aria-pressed="true">♫ Sons : ON</button>
+</aside>
+<main>
+<section id="home" class="screen active home">
+  <div class="card">
+    <h2>Prêt pour la mission ?</h2>
+    <p class="intro">
+      Observe seulement le nombre du début et celui de la fin.
+      À toi de trouver comment la droite avance, puis de placer le nombre demandé.
+    </p>
+    <input aria-label="Mon prénom" id="name" class="nameInput" maxlength="18" placeholder="Mon prénom">
+    <button id="startBtn" class="startBtn">▶ COMMENCER</button>
+  </div>
+</section>
+
+<section id="game" class="screen game">
+  <h2>Place le nombre demandé</h2>
+  <div class="top">
+    <div class="stat">Score<br><span id="score">0</span>/10</div>
+    <div class="stat">Question<br><span id="qnum">1</span>/10</div>
+    <div class="stat">Série<br><span id="streak">0</span></div>
+  </div>
+
+  <div class="progress" aria-hidden="true"><div id="bar" class="bar"></div></div>
+
+  <div class="challenge">
+    <div class="prompt">Place ce nombre sur la droite :</div>
+    <div id="target" class="target">54</div>
+
+    <div class="lineCard">
+      <div class="numberLine">
+        <div class="lineTrack"></div>
+        <div id="ticks" class="ticks"></div>
+      </div>
+    </div>
+
+    <div id="selectedText" class="selectedText">
+      Clique sur la graduation où doit se placer le nombre.
+    </div>
+
+    <div id="hintBox" class="hintBox"></div>
+
+    <div class="actions">
+      <button id="hintBtn" type="button" class="actionBtn hint">💡 Indice</button>
+      <button id="checkBtn" type="button" class="actionBtn check">✅ Vérifier</button>
+      <button id="nextBtn" type="button" class="actionBtn next">➡️ Suivant</button>
+    </div>
+
+    <div id="feedback" class="feedback" role="status"></div>
+  </div>
+</section>
+
+<section id="end" class="screen end">
+  <div id="stars" class="stars">⭐⭐⭐</div>
+  <h2 id="endTitle">Bravo !</h2>
+  <p id="endText"></p>
+  <div class="endBtns">
+    <button class="startBtn" id="replayBtn">🎮 REJOUER</button>
+    <button class="secondary" id="homeBtn">Accueil</button>
+  </div>
+</section>
+</main>
+</div>
+</div>
+
+<script>
+const TOTAL=10;
+const POSSIBLE_STEPS=[1,2,5,10];
+
+let score=0,streak=0,qIndex=0,player="Champion";
+let start=10,step=1,target=0,targetIndex=0,selectedIndex=null,locked=false;
+
+const $=id=>document.getElementById(id);
+let soundEnabled=true;
+$("soundBtn").addEventListener("click",()=>{
+  soundEnabled=!soundEnabled;
+  $("soundBtn").setAttribute("aria-pressed",String(soundEnabled));
+  $("soundBtn").textContent="♫ Sons : "+(soundEnabled?"ON":"OFF");
+});
+
+function show(id){
+  document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
+  $(id).classList.add("active");
+}
+
+function randomInt(min,max){
+  return min+Math.floor(Math.random()*(max-min+1));
+}
+
+function chooseStep(){
+  return POSSIBLE_STEPS[randomInt(0,POSSIBLE_STEPS.length-1)];
+}
+
+function makeQuestion(){
+  step=chooseStep();
+
+  // 11 graduations = 10 intervalles. Les deux extrémités
+  // ainsi que la cible doivent rester entre 10 et 200.
+  const maxStart=200-(10*step);
+  const raw=randomInt(10,maxStart);
+
+  if(step===1){
+    start=raw;
+  }else{
+    start=Math.ceil(raw/step)*step;
+    if(start>maxStart) start=Math.floor(maxStart/step)*step;
+    if(start<10) start=Math.ceil(10/step)*step;
+  }
+
+  targetIndex=randomInt(1,9);
+  target=start+(targetIndex*step);
+}
+
+function renderLine(){
+  const ticks=$("ticks");
+  ticks.innerHTML="";
+
+  for(let i=0;i<=10;i++){
+    const col=document.createElement("div");
+    col.className="tickCol";
+
+    const btn=document.createElement("button");
+    btn.type="button";
+    btn.className="tickBtn";
+    btn.dataset.index=i;
+    btn.setAttribute("aria-label","Graduation "+(i+1)+(i===0||i===10?" : "+(start+i*step):""));
+    btn.setAttribute("aria-pressed","false");
+
+    const mark=document.createElement("div");
+    mark.className="tickMark";
+    btn.appendChild(mark);
+
+    const label=document.createElement("div");
+    const value=start+(i*step);
+
+    if(i===0 || i===10){
+      label.className="tickLabel endpoint";
+      const span=document.createElement("span");
+      span.textContent=value;
+      label.appendChild(span);
+    }else{
+      label.className="tickLabel";
+    }
+
+    btn.addEventListener("click",()=>{
+      if(locked) return;
+      selectedIndex=i;
+      ticks.querySelectorAll(".tickBtn").forEach(b=>{
+        b.classList.remove("selected");
+        b.setAttribute("aria-pressed","false");
+      });
+      btn.classList.add("selected");
+      btn.setAttribute("aria-pressed","true");
+      $("selectedText").textContent="Tu as choisi cette graduation.";
+    });
+
+    col.appendChild(btn);
+    col.appendChild(label);
+    ticks.appendChild(col);
+  }
+}
+
+function startGame(){
+  player=$("name").value.trim()||player||"Champion";
+  score=0;
+  streak=0;
+  qIndex=0;
+  $("score").textContent=0;
+  $("streak").textContent=0;
+  show("game");
+  newQuestion();
+}
+
+function newQuestion(){
+  locked=false;
+  selectedIndex=null;
+  makeQuestion();
+  renderLine();
+
+  $("target").textContent=target;
+  $("qnum").textContent=qIndex+1;
+  $("bar").style.width=(qIndex/TOTAL*100)+"%";
+  $("selectedText").textContent="Clique sur la graduation où doit se placer le nombre.";
+  $("feedback").textContent="";
+  $("hintBox").style.display="none";
+  $("checkBtn").style.display="block";
+  $("nextBtn").style.display="none";
+}
+
+$("hintBtn").addEventListener("click",()=>{
+  if(locked) return;
+  const end=start+(10*step);
+  $("hintBox").textContent=
+    "💡 Compte le nombre d’intervalles entre "+start+" et "+end+
+    ", puis cherche de combien il faut avancer à chaque fois.";
+  $("hintBox").style.display="block";
+});
+
+$("checkBtn").addEventListener("click",()=>{
+  if(locked) return;
+
+  if(selectedIndex===null){
+    $("feedback").textContent="📍 Clique d’abord sur une graduation.";
+    return;
+  }
+
+  locked=true;
+  const buttons=[...document.querySelectorAll(".tickBtn")];
+  const ok=selectedIndex===targetIndex;
+
+  buttons.forEach(btn=>{
+    btn.disabled=true;
+    const idx=Number(btn.dataset.index);
+    if(idx===targetIndex) btn.classList.add("correct");
+    if(idx===selectedIndex && !ok) btn.classList.add("wrong");
+  });
+
+  if(ok){
+    score++;
+    streak++;
+    $("feedback").textContent="✅ Bravo ! "+target+" est bien placé.";
+    beep(720,.12);
+  }else{
+    streak=0;
+    $("feedback").textContent=
+      "💡 Regarde la graduation verte : c’est là que se place "+target+".";
+    beep(220,.18);
+  }
+
+  $("score").textContent=score;
+  $("streak").textContent=streak;
+  $("checkBtn").style.display="none";
+  $("nextBtn").style.display="block";
+  qIndex++;
+  $("bar").style.width=(qIndex/TOTAL*100)+"%";
+});
+
+$("nextBtn").addEventListener("click",()=>{
+  if(qIndex>=TOTAL) finish();
+  else newQuestion();
+});
+
+function finish(){
+  show("end");
+  $("endText").textContent=
+    player+", tu as placé correctement "+score+
+    " nombre"+(score>1?"s":"")+" sur 10.";
+
+  if(score===10){
+    $("stars").textContent="⭐⭐⭐";
+    $("endTitle").textContent="Champion de la droite graduée !";
+  }else if(score>=7){
+    $("stars").textContent="⭐⭐";
+    $("endTitle").textContent="Très beau travail !";
+  }else{
+    $("stars").textContent="⭐";
+    $("endTitle").textContent="Continue, tu progresses !";
+  }
+}
+
+function beep(freq,dur){
+  if(!soundEnabled) return;
+  try{
+    const ctx=new (window.AudioContext||window.webkitAudioContext)();
+    const osc=ctx.createOscillator();
+    const gain=ctx.createGain();
+    osc.frequency.value=freq;
+    gain.gain.value=.04;
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+    setTimeout(()=>{osc.stop();ctx.close()},dur*1000);
+  }catch(e){}
+}
+
+$("startBtn").addEventListener("click",startGame);
+$("replayBtn").addEventListener("click",startGame);
+$("homeBtn").addEventListener("click",()=>show("home"));
+</script>
+</body>
+</html>
