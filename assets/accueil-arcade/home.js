@@ -1,13 +1,14 @@
 'use strict';
 
 const isEnglish = document.documentElement.lang.startsWith('en');
-const language = isEnglish ? 'en' : 'fr';
-const localise = (french, english) => isEnglish ? english : french;
+const isChinese = document.documentElement.lang.startsWith('zh');
+const language = isChinese ? 'zh' : isEnglish ? 'en' : 'fr';
+const localise = (french, english, chinese) => isChinese ? chinese : isEnglish ? english : french;
 const languageLinks = document.querySelector('.language-links');
 
 function playHref(id, href) {
   const target = new URL(href, location.href);
-  if (target.pathname.startsWith('/jouer/')) return href;
+  if (isChinese || target.pathname.startsWith('/jouer/')) return href;
   return '/jouer/?' + new URLSearchParams({ lang: language, jeu: id });
 }
 
@@ -28,7 +29,7 @@ languageLinks?.addEventListener('click', event => {
 });
 
 async function enhanceHome() {
-  const response = await fetch('/assets/catalogue-v2/' + localise('catalogue.json', 'catalogue-en.json'), { cache: 'no-cache' });
+  const response = await fetch('/assets/catalogue-v2/' + localise('catalogue.json', 'catalogue-en.json', 'catalogue-zh.json'), { cache: 'no-cache' });
   if (!response.ok) throw new Error('Catalogue indisponible');
   const source = await response.json();
   if (!Array.isArray(source) || !source.length) throw new Error('Catalogue vide');
@@ -62,14 +63,15 @@ function activateCatalogue(source) {
 
   const legacySubjects = { maths: 'Mathématiques', francais: 'Français' };
   const subjects = {
-    tous: localise('Toutes les matières', 'All subjects'),
-    maths: localise(legacySubjects.maths, 'Maths'),
-    francais: localise(legacySubjects.francais, 'French'),
+    tous: localise('Toutes les matières', 'All subjects', '所有科目'),
+    maths: localise(legacySubjects.maths, 'Maths', '数学'),
+    ...(!isChinese && { francais: localise(legacySubjects.francais, 'French') }),
   };
   const subjectIcons = { tous: 'grid', maths: 'math', francais: 'book' };
   const levels = ['CP', 'CE1', 'CE2', 'CM1'];
   const yearLabels = { CP: 'Year 2', CE1: 'Year 3', CE2: 'Year 4', CM1: 'Year 5' };
-  const levelLabel = level => localise(level, yearLabels[level] || level);
+  const chineseYears = { CP: '一年级', CE1: '二年级', CE2: '三年级', CM1: '四年级' };
+  const levelLabel = level => localise(level, yearLabels[level] || level, chineseYears[level] || level);
   const levelLine = game => game.levels.map(levelLabel).join(' · ');
   const groupOrder = ['numeration', 'mental', 'pose', 'problemes', 'geometrie', 'codage', 'lecture', 'orthographe', 'grammaire', 'vocabulaire', 'ecriture'];
   const groups = new Map(catalogue.map(game => [
@@ -78,9 +80,9 @@ function activateCatalogue(source) {
   const games = new Map(catalogue.map(game => [game.id, game]));
   const defaults = { niveau: 'tous', matiere: 'tous', domaine: 'tous', competence: '', q: '', tri: 'catalogue', collection: '' };
   const collectionLabels = {
-    favoris: localise('Mes jeux favoris', 'My favourite games'),
-    semaine: localise('Les jeux de la semaine', 'This week’s games'),
-    nouveautes: localise('Les nouveautés', 'New games'),
+    favoris: localise('Mes jeux favoris', 'My favourite games', '我的收藏'),
+    semaine: localise('Les jeux de la semaine', 'This week’s games', '本周游戏'),
+    nouveautes: localise('Les nouveautés', 'New games', '新游戏'),
   };
   const pageSize = 12;
   const storageKey = 'bleja-discovery-favorites-v1';
@@ -91,16 +93,16 @@ function activateCatalogue(source) {
 
   const escape = value => String(value ?? '').replace(/[&<>"']/g, character => htmlMap[character]);
   const icon = name => '<svg class="icon" aria-hidden="true"><use href="#i-' + name + '"/></svg>';
-  const gameCount = count => count + ' ' + (count === 1 ? localise('jeu', 'game') : localise('jeux', 'games'));
-  const shownLabel = (shown, total) => shown + localise(' sur ', ' of ') + gameCount(total);
-  const previewLabel = localise('Agrandir la capture de ', 'Enlarge screenshot of ');
+  const gameCount = count => isChinese ? count + ' 个游戏' : count + ' ' + (count === 1 ? localise('jeu', 'game') : localise('jeux', 'games'));
+  const shownLabel = (shown, total) => isChinese ? `已显示 ${shown} / ${total} 个游戏` : shown + localise(' sur ', ' of ') + gameCount(total);
+  const previewLabel = localise('Agrandir la capture de ', 'Enlarge screenshot of ', '放大截图：');
   const subjectOf = game => game.subject === legacySubjects.maths ? 'maths' : 'francais';
   const subjectValues = new Map([...Object.entries(subjects), ...Object.entries(legacySubjects)].map(([key, label]) => [label, key]));
   const trackingAttributes = data => data?.goatcounterClick
     ? ` data-goatcounter-click="${escape(data.goatcounterClick)}" data-goatcounter-title="${escape(data.goatcounterTitle)}"`
     : '';
   const normalize = value => String(value).toLocaleLowerCase(language).normalize('NFD')
-    .replace(/\p{M}/gu, '').replaceAll('œ', 'oe').replace(/[^a-z0-9]+/g, ' ').trim();
+    .replace(/\p{M}/gu, '').replaceAll('œ', 'oe').replace(/[^a-z0-9\p{Script=Han}]+/gu, ' ').trim();
   const searchIndex = new Map(catalogue.map(game => {
     const content = [game.title, game.subject, subjects[subjectOf(game)], game.groupName, game.skillName, game.short, game.description, game.objective, game.levels.join(' '), levelLine(game)].join(' ');
     return [game.id, normalize(content)];
@@ -129,7 +131,7 @@ function activateCatalogue(source) {
     const next = { ...defaults };
     if (levels.includes(params.get('niveau'))) next.niveau = params.get('niveau');
     const subject = params.get('matiere');
-    if (subjectValues.has(subject)) next.matiere = subjectValues.get(subject);
+    if (subjectValues.has(subject) && Object.hasOwn(subjects, subjectValues.get(subject))) next.matiere = subjectValues.get(subject);
     else if (Object.hasOwn(subjects, subject)) next.matiere = subject;
     if (groups.has(params.get('domaine'))) next.domaine = params.get('domaine');
     if (catalogue.some(game => game.skill === params.get('competence'))) next.competence = params.get('competence');
@@ -224,9 +226,9 @@ function activateCatalogue(source) {
     if (!game?.image) return;
     holder.innerHTML = `
       <button class="featured-game" type="button" data-preview="${game.id}" aria-label="${previewLabel}${escape(game.title)}">
-        <span class="featured-head"><span>${localise('JEU EN VEDETTE', 'FEATURED GAME')}</span><span>${escape(levelLine(game).toLocaleUpperCase(language))} · ${subjects[subjectOf(game)].toLocaleUpperCase(language)}</span></span>
+        <span class="featured-head"><span>${localise('JEU EN VEDETTE', 'FEATURED GAME', '精选游戏')}</span><span>${escape(levelLine(game).toLocaleUpperCase(language))} · ${subjects[subjectOf(game)].toLocaleUpperCase(language)}</span></span>
         <img class="featured-image" src="${escape(game.image)}" alt="${escape(game.alt)}" fetchpriority="high">
-        <span class="featured-foot"><strong>${escape(game.title)}</strong><span class="featured-zoom">${icon('zoom')} <span>${localise('Agrandir', 'Enlarge')}</span></span></span>
+        <span class="featured-foot"><strong>${escape(game.title)}</strong><span class="featured-zoom">${icon('zoom')} <span>${localise('Agrandir', 'Enlarge', '放大')}</span></span></span>
       </button>`;
   }
 
@@ -240,7 +242,7 @@ function activateCatalogue(source) {
     }).join('');
   }
 
-  const playLabel = game => localise('Jouer', game.contentLanguage === 'fr' ? 'Play in French' : 'Play');
+  const playLabel = game => localise('Jouer', game.contentLanguage === 'fr' ? 'Play in French' : 'Play', '开始游戏');
 
   function card(game, eager = false) {
     const image = game.image
@@ -262,7 +264,7 @@ function activateCatalogue(source) {
           <a class="control control-outline play" href="${escape(playHref(game.id, game.url))}" target="_blank" rel="noopener" aria-label="${playLabel(game)}: ${escape(game.title)}"${trackingAttributes(game.tracking)}>${icon('play')} ${playLabel(game)}</a>
           ${game.extras.map(link => link.outerHTML).join('')}
           ${game.pdf && !game.extras.some(link => link.getAttribute('href') === game.pdf)
-            ? `<a class="quiet-link card-pdf" href="${escape(game.pdf)}" target="_blank" rel="noopener" aria-label="${localise('Fiche PDF de ', 'Printable PDF for ')}${escape(game.title)}">${localise('Fiche PDF', 'Printable PDF')}</a>` : ''}
+            ? `<a class="quiet-link card-pdf" href="${escape(game.pdf)}" target="_blank" rel="noopener" aria-label="${localise('Fiche PDF de ', 'Printable PDF for ', 'PDF 练习单：')}${escape(game.title)}">${localise('Fiche PDF', 'Printable PDF', 'PDF 练习单')}</a>` : ''}
         </div>
       </div>
     </article>`;
@@ -274,7 +276,7 @@ function activateCatalogue(source) {
       const id = button.dataset.favorite;
       const active = favorites.has(id);
       button.setAttribute('aria-pressed', active);
-      button.setAttribute('aria-label', (active ? localise('Retirer des favoris : ', 'Remove from favourites: ') : localise('Ajouter aux favoris : ', 'Add to favourites: ')) + games.get(id).title);
+      button.setAttribute('aria-label', (active ? localise('Retirer des favoris : ', 'Remove from favourites: ', '取消收藏：') : localise('Ajouter aux favoris : ', 'Add to favourites: ', '添加到收藏：')) + games.get(id).title);
     });
   }
 
@@ -318,11 +320,11 @@ function activateCatalogue(source) {
       const count = key === 'tous' ? levelGames.length : levelGames.filter(game => subjectOf(game) === key).length;
       return filterButton('subject', key, label, count, state.matiere === key);
     }).join('');
-    $('#skill-list').innerHTML = filterButton('skill', 'tous', localise('Toutes les compétences', 'All skill areas'), potential.length, state.domaine === 'tous') +
+    $('#skill-list').innerHTML = filterButton('skill', 'tous', localise('Toutes les compétences', 'All skill areas', '所有技能'), potential.length, state.domaine === 'tous') +
       groupOptions.map(group => filterButton('skill', group, groups.get(group), potential.filter(game => game.group === group).length, state.domaine === group)).join('');
 
     const skillFilter = $('#skill-filter');
-    const skillOptions = option('tous', localise('Toutes les compétences', 'All skill areas')) + groupOptions.map(group => option(group, groups.get(group))).join('');
+    const skillOptions = option('tous', localise('Toutes les compétences', 'All skill areas', '所有技能')) + groupOptions.map(group => option(group, groups.get(group))).join('');
     if (skillOptions !== skillFilter.dataset.options) {
       skillFilter.innerHTML = skillOptions;
       skillFilter.dataset.options = skillOptions;
@@ -330,7 +332,7 @@ function activateCatalogue(source) {
     $('#level-filter').value = state.niveau;
     $('#subject-filter').value = state.matiere;
     skillFilter.value = state.domaine;
-    $('#exercise-filter').innerHTML = option('', localise('Tous les exercices', 'All skills')) +
+    $('#exercise-filter').innerHTML = option('', localise('Tous les exercices', 'All skills', '所有练习')) +
       eligibleSkills().map(([key, label]) => option(key, label)).join('');
     $('#exercise-filter').value = state.competence;
     $('#exercise-control').toggleAttribute('hidden', state.domaine === 'tous' && !state.competence);
@@ -353,17 +355,17 @@ function activateCatalogue(source) {
     const total = results.length;
     const displayed = Math.min(total, visibleCount);
     grid.innerHTML = results.slice(0, displayed).map(game => card(game)).join('');
-    $('#result-count').textContent = gameCount(total) + localise(total === 1 ? ' trouvé' : ' trouvés', ' found');
+    $('#result-count').textContent = gameCount(total) + localise(total === 1 ? ' trouvé' : ' trouvés', ' found', '');
     $('#clear-filters').hidden = Object.keys(defaults).every(key => state[key] === defaults[key]);
     $('#more-area').hidden = displayed >= total;
     $('#shown-count').textContent = shownLabel(displayed, total);
     $('#empty-state').hidden = total !== 0;
     if (total === 0) {
       const noFavorites = state.collection === 'favoris' && !catalogue.some(game => favorites.has(game.id));
-      $('#empty-title').textContent = noFavorites ? localise('Tu n’as pas encore de favoris', 'You have no favourite games yet') : localise('Aucun jeu trouvé', 'No games found');
+      $('#empty-title').textContent = noFavorites ? localise('Tu n’as pas encore de favoris', 'You have no favourite games yet', '你还没有收藏游戏') : localise('Aucun jeu trouvé', 'No games found', '未找到游戏');
       $('#empty-description').textContent = noFavorites
-        ? localise('Utilise le cœur sur un jeu pour le retrouver ici.', 'Tap the heart on a game to save it here.')
-        : localise('Essaie un autre mot ou change de niveau, de matière ou de compétence.', 'Try a different search or change your year or subject filters.');
+        ? localise('Utilise le cœur sur un jeu pour le retrouver ici.', 'Tap the heart on a game to save it here.', '点击游戏旁的爱心，即可在这里找到它。')
+        : localise('Essaie un autre mot ou change de niveau, de matière ou de compétence.', 'Try a different search or change your year or subject filters.', '试试其他关键词，或切换年级、科目或技能。');
       $('#empty-icon use').setAttribute('href', noFavorites ? '#i-heart' : '#i-search');
     }
     syncFavorites();
@@ -371,12 +373,12 @@ function activateCatalogue(source) {
   }
 
   function render() {
-    $('#catalogue-title').textContent = collectionLabels[state.collection] || localise('Le catalogue des jeux', 'Game catalogue');
+    $('#catalogue-title').textContent = collectionLabels[state.collection] || localise('Le catalogue des jeux', 'Game catalogue', '游戏目录');
     $('#catalogue-intro').textContent = state.collection === 'favoris'
-      ? localise('Retrouve les jeux enregistrés sur cet appareil.', 'Find the games you saved on this device.')
+      ? localise('Retrouve les jeux enregistrés sur cet appareil.', 'Find the games you saved on this device.', '在这里查看你在此设备上收藏的游戏。')
       : state.collection === 'semaine'
-        ? localise('Retrouve les jeux mis en avant dans le blog.', 'Explore this week’s selection.')
-        : localise('Trouve un jeu par niveau, matière ou compétence.', 'Find a game by school year, subject or skill.');
+        ? localise('Retrouve les jeux mis en avant dans le blog.', 'Explore this week’s selection.', '探索本周的精选游戏。')
+        : localise('Trouve un jeu par niveau, matière ou compétence.', 'Find a game by school year, subject or skill.', '按年级、科目或技能查找游戏。');
     const favoritesLink = $('[data-favorites-link]');
     if (state.collection === 'favoris') favoritesLink.setAttribute('aria-current', 'location');
     else favoritesLink.removeAttribute('aria-current');
@@ -482,7 +484,7 @@ function activateCatalogue(source) {
     }
   });
 
-  $('#level-filter').innerHTML = option('tous', localise('Tous les niveaux', 'All years')) + levels.map(level => option(level, levelLabel(level))).join('');
+  $('#level-filter').innerHTML = option('tous', localise('Tous les niveaux', 'All years', '所有年级')) + levels.map(level => option(level, levelLabel(level))).join('');
   $('#subject-filter').innerHTML = Object.entries(subjects).map(([key, label]) => option(key, label)).join('');
   validateFilters();
   renderFeatured();
@@ -501,6 +503,6 @@ function activateCatalogue(source) {
 enhanceHome().catch(() => {
   document.querySelector('#catalogue-availability').textContent = localise(
     'Les filtres sont temporairement indisponibles. Tu peux toujours ouvrir les jeux ci-dessous.',
-    'Filters are temporarily unavailable. You can still play the games below.'
+    'Filters are temporarily unavailable. You can still play the games below.', '筛选暂时不可用，你仍然可以打开下方的游戏。'
   );
 });

@@ -18,7 +18,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/mission-fractions-ce1-revisions-zh-gameplay.webp",
-    "imageAlt": "游戏截图：分数任务：复习"
+    "imageAlt": "游戏截图：分数任务：复习",
+    "playClicks": 0
   },
   {
     "id": "mission-calcul-cm1-livret-1",
@@ -39,7 +40,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/mission-calcul-cm1-livret-1-gameplay.webp",
-    "imageAlt": "游戏截图：四年级口算任务 — 第1册"
+    "imageAlt": "游戏截图：四年级口算任务 — 第1册",
+    "playClicks": 0
   },
   {
     "id": "mission-calcul-cm1-livret-5",
@@ -60,7 +62,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/mission-calcul-cm1-livret-5-gameplay.webp",
-    "imageAlt": "游戏截图：四年级口算任务 — 第5册"
+    "imageAlt": "游戏截图：四年级口算任务 — 第5册",
+    "playClicks": 0
   },
   {
     "id": "mission-calcul-cm1-livret-4",
@@ -81,7 +84,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/mission-calcul-cm1-livret-4-gameplay.webp",
-    "imageAlt": "游戏截图：四年级口算任务 — 第4册"
+    "imageAlt": "游戏截图：四年级口算任务 — 第4册",
+    "playClicks": 0
   },
   {
     "id": "mission-calcul-cm1-livret-3",
@@ -102,7 +106,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/mission-calcul-cm1-livret-3-gameplay.webp",
-    "imageAlt": "游戏截图：四年级口算任务 — 第3册"
+    "imageAlt": "游戏截图：四年级口算任务 — 第3册",
+    "playClicks": 0
   },
   {
     "id": "mission-calcul-cm1-livret-2",
@@ -123,7 +128,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/mission-calcul-cm1-livret-2-gameplay.webp",
-    "imageAlt": "游戏截图：四年级口算任务 — 第2册"
+    "imageAlt": "游戏截图：四年级口算任务 — 第2册",
+    "playClicks": 0
   },
   {
     "id": "cartons-montessori-ce2",
@@ -144,7 +150,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/cartons-montessori-ce2-gameplay.webp",
-    "imageAlt": "游戏截图：轨道数字 — 蒙台梭利数字卡 CE2"
+    "imageAlt": "游戏截图：轨道数字 — 蒙台梭利数字卡 CE2",
+    "playClicks": 2
   },
   {
     "id": "cartons-montessori-cp",
@@ -165,7 +172,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/cartons-montessori-cp-gameplay.webp",
-    "imageAlt": "游戏截图：数字的魔法 — CP"
+    "imageAlt": "游戏截图：数字的魔法 — CP",
+    "playClicks": 0
   },
   {
     "id": "cartons-montessori-ce1",
@@ -186,7 +194,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/cartons-montessori-ce1-gameplay.webp",
-    "imageAlt": "游戏截图：数字的魔法 — CE1"
+    "imageAlt": "游戏截图：数字的魔法 — CE1",
+    "playClicks": 4
   },
   {
     "id": "ours-de-la-banquise",
@@ -207,7 +216,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/ours-de-la-banquise-zh-gameplay.webp",
-    "imageAlt": "游戏截图：冰原上的北极熊"
+    "imageAlt": "游戏截图：冰原上的北极熊",
+    "playClicks": 0
   },
   {
     "id": "ours-de-la-banquise-neon",
@@ -228,7 +238,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/ours-de-la-banquise-neon-zh-gameplay.webp",
-    "imageAlt": "游戏截图：霓虹任务：水晶机器人"
+    "imageAlt": "游戏截图：霓虹任务：水晶机器人",
+    "playClicks": 0
   },
   {
     "id": "chemin-du-kangourou",
@@ -249,7 +260,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/chemin-du-kangourou-gameplay.webp",
-    "imageAlt": "游戏截图：袋鼠数字之路"
+    "imageAlt": "游戏截图：袋鼠数字之路",
+    "playClicks": 0
   },
   {
     "id": "crabes-du-tombolo",
@@ -270,7 +282,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/crabes-du-tombolo-gameplay.webp",
-    "imageAlt": "游戏截图：沙洲上的螃蟹"
+    "imageAlt": "游戏截图：沙洲上的螃蟹",
+    "playClicks": 1
   },
   {
     "id": "jeu-103",
@@ -293,7 +306,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-103-gameplay.webp",
-    "imageAlt": "游戏截图：大力水手的数轴"
+    "imageAlt": "游戏截图：大力水手的数轴",
+    "playClicks": 7
   },
   {
     "id": "jeu-102",
@@ -316,7 +330,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-102-gameplay.webp",
-    "imageAlt": "游戏截图：盐滩上的螃蟹"
+    "imageAlt": "游戏截图：盐滩上的螃蟹",
+    "playClicks": 3
   },
   {
     "id": "jeu-101",
@@ -337,7 +352,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-101-gameplay.webp",
-    "imageAlt": "游戏截图：数字城堡 — 城堡外观"
+    "imageAlt": "游戏截图：数字城堡 — 城堡外观",
+    "playClicks": 1
   },
   {
     "id": "jeu-100",
@@ -358,7 +374,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-100-gameplay.webp",
-    "imageAlt": "游戏截图：数字城堡 — CP"
+    "imageAlt": "游戏截图：数字城堡 — CP",
+    "playClicks": 0
   },
   {
     "id": "jeu-99",
@@ -379,7 +396,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-99-gameplay.webp",
-    "imageAlt": "游戏截图：弗里茨的星球 — CE2"
+    "imageAlt": "游戏截图：弗里茨的星球 — CE2",
+    "playClicks": 1
   },
   {
     "id": "jeu-98",
@@ -400,7 +418,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-98-gameplay.webp",
-    "imageAlt": "游戏截图：弗里茨的星球 — CP"
+    "imageAlt": "游戏截图：弗里茨的星球 — CP",
+    "playClicks": 1
   },
   {
     "id": "jeu-97",
@@ -421,7 +440,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-97-gameplay.webp",
-    "imageAlt": "游戏截图：弗里茨的星球 — CE1"
+    "imageAlt": "游戏截图：弗里茨的星球 — CE1",
+    "playClicks": 2
   },
   {
     "id": "jeu-96",
@@ -442,7 +462,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-96-zh-gameplay.webp",
-    "imageAlt": "游戏截图：火星镜像：轴对称"
+    "imageAlt": "游戏截图：火星镜像：轴对称",
+    "playClicks": 2
   },
   {
     "id": "jeu-95",
@@ -463,7 +484,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-95-gameplay.webp",
-    "imageAlt": "游戏截图：霸王龙的数轴 — CE1"
+    "imageAlt": "游戏截图：霸王龙的数轴 — CE1",
+    "playClicks": 2
   },
   {
     "id": "jeu-94",
@@ -484,7 +506,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-94-gameplay.webp",
-    "imageAlt": "游戏截图：霸王龙的42条动画数轴"
+    "imageAlt": "游戏截图：霸王龙的42条动画数轴",
+    "playClicks": 6
   },
   {
     "id": "jeu-93",
@@ -505,7 +528,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-93-gameplay.webp",
-    "imageAlt": "游戏截图：霸王龙的数轴 — CP"
+    "imageAlt": "游戏截图：霸王龙的数轴 — CP",
+    "playClicks": 2
   },
   {
     "id": "jeu-92",
@@ -531,7 +555,8 @@
     "short": "倍增和混合分化,爆破的泡沫和动画恐龙。",
     "thumb": "/assets/zh-captures/jeu-92-gameplay.webp",
     "imageAlt": "游戏截图：恐龙计算 — 乘法与除法",
-    "sourceId": "jeu-92"
+    "sourceId": "jeu-92",
+    "playClicks": 2
   },
   {
     "id": "jeu-91",
@@ -557,7 +582,8 @@
     "short": "在魔法森林中,20组15次计算 返回失败的计算",
     "thumb": "/assets/zh-captures/jeu-91-gameplay.webp",
     "imageAlt": "游戏截图：魔法限时计算 CE1",
-    "sourceId": "jeu-91"
+    "sourceId": "jeu-91",
+    "playClicks": 9
   },
   {
     "id": "jeu-90",
@@ -582,7 +608,8 @@
     "short": "20套20次计算:失败的泡沫在时间结束前返回。",
     "thumb": "/assets/zh-captures/jeu-90-gameplay.webp",
     "imageAlt": "游戏截图：银河限时计算 CE2",
-    "sourceId": "jeu-90"
+    "sourceId": "jeu-90",
+    "playClicks": 10
   },
   {
     "id": "jeu-89",
@@ -607,7 +634,8 @@
     "short": "所有表格从1到10个 混合在神奇森林里",
     "thumb": "/assets/zh-captures/jeu-89-gameplay.webp",
     "imageAlt": "游戏截图：魔法乘法表 CE2",
-    "sourceId": "jeu-89"
+    "sourceId": "jeu-89",
+    "playClicks": 0
   },
   {
     "id": "jeu-88",
@@ -632,7 +660,8 @@
     "short": "将数字和提问标记放在栏中。",
     "thumb": "/assets/zh-captures/jeu-88-gameplay.webp",
     "imageAlt": "游戏截图：应用题 CP — 填写条形图",
-    "sourceId": "jeu-88"
+    "sourceId": "jeu-88",
+    "playClicks": 2
   },
   {
     "id": "jeu-87",
@@ -657,7 +686,8 @@
     "short": "42个问题需要用酒吧模式和阅读声明来解决。",
     "thumb": "/assets/zh-captures/jeu-87-gameplay.webp",
     "imageAlt": "游戏截图：应用题 CP — 第1阶段",
-    "sourceId": "jeu-87"
+    "sourceId": "jeu-87",
+    "playClicks": 3
   },
   {
     "id": "jeu-86",
@@ -682,7 +712,8 @@
     "short": "18个问题需要用酒吧模式和阅读援助来解决。",
     "thumb": "/assets/zh-captures/jeu-86-gameplay.webp",
     "imageAlt": "游戏截图：应用题 CP — 第2阶段",
-    "sourceId": "jeu-86"
+    "sourceId": "jeu-86",
+    "playClicks": 5
   },
   {
     "id": "jeu-85",
@@ -708,7 +739,8 @@
     "short": "90秒内进行三层精神计算 在一个富饶的科学家实验室里",
     "thumb": "/assets/zh-captures/jeu-85-gameplay.webp",
     "imageAlt": "游戏截图：计算实验室",
-    "sourceId": "jeu-85"
+    "sourceId": "jeu-85",
+    "playClicks": 6
   },
   {
     "id": "jeu-84",
@@ -734,7 +766,8 @@
     "short": "四个层次 一半,只有偶数, 加速的泡沫和童话音乐。",
     "thumb": "/assets/zh-captures/jeu-84-gameplay.webp",
     "imageAlt": "游戏截图：一半的山谷",
-    "sourceId": "jeu-84"
+    "sourceId": "jeu-84",
+    "playClicks": 4
   },
   {
     "id": "jeu-83",
@@ -760,7 +793,8 @@
     "short": "四级双人 荧光 ⁇  加速的泡沫和冒险音乐",
     "thumb": "/assets/zh-captures/jeu-83-gameplay.webp",
     "imageAlt": "游戏截图：两倍神殿",
-    "sourceId": "jeu-83"
+    "sourceId": "jeu-83",
+    "playClicks": 5
   },
   {
     "id": "jeu-82",
@@ -786,7 +820,8 @@
     "short": "六层 更快的气泡和太空音乐 在船上。",
     "thumb": "/assets/zh-captures/jeu-82-gameplay.webp",
     "imageAlt": "游戏截图：银河除法",
-    "sourceId": "jeu-82"
+    "sourceId": "jeu-82",
+    "playClicks": 2
   },
   {
     "id": "jeu-81",
@@ -812,7 +847,8 @@
     "short": "六层,气泡更快 和软音乐在一个魔法森林。",
     "thumb": "/assets/zh-captures/jeu-81-gameplay.webp",
     "imageAlt": "游戏截图：魔法乘法表",
-    "sourceId": "jeu-81"
+    "sourceId": "jeu-81",
+    "playClicks": 7
   },
   {
     "id": "jeu-80",
@@ -838,7 +874,8 @@
     "short": "两种水平,三种模式和动画吸烟药丸,计算为9、19、29、39和49。",
     "thumb": "/assets/zh-captures/jeu-80-gameplay.webp",
     "imageAlt": "游戏截图：魔法泡泡 — 加减9、19……",
-    "sourceId": "jeu-80"
+    "sourceId": "jeu-80",
+    "playClicks": 3
   },
   {
     "id": "jeu-79",
@@ -864,7 +901,8 @@
     "short": "需要观测54个物体,以识别立方体、直铺、金字塔、球、圆柱和锥形。",
     "thumb": "/assets/zh-captures/jeu-79-gameplay.webp",
     "imageAlt": "游戏截图：身边的立体图形",
-    "sourceId": "jeu-79"
+    "sourceId": "jeu-79",
+    "playClicks": 1
   },
   {
     "id": "jeu-78",
@@ -890,7 +928,8 @@
     "short": "需观察的36个对象,以辨别正方形、矩形、圆和三角形。",
     "thumb": "/assets/zh-captures/jeu-78-gameplay.webp",
     "imageAlt": "游戏截图：身边的平面图形",
-    "sourceId": "jeu-78"
+    "sourceId": "jeu-78",
+    "playClicks": 0
   },
   {
     "title": "几何 CE1 — 给图形涂色",
@@ -915,7 +954,8 @@
     "short": "根据其形状按图形颜色显示数字,并避免捕捉图。",
     "imageAlt": "游戏截图：几何 CE1 — 给图形涂色",
     "sourceId": "jeu-77",
-    "thumb": "/assets/zh-captures/jeu-77-gameplay.webp"
+    "thumb": "/assets/zh-captures/jeu-77-gameplay.webp",
+    "playClicks": 1
   },
   {
     "title": "计算泡泡 — 心算 CE2",
@@ -941,7 +981,8 @@
     ],
     "short": "30个心理计算任务,以你自己的速度或在3分钟内进行,附有提示和纠正。",
     "thumb": "/assets/zh-captures/jeu-76-gameplay.webp",
-    "sourceId": "jeu-76"
+    "sourceId": "jeu-76",
+    "playClicks": 10
   },
   {
     "title": "双泡泡 — 比较数字",
@@ -967,7 +1008,8 @@
     ],
     "short": "比较两个数字并识别最大数字。",
     "thumb": "/assets/zh-captures/jeu-1-gameplay.webp",
-    "sourceId": "jeu-1"
+    "sourceId": "jeu-1",
+    "playClicks": 24
   },
   {
     "title": "珊瑚泡泡 — 奇数与偶数",
@@ -994,7 +1036,8 @@
     ],
     "short": "识别同侪数字和奇数。",
     "thumb": "/assets/zh-captures/jeu-2-gameplay.webp",
-    "sourceId": "jeu-2"
+    "sourceId": "jeu-2",
+    "playClicks": 4
   },
   {
     "title": "神秘岛 — 减法",
@@ -1021,7 +1064,8 @@
     ],
     "short": "通过删除数量来查找结果 。",
     "thumb": "/assets/zh-captures/jeu-3-gameplay.webp",
-    "sourceId": "jeu-3"
+    "sourceId": "jeu-3",
+    "playClicks": 6
   },
   {
     "title": "八十天环游地球 — 凑满1000",
@@ -1048,7 +1092,8 @@
     ],
     "short": "找到失踪的号码 达到10,100或1000",
     "thumb": "/assets/zh-captures/jeu-4-gameplay.webp",
-    "sourceId": "jeu-4"
+    "sourceId": "jeu-4",
+    "playClicks": 2
   },
   {
     "title": "鹦鹉螺号任务 — 凑满100",
@@ -1075,7 +1120,8 @@
     ],
     "short": "找到失踪的号码 达到10,100或1000",
     "thumb": "/assets/zh-captures/jeu-5-gameplay.webp",
-    "sourceId": "jeu-5"
+    "sourceId": "jeu-5",
+    "playClicks": 0
   },
   {
     "title": "地心之旅 — 接近两倍的加法",
@@ -1103,7 +1149,8 @@
     ],
     "short": "使用双倍来更容易计算 。",
     "thumb": "/assets/zh-captures/jeu-6-gameplay.webp",
-    "sourceId": "jeu-6"
+    "sourceId": "jeu-6",
+    "playClicks": 2
   },
   {
     "title": "火星任务 — 加11至19",
@@ -1131,7 +1178,8 @@
     ],
     "short": "使用已知的结果计算心理添加。",
     "thumb": "/assets/zh-captures/jeu-7-gameplay.webp",
-    "sourceId": "jeu-7"
+    "sourceId": "jeu-7",
+    "playClicks": 1
   },
   {
     "title": "深海任务 — 加11至19",
@@ -1159,7 +1207,8 @@
     ],
     "short": "使用已知的结果计算心理添加。",
     "thumb": "/assets/zh-captures/jeu-8-gameplay.webp",
-    "sourceId": "jeu-8"
+    "sourceId": "jeu-8",
+    "playClicks": 1
   },
   {
     "title": "万圣节 — 凑满10",
@@ -1185,7 +1234,8 @@
     ],
     "short": "找到失踪的号码 达到10,100或1000",
     "thumb": "/assets/zh-captures/jeu-9-gameplay.webp",
-    "sourceId": "jeu-9"
+    "sourceId": "jeu-9",
+    "playClicks": 3
   },
   {
     "title": "万圣节 — 凑满100",
@@ -1212,7 +1262,8 @@
     ],
     "short": "找到失踪的号码 达到10,100或1000",
     "thumb": "/assets/zh-captures/jeu-10-gameplay.webp",
-    "sourceId": "jeu-10"
+    "sourceId": "jeu-10",
+    "playClicks": 0
   },
   {
     "title": "万圣节 — 凑满1000",
@@ -1239,7 +1290,8 @@
     ],
     "short": "找到失踪的号码 达到10,100或1000",
     "thumb": "/assets/zh-captures/jeu-11-gameplay.webp",
-    "sourceId": "jeu-11"
+    "sourceId": "jeu-11",
+    "playClicks": 1
   },
   {
     "title": "女巫赛跑 — 凑满10",
@@ -1265,7 +1317,8 @@
     ],
     "short": "找到失踪的号码 达到10,100或1000",
     "thumb": "/assets/zh-captures/jeu-12-gameplay.webp",
-    "sourceId": "jeu-12"
+    "sourceId": "jeu-12",
+    "playClicks": 2
   },
   {
     "title": "女巫赛跑 — 凑满100",
@@ -1292,7 +1345,8 @@
     ],
     "short": "找到失踪的号码 达到10,100或1000",
     "thumb": "/assets/zh-captures/jeu-13-gameplay.webp",
-    "sourceId": "jeu-13"
+    "sourceId": "jeu-13",
+    "playClicks": 1
   },
   {
     "title": "女巫赛跑 — 凑满1000",
@@ -1319,7 +1373,8 @@
     ],
     "short": "找到失踪的号码 达到10,100或1000",
     "thumb": "/assets/zh-captures/jeu-14-gameplay.webp",
-    "sourceId": "jeu-14"
+    "sourceId": "jeu-14",
+    "playClicks": 0
   },
   {
     "title": "蜘蛛挑战 — 凑满10",
@@ -1346,7 +1401,8 @@
     ],
     "short": "找到失踪的号码 达到10,100或1000",
     "thumb": "/assets/zh-captures/jeu-15-gameplay.webp",
-    "sourceId": "jeu-15"
+    "sourceId": "jeu-15",
+    "playClicks": 10
   },
   {
     "title": "蜘蛛挑战 — 凑满100",
@@ -1372,7 +1428,8 @@
     ],
     "short": "找到失踪的号码 达到10,100或1000",
     "thumb": "/assets/zh-captures/jeu-16-gameplay.webp",
-    "sourceId": "jeu-16"
+    "sourceId": "jeu-16",
+    "playClicks": 3
   },
   {
     "title": "蜘蛛挑战 — 凑满1000",
@@ -1398,7 +1455,8 @@
     ],
     "short": "找到失踪的号码 达到10,100或1000",
     "thumb": "/assets/zh-captures/jeu-17-gameplay.webp",
-    "sourceId": "jeu-17"
+    "sourceId": "jeu-17",
+    "playClicks": 0
   },
   {
     "title": "复习1000以内的数",
@@ -1424,7 +1482,8 @@
     "short": "读、写、比较和分解数字最高可达1000个。",
     "thumb": "/assets/zh-captures/jeu-18-gameplay.webp",
     "imageAlt": "游戏截图：复习1000以内的数",
-    "sourceId": "jeu-18"
+    "sourceId": "jeu-18",
+    "playClicks": 38
   },
   {
     "title": "应用题 — 第1阶段",
@@ -1451,7 +1510,8 @@
     "short": "了解一个情况,选择一个计算来解决这个问题。",
     "thumb": "/assets/zh-captures/jeu-19-gameplay.webp",
     "imageAlt": "游戏截图：应用题 — 第1阶段",
-    "sourceId": "jeu-19"
+    "sourceId": "jeu-19",
+    "playClicks": 34
   },
   {
     "title": "心算 CP",
@@ -1476,7 +1536,8 @@
     "short": "在若干心理计算程序方面进行培训。",
     "thumb": "/assets/zh-captures/jeu-28-gameplay.webp",
     "imageAlt": "游戏截图：心算 CP",
-    "sourceId": "jeu-28"
+    "sourceId": "jeu-28",
+    "playClicks": 20
   },
   {
     "id": "calcul-mental-cp-neon-un-calcul",
@@ -1497,7 +1558,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/calcul-mental-cp-neon-un-calcul-zh-gameplay.webp",
-    "imageAlt": "游戏截图：霓虹口算：每次一道题"
+    "imageAlt": "游戏截图：霓虹口算：每次一道题",
+    "playClicks": 0
   },
   {
     "id": "calcul-mental-cp-pygame",
@@ -1518,7 +1580,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/calcul-mental-cp-pygame-zh-gameplay.webp",
-    "imageAlt": "游戏截图：口算任务：街机版"
+    "imageAlt": "游戏截图：口算任务：街机版",
+    "playClicks": 0
   },
   {
     "title": "限时计算 CE2 — 20个挑战",
@@ -1543,7 +1606,8 @@
     "short": "在若干心理计算程序方面进行培训。",
     "thumb": "/assets/zh-captures/jeu-29-gameplay.webp",
     "imageAlt": "游戏截图：限时计算 CE2 — 20个挑战",
-    "sourceId": "jeu-29"
+    "sourceId": "jeu-29",
+    "playClicks": 15
   },
   {
     "title": "应用题练习 CE2",
@@ -1568,7 +1632,8 @@
     "short": "了解一个情况,选择一个计算来解决这个问题。",
     "thumb": "/assets/zh-captures/jeu-30-gameplay.webp",
     "imageAlt": "游戏截图：应用题练习 CE2",
-    "sourceId": "jeu-30"
+    "sourceId": "jeu-30",
+    "playClicks": 4
   },
   {
     "title": "数一数物品",
@@ -1594,7 +1659,8 @@
     "short": "组织一个收藏以了解它包含多少元素 。",
     "thumb": "/assets/zh-captures/jeu-31-gameplay.webp",
     "imageAlt": "游戏截图：数一数物品",
-    "sourceId": "jeu-31"
+    "sourceId": "jeu-31",
+    "playClicks": 18
   },
   {
     "title": "比较两个数",
@@ -1620,7 +1686,8 @@
     "short": "比较两个数字并识别最大数字。",
     "thumb": "/assets/zh-captures/jeu-32-gameplay.webp",
     "imageAlt": "游戏截图：比较两个数",
-    "sourceId": "jeu-32"
+    "sourceId": "jeu-32",
+    "playClicks": 10
   },
   {
     "title": "给数字排序",
@@ -1646,7 +1713,8 @@
     "short": "从最小到最大的顺序编号。",
     "thumb": "/assets/zh-captures/jeu-33-gameplay.webp",
     "imageAlt": "游戏截图：给数字排序",
-    "sourceId": "jeu-33"
+    "sourceId": "jeu-33",
+    "playClicks": 4
   },
   {
     "title": "读写数字",
@@ -1672,7 +1740,8 @@
     "short": "a 相关数字和信函写法。",
     "thumb": "/assets/zh-captures/jeu-34-gameplay.webp",
     "imageAlt": "游戏截图：读写数字",
-    "sourceId": "jeu-34"
+    "sourceId": "jeu-34",
+    "playClicks": 7
   },
   {
     "title": "数字听写",
@@ -1698,7 +1767,8 @@
     "short": "监听数字并写入数字。",
     "thumb": "/assets/zh-captures/jeu-35-gameplay.webp",
     "imageAlt": "游戏截图：数字听写",
-    "sourceId": "jeu-35"
+    "sourceId": "jeu-35",
+    "playClicks": 5
   },
   {
     "title": "用不同方法数数",
@@ -1724,7 +1794,8 @@
     "short": "找到规则,追踪数字序列",
     "thumb": "/assets/zh-captures/jeu-36-gameplay.webp",
     "imageAlt": "游戏截图：用不同方法数数",
-    "sourceId": "jeu-36"
+    "sourceId": "jeu-36",
+    "playClicks": 4
   },
   {
     "title": "数的组成与分解",
@@ -1750,7 +1821,8 @@
     "short": "链接成百上千个 数以万计的单位 组成或拆分一个数字",
     "thumb": "/assets/zh-captures/jeu-37-gameplay.webp",
     "imageAlt": "游戏截图：数的组成与分解",
-    "sourceId": "jeu-37"
+    "sourceId": "jeu-37",
+    "playClicks": 8
   },
   {
     "title": "辨认奇数与偶数",
@@ -1776,7 +1848,8 @@
     "short": "识别同侪数字和奇数。",
     "thumb": "/assets/zh-captures/jeu-38-gameplay.webp",
     "imageAlt": "游戏截图：辨认奇数与偶数",
-    "sourceId": "jeu-38"
+    "sourceId": "jeu-38",
+    "playClicks": 3
   },
   {
     "title": "补全数列",
@@ -1802,7 +1875,8 @@
     "short": "找到规则,追踪数字序列",
     "thumb": "/assets/zh-captures/jeu-39-gameplay.webp",
     "imageAlt": "游戏截图：补全数列",
-    "sourceId": "jeu-39"
+    "sourceId": "jeu-39",
+    "playClicks": 4
   },
   {
     "title": "神秘数轴",
@@ -1828,7 +1902,8 @@
     "short": "确定一个数字在毕业线上的位置。",
     "thumb": "/assets/zh-captures/jeu-40-gameplay.webp",
     "imageAlt": "游戏截图：神秘数轴",
-    "sourceId": "jeu-40"
+    "sourceId": "jeu-40",
+    "playClicks": 5
   },
   {
     "title": "数轴挑战",
@@ -1854,7 +1929,8 @@
     "short": "确定一个数字在毕业线上的位置。",
     "thumb": "/assets/zh-captures/jeu-41-gameplay.webp",
     "imageAlt": "游戏截图：数轴挑战",
-    "sourceId": "jeu-41"
+    "sourceId": "jeu-41",
+    "playClicks": 1
   },
   {
     "title": "分解一个数",
@@ -1880,7 +1956,8 @@
     "short": "链接成百上千个 数以万计的单位 组成或拆分一个数字",
     "thumb": "/assets/zh-captures/jeu-42-gameplay.webp",
     "imageAlt": "游戏截图：分解一个数",
-    "sourceId": "jeu-42"
+    "sourceId": "jeu-42",
+    "playClicks": 3
   },
   {
     "title": "组成一个数",
@@ -1906,7 +1983,8 @@
     "short": "链接成百上千个 数以万计的单位 组成或拆分一个数字",
     "thumb": "/assets/zh-captures/jeu-43-gameplay.webp",
     "imageAlt": "游戏截图：组成一个数",
-    "sourceId": "jeu-43"
+    "sourceId": "jeu-43",
+    "playClicks": 0
   },
   {
     "title": "数列",
@@ -1932,7 +2010,8 @@
     "short": "找到规则,追踪数字序列",
     "thumb": "/assets/zh-captures/jeu-44-gameplay.webp",
     "imageAlt": "游戏截图：数列",
-    "sourceId": "jeu-44"
+    "sourceId": "jeu-44",
+    "playClicks": 1
   },
   {
     "title": "数的不同表示方法",
@@ -1958,7 +2037,8 @@
     "short": "承认相同数字的不同表达方式。",
     "thumb": "/assets/zh-captures/jeu-45-gameplay.webp",
     "imageAlt": "游戏截图：数的不同表示方法",
-    "sourceId": "jeu-45"
+    "sourceId": "jeu-45",
+    "playClicks": 5
   },
   {
     "title": "数字排列",
@@ -1984,7 +2064,8 @@
     "short": "从最小到最大的顺序编号。",
     "thumb": "/assets/zh-captures/jeu-46-gameplay.webp",
     "imageAlt": "游戏截图：数字排列",
-    "sourceId": "jeu-46"
+    "sourceId": "jeu-46",
+    "playClicks": 1
   },
   {
     "title": "限时计算 CE1 — 20个挑战",
@@ -2010,7 +2091,8 @@
     "short": "在若干心理计算程序方面进行培训。",
     "thumb": "/assets/zh-captures/jeu-47-gameplay.webp",
     "imageAlt": "游戏截图：限时计算 CE1 — 20个挑战",
-    "sourceId": "jeu-47"
+    "sourceId": "jeu-47",
+    "playClicks": 11
   },
   {
     "title": "分解退位减法",
@@ -2036,7 +2118,8 @@
     "short": "使用数百、几十和单位来减法。",
     "thumb": "/assets/zh-captures/jeu-48-gameplay.webp",
     "imageAlt": "游戏截图：分解退位减法",
-    "sourceId": "jeu-48"
+    "sourceId": "jeu-48",
+    "playClicks": 11
   },
   {
     "title": "用计数积木做减法",
@@ -2062,7 +2145,8 @@
     "short": "使用数百、几十和单位来减法。",
     "thumb": "/assets/zh-captures/jeu-49-gameplay.webp",
     "imageAlt": "游戏截图：用计数积木做减法",
-    "sourceId": "jeu-49"
+    "sourceId": "jeu-49",
+    "playClicks": 5
   },
   {
     "id": "soustractions-sans-echange-en-orbite",
@@ -2083,7 +2167,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/soustractions-sans-echange-en-orbite-zh-gameplay.webp",
-    "imageAlt": "游戏截图：轨道减法：不退位"
+    "imageAlt": "游戏截图：轨道减法：不退位",
+    "playClicks": 0
   },
   {
     "title": "不进位竖式加法",
@@ -2110,7 +2195,8 @@
     "short": "添加两个或三个位数,不交换。",
     "thumb": "/assets/zh-captures/jeu-50-gameplay.webp",
     "imageAlt": "游戏截图：不进位竖式加法",
-    "sourceId": "jeu-50"
+    "sourceId": "jeu-50",
+    "playClicks": 6
   },
   {
     "title": "进位竖式加法",
@@ -2137,7 +2223,8 @@
     "short": "用一两个交换器来理解和计算添加的内容。",
     "thumb": "/assets/zh-captures/jeu-51-gameplay.webp",
     "imageAlt": "游戏截图：进位竖式加法",
-    "sourceId": "jeu-51"
+    "sourceId": "jeu-51",
+    "playClicks": 16
   },
   {
     "title": "换算加法 — 3D计数片",
@@ -2163,7 +2250,8 @@
     "short": "对齐列并计算增加的层 。",
     "thumb": "/assets/zh-captures/jeu-52-gameplay.webp",
     "imageAlt": "游戏截图：换算加法 — 3D计数片",
-    "sourceId": "jeu-52"
+    "sourceId": "jeu-52",
+    "playClicks": 5
   },
   {
     "id": "jeu-106",
@@ -2184,7 +2272,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-106-zh-gameplay.webp",
-    "imageAlt": "游戏截图：进位加法：立体积木"
+    "imageAlt": "游戏截图：进位加法：立体积木",
+    "playClicks": 0
   },
   {
     "id": "jeu-108",
@@ -2205,7 +2294,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-108-zh-gameplay.webp",
-    "imageAlt": "游戏截图：进位加法：立体积木（三年级）"
+    "imageAlt": "游戏截图：进位加法：立体积木（三年级）",
+    "playClicks": 0
   },
   {
     "id": "jeu-107",
@@ -2226,7 +2316,8 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-107-zh-gameplay.webp",
-    "imageAlt": "游戏截图：进位加法：立体积木（一年级）"
+    "imageAlt": "游戏截图：进位加法：立体积木（一年级）",
+    "playClicks": 0
   },
   {
     "title": "凑十加法",
@@ -2254,7 +2345,8 @@
     "short": "使用已知的结果计算心理添加。",
     "thumb": "/assets/zh-captures/jeu-53-gameplay.webp",
     "imageAlt": "游戏截图：凑十加法",
-    "sourceId": "jeu-53"
+    "sourceId": "jeu-53",
+    "playClicks": 4
   },
   {
     "title": "从10中减去一个数",
@@ -2282,7 +2374,8 @@
     "short": "通过删除数量来查找结果 。",
     "thumb": "/assets/zh-captures/jeu-54-gameplay.webp",
     "imageAlt": "游戏截图：从10中减去一个数",
-    "sourceId": "jeu-54"
+    "sourceId": "jeu-54",
+    "playClicks": 2
   },
   {
     "title": "两倍",
@@ -2310,7 +2403,8 @@
     "short": "使用双倍来更容易计算 。",
     "thumb": "/assets/zh-captures/jeu-55-gameplay.webp",
     "imageAlt": "游戏截图：两倍",
-    "sourceId": "jeu-55"
+    "sourceId": "jeu-55",
+    "playClicks": 6
   },
   {
     "title": "接近两倍的加法",
@@ -2338,7 +2432,8 @@
     "short": "使用双倍来更容易计算 。",
     "thumb": "/assets/zh-captures/jeu-56-gameplay.webp",
     "imageAlt": "游戏截图：接近两倍的加法",
-    "sourceId": "jeu-56"
+    "sourceId": "jeu-56",
+    "playClicks": 3
   },
   {
     "title": "凑满10",
@@ -2366,7 +2461,8 @@
     "short": "找到失踪的号码 达到10,100或1000",
     "thumb": "/assets/zh-captures/jeu-57-gameplay.webp",
     "imageAlt": "游戏截图：凑满10",
-    "sourceId": "jeu-57"
+    "sourceId": "jeu-57",
+    "playClicks": 3
   },
   {
     "title": "整十数加减法",
@@ -2393,7 +2489,8 @@
     "short": "通过删除数量来查找结果 。",
     "thumb": "/assets/zh-captures/jeu-58-gameplay.webp",
     "imageAlt": "游戏截图：整十数加减法",
-    "sourceId": "jeu-58"
+    "sourceId": "jeu-58",
+    "playClicks": 2
   },
   {
     "title": "简单加法",
@@ -2421,7 +2518,8 @@
     "short": "使用已知的结果计算心理添加。",
     "thumb": "/assets/zh-captures/jeu-59-gameplay.webp",
     "imageAlt": "游戏截图：简单加法",
-    "sourceId": "jeu-59"
+    "sourceId": "jeu-59",
+    "playClicks": 5
   },
   {
     "title": "心算 — 第1阶段",
@@ -2448,7 +2546,8 @@
     "short": "在若干心理计算程序方面进行培训。",
     "thumb": "/assets/zh-captures/jeu-60-gameplay.webp",
     "imageAlt": "游戏截图：心算 — 第1阶段",
-    "sourceId": "jeu-60"
+    "sourceId": "jeu-60",
+    "playClicks": 19
   },
   {
     "title": "数字小鱼",
@@ -2475,7 +2574,8 @@
     "short": "在若干心理计算程序方面进行培训。",
     "thumb": "/assets/zh-captures/jeu-61-gameplay.webp",
     "imageAlt": "游戏截图：数字小鱼",
-    "sourceId": "jeu-61"
+    "sourceId": "jeu-61",
+    "playClicks": 5
   },
   {
     "title": "计算赛跑",
@@ -2503,7 +2603,8 @@
     "short": "在若干心理计算程序方面进行培训。",
     "thumb": "/assets/zh-captures/jeu-62-gameplay.webp",
     "imageAlt": "游戏截图：计算赛跑",
-    "sourceId": "jeu-62"
+    "sourceId": "jeu-62",
+    "playClicks": 4
   },
   {
     "title": "凑满10、100和1000",
@@ -2530,7 +2631,8 @@
     "short": "找到失踪的号码 达到10,100或1000",
     "thumb": "/assets/zh-captures/jeu-63-gameplay.webp",
     "imageAlt": "游戏截图：凑满10、100和1000",
-    "sourceId": "jeu-63"
+    "sourceId": "jeu-63",
+    "playClicks": 2
   },
   {
     "title": "心算 — 第2阶段",
@@ -2557,7 +2659,8 @@
     "short": "在若干心理计算程序方面进行培训。",
     "thumb": "/assets/zh-captures/jeu-64-gameplay.webp",
     "imageAlt": "游戏截图：心算 — 第2阶段",
-    "sourceId": "jeu-64"
+    "sourceId": "jeu-64",
+    "playClicks": 25
   },
   {
     "title": "求总数",
@@ -2584,7 +2687,8 @@
     "short": "了解一个情况,选择一个计算来解决这个问题。",
     "thumb": "/assets/zh-captures/jeu-65-gameplay.webp",
     "imageAlt": "游戏截图：求总数",
-    "sourceId": "jeu-65"
+    "sourceId": "jeu-65",
+    "playClicks": 4
   },
   {
     "title": "求其中一部分",
@@ -2611,7 +2715,8 @@
     "short": "了解一个情况,选择一个计算来解决这个问题。",
     "thumb": "/assets/zh-captures/jeu-66-gameplay.webp",
     "imageAlt": "游戏截图：求其中一部分",
-    "sourceId": "jeu-66"
+    "sourceId": "jeu-66",
+    "playClicks": 1
   },
   {
     "title": "增加、获得、前进",
@@ -2638,7 +2743,8 @@
     "short": "了解一个情况,选择一个计算来解决这个问题。",
     "thumb": "/assets/zh-captures/jeu-67-gameplay.webp",
     "imageAlt": "游戏截图：增加、获得、前进",
-    "sourceId": "jeu-67"
+    "sourceId": "jeu-67",
+    "playClicks": 1
   },
   {
     "title": "减少、失去、后退",
@@ -2665,7 +2771,8 @@
     "short": "了解一个情况,选择一个计算来解决这个问题。",
     "thumb": "/assets/zh-captures/jeu-68-gameplay.webp",
     "imageAlt": "游戏截图：减少、失去、后退",
-    "sourceId": "jeu-68"
+    "sourceId": "jeu-68",
+    "playClicks": 1
   },
   {
     "title": "两步解决问题",
@@ -2692,7 +2799,8 @@
     "short": "了解一个情况,选择一个计算来解决这个问题。",
     "thumb": "/assets/zh-captures/jeu-69-gameplay.webp",
     "imageAlt": "游戏截图：两步解决问题",
-    "sourceId": "jeu-69"
+    "sourceId": "jeu-69",
+    "playClicks": 2
   },
   {
     "title": "比较两个数量",
@@ -2719,7 +2827,8 @@
     "short": "了解一个情况,选择一个计算来解决这个问题。",
     "thumb": "/assets/zh-captures/jeu-70-gameplay.webp",
     "imageAlt": "游戏截图：比较两个数量",
-    "sourceId": "jeu-70"
+    "sourceId": "jeu-70",
+    "playClicks": 0
   },
   {
     "title": "条形图应用题 — 第4组",
@@ -2746,7 +2855,8 @@
     "short": "了解一个情况,选择一个计算来解决这个问题。",
     "thumb": "/assets/zh-captures/jeu-71-gameplay.webp",
     "imageAlt": "游戏截图：条形图应用题 — 第4组",
-    "sourceId": "jeu-71"
+    "sourceId": "jeu-71",
+    "playClicks": 2
   },
   {
     "title": "应用题 — 第2阶段",
@@ -2772,7 +2882,8 @@
     "short": "了解一个情况,选择一个计算来解决这个问题。",
     "thumb": "/assets/zh-captures/jeu-72-gameplay.webp",
     "imageAlt": "游戏截图：应用题 — 第2阶段",
-    "sourceId": "jeu-72"
+    "sourceId": "jeu-72",
+    "playClicks": 4
   },
   {
     "id": "jeu-105",
@@ -2793,6 +2904,7 @@
     "weekly": false,
     "new": true,
     "thumb": "/assets/zh-captures/jeu-105-zh-gameplay.webp",
-    "imageAlt": "游戏截图：太空飞船：不退位减法"
+    "imageAlt": "游戏截图：太空飞船：不退位减法",
+    "playClicks": 1
   }
 ]
