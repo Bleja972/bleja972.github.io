@@ -25,14 +25,13 @@
     "id": "mission-calcul-cm1-livret-1",
     "sourceId": "mission-calcul-cm1-livret-1",
     "title": "Misión de cálculo — Cuaderno 1",
-    "url": "/jeux/mission-calcul-cm1-livret-1/",
-    "path": "/jeux/mission-calcul-cm1-livret-1/",
+    "url": "/es/games/mision-calculo-cuaderno-1/",
+    "path": "/es/games/mision-calculo-cuaderno-1/",
     "description": "Resuelve los retos de cálculo del cuaderno.",
     "group": "mental",
     "skill": "calcul-mental-cm1",
     "skillName": "Cálculo mental",
     "subject": "Mathématiques",
-    "contentLanguage": "fr",
     "levels": [
       "CM1"
     ],
@@ -40,21 +39,20 @@
     "groupName": "Cálculo mental",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-1.svg",
-    "imageAlt": "Imagen de Misión de cálculo — Cuaderno 1"
+    "thumb": "/assets/es-captures/mision-calculo-cuaderno-1.webp",
+    "imageAlt": "Cuaderno 1 de Misión de cálculo en plena partida"
   },
   {
     "id": "mission-calcul-cm1-livret-5",
     "sourceId": "mission-calcul-cm1-livret-5",
     "title": "Misión de cálculo — Cuaderno 5",
-    "url": "/jeux/mission-calcul-cm1-livret-5/",
-    "path": "/jeux/mission-calcul-cm1-livret-5/",
+    "url": "/es/games/mision-calculo-cuaderno-5/",
+    "path": "/es/games/mision-calculo-cuaderno-5/",
     "description": "Resuelve los retos de cálculo del cuaderno.",
     "group": "mental",
     "skill": "calcul-mental-cm1",
     "skillName": "Cálculo mental",
     "subject": "Mathématiques",
-    "contentLanguage": "fr",
     "levels": [
       "CM1"
     ],
@@ -62,21 +60,20 @@
     "groupName": "Cálculo mental",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-5.svg",
-    "imageAlt": "Imagen de Misión de cálculo — Cuaderno 5"
+    "thumb": "/assets/es-captures/mision-calculo-cuaderno-5.webp",
+    "imageAlt": "Cuaderno 5 de Misión de cálculo en plena partida"
   },
   {
     "id": "mission-calcul-cm1-livret-4",
     "sourceId": "mission-calcul-cm1-livret-4",
     "title": "Misión de cálculo — Cuaderno 4",
-    "url": "/jeux/mission-calcul-cm1-livret-4/",
-    "path": "/jeux/mission-calcul-cm1-livret-4/",
+    "url": "/es/games/mision-calculo-cuaderno-4/",
+    "path": "/es/games/mision-calculo-cuaderno-4/",
     "description": "Resuelve los retos de cálculo del cuaderno.",
     "group": "mental",
     "skill": "calcul-mental-cm1",
     "skillName": "Cálculo mental",
     "subject": "Mathématiques",
-    "contentLanguage": "fr",
     "levels": [
       "CM1"
     ],
@@ -84,21 +81,20 @@
     "groupName": "Cálculo mental",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-4.svg",
-    "imageAlt": "Imagen de Misión de cálculo — Cuaderno 4"
+    "thumb": "/assets/es-captures/mision-calculo-cuaderno-4.webp",
+    "imageAlt": "Cuaderno 4 de Misión de cálculo en plena partida"
   },
   {
     "id": "mission-calcul-cm1-livret-3",
     "sourceId": "mission-calcul-cm1-livret-3",
     "title": "Misión de cálculo — Cuaderno 3",
-    "url": "/jeux/mission-calcul-cm1-livret-3/",
-    "path": "/jeux/mission-calcul-cm1-livret-3/",
+    "url": "/es/games/mision-calculo-cuaderno-3/",
+    "path": "/es/games/mision-calculo-cuaderno-3/",
     "description": "Resuelve los retos de cálculo del cuaderno.",
     "group": "mental",
     "skill": "calcul-mental-cm1",
     "skillName": "Cálculo mental",
     "subject": "Mathématiques",
-    "contentLanguage": "fr",
     "levels": [
       "CM1"
     ],
@@ -106,21 +102,20 @@
     "groupName": "Cálculo mental",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-3.svg",
-    "imageAlt": "Imagen de Misión de cálculo — Cuaderno 3"
+    "thumb": "/assets/es-captures/mision-calculo-cuaderno-3.webp",
+    "imageAlt": "Cuaderno 3 de Misión de cálculo en plena partida"
   },
   {
     "id": "mission-calcul-cm1-livret-2",
     "sourceId": "mission-calcul-cm1-livret-2",
     "title": "Misión de cálculo — Cuaderno 2",
-    "url": "/jeux/mission-calcul-cm1-livret-2/",
-    "path": "/jeux/mission-calcul-cm1-livret-2/",
+    "url": "/es/games/mision-calculo-cuaderno-2/",
+    "path": "/es/games/mision-calculo-cuaderno-2/",
     "description": "Resuelve los retos de cálculo del cuaderno.",
     "group": "mental",
     "skill": "calcul-mental-cm1",
     "skillName": "Cálculo mental",
     "subject": "Mathématiques",
-    "contentLanguage": "fr",
     "levels": [
       "CM1"
     ],
@@ -128,8 +123,8 @@
     "groupName": "Cálculo mental",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-2.svg",
-    "imageAlt": "Imagen de Misión de cálculo — Cuaderno 2"
+    "thumb": "/assets/es-captures/mision-calculo-cuaderno-2.webp",
+    "imageAlt": "Cuaderno 2 de Misión de cálculo en plena partida"
   },
   {
     "id": "cartons-montessori-ce2",
