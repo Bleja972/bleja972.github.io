@@ -1,5 +1,522 @@
 [
   {
+    "id": "mission-fractions-ce1-revisions",
+    "sourceId": "mission-fractions-ce1-revisions",
+    "title": "Misión Fracciones — Repaso",
+    "url": "/jeux/mission-fractions-ce1-revisions/",
+    "path": "/jeux/mission-fractions-ce1-revisions/",
+    "description": "Reconoce, lee y compara fracciones sencillas.",
+    "group": "numeration",
+    "skill": "fractions-ce1",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/Capture%20d'%C3%A9cran%202026-11-21%20142814.png",
+    "imageAlt": "Imagen de Misión Fracciones — Repaso"
+  },
+  {
+    "id": "mission-calcul-cm1-livret-1",
+    "sourceId": "mission-calcul-cm1-livret-1",
+    "title": "Misión de cálculo — Cuaderno 1",
+    "url": "/jeux/mission-calcul-cm1-livret-1/",
+    "path": "/jeux/mission-calcul-cm1-livret-1/",
+    "description": "Resuelve los retos de cálculo del cuaderno.",
+    "group": "mental",
+    "skill": "calcul-mental-cm1",
+    "skillName": "Cálculo mental",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CM1"
+    ],
+    "level": "CM1",
+    "groupName": "Cálculo mental",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-1.svg",
+    "imageAlt": "Imagen de Misión de cálculo — Cuaderno 1"
+  },
+  {
+    "id": "mission-calcul-cm1-livret-5",
+    "sourceId": "mission-calcul-cm1-livret-5",
+    "title": "Misión de cálculo — Cuaderno 5",
+    "url": "/jeux/mission-calcul-cm1-livret-5/",
+    "path": "/jeux/mission-calcul-cm1-livret-5/",
+    "description": "Resuelve los retos de cálculo del cuaderno.",
+    "group": "mental",
+    "skill": "calcul-mental-cm1",
+    "skillName": "Cálculo mental",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CM1"
+    ],
+    "level": "CM1",
+    "groupName": "Cálculo mental",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-5.svg",
+    "imageAlt": "Imagen de Misión de cálculo — Cuaderno 5"
+  },
+  {
+    "id": "mission-calcul-cm1-livret-4",
+    "sourceId": "mission-calcul-cm1-livret-4",
+    "title": "Misión de cálculo — Cuaderno 4",
+    "url": "/jeux/mission-calcul-cm1-livret-4/",
+    "path": "/jeux/mission-calcul-cm1-livret-4/",
+    "description": "Resuelve los retos de cálculo del cuaderno.",
+    "group": "mental",
+    "skill": "calcul-mental-cm1",
+    "skillName": "Cálculo mental",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CM1"
+    ],
+    "level": "CM1",
+    "groupName": "Cálculo mental",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-4.svg",
+    "imageAlt": "Imagen de Misión de cálculo — Cuaderno 4"
+  },
+  {
+    "id": "mission-calcul-cm1-livret-3",
+    "sourceId": "mission-calcul-cm1-livret-3",
+    "title": "Misión de cálculo — Cuaderno 3",
+    "url": "/jeux/mission-calcul-cm1-livret-3/",
+    "path": "/jeux/mission-calcul-cm1-livret-3/",
+    "description": "Resuelve los retos de cálculo del cuaderno.",
+    "group": "mental",
+    "skill": "calcul-mental-cm1",
+    "skillName": "Cálculo mental",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CM1"
+    ],
+    "level": "CM1",
+    "groupName": "Cálculo mental",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-3.svg",
+    "imageAlt": "Imagen de Misión de cálculo — Cuaderno 3"
+  },
+  {
+    "id": "mission-calcul-cm1-livret-2",
+    "sourceId": "mission-calcul-cm1-livret-2",
+    "title": "Misión de cálculo — Cuaderno 2",
+    "url": "/jeux/mission-calcul-cm1-livret-2/",
+    "path": "/jeux/mission-calcul-cm1-livret-2/",
+    "description": "Resuelve los retos de cálculo del cuaderno.",
+    "group": "mental",
+    "skill": "calcul-mental-cm1",
+    "skillName": "Cálculo mental",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CM1"
+    ],
+    "level": "CM1",
+    "groupName": "Cálculo mental",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-2.svg",
+    "imageAlt": "Imagen de Misión de cálculo — Cuaderno 2"
+  },
+  {
+    "id": "cartons-montessori-ce2",
+    "sourceId": "cartons-montessori-ce2",
+    "title": "Los números en órbita — Tarjetas Montessori CE2",
+    "url": "/es/games/cartons-montessori-ce2/",
+    "path": "/es/games/cartons-montessori-ce2/",
+    "description": "Componer y descomponer números de hasta cuatro cifras.",
+    "group": "numeration",
+    "skill": "composer-decomposer",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CE2"
+    ],
+    "level": "CE2",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/jeux/cartons-montessori-ce2/apercu.webp",
+    "imageAlt": "Imagen de Los números en órbita — Tarjetas Montessori CE2"
+  },
+  {
+    "id": "cartons-montessori-cp",
+    "sourceId": "cartons-montessori-cp",
+    "title": "La magia de los números — CP",
+    "url": "/es/games/cartons-montessori-cp/",
+    "path": "/es/games/cartons-montessori-cp/",
+    "description": "Formar números de dos cifras con decenas y unidades.",
+    "group": "numeration",
+    "skill": "composer-decomposer",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/jeux/cartons-montessori-cp/apercu.svg",
+    "imageAlt": "Imagen de La magia de los números — CP"
+  },
+  {
+    "id": "cartons-montessori-ce1",
+    "sourceId": "cartons-montessori-ce1",
+    "title": "La magia de los números — CE1",
+    "url": "/es/games/cartons-montessori-ce1/",
+    "path": "/es/games/cartons-montessori-ce1/",
+    "description": "Componer y descomponer números de hasta 999.",
+    "group": "numeration",
+    "skill": "composer-decomposer",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/jeux/cartons-montessori-ce1/apercu.webp",
+    "imageAlt": "Imagen de La magia de los números — CE1"
+  },
+  {
+    "id": "ours-de-la-banquise",
+    "sourceId": "ours-de-la-banquise",
+    "title": "El oso del hielo",
+    "url": "https://bleja972.github.io/jeux/ours-de-la-banquise/",
+    "path": "https://bleja972.github.io/jeux/ours-de-la-banquise/",
+    "description": "Programa los movimientos del oso para recoger los peces.",
+    "group": "codage",
+    "skill": "programmer-deplacements",
+    "skillName": "Programación",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "groupName": "Programación",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/images/bannieres/openai/ours-de-la-banquise.webp?v=bannieres-20261115",
+    "imageAlt": "Imagen de El oso del hielo"
+  },
+  {
+    "id": "ours-de-la-banquise-neon",
+    "sourceId": "ours-de-la-banquise-neon",
+    "title": "Misión Neón — El robot de los cristales",
+    "url": "/jeux/ours-de-la-banquise-neon/",
+    "path": "/jeux/ours-de-la-banquise-neon/",
+    "description": "Programa los movimientos del robot para recoger los cristales.",
+    "group": "codage",
+    "skill": "programmer-deplacements",
+    "skillName": "Programación",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "groupName": "Programación",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/ours-de-la-banquise-neon.svg?v=robot-mobile-20261121",
+    "imageAlt": "Imagen de Misión Neón — El robot de los cristales"
+  },
+  {
+    "id": "chemin-du-kangourou",
+    "sourceId": "chemin-du-kangourou",
+    "title": "El camino del canguro",
+    "url": "/es/games/chemin-du-kangourou/",
+    "path": "/es/games/chemin-du-kangourou/",
+    "description": "Elegir los saltos correctos hasta el final del laberinto.",
+    "group": "numeration",
+    "skill": "suites-numeriques",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/images/bannieres/openai/chemin-du-kangourou.webp?v=bannieres-20261115",
+    "imageAlt": "Imagen de El camino del canguro"
+  },
+  {
+    "id": "crabes-du-tombolo",
+    "sourceId": "crabes-du-tombolo",
+    "title": "Los cangrejos del tómbolo",
+    "url": "/es/games/crabes-du-tombolo/",
+    "path": "/es/games/crabes-du-tombolo/",
+    "description": "Distinguir números pares e impares.",
+    "group": "numeration",
+    "skill": "pairs-impairs",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/jeux/crabes-du-tombolo/apercu.svg",
+    "imageAlt": "Imagen de Los cangrejos del tómbolo"
+  },
+  {
+    "id": "jeu-103",
+    "sourceId": "jeu-103",
+    "title": "Popeye en la recta numérica",
+    "url": "/es/games/popeye-ligne-graduee/",
+    "path": "/es/games/popeye-ligne-graduee/",
+    "description": "Leer una recta graduada y encontrar números.",
+    "group": "numeration",
+    "skill": "droite-graduee",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CP",
+      "CE1",
+      "CE2"
+    ],
+    "level": "CE1",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/images/bannieres/openai/popeye-ligne-graduee.webp?v=bannieres-20261115",
+    "imageAlt": "Imagen de Popeye en la recta numérica"
+  },
+  {
+    "id": "jeu-102",
+    "sourceId": "jeu-102",
+    "title": "Los cangrejos de las Salinas",
+    "url": "/es/games/crabes-des-salines/",
+    "path": "/es/games/crabes-des-salines/",
+    "description": "Ordenar números en orden ascendente o descendente.",
+    "group": "numeration",
+    "skill": "ranger",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CP",
+      "CE1",
+      "CE2"
+    ],
+    "level": "CE1",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/jeux/crabes-des-salines/plage.webp",
+    "imageAlt": "Imagen de Los cangrejos de las Salinas"
+  },
+  {
+    "id": "jeu-101",
+    "sourceId": "jeu-101",
+    "title": "El castillo de los números — Exterior",
+    "url": "/es/games/chateau-nombres-exterieur-cp/",
+    "path": "/es/games/chateau-nombres-exterieur-cp/",
+    "description": "Reconocer familias de números y descubrir el número misterioso.",
+    "group": "numeration",
+    "skill": "familles-nombres",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/jeux/chateau-nombres-exterieur-cp/assets/apercu.webp",
+    "imageAlt": "Imagen de El castillo de los números — Exterior"
+  },
+  {
+    "id": "jeu-100",
+    "sourceId": "jeu-100",
+    "title": "El castillo de los números — CP",
+    "url": "/es/games/chateau-nombres-cp/",
+    "path": "/es/games/chateau-nombres-cp/",
+    "description": "Explorar la tabla numérica del 0 al 99.",
+    "group": "numeration",
+    "skill": "familles-nombres",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/jeux/chateau-nombres-cp/assets/apercu.webp",
+    "imageAlt": "Imagen de El castillo de los números — CP"
+  },
+  {
+    "id": "jeu-99",
+    "sourceId": "jeu-99",
+    "title": "El planeta de Fritz — CE2",
+    "url": "/es/games/fritz-encadrements-ce2/",
+    "path": "/es/games/fritz-encadrements-ce2/",
+    "description": "Encuadrar números por unidades, decenas, centenas y millares.",
+    "group": "numeration",
+    "skill": "encadrer-nombres",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CE2"
+    ],
+    "level": "CE2",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/fritz-encadrements/apercu.webp",
+    "imageAlt": "Imagen de El planeta de Fritz — CE2"
+  },
+  {
+    "id": "jeu-98",
+    "sourceId": "jeu-98",
+    "title": "El planeta de Fritz — CP",
+    "url": "/es/games/fritz-encadrements-cp/",
+    "path": "/es/games/fritz-encadrements-cp/",
+    "description": "Encontrar el número anterior y el siguiente.",
+    "group": "numeration",
+    "skill": "encadrer-nombres",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/fritz-encadrements/apercu.webp",
+    "imageAlt": "Imagen de El planeta de Fritz — CP"
+  },
+  {
+    "id": "jeu-97",
+    "sourceId": "jeu-97",
+    "title": "El planeta de Fritz — CE1",
+    "url": "/es/games/fritz-encadrements-ce1/",
+    "path": "/es/games/fritz-encadrements-ce1/",
+    "description": "Encuadrar números por unidades, decenas y centenas.",
+    "group": "numeration",
+    "skill": "encadrer-nombres",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/images/bannieres/openai/fritz-encadrements-ce1.webp?v=bannieres-20261115",
+    "imageAlt": "Imagen de El planeta de Fritz — CE1"
+  },
+  {
+    "id": "jeu-96",
+    "sourceId": "jeu-96",
+    "title": "Los marcianos espejo",
+    "url": "https://bleja972.github.io/jeux/symetrie-mars-ce2/",
+    "path": "https://bleja972.github.io/jeux/symetrie-mars-ce2/",
+    "description": "Completa el reflejo de cada figura en la cuadrícula.",
+    "group": "geometrie",
+    "skill": "symetrie",
+    "skillName": "Geometría",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE2"
+    ],
+    "level": "CE2",
+    "groupName": "Geometría",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/symetrie-mars-ce2.webp",
+    "imageAlt": "Imagen de Los marcianos espejo"
+  },
+  {
+    "id": "jeu-95",
+    "sourceId": "jeu-95",
+    "title": "Las rectas numéricas del T-Rex — CE1",
+    "url": "/es/games/droite-numerique-t-rex-ce1/",
+    "path": "/es/games/droite-numerique-t-rex-ce1/",
+    "description": "Cinco niveles con saltos de 1, 2, 5, 10 y 100.",
+    "group": "numeration",
+    "skill": "droite-numerique",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/droite-t-rex-ce1.svg",
+    "imageAlt": "Imagen de Las rectas numéricas del T-Rex — CE1"
+  },
+  {
+    "id": "jeu-94",
+    "sourceId": "jeu-94",
+    "title": "Las 42 rectas animadas del T-Rex",
+    "url": "/es/games/droite-numerique-t-rex-anime-cp/",
+    "path": "/es/games/droite-numerique-t-rex-anime-cp/",
+    "description": "Resolver 42 retos de rectas numéricas.",
+    "group": "numeration",
+    "skill": "droite-numerique",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/droite-t-rex-anime-cp.svg",
+    "imageAlt": "Imagen de Las 42 rectas animadas del T-Rex"
+  },
+  {
+    "id": "jeu-93",
+    "sourceId": "jeu-93",
+    "title": "La recta numérica del T-Rex — CP",
+    "url": "/es/games/droite-numerique-t-rex-cp/",
+    "path": "/es/games/droite-numerique-t-rex-cp/",
+    "description": "Identificar el número indicado por una flecha.",
+    "group": "numeration",
+    "skill": "droite-numerique",
+    "skillName": "Numeración",
+    "subject": "Mathématiques",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "groupName": "Numeración",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/droite-t-rex-cp.svg",
+    "imageAlt": "Imagen de La recta numérica del T-Rex — CP"
+  },
+  {
     "id": "jeu-92",
     "title": "Dino Cálculos — Multiplicaciones y divisiones",
     "url": "/es/games/dino-calculs/?v=es-repair-3",
@@ -36,7 +553,8 @@
     "category": "calculs",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
@@ -186,7 +704,8 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
@@ -211,7 +730,8 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
@@ -236,7 +756,8 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
@@ -246,7 +767,7 @@
     "slug": "temple-des-doubles",
     "objective": "Calcular rápidamente los números duplicados de 3 a 50 y de 100 a 200.",
     "short": "Cuatro niveles de dobles, un caldero fluorescente, burbujas que aceleran y música de aventura.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-83.webp",
+    "thumb": "/assets/images/bannieres/openai/temple-des-doubles.webp?v=bannieres-20261115",
     "imageAlt": "Captura de El templo de los dobles",
     "sourceId": "jeu-83"
   },
@@ -261,7 +782,8 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
@@ -286,7 +808,8 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
@@ -311,7 +834,8 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
@@ -336,6 +860,7 @@
     "category": "geometrie",
     "level": "CE1",
     "levels": [
+      "CP",
       "CE1"
     ],
     "subject": "Mathématiques",
@@ -361,6 +886,7 @@
     "category": "geometrie",
     "level": "CE1",
     "levels": [
+      "CP",
       "CE1"
     ],
     "subject": "Mathématiques",
@@ -397,8 +923,7 @@
     ],
     "short": "Coloria las figuras según su forma y evita las figuras trampa.",
     "imageAlt": "Captura de Geometría CE1 — Colorear las figuras",
-    "sourceId": "jeu-77",
-    "thumb": ""
+    "sourceId": "jeu-77"
   },
   {
     "title": "Calcul Pop! — Cálculo mental CE2",
@@ -472,10 +997,11 @@
     "skillName": "Pares e impares",
     "groupName": "Numeración",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "Reconocer los números pares y los números impares.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-2.webp",
+    "thumb": "/assets/images/bannieres/openai/bulles-de-corail-pairs-impairs.webp?v=bannieres-20261115",
     "sourceId": "jeu-2"
   },
   {
@@ -498,7 +1024,8 @@
     "skillName": "Sustracción mental",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Encontrar un resultado retirando una cantidad.",
     "thumb": "/assets/catalogue-v2/captures/jeu-3.webp",
@@ -524,7 +1051,8 @@
     "skillName": "Complementos",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-4.webp",
@@ -550,10 +1078,11 @@
     "skillName": "Complementos",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-5.webp",
+    "thumb": "/assets/images/bannieres/openai/mission-nautilus.webp?v=bannieres-20261115",
     "sourceId": "jeu-5"
   },
   {
@@ -576,7 +1105,9 @@
     "skillName": "Dobles y casi dobles",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "Usar los dobles para calcular más fácilmente.",
     "thumb": "/assets/catalogue-v2/captures/jeu-6.webp",
@@ -602,10 +1133,12 @@
     "skillName": "Adiciones mentales",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "Usar resultados conocidos para calcular una adición mental.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-7.webp",
+    "thumb": "/assets/images/bannieres/openai/mission-mars.webp?v=bannieres-20261115",
     "sourceId": "jeu-7"
   },
   {
@@ -628,7 +1161,9 @@
     "skillName": "Adiciones mentales",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "Usar resultados conocidos para calcular una adición mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-8.webp",
@@ -680,7 +1215,8 @@
     "skillName": "Complementos",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-10.webp",
@@ -706,7 +1242,8 @@
     "skillName": "Complementos",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-11.webp",
@@ -758,7 +1295,8 @@
     "skillName": "Complementos",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-13.webp",
@@ -784,7 +1322,8 @@
     "skillName": "Complementos",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-14.webp",
@@ -798,10 +1337,10 @@
     "image": "https://bleja972.github.io/assets/capture-complements1_a_10.webp",
     "imageAlt": "Captura de El reto de la araña — Complementos a 10",
     "category": "calculs",
-    "level": "CP",
+    "level": "CE1",
     "subject": "Mathématiques",
     "id": "jeu-15",
-    "new": false,
+    "new": true,
     "skill": "complements",
     "group": "mental",
     "slug": "complements-a-10-le-defi-de-laraignee",
@@ -814,7 +1353,7 @@
       "CE1"
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-15.webp",
+    "thumb": "/assets/catalogue-v2/captures/jeu-15-toile-realiste.svg?v=20261116",
     "sourceId": "jeu-15"
   },
   {
@@ -828,7 +1367,7 @@
     "level": "CE1",
     "subject": "Mathématiques",
     "id": "jeu-16",
-    "new": false,
+    "new": true,
     "skill": "complements",
     "group": "mental",
     "slug": "complements-a-100-le-defi-de-laraignee",
@@ -840,7 +1379,7 @@
       "CE1"
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-16.webp",
+    "thumb": "/assets/catalogue-v2/captures/jeu-16-toile-realiste.svg?v=20261116",
     "sourceId": "jeu-16"
   },
   {
@@ -854,7 +1393,7 @@
     "level": "CE1",
     "subject": "Mathématiques",
     "id": "jeu-17",
-    "new": false,
+    "new": true,
     "skill": "complements",
     "group": "mental",
     "slug": "complements-a-1-000-le-defi-de-laraignee",
@@ -866,7 +1405,7 @@
       "CE1"
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-17.webp",
+    "thumb": "/assets/catalogue-v2/captures/jeu-17-toile-realiste.svg?v=20261116",
     "sourceId": "jeu-17"
   },
   {
@@ -914,6 +1453,7 @@
     "skillName": "Solución de problemas",
     "groupName": "Problemas",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "Entender una situación y elegir un cálculo para resolverla.",
@@ -945,6 +1485,50 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-28.webp",
     "imageAlt": "Captura de Cálculo mental CP",
     "sourceId": "jeu-28"
+  },
+  {
+    "id": "calcul-mental-cp-neon-un-calcul",
+    "sourceId": "calcul-mental-cp-neon-un-calcul",
+    "title": "Cálculo mental — Arcade neón",
+    "url": "/jeux/calcul-mental-cp-neon/",
+    "path": "/jeux/calcul-mental-cp-neon/",
+    "description": "Resuelve una operación por pantalla.",
+    "group": "mental",
+    "skill": "calcul-mental",
+    "skillName": "Cálculo mental",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "groupName": "Cálculo mental",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg",
+    "imageAlt": "Imagen de Cálculo mental — Arcade neón"
+  },
+  {
+    "id": "calcul-mental-cp-pygame",
+    "sourceId": "calcul-mental-cp-pygame",
+    "title": "Misión de cálculo mental — Arcade Pygame",
+    "url": "/jeux/calcul-mental-cp-pygame/",
+    "path": "/jeux/calcul-mental-cp-pygame/",
+    "description": "Practica cálculo mental en 34 retos.",
+    "group": "mental",
+    "skill": "calcul-mental",
+    "skillName": "Cálculo mental",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "groupName": "Cálculo mental",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg",
+    "imageAlt": "Imagen de Misión de cálculo mental — Arcade Pygame"
   },
   {
     "title": "Cronomates CE2 — 20 retos",
@@ -1430,7 +2014,8 @@
     "skillName": "Cálculos mentales variados",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-47.webp",
@@ -1455,7 +2040,8 @@
     "skillName": "Sustracciones",
     "groupName": "Cálculo escrito",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Usar cientos, decenas y unidades para sustraerse.",
     "thumb": "/assets/catalogue-v2/captures/jeu-48.webp",
@@ -1480,12 +2066,35 @@
     "skillName": "Sustracciones",
     "groupName": "Cálculo escrito",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Usar cientos, decenas y unidades para sustraerse.",
     "thumb": "/assets/catalogue-v2/captures/jeu-49.webp",
     "imageAlt": "Captura de Restas con bloques de numeración",
     "sourceId": "jeu-49"
+  },
+  {
+    "id": "soustractions-sans-echange-en-orbite",
+    "sourceId": "soustractions-sans-echange-en-orbite",
+    "title": "Restas en órbita — Sin reagrupación",
+    "url": "https://bleja972.github.io/jeux/soustractions-sans-echange-en-orbite/",
+    "path": "https://bleja972.github.io/jeux/soustractions-sans-echange-en-orbite/",
+    "description": "Resta por columnas sin reagrupar.",
+    "group": "pose",
+    "skill": "soustractions-posees",
+    "skillName": "Cálculo escrito",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "groupName": "Cálculo escrito",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/soustractions-en-orbite-capture%20(1).webp",
+    "imageAlt": "Imagen de Restas en órbita — Sin reagrupación"
   },
   {
     "title": "Sumas en columna sin llevadas",
@@ -1506,10 +2115,11 @@
     "skillName": "Sumas fijadas",
     "groupName": "Cálculo escrito",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Sumar a dos o tres dígitos, sin intercambio.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-50.webp",
+    "thumb": "/assets/catalogue-v2/captures/additions-sans-echange-orbite.webp",
     "imageAlt": "Captura de Sumas en columna sin llevadas",
     "sourceId": "jeu-50"
   },
@@ -1532,10 +2142,11 @@
     "skillName": "Sumas fijadas",
     "groupName": "Cálculo escrito",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Comprender y calcular las adiciones con uno o dos intercambios.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-51.webp",
+    "thumb": "/assets/catalogue-v2/captures/additions-posees-tableau-operation.webp?v=orbite-translucide-20261107",
     "imageAlt": "Captura de Sumas en columna con llevadas",
     "sourceId": "jeu-51"
   },
@@ -1557,12 +2168,79 @@
     "skillName": "Sumas fijadas",
     "groupName": "Cálculo escrito",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Alinear las columnas y calcular una adición colocada.",
     "thumb": "/assets/catalogue-v2/captures/jeu-52.webp",
     "imageAlt": "Captura de Sumas con cambios — Fichas 3D",
     "sourceId": "jeu-52"
+  },
+  {
+    "id": "jeu-106",
+    "sourceId": "jeu-106",
+    "title": "Sumas con reagrupación — Bloques 3D",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-106",
+    "path": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-106",
+    "description": "Suma y reagrupa con bloques de valor posicional.",
+    "group": "pose",
+    "skill": "additions-posees",
+    "skillName": "Cálculo escrito",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "groupName": "Cálculo escrito",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/jeu-106.webp",
+    "imageAlt": "Imagen de Sumas con reagrupación — Bloques 3D"
+  },
+  {
+    "id": "jeu-108",
+    "sourceId": "jeu-108",
+    "title": "Sumas con reagrupación — Bloques 3D",
+    "url": "https://bleja972.github.io/jeux/additions-avec-echanges-blocs-3d-ce2/",
+    "path": "https://bleja972.github.io/jeux/additions-avec-echanges-blocs-3d-ce2/",
+    "description": "Suma y reagrupa con bloques de valor posicional.",
+    "group": "pose",
+    "skill": "additions-posees",
+    "skillName": "Cálculo escrito",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE2"
+    ],
+    "level": "CE2",
+    "groupName": "Cálculo escrito",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/jeu-108.webp",
+    "imageAlt": "Imagen de Sumas con reagrupación — Bloques 3D"
+  },
+  {
+    "id": "jeu-107",
+    "sourceId": "jeu-107",
+    "title": "Sumas con reagrupación — Bloques 3D",
+    "url": "https://bleja972.github.io/jeux/additions-avec-echanges-blocs-3d-cp/",
+    "path": "https://bleja972.github.io/jeux/additions-avec-echanges-blocs-3d-cp/",
+    "description": "Suma y reagrupa con bloques de valor posicional.",
+    "group": "pose",
+    "skill": "additions-posees",
+    "skillName": "Cálculo escrito",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "groupName": "Cálculo escrito",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/jeu-107.webp",
+    "imageAlt": "Imagen de Sumas con reagrupación — Bloques 3D"
   },
   {
     "title": "Sumar pasando por 10",
@@ -1583,7 +2261,9 @@
     "skillName": "Adiciones mentales",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "Usar resultados conocidos para calcular una adición mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-53.webp",
@@ -1609,7 +2289,9 @@
     "skillName": "Sustracción mental",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "Encontrar un resultado retirando una cantidad.",
     "thumb": "/assets/catalogue-v2/captures/jeu-54.webp",
@@ -1635,7 +2317,9 @@
     "skillName": "Dobles y casi dobles",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "Usar los dobles para calcular más fácilmente.",
     "thumb": "/assets/catalogue-v2/captures/jeu-55.webp",
@@ -1661,7 +2345,9 @@
     "skillName": "Dobles y casi dobles",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "Usar los dobles para calcular más fácilmente.",
     "thumb": "/assets/catalogue-v2/captures/jeu-56.webp",
@@ -1687,7 +2373,9 @@
     "skillName": "Complementos",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-57.webp",
@@ -1713,7 +2401,8 @@
     "skillName": "Sustracción mental",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Encontrar un resultado retirando una cantidad.",
     "thumb": "/assets/catalogue-v2/captures/jeu-58.webp",
@@ -1739,7 +2428,9 @@
     "skillName": "Adiciones mentales",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "Usar resultados conocidos para calcular una adición mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-59.webp",
@@ -1765,10 +2456,11 @@
     "skillName": "Cálculos mentales variados",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-60.webp",
+    "thumb": "/assets/catalogue-v2/captures/calcul-mental-ce1-periode-1-orbite.webp",
     "imageAlt": "Captura de Cálculo mental — Periodo 1",
     "sourceId": "jeu-60"
   },
@@ -1791,10 +2483,11 @@
     "skillName": "Cálculos mentales variados",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-61.webp",
+    "thumb": "/assets/images/bannieres/jeu-61-apercu.webp?v=20261115",
     "imageAlt": "Captura de Los peces de los números",
     "sourceId": "jeu-61"
   },
@@ -1817,7 +2510,9 @@
     "skillName": "Cálculos mentales variados",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-62.webp",
@@ -1843,7 +2538,8 @@
     "skillName": "Complementos",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-63.webp",
@@ -1869,10 +2565,11 @@
     "skillName": "Cálculos mentales variados",
     "groupName": "Cálculo mental",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-64.webp",
+    "thumb": "/assets/catalogue-v2/captures/calcul-mental-ce1-periode-2-orbite.webp",
     "imageAlt": "Captura de Cálculo mental — Periodo 2",
     "sourceId": "jeu-64"
   },
@@ -1895,6 +2592,7 @@
     "skillName": "Solución de problemas",
     "groupName": "Problemas",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "Entender una situación y elegir un cálculo para resolverla.",
@@ -1921,6 +2619,7 @@
     "skillName": "Solución de problemas",
     "groupName": "Problemas",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "Entender una situación y elegir un cálculo para resolverla.",
@@ -1947,6 +2646,7 @@
     "skillName": "Solución de problemas",
     "groupName": "Problemas",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "Entender una situación y elegir un cálculo para resolverla.",
@@ -1973,6 +2673,7 @@
     "skillName": "Solución de problemas",
     "groupName": "Problemas",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "Entender una situación y elegir un cálculo para resolverla.",
@@ -1999,6 +2700,7 @@
     "skillName": "Solución de problemas",
     "groupName": "Problemas",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "Entender una situación y elegir un cálculo para resolverla.",
@@ -2025,6 +2727,7 @@
     "skillName": "Solución de problemas",
     "groupName": "Problemas",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "Entender una situación y elegir un cálculo para resolverla.",
@@ -2051,6 +2754,7 @@
     "skillName": "Solución de problemas",
     "groupName": "Problemas",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "Entender una situación y elegir un cálculo para resolverla.",
@@ -2083,5 +2787,27 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-72.webp",
     "imageAlt": "Captura de Problemas — Periodo 2",
     "sourceId": "jeu-72"
+  },
+  {
+    "id": "jeu-105",
+    "sourceId": "jeu-105",
+    "title": "Restas sin reagrupación — Nave espacial",
+    "url": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-105",
+    "path": "https://bleja972.github.io/jouer/calcul-ce1/?jeu=jeu-105",
+    "description": "Resta con bloques de valor posicional.",
+    "group": "pose",
+    "skill": "soustractions-posees",
+    "skillName": "Cálculo escrito",
+    "subject": "Mathématiques",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "groupName": "Cálculo escrito",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/jeu-105.webp",
+    "imageAlt": "Imagen de Restas sin reagrupación — Nave espacial"
   }
 ]
