@@ -1,5 +1,517 @@
 [
   {
+    "id": "mission-fractions-ce1-revisions",
+    "sourceId": "mission-fractions-ce1-revisions",
+    "title": "分数任务：复习",
+    "url": "/jeux/mission-fractions-ce1-revisions/",
+    "path": "/jeux/mission-fractions-ce1-revisions/",
+    "description": "打开法语原版，练习数与数位。",
+    "skill": "fractions-ce1",
+    "skillName": "数与数位",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/mission-fractions-ce1-revisions-gameplay.webp",
+    "imageAlt": "游戏截图：分数任务：复习"
+  },
+  {
+    "id": "mission-calcul-cm1-livret-1",
+    "sourceId": "mission-calcul-cm1-livret-1",
+    "title": "四年级口算任务 — 第1册",
+    "url": "/zh/games/mental-maths-grade4-booklet-1/",
+    "path": "/zh/games/mental-maths-grade4-booklet-1/",
+    "description": "通过七组循序渐进的练习提升口算能力。",
+    "skill": "calcul-mental-cm1",
+    "skillName": "口算",
+    "levels": [
+      "CM1"
+    ],
+    "level": "CM1",
+    "group": "mental",
+    "groupName": "口算",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/mission-calcul-cm1-livret-1-gameplay.webp",
+    "imageAlt": "游戏截图：四年级口算任务 — 第1册"
+  },
+  {
+    "id": "mission-calcul-cm1-livret-5",
+    "sourceId": "mission-calcul-cm1-livret-5",
+    "title": "四年级口算任务 — 第5册",
+    "url": "/zh/games/mental-maths-grade4-booklet-5/",
+    "path": "/zh/games/mental-maths-grade4-booklet-5/",
+    "description": "通过七组循序渐进的练习提升口算能力。",
+    "skill": "calcul-mental-cm1",
+    "skillName": "口算",
+    "levels": [
+      "CM1"
+    ],
+    "level": "CM1",
+    "group": "mental",
+    "groupName": "口算",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/mission-calcul-cm1-livret-5-gameplay.webp",
+    "imageAlt": "游戏截图：四年级口算任务 — 第5册"
+  },
+  {
+    "id": "mission-calcul-cm1-livret-4",
+    "sourceId": "mission-calcul-cm1-livret-4",
+    "title": "四年级口算任务 — 第4册",
+    "url": "/zh/games/mental-maths-grade4-booklet-4/",
+    "path": "/zh/games/mental-maths-grade4-booklet-4/",
+    "description": "通过七组循序渐进的练习提升口算能力。",
+    "skill": "calcul-mental-cm1",
+    "skillName": "口算",
+    "levels": [
+      "CM1"
+    ],
+    "level": "CM1",
+    "group": "mental",
+    "groupName": "口算",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/mission-calcul-cm1-livret-4-gameplay.webp",
+    "imageAlt": "游戏截图：四年级口算任务 — 第4册"
+  },
+  {
+    "id": "mission-calcul-cm1-livret-3",
+    "sourceId": "mission-calcul-cm1-livret-3",
+    "title": "四年级口算任务 — 第3册",
+    "url": "/zh/games/mental-maths-grade4-booklet-3/",
+    "path": "/zh/games/mental-maths-grade4-booklet-3/",
+    "description": "通过七组循序渐进的练习提升口算能力。",
+    "skill": "calcul-mental-cm1",
+    "skillName": "口算",
+    "levels": [
+      "CM1"
+    ],
+    "level": "CM1",
+    "group": "mental",
+    "groupName": "口算",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/mission-calcul-cm1-livret-3-gameplay.webp",
+    "imageAlt": "游戏截图：四年级口算任务 — 第3册"
+  },
+  {
+    "id": "mission-calcul-cm1-livret-2",
+    "sourceId": "mission-calcul-cm1-livret-2",
+    "title": "四年级口算任务 — 第2册",
+    "url": "/zh/games/mental-maths-grade4-booklet-2/",
+    "path": "/zh/games/mental-maths-grade4-booklet-2/",
+    "description": "通过七组循序渐进的练习提升口算能力。",
+    "skill": "calcul-mental-cm1",
+    "skillName": "口算",
+    "levels": [
+      "CM1"
+    ],
+    "level": "CM1",
+    "group": "mental",
+    "groupName": "口算",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/mission-calcul-cm1-livret-2-gameplay.webp",
+    "imageAlt": "游戏截图：四年级口算任务 — 第2册"
+  },
+  {
+    "id": "cartons-montessori-ce2",
+    "sourceId": "cartons-montessori-ce2",
+    "title": "轨道数字 — 蒙台梭利数字卡 CE2",
+    "url": "/zh/games/cartons-montessori-ce2/",
+    "path": "/zh/games/cartons-montessori-ce2/",
+    "description": "用数字卡片组合和拆分多位数。",
+    "skill": "composer-decomposer",
+    "skillName": "数与数位",
+    "levels": [
+      "CE2"
+    ],
+    "level": "CE2",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/cartons-montessori-ce2-gameplay.webp",
+    "imageAlt": "游戏截图：轨道数字 — 蒙台梭利数字卡 CE2"
+  },
+  {
+    "id": "cartons-montessori-cp",
+    "sourceId": "cartons-montessori-cp",
+    "title": "数字的魔法 — CP",
+    "url": "/zh/games/cartons-montessori-cp/",
+    "path": "/zh/games/cartons-montessori-cp/",
+    "description": "用十位与个位卡片组合两位数。",
+    "skill": "composer-decomposer",
+    "skillName": "数与数位",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/cartons-montessori-cp-gameplay.webp",
+    "imageAlt": "游戏截图：数字的魔法 — CP"
+  },
+  {
+    "id": "cartons-montessori-ce1",
+    "sourceId": "cartons-montessori-ce1",
+    "title": "数字的魔法 — CE1",
+    "url": "/zh/games/cartons-montessori-ce1/",
+    "path": "/zh/games/cartons-montessori-ce1/",
+    "description": "用数字卡片组合和拆分1000以内的数。",
+    "skill": "composer-decomposer",
+    "skillName": "数与数位",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/cartons-montessori-ce1-gameplay.webp",
+    "imageAlt": "游戏截图：数字的魔法 — CE1"
+  },
+  {
+    "id": "ours-de-la-banquise",
+    "sourceId": "ours-de-la-banquise",
+    "title": "冰原上的北极熊",
+    "url": "https://bleja972.github.io/jeux/ours-de-la-banquise/",
+    "path": "https://bleja972.github.io/jeux/ours-de-la-banquise/",
+    "description": "打开法语原版，练习编程。",
+    "skill": "programmer-deplacements",
+    "skillName": "编程",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "group": "codage",
+    "groupName": "编程",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/ours-de-la-banquise-gameplay.webp",
+    "imageAlt": "游戏截图：冰原上的北极熊"
+  },
+  {
+    "id": "ours-de-la-banquise-neon",
+    "sourceId": "ours-de-la-banquise-neon",
+    "title": "霓虹任务：水晶机器人",
+    "url": "/jeux/ours-de-la-banquise-neon/",
+    "path": "/jeux/ours-de-la-banquise-neon/",
+    "description": "打开法语原版，练习编程。",
+    "skill": "programmer-deplacements",
+    "skillName": "编程",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "group": "codage",
+    "groupName": "编程",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/ours-de-la-banquise-neon-gameplay.webp",
+    "imageAlt": "游戏截图：霓虹任务：水晶机器人"
+  },
+  {
+    "id": "chemin-du-kangourou",
+    "sourceId": "chemin-du-kangourou",
+    "title": "袋鼠数字之路",
+    "url": "/zh/games/chemin-du-kangourou/",
+    "path": "/zh/games/chemin-du-kangourou/",
+    "description": "沿着数字迷宫，找到正确的跳跃路线。",
+    "skill": "suites-numeriques",
+    "skillName": "数与数位",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/chemin-du-kangourou-gameplay.webp",
+    "imageAlt": "游戏截图：袋鼠数字之路"
+  },
+  {
+    "id": "crabes-du-tombolo",
+    "sourceId": "crabes-du-tombolo",
+    "title": "沙洲上的螃蟹",
+    "url": "/zh/games/crabes-du-tombolo/",
+    "path": "/zh/games/crabes-du-tombolo/",
+    "description": "区分偶数和奇数，帮助螃蟹过河。",
+    "skill": "pairs-impairs",
+    "skillName": "数与数位",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/crabes-du-tombolo-gameplay.webp",
+    "imageAlt": "游戏截图：沙洲上的螃蟹"
+  },
+  {
+    "id": "jeu-103",
+    "sourceId": "jeu-103",
+    "title": "大力水手的数轴",
+    "url": "/zh/games/popeye-ligne-graduee/",
+    "path": "/zh/games/popeye-ligne-graduee/",
+    "description": "看刻度并找出正确的数字。",
+    "skill": "droite-graduee",
+    "skillName": "数与数位",
+    "levels": [
+      "CP",
+      "CE1",
+      "CE2"
+    ],
+    "level": "CE1",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-103-gameplay.webp",
+    "imageAlt": "游戏截图：大力水手的数轴"
+  },
+  {
+    "id": "jeu-102",
+    "sourceId": "jeu-102",
+    "title": "盐滩上的螃蟹",
+    "url": "/zh/games/crabes-des-salines/",
+    "path": "/zh/games/crabes-des-salines/",
+    "description": "从小到大或从大到小排列数字。",
+    "skill": "ranger",
+    "skillName": "数与数位",
+    "levels": [
+      "CP",
+      "CE1",
+      "CE2"
+    ],
+    "level": "CE1",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-102-gameplay.webp",
+    "imageAlt": "游戏截图：盐滩上的螃蟹"
+  },
+  {
+    "id": "jeu-101",
+    "sourceId": "jeu-101",
+    "title": "数字城堡 — 城堡外观",
+    "url": "/zh/games/chateau-nombres-exterieur-cp/",
+    "path": "/zh/games/chateau-nombres-exterieur-cp/",
+    "description": "探索0到99的数字家族。",
+    "skill": "familles-nombres",
+    "skillName": "数与数位",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-101-gameplay.webp",
+    "imageAlt": "游戏截图：数字城堡 — 城堡外观"
+  },
+  {
+    "id": "jeu-100",
+    "sourceId": "jeu-100",
+    "title": "数字城堡 — CP",
+    "url": "/zh/games/chateau-nombres-cp/",
+    "path": "/zh/games/chateau-nombres-cp/",
+    "description": "听数字并在表格中找出对应位置。",
+    "skill": "familles-nombres",
+    "skillName": "数与数位",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-100-gameplay.webp",
+    "imageAlt": "游戏截图：数字城堡 — CP"
+  },
+  {
+    "id": "jeu-99",
+    "sourceId": "jeu-99",
+    "title": "弗里茨的星球 — CE2",
+    "url": "/zh/games/fritz-encadrements-ce2/",
+    "path": "/zh/games/fritz-encadrements-ce2/",
+    "description": "找出相邻的个位、整十、整百与整千数。",
+    "skill": "encadrer-nombres",
+    "skillName": "数与数位",
+    "levels": [
+      "CE2"
+    ],
+    "level": "CE2",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-99-gameplay.webp",
+    "imageAlt": "游戏截图：弗里茨的星球 — CE2"
+  },
+  {
+    "id": "jeu-98",
+    "sourceId": "jeu-98",
+    "title": "弗里茨的星球 — CP",
+    "url": "/zh/games/fritz-encadrements-cp/",
+    "path": "/zh/games/fritz-encadrements-cp/",
+    "description": "找出数字前后的邻数。",
+    "skill": "encadrer-nombres",
+    "skillName": "数与数位",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-98-gameplay.webp",
+    "imageAlt": "游戏截图：弗里茨的星球 — CP"
+  },
+  {
+    "id": "jeu-97",
+    "sourceId": "jeu-97",
+    "title": "弗里茨的星球 — CE1",
+    "url": "/zh/games/fritz-encadrements-ce1/",
+    "path": "/zh/games/fritz-encadrements-ce1/",
+    "description": "找出个位、整十与整百的邻数。",
+    "skill": "encadrer-nombres",
+    "skillName": "数与数位",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-97-gameplay.webp",
+    "imageAlt": "游戏截图：弗里茨的星球 — CE1"
+  },
+  {
+    "id": "jeu-96",
+    "sourceId": "jeu-96",
+    "title": "火星镜像：轴对称",
+    "url": "https://bleja972.github.io/jeux/symetrie-mars-ce2/",
+    "path": "https://bleja972.github.io/jeux/symetrie-mars-ce2/",
+    "description": "打开法语原版，练习几何。",
+    "skill": "symetrie",
+    "skillName": "几何",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE2"
+    ],
+    "level": "CE2",
+    "group": "geometrie",
+    "groupName": "几何",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-96-gameplay.webp",
+    "imageAlt": "游戏截图：火星镜像：轴对称"
+  },
+  {
+    "id": "jeu-95",
+    "sourceId": "jeu-95",
+    "title": "霸王龙的数轴 — CE1",
+    "url": "/zh/games/droite-numerique-t-rex-ce1/",
+    "path": "/zh/games/droite-numerique-t-rex-ce1/",
+    "description": "五个等级，按1、2、5、10和100跳数。",
+    "skill": "droite-numerique",
+    "skillName": "数与数位",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-95-gameplay.webp",
+    "imageAlt": "游戏截图：霸王龙的数轴 — CE1"
+  },
+  {
+    "id": "jeu-94",
+    "sourceId": "jeu-94",
+    "title": "霸王龙的42条动画数轴",
+    "url": "/zh/games/droite-numerique-t-rex-anime-cp/",
+    "path": "/zh/games/droite-numerique-t-rex-anime-cp/",
+    "description": "观察箭头，完成42道挑战。",
+    "skill": "droite-numerique",
+    "skillName": "数与数位",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-94-gameplay.webp",
+    "imageAlt": "游戏截图：霸王龙的42条动画数轴"
+  },
+  {
+    "id": "jeu-93",
+    "sourceId": "jeu-93",
+    "title": "霸王龙的数轴 — CP",
+    "url": "/zh/games/droite-numerique-t-rex-cp/",
+    "path": "/zh/games/droite-numerique-t-rex-cp/",
+    "description": "认识数轴刻度，并找到正确数字。",
+    "skill": "droite-numerique",
+    "skillName": "数与数位",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "group": "numeration",
+    "groupName": "数与数位",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-93-gameplay.webp",
+    "imageAlt": "游戏截图：霸王龙的数轴 — CP"
+  },
+  {
     "id": "jeu-92",
     "title": "恐龙计算 — 乘法与除法",
     "url": "/zh/games/dino-calculs/?v=20261028-zh-motion",
@@ -15,13 +527,13 @@
     ],
     "subject": "Mathématiques",
     "group": "mental",
-    "groupName": "心算",
+    "groupName": "口算",
     "skill": "tables-multiplications-divisions",
     "skillName": "重新统一表格及其分部",
     "slug": "dino-calculs",
     "objective": "相关乘数和表1至10的分数。",
     "short": "倍增和混合分化,爆破的泡沫和动画恐龙。",
-    "thumb": "/assets/catalogue-v2/captures/dino-calculs.webp",
+    "thumb": "/assets/zh-captures/jeu-92-gameplay.webp",
     "imageAlt": "游戏截图：恐龙计算 — 乘法与除法",
     "sourceId": "jeu-92"
   },
@@ -36,17 +548,18 @@
     "category": "calculs",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
-    "groupName": "心算",
+    "groupName": "口算",
     "skill": "calcul-mental",
     "skillName": "不同的心理计算",
     "slug": "chronomaths-enchantes-ce1",
     "objective": "列车超时现象计算 3分钟后进行",
     "short": "在魔法森林中,20组15次计算 返回失败的计算",
-    "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
+    "thumb": "/assets/zh-captures/jeu-91-gameplay.webp",
     "imageAlt": "游戏截图：魔法限时计算 CE1",
     "sourceId": "jeu-91"
   },
@@ -65,13 +578,13 @@
     ],
     "subject": "Mathématiques",
     "group": "mental",
-    "groupName": "心算",
+    "groupName": "口算",
     "skill": "calcul-mental",
     "skillName": "不同的心理计算",
     "slug": "chronomaths-galactiques-ce2",
     "objective": "列车超时现象计算 3分钟后进行",
     "short": "20套20次计算:失败的泡沫在时间结束前返回。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-82.webp",
+    "thumb": "/assets/zh-captures/jeu-90-gameplay.webp",
     "imageAlt": "游戏截图：银河限时计算 CE2",
     "sourceId": "jeu-90"
   },
@@ -90,13 +603,13 @@
     ],
     "subject": "Mathématiques",
     "group": "mental",
-    "groupName": "心算",
+    "groupName": "口算",
     "skill": "tables-1-10",
     "skillName": "记住乘法表格",
     "slug": "tables-enchantees-ce2",
     "objective": "记住乘法表从1到10,并迅速响应。",
     "short": "所有表格从1到10个 混合在神奇森林里",
-    "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
+    "thumb": "/assets/zh-captures/jeu-89-gameplay.webp",
     "imageAlt": "游戏截图：魔法乘法表 CE2",
     "sourceId": "jeu-89"
   },
@@ -121,7 +634,7 @@
     "slug": "problemes-cp-barres-a-completer",
     "objective": "构建条形模型以解决问题 。",
     "short": "将数字和提问标记放在栏中。",
-    "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-2.svg",
+    "thumb": "/assets/zh-captures/jeu-88-gameplay.webp",
     "imageAlt": "游戏截图：应用题 CP — 填写条形图",
     "sourceId": "jeu-88"
   },
@@ -146,7 +659,7 @@
     "slug": "problemes-cp-periode-1",
     "objective": "使用酒吧模式解决添加和减量问题。",
     "short": "42个问题需要用酒吧模式和阅读声明来解决。",
-    "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-1.svg",
+    "thumb": "/assets/zh-captures/jeu-87-gameplay.webp",
     "imageAlt": "游戏截图：应用题 CP — 第1阶段",
     "sourceId": "jeu-87"
   },
@@ -171,7 +684,7 @@
     "slug": "problemes-cp-periode-2",
     "objective": "使用酒吧模式解决添加和减量问题。",
     "short": "18个问题需要用酒吧模式和阅读援助来解决。",
-    "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-2.svg",
+    "thumb": "/assets/zh-captures/jeu-86-gameplay.webp",
     "imageAlt": "游戏截图：应用题 CP — 第2阶段",
     "sourceId": "jeu-86"
   },
@@ -186,17 +699,18 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
-    "groupName": "心算",
+    "groupName": "口算",
     "skill": "ajouter-soustraire-1-10-100",
     "skillName": "加和减1、10或100",
     "slug": "labo-des-calculs",
     "objective": "从数字中增加和减去1、10或100至999。",
     "short": "90秒内进行三层精神计算 在一个富饶的科学家实验室里",
-    "thumb": "/assets/catalogue-v2/captures/jeu-85.webp",
+    "thumb": "/assets/zh-captures/jeu-85-gameplay.webp",
     "imageAlt": "游戏截图：计算实验室",
     "sourceId": "jeu-85"
   },
@@ -211,17 +725,18 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
-    "groupName": "心算",
+    "groupName": "口算",
     "skill": "moities-pairs-4-200",
     "skillName": "减半",
     "slug": "vallee-des-moities",
     "objective": "计算偶数的半数,从4到50,从100到200。",
     "short": "四个层次 一半,只有偶数, 加速的泡沫和童话音乐。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-84.webp",
+    "thumb": "/assets/zh-captures/jeu-84-gameplay.webp",
     "imageAlt": "游戏截图：一半的山谷",
     "sourceId": "jeu-84"
   },
@@ -236,17 +751,18 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
-    "groupName": "心算",
+    "groupName": "口算",
     "skill": "doubles-3-200",
     "skillName": "计算重复复制",
     "slug": "temple-des-doubles",
     "objective": "快速计算数字的两倍,从3到50,从100到200。",
     "short": "四级双人 荧光 ⁇  加速的泡沫和冒险音乐",
-    "thumb": "/assets/catalogue-v2/captures/jeu-83.webp",
+    "thumb": "/assets/zh-captures/jeu-83-gameplay.webp",
     "imageAlt": "游戏截图：两倍神殿",
     "sourceId": "jeu-83"
   },
@@ -261,17 +777,18 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
-    "groupName": "心算",
+    "groupName": "口算",
     "skill": "divisions-2-3-4-5-10",
     "skillName": "计算准确的师数",
     "slug": "divisions-galactiques",
     "objective": "精确的分数乘以2、3、4、5和10,并迅速作出反应。",
     "short": "六层 更快的气泡和太空音乐 在船上。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-82.webp",
+    "thumb": "/assets/zh-captures/jeu-82-gameplay.webp",
     "imageAlt": "游戏截图：银河除法",
     "sourceId": "jeu-82"
   },
@@ -286,17 +803,18 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
-    "groupName": "心算",
+    "groupName": "口算",
     "skill": "tables-2-3-4-5-10",
     "skillName": "记住乘法表格",
     "slug": "tables-enchantees",
     "objective": "记住乘数表2、3、4、5和10,并迅速响应。",
     "short": "六层,气泡更快 和软音乐在一个魔法森林。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
+    "thumb": "/assets/zh-captures/jeu-81-gameplay.webp",
     "imageAlt": "游戏截图：魔法乘法表",
     "sourceId": "jeu-81"
   },
@@ -311,17 +829,18 @@
     "category": "calcul",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "group": "mental",
-    "groupName": "心算",
+    "groupName": "口算",
     "skill": "ajouter-soustraire-9-19",
     "skillName": "添加和减去 9 完成的数",
     "slug": "bulles-de-sorcellerie",
     "objective": "使用下面的10来加上或减去9、19、29、39或49。",
     "short": "两种水平,三种模式和动画吸烟药丸,计算为9、19、29、39和49。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-80.webp",
+    "thumb": "/assets/zh-captures/jeu-80-gameplay.webp",
     "imageAlt": "游戏截图：魔法泡泡 — 加减9、19……",
     "sourceId": "jeu-80"
   },
@@ -336,6 +855,7 @@
     "category": "geometrie",
     "level": "CE1",
     "levels": [
+      "CP",
       "CE1"
     ],
     "subject": "Mathématiques",
@@ -346,7 +866,7 @@
     "slug": "solides-autour-de-nous",
     "objective": "在日常物体中识别固体。",
     "short": "需要观测54个物体,以识别立方体、直铺、金字塔、球、圆柱和锥形。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-79.webp",
+    "thumb": "/assets/zh-captures/jeu-79-gameplay.webp",
     "imageAlt": "游戏截图：身边的立体图形",
     "sourceId": "jeu-79"
   },
@@ -361,6 +881,7 @@
     "category": "geometrie",
     "level": "CE1",
     "levels": [
+      "CP",
       "CE1"
     ],
     "subject": "Mathématiques",
@@ -371,7 +892,7 @@
     "slug": "formes-autour-de-nous",
     "objective": "识别日常物体中的几何形状 。",
     "short": "需观察的36个对象,以辨别正方形、矩形、圆和三角形。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-78.webp",
+    "thumb": "/assets/zh-captures/jeu-78-gameplay.webp",
     "imageAlt": "游戏截图：身边的平面图形",
     "sourceId": "jeu-78"
   },
@@ -398,7 +919,7 @@
     "short": "根据其形状按图形颜色显示数字,并避免捕捉图。",
     "imageAlt": "游戏截图：几何 CE1 — 给图形涂色",
     "sourceId": "jeu-77",
-    "thumb": ""
+    "thumb": "/assets/zh-captures/jeu-77-gameplay.webp"
   },
   {
     "title": "计算泡泡 — 心算 CE2",
@@ -418,12 +939,12 @@
     "path": "/zh/games/calcul-mental-ce2-calcul-pop/?v=20261028-zh-motion",
     "objective": "调动表格、补充表格、翻番表格和减半表格,并选择加价和减值战略。",
     "skillName": "不同的心理计算",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
       "CE2"
     ],
     "short": "30个心理计算任务,以你自己的速度或在3分钟内进行,附有提示和纠正。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-76.webp",
+    "thumb": "/assets/zh-captures/jeu-76-gameplay.webp",
     "sourceId": "jeu-76"
   },
   {
@@ -444,12 +965,12 @@
     "path": "/zh/games/bulles-en-duo-comparer-les-nombres/?v=20261028-zh-motion",
     "objective": "比较两个数字并识别最大数字。",
     "skillName": "对比数字",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "比较两个数字并识别最大数字。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-1.webp",
+    "thumb": "/assets/zh-captures/jeu-1-gameplay.webp",
     "sourceId": "jeu-1"
   },
   {
@@ -470,12 +991,13 @@
     "path": "/zh/games/bulles-de-corail-pairs-et-impairs/?v=20261028-zh-motion",
     "objective": "识别同侪数字和奇数。",
     "skillName": "平和与赔率",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "识别同侪数字和奇数。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-2.webp",
+    "thumb": "/assets/zh-captures/jeu-2-gameplay.webp",
     "sourceId": "jeu-2"
   },
   {
@@ -496,12 +1018,13 @@
     "path": "/zh/games/lile-mysterieuse-soustractions/?v=20261028-zh-motion",
     "objective": "通过删除数量来查找结果 。",
     "skillName": "心理减减",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "通过删除数量来查找结果 。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-3.webp",
+    "thumb": "/assets/zh-captures/jeu-3-gameplay.webp",
     "sourceId": "jeu-3"
   },
   {
@@ -522,12 +1045,13 @@
     "path": "/zh/games/le-tour-du-monde-en-80-jours-complements-a-1-000/?v=20261028-zh-motion",
     "objective": "找到失踪的号码 达到10,100或1000",
     "skillName": "补编",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "找到失踪的号码 达到10,100或1000",
-    "thumb": "/assets/catalogue-v2/captures/jeu-4.webp",
+    "thumb": "/assets/zh-captures/jeu-4-gameplay.webp",
     "sourceId": "jeu-4"
   },
   {
@@ -548,12 +1072,13 @@
     "path": "/zh/games/mission-nautilus-complements-a-100/?v=20261028-zh-motion",
     "objective": "找到失踪的号码 达到10,100或1000",
     "skillName": "补编",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "找到失踪的号码 达到10,100或1000",
-    "thumb": "/assets/catalogue-v2/captures/jeu-5.webp",
+    "thumb": "/assets/zh-captures/jeu-5-gameplay.webp",
     "sourceId": "jeu-5"
   },
   {
@@ -574,12 +1099,14 @@
     "path": "/zh/games/voyage-au-centre-de-la-terre-les-presque-doubles/?v=20261028-zh-motion",
     "objective": "使用双倍来更容易计算 。",
     "skillName": "双倍,几乎加倍",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "使用双倍来更容易计算 。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-6.webp",
+    "thumb": "/assets/zh-captures/jeu-6-gameplay.webp",
     "sourceId": "jeu-6"
   },
   {
@@ -600,12 +1127,14 @@
     "path": "/zh/games/mission-mars-additions-de-11-a-19/?v=20261028-zh-motion",
     "objective": "使用已知的结果计算心理添加。",
     "skillName": "精神添加",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "使用已知的结果计算心理添加。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-7.webp",
+    "thumb": "/assets/zh-captures/jeu-7-gameplay.webp",
     "sourceId": "jeu-7"
   },
   {
@@ -626,12 +1155,14 @@
     "path": "/zh/games/mission-abysses-additions-de-11-a-19/?v=20261028-zh-motion",
     "objective": "使用已知的结果计算心理添加。",
     "skillName": "精神添加",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "使用已知的结果计算心理添加。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-8.webp",
+    "thumb": "/assets/zh-captures/jeu-8-gameplay.webp",
     "sourceId": "jeu-8"
   },
   {
@@ -652,12 +1183,12 @@
     "path": "/zh/games/happy-halloween-complements-a-10/?v=20261028-zh-motion",
     "objective": "找到失踪的号码 达到10,100或1000",
     "skillName": "补编",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
       "CP"
     ],
     "short": "找到失踪的号码 达到10,100或1000",
-    "thumb": "/assets/catalogue-v2/captures/jeu-9.webp",
+    "thumb": "/assets/zh-captures/jeu-9-gameplay.webp",
     "sourceId": "jeu-9"
   },
   {
@@ -678,12 +1209,13 @@
     "path": "/zh/games/happy-halloween-complements-a-100/?v=20261028-zh-motion",
     "objective": "找到失踪的号码 达到10,100或1000",
     "skillName": "补编",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "找到失踪的号码 达到10,100或1000",
-    "thumb": "/assets/catalogue-v2/captures/jeu-10.webp",
+    "thumb": "/assets/zh-captures/jeu-10-gameplay.webp",
     "sourceId": "jeu-10"
   },
   {
@@ -704,12 +1236,13 @@
     "path": "/zh/games/happy-halloween-complements-a-1-000/?v=20261028-zh-motion",
     "objective": "找到失踪的号码 达到10,100或1000",
     "skillName": "补编",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "找到失踪的号码 达到10,100或1000",
-    "thumb": "/assets/catalogue-v2/captures/jeu-11.webp",
+    "thumb": "/assets/zh-captures/jeu-11-gameplay.webp",
     "sourceId": "jeu-11"
   },
   {
@@ -730,12 +1263,12 @@
     "path": "/zh/games/complements-a-10-la-course-de-la-sorciere/?v=20261028-zh-motion",
     "objective": "找到失踪的号码 达到10,100或1000",
     "skillName": "补编",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
       "CP"
     ],
     "short": "找到失踪的号码 达到10,100或1000",
-    "thumb": "/assets/catalogue-v2/captures/jeu-12.webp",
+    "thumb": "/assets/zh-captures/jeu-12-gameplay.webp",
     "sourceId": "jeu-12"
   },
   {
@@ -756,12 +1289,13 @@
     "path": "/zh/games/complements-a-100-la-course-de-la-sorciere/?v=20261028-zh-motion",
     "objective": "找到失踪的号码 达到10,100或1000",
     "skillName": "补编",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "找到失踪的号码 达到10,100或1000",
-    "thumb": "/assets/catalogue-v2/captures/jeu-13.webp",
+    "thumb": "/assets/zh-captures/jeu-13-gameplay.webp",
     "sourceId": "jeu-13"
   },
   {
@@ -782,12 +1316,13 @@
     "path": "/zh/games/complements-a-1-000-la-course-de-la-sorciere/?v=20261028-zh-motion",
     "objective": "找到失踪的号码 达到10,100或1000",
     "skillName": "补编",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "找到失踪的号码 达到10,100或1000",
-    "thumb": "/assets/catalogue-v2/captures/jeu-14.webp",
+    "thumb": "/assets/zh-captures/jeu-14-gameplay.webp",
     "sourceId": "jeu-14"
   },
   {
@@ -798,23 +1333,23 @@
     "image": "https://bleja972.github.io/assets/capture-complements1_a_10.webp",
     "imageAlt": "游戏截图：蜘蛛挑战 — 凑满10",
     "category": "calculs",
-    "level": "CP",
+    "level": "CE1",
     "subject": "Mathématiques",
     "id": "jeu-15",
-    "new": false,
+    "new": true,
     "skill": "complements",
     "group": "mental",
     "slug": "complements-a-10-le-defi-de-laraignee",
     "path": "/zh/games/complements-a-10-le-defi-de-laraignee/?v=20261028-zh-motion",
     "objective": "找到失踪的号码 达到10,100或1000",
     "skillName": "补编",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
       "CP",
       "CE1"
     ],
     "short": "找到失踪的号码 达到10,100或1000",
-    "thumb": "/assets/catalogue-v2/captures/jeu-15.webp",
+    "thumb": "/assets/zh-captures/jeu-15-gameplay.webp",
     "sourceId": "jeu-15"
   },
   {
@@ -828,19 +1363,19 @@
     "level": "CE1",
     "subject": "Mathématiques",
     "id": "jeu-16",
-    "new": false,
+    "new": true,
     "skill": "complements",
     "group": "mental",
     "slug": "complements-a-100-le-defi-de-laraignee",
     "path": "/zh/games/complements-a-100-le-defi-de-laraignee/?v=20261028-zh-motion",
     "objective": "找到失踪的号码 达到10,100或1000",
     "skillName": "补编",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
       "CE1"
     ],
     "short": "找到失踪的号码 达到10,100或1000",
-    "thumb": "/assets/catalogue-v2/captures/jeu-16.webp",
+    "thumb": "/assets/zh-captures/jeu-16-gameplay.webp",
     "sourceId": "jeu-16"
   },
   {
@@ -854,19 +1389,19 @@
     "level": "CE1",
     "subject": "Mathématiques",
     "id": "jeu-17",
-    "new": false,
+    "new": true,
     "skill": "complements",
     "group": "mental",
     "slug": "complements-a-1-000-le-defi-de-laraignee",
     "path": "/zh/games/complements-a-1-000-le-defi-de-laraignee/?v=20261028-zh-motion",
     "objective": "找到失踪的号码 达到10,100或1000",
     "skillName": "补编",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
       "CE1"
     ],
     "short": "找到失踪的号码 达到10,100或1000",
-    "thumb": "/assets/catalogue-v2/captures/jeu-17.webp",
+    "thumb": "/assets/zh-captures/jeu-17-gameplay.webp",
     "sourceId": "jeu-17"
   },
   {
@@ -886,12 +1421,12 @@
     "path": "/zh/games/je-revois-les-nombres-jusqua-1000/?v=20261028-zh-motion",
     "objective": "读、写、比较和分解数字最高可达1000个。",
     "skillName": "校验数字",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "读、写、比较和分解数字最高可达1000个。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-18.webp",
+    "thumb": "/assets/zh-captures/jeu-18-gameplay.webp",
     "imageAlt": "游戏截图：复习1000以内的数",
     "sourceId": "jeu-18"
   },
@@ -914,10 +1449,11 @@
     "skillName": "解决问题",
     "groupName": "应用题",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "了解一个情况,选择一个计算来解决这个问题。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-19.webp",
+    "thumb": "/assets/zh-captures/jeu-19-gameplay.webp",
     "imageAlt": "游戏截图：应用题 — 第1阶段",
     "sourceId": "jeu-19"
   },
@@ -937,14 +1473,58 @@
     "path": "/zh/games/calcul-mental-cp/?v=20261028-zh-motion",
     "objective": "在若干心理计算程序方面进行培训。",
     "skillName": "不同的心理计算",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
       "CP"
     ],
     "short": "在若干心理计算程序方面进行培训。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-28.webp",
+    "thumb": "/assets/zh-captures/jeu-28-gameplay.webp",
     "imageAlt": "游戏截图：心算 CP",
     "sourceId": "jeu-28"
+  },
+  {
+    "id": "calcul-mental-cp-neon-un-calcul",
+    "sourceId": "calcul-mental-cp-neon-un-calcul",
+    "title": "霓虹口算：每次一道题",
+    "url": "/jeux/calcul-mental-cp-neon/",
+    "path": "/jeux/calcul-mental-cp-neon/",
+    "description": "打开法语原版，练习口算。",
+    "skill": "calcul-mental",
+    "skillName": "口算",
+    "contentLanguage": "fr",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "group": "mental",
+    "groupName": "口算",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/calcul-mental-cp-neon-un-calcul-gameplay.webp",
+    "imageAlt": "游戏截图：霓虹口算：每次一道题"
+  },
+  {
+    "id": "calcul-mental-cp-pygame",
+    "sourceId": "calcul-mental-cp-pygame",
+    "title": "口算任务：街机版",
+    "url": "/jeux/calcul-mental-cp-pygame/",
+    "path": "/jeux/calcul-mental-cp-pygame/",
+    "description": "打开法语原版，练习口算。",
+    "skill": "calcul-mental",
+    "skillName": "口算",
+    "contentLanguage": "fr",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "group": "mental",
+    "groupName": "口算",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/calcul-mental-cp-pygame-gameplay.webp",
+    "imageAlt": "游戏截图：口算任务：街机版"
   },
   {
     "title": "限时计算 CE2 — 20个挑战",
@@ -962,12 +1542,12 @@
     "path": "/zh/games/chronomaths-ce2-20-defis/?v=20261028-zh-motion",
     "objective": "在若干心理计算程序方面进行培训。",
     "skillName": "不同的心理计算",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
       "CE2"
     ],
     "short": "在若干心理计算程序方面进行培训。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-29.webp",
+    "thumb": "/assets/zh-captures/jeu-29-gameplay.webp",
     "imageAlt": "游戏截图：限时计算 CE2 — 20个挑战",
     "sourceId": "jeu-29"
   },
@@ -992,7 +1572,7 @@
       "CE2"
     ],
     "short": "了解一个情况,选择一个计算来解决这个问题。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-30.webp",
+    "thumb": "/assets/zh-captures/jeu-30-gameplay.webp",
     "imageAlt": "游戏截图：应用题练习 CE2",
     "sourceId": "jeu-30"
   },
@@ -1013,12 +1593,12 @@
     "path": "/zh/games/denombrer-une-collection/?v=20261028-zh-motion",
     "objective": "组织一个收藏以了解它包含多少元素 。",
     "skillName": "计数",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "组织一个收藏以了解它包含多少元素 。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-31.webp",
+    "thumb": "/assets/zh-captures/jeu-31-gameplay.webp",
     "imageAlt": "游戏截图：数一数物品",
     "sourceId": "jeu-31"
   },
@@ -1039,12 +1619,12 @@
     "path": "/zh/games/comparer-deux-nombres/?v=20261028-zh-motion",
     "objective": "比较两个数字并识别最大数字。",
     "skillName": "对比数字",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "比较两个数字并识别最大数字。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-32.webp",
+    "thumb": "/assets/zh-captures/jeu-32-gameplay.webp",
     "imageAlt": "游戏截图：比较两个数",
     "sourceId": "jeu-32"
   },
@@ -1065,12 +1645,12 @@
     "path": "/zh/games/ranger-des-nombres/?v=20261028-zh-motion",
     "objective": "从最小到最大的顺序编号。",
     "skillName": "排序数",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "从最小到最大的顺序编号。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-33.webp",
+    "thumb": "/assets/zh-captures/jeu-33-gameplay.webp",
     "imageAlt": "游戏截图：给数字排序",
     "sourceId": "jeu-33"
   },
@@ -1091,12 +1671,12 @@
     "path": "/zh/games/lire-et-ecrire-les-nombres/?v=20261028-zh-motion",
     "objective": "a 相关数字和信函写法。",
     "skillName": "读和写数字",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "a 相关数字和信函写法。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-34.webp",
+    "thumb": "/assets/zh-captures/jeu-34-gameplay.webp",
     "imageAlt": "游戏截图：读写数字",
     "sourceId": "jeu-34"
   },
@@ -1117,12 +1697,12 @@
     "path": "/zh/games/dictee-de-nombres/?v=20261028-zh-motion",
     "objective": "监听数字并写入数字。",
     "skillName": "写下听到的号码",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "监听数字并写入数字。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-35.webp",
+    "thumb": "/assets/zh-captures/jeu-35-gameplay.webp",
     "imageAlt": "游戏截图：数字听写",
     "sourceId": "jeu-35"
   },
@@ -1143,12 +1723,12 @@
     "path": "/zh/games/compter-de-plusieurs-facons/?v=20261028-zh-motion",
     "objective": "找到规则,追踪数字序列",
     "skillName": "数码套件",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "找到规则,追踪数字序列",
-    "thumb": "/assets/catalogue-v2/captures/jeu-36.webp",
+    "thumb": "/assets/zh-captures/jeu-36-gameplay.webp",
     "imageAlt": "游戏截图：用不同方法数数",
     "sourceId": "jeu-36"
   },
@@ -1169,12 +1749,12 @@
     "path": "/zh/games/composer-et-decomposer/?v=20261028-zh-motion",
     "objective": "链接成百上千个 数以万计的单位 组成或拆分一个数字",
     "skillName": "合成和分解",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "链接成百上千个 数以万计的单位 组成或拆分一个数字",
-    "thumb": "/assets/catalogue-v2/captures/jeu-37.webp",
+    "thumb": "/assets/zh-captures/jeu-37-gameplay.webp",
     "imageAlt": "游戏截图：数的组成与分解",
     "sourceId": "jeu-37"
   },
@@ -1195,12 +1775,12 @@
     "path": "/zh/games/reconnaitre-les-nombres-pairs-et-impairs/?v=20261028-zh-motion",
     "objective": "识别同侪数字和奇数。",
     "skillName": "平和与赔率",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "识别同侪数字和奇数。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-38.webp",
+    "thumb": "/assets/zh-captures/jeu-38-gameplay.webp",
     "imageAlt": "游戏截图：辨认奇数与偶数",
     "sourceId": "jeu-38"
   },
@@ -1221,12 +1801,12 @@
     "path": "/zh/games/completer-des-suites/?v=20261028-zh-motion",
     "objective": "找到规则,追踪数字序列",
     "skillName": "数码套件",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "找到规则,追踪数字序列",
-    "thumb": "/assets/catalogue-v2/captures/jeu-39.webp",
+    "thumb": "/assets/zh-captures/jeu-39-gameplay.webp",
     "imageAlt": "游戏截图：补全数列",
     "sourceId": "jeu-39"
   },
@@ -1247,12 +1827,12 @@
     "path": "/zh/games/la-droite-graduee-mystere/?v=20261028-zh-motion",
     "objective": "确定一个数字在毕业线上的位置。",
     "skillName": "直接毕业",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "确定一个数字在毕业线上的位置。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-40.webp",
+    "thumb": "/assets/zh-captures/jeu-40-gameplay.webp",
     "imageAlt": "游戏截图：神秘数轴",
     "sourceId": "jeu-40"
   },
@@ -1273,12 +1853,12 @@
     "path": "/zh/games/le-defi-de-la-droite-graduee/?v=20261028-zh-motion",
     "objective": "确定一个数字在毕业线上的位置。",
     "skillName": "直接毕业",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "确定一个数字在毕业线上的位置。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-41.webp",
+    "thumb": "/assets/zh-captures/jeu-41-gameplay.webp",
     "imageAlt": "游戏截图：数轴挑战",
     "sourceId": "jeu-41"
   },
@@ -1299,12 +1879,12 @@
     "path": "/zh/games/decomposer-un-nombre/?v=20261028-zh-motion",
     "objective": "链接成百上千个 数以万计的单位 组成或拆分一个数字",
     "skillName": "合成和分解",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "链接成百上千个 数以万计的单位 组成或拆分一个数字",
-    "thumb": "/assets/catalogue-v2/captures/jeu-42.webp",
+    "thumb": "/assets/zh-captures/jeu-42-gameplay.webp",
     "imageAlt": "游戏截图：分解一个数",
     "sourceId": "jeu-42"
   },
@@ -1325,12 +1905,12 @@
     "path": "/zh/games/recomposer-un-nombre/?v=20261028-zh-motion",
     "objective": "链接成百上千个 数以万计的单位 组成或拆分一个数字",
     "skillName": "合成和分解",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "链接成百上千个 数以万计的单位 组成或拆分一个数字",
-    "thumb": "/assets/catalogue-v2/captures/jeu-43.webp",
+    "thumb": "/assets/zh-captures/jeu-43-gameplay.webp",
     "imageAlt": "游戏截图：组成一个数",
     "sourceId": "jeu-43"
   },
@@ -1351,12 +1931,12 @@
     "path": "/zh/games/suites-de-nombres/?v=20261028-zh-motion",
     "objective": "找到规则,追踪数字序列",
     "skillName": "数码套件",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "找到规则,追踪数字序列",
-    "thumb": "/assets/catalogue-v2/captures/jeu-44.webp",
+    "thumb": "/assets/zh-captures/jeu-44-gameplay.webp",
     "imageAlt": "游戏截图：数列",
     "sourceId": "jeu-44"
   },
@@ -1377,12 +1957,12 @@
     "path": "/zh/games/les-representations-des-nombres/?v=20261028-zh-motion",
     "objective": "承认相同数字的不同表达方式。",
     "skillName": "代表人数",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "承认相同数字的不同表达方式。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-45.webp",
+    "thumb": "/assets/zh-captures/jeu-45-gameplay.webp",
     "imageAlt": "游戏截图：数的不同表示方法",
     "sourceId": "jeu-45"
   },
@@ -1403,12 +1983,12 @@
     "path": "/zh/games/ordonner-les-nombres/?v=20261028-zh-motion",
     "objective": "从最小到最大的顺序编号。",
     "skillName": "排序数",
-    "groupName": "数与计数",
+    "groupName": "数与数位",
     "levels": [
       "CE1"
     ],
     "short": "从最小到最大的顺序编号。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-46.webp",
+    "thumb": "/assets/zh-captures/jeu-46-gameplay.webp",
     "imageAlt": "游戏截图：数字排列",
     "sourceId": "jeu-46"
   },
@@ -1428,12 +2008,13 @@
     "path": "/zh/games/chronomaths-ce1-20-defis/?v=20261028-zh-motion",
     "objective": "在若干心理计算程序方面进行培训。",
     "skillName": "不同的心理计算",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "在若干心理计算程序方面进行培训。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-47.webp",
+    "thumb": "/assets/zh-captures/jeu-47-gameplay.webp",
     "imageAlt": "游戏截图：限时计算 CE1 — 20个挑战",
     "sourceId": "jeu-47"
   },
@@ -1455,10 +2036,11 @@
     "skillName": "减减",
     "groupName": "竖式计算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "使用数百、几十和单位来减法。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-48.webp",
+    "thumb": "/assets/zh-captures/jeu-48-gameplay.webp",
     "imageAlt": "游戏截图：分解退位减法",
     "sourceId": "jeu-48"
   },
@@ -1480,12 +2062,35 @@
     "skillName": "减减",
     "groupName": "竖式计算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "使用数百、几十和单位来减法。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-49.webp",
+    "thumb": "/assets/zh-captures/jeu-49-gameplay.webp",
     "imageAlt": "游戏截图：用计数积木做减法",
     "sourceId": "jeu-49"
+  },
+  {
+    "id": "soustractions-sans-echange-en-orbite",
+    "sourceId": "soustractions-sans-echange-en-orbite",
+    "title": "轨道减法：不退位",
+    "url": "https://bleja972.github.io/jeux/soustractions-sans-echange-en-orbite/",
+    "path": "https://bleja972.github.io/jeux/soustractions-sans-echange-en-orbite/",
+    "description": "打开法语原版，练习竖式计算。",
+    "skill": "soustractions-posees",
+    "skillName": "竖式计算",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "group": "pose",
+    "groupName": "竖式计算",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/soustractions-sans-echange-en-orbite-gameplay.webp",
+    "imageAlt": "游戏截图：轨道减法：不退位"
   },
   {
     "title": "不进位竖式加法",
@@ -1506,10 +2111,11 @@
     "skillName": "表d 补充表格",
     "groupName": "竖式计算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "添加两个或三个位数,不交换。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-50.webp",
+    "thumb": "/assets/zh-captures/jeu-50-gameplay.webp",
     "imageAlt": "游戏截图：不进位竖式加法",
     "sourceId": "jeu-50"
   },
@@ -1532,10 +2138,11 @@
     "skillName": "表d 补充表格",
     "groupName": "竖式计算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "用一两个交换器来理解和计算添加的内容。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-51.webp",
+    "thumb": "/assets/zh-captures/jeu-51-gameplay.webp",
     "imageAlt": "游戏截图：进位竖式加法",
     "sourceId": "jeu-51"
   },
@@ -1557,12 +2164,79 @@
     "skillName": "表d 补充表格",
     "groupName": "竖式计算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "对齐列并计算增加的层 。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-52.webp",
+    "thumb": "/assets/zh-captures/jeu-52-gameplay.webp",
     "imageAlt": "游戏截图：换算加法 — 3D计数片",
     "sourceId": "jeu-52"
+  },
+  {
+    "id": "jeu-106",
+    "sourceId": "jeu-106",
+    "title": "进位加法：立体积木",
+    "url": "https://bleja972.github.io/jeux/additions-avec-echanges-blocs-3d/?v=calcul-en-ligne-niveau-2",
+    "path": "https://bleja972.github.io/jeux/additions-avec-echanges-blocs-3d/?v=calcul-en-ligne-niveau-2",
+    "description": "打开法语原版，练习竖式计算。",
+    "skill": "additions-posees",
+    "skillName": "竖式计算",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "group": "pose",
+    "groupName": "竖式计算",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-106-gameplay.webp",
+    "imageAlt": "游戏截图：进位加法：立体积木"
+  },
+  {
+    "id": "jeu-108",
+    "sourceId": "jeu-108",
+    "title": "进位加法：立体积木（三年级）",
+    "url": "https://bleja972.github.io/jeux/additions-avec-echanges-blocs-3d-ce2/",
+    "path": "https://bleja972.github.io/jeux/additions-avec-echanges-blocs-3d-ce2/",
+    "description": "打开法语原版，练习竖式计算。",
+    "skill": "additions-posees",
+    "skillName": "竖式计算",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE2"
+    ],
+    "level": "CE2",
+    "group": "pose",
+    "groupName": "竖式计算",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-108-gameplay.webp",
+    "imageAlt": "游戏截图：进位加法：立体积木（三年级）"
+  },
+  {
+    "id": "jeu-107",
+    "sourceId": "jeu-107",
+    "title": "进位加法：立体积木（一年级）",
+    "url": "https://bleja972.github.io/jeux/additions-avec-echanges-blocs-3d-cp/",
+    "path": "https://bleja972.github.io/jeux/additions-avec-echanges-blocs-3d-cp/",
+    "description": "打开法语原版，练习竖式计算。",
+    "skill": "additions-posees",
+    "skillName": "竖式计算",
+    "contentLanguage": "fr",
+    "levels": [
+      "CP"
+    ],
+    "level": "CP",
+    "group": "pose",
+    "groupName": "竖式计算",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-107-gameplay.webp",
+    "imageAlt": "游戏截图：进位加法：立体积木（一年级）"
   },
   {
     "title": "凑十加法",
@@ -1581,12 +2255,14 @@
     "path": "/zh/games/additions-avec-passage-par-10/?v=20261028-zh-motion",
     "objective": "使用已知的结果计算心理添加。",
     "skillName": "精神添加",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "使用已知的结果计算心理添加。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-53.webp",
+    "thumb": "/assets/zh-captures/jeu-53-gameplay.webp",
     "imageAlt": "游戏截图：凑十加法",
     "sourceId": "jeu-53"
   },
@@ -1607,12 +2283,14 @@
     "path": "/zh/games/soustraire-un-nombre-a-10/?v=20261028-zh-motion",
     "objective": "通过删除数量来查找结果 。",
     "skillName": "心理减减",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "通过删除数量来查找结果 。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-54.webp",
+    "thumb": "/assets/zh-captures/jeu-54-gameplay.webp",
     "imageAlt": "游戏截图：从10中减去一个数",
     "sourceId": "jeu-54"
   },
@@ -1633,12 +2311,14 @@
     "path": "/zh/games/les-doubles/?v=20261028-zh-motion",
     "objective": "使用双倍来更容易计算 。",
     "skillName": "双倍,几乎加倍",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "使用双倍来更容易计算 。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-55.webp",
+    "thumb": "/assets/zh-captures/jeu-55-gameplay.webp",
     "imageAlt": "游戏截图：两倍",
     "sourceId": "jeu-55"
   },
@@ -1659,12 +2339,14 @@
     "path": "/zh/games/les-presque-doubles/?v=20261028-zh-motion",
     "objective": "使用双倍来更容易计算 。",
     "skillName": "双倍,几乎加倍",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "使用双倍来更容易计算 。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-56.webp",
+    "thumb": "/assets/zh-captures/jeu-56-gameplay.webp",
     "imageAlt": "游戏截图：接近两倍的加法",
     "sourceId": "jeu-56"
   },
@@ -1685,12 +2367,14 @@
     "path": "/zh/games/les-complements-a-10/?v=20261028-zh-motion",
     "objective": "找到失踪的号码 达到10,100或1000",
     "skillName": "补编",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "找到失踪的号码 达到10,100或1000",
-    "thumb": "/assets/catalogue-v2/captures/jeu-57.webp",
+    "thumb": "/assets/zh-captures/jeu-57-gameplay.webp",
     "imageAlt": "游戏截图：凑满10",
     "sourceId": "jeu-57"
   },
@@ -1711,12 +2395,13 @@
     "path": "/zh/games/ajouter-et-soustraire-des-dizaines/?v=20261028-zh-motion",
     "objective": "通过删除数量来查找结果 。",
     "skillName": "心理减减",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "通过删除数量来查找结果 。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-58.webp",
+    "thumb": "/assets/zh-captures/jeu-58-gameplay.webp",
     "imageAlt": "游戏截图：整十数加减法",
     "sourceId": "jeu-58"
   },
@@ -1737,12 +2422,14 @@
     "path": "/zh/games/les-petites-additions/?v=20261028-zh-motion",
     "objective": "使用已知的结果计算心理添加。",
     "skillName": "精神添加",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "使用已知的结果计算心理添加。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-59.webp",
+    "thumb": "/assets/zh-captures/jeu-59-gameplay.webp",
     "imageAlt": "游戏截图：简单加法",
     "sourceId": "jeu-59"
   },
@@ -1763,12 +2450,13 @@
     "path": "/zh/games/calcul-mental-periode-1/?v=20261028-zh-motion",
     "objective": "在若干心理计算程序方面进行培训。",
     "skillName": "不同的心理计算",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "在若干心理计算程序方面进行培训。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-60.webp",
+    "thumb": "/assets/zh-captures/jeu-60-gameplay.webp",
     "imageAlt": "游戏截图：心算 — 第1阶段",
     "sourceId": "jeu-60"
   },
@@ -1789,12 +2477,13 @@
     "path": "/zh/games/les-poissons-des-nombres/?v=20261028-zh-motion",
     "objective": "在若干心理计算程序方面进行培训。",
     "skillName": "不同的心理计算",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "在若干心理计算程序方面进行培训。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-61.webp",
+    "thumb": "/assets/zh-captures/jeu-61-gameplay.webp",
     "imageAlt": "游戏截图：数字小鱼",
     "sourceId": "jeu-61"
   },
@@ -1815,12 +2504,14 @@
     "path": "/zh/games/la-course-des-calculs/?v=20261028-zh-motion",
     "objective": "在若干心理计算程序方面进行培训。",
     "skillName": "不同的心理计算",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CP",
+      "CE1",
+      "CE2"
     ],
     "short": "在若干心理计算程序方面进行培训。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-62.webp",
+    "thumb": "/assets/zh-captures/jeu-62-gameplay.webp",
     "imageAlt": "游戏截图：计算赛跑",
     "sourceId": "jeu-62"
   },
@@ -1841,12 +2532,13 @@
     "path": "/zh/games/complements-a-10-100-et-1-000/?v=20261028-zh-motion",
     "objective": "找到失踪的号码 达到10,100或1000",
     "skillName": "补编",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "找到失踪的号码 达到10,100或1000",
-    "thumb": "/assets/catalogue-v2/captures/jeu-63.webp",
+    "thumb": "/assets/zh-captures/jeu-63-gameplay.webp",
     "imageAlt": "游戏截图：凑满10、100和1000",
     "sourceId": "jeu-63"
   },
@@ -1867,12 +2559,13 @@
     "path": "/zh/games/calcul-mental-periode-2/?v=20261028-zh-motion",
     "objective": "在若干心理计算程序方面进行培训。",
     "skillName": "不同的心理计算",
-    "groupName": "心算",
+    "groupName": "口算",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "short": "在若干心理计算程序方面进行培训。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-64.webp",
+    "thumb": "/assets/zh-captures/jeu-64-gameplay.webp",
     "imageAlt": "游戏截图：心算 — 第2阶段",
     "sourceId": "jeu-64"
   },
@@ -1895,10 +2588,11 @@
     "skillName": "解决问题",
     "groupName": "应用题",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "了解一个情况,选择一个计算来解决这个问题。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-65.webp",
+    "thumb": "/assets/zh-captures/jeu-65-gameplay.webp",
     "imageAlt": "游戏截图：求总数",
     "sourceId": "jeu-65"
   },
@@ -1921,10 +2615,11 @@
     "skillName": "解决问题",
     "groupName": "应用题",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "了解一个情况,选择一个计算来解决这个问题。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-66.webp",
+    "thumb": "/assets/zh-captures/jeu-66-gameplay.webp",
     "imageAlt": "游戏截图：求其中一部分",
     "sourceId": "jeu-66"
   },
@@ -1947,10 +2642,11 @@
     "skillName": "解决问题",
     "groupName": "应用题",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "了解一个情况,选择一个计算来解决这个问题。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-67.webp",
+    "thumb": "/assets/zh-captures/jeu-67-gameplay.webp",
     "imageAlt": "游戏截图：增加、获得、前进",
     "sourceId": "jeu-67"
   },
@@ -1973,10 +2669,11 @@
     "skillName": "解决问题",
     "groupName": "应用题",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "了解一个情况,选择一个计算来解决这个问题。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-68.webp",
+    "thumb": "/assets/zh-captures/jeu-68-gameplay.webp",
     "imageAlt": "游戏截图：减少、失去、后退",
     "sourceId": "jeu-68"
   },
@@ -1999,10 +2696,11 @@
     "skillName": "解决问题",
     "groupName": "应用题",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "了解一个情况,选择一个计算来解决这个问题。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-69.webp",
+    "thumb": "/assets/zh-captures/jeu-69-gameplay.webp",
     "imageAlt": "游戏截图：两步解决问题",
     "sourceId": "jeu-69"
   },
@@ -2025,10 +2723,11 @@
     "skillName": "解决问题",
     "groupName": "应用题",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "了解一个情况,选择一个计算来解决这个问题。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-70.webp",
+    "thumb": "/assets/zh-captures/jeu-70-gameplay.webp",
     "imageAlt": "游戏截图：比较两个数量",
     "sourceId": "jeu-70"
   },
@@ -2051,10 +2750,11 @@
     "skillName": "解决问题",
     "groupName": "应用题",
     "levels": [
+      "CP",
       "CE1"
     ],
     "short": "了解一个情况,选择一个计算来解决这个问题。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-71.webp",
+    "thumb": "/assets/zh-captures/jeu-71-gameplay.webp",
     "imageAlt": "游戏截图：条形图应用题 — 第4组",
     "sourceId": "jeu-71"
   },
@@ -2080,8 +2780,30 @@
       "CE1"
     ],
     "short": "了解一个情况,选择一个计算来解决这个问题。",
-    "thumb": "/assets/catalogue-v2/captures/jeu-72.webp",
+    "thumb": "/assets/zh-captures/jeu-72-gameplay.webp",
     "imageAlt": "游戏截图：应用题 — 第2阶段",
     "sourceId": "jeu-72"
+  },
+  {
+    "id": "jeu-105",
+    "sourceId": "jeu-105",
+    "title": "太空飞船：不退位减法",
+    "url": "https://bleja972.github.io/jeux/soustractions-sans-echange-vaisseau-spatial/",
+    "path": "https://bleja972.github.io/jeux/soustractions-sans-echange-vaisseau-spatial/",
+    "description": "打开法语原版，练习竖式计算。",
+    "skill": "soustractions-posees",
+    "skillName": "竖式计算",
+    "contentLanguage": "fr",
+    "levels": [
+      "CE1"
+    ],
+    "level": "CE1",
+    "group": "pose",
+    "groupName": "竖式计算",
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/zh-captures/jeu-105-gameplay.webp",
+    "imageAlt": "游戏截图：太空飞船：不退位减法"
   }
 ]
