@@ -213,17 +213,24 @@ function spark(card) {
   if (reduceMotion.matches) return;
   const position = card.getBoundingClientRect();
   if (position.bottom < 0 || position.top > innerHeight) return;
-  for (let i = 0; i < 5; i++) {
-    const dot = element('i', 'spark');
-    dot.setAttribute('aria-hidden', 'true');
-    dot.style.left = position.left + position.width * (.2 + Math.random() * .6) + 'px';
-    dot.style.top = position.top + position.height / 2 + 'px';
-    dot.style.color = 'var(--ok)';
-    dot.style.background = 'currentColor';
-    dot.style.setProperty('--dx', (Math.random() * 120 - 60) + 'px');
-    dot.style.setProperty('--dy', (Math.random() * 80 - 65) + 'px');
-    document.body.append(dot);
-    setTimeout(() => dot.remove(), 620);
+  const fruits = ['🍎','🍊','🍋','🍉','🍇','🍒','🍍','🥝'];
+  const colors = ['#00eaff','#ff54cb','#b9ff42','#ffaf37','#a682ff'];
+  const count = 9;
+  const cx = position.left + position.width / 2;
+  const cy = position.top + position.height / 2;
+  for (let i=0;i<count;i++) {
+    const fruit = document.createElement('span');
+    fruit.className = 'pg-fruit';
+    fruit.textContent = fruits[(i + Math.floor(Math.random()*fruits.length)) % fruits.length];
+    fruit.setAttribute('aria-hidden','true');
+    fruit.style.left = cx + 'px';
+    fruit.style.top = cy + 'px';
+    fruit.style.setProperty('--fruit-glow',colors[i % colors.length]);
+    fruit.style.setProperty('--dx',(Math.random()*230-115).toFixed(1)+'px');
+    fruit.style.setProperty('--dy',(-65-Math.random()*150).toFixed(1)+'px');
+    fruit.style.setProperty('--spin',(Math.random()*140-70).toFixed(0)+'deg');
+    document.body.append(fruit);
+    setTimeout(()=>fruit.remove(),1300);
   }
 }
 
