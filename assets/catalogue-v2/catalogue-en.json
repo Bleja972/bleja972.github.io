@@ -18,7 +18,7 @@
     "new": true,
     "sourceId": "mission-fractions-ce1-revisions",
     "contentLanguage": "fr",
-    "thumb": "/assets/catalogue-v2/captures/Capture%20d'%C3%A9cran%202026-11-21%20142814.png",
+    "thumb": "/assets/en-captures/en-mission-fractions-ce1-revisions-live.webp",
     "imageAlt": "French gameplay screenshot of Fraction Mission — Review"
   },
   {
@@ -42,7 +42,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/en-captures/math-mission-grade4-booklet-1-gameplay.webp",
+    "thumb": "/assets/en-captures/en-mission-calcul-cm1-livret-1-live.webp",
     "imageAlt": "English gameplay screenshot of Math Mission — Grade 4 · Booklet 1",
     "sourceId": "mission-calcul-cm1-livret-1"
   },
@@ -67,7 +67,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/en-captures/math-mission-grade4-booklet-5-gameplay.webp",
+    "thumb": "/assets/en-captures/en-mission-calcul-cm1-livret-5-live.webp",
     "imageAlt": "English gameplay screenshot of Math Mission — Grade 4 · Booklet 5",
     "sourceId": "mission-calcul-cm1-livret-5"
   },
@@ -92,7 +92,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/en-captures/math-mission-grade4-booklet-4-gameplay.webp",
+    "thumb": "/assets/en-captures/en-mission-calcul-cm1-livret-4-live.webp",
     "imageAlt": "English gameplay screenshot of Math Mission — Grade 4 · Booklet 4",
     "sourceId": "mission-calcul-cm1-livret-4"
   },
@@ -117,7 +117,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/en-captures/math-mission-grade4-booklet-3-gameplay.webp",
+    "thumb": "/assets/en-captures/en-mission-calcul-cm1-livret-3-live.webp",
     "imageAlt": "English gameplay screenshot of Math Mission — Grade 4 · Booklet 3",
     "sourceId": "mission-calcul-cm1-livret-3"
   },
@@ -142,7 +142,7 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/en-captures/math-mission-grade4-booklet-2-gameplay.webp",
+    "thumb": "/assets/en-captures/en-mission-calcul-cm1-livret-2-live.webp",
     "imageAlt": "English gameplay screenshot of Math Mission — Grade 4 · Booklet 2",
     "sourceId": "mission-calcul-cm1-livret-2"
   },
@@ -165,7 +165,7 @@
     "new": true,
     "sourceId": "cartons-montessori-ce2",
     "contentLanguage": "fr",
-    "thumb": "/jeux/cartons-montessori-ce2/apercu.webp",
+    "thumb": "/assets/en-captures/en-cartons-montessori-ce2-live.webp",
     "imageAlt": "French gameplay screenshot of Numbers in Orbit — Montessori Cards"
   },
   {
@@ -187,7 +187,7 @@
     "new": true,
     "sourceId": "cartons-montessori-cp",
     "contentLanguage": "fr",
-    "thumb": "/jeux/cartons-montessori-cp/apercu.svg",
+    "thumb": "/assets/en-captures/en-cartons-montessori-cp-live.webp",
     "imageAlt": "French gameplay screenshot of Number Magic — Montessori Cards"
   },
   {
@@ -236,7 +236,7 @@
     "new": true,
     "sourceId": "ours-de-la-banquise",
     "contentLanguage": "fr",
-    "thumb": "/assets/images/bannieres/openai/ours-de-la-banquise.webp?v=bannieres-20261115",
+    "thumb": "/assets/en-captures/en-ours-de-la-banquise-live.webp",
     "imageAlt": "French gameplay screenshot of Ice Floe Bear"
   },
   {
@@ -258,7 +258,7 @@
     "new": true,
     "sourceId": "ours-de-la-banquise-neon",
     "contentLanguage": "fr",
-    "thumb": "/assets/catalogue-v2/captures/ours-de-la-banquise-neon.svg?v=robot-mobile-20261121",
+    "thumb": "/assets/en-captures/en-ours-de-la-banquise-neon-live.webp",
     "imageAlt": "French gameplay screenshot of Neon Mission — Crystal Robot"
   },
   {
@@ -493,7 +493,7 @@
     "new": true,
     "sourceId": "jeu-96",
     "contentLanguage": "fr",
-    "thumb": "/assets/catalogue-v2/captures/symetrie-mars-ce2.webp",
+    "thumb": "/assets/en-captures/en-jeu-96-live.webp",
     "imageAlt": "French gameplay screenshot of Mirror Martians — Symmetry"
   },
   {
@@ -540,7 +540,7 @@
     "new": true,
     "sourceId": "jeu-94",
     "contentLanguage": "fr",
-    "thumb": "/assets/catalogue-v2/captures/droite-t-rex-anime-cp.svg",
+    "thumb": "/assets/en-captures/en-jeu-94-live.webp",
     "imageAlt": "French gameplay screenshot of 42 Animated T-Rex Number Lines"
   },
   {
@@ -562,7 +562,7 @@
     "new": true,
     "sourceId": "jeu-93",
     "contentLanguage": "fr",
-    "thumb": "/assets/catalogue-v2/captures/droite-t-rex-cp.svg",
+    "thumb": "/assets/en-captures/en-jeu-93-live.webp",
     "imageAlt": "French gameplay screenshot of T-Rex Number Line"
   },
   {
@@ -627,7 +627,7 @@
     "weekly": false,
     "new": true,
     "sourceId": "jeu-90",
-    "thumb": "/assets/en-captures/chronomaths-galactiques-ce2-gameplay.webp",
+    "thumb": "/assets/en-captures/en-jeu-90-live.webp",
     "imageAlt": "English gameplay screenshot of Galactic Chronomaths"
   },
   {
@@ -866,7 +866,7 @@
     "new": true,
     "sourceId": "jeu-79",
     "contentLanguage": "fr",
-    "thumb": "/assets/catalogue-v2/captures/jeu-79.webp",
+    "thumb": "/assets/en-captures/en-jeu-79-live.webp",
     "imageAlt": "French gameplay screenshot of 3D Shapes Around Us"
   },
   {
@@ -889,7 +889,7 @@
     "new": true,
     "sourceId": "jeu-78",
     "contentLanguage": "fr",
-    "thumb": "/assets/catalogue-v2/captures/jeu-78.webp",
+    "thumb": "/assets/en-captures/en-jeu-78-live.webp",
     "imageAlt": "French gameplay screenshot of Shapes Around Us"
   },
   {
@@ -930,7 +930,7 @@
     "objective": "Choose from 30 colourful mental maths missions, with hints and a timed challenge.",
     "weekly": false,
     "new": true,
-    "thumb": "/assets/en-captures/year-4-calcul-pop-gameplay.webp",
+    "thumb": "/assets/en-captures/en-3-live.webp",
     "imageAlt": "English gameplay screenshot of Calcul Pop! — Year 4 mental maths",
     "sourceId": "jeu-76"
   },
@@ -1883,7 +1883,7 @@
     "new": true,
     "sourceId": "soustractions-sans-echange-en-orbite",
     "contentLanguage": "fr",
-    "thumb": "/assets/catalogue-v2/captures/soustractions-en-orbite-capture%20(1).webp",
+    "thumb": "/assets/en-captures/en-soustractions-sans-echange-en-orbite-live.webp",
     "imageAlt": "French gameplay screenshot of Subtraction in Orbit — No Regrouping"
   },
   {
@@ -1904,7 +1904,7 @@
     "objective": "Add two- or three-digit numbers by lining up hundreds, tens and ones. Check your answers and see your score.",
     "weekly": false,
     "new": false,
-    "thumb": "/assets/en-captures/column-addition-without-regrouping-gameplay.webp",
+    "thumb": "/assets/en-captures/en-47-live.webp",
     "imageAlt": "English gameplay screenshot of Column addition without regrouping",
     "sourceId": "jeu-50"
   },
@@ -1926,7 +1926,7 @@
     "objective": "Practise column addition with one regrouping, then two. Calculate each column, look at the carried digit and check your answers to see your score.",
     "weekly": false,
     "new": false,
-    "thumb": "/assets/en-captures/column-addition-with-regrouping-gameplay.webp",
+    "thumb": "/assets/en-captures/en-48-live.webp",
     "imageAlt": "English gameplay screenshot of Column addition with regrouping",
     "sourceId": "jeu-51"
   },
@@ -1971,7 +1971,7 @@
     "new": true,
     "sourceId": "jeu-106",
     "contentLanguage": "fr",
-    "thumb": "/assets/catalogue-v2/captures/jeu-106.webp",
+    "thumb": "/assets/en-captures/en-jeu-106-live.webp",
     "imageAlt": "French gameplay screenshot of Addition with Regrouping — 3D Blocks"
   },
   {
@@ -1993,7 +1993,7 @@
     "new": true,
     "sourceId": "jeu-108",
     "contentLanguage": "fr",
-    "thumb": "/assets/catalogue-v2/captures/jeu-108.webp",
+    "thumb": "/assets/en-captures/en-jeu-108-live.webp",
     "imageAlt": "French gameplay screenshot of Addition with Regrouping — 3D Blocks"
   },
   {
@@ -2015,7 +2015,7 @@
     "new": true,
     "sourceId": "jeu-107",
     "contentLanguage": "fr",
-    "thumb": "/assets/catalogue-v2/captures/jeu-107.webp",
+    "thumb": "/assets/en-captures/en-jeu-107-live.webp",
     "imageAlt": "French gameplay screenshot of Addition with Regrouping — 3D Blocks"
   },
   {
@@ -2241,7 +2241,7 @@
     "objective": "",
     "weekly": false,
     "new": false,
-    "thumb": "/assets/en-captures/the-calculation-race-gameplay.webp",
+    "thumb": "/assets/en-captures/en-59-live.webp",
     "imageAlt": "English gameplay screenshot of The calculation race",
     "sourceId": "jeu-62"
   },
@@ -2484,7 +2484,7 @@
     "new": true,
     "sourceId": "jeu-105",
     "contentLanguage": "fr",
-    "thumb": "/assets/catalogue-v2/captures/jeu-105.webp",
+    "thumb": "/assets/en-captures/en-jeu-105-live.webp",
     "imageAlt": "French gameplay screenshot of Spaceship Subtraction — No Regrouping"
   },
   {
