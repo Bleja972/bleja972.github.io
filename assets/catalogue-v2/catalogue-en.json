@@ -732,8 +732,8 @@
     "objective": "Add and subtract 1, 10 or 100 before time runs out.",
     "weekly": true,
     "new": true,
-    "thumb": "/assets/en-captures/maths-lab-gameplay.webp",
-    "imageAlt": "English gameplay screenshot of The Maths Lab",
+    "thumb": "/assets/catalogue-v2/captures/jeu-85.webp",
+    "imageAlt": "An arithmetic problem in a chemistry flask in The Maths Lab",
     "sourceId": "jeu-85"
   },
   {
@@ -754,8 +754,8 @@
     "objective": "Find halves and free the bubbles.",
     "weekly": true,
     "new": true,
-    "thumb": "/assets/en-captures/vallee-des-moities-gameplay.webp",
-    "imageAlt": "English gameplay screenshot of The Valley of Halves",
+    "thumb": "/assets/images/bannieres/openai/vallee-des-moities.webp?v=bannieres-20261115",
+    "imageAlt": "Illustration for The Valley of Halves",
     "sourceId": "jeu-84"
   },
   {
