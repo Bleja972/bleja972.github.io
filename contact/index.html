@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M’envoyer un message | Jeux éducatifs</title>
+  <link rel="stylesheet" href="/assets/accueil-arcade/home.css?v=top10-arcade">
+  <style>
+    .contact { max-width: 42rem; margin: 0 auto; padding: clamp(1rem, 5vw, 3rem); color: #edfaff; }
+    .contact-card { margin-top: 1.5rem; padding: clamp(1rem, 4vw, 2rem); background: #0a101a; border: 1px solid #297a91; border-radius: 1rem; }
+    .contact h1 { margin-top: 0; }
+    .contact form { display: grid; gap: .85rem; }
+    .contact label { display: grid; gap: .35rem; font-weight: 700; }
+    .contact input, .contact textarea { box-sizing: border-box; width: 100%; padding: .7rem; font: inherit; color: #edfaff; background: #0d2033; border: 1px solid #478aad; border-radius: .5rem; }
+    .contact textarea { resize: vertical; }
+    .contact :focus-visible { outline: 3px solid #ffdd67; outline-offset: 3px; }
+    .contact button { justify-self: start; }
+  </style>
+</head>
+<body>
+  <main class="contact">
+    <a href="/?lang=fr">← Retour au blog</a>
+    <section class="contact-card">
+      <h1>M’envoyer un message</h1>
+      <p>Ton message m’est transmis en privé et n’apparaît pas sur le blog. Indique une adresse e-mail si tu souhaites recevoir une réponse.</p>
+      <form action="https://formspree.io/f/mrpqrrjr" method="post">
+        <label>Ton adresse e-mail (facultative)
+          <input name="email" type="email" autocomplete="email" maxlength="254">
+        </label>
+        <label>Ton message
+          <textarea name="message" rows="7" required maxlength="4000"></textarea>
+        </label>
+        <button class="control control-primary" type="submit">Envoyer le message</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
