@@ -2,7 +2,7 @@
   {
     "id": "en-mission-fractions-ce1-revisions",
     "title": "Fraction Mission — Review",
-    "url": "/jeux/mission-fractions-ce1-revisions/",
+    "url": "/en/games/fraction-mission-review/",
     "description": "Recognise, read and compare simple fractions.",
     "levels": [
       "CE1"
@@ -17,9 +17,9 @@
     "weekly": false,
     "new": true,
     "sourceId": "mission-fractions-ce1-revisions",
-    "contentLanguage": "fr",
-    "thumb": "/assets/en-captures/en-mission-fractions-ce1-revisions-live.webp",
-    "imageAlt": "French gameplay screenshot of Fraction Mission — Review"
+    "contentLanguage": "en",
+    "thumb": "/assets/en-captures/fraction-mission-English-gameplay.webp",
+    "imageAlt": "English Fraction Mission gameplay showing shaded halves"
   },
   {
     "id": "en-mission-calcul-cm1-livret-1",
