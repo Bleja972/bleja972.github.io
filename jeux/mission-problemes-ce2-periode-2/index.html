@@ -214,6 +214,18 @@ body::after{background:repeating-linear-gradient(transparent 0px,transparent 5px
 @media(max-width:700px) {
   #barArea .compare-wide .compare-row {grid-template-columns:minmax(0,1fr)}
 }
+#answerZone[data-mission="all"] input {
+  border:3px solid #6cecff;
+  border-radius:12px;
+  background:#081a2e;
+  color:#fff3ab;
+  box-shadow:0 0 10px #42dfff36;
+  min-height:52px;
+}
+#answerZone[data-mission="all"] input:focus-visible {
+  outline:2px solid #ffe675;
+  outline-offset:3px;
+}
 </style>
 </head>
 <body>
@@ -1246,7 +1258,7 @@ function check(){
   checkBtn.classList.add('hidden');
   nextBtn.classList.remove('hidden');
 }
-function start(cat){list=cat==='all'?[...ALL]:ALL.filter(p=>p.cat===cat);idx=0;score=0;document.getElementById('catTitle').textContent=TITLES[cat];menuPage.classList.add('hidden');gamePage.classList.remove('hidden');
+function start(cat){answerZone.dataset.mission=cat;list=cat==='all'?[...ALL]:ALL.filter(p=>p.cat===cat);idx=0;score=0;document.getElementById('catTitle').textContent=TITLES[cat];menuPage.classList.add('hidden');gamePage.classList.remove('hidden');
   for(const button of missionButtons){
     const active=button.dataset.cat===cat;
     button.classList.toggle('active',active);
