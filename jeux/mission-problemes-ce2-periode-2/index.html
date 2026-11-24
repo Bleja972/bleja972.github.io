@@ -1,0 +1,1278 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Problèmes CE2 - Période 2</title>
+<style>
+:root{--navy:#102a43;--green:#2f855a;--orange:#ed8936;--red:#c53030;--purple:#6b46c1;--line:#d9e2ec;--text:#172033}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#f8fbff,#fffaf4);color:var(--text)}
+.app{max-width:1050px;margin:0 auto;padding:20px 14px 40px}.card{background:#fff;border:2px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 7px 22px rgba(20,40,70,.06)}
+h1{margin:4px 0;color:var(--navy)}.sub{color:#5f6b7a;line-height:1.45}.menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.cat{border:2px solid #dce5ef;border-radius:16px;background:#fff;padding:16px;text-align:left;cursor:pointer;min-height:95px}.cat:hover{border-color:#8bb7df}
+.cat strong{display:block;color:var(--navy);font-size:1.04rem;margin-bottom:5px}.cat span{color:#607080;font-size:.92rem;line-height:1.35}.hidden{display:none!important}
+.top{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}.badges{display:flex;gap:8px;flex-wrap:wrap}.badge{background:#eef4fa;border:1px solid #d6e0ea;padding:8px 11px;border-radius:11px;font-weight:700;color:var(--navy)}
+.problem{font-size:1.25rem;line-height:1.5;font-weight:700;margin:18px 0}.bar-wrap{background:#fbfcfe;border:2px dashed #d7e0ea;border-radius:18px;padding:20px 12px;margin:14px 0}
+.bar-model{max-width:760px;margin:0 auto}.two-step-visual .bar-model{max-width:none;width:100%}.total-label{text-align:center;font-weight:800;font-size:1rem;margin-bottom:4px}.total-bar{height:62px;border:3px solid #25364a;border-radius:5px 5px 0 0;background:#fff;display:flex;align-items:center;justify-content:center;font-size:1.45rem;font-weight:800}.parts{display:flex;width:100%;margin:0;border:3px solid #25364a;border-top:0;border-radius:0 0 5px 5px;overflow:hidden;min-height:82px}
+.part{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;border-right:2px solid #25364a;background:#f5f7fa;min-width:46px}.part:last-child{border-right:0}.part.yellow{background:#fde68a}.part.red{background:#fca5a5}.part.blue{background:#bfdbfe}.part.green{background:#bbf7d0}.part.brown{background:#d6b38a}.part.pink{background:#fbcfe8}.part.purple{background:#ddd6fe}.part.orangefill{background:#fed7aa}.part.gray{background:#e5e7eb}.part.cyan{background:#bae6fd}.part.lime{background:#d9f99d}.part.beige{background:#f5e6c8}
+.val{font-size:1.45rem;font-weight:800}.lab{font-size:.8rem;color:#536170;text-align:center;margin-top:4px}.seq{display:grid;gap:14px;max-width:760px;margin:auto}
+
+.transform-model{max-width:780px;margin:0 auto;display:grid;gap:16px}
+.transform-title{text-align:center;font-weight:800;color:#102a43;margin-bottom:5px}
+.transform-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.transform-label{width:135px;font-weight:800;color:#425466;text-align:right}
+.transform-track{flex:1;min-width:250px;height:64px;display:flex;align-items:stretch;position:relative}
+.transform-segment{border:3px solid #25364a;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;min-width:42px}
+.transform-initial{background:#dbeafe}
+.transform-added{background:#dcfce7;border-left:0}
+.transform-removed{background:#fee2e2;border-left:0;position:relative}
+.transform-removed:after{content:"";position:absolute;left:8px;right:8px;top:50%;border-top:3px solid #b91c1c;transform:rotate(-12deg)}
+.transform-final{background:#fff;border-style:dashed}
+.transform-arrow{font-size:1.8rem;font-weight:900;color:#52606d;text-align:center}
+.transform-word{font-size:.88rem;color:#667085;text-align:center;margin-top:4px;font-weight:700}
+@media(max-width:700px){
+  .transform-row{display:block}
+  .transform-label{width:auto;text-align:left;margin-bottom:5px}
+  .transform-track{min-width:0;width:100%}
+}
+.step{border:3px solid #25364a;border-radius:7px;padding:10px 14px;background:#f8fafc;display:grid;grid-template-columns:1.1fr 1fr .7fr;gap:10px;align-items:center}.step.plus{background:#dcfce7}.step.minus{background:#fee2e2}.step.neutral{background:#e0f2fe}.step strong{color:var(--navy)}.step .calc{font-weight:800;text-align:center}.step .res{font-size:1.3rem;font-weight:800;text-align:center}.step-propose{border:3px solid #25364a;border-radius:10px;padding:12px 14px;display:grid;gap:10px}.step-propose.plus{background:#dcfce7}.step-propose.minus{background:#fee2e2}.step-propose.neutral{background:#e0f2fe}.step-propose .line1{font-weight:800;color:var(--navy)}.calc-proposal{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.calc-proposal label{font-weight:700;color:#425466}.calc-proposal input{height:44px;min-width:200px;flex:1;border:2px solid #9fb3c8;border-radius:10px;background:#fff;padding:0 10px;font-size:1.05rem;font-weight:700;color:#102a43}.calc-proposal input::placeholder{color:#7b8794}
+.compare-grid{display:grid;gap:18px;max-width:none;width:100%;margin:auto}.compare-wide{width:100%}.compare-wide .bar-model{max-width:none;width:100%}.compare-wide .compare-row{grid-template-columns:110px minmax(0,1fr)}.compare-row{display:grid;grid-template-columns:100px 1fr;gap:10px;align-items:center}.compare-name{font-weight:800;color:var(--navy)}.compare-questions{display:grid;gap:12px;margin-top:18px}.compare-question{border:2px solid #d7e0ea;border-radius:12px;padding:12px;background:#fff}.compare-question strong{display:block;color:var(--navy);margin-bottom:8px}.compare-question input{width:100%;height:48px;border:3px solid #6b46c1;border-radius:10px;background:#fff;padding:0 12px;font-size:1.08rem;font-weight:700;color:#102a43;pointer-events:auto;user-select:text;position:relative;z-index:2}.compare-question input:focus{outline:3px solid #c4b5fd;outline-offset:2px}
+.target{max-width:760px;margin:auto}.targetbar{border:3px solid #25364a;height:78px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:800;background:#fff8dc}
+.cards{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-top:14px}.mini-card{padding:12px 15px;border-radius:10px;background:#cf2e4e;color:white;font-weight:800;font-size:1.1rem}
+.answer-zone{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:18px}.answer{height:54px;min-width:150px;border:3px solid var(--purple);border-radius:11px;text-align:center;font-size:1.25rem;font-weight:800;color:var(--purple);background:white}
+.btn{border:0;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer;min-height:46px}.orange{background:var(--orange);color:#fff}.navy{background:var(--navy);color:#fff}.green{background:var(--green);color:#fff}
+.feedback{min-height:30px;text-align:center;font-size:1.05rem;font-weight:800;margin-top:10px}.ok{color:var(--green)}.bad{color:var(--red)}.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.progress{height:9px;background:#e6ebf0;border-radius:999px;overflow:hidden;margin-top:12px}.progress>div{height:100%;background:var(--green);width:0}
+@media(max-width:700px){.menu{grid-template-columns:1fr}.problem{font-size:1.08rem}.parts{min-height:70px}.step{grid-template-columns:1fr}.compare-row{grid-template-columns:1fr}}
+
+.inter-question{font-weight:800;color:#102a43;font-size:1.02rem;line-height:1.35}.two-step-visual{width:100%;max-width:100%;margin:0 auto}
+.step-propose{gap:8px}
+.step-propose .line1{font-size:.85rem;color:#607080}
+
+</style><style>
+:root{--bg:#060d23;--panel:#0a1932;--ice:#b2f7ff;--cyan:#32eaff;--gold:#ffd45f;--pink:#fa72bb;--ok:#6bffbe;--bad:#ff6888;--edge:#397e9b;color-scheme:dark;font-family:system-ui,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}html{min-height:100%;background:#030c1e}body{margin:0;min-height:100vh;color:#f1f9ff;background:radial-gradient(ellipse 90% 80% at 50% 0%,#143662 0%,#07152f 45%,#030c1e 95%);overflow-x:hidden}button,input{font:inherit}button{cursor:pointer;touch-action:manipulation}button:focus-visible,input:focus-visible{outline:3px solid #fff69f;outline-offset:4px}button:disabled{opacity:.43;cursor:not-allowed;filter:grayscale(.7)}canvas#stars{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.58}body::after{content:"";position:fixed;inset:0;background:repeating-linear-gradient(transparent 0px,transparent 4px,#a5f8ff05 5px);pointer-events:none;z-index:1}
+.wrap{max-width:1180px;margin:0 auto;padding:18px clamp(12px,3vw,32px) 32px;position:relative;z-index:2}.mast{position:relative;overflow:hidden;border:1px solid #40dfff8c;background:linear-gradient(110deg,#092540de,#081b32ee 55%,#1a1744e8);padding:19px clamp(17px,4vw,33px);border-radius:23px;box-shadow:0 5px 0 #001121,0 12px 45px #21d5ff19,inset 0 1px #9bfbff80}.mast::after{content:"";position:absolute;right:-95px;top:-65px;width:280px;height:280px;border:2px solid #40efff29;border-radius:50%;box-shadow:0 0 0 36px #31c7ff0d,0 0 0 68px #31c7ff0a;pointer-events:none}.eyebrow{display:block;color:#81eaff;font-size:.76rem;letter-spacing:.22em;font-weight:900}.mast h1{font-size:clamp(27px,4.8vw,48px);margin:5px 0 3px;line-height:1.08;text-transform:uppercase;letter-spacing:.03em;text-shadow:0 0 14px #1ebffb76,0 4px 0 #00182b}.mast h1 em{font-style:normal;color:var(--gold);text-shadow:0 0 15px #ffc95784}.mast p{margin:5px 0 0;color:#d2e9fa;font-size:.93rem}.mastbar{display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap;justify-content:space-between}.masttext{flex:1}.status-pill{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;background:#0a2f51ab;border:1px solid #2a97bd;border-radius:99px;color:#b5f4ff;font-size:.78rem;font-weight:800}.status-pill i{display:block;width:7px;height:7px;border-radius:50%;background:#77ffc9;box-shadow:0 0 12px #77ffc9;animation:pulse 1.7s infinite}@keyframes pulse{50%{opacity:.3;transform:scale(.7)}}
+.layout{display:grid;grid-template-columns:254px minmax(0,1fr);gap:17px;margin-top:18px;align-items:start}.menu,.arena{border:1px solid #28698f;background:linear-gradient(165deg,#071a31eb,#081126f0);border-radius:22px;box-shadow:0 6px 0 #020b17,0 9px 25px #02091488,inset 0 1px 0 #65b7e030;overflow:hidden}.menu{padding:15px;position:sticky;top:14px}.menu h2{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8fd9fa;margin:4px 5px 13px}.seq-list{display:grid;gap:9px}.seq-btn{display:grid;grid-template-columns:36px 1fr;gap:10px;align-items:center;width:100%;text-align:left;min-height:61px;border-radius:13px;padding:8px 10px;color:#deefff;border:1px solid #2b5575;background:linear-gradient(160deg,#173651,#071d34);box-shadow:0 4px 0 #041023,inset 0 1px #b9f4ff12;transition:transform .14s,box-shadow .14s,border-color .14s}.seq-btn:hover{border-color:#58efff;transform:translateY(-2px);box-shadow:0 6px 0 #041023,0 0 20px #1ce9ff2b}.seq-btn.active{border-color:var(--gold);background:linear-gradient(140deg,#26334e,#092f49);box-shadow:0 3px 0 #7e571e,0 0 19px #e3b84b45}.seq-num{display:grid;place-items:center;border-radius:11px;height:37px;background:#0b4261;color:#79f5ff;font-weight:1000;font-size:18px;border:1px solid #328fc0}.seq-btn.active .seq-num{background:#74562e;color:#fff1a1;border-color:#d7ad45}.seq-title{font-size:12px;font-weight:750;line-height:1.35}.seq-title small{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#81cbde;margin-bottom:3px}
+.arena{min-height:550px}.arena-head{padding:18px 19px 14px;border-bottom:1px solid #32738a;background:linear-gradient(115deg,#0a3754c4,#121638e3)}.arena-top{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}.arena h2{margin:0;font-size:clamp(19px,3vw,27px);line-height:1.25;color:#effbff}.arena .sub{color:#a5dbe9;font-size:.83rem;margin:7px 0 0}.hud{display:flex;gap:9px;flex-wrap:wrap;align-items:stretch;margin-top:15px}.hud-box{min-width:97px;flex:1;padding:9px 12px;background:#041b33;border:1px solid #277f9c;border-radius:11px;box-shadow:inset 0 0 13px #01d4ee0c}.hud-box span{display:block;text-transform:uppercase;letter-spacing:.12em;font-size:10px;color:#97d5e7;font-weight:850}.hud-box strong{font-size:23px;font-weight:950;font-variant-numeric:tabular-nums;display:block;color:#f9feff}.hud-box.timer strong{color:var(--gold);text-shadow:0 0 13px #eeca4160}.hud-box.timer.danger{border-color:#ff5779;box-shadow:0 0 14px #ff577933}.hud-box.timer.danger strong{color:#ff7391}.progressrail{height:7px;background:#042137;border-radius:20px;overflow:hidden;margin-top:13px;border:1px solid #27566f}.progressbar{height:100%;width:0;background:linear-gradient(90deg,#21bcfc,#43ffdd);box-shadow:0 0 15px #28e0f4;transition:width .25s}.panel{padding:19px}.tabs{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:20px}.tab{padding:11px 13px;flex:1;border:1px solid #237c95;border-radius:13px;color:#cde9ff;font-weight:850;background:linear-gradient(#0f354d,#092036);box-shadow:0 4px 0 #021324;min-width:130px;transition:.13s}.tab:hover{filter:brightness(1.25)}.tab.active{border-color:#ffe795;color:#241b07;background:linear-gradient(#fff5ad,#ffcf5a 55%,#d68f2d);box-shadow:0 4px 0 #86500f,0 0 18px #ffe08347}.tab small{font-size:10px;display:block;opacity:.82;margin-top:3px}.mission{padding:12px 13px;background:#072b40a6;border:1px solid #2a7896;border-radius:12px;color:#d2f1ff;font-size:14px;line-height:1.6;margin-bottom:16px}.mission strong{color:var(--gold)}.equations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.problem{position:relative;min-width:0;display:flex;align-items:center;gap:6px;flex-wrap:wrap;min-height:79px;padding:15px 12px;border:1px solid #2a607e;border-radius:13px;background:linear-gradient(135deg,#102b48aa,#0d1934b2);box-shadow:inset 0 1px #befbff10,0 3px 0 #041025;transition:border-color .15s,background .15s}.problem .n{font-size:11px;display:grid;place-items:center;align-self:center;flex:none;width:25px;height:25px;border-radius:50%;border:1px solid #317c9e;background:#062944;color:#a6eaff;font-weight:950}.formula{display:flex;flex-wrap:wrap;gap:5px;align-items:center;min-width:0;font-size:clamp(15px,2.3vw,22px);font-weight:850;letter-spacing:.025em}.formula .symbol{color:#f2f7ff;white-space:pre-wrap}.formula .symbol.op{color:#f8d671}.formula input{color:#fffac5;background:#041d38;border:2px solid #4bcbeb;border-radius:9px;width:clamp(75px,12vw,106px);height:45px;text-align:center;font-size:20px;font-weight:900;box-shadow:inset 0 2px 12px #062235,0 0 10px #30e9ff24;font-variant-numeric:tabular-nums}.formula input:focus{background:#123a5f;border-color:#ffe18b;box-shadow:0 0 18px #f7c84855}.problem.good{border-color:#5cffb1;background:#0d44344d;box-shadow:0 0 19px #39ffc03a,inset 0 1px #8dffe222}.problem.good input{border-color:#68ffbc;background:#073a32;color:#9dffd5}.problem.bad{border-color:#ff718e;background:#4d112c61;box-shadow:0 0 19px #ff5f9633}.problem.bad input{border-color:#ff748e;background:#3f1226;color:#ffd6df}.problem.skip{border-color:#c48d36}.answer-note{width:100%;font-size:12px;line-height:1.4;color:#ffe58d;margin:4px 0 0 32px;display:none}.problem.bad .answer-note,.problem.skip .answer-note{display:block}.actions{display:flex;gap:11px;margin-top:20px;flex-wrap:wrap;align-items:center}.btn{min-height:49px;border:1px solid #b9faff;border-radius:13px;padding:11px 18px;font-weight:950;letter-spacing:.01em;color:#062338;box-shadow:0 5px 0 #095a7d,0 9px 18px #00d8ff27,inset 0 2px #fff9;transition:transform .13s,box-shadow .13s,filter .13s}.btn:hover:not(:disabled){transform:translateY(-2px);filter:brightness(1.08);box-shadow:0 7px 0 #095a7d,0 10px 22px #00d8ff3c}.btn:active:not(:disabled){transform:translateY(4px);box-shadow:0 1px 0 #095a7d,0 3px 8px #00d8ff30}.btn.primary{background:linear-gradient(160deg,#b5ffff,#38e8ff 50%,#0e98cd)}.btn.orange{border-color:#fff0a8;background:linear-gradient(#fff8ba,#ffce5a 60%,#ef9037);color:#382006;box-shadow:0 5px 0 #805017,0 10px 15px #ffb04828}.btn.ghost{background:linear-gradient(#244963,#11293e);color:#ebf9ff;border-color:#588aa5;box-shadow:0 5px 0 #061627}.btn.pink{background:linear-gradient(#ffb7ef,#fa70c7 60%,#a83b9e);color:#350f2d;border-color:#ffd1f5;box-shadow:0 5px 0 #7e2863}.feedback{font-size:15px;font-weight:750;margin:13px 0 0;min-height:25px;color:#b7ebf4}.feedback.success{color:#a3ffd1}.feedback.error{color:#ffa4b4}.tiny{font-size:12px;color:#92c6da;line-height:1.6}.results{border:1px solid #3bb6cf;border-radius:17px;background:#092c42a8;padding:21px;text-align:center;box-shadow:0 0 22px #11bad82a}.results h3{font-size:24px;color:#ffe38a;margin:0 0 8px}.results .big{font-size:clamp(42px,8vw,70px);font-weight:1000;color:#99ffe9;text-shadow:0 0 20px #35ffad99;font-variant-numeric:tabular-nums}.results p{margin:5px 0 15px;color:#cbecff}.results .actions{justify-content:center}footer{margin-top:22px;font-size:12px;color:#82a8bd;text-align:center}.spark{position:fixed;width:5px;height:5px;border-radius:50%;box-shadow:0 0 10px currentColor;pointer-events:none;z-index:10;animation:spark 600ms ease-out forwards}@keyframes spark{to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.2)}}
+@media(max-width:910px){.layout{grid-template-columns:1fr}.menu{position:static}.seq-list{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.seq-btn{grid-template-columns:28px 1fr;min-height:57px;gap:6px;padding:8px 5px}.seq-num{width:26px;height:31px;font-size:14px}.seq-title{font-size:10px}}
+@media(max-width:680px){.wrap{padding:8px 9px 20px}.mast{border-radius:15px;padding:14px 13px}.mast h1{font-size:27px}.menu,.arena{border-radius:15px}.menu{padding:11px}.seq-list{grid-template-columns:repeat(2,minmax(0,1fr))}.seq-btn{min-height:50px}.arena-head{padding:12px}.panel{padding:12px}.equations{grid-template-columns:1fr;gap:10px}.problem{min-height:72px;padding:9px 10px}.formula{font-size:19px}.formula input{width:100px;height:45px}.tabs{gap:6px}.tab{min-width:90px;padding:10px 8px;font-size:13px}.actions .btn{flex:1 1 43%;padding:12px 8px}.hud-box{min-width:79px;padding:7px}.hud-box strong{font-size:19px}.mast p{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition:none!important}canvas#stars{display:none}}
+
+/* ÉDITION : fond noir profond et halo néon plus intense sur tous les boutons */
+:root{--bg:#000;--panel:#050507}
+html,body{background:#000!important}
+body{background:#000!important}
+canvas#stars{opacity:.37}
+body::after{background:repeating-linear-gradient(transparent 0px,transparent 5px,#7ceeff04 6px)}
+.mast{background:linear-gradient(120deg,#08080edc,#030307ee 60%,#0e0818d8);box-shadow:0 5px 0 #000,0 0 26px #26dfff38,0 0 65px #12abff24,inset 0 0 24px #4bceff14}
+.menu,.arena{background:linear-gradient(155deg,#07070aef,#010104f5);border-color:#297c9e;box-shadow:0 5px 0 #000,0 0 28px #08d3ff29,inset 0 0 16px #34eeff0d}
+.arena-head{background:linear-gradient(105deg,#080d14ee,#05050cec)}
+.mission,.problem{background:#070b12d9}
+.hud-box{background:#05070b}
+.seq-btn,.tab,.btn{position:relative;isolation:isolate;overflow:visible;will-change:box-shadow}
+.seq-btn{background:linear-gradient(155deg,#07121e,#02050a);border-color:#2bafd0;box-shadow:0 5px 0 #00121a,0 0 9px #04dfff8c,0 0 24px #02d6ff50,0 0 42px #00beff20,inset 0 1px 0 #dfffff57}
+.seq-btn:hover{border-color:#baffff;box-shadow:0 7px 0 #00121a,0 0 16px #42f6ff,0 0 35px #00d9ff8c,0 0 60px #00c4ff48,inset 0 1px #fff8}
+.seq-btn.active{border-color:#ffe36c;box-shadow:0 4px 0 #69410b,0 0 15px #ffc84a,0 0 33px #ffbd2099,0 0 57px #ffc5344d,inset 0 1px #fff6}
+.tab{border-color:#59e6ff;box-shadow:0 5px 0 #04121a,0 0 13px #15eaff80,0 0 30px #00cfff4b,inset 0 1px #cfffff6b}
+.tab:hover{box-shadow:0 5px 0 #04121a,0 0 20px #47f4ffb5,0 0 42px #12d9ff6e}
+.tab.active{box-shadow:0 5px 0 #75400a,0 0 17px #ffe272c9,0 0 38px #ffc82e85,0 0 60px #ffb81240}
+.btn{border-width:2px;box-shadow:0 5px 0 #075577,0 0 14px #28eaffb5,0 0 32px #1ceaff80,0 0 60px #06dfff3d,inset 0 2px #fff9}
+.btn.primary{box-shadow:0 5px 0 #075577,0 0 15px #2deeffdc,0 0 36px #13e7ffa6,0 0 72px #00cfff67,inset 0 2px #fff9}
+.btn.orange{box-shadow:0 5px 0 #805017,0 0 16px #ffde65d6,0 0 34px #ffc32d9c,0 0 66px #ff9a3060,inset 0 2px #fff9}
+.btn.ghost{box-shadow:0 5px 0 #061627,0 0 14px #65dfff98,0 0 33px #38d6ff68,0 0 58px #1cabff34,inset 0 1px #d7ffff48}
+.btn.pink{box-shadow:0 5px 0 #7e2863,0 0 16px #ff90e2d4,0 0 36px #ff67db90,0 0 65px #ff37c449,inset 0 2px #fff9}
+.btn:hover:not(:disabled){filter:brightness(1.13);transform:translateY(-2px);box-shadow:0 7px 0 #095a7d,0 0 24px #bcfaff,0 0 48px #24e9ffbc,0 0 80px #18dfff7b,inset 0 2px #fff9}
+.btn.orange:hover:not(:disabled){box-shadow:0 7px 0 #805017,0 0 24px #fff3aa,0 0 46px #ffc841c4,0 0 80px #ffab4282}
+.btn.pink:hover:not(:disabled){box-shadow:0 7px 0 #7e2863,0 0 24px #ffd1f4,0 0 46px #ff82eac8,0 0 80px #ff41d480}
+.btn:active:not(:disabled){transform:translateY(4px);box-shadow:0 1px 0 #095a7d,0 0 12px #5efbffbd,0 0 27px #30dfff7b}
+@media(prefers-reduced-motion:reduce){.seq-btn,.tab,.btn{will-change:auto}}
+
+
+/* Sept couleurs de néons différentes pour les sept boutons de compétences. */
+.seq-btn:nth-child(7n+1){--mission-neon:#24eaff;--mission-rgb:36,234,255}
+.seq-btn:nth-child(7n+2){--mission-neon:#ff72cf;--mission-rgb:255,114,207}
+.seq-btn:nth-child(7n+3){--mission-neon:#c68aff;--mission-rgb:198,138,255}
+.seq-btn:nth-child(7n+4){--mission-neon:#ffb44d;--mission-rgb:255,180,77}
+.seq-btn:nth-child(7n+5){--mission-neon:#8cff54;--mission-rgb:140,255,84}
+.seq-btn:nth-child(7n+6){--mission-neon:#ff687e;--mission-rgb:255,104,126}
+.seq-btn:nth-child(7n+7){--mission-neon:#ffe15c;--mission-rgb:255,225,92}
+.seq-btn{border-color:var(--mission-neon);box-shadow:0 5px 0 #020409,0 0 9px rgba(var(--mission-rgb),.67),0 0 23px rgba(var(--mission-rgb),.37),0 0 43px rgba(var(--mission-rgb),.16),inset 0 1px 0 #ffffff38}
+.seq-btn .seq-num{border-color:var(--mission-neon);color:var(--mission-neon);text-shadow:0 0 9px rgba(var(--mission-rgb),.7);background:#03060c}
+.seq-btn:hover{border-color:var(--mission-neon);transform:translateY(-2px);box-shadow:0 7px 0 #020409,0 0 17px rgba(var(--mission-rgb),.95),0 0 36px rgba(var(--mission-rgb),.66),0 0 66px rgba(var(--mission-rgb),.34),inset 0 1px 0 #fff8}
+.seq-btn.active,.seq-btn.active:hover{border-color:var(--mission-neon);background:linear-gradient(150deg,rgba(var(--mission-rgb),.23),#020610 80%);box-shadow:0 4px 0 #020409,0 0 17px rgba(var(--mission-rgb),1),0 0 38px rgba(var(--mission-rgb),.72),0 0 68px rgba(var(--mission-rgb),.39),inset 0 1px 0 #ffffff80}
+.seq-btn.active .seq-num{background:rgba(var(--mission-rgb),.16);color:#fff;border-color:var(--mission-neon);text-shadow:0 0 10px var(--mission-neon)}
+
+
+/* Trois néons distincts autour des boutons EXERCICE 1, 2 et 3. */
+.tabs .tab:nth-child(3n+1){--calc-neon:#00f0ff;--calc-rgb:0,240,255}
+.tabs .tab:nth-child(3n+2){--calc-neon:#ff61c9;--calc-rgb:255,97,201}
+.tabs .tab:nth-child(3n+3){--calc-neon:#a4ff44;--calc-rgb:164,255,68}
+.tabs .tab{border:2px solid var(--calc-neon);background:linear-gradient(160deg,rgba(var(--calc-rgb),.17),#05080f 75%);color:#fff;font-weight:900;text-shadow:0 0 7px rgba(var(--calc-rgb),.56);box-shadow:0 5px 0 #02040a,0 0 10px rgba(var(--calc-rgb),.7),0 0 24px rgba(var(--calc-rgb),.46),0 0 43px rgba(var(--calc-rgb),.21),inset 0 1px 0 #ffffff55;transition:transform .15s,box-shadow .15s,background .15s}
+.tabs .tab:hover{border-color:var(--calc-neon);transform:translateY(-2px);box-shadow:0 7px 0 #02040a,0 0 17px rgba(var(--calc-rgb),.95),0 0 35px rgba(var(--calc-rgb),.7),0 0 62px rgba(var(--calc-rgb),.38),inset 0 1px #fff9}
+.tabs .tab.active,.tabs .tab.active:hover{color:#fff;border-color:var(--calc-neon);background:linear-gradient(150deg,rgba(var(--calc-rgb),.39),#040710 85%);text-shadow:0 0 13px var(--calc-neon);box-shadow:0 4px 0 #02040a,0 0 18px rgba(var(--calc-rgb),1),0 0 40px rgba(var(--calc-rgb),.81),0 0 72px rgba(var(--calc-rgb),.41),inset 0 1px #fff9}
+.tabs .tab:active{transform:translateY(3px);box-shadow:0 1px 0 #02040a,0 0 19px rgba(var(--calc-rgb),.85)}
+.tabs .tab:focus-visible{outline:2px solid #fff;outline-offset:4px}
+
+
+.layout > .menu {display:block;margin-top:0}
+#problemText {display:block;margin:0;color:#f2fbff}
+.bar-wrap {background:#091624;border:1px solid #2a607e}
+.bar-model,.transform-model,.compare-grid,.target,.two-step-visual {color:#172033}
+.total-label,.transform-title,.transform-label,.transform-word,.transform-arrow,.compare-name,.inter-question {color:#b2f7ff}
+.step .inter-question {color:#102a43}
+#gamePage input {color:#fffac5;background:#041d38;border:2px solid #4bcbeb;border-radius:9px;font-family:inherit}
+#gamePage input::placeholder {color:#b8cadd}
+#gamePage #answer {width:min(100%,360px);min-width:0}
+#gamePage .choice {color:#eaf9ff}
+#gamePage .choice[data-selected="1"] {border-color:#6bffbe;box-shadow:0 0 16px #6bffbe65}
+#gamePage .ok {color:#a3ffd1}
+#gamePage .bad {color:#ffa4b4}
+#gamePage:has(.ok) #answer,#gamePage:has(.ok) .choice[data-selected="1"] {border-color:#6bffbe;animation:success-neon .5s ease-in-out 2}
+@keyframes success-neon {50% {box-shadow:0 0 13px #6bffbe99}}
+.mast a {text-decoration:none}
+#gamePage .preview-intro {margin:0}
+#gamePage .sub {color:#a5dbe9}
+
+/* Modèles en barres : couleurs distinctes, chiffres et légendes contrastés. */
+#barArea :is(.part,.total-bar,.transform-segment,.targetbar,.mini-card,.step,.step-propose) {
+  --bar-glow:#57e8ff;
+  --bar-fill:#123044;
+  background:linear-gradient(155deg,var(--bar-fill),#080f1b);
+  color:#f6fbff;
+  border-color:var(--bar-glow);
+  box-shadow:inset 0 0 9px color-mix(in srgb,var(--bar-glow) 19%,transparent),
+    0 0 7px color-mix(in srgb,var(--bar-glow) 32%,transparent);
+}
+#barArea .part {border:1px solid var(--bar-glow)}
+#barArea .part:last-child {border-right:1px solid var(--bar-glow)}
+#barArea :is(.part.blue,.transform-initial) {--bar-glow:#78aaff;--bar-fill:#172c54}
+#barArea :is(.part.red,.transform-removed,.step.minus,.step-propose.minus,.mini-card) {--bar-glow:#ff7489;--bar-fill:#431c32}
+#barArea :is(.part.green,.transform-added,.step.plus,.step-propose.plus) {--bar-glow:#5df3ac;--bar-fill:#103b32}
+#barArea .part.lime {--bar-glow:#adf75e;--bar-fill:#283d22}
+#barArea :is(.part.yellow,.targetbar) {--bar-glow:#ffe173;--bar-fill:#443819}
+#barArea .part.orangefill {--bar-glow:#ffac69;--bar-fill:#472c1a}
+#barArea .part.pink {--bar-glow:#ff8ed9;--bar-fill:#432242}
+#barArea .part.purple {--bar-glow:#cb9bff;--bar-fill:#332550}
+#barArea .part.brown {--bar-glow:#e6aa88;--bar-fill:#3b2929}
+#barArea .part.beige {--bar-glow:#ffdfad;--bar-fill:#403329}
+#barArea .part.gray {--bar-glow:#bdc8e2;--bar-fill:#283444}
+#barArea .transform-removed::after {border-color:#ff7489}
+#barArea :is(.val,.total-bar,.targetbar,.transform-segment,.step .res) {color:#fff3ab}
+#barArea :is(.lab,.step strong,.step .calc,.step .inter-question,.step-propose .line1,.compare-question strong) {color:#edf7ff}
+#barArea .compare-question {background:#101e31;border-color:#4b8ca6;color:#edf7ff}
+
+/* Aplats de couleur pour les modèles en barres. */
+#barArea :is(.part,.total-bar,.transform-segment,.targetbar,.mini-card) {
+  background:var(--bar-glow);
+  color:#081323;
+  box-shadow:none;
+  animation:bar-arcade-entry .42s ease-out both;
+}
+#barArea :is(.part .val,.part .lab,.total-bar,.targetbar,.transform-segment) {
+  color:#081323;
+  text-shadow:none;
+}
+#barArea .part .lab {font-weight:750}
+@keyframes bar-arcade-entry {
+  from {opacity:.55;filter:brightness(.76)}
+  60% {filter:brightness(1.18)}
+  to {opacity:1;filter:brightness(1)}
+}
+
+#gamePage #problemText {
+  color:#ffe675;
+  font-size:clamp(1.25rem,2.1vw,1.7rem);
+  line-height:1.6;
+  font-weight:750;
+}
+#barArea .bar-model {min-width:0}
+#barArea :is(.parts,.total-bar) {width:100%}
+/* Les segments colorés épousent les bords extérieurs du modèle. */
+#barArea .bar-model > :is(.total-bar,.parts) {
+  margin-inline:0;
+  border:0;
+  border-radius:0;
+}
+#barArea .bar-model > .parts > .part {border:0}
+#barArea .bar-model > .parts > .part + .part {border-inline-start:1px solid #081323}
+#barArea .part {
+  flex:0 0 auto;
+  min-width:0;
+  padding:6px 0;
+  overflow-wrap:anywhere;
+}
+#barArea .part .lab {
+  max-width:100%;
+  padding-inline:2px;
+}
+#barArea .transform-track {min-width:0}
+#barArea .transform-segment {flex:0 0 auto;min-width:0}
+#barArea .part .val,#barArea .transform-segment {font-size:clamp(.82rem,2.45vw,1.35rem)}
+#barArea .compare-row .bar-model {justify-self:start}
+#barArea .compare-zoe .total-bar {--bar-glow:#cb9bff}
+@media(max-width:700px) {
+  #barArea .compare-wide .compare-row {grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="wrap">
+<header class="mast"><div class="mastbar"><div class="masttext">
+<span class="eyebrow">LABORATOIRE ORBITAL · CE2 · PÉRIODE 2</span>
+<h1>MISSION <em>PROBLÈMES</em></h1>
+<p>28 problèmes · 7 ateliers · Modèles en barres</p>
+</div><a class="status-pill" href="https://bleja972.github.io/" target="_top"><i></i> Tous les jeux</a></div></header>
+<div class="layout">
+<aside class="menu" aria-label="Choix de la mission"><h2>Choisir la mission</h2><div class="seq-list">
+<button type="button" class="seq-btn" data-cat="atelier1" aria-pressed="false"><span class="seq-num">01</span><span class="seq-title"><small>Quantités qui changent</small>Transformations</span></button>
+<button type="button" class="seq-btn" data-cat="atelier2" aria-pressed="false"><span class="seq-num">02</span><span class="seq-title"><small>Comparer deux quantités</small>Chercher l’écart</span></button>
+<button type="button" class="seq-btn" data-cat="atelier3" aria-pressed="false"><span class="seq-num">03</span><span class="seq-title"><small>Retrouver une quantité à partir d’un écart</small>Chercher une quantité</span></button>
+<button type="button" class="seq-btn" data-cat="atelier4" aria-pressed="false"><span class="seq-num">04</span><span class="seq-title"><small>Comparer, puis calculer le total</small>Comparaisons en plusieurs étapes</span></button>
+<button type="button" class="seq-btn" data-cat="atelier5" aria-pressed="false"><span class="seq-num">05</span><span class="seq-title"><small>Retrouver un écart ou une quantité</small>Comparaisons variées</span></button>
+<button type="button" class="seq-btn" data-cat="atelier6" aria-pressed="false"><span class="seq-num">06</span><span class="seq-title"><small>Choisir les calculs nécessaires</small>Problèmes additifs variés</span></button>
+<button type="button" class="seq-btn" data-cat="atelier7" aria-pressed="false"><span class="seq-num">07</span><span class="seq-title"><small>Composer des nombres avec des cartes</small>Problèmes ouverts</span></button>
+<button type="button" class="seq-btn" data-cat="all" aria-pressed="false"><span class="seq-num">08</span><span class="seq-title"><small>Parcourir toute la période 2.</small>🎯 Tous les problèmes</span></button>
+</div></aside>
+<main id="gamePage" class="arena">
+<div class="arena-head">
+<div class="arena-top"><div><h2 id="catTitle">Résoudre des problèmes</h2><p class="sub">Problèmes · Période 2</p></div>
+<button class="btn ghost" id="sound" type="button" aria-pressed="true">♫ Sons : ON</button></div>
+<div class="hud"><div class="hud-box"><span>Problème</span><strong id="counter">—</strong></div><div class="hud-box"><span>Atelier</span><strong id="atelier">—</strong></div><div class="hud-box timer"><span>Chronomètre</span><strong>LIBRE</strong></div><div class="hud-box"><span>Score</span><strong id="score">0</strong></div></div>
+<div class="progressrail"><div class="progressbar" id="prog"></div></div>
+</div>
+<div class="panel"><p class="mission preview-intro" id="menuPage">Choisis une catégorie. Observe les <strong>modèles en barres</strong> ou les cartes de chiffres pour résoudre les problèmes.</p>
+<section id="problemPanel" class="hidden">
+<div class="mission" id="problemText"></div>
+<div class="bar-wrap" id="barArea"></div>
+<div class="answer-zone" id="answerZone"></div>
+<div class="feedback" id="feedback" aria-live="polite"></div>
+<div class="actions">
+<button class="btn primary" id="checkBtn" type="button">✓ Vérifier</button>
+<button class="btn orange hidden" id="nextBtn" type="button">Problème suivant →</button>
+<button class="btn ghost" id="menuBtn" type="button">Choisir la mission</button>
+</div>
+</section></div></main></div></div>
+<script>
+const ALL=[
+  {
+    "id": 1,
+    "atelier": 1,
+    "cat": "atelier1",
+    "text": "Le réservoir de ma voiture d’une capacité de 60 litres est plein. J’ai consommé 49 litres lors de mon voyage. Quelle quantité d’essence reste-t-il dans mon réservoir ?",
+    "answer": [
+      11
+    ],
+    "models": [
+      [
+        60,
+        [
+          [
+            49,
+            "litres consommés"
+          ],
+          [
+            "?",
+            "litres restants"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 2,
+    "atelier": 1,
+    "cat": "atelier1",
+    "text": "Dans une forêt, il y avait 287 arbres. Une tempête en arrache 90. Combien d’arbres reste-t-il dans cette forêt ?",
+    "answer": [
+      197
+    ],
+    "models": [
+      [
+        287,
+        [
+          [
+            90,
+            "arbres arrachés"
+          ],
+          [
+            "?",
+            "arbres restants"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 3,
+    "atelier": 1,
+    "cat": "atelier1",
+    "text": "Sofia avait des billes, elle en perd 17. Il lui reste 104 billes après la récréation. Combien de billes Sofia avait-elle avant la récréation ?",
+    "answer": [
+      121
+    ],
+    "models": [
+      [
+        "?",
+        [
+          [
+            17,
+            "billes perdues"
+          ],
+          [
+            104,
+            "billes restantes"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 4,
+    "atelier": 1,
+    "cat": "atelier1",
+    "text": "Victor a acheté un pantalon à 35 euros et un gilet à 36,50 euros. Il reste 8,05 euros dans son porte-monnaie en rentrant chez lui. Combien d’argent Victor avait-il dans son porte-monnaie avant d’effectuer ses achats ?",
+    "answer": [
+      79.55
+    ],
+    "models": [
+      [
+        "?",
+        [
+          [
+            35,
+            "pantalon"
+          ],
+          [
+            "36,50",
+            "gilet"
+          ],
+          [
+            "8,05",
+            "argent restant"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 5,
+    "atelier": 2,
+    "cat": "atelier2",
+    "text": "Aya pèse 37 kg. Son petit frère pèse 26 kg. Quelle est leur différence de poids ?",
+    "answer": [
+      11
+    ],
+    "models": [
+      [
+        37,
+        [
+          [
+            26,
+            "petit frère"
+          ],
+          [
+            "?",
+            "écart"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 6,
+    "atelier": 2,
+    "cat": "atelier2",
+    "text": "Un éléphant a une espérance de vie de 50 ans. Une tortue a une espérance de vie de 120 ans. Quelle est la différence d’espérance de vie de ces deux animaux ?",
+    "answer": [
+      70
+    ],
+    "models": [
+      [
+        120,
+        [
+          [
+            50,
+            "éléphant"
+          ],
+          [
+            "?",
+            "écart"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 7,
+    "atelier": 2,
+    "cat": "atelier2",
+    "text": "Mila a 8 ans. Sa maman a 36 ans. Quelle est leur différence d’âge ? Dans 10 ans, quel âge auront Mila et sa maman ? Quelle sera alors leur différence d’âge ?",
+    "answer": [
+      28,
+      18,
+      46,
+      28
+    ],
+    "models": [
+      [
+        36,
+        [
+          [
+            8,
+            "Mila"
+          ],
+          [
+            "?",
+            "écart aujourd’hui"
+          ]
+        ]
+      ],
+      [
+        "?",
+        [
+          [
+            8,
+            "Mila aujourd’hui"
+          ],
+          [
+            10,
+            "années écoulées"
+          ]
+        ]
+      ],
+      [
+        "?",
+        [
+          [
+            36,
+            "Maman aujourd’hui"
+          ],
+          [
+            10,
+            "années écoulées"
+          ]
+        ]
+      ]
+    ],
+    "fields": [
+      "Écart aujourd’hui",
+      "Âge de Mila dans 10 ans",
+      "Âge de sa maman dans 10 ans",
+      "Écart dans 10 ans"
+    ]
+  },
+  {
+    "id": 8,
+    "atelier": 2,
+    "cat": "atelier2",
+    "text": "Hugo a 28 € dans son porte-monnaie et Pierre a 57 €. Quelle est leur différence d’argent ?",
+    "answer": [
+      29
+    ],
+    "models": [
+      [
+        57,
+        [
+          [
+            28,
+            "Hugo"
+          ],
+          [
+            "?",
+            "écart"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 9,
+    "atelier": 3,
+    "cat": "atelier3",
+    "text": "Robin a 16 ans. Il a 37 ans de moins que son papa. Quel est l’âge de son papa ?",
+    "answer": [
+      53
+    ],
+    "models": [
+      [
+        "?",
+        [
+          [
+            16,
+            "Robin"
+          ],
+          [
+            37,
+            "écart"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 10,
+    "atelier": 3,
+    "cat": "atelier3",
+    "text": "Un lion a une espérance de vie de 50 ans. C’est 15 ans de moins que l’espérance de vie d’une autruche. Quelle est l’espérance de vie d’une autruche ?",
+    "answer": [
+      65
+    ],
+    "models": [
+      [
+        "?",
+        [
+          [
+            50,
+            "lion"
+          ],
+          [
+            15,
+            "écart"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 11,
+    "atelier": 3,
+    "cat": "atelier3",
+    "text": "Max a 56 billes. C’est 24 billes de plus que sa sœur Capucine. Combien de billes Capucine a-t-elle ?",
+    "answer": [
+      32
+    ],
+    "models": [
+      [
+        56,
+        [
+          [
+            "?",
+            "Capucine"
+          ],
+          [
+            24,
+            "écart"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 12,
+    "atelier": 3,
+    "cat": "atelier3",
+    "text": "Monsieur Gala a récolté 867 kg de pommes. Il a récolté 245 kg de moins que Madame Golden. Quelle est la masse de pommes récoltées par Madame Golden ?",
+    "answer": [
+      1112
+    ],
+    "models": [
+      [
+        "?",
+        [
+          [
+            867,
+            "M. Gala"
+          ],
+          [
+            245,
+            "écart"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 13,
+    "atelier": 4,
+    "cat": "atelier4",
+    "text": "Madame Texto a reçu 18 messages sur son téléphone aujourd’hui. C’est 7 de plus qu’hier. Combien de messages a-t-elle reçus au cours de ces 2 derniers jours ?",
+    "answer": [
+      29
+    ],
+    "models": [
+      [
+        18,
+        [
+          [
+            "?",
+            "hier"
+          ],
+          [
+            7,
+            "écart"
+          ]
+        ]
+      ],
+      [
+        "?",
+        [
+          [
+            "?",
+            "hier"
+          ],
+          [
+            18,
+            "aujourd’hui"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 14,
+    "atelier": 4,
+    "cat": "atelier4",
+    "text": "Pour son anniversaire, Robin a acheté des ballons rouges et des ballons verts. Il a acheté 37 ballons rouges, c’est 12 de plus que de ballons verts. Combien de ballons a-t-il acheté en tout ?",
+    "answer": [
+      62
+    ],
+    "models": [
+      [
+        37,
+        [
+          [
+            "?",
+            "verts"
+          ],
+          [
+            12,
+            "écart"
+          ]
+        ]
+      ],
+      [
+        "?",
+        [
+          [
+            37,
+            "rouges"
+          ],
+          [
+            "?",
+            "verts"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 15,
+    "atelier": 4,
+    "cat": "atelier4",
+    "text": "Le capitaine d’un bateau compte les personnes qui montent à bord. Il y a 78 adultes. Il y a 24 enfants de moins que d’adultes. Combien de passagers sont montés sur le bateau au total ?",
+    "answer": [
+      132
+    ],
+    "models": [
+      [
+        78,
+        [
+          [
+            "?",
+            "enfants"
+          ],
+          [
+            24,
+            "écart"
+          ]
+        ]
+      ],
+      [
+        "?",
+        [
+          [
+            78,
+            "adultes"
+          ],
+          [
+            "?",
+            "enfants"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 16,
+    "atelier": 4,
+    "cat": "atelier4",
+    "text": "Vendredi, le cirque Binder a accueilli 250 spectateurs. Samedi, il a accueilli 60 spectateurs de moins que vendredi. Dimanche, il a accueilli 30 spectateurs de plus que samedi. Combien de spectateurs le cirque a-t-il accueillis au total ?",
+    "answer": [
+      660
+    ],
+    "models": [
+      [
+        250,
+        [
+          [
+            "?",
+            "samedi"
+          ],
+          [
+            60,
+            "écart"
+          ]
+        ]
+      ],
+      [
+        "?",
+        [
+          [
+            "?",
+            "samedi"
+          ],
+          [
+            30,
+            "écart"
+          ]
+        ]
+      ],
+      [
+        "?",
+        [
+          [
+            250,
+            "vendredi"
+          ],
+          [
+            "?",
+            "samedi"
+          ],
+          [
+            "?",
+            "dimanche"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 17,
+    "atelier": 5,
+    "cat": "atelier5",
+    "text": "Anouk mesure 147 cm. Max mesure 163 cm. Quelle est leur différence de taille ?",
+    "answer": [
+      16
+    ],
+    "models": [
+      [
+        163,
+        [
+          [
+            147,
+            "Anouk"
+          ],
+          [
+            "?",
+            "écart"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 18,
+    "atelier": 5,
+    "cat": "atelier5",
+    "text": "L’école Jules Ferry compte 258 élèves. C’est 56 élèves de moins que l’école Jacques Prévert ? Combien d’élèves y a-t-il à l’école Jacques Prévert ?",
+    "answer": [
+      314
+    ],
+    "models": [
+      [
+        "?",
+        [
+          [
+            258,
+            "Jules Ferry"
+          ],
+          [
+            56,
+            "écart"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 19,
+    "atelier": 5,
+    "cat": "atelier5",
+    "text": "Nassima a 12 ans. C’est 14 ans de moins que Liang. Quel âge a Liang ?",
+    "answer": [
+      26
+    ],
+    "models": [
+      [
+        "?",
+        [
+          [
+            12,
+            "Nassima"
+          ],
+          [
+            14,
+            "écart"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 20,
+    "atelier": 5,
+    "cat": "atelier5",
+    "text": "Enzo et Capucine jouent aux fléchettes. Enzo a marqué 167 points. Il a marqué 39 points de plus que Capucine. Combien de points ont-ils marqués à eux deux ?",
+    "answer": [
+      295
+    ],
+    "models": [
+      [
+        167,
+        [
+          [
+            "?",
+            "Capucine"
+          ],
+          [
+            39,
+            "écart"
+          ]
+        ]
+      ],
+      [
+        "?",
+        [
+          [
+            167,
+            "Enzo"
+          ],
+          [
+            "?",
+            "Capucine"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 21,
+    "atelier": 6,
+    "cat": "atelier6",
+    "text": "Sofia achète un pull à 29 euros, une robe à 36,50 euros et des chaussures à 43,90 euros. Combien paie-t-elle au total pour ses achats ?",
+    "answer": [
+      109.4
+    ],
+    "models": [
+      [
+        "?",
+        [
+          [
+            29,
+            "pull"
+          ],
+          [
+            "36,50",
+            "robe"
+          ],
+          [
+            "43,90",
+            "chaussures"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 22,
+    "atelier": 6,
+    "cat": "atelier6",
+    "text": "Vendredi, un cirque a accueilli 250 spectateurs. Samedi, il a accueilli 32 spectateurs de moins que vendredi. Dimanche, il a accueilli 41 spectateurs de plus que samedi. Combien de spectateurs le cirque a-t-il accueillis au total ?",
+    "answer": [
+      727
+    ],
+    "models": [
+      [
+        250,
+        [
+          [
+            "?",
+            "samedi"
+          ],
+          [
+            32,
+            "écart"
+          ]
+        ]
+      ],
+      [
+        "?",
+        [
+          [
+            "?",
+            "samedi"
+          ],
+          [
+            41,
+            "écart"
+          ]
+        ]
+      ],
+      [
+        "?",
+        [
+          [
+            250,
+            "vendredi"
+          ],
+          [
+            "?",
+            "samedi"
+          ],
+          [
+            "?",
+            "dimanche"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 23,
+    "atelier": 6,
+    "cat": "atelier6",
+    "text": "Anouk joue sur un jeu de plateau. Elle est sur la case 32. Elle doit reculer de 7 cases puis avancer de 3 cases. Sur quelle case va-t-elle arriver ?",
+    "answer": [
+      28
+    ],
+    "models": [
+      [
+        32,
+        [
+          [
+            "?",
+            "après le recul"
+          ],
+          [
+            7,
+            "recul"
+          ]
+        ]
+      ],
+      [
+        "?",
+        [
+          [
+            "?",
+            "après le recul"
+          ],
+          [
+            3,
+            "avance"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 24,
+    "atelier": 6,
+    "cat": "atelier6",
+    "text": "Victor, Nassima et Saïd jouent à un jeu. À eux trois, ils ont marqué 143 points. Victor a marqué 67 points. Saïd a marqué 39 points de moins que Victor. Combien de points Nassima a-t-elle marqués ?",
+    "answer": [
+      48
+    ],
+    "models": [
+      [
+        67,
+        [
+          [
+            "?",
+            "Saïd"
+          ],
+          [
+            39,
+            "écart"
+          ]
+        ]
+      ],
+      [
+        143,
+        [
+          [
+            67,
+            "Victor"
+          ],
+          [
+            "?",
+            "Saïd"
+          ],
+          [
+            "?",
+            "Nassima"
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": 25,
+    "atelier": 7,
+    "cat": "atelier7",
+    "text": "Trouve le plus grand nombre à quatre chiffres que tu peux écrire avec quatre cartes différentes.",
+    "answer": [
+      9865
+    ],
+    "models": null,
+    "fields": null,
+    "cards": [
+      2,
+      5,
+      6,
+      8,
+      9
+    ]
+  },
+  {
+    "id": 26,
+    "atelier": 7,
+    "cat": "atelier7",
+    "text": "Trouve le plus petit nombre à quatre chiffres que tu peux écrire avec quatre cartes différentes.",
+    "answer": [
+      3067
+    ],
+    "models": null,
+    "fields": null,
+    "cards": [
+      3,
+      6,
+      7,
+      8,
+      0
+    ]
+  },
+  {
+    "id": 27,
+    "atelier": 7,
+    "cat": "atelier7",
+    "text": "Trouve tous les nombres pairs à deux chiffres que tu peux écrire avec deux cartes différentes.",
+    "answer": [
+      24,
+      32,
+      34,
+      42
+    ],
+    "models": null,
+    "fields": null,
+    "cards": [
+      2,
+      3,
+      4
+    ],
+    "unordered": true
+  },
+  {
+    "id": 28,
+    "atelier": 7,
+    "cat": "atelier7",
+    "text": "Trouve tous les nombres impairs à deux chiffres que tu peux écrire avec deux cartes différentes.",
+    "answer": [
+      67,
+      69,
+      79,
+      97
+    ],
+    "models": null,
+    "fields": null,
+    "cards": [
+      6,
+      7,
+      9
+    ],
+    "unordered": true
+  }
+];
+const TITLES={"atelier1":"Transformations","atelier2":"Chercher l’écart","atelier3":"Chercher une quantité","atelier4":"Comparaisons en plusieurs étapes","atelier5":"Comparaisons variées","atelier6":"Problèmes additifs variés","atelier7":"Problèmes ouverts","all":"Tous les problèmes"};
+let list=[],idx=0,score=0,answered=false;
+const menuPage=document.getElementById('menuPage'),gamePage=document.getElementById('problemPanel'),barArea=document.getElementById('barArea'),problemText=document.getElementById('problemText'),answerZone=document.getElementById('answerZone'),feedback=document.getElementById('feedback'),nextBtn=document.getElementById('nextBtn'),checkBtn=document.getElementById('checkBtn');
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function normalizeLabel(txt){return String(txt||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
+function getPartClass(label,index){
+  const t=normalizeLabel(label);
+
+  // Couleurs explicitement indiquées dans l'énoncé.
+  if(/jaune|vanille/.test(t))return 'yellow';
+  if(/rouge/.test(t))return 'red';
+  if(/bleu/.test(t))return 'blue';
+  if(/vert/.test(t))return 'green';
+  if(/chocolat/.test(t))return 'brown';
+  if(/violet|mauve|pourpre/.test(t))return 'purple';
+  if(/orange/.test(t))return 'orangefill';
+
+  // Catégories faciles à distinguer visuellement.
+  if(/fille/.test(t))return 'pink';
+  if(/garcon/.test(t))return 'blue';
+  if(/chat/.test(t))return 'orangefill';
+  if(/chien/.test(t))return 'brown';
+  if(/bateau/.test(t))return 'cyan';
+  if(/dinosaure/.test(t))return 'green';
+  if(/vache/.test(t))return 'beige';
+  if(/cheval/.test(t))return 'brown';
+  if(/mouton/.test(t))return 'gray';
+  if(/absent/.test(t))return 'red';
+  if(/present/.test(t))return 'green';
+  if(/nouveau/.test(t))return 'lime';
+
+  // Objets / personnes : couleurs distinctes mais stables.
+  if(/lina/.test(t))return 'pink';
+  if(/timeo|thimeo/.test(t))return 'blue';
+  if(/sacha/.test(t))return 'purple';
+  if(/zoe/.test(t))return 'cyan';
+  if(/cartable/.test(t))return 'blue';
+  if(/taille-crayon/.test(t))return 'orangefill';
+  if(/regle/.test(t))return 'yellow';
+  if(/trousse/.test(t))return 'purple';
+  if(/livre|bd|bande dessinee/.test(t))return 'green';
+
+  // Pour les autres parties, alternance douce afin de bien les distinguer.
+  const fallback=['gray','blue','green','yellow','pink'];
+  return fallback[index%fallback.length];
+}
+function orderParts(parts){
+  const copy=[...parts];
+
+  // Pour les poches : gauche toujours à gauche, droite toujours à droite.
+  if(copy.some(p=>normalizeLabel(p[1]).includes('poche gauche')) &&
+     copy.some(p=>normalizeLabel(p[1]).includes('poche droite'))){
+    copy.sort((a,b)=>{
+      const A=normalizeLabel(a[1]),B=normalizeLabel(b[1]);
+      if(A.includes('poche gauche'))return -1;
+      if(B.includes('poche gauche'))return 1;
+      if(A.includes('poche droite'))return 1;
+      if(B.includes('poche droite'))return -1;
+      return 0;
+    });
+  }
+  return copy;
+}
+function numberValue(v){
+  const m=String(v).replace(',','.').match(/\d+(?:\.\d+)?/);
+  return m ? Number(m[0]) : null;
+}
+function proportionalParts(total,parts){
+  const vals=parts.map(p=>numberValue(p[0]));
+  const totalNum=numberValue(total);
+
+  // Si une seule partie est inconnue et que le tout est connu, on la déduit.
+  const unknowns=vals.map((v,i)=>v===null?i:-1).filter(i=>i>=0);
+  if(totalNum!==null && unknowns.length===1){
+    const known=vals.reduce((s,v)=>s+(v||0),0);
+    vals[unknowns[0]]=Math.max(0,totalNum-known);
+  }
+
+  // Si le tout est inconnu, la somme des parties connues sert de référence.
+  let reference=totalNum;
+  if(reference===null){
+    const sum=vals.reduce((s,v)=>s+(v||0),0);
+    if(sum>0) reference=sum;
+  }
+
+  // Sécurité : si les données ne permettent pas un calcul, on revient à des parts égales.
+  if(!reference || vals.some(v=>v===null)){
+    return parts.map(()=>100/parts.length);
+  }
+
+  const sum=vals.reduce((a,b)=>a+b,0);
+  return sum>0 ? vals.map(v=>v/sum*100) : parts.map(()=>100/parts.length);
+}
+function partsBar(total,parts,scale=100){
+  const ordered=orderParts(parts);
+  const widths=proportionalParts(total,ordered);
+  return `<div class="bar-model" style="width:${scale}%">
+    <div class="total-label">Le Tout</div>
+    <div class="total-bar">${esc(total)}</div>
+    <div class="parts">${ordered.map((p,i)=>`<div class="part ${getPartClass(p[1],i)}" style="width:${widths[i]}%"><div class="val">${esc(p[0])}</div><div class="lab">${esc(p[1])}</div></div>`).join('')}</div>
+  </div>`;
+}
+
+function renderBar(p){
+  if(p.cards){
+    return '<div class="cards" aria-label="Cartes de chiffres">'+p.cards.map(d=>`<span class="mini-card">${d}</span>`).join('')+'</div>';
+  }
+  return '<div class="compare-grid">'+p.models.map(([total,parts])=>partsBar(total,parts)).join('')+'</div>';
+}
+function renderAnswer(p){
+  if(p.fields){
+    answerZone.innerHTML='<div class="compare-questions">'+p.fields.map((label,i)=>`<label class="compare-question" for="answer${i}"><strong>${esc(label)}</strong><input id="answer${i}" inputmode="numeric" autocomplete="off"></label>`).join('')+'</div>';
+    return;
+  }
+  const placeholder=p.unordered?'Ex. 12 ; 14 ; 16':'Écris ta réponse';
+  answerZone.innerHTML=`<input class="answer" aria-label="Ta réponse" inputmode="${p.unordered?'text':'decimal'}" autocomplete="off" placeholder="${placeholder}">`;
+}
+function readNumber(value){
+  const cleaned=value.trim().replace(/\s/g,'').replace(/€$/,'').replace(',','.');
+  return /^\d+(?:\.\d+)?$/.test(cleaned)?Number(cleaned):NaN;
+}
+function currentAnswer(p){
+  const inputs=[...answerZone.querySelectorAll('input')].map(input=>input.value.trim());
+  if(inputs.some(value=>!value))return [];
+  const values=p.unordered?inputs[0].split(/[\s,;]+/):inputs;
+  const numbers=values.filter(Boolean).map(readNumber);
+  return p.unordered?numbers.sort((a,b)=>a-b):numbers;
+}
+const formatAnswer=p=>p.answer.map(value=>value.toLocaleString('fr-FR')).join(' ; ');
+
+function render(){answered=false;feedback.textContent='';nextBtn.classList.add('hidden');checkBtn.classList.remove('hidden');const p=list[idx];document.getElementById('counter').textContent=`Problème ${p.id} · ${idx+1} / ${list.length}`;document.getElementById('atelier').textContent=`Atelier ${p.atelier}`;document.getElementById('score').textContent=`Score : ${score}`;document.getElementById('prog').style.width=`${(idx/list.length)*100}%`;problemText.textContent=p.text;barArea.innerHTML=renderBar(p);renderAnswer(p);
+document.querySelectorAll('.compare-question input').forEach(inp=>{
+  inp.addEventListener('click',e=>e.stopPropagation());
+  inp.addEventListener('mousedown',e=>e.stopPropagation());
+  inp.addEventListener('touchstart',e=>e.stopPropagation(),{passive:true});
+});
+}
+function check(){
+  if(answered)return;
+  const p=list[idx], got=currentAnswer(p);
+  if(!got.length){feedback.innerHTML='<span class="bad">Complète ta réponse.</span>';return;}
+  const ok=got.length===p.answer.length&&got.every((value,i)=>value===p.answer[i]);
+  answered=true;
+  sound(ok?'good':'bad');
+  if(ok)score++;
+  const answers=formatAnswer(p);
+  feedback.innerHTML=ok?'<span class="ok">Bravo ! Réponse correcte.</span>':`<span class="bad">Réponse attendue : ${esc(answers)}.</span>`;
+  answerZone.querySelectorAll('input').forEach(input=>{input.readOnly=true});
+  document.getElementById('score').textContent=`Score : ${score}`;
+  checkBtn.classList.add('hidden');
+  nextBtn.classList.remove('hidden');
+}
+function start(cat){list=cat==='all'?[...ALL]:ALL.filter(p=>p.cat===cat);idx=0;score=0;document.getElementById('catTitle').textContent=TITLES[cat];menuPage.classList.add('hidden');gamePage.classList.remove('hidden');
+  for(const button of missionButtons){
+    const active=button.dataset.cat===cat;
+    button.classList.toggle('active',active);
+    button.setAttribute('aria-pressed',String(active));
+  }
+  render();
+}
+const missionButtons=document.querySelectorAll('[data-cat]');
+const motion=matchMedia('(prefers-reduced-motion: reduce)');
+missionButtons.forEach(b=>b.addEventListener('click',()=>{
+  start(b.dataset.cat);
+  sound('tap');
+  document.getElementById('gamePage').scrollIntoView({behavior:motion.matches?'instant':'smooth',block:'start'});
+}));
+checkBtn.addEventListener('click',check);
+answerZone.addEventListener('keydown',event=>{if(event.key==='Enter')check()});
+nextBtn.addEventListener('click',()=>{if(idx<list.length-1){idx++;render()}else{document.getElementById('prog').style.width='100%';feedback.innerHTML=`<span class="ok">Catégorie terminée : ${score} / ${list.length}.</span>`;nextBtn.classList.add('hidden');sound('end')}});
+document.getElementById('menuBtn').addEventListener('click',()=>{document.querySelector('.seq-btn.active')?.focus()});
+
+const $=id=>document.getElementById(id);
+let audioCtx, muted=false;
+function audioStart(){if(muted)return null;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();return audioCtx}catch{return null}}
+function beep(freq,dur,type='sine',gain=.07,delay=0,slide=0){const a=audioStart();if(!a)return;const t=a.currentTime+delay,o=a.createOscillator(),g=a.createGain();o.type=type;o.frequency.setValueAtTime(freq,t);if(slide)o.frequency.exponentialRampToValueAtTime(Math.max(35,freq+slide),t+dur);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(gain,t+.012);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g).connect(a.destination);o.start(t);o.stop(t+dur+.02)}
+function sound(kind){if(kind==='good'){beep(490,.12,'triangle',.055);beep(740,.14,'sine',.065,.105);beep(988,.2,'triangle',.055,.22)}else if(kind==='bad'){beep(235,.16,'sawtooth',.035,0,-105);beep(140,.2,'triangle',.043,.14,-60)}else if(kind==='end'){[440,587,740,988].forEach((f,i)=>beep(f,.15,'triangle',.065,i*.105))}else beep(360,.08,'sine',.033,0,105)}
+$('sound').onclick=()=>{muted=!muted;$('sound').textContent=muted?'♫ Sons : OFF':'♫ Sons : ON';$('sound').setAttribute('aria-pressed',String(!muted));if(!muted)sound('tap')};
+const canvas=$('stars'),ctx=canvas.getContext('2d');if(ctx&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){let stars=[],w=0,h=0;function resize(){w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;stars=Array.from({length:Math.min(95,Math.max(25,Math.floor(w*h/11000)))},()=>({x:Math.random()*w,y:Math.random()*h,r:.4+Math.random()*1.25,s:.15+Math.random()*.45,p:Math.random()*6.28}))}window.addEventListener('resize',resize,{passive:true});resize();function draw(now){ctx.clearRect(0,0,w,h);stars.forEach(s=>{s.y+=s.s;if(s.y>h+3)s.y=-3;const alpha=.18+.35*(1+Math.sin(now*.001+s.p))/2;ctx.fillStyle=`rgba(118,232,255,${alpha})`;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill()});requestAnimationFrame(draw)}requestAnimationFrame(draw)}
+</script>
+</body>
+</html>
