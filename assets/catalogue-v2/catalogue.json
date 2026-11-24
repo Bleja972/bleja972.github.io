@@ -1,5 +1,30 @@
 [
   {
+    "id": "mission-problemes-ce2-periode-2",
+    "slug": "mission-problemes-ce2-periode-2",
+    "title": "Mission Problèmes CE2 — Période 2",
+    "url": "/jeux/mission-problemes-ce2-periode-2/",
+    "path": "/jeux/mission-problemes-ce2-periode-2/",
+    "description": "28 problèmes en 7 ateliers, avec modèles en barres, cartes de chiffres et correction.",
+    "short": "28 problèmes en 7 ateliers, avec modèles en barres, cartes de chiffres et correction.",
+    "objective": "Résoudre des problèmes additifs et des problèmes ouverts.",
+    "skill": "problemes",
+    "skillName": "Résoudre des problèmes",
+    "category": "problemes-ce2",
+    "group": "problemes",
+    "groupName": "Problèmes",
+    "level": "CE2",
+    "levels": [
+      "CE2"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "thumb": "/assets/catalogue-v2/captures/mission-problemes-ce2-periode-2.webp",
+    "imageAlt": "Mission Problèmes CE2 en pleine partie : un problème de transformation et son modèle en barres",
+    "playClicks": 0
+  },
+  {
     "id": "mission-fractions-ce1-revisions",
     "slug": "mission-fractions-ce1-revisions",
     "title": "Mission Fractions CE1 — Révisions",
