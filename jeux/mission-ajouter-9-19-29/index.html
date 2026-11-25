@@ -28,6 +28,24 @@
 .controls button:disabled{opacity:.6}
 [hidden]{display:none!important}
 @media(max-width:520px){#game .grouped-material{grid-template-columns:1fr}.pieces{min-height:50px}.controls button{flex:1 1 135px}}
+
+#game .btn[data-add="9"], #game #add { --button-neon:#24eaff; }
+#game .btn[data-add="19"], #game #remove { --button-neon:#ff72cf; }
+#game .btn[data-add="29"] { --button-neon:#c68aff; }
+#game #check { --button-neon:#ffe15c; }
+#game #next { --button-neon:#8cff54; }
+#game #sound { --button-neon:#ffb44d; }
+#game :is(.modes,.controls,.arena-top) .btn {
+  border:2px solid var(--button-neon);
+  background:linear-gradient(155deg,color-mix(in srgb,var(--button-neon) 26%,#07111e),#060913 82%);
+  color:#fff;
+  text-shadow:0 0 8px color-mix(in srgb,var(--button-neon) 65%,transparent);
+  box-shadow:0 5px 0 #020409,0 0 12px color-mix(in srgb,var(--button-neon) 62%,transparent),inset 0 1px #fff5;
+}
+#game :is(.modes,.controls,.arena-top) .btn:is(:hover,[aria-pressed="true"]):not(:disabled) {
+  box-shadow:0 5px 0 #020409,0 0 19px color-mix(in srgb,var(--button-neon) 80%,transparent),inset 0 1px #fff8;
+}
+#game :is(.modes,.controls,.arena-top) .btn:disabled {box-shadow:none;opacity:.52}
 </style>
 </head>
 <body>
@@ -77,16 +95,20 @@ function sound(kind) {
   try {
     audio ||= new (window.AudioContext || window.webkitAudioContext)();
     if(audio.state==='suspended')audio.resume().catch(()=>{});
-    const frequencies = kind==='good'?[490,740,988]:kind==='bad'?[230,150]:[450];
+    const frequencies = kind==='good'?[440,660,880,1320]:kind==='bad'?[230,150]:[450];
     frequencies.forEach((frequency,index)=>{
-      const oscillator=audio.createOscillator(), gain=audio.createGain(), t=audio.currentTime+index*.09;
-      oscillator.type='triangle';
-      oscillator.frequency.value=frequency;
-      gain.gain.setValueAtTime(.04,t);
-      gain.gain.exponentialRampToValueAtTime(.0001,t+.15);
+      const success=kind==='good';
+      const oscillator=audio.createOscillator(), gain=audio.createGain(), t=audio.currentTime+index*(success ? .075:.09);
+      const duration=success&&index===frequencies.length-1 ? .28 : .15;
+      oscillator.type=success&&index%2===0?'sine':'triangle';
+      oscillator.frequency.setValueAtTime(success?frequency*.78:frequency,t);
+      if(success)oscillator.frequency.exponentialRampToValueAtTime(frequency,t+.05);
+      gain.gain.setValueAtTime(.0001,t);
+      gain.gain.exponentialRampToValueAtTime(success ? .065:.04,t+.012);
+      gain.gain.exponentialRampToValueAtTime(.0001,t+duration);
       oscillator.connect(gain).connect(audio.destination);
       oscillator.start(t);
-      oscillator.stop(t+.16);
+      oscillator.stop(t+duration+.01);
     });
   } catch {}
 }
