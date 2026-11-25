@@ -89,7 +89,7 @@
   background:repeating-linear-gradient(to bottom,#0006 0 1px,transparent 1px 10%),var(--rod);
 }
 @media(max-width:390px){#game .equation{font-size:clamp(1.25rem,7vw,1.65rem)}}
-#game .print-pdf {
+.mast .print-pdf {
   display:inline-flex;align-items:center;justify-content:center;min-height:46px;
   padding:9px 20px;border:2px solid #fff29b;border-radius:12px;
   background:linear-gradient(#fff384 0%,#ffc83c 49%,#ffa824 51%,#f48a15 100%);
@@ -97,10 +97,11 @@
   box-shadow:inset 0 2px 0 #fff9,0 6px 0 #8c4307,0 0 17px #ffbd527d;
   transition:transform .12s,box-shadow .12s;
 }
-#game .print-pdf:hover {filter:brightness(1.09)}
-#game .print-pdf:active {transform:translateY(4px);box-shadow:inset 0 1px 0 #fff8,0 2px 0 #8c4307,0 0 12px #ffbd527d}
-#game .print-pdf:focus-visible {outline:2px solid #fff;outline-offset:3px}
-@media(prefers-reduced-motion:reduce){#game .print-pdf {transition:none}}
+.mast .print-pdf:hover {filter:brightness(1.09)}
+.mast .print-pdf:active {transform:translateY(4px);box-shadow:inset 0 1px 0 #fff8,0 2px 0 #8c4307,0 0 12px #ffbd527d}
+.mast .print-pdf:focus-visible {outline:2px solid #fff;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.mast .print-pdf {transition:none}}
+.mast-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
 </style>
 </head>
 <body>
@@ -110,7 +111,7 @@
 <span class="eyebrow">LABORATOIRE ORBITAL · CE1 · CALCUL MENTAL</span>
 <h1>MISSION <em>+9, +19, +29</em></h1>
 <p>Deux niveaux · Ajoute des dizaines, puis enlève une unité.</p>
-</div><a href="/?lang=fr#catalogue" target="_top" class="status-pill"><i></i> Tous les jeux</a></div></header>
+</div><div class="mast-actions"><a class="btn print-pdf" href="/pdf/ajouter-9-19-29-exercices.pdf" target="_blank" rel="noopener">🖨 PDF à imprimer</a><a href="/?lang=fr#catalogue" target="_top" class="status-pill"><i></i> Tous les jeux</a></div></div></header>
 <div class="layout"><main id="game" class="arena">
 <div class="arena-head"><div class="arena-top">
 <div class="horizontal-tools game-display" data-landscape-in-flow><button id="horizontal-toggle" type="button">↻ Affichage horizontal</button></div>
@@ -125,7 +126,7 @@
 </div><button id="sound" type="button" class="btn ghost" aria-pressed="true">♫ Sons : ON</button>
 </div></div>
 <div class="panel">
-<div class="controls" style="margin-bottom:16px"><a class="btn print-pdf" href="/pdf/ajouter-9-19-29-exercices.pdf" target="_blank" rel="noopener">🖨 PDF à imprimer</a></div>
+
 <form id="exercise">
 <div class="equation"><span id="operation"></span><input id="answer" aria-label="Résultat de l’addition" type="text" inputmode="none" autocomplete="off" maxlength="3"></div>
 <div class="keypad" id="keypad" role="group" aria-label="Pavé numérique">
