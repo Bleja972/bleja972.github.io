@@ -4,6 +4,15 @@
  */
 (()=>{'use strict';
 const T={
+'L’ours de la banquise':'El oso del hielo','L\'ours de la banquise':'El oso del hielo',
+'Mission Néon':'Misión Neón','Le robot des cristaux':'El robot de los cristales',
+'Choisir un défi':'Elegir un reto','Choisis un défi':'Elige un reto',
+'Défi suivant':'Siguiente reto','Lancer':'Iniciar','Démarrer':'Empezar',
+'Déplacements':'Movimientos','Avancer':'Avanzar','Tourner à gauche':'Girar a la izquierda',
+'Tourner à droite':'Girar a la derecha','Ramasser':'Recoger','Poissons':'Peces',
+'Poisson':'Pez','Cristaux':'Cristales','Cristal':'Cristal',
+'Commandes':'Comandos','Programme':'Programa','Exécuter':'Ejecutar',
+'Retour aux jeux':'Volver a los juegos',
 '↻ Affichage horizontal':'↻ Vista horizontal','← Retour au blog':'← Volver al blog',
 '← Retour aux jeux':'← Volver a los juegos','← Les jeux de CP':'← Juegos de CP',
 '← Les jeux de CE2':'← Juegos de CE2','← Jeux de numération CE1':'← Juegos de numeración CE1',
