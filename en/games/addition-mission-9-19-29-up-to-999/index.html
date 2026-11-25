@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mission +9, +19, +29 — Up to 999</title>
+<link rel="stylesheet" href="/evaluation_periode1_numeration/arcade.css?v=mission-orbitale-1">
+<style>
+.wrap .layout{grid-template-columns:1fr}
+#game .arena-top{flex-wrap:wrap;gap:16px}
+.modes,.controls{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.modes button[aria-pressed="true"]{outline:2px solid #ffe675;outline-offset:3px}
+.equation{display:flex;justify-content:center;align-items:center;gap:clamp(5px,2vw,18px);font-size:clamp(1.65rem,6vw,4.2rem);font-weight:900;color:#ffe675;white-space:nowrap;margin:0 auto 18px}
+#answer{width:2.25em;min-width:0;font:inherit;text-align:center;color:#ffe675;background:#061727;border:2px solid #55ecff;border-radius:12px;padding:.1em;box-shadow:0 0 13px #37eaff50}
+#game .mission{text-align:center}
+#game .grouped-material{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.tray{border:1px solid #34788f;border-radius:15px;background:#090e19;padding:10px;min-width:0}
+.tray h3{text-align:center;color:#ffe675;margin:0 0 10px}
+.pieces{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:center;gap:5px;min-height:clamp(65px,14vw,135px)}
+.bundle{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:center;gap:4px}
+.bundle + .bundle{margin-inline-start:10px}
+.pieces .block10,.pieces .block1{position:relative}
+.unit-removed::after{content:"";position:absolute;inset:45% -12% auto;height:3px;background:#fff;box-shadow:0 0 4px #ff395d,0 0 8px #ff395d;transform:rotate(-45deg)}
+.pieces .arriving{animation:arrive .52s ease-out both}
+@keyframes arrive{0%{opacity:0;transform:translateY(-36px) scale(.7);filter:brightness(2.5)}70%{transform:translateY(3px) scale(1.06)}100%{opacity:1;transform:none}}
+#game .feedback{min-height:2.2em;text-align:center;color:#eefaff;margin:14px 0 0}
+#game .feedback.good{color:#a3ffd1}
+#game .feedback.bad{color:#ffacbb}
+.controls button:disabled{opacity:.6}
+[hidden]{display:none!important}
+@media(max-width:520px){#game .grouped-material{grid-template-columns:1fr}.pieces{min-height:50px}.controls button{flex:1 1 135px}}
+
+#game .btn[data-add="9"], #game #add { --button-neon:#24eaff; }
+#game .btn[data-add="19"], #game #remove { --button-neon:#ff72cf; }
+#game .btn[data-add="29"] { --button-neon:#c68aff; }
+#game #check { --button-neon:#ffe15c; }
+#game #next { --button-neon:#8cff54; }
+#game #sound { --button-neon:#ffb44d; }
+#game :is(.modes,.controls,.arena-top) .btn {
+  border:2px solid var(--button-neon);
+  background:linear-gradient(155deg,color-mix(in srgb,var(--button-neon) 26%,#07111e),#060913 82%);
+  color:#fff;
+  text-shadow:0 0 8px color-mix(in srgb,var(--button-neon) 65%,transparent);
+  box-shadow:0 5px 0 #020409,0 0 12px color-mix(in srgb,var(--button-neon) 62%,transparent),inset 0 1px #fff5;
+}
+#game :is(.modes,.controls,.arena-top) .btn:is(:hover,[aria-pressed="true"]):not(:disabled) {
+  box-shadow:0 5px 0 #020409,0 0 19px color-mix(in srgb,var(--button-neon) 80%,transparent),inset 0 1px #fff8;
+}
+#game :is(.modes,.controls,.arena-top) .btn:disabled {box-shadow:none;opacity:.52}
+
+#game .game-display.bleja-landscape-tools {position:static;width:auto;padding:0;max-width:100%}
+#game .game-display #horizontal-toggle {
+  border-color:#c68aff;background:#211536;color:#fff;box-shadow:0 0 11px #c68aff80,0 4px #0c0616;
+}
+#game #horizontal-status {background:#111c30;color:#eefaff;border-color:#537f9e}
+#game .keypad {
+  display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:9px;
+  width:min(100%,32rem);margin:0 auto 16px;
+}
+#game .keypad button {
+  min-height:44px;padding:3px;border:2px solid var(--key-neon);border-radius:11px;
+  background:linear-gradient(#17243a,#070b15);color:#fff;font-size:1.32rem;font-weight:900;
+  box-shadow:0 4px #030409,0 0 9px color-mix(in srgb,var(--key-neon) 65%,transparent);
+}
+#game .keypad button:active {transform:translateY(2px)}
+#game .keypad .erase {grid-column:span 2;font-size:1rem}
+@media(max-width:420px){#game .keypad{gap:6px}}
+@media(orientation:landscape) and (max-height:550px) {
+  .wrap .mast {padding-block:8px}
+  .mast h1{font-size:clamp(1.05rem,4vw,1.7rem);margin:0}
+  #game .arena-head,#game .panel{padding-block:8px}
+  #game .equation{font-size:clamp(1.5rem,5vw,2.45rem);margin-bottom:9px}
+  #game .grouped-material{grid-template-columns:repeat(2,minmax(0,1fr));margin:10px 0}
+  #game .pieces{min-height:60px}
+  #game .keypad{grid-template-columns:repeat(12,minmax(0,1fr));width:min(100%,42rem)}
+}
+
+#game .level-two {--button-neon:#66dbff}
+#game .level-three {--button-neon:#ff79cf}
+#game #answer {width:2.8em}
+#game #hundredsTray {grid-column:1/-1}
+#game #hundreds {gap:12px;justify-content:center}
+.hundred {
+  display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:2px;
+  width:clamp(100px,20vw,156px);padding:5px;border:1px solid #6786a4;
+  border-radius:8px;background:#101b29;
+}
+.hundred-ten {
+  height:clamp(53px,9vw,92px);border-radius:2px;
+  background:repeating-linear-gradient(to bottom,#0006 0 1px,transparent 1px 10%),var(--rod);
+}
+@media(max-width:390px){#game .equation{font-size:clamp(1.25rem,7vw,1.65rem)}}
+.mast .print-pdf {
+  display:inline-flex;align-items:center;justify-content:center;min-height:46px;
+  padding:9px 20px;border:2px solid #fff29b;border-radius:12px;
+  background:linear-gradient(#fff384 0%,#ffc83c 49%,#ffa824 51%,#f48a15 100%);
+  color:#241200;font-weight:900;text-decoration:none;text-shadow:0 1px #fff8;
+  box-shadow:inset 0 2px 0 #fff9,0 6px 0 #8c4307,0 0 17px #ffbd527d;
+  transition:transform .12s,box-shadow .12s;
+}
+.mast .print-pdf:hover {filter:brightness(1.09)}
+.mast .print-pdf:active {transform:translateY(4px);box-shadow:inset 0 1px 0 #fff8,0 2px 0 #8c4307,0 0 12px #ffbd527d}
+.mast .print-pdf:focus-visible {outline:2px solid #fff;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.mast .print-pdf {transition:none}}
+.mast-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+</style>
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="wrap">
+<header class="mast"><div class="mastbar"><div class="masttext">
+<span class="eyebrow">ORBITAL LAB · MENTAL MATHS</span>
+<h1>MISSION <em>+9, +19, +29</em></h1>
+<p>Two levels · Add tens, then take away one unit.</p>
+</div><div class="mast-actions"><a class="btn print-pdf" href="/pdf/ajouter-9-19-29-exercices.pdf" target="_blank" rel="noopener">🖨 Worksheet (French PDF)</a><a href="/en/#catalogue" target="_top" class="status-pill"><i></i> All games</a></div></div></header>
+<div class="layout"><main id="game" class="arena">
+<div class="arena-head"><div class="arena-top">
+<div class="horizontal-tools game-display" data-landscape-in-flow><button id="horizontal-toggle" type="button">↻ Landscape view</button></div>
+<div class="modes" role="group" aria-label="Level">
+<button class="btn ghost level-two" type="button" data-size="2" aria-pressed="true">Level 1 · 2 digits</button>
+<button class="btn pink level-three" type="button" data-size="3" aria-pressed="false">Level 2 · 3 digits</button>
+</div>
+<div class="modes" aria-label="Choose what to add">
+<button type="button" class="btn ghost" data-add="9" aria-pressed="true">+9</button>
+<button type="button" class="btn pink" data-add="19" aria-pressed="false">+19</button>
+<button type="button" class="btn orange" data-add="29" aria-pressed="false">+29</button>
+</div><button id="sound" type="button" class="btn ghost" aria-pressed="true">♫ Sound: ON</button>
+</div></div>
+<div class="panel">
+
+<form id="exercise">
+<div class="equation"><span id="operation"></span><input id="answer" aria-label="Answer" type="text" inputmode="none" autocomplete="off" maxlength="3"></div>
+<div class="keypad" id="keypad" role="group" aria-label="Number pad">
+<button type="button" data-digit="1" style="--key-neon:#24eaff">1</button>
+<button type="button" data-digit="2" style="--key-neon:#ff72cf">2</button>
+<button type="button" data-digit="3" style="--key-neon:#c68aff">3</button>
+<button type="button" data-digit="4" style="--key-neon:#ffb44d">4</button>
+<button type="button" data-digit="5" style="--key-neon:#8cff54">5</button>
+<button type="button" data-digit="6" style="--key-neon:#ff687e">6</button>
+<button type="button" data-digit="7" style="--key-neon:#ffe15c">7</button>
+<button type="button" data-digit="8" style="--key-neon:#66dbff">8</button>
+<button type="button" data-digit="9" style="--key-neon:#ed66f6">9</button>
+<button type="button" data-digit="0" style="--key-neon:#a3ffbc">0</button>
+<button type="button" class="erase" data-digit="erase" style="--key-neon:#ff9865">Delete</button>
+</div>
+<p class="mission" id="instruction"></p>
+<div class="grouped-material">
+<section class="tray" id="hundredsTray" hidden><h3>Hundreds</h3><div class="pieces" id="hundreds"></div></section>
+<section class="tray"><h3>Tens</h3><div class="pieces" id="tens"></div></section>
+<section class="tray"><h3>Ones</h3><div class="pieces" id="ones"></div></section>
+</div>
+<div class="controls">
+<button class="btn primary" id="add" type="button">Add one ten</button>
+<button class="btn pink" id="remove" type="button">Take away one unit</button>
+<button class="btn orange" id="check" type="submit">Check</button>
+<button class="btn primary" id="next" type="button" hidden>Next →</button>
+</div>
+<p class="feedback" id="feedback" role="status"></p>
+</form>
+</div></main></div></div>
+<script data-numeric-pad>
+'use strict';
+const get = id => document.getElementById(id);
+const buttons = [...document.querySelectorAll('[data-add]')];
+const answer = get('answer'), feedback = get('feedback');
+const levels=[...document.querySelectorAll('[data-size]')];
+const rodColors=['#24eaff','#ff72cf','#b384ff','#ffac4d','#85fa58','#ff5b73','#ffe75b','#5ea2ff','#32f0bc','#ff884f'];
+let digits=2;
+function eligibleNumbers(digitCount, add) {
+  const min=digitCount===2?10:100;
+  const max=digitCount===2?99:999-add;
+  return Array.from({length:max-min+1},(_,i)=>min+i).filter(n=>n%10!==0);
+}
+let addend=9, number=0, added=0, crossed=false, complete=false;
+let muted=false, audio;
+
+function sound(kind) {
+  if(muted)return;
+  try {
+    audio ||= new (window.AudioContext || window.webkitAudioContext)();
+    if(audio.state==='suspended')audio.resume().catch(()=>{});
+    const frequencies = kind==='good'?[440,660,880,1320]:kind==='bad'?[230,150]:[450];
+    frequencies.forEach((frequency,index)=>{
+      const success=kind==='good';
+      const oscillator=audio.createOscillator(), gain=audio.createGain(), t=audio.currentTime+index*(success ? .075:.09);
+      const duration=success&&index===frequencies.length-1 ? .28 : .15;
+      oscillator.type=success&&index%2===0?'sine':'triangle';
+      oscillator.frequency.setValueAtTime(success?frequency*.78:frequency,t);
+      if(success)oscillator.frequency.exponentialRampToValueAtTime(frequency,t+.05);
+      gain.gain.setValueAtTime(.0001,t);
+      gain.gain.exponentialRampToValueAtTime(success ? .065:.04,t+.012);
+      gain.gain.exponentialRampToValueAtTime(.0001,t+duration);
+      oscillator.connect(gain).connect(audio.destination);
+      oscillator.start(t);
+      oscillator.stop(t+duration+.01);
+    });
+  } catch {}
+}
+function showFeedback(message='', kind='') {
+  feedback.textContent=message;
+  feedback.className='feedback '+kind;
+}
+function pieces(id, type, count, decorate='') {
+  const holder=get(id);
+  holder.replaceChildren();
+  let group;
+  for(let index=0;index<count;index++){
+    if(index%5===0){
+      group=document.createElement('div');
+      group.className='bundle';
+      holder.append(group);
+    }
+    const block=document.createElement('span');
+    const extra=index===count-1?decorate:'';
+    block.className=type+(extra?' '+extra:'');
+    block.setAttribute('role','img');
+    block.setAttribute('aria-label',type==='block10'?'One ten':extra==='unit-removed'?'One crossed-out unit':'One unit');
+    group.append(block);
+  }
+}
+function updateButtons() {
+  const required=(addend+1)/10;
+  get('add').disabled=complete||added===required;
+  get('remove').disabled=complete||added!==required||crossed;
+  const remaining=required-added;
+  get('instruction').textContent=remaining
+    ? 'Add '+remaining+(remaining===1?' ten.':' tens, one at a time.')
+    : crossed?'Count the tens and ones that are left.':'Take away one unit to cross it out.';
+}
+get('keypad').addEventListener('click',event=>{
+  const key=event.target.closest('[data-digit]')?.dataset.digit;
+  if(!key||answer.readOnly)return;
+  let start=answer.selectionStart??answer.value.length;
+  const end=answer.selectionEnd??start;
+  if(key==='erase'){
+    if(start===end)start=Math.max(0,start-1);
+    answer.setRangeText('',start,end,'end');
+  }else if(answer.value.length-(end-start)<answer.maxLength){
+    answer.setRangeText(key,start,end,'end');
+  }
+  answer.focus({preventScroll:true});
+});
+function renderTens(animate=false) {
+  const tens=Math.floor(number/10)+added;
+  const hundreds=Math.floor(tens/10);
+  const exchanged=animate&&tens%10===0;
+  const holder=get('hundreds');
+  get('hundredsTray').hidden=hundreds===0;
+  holder.innerHTML=Array.from({length:hundreds},(_,i)=>{
+    const arrival=exchanged&&i===hundreds-1?' arriving':'';
+    const rods=rodColors.map(color=>'<span class="hundred-ten" style="--rod:'+color+'"></span>').join('');
+    return '<span class="hundred'+arrival+'" role="img" aria-label="One hundred made of ten tens">'+rods+'</span>';
+  }).join('');
+  pieces('tens','block10',tens%10,animate&&!exchanged?'arriving':'');
+  return exchanged;
+}
+function newExercise() {
+  const candidates=eligibleNumbers(digits,addend).filter(n=>n!==number);
+  number=candidates[Math.floor(Math.random()*candidates.length)];
+  added=0;
+  crossed=false;
+  complete=false;
+  get('operation').textContent=number+' + '+addend+' =';
+  answer.value='';
+  answer.readOnly=false;
+  get('keypad').hidden=false;
+  get('check').hidden=false;
+  get('next').hidden=true;
+  renderTens();
+  pieces('ones','block1',number%10);
+  showFeedback();
+  updateButtons();
+}
+get('add').onclick=()=>{
+  if(get('add').disabled)return;
+  added++;
+  const exchanged=renderTens(true);
+  showFeedback(exchanged?'10 tens make 1 hundred.':'');
+  sound('tap');
+  updateButtons();
+  if(get('add').disabled)get('remove').focus();
+};
+get('remove').onclick=()=>{
+  if(get('remove').disabled)return;
+  crossed=true;
+  pieces('ones','block1',number%10,'unit-removed');
+  showFeedback();
+  sound('tap');
+  updateButtons();
+  answer.focus();
+};
+get('exercise').onsubmit=event=>{
+  event.preventDefault();
+  if(complete)return;
+  if(!crossed){showFeedback('Use the tens and ones first.');return;}
+  if(!answer.value.trim()){showFeedback('Enter your answer in the box above.');answer.focus();return;}
+  if(!/^\d{1,3}$/.test(answer.value.trim())||Number(answer.value)!==number+addend){
+    showFeedback('Try again. Leave out the crossed-out unit.','bad');
+    sound('bad');
+    answer.select();
+    return;
+  }
+  complete=true;
+  answer.readOnly=true;
+  get('keypad').hidden=true;
+  showFeedback('Well done! '+number+' + '+addend+' = '+(number+addend)+'.','good');
+  sound('good');
+  updateButtons();
+  get('check').hidden=true;
+  get('next').hidden=false;
+  get('next').focus();
+};
+buttons.forEach(button=>{button.onclick=()=>{
+  addend=Number(button.dataset.add);
+  buttons.forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+  newExercise();
+};});
+levels.forEach(button=>{button.onclick=()=>{
+  digits=Number(button.dataset.size);
+  levels.forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+  newExercise();
+};});
+get('next').onclick=()=>{newExercise();get('add').focus();};
+get('sound').onclick=()=>{
+  muted=!muted;
+  get('sound').textContent=muted?'♫ Sound: OFF':'♫ Sound: ON';
+  get('sound').setAttribute('aria-pressed',String(!muted));
+  if(!muted)sound('tap');
+};
+const canvas=get('stars'),ctx=canvas.getContext('2d');
+if(ctx&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  let stars=[];
+  function resize(){
+    canvas.width=innerWidth;
+    canvas.height=innerHeight;
+    stars=Array.from({length:70},()=>[Math.random()*canvas.width,Math.random()*canvas.height,Math.random()*1.2+.4]);
+  }
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle='#80daff70';
+    for(const star of stars){
+      star[1]=(star[1]+.3)%canvas.height;
+      ctx.beginPath();
+      ctx.arc(...star,0,2*Math.PI);
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  resize();
+  addEventListener('resize',resize);
+  requestAnimationFrame(draw);
+}
+newExercise();
+</script>
+<script defer src="/assets/affichage-horizontal.js?v=arcade-player-1"></script>
+</body></html>

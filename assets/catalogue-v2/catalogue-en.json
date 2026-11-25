@@ -1,5 +1,57 @@
 [
   {
+    "id": "en-mission-ajouter-9-19-29-ce1",
+    "slug": "addition-mission-9-19-29-up-to-999",
+    "title": "Mission +9, +19, +29 — Up to 999",
+    "url": "/en/games/addition-mission-9-19-29-up-to-999/",
+    "path": "/en/games/addition-mission-9-19-29-up-to-999/",
+    "description": "Add 9, 19 or 29 to two- and three-digit numbers using hundreds, tens and ones.",
+    "objective": "Add 9, 19 or 29 to two- and three-digit numbers using hundreds, tens and ones.",
+    "levels": [
+      "CE1",
+      "CE2"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "weekly": false,
+    "new": true,
+    "sourceId": "mission-ajouter-9-19-29-ce1",
+    "contentLanguage": "en",
+    "pdfUrl": "/pdf/ajouter-9-19-29-exercices.pdf",
+    "pdfLabel": "Worksheet (French PDF)"
+  },
+  {
+    "id": "en-mission-ajouter-9-19-29",
+    "slug": "addition-mission-9-19-29",
+    "title": "Mission +9, +19, +29",
+    "url": "/en/games/addition-mission-9-19-29/",
+    "path": "/en/games/addition-mission-9-19-29/",
+    "description": "Add tens and cross out one unit to add 9, 19 or 29.",
+    "objective": "Add tens and cross out one unit to add 9, 19 or 29.",
+    "levels": [
+      "CP",
+      "CE1"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "groupName": "Mental maths",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "weekly": false,
+    "new": true,
+    "sourceId": "mission-ajouter-9-19-29",
+    "contentLanguage": "en",
+    "thumb": "/assets/catalogue-v2/captures/mission-ajouter-9-19-29.webp",
+    "imageAlt": "Gameplay showing tens, a crossed-out unit and the number pad",
+    "pdfUrl": "/pdf/ajouter-9-19-29-exercices.pdf",
+    "pdfLabel": "Worksheet (French PDF)"
+  },
+  {
     "id": "en-mission-fractions-ce1-revisions",
     "title": "Fraction Mission — Review",
     "url": "/en/games/fraction-mission-review/",
