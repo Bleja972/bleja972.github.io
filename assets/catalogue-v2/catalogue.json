@@ -15,7 +15,8 @@
     "groupName": "Calcul mental",
     "level": "CE1",
     "levels": [
-      "CE1"
+      "CE1",
+      "CE2"
     ],
     "subject": "Mathématiques",
     "weekly": false,
