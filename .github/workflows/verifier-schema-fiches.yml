@@ -1,0 +1,33 @@
+name: Vérifier les données structurées des fiches
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'fiches/**'
+      - 'sitemap.xml'
+      - 'scripts/verifier-schema-fiches.mjs'
+      - '.github/workflows/verifier-schema-fiches.yml'
+  pull_request:
+    paths:
+      - 'fiches/**'
+      - 'sitemap.xml'
+      - 'scripts/verifier-schema-fiches.mjs'
+      - '.github/workflows/verifier-schema-fiches.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verifier-schema:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+      - name: Configurer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Vérifier le JSON-LD des fiches
+        run: node scripts/verifier-schema-fiches.mjs
