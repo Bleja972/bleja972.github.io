@@ -1,5 +1,55 @@
 [
   {
+    "id": "mission-ajouter-9-19-29-ce1",
+    "sourceId": "mission-ajouter-9-19-29-ce1",
+    "slug": "addition-mission-9-19-29-up-to-999",
+    "title": "口算任务 +9、+19、+29 — 999 以内",
+    "url": "/zh/games/addition-mission-9-19-29-up-to-999/",
+    "path": "/zh/games/addition-mission-9-19-29-up-to-999/",
+    "description": "用百、十和一练习给两位数或三位数加 9、19 或 29。",
+    "objective": "用百、十和一练习给两位数或三位数加 9、19 或 29。",
+    "group": "mental",
+    "skill": "mental",
+    "skillName": "口算",
+    "groupName": "口算",
+    "subject": "Mathématiques",
+    "levels": [
+      "CE1",
+      "CE2"
+    ],
+    "level": "CE1",
+    "weekly": false,
+    "new": true,
+    "pdfUrl": "/pdf/adding-9-19-29-worksheets-zh.pdf",
+    "pdfLabel": "打印练习 PDF"
+  },
+  {
+    "id": "mission-ajouter-9-19-29",
+    "sourceId": "mission-ajouter-9-19-29",
+    "slug": "addition-mission-9-19-29",
+    "title": "口算任务 +9、+19、+29",
+    "url": "/zh/games/addition-mission-9-19-29/",
+    "path": "/zh/games/addition-mission-9-19-29/",
+    "description": "先加整十数，再去掉一个一，练习加 9、19 或 29。",
+    "objective": "先加整十数，再去掉一个一，练习加 9、19 或 29。",
+    "group": "mental",
+    "skill": "mental",
+    "skillName": "口算",
+    "groupName": "口算",
+    "subject": "Mathématiques",
+    "levels": [
+      "CP",
+      "CE1"
+    ],
+    "level": "CE1",
+    "weekly": false,
+    "new": true,
+    "pdfUrl": "/pdf/adding-9-19-29-worksheets-zh.pdf",
+    "pdfLabel": "打印练习 PDF",
+    "thumb": "/assets/catalogue-v2/captures/mission-ajouter-9-19-29.webp",
+    "imageAlt": "游戏画面，包含十、划掉的一个一和数字键盘"
+  },
+  {
     "id": "mission-fractions-ce1-revisions",
     "sourceId": "mission-fractions-ce1-revisions",
     "title": "分数任务：复习",

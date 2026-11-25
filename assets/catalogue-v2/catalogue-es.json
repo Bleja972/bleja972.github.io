@@ -1,5 +1,55 @@
 [
   {
+    "id": "mission-ajouter-9-19-29-ce1",
+    "sourceId": "mission-ajouter-9-19-29-ce1",
+    "slug": "mision-sumar-9-19-29-hasta-999",
+    "title": "Misión +9, +19, +29 — Hasta 999",
+    "url": "/es/games/mision-sumar-9-19-29-hasta-999/",
+    "path": "/es/games/mision-sumar-9-19-29-hasta-999/",
+    "description": "Suma 9, 19 o 29 a números de dos y tres cifras con centenas, decenas y unidades.",
+    "objective": "Suma 9, 19 o 29 a números de dos y tres cifras con centenas, decenas y unidades.",
+    "group": "mental",
+    "skill": "mental",
+    "skillName": "Cálculo mental",
+    "groupName": "Cálculo mental",
+    "subject": "Mathématiques",
+    "levels": [
+      "CE1",
+      "CE2"
+    ],
+    "level": "CE1",
+    "weekly": false,
+    "new": true,
+    "pdfUrl": "/pdf/adding-9-19-29-worksheets-es.pdf",
+    "pdfLabel": "PDF para imprimir"
+  },
+  {
+    "id": "mission-ajouter-9-19-29",
+    "sourceId": "mission-ajouter-9-19-29",
+    "slug": "mision-sumar-9-19-29",
+    "title": "Misión +9, +19, +29",
+    "url": "/es/games/mision-sumar-9-19-29/",
+    "path": "/es/games/mision-sumar-9-19-29/",
+    "description": "Suma 9, 19 o 29 con decenas y tacha una unidad.",
+    "objective": "Suma 9, 19 o 29 con decenas y tacha una unidad.",
+    "group": "mental",
+    "skill": "mental",
+    "skillName": "Cálculo mental",
+    "groupName": "Cálculo mental",
+    "subject": "Mathématiques",
+    "levels": [
+      "CP",
+      "CE1"
+    ],
+    "level": "CE1",
+    "weekly": false,
+    "new": true,
+    "pdfUrl": "/pdf/adding-9-19-29-worksheets-es.pdf",
+    "pdfLabel": "PDF para imprimir",
+    "thumb": "/assets/catalogue-v2/captures/mission-ajouter-9-19-29.webp",
+    "imageAlt": "Partida con decenas, una unidad tachada y el teclado numérico"
+  },
+  {
     "id": "mission-fractions-ce1-revisions",
     "sourceId": "mission-fractions-ce1-revisions",
     "title": "Misión Fracciones — Repaso",
