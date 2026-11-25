@@ -1,5 +1,28 @@
 [
   {
+    "id": "mission-ajouter-9-19-29",
+    "slug": "mission-ajouter-9-19-29",
+    "title": "Mission +9, +19, +29",
+    "url": "/jeux/mission-ajouter-9-19-29/",
+    "path": "/jeux/mission-ajouter-9-19-29/",
+    "description": "Ajoute des dizaines et barre une unité pour calculer.",
+    "short": "Ajoute des dizaines et barre une unité pour calculer.",
+    "objective": "Ajouter 9, 19 ou 29 à un nombre inférieur à 70.",
+    "skill": "mental",
+    "skillName": "Calcul mental",
+    "category": "mental",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "playClicks": 0
+  },
+  {
     "id": "mission-problemes-ce2-periode-2",
     "slug": "mission-problemes-ce2-periode-2",
     "title": "Mission Problèmes CE2 — Période 2",
