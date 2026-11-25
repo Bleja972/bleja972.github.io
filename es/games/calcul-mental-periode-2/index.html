@@ -1,92 +1,39 @@
-<!doctype html>
-<html lang="es" translate="no" class="notranslate notranslate">
-<head><base href="https://bleja972.github.io/calculmentalP2/">
-<meta charset="UTF-8"><meta name="google" content="notranslate">
+<!DOCTYPE html>
+<html lang="es" translate="no">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cálculo mental — Periodo 2</title>
+<title>Cálculo mental CE1 · Periodo 2</title>
+<link rel="stylesheet" href="/jeux/calcul-mental-periode-2/jouer/orbite.css?v=4">
+<script defer data-numeric-pad data-game-numeric-pad data-numeric-pad-theme="orbite" src="/assets/pave-numerique.js?v=20261111-tactile"></script>
 <style>
-:root{
-  --navy:#17324d;--orange:#f2b36d;--cream:#fff8ef;--green:#2f8f57;
-  --red:#c94c4c;--blue:#dff1ff;--yellow:#ffe18a;--purple:#6c63d9;
-}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#fff7ec,#fde2bd);color:var(--navy)}
-.app{max-width:1100px;margin:0 auto;padding:18px}
-.shell{background:#fff;border:3px solid #efd6b6;box-shadow:0 10px 26px rgba(0,0,0,.1);overflow:hidden}
-header{padding:18px;text-align:center;background:linear-gradient(135deg,#ffe7bd,#ffd49b 55%,#fff0d3);border-bottom:3px solid #efd4ad}
-.brand{font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:.6px}
-h1{margin:6px 0;font-size:clamp(28px,4vw,44px)}
-.sub{font-weight:700;color:#5f6870}
-.topbar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:16px}
-.box{background:#fff8ef;border:2px solid #e9cfaa;text-align:center;padding:10px;font-weight:900}
-.box strong{display:block;font-size:28px;margin-top:4px}
-.timer{font-size:34px!important}
-.timer.warn{color:#b76c00}
-.timer.danger{color:var(--red)}
-.progress{height:14px;background:#efe2cf;margin:0 16px 16px;overflow:hidden}
-.progress>div{height:100%;background:linear-gradient(90deg,var(--navy),#5c83a4);width:0;transition:.2s}
-.content{padding:0 18px 20px}
-.titleline{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin:8px 0 14px}
-.exercise-title{font-size:26px;font-weight:900}
-.skill{background:#e9f6ff;border:2px solid #bdddf2;padding:8px 12px;font-weight:800}
-.notice{background:#fff5dc;border:2px solid #f1cf7b;padding:10px 12px;font-weight:800;margin-bottom:14px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.calc{min-height:74px;background:#fff;border:2px solid #d8e0e7;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px;font-size:25px;font-weight:900;flex-wrap:wrap}
-.calc input{width:88px;height:46px;background:#fff;color:var(--navy);border:3px solid #8cbad7;text-align:center;font-size:25px;font-weight:900;outline:none}
-.calc input:focus{border-color:#f0a24b;box-shadow:0 0 0 3px rgba(240,162,75,.18)}
-.calc input.good{border-color:var(--green)}
-.calc input.bad{border-color:var(--red)}
-.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
-button{border:none;padding:13px 18px;font-size:18px;font-weight:900;cursor:pointer;color:white}
-.check{background:var(--green)} .next{background:var(--purple)} .restart{background:var(--navy)} .menu{background:#d18834}
-.feedback{min-height:42px;text-align:center;font-size:21px;font-weight:900;margin-top:14px}
-.startnote{text-align:center;font-weight:900;color:#8a5b16;margin-bottom:10px}
-.end{display:none;text-align:center;padding:30px 18px}
-.end h2{font-size:40px;margin:0 0 8px}
-.menuview{padding:18px}
-.menuview h2{text-align:center}
-.exercise-menu{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.exbtn{background:#fff;color:var(--navy);border:2px solid #e2c9a6;text-align:left}
-.exbtn:hover{background:#fff4df}
-.hidden{display:none!important}
-@media(max-width:760px){.topbar{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.exercise-menu{grid-template-columns:1fr}}
-@media(max-width:500px){.grid{grid-template-columns:1fr}.calc{font-size:22px}}
-
-/* Ambiente espacial Pygame: armonizado con el juego francés */
-:root{--navy:#142756;--green:#23d4b0;--red:#ff5b81;--purple:#9570e7}
-body{background:radial-gradient(ellipse at top,#233c74 0%,#080f26 55%,#03040c 100%);color:#e8f2ff}
-.shell{background:#07112bea;border:2px solid #5b7ec6;border-radius:22px;box-shadow:0 14px 40px #000c,0 0 24px #537bef35}
-header{background:linear-gradient(120deg,#13275a,#162047 65%,#322251);border-bottom:1px solid #607cbd}
-h1,.exercise-title,.menuview h2{color:#ffe469;text-shadow:0 0 10px #ffdf6433}.brand{color:#71d8ff}.sub{color:#bdd1ec}
-.box,.skill,.notice,.calc{background:linear-gradient(145deg,#1b305f,#0b1736);border:1px solid #5d7ab5;border-radius:12px;color:#e0ecff;box-shadow:0 5px 13px #0005}
-.box strong,.calc{color:#ffe469}.calc input{background:#091832;color:#ffe469;border:2px solid #6c9edf;border-radius:10px}.calc input:focus{border-color:#ffc95c;box-shadow:0 0 12px #ffc95c44}
-.progress{background:#0b1a38;border-radius:20px}.progress>div{background:linear-gradient(90deg,#48c9ff,#a57df1,#ffe469)}.startnote{color:#ffd582}.feedback{color:#e8f2ff}
-button{border:1px solid #ffffff60;border-radius:13px;box-shadow:inset 0 2px 2px #ffffff45,0 5px 0 #060b1b,0 9px 18px #0008;text-shadow:0 1px 2px #0009;transition:transform .14s,filter .14s}button:hover{filter:brightness(1.2);transform:translateY(-2px)}button:active{transform:translateY(3px)}
-.check{background:linear-gradient(145deg,#08b8b0,#076b82)}.next{background:linear-gradient(145deg,#a06ded,#503ca8)}.restart{background:linear-gradient(145deg,#4198ef,#244c9d)}.menu{background:linear-gradient(145deg,#eaa14b,#aa4b1e)}
-.exbtn{background:linear-gradient(145deg,#243e7a,#152350);border:1px solid #6e8ed2;color:#fff}.exbtn:hover{background:#355395}.exbtn:nth-child(4n+2){background:linear-gradient(145deg,#5d3a83,#292350)}.exbtn:nth-child(4n+3){background:linear-gradient(145deg,#17647a,#142e4b)}
-nav a{background:#243c73!important;color:#ffe469!important}
-@media(max-width:760px){.topbar{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.box{font-size:12px}.box strong{font-size:23px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.calc{font-size:20px;gap:5px}.calc input{width:65px}}
-@media(max-width:360px){.grid{grid-template-columns:1fr}}
+.pdf-download-3d{display:inline-flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;max-width:100%;padding:12px 19px;margin:10px 0 6px;border-radius:14px;border:2px solid #b7faff;background:linear-gradient(155deg,#7bf4ff 0%,#13b7e6 58%,#0875bc 100%);color:#03192d!important;font:900 15px/1.25 Arial,sans-serif;text-align:center;text-decoration:none!important;box-shadow:0 5px 0 #064970,0 8px 18px #01ceff55,inset 0 2px 1px #ffffff9e;text-shadow:0 1px #ffffff66;transition:transform .14s,box-shadow .14s}
+.pdf-download-3d:hover{filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 7px 0 #064970,0 11px 22px #01ceff77,inset 0 2px 1px #ffffff9e}
+.pdf-download-3d:active{transform:translateY(4px);box-shadow:0 1px 0 #064970,0 2px 6px #01ceff66}
+.pdf-download-3d:focus-visible{outline:3px solid #fff;outline-offset:4px}
+@media(max-width:520px){.pdf-download-3d{width:100%;font-size:14px;padding:13px 12px}}
 </style>
-<script defer src="https://bleja972.github.io/assets/affichage-horizontal.js?v=all-languages-20261108"></script></head>
-<body><nav aria-label="Navegación de blogs" style="text-align:center;padding:12px"><a href="/es/?lang=es" style="display:inline-block;padding:10px 18px;border-radius:12px;background:#17664e;color:white;font:bold 16px Arial,sans-serif;text-decoration:none">Blog en español</a></nav>
+</head>
+<body>
 <div class="app"><div class="shell">
 <header>
-  <div class="brand">Pequeños retos CE1</div>
-  <h1>Cálculo mental — Periodo 2</h1>
-  <div class="sub">3 minutos por ejercicio • el temporizador comienza con la primera respuesta introducida</div>
+  <div class="brand">Laboratorio orbital · CE1</div>
+  <h1>Cálculo mental <span>· Periodo 2</span></h1>
+  <p class="sub">3 minutos por serie. El cronómetro empieza cuando escribes la primera respuesta.</p>
+  <button class="sound" id="soundBtn" type="button" aria-pressed="true">♫ Sonidos activados</button>
+  
 </header>
 
 <section id="menuView" class="menuview">
-  <h2>elegir un ejercicio</h2>
+  <h2 id="menuTitle" tabindex="-1">Elige una habilidad</h2>
   <div id="exerciseMenu" class="exercise-menu"></div>
 </section>
 
 <section id="gameView" class="hidden">
   <div class="topbar">
     <div class="box">Ejercicio<strong id="num">1 / 14</strong></div>
-    <div class="box">Hora<strong id="timer" class="timer">3:00</strong></div>
-    <div class="box">puntuación<strong id="score">0 / 0</strong></div>
+    <div class="box">Tiempo<strong id="timer" class="timer">3:00</strong></div>
+    <div class="box">Score<strong id="score">0 / 0</strong></div>
   </div>
   <div class="progress"><div id="progressBar"></div></div>
   <div class="content">
@@ -94,15 +41,15 @@ nav a{background:#243c73!important;color:#ffe469!important}
       <div class="exercise-title" id="exerciseTitle"></div>
       <div class="skill" id="skill"></div>
     </div>
-    <div class="notice">Completa tantos cálculos como puedas.</div>
-    <div class="startnote" id="startNote">El temporizador comenzará cuando escribas tu primera respuesta.</div>
+    <div class="notice">Resuelve tantas operaciones como puedas.</div>
+    <div class="startnote" id="startNote">El cronómetro empezará al escribir tu primera respuesta.</div>
     <div class="grid" id="grid"></div>
-    <div class="feedback" id="feedback"></div>
+    <div class="feedback" id="feedback" role="status"></div>
     <div class="actions">
-      <button class="check" id="checkBtn" type="button">comprobar ahora</button>
-      <button class="restart" id="restartBtn" type="button">reiniciar</button>
-      <button class="menu" id="menuBtn" type="button">elegir un ejercicio</button>
-      <button class="next" id="nextBtn" type="button">siguiente ejercicio</button>
+      <button class="check" id="checkBtn" type="button">Corregir ahora</button>
+      <button class="restart" id="restartBtn" type="button">Reiniciar</button>
+      <button class="menu" id="menuBtn" type="button">Elegir una habilidad</button>
+      <button class="next" id="nextBtn" type="button">Siguiente ejercicio</button>
     </div>
   </div>
 </section>
@@ -110,7 +57,7 @@ nav a{background:#243c73!important;color:#ffe469!important}
 <section id="endView" class="end">
   <h2>¡Muy bien!</h2>
   <p id="endText"></p>
-  <button class="menu" id="endMenuBtn" type="button">volver a los ejercicios</button>
+  <button class="menu" id="endMenuBtn" type="button">Volver a los ejercicios</button>
 </section>
 </div></div>
 
@@ -222,6 +169,64 @@ let seconds=180;
 let timerId=null;
 let started=false;
 let locked=false;
+let audio;
+let soundEnabled = true;
+try { soundEnabled = localStorage.getItem("calcul-p2-sound") !== "off"; } catch {}
+const soundBtn = document.getElementById("soundBtn");
+const menuTitle = document.getElementById("menuTitle");
+
+function updateSoundButton(){
+  soundBtn.setAttribute("aria-pressed", String(soundEnabled));
+  soundBtn.textContent = soundEnabled ? "♫ Sonidos activados" : "♫ Sonidos desactivados";
+}
+
+function armAudio(){
+  if(!soundEnabled) return;
+  const Audio = window.AudioContext || window.webkitAudioContext;
+  if(!Audio) return;
+  try{
+    if(!audio) audio = new Audio();
+    if(audio.state === "suspended") audio.resume().catch(()=>{});
+  }catch{}
+}
+
+function playCorrection(hasCorrect, hasError){
+  if(!soundEnabled || !audio) return;
+  function play(){
+    if(!soundEnabled || audio.state !== "running") return;
+    const start = audio.currentTime + .015;
+    function note(frequency, offset, duration, shape){
+      const when = start + offset;
+      const tone = audio.createOscillator();
+      const gain = audio.createGain();
+      tone.type = shape;
+      tone.frequency.value = frequency;
+      gain.gain.setValueAtTime(.0001, when);
+      gain.gain.exponentialRampToValueAtTime(.045, when + .018);
+      gain.gain.exponentialRampToValueAtTime(.0001, when + duration);
+      tone.connect(gain);
+      gain.connect(audio.destination);
+      tone.start(when);
+      tone.stop(when + duration + .02);
+    }
+    if(hasCorrect) [523.25, 659.25, 783.99].forEach((pitch,i)=>note(pitch,i*.075,.18,"sine"));
+    if(hasError){
+      const offset = hasCorrect ? .38 : 0;
+      note(293.66,offset,.13,"triangle");
+      note(196,offset+.13,.20,"triangle");
+    }
+  }
+  if(audio.state === "suspended") audio.resume().then(play).catch(()=>{});
+  else play();
+}
+
+updateSoundButton();
+soundBtn.addEventListener("click",()=>{
+  soundEnabled = !soundEnabled;
+  try { localStorage.setItem("calcul-p2-sound", soundEnabled ? "on" : "off"); } catch {}
+  updateSoundButton();
+  armAudio();
+});
 
 const menuView=document.getElementById("menuView");
 const gameView=document.getElementById("gameView");
@@ -242,19 +247,38 @@ function menu(){
   gameView.classList.add("hidden");
   endView.style.display="none";
   menuView.classList.remove("hidden");
+  menuTitle.focus();
 }
 function buildMenu(){
-  exerciseMenu.innerHTML="";
-  exercises.forEach((ex,i)=>{
-    const b=document.createElement("button");
-    b.className="exbtn";
-    b.type="button";
-    b.textContent=`${i+1}. ${ex.title} — ${ex.items.length} cálculos`;
-    b.addEventListener("click",()=>startExercise(i));
-    exerciseMenu.appendChild(b);
-  });
+  const accents = ["cyan","mint","violet","amber","cyan","violet","mint"];
+  for(let index=0; index<exercises.length; index+=2){
+    const first = exercises[index];
+    const card = document.createElement("section");
+    const heading = document.createElement("h3");
+    const options = document.createElement("div");
+    card.className = "skill-card";
+    card.dataset.accent = accents[index/2];
+    heading.textContent = first.title;
+    options.className = "series";
+    [first, exercises[index+1]].forEach((exercise, series)=>{
+      const button = document.createElement("button");
+      const count = document.createElement("span");
+      button.className = "exbtn";
+      button.type = "button";
+      button.textContent = `Serie ${series+1}`;
+      button.setAttribute("aria-label",`${first.title}, serie ${series+1}, ${exercise.items.length} operaciones`);
+      count.className = "series-count";
+      count.textContent = `${exercise.items.length} operaciones`;
+      button.append(count);
+      button.addEventListener("click",()=>startExercise(index+series));
+      options.append(button);
+    });
+    card.append(heading,options);
+    exerciseMenu.append(card);
+  }
 }
 function startExercise(i){
+  armAudio();
   exIndex=i;
   menuView.classList.add("hidden");
   endView.style.display="none";
@@ -267,25 +291,41 @@ function renderExercise(){
   updateTimer();
   const ex=exercises[exIndex];
   num.textContent=`${exIndex+1} / ${exercises.length}`;
-  exerciseTitle.textContent=ex.title;
+  exerciseTitle.textContent=`${ex.title} · Serie ${exIndex%2+1}`;
   skill.textContent=ex.skill;
   score.textContent=`0 / ${ex.items.length}`;
   progressBar.style.width=`${(exIndex/exercises.length)*100}%`;
   feedback.textContent="";
-  startNote.textContent="El temporizador comenzará cuando escribas tu primera respuesta.";
+  delete feedback.dataset.result;
+  startNote.textContent="El cronómetro empezará al escribir tu primera respuesta.";
   grid.innerHTML="";
   ex.items.forEach((item,idx)=>{
     const card=document.createElement("div");
-    card.className="calc";
-    const left=document.createElement("span");
-    left.textContent=item.left;
-    card.appendChild(left);
+    card.className="calc answer-entry";
+    const row=document.createElement("div");
+    row.className="equation-row";
+    const left=item.left.match(/\d+|[+=-]/g) || [];
+    const right=item.right.match(/\d+|[+=-]/g) || [];
+    // Estimate the row's width in em so longer equations also fit on narrow cards.
+    const terms=[...left,...right];
+    const termsWidth=terms.reduce((width,term)=>width+(/^[0-9]/.test(term)?term.length*.79:.86),0);
+    row.style.setProperty("--equation-width",String(4.2 + termsWidth + terms.length*.17));
+    function appendTerms(terms){
+      for(const term of terms){
+        const span=document.createElement("span");
+        span.textContent=term === "-" ? "−" : term;
+        if(/^[0-9]/.test(term)) span.className="operand";
+        row.appendChild(span);
+      }
+    }
+    appendTerms(left);
     const input=document.createElement("input");
     input.type="text";
     input.inputMode="numeric";
     input.autocomplete="off";
+    input.maxLength=4;
     input.dataset.index=idx;
-    input.setAttribute("aria-label",`respuesta ${idx+1}`);
+    input.setAttribute("aria-label",`Respuesta ${idx+1} : ${item.left} … ${item.right}`.trim());
     input.addEventListener("input",()=>{
       input.value=input.value.replace(/[^0-9]/g,"");
       input.classList.remove("good","bad");
@@ -298,10 +338,9 @@ function renderExercise(){
         if(pos<inputs.length-1) inputs[pos+1].focus();
       }
     });
-    card.appendChild(input);
-    const right=document.createElement("span");
-    right.textContent=item.right;
-    card.appendChild(right);
+    row.appendChild(input);
+    appendTerms(right);
+    card.appendChild(row);
     grid.appendChild(card);
   });
   const first=grid.querySelector("input");
@@ -310,7 +349,7 @@ function renderExercise(){
 function startTimer(){
   if(started||locked)return;
   started=true;
-  startNote.textContent="El temporizador funciona.";
+  startNote.textContent="Cronómetro en marcha.";
   timerId=setInterval(()=>{
     seconds--;
     updateTimer();
@@ -346,27 +385,33 @@ function finishExercise(timeUp=false){
       good++;inp.classList.add("good");
     }else if(inp.value!==""){
       inp.classList.add("bad");
+      inp.setAttribute("aria-invalid","true");
     }
   });
   score.textContent=`${good} / ${ex.items.length}`;
-  feedback.style.color=good===ex.items.length?"var(--green)":"#e8f2ff";
+  feedback.dataset.result=good===ex.items.length?"correct":answered>good?"error":"partial";
+  playCorrection(good>0,answered>good);
   feedback.textContent=(timeUp?"¡Se acabó el tiempo! ":"")+`Has acertado ${good} de ${ex.items.length} operaciones. Has respondido ${answered}.`;
-  startNote.textContent="Ejercicio completo.";
+  startNote.textContent="Ejercicio terminado.";
   progressBar.style.width=`${((exIndex+1)/exercises.length)*100}%`;
 }
-document.getElementById("checkBtn").addEventListener("click",()=>finishExercise(false));
+document.getElementById("checkBtn").addEventListener("click",()=>{
+  armAudio();
+  finishExercise(false);
+});
 document.getElementById("restartBtn").addEventListener("click",renderExercise);
 document.getElementById("menuBtn").addEventListener("click",menu);
 document.getElementById("nextBtn").addEventListener("click",()=>{
   if(exIndex<exercises.length-1)startExercise(exIndex+1);
   else{
+    stopTimer();
     gameView.classList.add("hidden");
     endView.style.display="block";
-    document.getElementById("endText").textContent="Ha completado los 14 ejercicios de revisión para el Término 2.";
+    document.getElementById("endText").textContent="Has completado los 14 ejercicios de repaso del segundo periodo.";
   }
 });
 document.getElementById("endMenuBtn").addEventListener("click",menu);
 buildMenu();
 </script>
-<script src="/assets/catalogue-v2/runtime-es.js?v=1" defer></script></body>
+</body>
 </html>
