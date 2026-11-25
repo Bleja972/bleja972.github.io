@@ -15,12 +15,15 @@
     "groupName": "Calcul mental",
     "level": "CE1",
     "levels": [
+      "CP",
       "CE1"
     ],
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "playClicks": 0
+    "playClicks": 0,
+    "thumb": "/assets/catalogue-v2/captures/mission-ajouter-9-19-29.webp",
+    "imageAlt": "Mission +9, +19, +29 en pleine partie, avec les dizaines, une unité barrée et le pavé numérique"
   },
   {
     "id": "mission-problemes-ce2-periode-2",
