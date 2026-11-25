@@ -9,6 +9,34 @@
 :root{font-family:Arial,Helvetica,sans-serif;color:#eaf3ff;background:#060a16}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#1a315a 0%,#060b1b 48%,#030612 100%);min-height:100vh}
 a{color:inherit}header{background:#101b36f2;border-bottom:1px solid #5575b0}header .wrap{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:16px 0}.wrap{width:min(1180px,94%);margin:auto}.brand{font-size:20px;font-weight:900;color:#ffe16e;text-decoration:none}nav{display:flex;gap:7px;flex-wrap:wrap}nav a,.quick a{display:inline-block;text-decoration:none;padding:9px 13px;background:#172b54;border:1px solid #5c80c4;border-radius:12px;font-weight:bold}nav a:hover,.quick a:hover,.download:hover{filter:brightness(1.17)}main{padding:35px 0 75px}.eyebrow{font-weight:800;letter-spacing:.13em;color:#8dcfff;text-transform:uppercase;font-size:.85rem}h1{color:#ffe47c;font-size:clamp(2rem,5vw,3.8rem);line-height:1.07;max-width:950px;letter-spacing:-.045em}h2{font-size:clamp(1.45rem,2.8vw,2.15rem);color:#ffe47c}h3{font-size:1rem;margin:0 0 9px;line-height:1.36}p{line-height:1.65}.lead{max-width:920px;color:#cbdcf5;font-size:1.12rem}.quick{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 34px}.quick a{color:#f3f5ff}.section{margin:38px 0 44px;scroll-margin-top:30px}.intro{max-width:900px;color:#c6d5f0}.resources{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:13px}.resource{background:#102242;border:1px solid #3e6097;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px;box-shadow:0 6px 20px #0003}.meta{font-size:.8rem;color:#b2cfff;font-weight:bold;margin:0}.resource h3{flex:1}.download{display:inline-flex;align-items:center;justify-content:center;border:1px solid #85dafa;border-radius:10px;background:linear-gradient(140deg,#2674aa,#1c426c);padding:11px;color:#fff;text-decoration:none;font-weight:800;box-shadow:0 3px 0 #102943}.note{padding:15px 20px;border:1px solid #57729f;border-radius:12px;color:#d4e2f7;background:#152441}footer{border-top:1px solid #425880;padding:25px 0;color:#b7c8e0}footer a{color:#ffe47c}@media(max-width:600px){header .wrap{padding:12px 0}nav a{font-size:.86rem}.resources{grid-template-columns:1fr}}
 .pdf-filter-bar{padding:22px;border:1px solid #5074b0;border-radius:18px;background:#132548;margin:26px 0}.filter-head h2{font-size:1.28rem;color:#ffe47c;margin:0 0 5px}.filter-head p{margin:0 0 12px;color:#cfddf3}.filter-controls{display:grid;grid-template-columns:repeat(4,minmax(135px,1fr)) auto;align-items:end;gap:12px}.filter-controls label{font-size:.9rem;font-weight:700;display:flex;flex-direction:column;gap:6px}.filter-controls input,.filter-controls select{min-width:0;width:100%;height:43px;border-radius:9px;padding:8px;color:#132341;background:#f8fbff;border:1px solid #b5cbdf;font:inherit}.filter-controls button{height:43px;background:#294674;border:1px solid #92b8ff;color:white;border-radius:10px;padding:0 14px;cursor:pointer;font-weight:700}.pdf-results{margin:14px 0 0;color:#ffe47c;font-weight:800}.pdf-competences{color:#bcd9ff;font-size:.89rem;line-height:1.48;margin:0}.resource h4{font-size:1rem;margin:0;line-height:1.36;flex:1}.section-count,.group-count{font-size:.78rem;color:#b9d6fa;font-weight:600;margin-left:7px}.competence-group{margin:25px 0}.competence-group h3{color:#c9e4ff;font-size:1.16rem;margin:0 0 13px}.resource[hidden],.competence-group[hidden],.domain-section[hidden],.pdf-empty[hidden]{display:none!important}@media(max-width:850px){.filter-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.filter-controls button{grid-column:span 2}}@media(max-width:440px){.filter-controls{grid-template-columns:1fr}.filter-controls button{grid-column:auto}}
+
+/* Arcade Pygame : une identité lumineuse différente pour chaque compétence. */
+:root{--pdf-active:#ffe364}
+body{background:radial-gradient(ellipse at 50% -12%,#18284c 0%,#080c1c 38%,#020306 76%);background-color:#020306}
+.pdf-filter-bar{background:linear-gradient(135deg,#111a36,#05070f);border:1px solid var(--pdf-active);box-shadow:0 5px 0 #02030a,0 0 18px color-mix(in srgb,var(--pdf-active) 22%,transparent);transition:border-color .2s,box-shadow .2s}
+.pdf-filter-bar .filter-head h2{color:#fff1a2;text-shadow:0 0 10px #ffd45d33}
+.filter-controls select,.filter-controls input{background:#071226;color:#f5f9ff;border:2px solid #5874b0;box-shadow:inset 0 2px 6px #000b;transition:border-color .2s,box-shadow .2s}
+.filter-controls select:focus-visible,.filter-controls input:focus-visible{outline:2px solid var(--pdf-active);outline-offset:2px;border-color:var(--pdf-active)}
+.filter-controls #pdf-competence{border-color:var(--pdf-active);box-shadow:inset 0 2px 6px #000a,0 0 11px color-mix(in srgb,var(--pdf-active) 30%,transparent)}
+.filter-controls select option{background:#09142b;color:#fff}
+.filter-controls button{background:linear-gradient(180deg,#395d96,#162b52);box-shadow:0 4px 0 #050a19,0 0 9px #4b90db40;transition:transform .12s,box-shadow .12s}
+.filter-controls button:active{transform:translateY(3px);box-shadow:0 1px 0 #050a19}
+.pdf-results{color:var(--pdf-active);transition:color .2s}
+.domain-section h2{font-weight:900;letter-spacing:-.02em}
+.competence-group{--competence-color:#f8c451;margin:27px 0 35px;border-left:4px solid var(--competence-color);padding:2px 0 5px 16px;transition:border-color .2s}
+.competence-group>h3{color:var(--competence-color);font-size:1.18rem;font-weight:900;letter-spacing:.01em;text-shadow:0 0 12px color-mix(in srgb,var(--competence-color) 33%,transparent);margin-bottom:15px}
+.competence-group .group-count{display:inline-block;padding:2px 9px;border:1px solid var(--competence-color);border-radius:8px;background:#070b18;color:var(--competence-color);font-weight:900}
+.competence-group .resource{background:linear-gradient(165deg,color-mix(in srgb,var(--competence-color) 15%,#0a1125) 0%,#070b17 65%);border:1px solid color-mix(in srgb,var(--competence-color) 75%,#14213d);border-top:3px solid var(--competence-color);border-radius:17px;box-shadow:0 5px 0 #02040a,0 8px 16px #0007,0 0 12px color-mix(in srgb,var(--competence-color) 14%,transparent);transition:box-shadow .16s,transform .16s}
+.competence-group .resource:hover{transform:translateY(-2px);box-shadow:0 7px 0 #02040a,0 12px 20px #000a,0 0 19px color-mix(in srgb,var(--competence-color) 27%,transparent)}
+.competence-group .resource h4{color:#fff;font-weight:850}
+.competence-group .resource .meta{color:var(--competence-color)}
+.competence-group .resource .pdf-competences{color:#d4e2f6}
+.competence-group .resource .pdf-competences strong{color:var(--competence-color)}
+.competence-group .resource .download{background:linear-gradient(180deg,color-mix(in srgb,var(--competence-color) 77%,white) 0%,var(--competence-color) 50%,color-mix(in srgb,var(--competence-color) 65%,#030713) 100%);border:1px solid color-mix(in srgb,var(--competence-color) 50%,white);color:#081021;font-weight:900;text-shadow:none;box-shadow:0 4px 0 color-mix(in srgb,var(--competence-color) 25%,#000),0 0 8px color-mix(in srgb,var(--competence-color) 23%,transparent);transition:transform .12s,box-shadow .12s}
+.competence-group .resource .download:active{transform:translateY(3px);box-shadow:0 1px 0 #04060b}
+.quick a{background:linear-gradient(180deg,#243e70,#0b1934);border-color:#6589cf;box-shadow:0 3px 0 #020713}
+@media(max-width:600px){.competence-group{padding-left:10px;margin:23px 0}.competence-group>h3{font-size:1.06rem}}
+@media(prefers-reduced-motion:reduce){.resource,.download,.filter-controls button,.pdf-filter-bar{transition:none!important}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Ressources à imprimer — Fiches PDF, dominos et cahiers","url":"https://bleja972.github.io/ressources-a-imprimer/","inLanguage":"fr","description":"Fiches éducatives gratuites et jeux à imprimer pour le CP, CE1 et CE2."}</script>
 </head><body><header><div class="wrap"><a class="brand" href="/">La Ludothèque</a><nav aria-label="Navigation principale"><a href="/">Accueil</a><a href="/niveau/cp/">CP</a><a href="/niveau/ce1/">CE1</a><a href="/niveau/ce2/">CE2</a><a href="/niveau/cm1/">CM1</a><a href="/ressources-a-imprimer/" aria-current="page">PDF à imprimer</a></nav></div></header>
@@ -167,6 +195,21 @@ a{color:inherit}header{background:#101b36f2;border-bottom:1px solid #5575b0}head
 'use strict';
 const fields={domain:document.getElementById('pdf-domain'),level:document.getElementById('pdf-level'),competence:document.getElementById('pdf-competence'),search:document.getElementById('pdf-search')};
 const cards=Array.from(document.querySelectorAll('.resource[data-domain]'));
+
+const palette=['#ffb347','#fc6b91','#5dcbff','#bb8cff','#ffe26b','#ff8b4f','#ff69d2','#82b7ff','#f7a6ff','#ffcc4c','#8de0e8','#ff7777','#dba1ff','#82d7a1','#fc91b7','#74abff','#f6a857','#d2a1ff','#5acbe5'];
+const competenceNames=[...new Set(cards.map(card=>card.dataset.competence))].sort((a,b)=>a.localeCompare(b,'fr'));
+const colorByCompetence=new Map(competenceNames.map((name,index)=>[name,palette[index%palette.length]]));
+document.querySelectorAll('.competence-group').forEach(group=>{
+  const first=group.querySelector('.resource[data-competence]');
+  if(first)group.style.setProperty('--competence-color',colorByCompetence.get(first.dataset.competence));
+});
+function updateAccent(){
+  const selected=fields.competence.value;
+  const visible=cards.find(card=>!card.hidden);
+  const name=selected||(visible?visible.dataset.competence:'');
+  document.documentElement.style.setProperty('--pdf-active',colorByCompetence.get(name)||'#ffe364');
+}
+
 function norm(s){return (s||'').normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().trim()}
 function refresh(){
 let total=0;
@@ -178,6 +221,7 @@ document.querySelectorAll('.competence-group').forEach(group=>{group.hidden=!gro
 document.querySelectorAll('.domain-section').forEach(group=>{group.hidden=!group.querySelector('.resource:not([hidden])')});
 document.getElementById('pdf-results').textContent=total+' ressource'+(total>1?'s':'')+' PDF trouvée'+(total>1?'s':'');
 document.getElementById('pdf-empty').hidden=total!==0;
+updateAccent();
 }
 Object.values(fields).forEach(el=>el.addEventListener(el.tagName==='INPUT'?'input':'change',refresh));
 document.getElementById('pdf-reset').addEventListener('click',()=>{Object.values(fields).forEach(el=>el.value='');refresh()});
