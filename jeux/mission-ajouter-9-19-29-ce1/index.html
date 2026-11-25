@@ -90,12 +90,17 @@
 }
 @media(max-width:390px){#game .equation{font-size:clamp(1.25rem,7vw,1.65rem)}}
 #game .print-pdf {
-  display:inline-flex;align-items:center;justify-content:center;min-height:44px;
-  padding:9px 18px;border:2px solid #ffe15c;border-radius:12px;
-  background:linear-gradient(#3d3011,#181206);color:#fff3af;
-  box-shadow:0 4px #080600,0 0 12px #ffe15c70;text-decoration:none;font-weight:800;
+  display:inline-flex;align-items:center;justify-content:center;min-height:46px;
+  padding:9px 20px;border:2px solid #fff29b;border-radius:12px;
+  background:linear-gradient(#fff384 0%,#ffc83c 49%,#ffa824 51%,#f48a15 100%);
+  color:#241200;font-weight:900;text-decoration:none;text-shadow:0 1px #fff8;
+  box-shadow:inset 0 2px 0 #fff9,0 6px 0 #8c4307,0 0 17px #ffbd527d;
+  transition:transform .12s,box-shadow .12s;
 }
+#game .print-pdf:hover {filter:brightness(1.09)}
+#game .print-pdf:active {transform:translateY(4px);box-shadow:inset 0 1px 0 #fff8,0 2px 0 #8c4307,0 0 12px #ffbd527d}
 #game .print-pdf:focus-visible {outline:2px solid #fff;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){#game .print-pdf {transition:none}}
 </style>
 </head>
 <body>
