@@ -21,7 +21,9 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "playClicks": 0
+    "playClicks": 0,
+    "pdfUrl": "/pdf/ajouter-9-19-29-exercices.pdf",
+    "pdfLabel": "Fiche d’exercices · 4 pages"
   },
   {
     "id": "mission-ajouter-9-19-29",
@@ -47,7 +49,9 @@
     "new": true,
     "playClicks": 0,
     "thumb": "/assets/catalogue-v2/captures/mission-ajouter-9-19-29.webp",
-    "imageAlt": "Mission +9, +19, +29 en pleine partie, avec les dizaines, une unité barrée et le pavé numérique"
+    "imageAlt": "Mission +9, +19, +29 en pleine partie, avec les dizaines, une unité barrée et le pavé numérique",
+    "pdfUrl": "/pdf/ajouter-9-19-29-exercices.pdf",
+    "pdfLabel": "Fiche d’exercices · 4 pages"
   },
   {
     "id": "mission-problemes-ce2-periode-2",
