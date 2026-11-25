@@ -1,5 +1,28 @@
 [
   {
+    "id": "mission-ajouter-9-19-29-ce1",
+    "slug": "mission-ajouter-9-19-29-ce1",
+    "title": "Mission +9, +19, +29 — CE1 jusqu’à 999",
+    "url": "/jeux/mission-ajouter-9-19-29-ce1/",
+    "path": "/jeux/mission-ajouter-9-19-29-ce1/",
+    "description": "Deux niveaux pour ajouter 9, 19 ou 29 avec des unités, des dizaines et des centaines.",
+    "short": "Deux niveaux pour ajouter 9, 19 ou 29 avec des unités, des dizaines et des centaines.",
+    "objective": "Ajouter 9, 19 ou 29 à un nombre de deux ou trois chiffres.",
+    "skill": "mental",
+    "skillName": "Calcul mental",
+    "category": "mental",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "level": "CE1",
+    "levels": [
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "playClicks": 0
+  },
+  {
     "id": "mission-ajouter-9-19-29",
     "slug": "mission-ajouter-9-19-29",
     "title": "Mission +9, +19, +29",
