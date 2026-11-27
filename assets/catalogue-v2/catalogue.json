@@ -58,7 +58,11 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "playClicks": 0
+    "playClicks": 0,
+    "thumb": "/assets/catalogue-v2/captures/mission-enlever-9-19-29-ce1.svg",
+    "image": "https://bleja972.github.io/assets/catalogue-v2/captures/mission-enlever-9-19-29-ce1.svg",
+    "imageAlt": "Aperçu illustré : 184 − 19 = 165, avec une centaine, six dizaines et cinq unités",
+    "ficheUrl": "/fiches/mission-enlever-9-19-29-ce1/"
   },
   {
     "id": "mission-ajouter-9-19-29",
