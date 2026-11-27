@@ -55,7 +55,7 @@ function activateCatalogue(source) {
       image: game.thumb || game.image || card?.querySelector('img')?.getAttribute('src'),
       capture: game.screenshotUrl || game.image,
       alt: game.imageAlt,
-      short: (isEnglish || isSpanish) ? (game.short || game.description || card?.querySelector('.card-description')?.textContent.trim() || '') : (game.short || card?.querySelector('.card-description')?.textContent.trim() || game.description),
+      short: (isEnglish || isSpanish || isChinese) ? (game.short || game.description || card?.querySelector('.card-description')?.textContent.trim() || '') : (game.short || card?.querySelector('.card-description')?.textContent.trim() || game.description),
       pdf: game.pdfUrl || extras.find(link => link.dataset.kind === 'pdf')?.getAttribute('href'),
       plays: game.playClicks,
       tracking: card?.querySelector('a.play')?.dataset,
@@ -245,7 +245,7 @@ function activateCatalogue(source) {
     }).join('');
   }
 
-  const playLabel = game => localise('Jouer', game.contentLanguage === 'fr' ? 'Play in French' : 'Play', '开始游戏', game.contentLanguage === 'fr' ? 'Jugar en francés' : 'Jugar');
+  const playLabel = game => localise('Jouer', game.contentLanguage === 'fr' ? 'Play in French' : 'Play', game.contentLanguage === 'fr' ? '法语游戏' : '开始游戏', game.contentLanguage === 'fr' ? 'Jugar en francés' : 'Jugar');
 
   function card(game, eager = false) {
     const image = game.image
@@ -257,7 +257,7 @@ function activateCatalogue(source) {
     return `<article class="game-card" data-game="${escape(game.id)}" data-card-subject="${subjectOf(game)}">
       <div class="game-image">
         ${image}
-        ${(isEnglish || isSpanish) ? `<span class="game-language-badge" data-game-language="${game.contentLanguage === 'fr' ? 'fr' : isSpanish ? 'es' : 'en'}" aria-label="${isSpanish ? 'Idioma del juego: ' : 'Game language: '}${game.contentLanguage === 'fr' ? (isSpanish ? 'Francés' : 'French') : isSpanish ? 'Español' : 'English'}"><span class="game-language-flag" aria-hidden="true"></span>${game.contentLanguage === 'fr' ? (isSpanish ? 'Francés' : 'French') : isSpanish ? 'Español' : 'English'}</span>` : ''}
+        ${(isEnglish || isSpanish || isChinese) ? `<span class="game-language-badge" data-game-language="${game.contentLanguage === 'fr' ? 'fr' : isChinese ? 'zh' : isSpanish ? 'es' : 'en'}" aria-label="${isChinese ? '游戏语言：' : isSpanish ? 'Idioma del juego: ' : 'Game language: '}${game.contentLanguage === 'fr' ? (isChinese ? '法语' : isSpanish ? 'Francés' : 'French') : isChinese ? '中文' : isSpanish ? 'Español' : 'English'}"><span class="game-language-flag" aria-hidden="true"></span>${game.contentLanguage === 'fr' ? (isChinese ? '法语' : isSpanish ? 'Francés' : 'French') : isChinese ? '中文' : isSpanish ? 'Español' : 'English'}</span>` : ''}
         <button class="icon-button fav-button" data-favorite="${game.id}" type="button" aria-pressed="false">${icon('heart')}</button>
       </div>
       <div class="card-body">
