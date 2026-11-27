@@ -61,25 +61,21 @@
     return legacy[lang + ':' + id] || (await catalogue).find(game => game.id === id);
   }
 
-  function showPdf(game) {
+  function showPdf(game, entry) {
     const link = get('game-pdf-link');
-    if (!game.pdfUrl) return;
-    link.href = game.pdfUrl;
-    link.textContent = text.pdf;
-    link.hidden = lang === 'fr' && id === 'jeu-27';
-
-    if (lang === 'fr' && (id === 'jeu-27' || id === 'jeu-75')) {
-      link.textContent = id === 'jeu-27' ? 'Exercices PDF à imprimer' : 'PDF · Dictées 7 à 12';
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      link.removeAttribute('download');
-    }
-
-    if (lang === 'fr' && id === 'jeu-27') {
-      fetch(link.href, { method: 'HEAD' })
-        .then(response => { link.hidden = !response.ok; })
-        .catch(() => { link.hidden = true; });
-    }
+    const resources = entry?.pdfResources?.length ? entry.pdfResources : (game.pdfUrl ? [{url:game.pdfUrl,label:text.pdf,language:lang}] : []);
+    if (!link || !resources.length) return;
+    let previous = link;
+    resources.forEach((r,i)=>{
+      if (!r.url || !/^\/(?:pdf|fiches|jeux|imprimer)\//.test(r.url)) return;
+      const button = i===0 ? link : link.cloneNode(false);
+      if(i){button.removeAttribute('id');previous.after(button);previous=button;}
+      button.href=r.url;
+      button.textContent=text.pdf+(resources.length>1?' · '+r.label:'')+(r.language!==lang?' · '+r.language.toUpperCase():'');
+      button.target='_blank';button.rel='noopener';button.removeAttribute('download');
+      button.hidden=true;
+      fetch(button.href,{method:'HEAD'}).then(response=>{button.hidden=!response.ok}).catch(()=>{button.hidden=true});
+    });
   }
 
   try {
@@ -104,7 +100,8 @@
     get('game-title').textContent = game.title;
     direct.href = url.href;
     direct.hidden = false;
-    showPdf(game);
+    const pdfCatalogue = await json(cataloguePath).catch(() => []);
+    showPdf(game, pdfCatalogue.find(item => item.id === id));
     if (lang === 'fr') {
       const fiche = get('fiche-link');
       const catalogue = await json(cataloguePath).catch(() => []);
