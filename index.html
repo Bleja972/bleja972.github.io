@@ -1127,7 +1127,7 @@
             </div>
             <div id="empty-state" class="empty-state" hidden>
               <svg class="icon" id="empty-icon" aria-hidden="true"><use href="#i-search"/></svg>
-              <h3 id="empty-title"></h3>
+              <div id="empty-title" style="font-size:1.35rem;font-weight:700">Aucun jeu trouvé</div>
               <p id="empty-description"></p>
               <button class="control control-outline" type="button" data-reset>Voir tous les jeux</button>
             </div>
@@ -1366,10 +1366,10 @@
           <a class="control control-primary" href="/imprimer/" target="_blank" rel="noopener">Toutes les ressources</a>
         </div>
       </section>
-<div class="teacher-seo-intro" style="max-width:1060px;margin:12px 0 24px;line-height:1.6">
-  <h3 style="font-size:1.08rem;margin:0 0 6px">Ateliers autonomes, remédiation et APC : des jeux adaptés aux apprentissages</h3>
+<section class="teacher-seo-intro" aria-labelledby="teacher-seo-title" style="max-width:1060px;margin:12px 0 24px;line-height:1.6">
+  <h2 id="teacher-seo-title" style="font-size:1.08rem;margin:0 0 6px">Ateliers autonomes, remédiation et APC : des jeux adaptés aux apprentissages</h2>
   <p style="margin:0;color:var(--muted,#c5d0e4)">Explore les activités de numération, le calcul mental chronométré et les problèmes avec modèles en barres. Pour préparer la différenciation DYS, repère les jeux proposant des aides de lecture ou des supports visuels, puis sélectionne les exercices adaptés aux besoins des élèves.</p>
-</div>
+</section>
       <section class="path-section" id="sites-recommandes" aria-labelledby="recommended-title">
         <div class="section-heading"><h2 id="recommended-title">À découvrir aussi</h2></div>
         <p>Je recommande Logiciel Éducatif pour s’entraîner en maths et en français avec des jeux en ligne.</p>
@@ -1397,7 +1397,7 @@
   <dialog class="preview-dialog" id="preview-dialog" aria-labelledby="preview-title">
     <div class="dialog-inner">
       <div class="dialog-top">
-        <div><p id="preview-meta" class="eyebrow"></p><h2 id="preview-title"></h2></div>
+        <div><p id="preview-meta" class="eyebrow"></p><div id="preview-title" style="font-size:clamp(1.3rem,2.6vw,1.85rem);line-height:1.12;font-weight:700">Aperçu du jeu</div></div>
         <form method="dialog"><button class="icon-button dialog-close" aria-label="Fermer la capture" autofocus><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></form>
       </div>
       <img id="preview-image" class="preview-image" alt="">
