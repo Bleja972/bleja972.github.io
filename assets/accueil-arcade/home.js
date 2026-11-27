@@ -271,10 +271,9 @@ function activateCatalogue(source) {
         ${language === 'fr' && game.accessibility?.length ? `<div style="display:flex;gap:6px;flex-wrap:wrap;margin:6px 0">${game.accessibility.map(a => `<span style="font-size:.78rem;border:1px solid #769bdd;border-radius:6px;padding:3px 7px">${a === 'audio' ? '🔊 Audio' : 'Aide DYS'}</span>`).join('')}</div>` : ''}
         <div class="card-actions">
           <a class="control control-outline play" href="${escape(playHref(game.id, game.url))}" target="_blank" rel="noopener" aria-label="${playLabel(game)}: ${escape(game.title)}"${trackingAttributes(game.tracking)}>${icon('play')} ${playLabel(game)}</a>
-          ${game.extras.map(link => link.outerHTML).join('')}
+          ${game.extras.filter(link=>!game.pdfResources?.some(r=>r.url===link.getAttribute('href'))).map(link => link.outerHTML).join('')}
           ${language === 'fr' && game.ficheUrl && !game.extras.some(link => link.getAttribute('href') === game.ficheUrl) ? `<a class="quiet-link" href="${escape(game.ficheUrl)}" aria-label="${escape('Fiche pédagogique de '+game.title)}">Fiche</a>` : ''}
-          ${game.pdf && !game.extras.some(link => link.getAttribute('href') === game.pdf)
-            ? `<a class="quiet-link card-pdf" href="${escape(game.pdf)}" target="_blank" rel="noopener" aria-label="${localise('Fiche PDF de ', 'Printable PDF for ', 'PDF 练习单：', 'Ficha PDF de ')}${escape(game.title)}">${localise('Fiche PDF', 'Printable PDF', 'PDF 练习单', 'Ficha PDF')}</a>` : ''}
+          ${game.pdfResources?.length ? game.pdfResources.map(r=>`<a class="control control-primary arcade-player-sheet" style="border:1px solid #78baff;border-radius:8px;box-shadow:0 3px #162854,0 0 8px #3874c955;background:linear-gradient(145deg,#2856a0,#172d57);color:#fff" href="${escape(r.url)}" target="_blank" rel="noopener" aria-label="${escape(r.label+' — '+game.title)}">PDF${game.pdfResources.length>1?' · '+escape(r.label):''}${r.language!==language?' · '+r.language.toUpperCase():''}</a>`).join('') : game.pdf && !game.extras.some(link => link.getAttribute('href') === game.pdf) ? `<a class="quiet-link card-pdf" href="${escape(game.pdf)}" target="_blank" rel="noopener">PDF</a>` : ''}
         </div>
       </div>
     </article>`;
