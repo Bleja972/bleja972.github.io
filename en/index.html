@@ -2,6 +2,23 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
+  <script>
+  /* Normalize legacy homepage language links without losing catalogue filters. */
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var requested = params.get('lang');
+    var homes = { fr: '/', en: '/en/', es: '/es/', zh: '/zh/', 'zh-Hans': '/zh/' };
+    var current = window.location.pathname.replace(/index\.html$/, '');
+    var target = Object.prototype.hasOwnProperty.call(homes, requested) ? homes[requested] : current;
+    if (params.has('lang') || window.location.pathname !== current) {
+      params.delete('lang');
+      var query = params.toString();
+      var url = target + (query ? '?' + query : '') + window.location.hash;
+      if (target !== current) window.location.replace(url);
+      else window.history.replaceState(window.history.state, '', url);
+    }
+  }());
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#000000">
@@ -21,7 +38,7 @@
   <meta property="og:image" content="https://bleja972.github.io/assets/bulles-duo/capture.webp">
   <link rel="icon" href="/assets/accueil-arcade/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/accueil-arcade/home.css?v=language-badges-20261126">
-  <script defer src="/assets/accueil-arcade/home.js?v=language-badges-20261126"></script>
+  <script defer src="/assets/accueil-arcade/home.js?v=clean-language-urls"></script>
   <script defer src="/assets/statistiques.js?v=total-languages-v1"></script>
   <script defer src="/assets/partager-jeu.js?v=share-v1"></script>
   <script async data-goatcounter="https://lesjeuxdemathsetdefrancais.goatcounter.com/count" src="https://gc.zgo.at/count.js"></script>
@@ -55,10 +72,10 @@
         </a>
       </nav>
       <nav class="language-links" aria-label="Language">
-        <a lang="fr" href="/?lang=fr" aria-label="Français">FR</a>
+        <a lang="fr" href="/" aria-label="Français">FR</a>
         <span aria-current="page" title="English">EN</span>
-        <a lang="es" href="/es/?lang=es" aria-label="Español">ES</a>
-        <a lang="zh-Hans" href="/zh/?lang=zh" aria-label="中文">中文</a>
+        <a lang="es" href="/es/" aria-label="Español">ES</a>
+        <a lang="zh-Hans" href="/zh/" aria-label="中文">中文</a>
       </nav>
     </div>
   </header>
