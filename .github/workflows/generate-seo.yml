@@ -1,0 +1,30 @@
+name: SEO - fiches et sitemap
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'assets/catalogue-v2/catalogue.json'
+      - 'scripts/generate_seo.py'
+      - 'niveau/**'
+      - 'parcours/**'
+      - 'competences/**'
+      - '.github/workflows/generate-seo.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vérifier et générer les fichiers SEO
+        run: python3 scripts/generate_seo.py
+      - name: Vérifier les changements
+        run: git diff --stat && git status --short
+      - name: Conserver les fichiers générés
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-generated
+          path: |
+            fiches/
+            sitemap.xml
+            assets/catalogue-v2/catalogue.json
