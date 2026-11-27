@@ -22,7 +22,14 @@
     "sourceId": "mission-ajouter-9-19-29-ce1",
     "contentLanguage": "en",
     "pdfUrl": "/pdf/adding-9-19-29-worksheets-en.pdf",
-    "pdfLabel": "Printable PDF"
+    "pdfLabel": "Printable PDF",
+    "pdfResources": [
+      {
+        "url": "/pdf/adding-9-19-29-worksheets-en.pdf",
+        "label": "Printable PDF",
+        "language": "en"
+      }
+    ]
   },
   {
     "id": "en-mission-ajouter-9-19-29",
@@ -49,7 +56,14 @@
     "thumb": "/assets/catalogue-v2/captures/mission-ajouter-9-19-29.webp",
     "imageAlt": "Gameplay showing tens, a crossed-out unit and the number pad",
     "pdfUrl": "/pdf/adding-9-19-29-worksheets-en.pdf",
-    "pdfLabel": "Printable PDF"
+    "pdfLabel": "Printable PDF",
+    "pdfResources": [
+      {
+        "url": "/pdf/adding-9-19-29-worksheets-en.pdf",
+        "label": "Printable PDF",
+        "language": "en"
+      }
+    ]
   },
   {
     "id": "en-mission-fractions-ce1-revisions",
@@ -223,7 +237,14 @@
     "sourceId": "cartons-montessori-ce2",
     "contentLanguage": "fr",
     "thumb": "/assets/en-captures/en-cartons-montessori-ce2-live.webp",
-    "imageAlt": "French gameplay screenshot of Numbers in Orbit — Montessori Cards"
+    "imageAlt": "French gameplay screenshot of Numbers in Orbit — Montessori Cards",
+    "pdfResources": [
+      {
+        "url": "/pdf/Cartons_Montessori_CE2_systeme_solaire_exercices_et_correction.pdf",
+        "label": "4 fiches élèves + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "en-cartons-montessori-cp",
@@ -273,7 +294,14 @@
     "pdfUrl": "/pdf/Cartons_Montessori_CE1_exercices_et_correction.pdf",
     "pdfLabel": "4 fiches élèves + corrigé (PDF)",
     "sourceId": "cartons-montessori-ce1",
-    "contentLanguage": "en"
+    "contentLanguage": "en",
+    "pdfResources": [
+      {
+        "url": "/pdf/Cartons_Montessori_CE1_exercices_et_correction.pdf",
+        "label": "4 fiches élèves + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "en-ours-de-la-banquise",
@@ -369,7 +397,14 @@
     "thumb": "/assets/en-captures/tombolo-crabs-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Tombolo crabs — Odd and even numbers",
     "sourceId": "crabes-du-tombolo",
-    "contentLanguage": "en"
+    "contentLanguage": "en",
+    "pdfResources": [
+      {
+        "url": "/pdf/Les_crabes_du_tombolo_CE1_pairs_impairs_exercices_et_correction.pdf",
+        "label": "Pairs et impairs : 3 fiches élèves + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "en-popeye-number-line",
@@ -397,7 +432,34 @@
     "thumb": "/assets/en-captures/popeye-number-line-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Popeye on the number line",
     "sourceId": "jeu-103",
-    "contentLanguage": "en"
+    "contentLanguage": "en",
+    "pdfResources": [
+      {
+        "url": "/pdf/Popeye_le_funambule_CP.pdf",
+        "label": "CP",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1.pdf",
+        "label": "CE1",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1_8_exercices.pdf",
+        "label": "CE1 — 8 exercices",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1_pas_a_deviner.pdf",
+        "label": "CE1 — Pas à deviner",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE2.pdf",
+        "label": "CE2",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "en-salines-crabs",
@@ -425,7 +487,24 @@
     "thumb": "/assets/en-captures/salines-crabs-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Salines crabs — Put numbers in order",
     "sourceId": "jeu-102",
-    "contentLanguage": "en"
+    "contentLanguage": "en",
+    "pdfResources": [
+      {
+        "url": "/pdf/crabes-salines-cp-en.pdf",
+        "label": "CP",
+        "language": "en"
+      },
+      {
+        "url": "/pdf/crabes-salines-ce1-en.pdf",
+        "label": "CE1",
+        "language": "en"
+      },
+      {
+        "url": "/pdf/crabes-salines-ce2-en.pdf",
+        "label": "CE2",
+        "language": "en"
+      }
+    ]
   },
   {
     "id": "en-jeu-101",
@@ -539,7 +618,14 @@
     "thumb": "/assets/en-captures/fritz-number-bounds-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Fritz’s Planet — Number bounds",
     "sourceId": "jeu-97",
-    "contentLanguage": "en"
+    "contentLanguage": "en",
+    "pdfResources": [
+      {
+        "url": "/pdf/Fritz_encadrements_CE1_exercices_et_correction.pdf",
+        "label": "Encadrements : 30 exercices + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "en-jeu-96",
@@ -1137,7 +1223,14 @@
     "thumb": "/assets/en-captures/mission-nautilus-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Mission Nautilus — Number Bonds to 100",
     "sourceId": "jeu-5",
-    "contentLanguage": "en"
+    "contentLanguage": "en",
+    "pdfResources": [
+      {
+        "url": "/pdf/number-bonds-to-100-ce1-en.pdf",
+        "label": "Printable PDF",
+        "language": "en"
+      }
+    ]
   },
   {
     "id": "en-31",
@@ -2028,7 +2121,14 @@
     "sourceId": "soustractions-sans-echange-en-orbite",
     "contentLanguage": "fr",
     "thumb": "/assets/en-captures/en-soustractions-sans-echange-en-orbite-live.webp",
-    "imageAlt": "French gameplay screenshot of Subtraction in Orbit — No Regrouping"
+    "imageAlt": "French gameplay screenshot of Subtraction in Orbit — No Regrouping",
+    "pdfResources": [
+      {
+        "url": "/pdf/column-subtraction-without-exchanging-ce1-en.pdf",
+        "label": "Printable PDF",
+        "language": "en"
+      }
+    ]
   },
   {
     "id": "en-47",
@@ -2051,7 +2151,14 @@
     "thumb": "/assets/en-captures/en-47-live.webp",
     "imageAlt": "English gameplay screenshot of Column addition without regrouping",
     "sourceId": "jeu-50",
-    "contentLanguage": "en"
+    "contentLanguage": "en",
+    "pdfResources": [
+      {
+        "url": "/pdf/column-addition-without-regrouping-ce1-en.pdf",
+        "label": "Printable PDF",
+        "language": "en"
+      }
+    ]
   },
   {
     "id": "en-48",
@@ -2361,7 +2468,14 @@
     "imageAlt": "English gameplay screenshot of Mental maths — Term 1",
     "sourceId": "jeu-60",
     "short": "Review key mental maths skills from the first school term.",
-    "contentLanguage": "en"
+    "contentLanguage": "en",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "7 compétences : exercices et corrigés (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "en-58",
@@ -2385,7 +2499,14 @@
     "imageAlt": "English gameplay screenshot of Number fish",
     "sourceId": "jeu-61",
     "short": "Follow the number fish and practise adding or subtracting 1, 10 or 100.",
-    "contentLanguage": "en"
+    "contentLanguage": "en",
+    "pdfResources": [
+      {
+        "url": "/pdf/fish-number-challenge-add-subtract-ce1-en.pdf",
+        "label": "Printable PDF",
+        "language": "en"
+      }
+    ]
   },
   {
     "id": "en-59",
@@ -2626,7 +2747,14 @@
     "imageAlt": "English gameplay screenshot of Word problems with bar models — Workshop 4",
     "sourceId": "jeu-71",
     "short": "Use bar models to represent quantities and solve word problems in Workshop 4.",
-    "contentLanguage": "en"
+    "contentLanguage": "en",
+    "pdfResources": [
+      {
+        "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+        "label": "7 problèmes avec barres + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "en-70",
@@ -2671,7 +2799,14 @@
     "sourceId": "jeu-105",
     "contentLanguage": "fr",
     "thumb": "/assets/en-captures/en-jeu-105-live.webp",
-    "imageAlt": "French gameplay screenshot of Spaceship Subtraction — No Regrouping"
+    "imageAlt": "French gameplay screenshot of Spaceship Subtraction — No Regrouping",
+    "pdfResources": [
+      {
+        "url": "/pdf/column-subtraction-without-exchanging-ce1-en.pdf",
+        "label": "Printable PDF",
+        "language": "en"
+      }
+    ]
   },
   {
     "id": "en-80",
@@ -2694,7 +2829,14 @@
     "imageAlt": "Screenshot of Vocabulary — Term 1",
     "sourceId": "jeu-20",
     "short": "Build French vocabulary through first-term word exercises.",
-    "contentLanguage": "fr"
+    "contentLanguage": "fr",
+    "pdfResources": [
+      {
+        "url": "/pdf/Vocabulaire_CE1_jeux_a_imprimer.pdf",
+        "label": "Vocabulaire CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "en-71",
@@ -2717,7 +2859,14 @@
     "imageAlt": "Screenshot of Reading comprehension",
     "sourceId": "jeu-21",
     "short": "Read French texts and answer comprehension questions.",
-    "contentLanguage": "fr"
+    "contentLanguage": "fr",
+    "pdfResources": [
+      {
+        "url": "/pdf/Lecture_comprehension_CE1_animaux_exercices_et_corriges.pdf",
+        "label": "Lecture CE1 · 4 textes, exercices et corrigés (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "en-81",
@@ -2786,7 +2935,14 @@
     "imageAlt": "Screenshot of Dictations 1–6 — Term 1",
     "sourceId": "jeu-24",
     "short": "Practise French spelling with six first-term dictations.",
-    "contentLanguage": "fr"
+    "contentLanguage": "fr",
+    "pdfResources": [
+      {
+        "url": "/pdf/Dictee_6_Periode_1_CE1_eleve_et_correction_parents.pdf",
+        "label": "Dictée 6 · à trous + correction parents (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "en-77",
@@ -2855,7 +3011,14 @@
     "imageAlt": "Screenshot of Grammar — Term 1",
     "sourceId": "jeu-27",
     "short": "Review first-term French grammar through interactive exercises.",
-    "contentLanguage": "fr"
+    "contentLanguage": "fr",
+    "pdfResources": [
+      {
+        "url": "/pdf/Mission_Pronoms_en_orbite_CE1.pdf",
+        "label": "Pronoms personnels",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "en-72",
