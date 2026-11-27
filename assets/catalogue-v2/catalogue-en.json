@@ -32,6 +32,33 @@
     ]
   },
   {
+    "id": "en-mission-enlever-9-19-29-ce1",
+    "sourceId": "mission-enlever-9-19-29-ce1",
+    "slug": "subtraction-mission-9-19-29-up-to-999",
+    "title": "Mission −9, −19, −29 — Up to 999",
+    "url": "/en/games/subtraction-mission-9-19-29-up-to-999/",
+    "path": "/en/games/subtraction-mission-9-19-29-up-to-999/",
+    "description": "Subtract 9, 19 or 29 from two- and three-digit numbers: remove tens, then add one.",
+    "short": "Subtract 9, 19 or 29 from two- and three-digit numbers: remove tens, then add one.",
+    "objective": "Subtract 9, 19 or 29 from two- and three-digit numbers: remove tens, then add one.",
+    "levels": [
+      "CE1",
+      "CE2"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "skill": "mental",
+    "skillName": "Mental maths",
+    "groupName": "Mental maths",
+    "weekly": false,
+    "new": true,
+    "contentLanguage": "en",
+    "thumb": "/assets/catalogue-v2/captures/mission-enlever-9-19-29-ce1-en.svg",
+    "image": "https://bleja972.github.io/assets/catalogue-v2/captures/mission-enlever-9-19-29-ce1-en.svg",
+    "imageAlt": "Illustrated preview of subtraction mission with hundreds, tens and ones"
+  },
+  {
     "id": "en-mission-ajouter-9-19-29",
     "slug": "addition-mission-9-19-29",
     "title": "Mission +9, +19, +29",
