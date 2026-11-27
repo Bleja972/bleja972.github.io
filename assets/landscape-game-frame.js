@@ -112,6 +112,34 @@
     frame.allow = 'fullscreen; autoplay';
     frame.allowFullscreen = true;
     frame.dataset.blejaGameFrame = '';
+    // Apply the French arcade chrome to English embedded games without changing game artwork.
+    if (lang === 'en') {
+      frame.addEventListener('load', () => {
+        try {
+          const doc = frame.contentDocument;
+          if (!doc || doc.getElementById('bleja-english-arcade-chrome')) return;
+          const style = doc.createElement('style');
+          style.id = 'bleja-english-arcade-chrome';
+          style.textContent = `
+            html { background-color: #000 !important; }
+            .bleja-landscape-tools:not([data-landscape-in-flow]) { background-color: transparent; }
+            .bleja-landscape-tools #horizontal-toggle {
+              border: 1px solid #73eaff !important;
+              border-radius: 10px !important;
+              background: linear-gradient(180deg,#c5f8ff,#73eaff 47%,#42b9e8) !important;
+              color: #08182c !important;
+              box-shadow: inset 0 1px #ffffffb3,inset 0 -2px #09122635,0 4px #275879,0 0 18px #73eaff55 !important;
+            }
+            .bleja-landscape-tools #horizontal-status {
+              border: 1px solid #7261ac !important;
+              background: #17172c !important;
+              color: #f4f5ff !important;
+            }
+          `;
+          doc.head.append(style);
+        } catch {}
+      });
+    }
     get('game-container').replaceChildren(frame);
   } catch {
     missing.textContent = text.error;
