@@ -275,14 +275,14 @@
     "id": "ours-de-la-banquise-neon",
     "sourceId": "ours-de-la-banquise-neon",
     "title": "Misión Neón — El robot de los cristales",
-    "url": "/jeux/ours-de-la-banquise-neon/",
-    "path": "/jeux/ours-de-la-banquise-neon/",
+    "url": "/jeux/ours-de-la-banquise-neon-es/",
+    "path": "/jeux/ours-de-la-banquise-neon-es/",
     "description": "Programa los movimientos del robot para recoger los cristales.",
     "group": "codage",
     "skill": "programmer-deplacements",
     "skillName": "Programación",
     "subject": "Mathématiques",
-    "contentLanguage": "fr",
+    "contentLanguage": "es",
     "levels": [
       "CE1"
     ],
