@@ -913,7 +913,7 @@
     "skill": "problemes",
     "skillName": "Résoudre des problèmes",
     "slug": "problemes-cp-periode-1",
-    "objective": "Résoudre des problèmes additifs et soustractifs à l’aide de modèles en barres.",
+    "objective": "Résoudre des problèmes additifs et soustractifs. Modéliser une situation à l’aide de barres.",
     "short": "42 problèmes à résoudre avec des modèles en barres et une lecture des énoncés.",
     "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-1.svg",
     "imageAlt": "Modèle en barres pour trouver les carottes manquantes.",
@@ -938,7 +938,7 @@
     "skill": "problemes",
     "skillName": "Résoudre des problèmes",
     "slug": "problemes-cp-periode-2",
-    "objective": "Résoudre des problèmes additifs et soustractifs à l’aide de modèles en barres.",
+    "objective": "Résoudre des problèmes additifs et soustractifs. Choisir les données et modéliser la situation à l’aide de barres.",
     "short": "18 problèmes à résoudre avec des modèles en barres et une aide à la lecture.",
     "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-2.svg",
     "imageAlt": "Modèle en barres pour résoudre un problème de balles.",
@@ -2692,7 +2692,7 @@
     "group": "pose",
     "slug": "additions-avec-echanges-blocs-3d",
     "path": "/fiches/additions-avec-echanges-blocs-3d/",
-    "objective": "Aligner les colonnes et calculer une addition posée.",
+    "objective": "Poser et calculer une addition avec échanges. Regrouper 10 unités en 1 dizaine et 10 dizaines en 1 centaine.",
     "skillName": "Additions posées",
     "groupName": "Calcul posé",
     "levels": [
@@ -2717,7 +2717,7 @@
     "group": "pose",
     "slug": "additions-avec-echanges-blocs-3d-ce2",
     "path": "/jeux/additions-avec-echanges-blocs-3d-ce2/",
-    "objective": "Aligner les colonnes et calculer une addition posée.",
+    "objective": "Poser et calculer une addition avec échanges. Regrouper 10 unités, 10 dizaines ou 10 centaines dans l’ordre supérieur.",
     "skillName": "Additions posées",
     "groupName": "Calcul posé",
     "levels": [
@@ -2742,7 +2742,7 @@
     "group": "pose",
     "slug": "additions-avec-echanges-blocs-3d-cp",
     "path": "/jeux/additions-avec-echanges-blocs-3d-cp/",
-    "objective": "Aligner les colonnes et calculer une addition posée.",
+    "objective": "Poser et calculer une addition avec échange. Regrouper 10 unités en 1 dizaine.",
     "skillName": "Additions posées",
     "groupName": "Calcul posé",
     "levels": [
@@ -3399,7 +3399,7 @@
     "group": "pose",
     "slug": "soustractions-sans-echange-vaisseau-spatial",
     "path": "/fiches/soustractions-sans-echange-vaisseau-spatial/",
-    "objective": "Barre les jetons 3D et construis le résultat de droite à gauche.",
+    "objective": "Poser et calculer une soustraction sans échange. Aligner les unités, dizaines et centaines et calculer de droite à gauche.",
     "skillName": "Soustractions posées",
     "groupName": "Calcul posé",
     "levels": [
