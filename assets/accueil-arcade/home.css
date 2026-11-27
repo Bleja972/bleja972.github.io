@@ -681,3 +681,17 @@ body:has(dialog[open]) { overflow: hidden; }
   :lang(en) .top-nav { font-size: .81rem; }
   :lang(en) .weekly-heading { flex-wrap: wrap; }
 }
+
+/* English catalogue: actual gameplay language, independent of title language. */
+:lang(en) .game-language-badge {
+  position:absolute; top:8px; left:8px; z-index:2;
+  display:inline-flex; align-items:center; gap:6px; padding:5px 8px;
+  border:1px solid #b1f5ff; border-radius:6px;
+  background:#101b38f5; color:#f4f5ff; font:800 .78rem/1.2 Barlow,Arial,sans-serif;
+  box-shadow:0 2px 6px #0009; pointer-events:none;
+}
+:lang(en) .game-language-badge[data-game-language="fr"] { border-color:#ffd480; }
+:lang(en) .game-language-flag { width:19px; height:13px; flex:none; border:1px solid #ffffff80; border-radius:2px; background:linear-gradient(90deg,#183f94 33.333%,#fff 33.333% 66.667%,#ed384b 66.667%); }
+:lang(en) .game-language-badge[data-game-language="en"] .game-language-flag {
+  background:linear-gradient(90deg,transparent 42%,#c91836 42% 58%,transparent 58%),linear-gradient(transparent 37%,#c91836 37% 63%,transparent 63%),linear-gradient(90deg,transparent 34%,white 34% 66%,transparent 66%),linear-gradient(transparent 26%,white 26% 74%,transparent 74%),linear-gradient(32deg,transparent 43%,white 43% 57%,transparent 57%),linear-gradient(-32deg,transparent 43%,white 43% 57%,transparent 57%),#173a79;
+}
