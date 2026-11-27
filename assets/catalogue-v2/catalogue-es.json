@@ -1165,8 +1165,8 @@
     "url": "/jeux/calcul-mental-ce2-calcul-pop/jouer/arcade-es.html",
     "description": "30 misiones orbitales de cálculo mental: sumas, restas, tablas, dobles y mitades. Sin tiempo o retos de 3 minutos.",
     "weekly": false,
-    "image": "https://bleja972.github.io/assets/catalogue-v2/captures/jeu-76.webp",
-    "imageAlt": "Misión Cálculo Mental — CE2",
+    "image": "https://bleja972.github.io/assets/catalogue-v2/captures/mission-calcul-ce2-es.svg",
+    "imageAlt": "Vista ilustrativa de Misión Cálculo Mental",
     "category": "calculs",
     "level": "CE2",
     "subject": "Mathématiques",
@@ -1183,7 +1183,7 @@
       "CE2"
     ],
     "short": "30 misiones orbitales de cálculo mental: sumas, restas, tablas, dobles y mitades. Sin tiempo o retos de 3 minutos.",
-    "thumb": "/assets/catalogue-v2/captures/jeu-76.webp",
+    "thumb": "/assets/catalogue-v2/captures/mission-calcul-ce2-es.svg",
     "sourceId": "jeu-76",
     "playClicks": 10,
     "contentLanguage": "es"
