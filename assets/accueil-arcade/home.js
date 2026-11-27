@@ -10,7 +10,7 @@ const languageLinks = document.querySelector('.language-links');
 
 function playHref(id, href) {
   const target = new URL(href, location.href);
-  if (isChinese || target.pathname.startsWith('/jouer/') || ((isEnglish || isSpanish) && target.origin !== location.origin)) return href;
+  if (target.pathname.startsWith('/jouer/') || ((isEnglish || isSpanish || isChinese) && target.origin !== location.origin)) return href;
   return '/jouer/?' + new URLSearchParams({ lang: language, jeu: id });
 }
 
