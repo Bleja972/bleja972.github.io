@@ -23,7 +23,8 @@
     "new": true,
     "playClicks": 0,
     "pdfUrl": "/pdf/ajouter-9-19-29-exercices.pdf",
-    "pdfLabel": "Fiche d’exercices · 4 pages"
+    "pdfLabel": "Fiche d’exercices · 4 pages",
+    "ficheUrl": "/fiches/mission-ajouter-9-19-29-ce1/"
   },
   {
     "id": "mission-ajouter-9-19-29",
@@ -51,7 +52,8 @@
     "thumb": "/assets/catalogue-v2/captures/mission-ajouter-9-19-29.webp",
     "imageAlt": "Mission +9, +19, +29 en pleine partie, avec les dizaines, une unité barrée et le pavé numérique",
     "pdfUrl": "/pdf/ajouter-9-19-29-exercices.pdf",
-    "pdfLabel": "Fiche d’exercices · 4 pages"
+    "pdfLabel": "Fiche d’exercices · 4 pages",
+    "ficheUrl": "/fiches/mission-ajouter-9-19-29/"
   },
   {
     "id": "mission-problemes-ce2-periode-2",
@@ -76,7 +78,8 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/mission-problemes-ce2-periode-2.webp",
     "imageAlt": "Mission Problèmes CE2 en pleine partie : un problème de transformation et son modèle en barres",
-    "playClicks": 1
+    "playClicks": 1,
+    "ficheUrl": "/fiches/ateliers-problemes-ce2/"
   },
   {
     "id": "mission-fractions-ce1-revisions",
@@ -101,7 +104,8 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/Capture%20d'%C3%A9cran%202026-11-21%20142814.png",
     "imageAlt": "Véritable capture d’écran de Mission Fractions CE1 en cours de jeu : première mission, figures colorées, boutons Oui et Non et menu des dix missions.",
-    "playClicks": 0
+    "playClicks": 0,
+    "ficheUrl": "/fiches/mission-fractions-ce1-revisions/"
   },
   {
     "id": "jeu-104",
@@ -126,7 +130,8 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/mission-negation-ce1.svg",
     "imageAlt": "Aperçu du jeu Mission Négation : 8 phrases et trois boutons néon ne, n’ et pas.",
-    "playClicks": 0
+    "playClicks": 0,
+    "ficheUrl": "/fiches/mission-negation-ce1/"
   },
   {
     "id": "mission-calcul-cm1-livret-1",
@@ -153,7 +158,8 @@
     "imageAlt": "Aperçu illustré d'une partie de Mission Calcul CM1 livret 1 : missions 1 à 7, exercices et calculs de multiplication à compléter, avec boutons lumineux.",
     "playClicks": 0,
     "family": "cm1-livrets",
-    "variantLabel": "Livret 1"
+    "variantLabel": "Livret 1",
+    "ficheUrl": "/fiches/mission-calcul-cm1-livret-1/"
   },
   {
     "id": "mission-calcul-cm1-livret-5",
@@ -180,7 +186,8 @@
     "imageAlt": "Aperçu illustré du jeu Mission Calcul CM1 Livret 5 avec les missions 29 à 35 et des opérations sur les demis et les quarts.",
     "playClicks": 0,
     "family": "cm1-livrets",
-    "variantLabel": "Livret 5"
+    "variantLabel": "Livret 5",
+    "ficheUrl": "/fiches/mission-calcul-cm1-livret-5/"
   },
   {
     "id": "mission-calcul-cm1-livret-4",
@@ -207,7 +214,8 @@
     "imageAlt": "Vignette illustrée du jeu Mission Calcul CM1 Livret 4 en cours, avec les missions 22 à 28 et les calculs 75 moins 8, 26 plus 38 et 91 moins 38.",
     "playClicks": 0,
     "family": "cm1-livrets",
-    "variantLabel": "Livret 4"
+    "variantLabel": "Livret 4",
+    "ficheUrl": "/fiches/mission-calcul-cm1-livret-4/"
   },
   {
     "id": "mission-calcul-cm1-livret-3",
@@ -234,7 +242,8 @@
     "imageAlt": "Illustration du jeu Mission Calcul CM1 Livret 3 montrant la séquence 15 et des opérations de multiplication par quatre, avec des boutons lumineux.",
     "playClicks": 0,
     "family": "cm1-livrets",
-    "variantLabel": "Livret 3"
+    "variantLabel": "Livret 3",
+    "ficheUrl": "/fiches/mission-calcul-cm1-livret-3/"
   },
   {
     "id": "mission-calcul-cm1-livret-2",
@@ -261,7 +270,8 @@
     "imageAlt": "Aperçu illustré du jeu Mission Calcul CM1 : fond noir, sept boutons de missions aux néons multicolores et trois boutons d'exercices lumineux.",
     "playClicks": 0,
     "family": "cm1-livrets",
-    "variantLabel": "Livret 2"
+    "variantLabel": "Livret 2",
+    "ficheUrl": "/fiches/mission-calcul-cm1-livret-2/"
   },
   {
     "id": "cartons-montessori-ce2",
@@ -288,7 +298,8 @@
     "imageAlt": "Quatre cartons Montessori lumineux : 4 000 + 500 + 80 + 8 devant la Terre et Saturne.",
     "pdfUrl": "/pdf/Cartons_Montessori_CE2_systeme_solaire_exercices_et_correction.pdf",
     "pdfLabel": "4 fiches élèves + corrigé (PDF)",
-    "playClicks": 7
+    "playClicks": 7,
+    "ficheUrl": "/fiches/les-nombres-en-orbite-cartons-montessori-ce2/"
   },
   {
     "id": "cartons-montessori-cp",
@@ -313,7 +324,8 @@
     "new": true,
     "thumb": "/jeux/cartons-montessori-cp/apercu.svg",
     "imageAlt": "Cartons Montessori lumineux 50 et 4 pour former 54.",
-    "playClicks": 9
+    "playClicks": 9,
+    "ficheUrl": "/fiches/la-magie-des-nombres-cp/"
   },
   {
     "id": "cartons-montessori-ce1",
@@ -340,7 +352,8 @@
     "imageAlt": "Cartons Montessori lumineux montrant 400 + 50 + 1 dans un laboratoire spatial.",
     "pdfUrl": "/pdf/Cartons_Montessori_CE1_exercices_et_correction.pdf",
     "pdfLabel": "4 fiches élèves + corrigé (PDF)",
-    "playClicks": 7
+    "playClicks": 7,
+    "ficheUrl": "/fiches/la-magie-des-nombres-cartons-montessori/"
   },
   {
     "id": "genre-des-noms-ce1",
@@ -370,7 +383,8 @@
     "playClicks": 5,
     "accessibility": [
       "audio"
-    ]
+    ],
+    "ficheUrl": "/fiches/le-genre-des-noms-masculin-ou-feminin/"
   },
   {
     "id": "ours-de-la-banquise",
@@ -395,7 +409,8 @@
     "new": true,
     "thumb": "/assets/images/bannieres/openai/ours-de-la-banquise.webp?v=bannieres-20261115",
     "imageAlt": "Bannière du jeu L’ours de la banquise",
-    "playClicks": 0
+    "playClicks": 0,
+    "ficheUrl": "/fiches/l-ours-de-la-banquise/"
   },
   {
     "id": "ours-de-la-banquise-neon",
@@ -420,7 +435,8 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/ours-de-la-banquise-neon.svg?v=robot-mobile-20261121",
     "imageAlt": "Illustration mise à jour du jeu : robot, grille noire bordée de néons, croix rouges interdites, grandes flèches rouges dans le programme et collecte manuelle des cristaux.",
-    "playClicks": 0
+    "playClicks": 0,
+    "ficheUrl": "/fiches/ours-de-la-banquise-neon/"
   },
   {
     "id": "chemin-du-kangourou",
@@ -445,7 +461,8 @@
     "new": true,
     "thumb": "/assets/images/bannieres/openai/chemin-du-kangourou.webp?v=bannieres-20261115",
     "imageAlt": "Bannière du jeu Le chemin du kangourou",
-    "playClicks": 0
+    "playClicks": 0,
+    "ficheUrl": "/fiches/le-chemin-du-kangourou/"
   },
   {
     "id": "crabes-du-tombolo",
@@ -473,7 +490,8 @@
     "pdfUrl": "/pdf/Les_crabes_du_tombolo_CE1_pairs_impairs_exercices_et_correction.pdf",
     "pdfLabel": "Pairs et impairs : 3 fiches élèves + corrigé (PDF)",
     "playClicks": 3,
-    "localHeritage": "Martinique"
+    "localHeritage": "Martinique",
+    "ficheUrl": "/fiches/les-crabes-du-tombolo/"
   },
   {
     "id": "hexaflash-ce1",
@@ -498,7 +516,8 @@
     "short": "Allume les hexagones en trouvant le genre et le nombre des groupes de mots.",
     "thumb": "/jeux/hexaflash-ce1/apercu.svg",
     "imageAlt": "Hexa Flash dans une station spatiale, avec quatre catégories de grammaire aux couleurs néon.",
-    "playClicks": 4
+    "playClicks": 4,
+    "ficheUrl": "/fiches/hexa-flash-genre-et-nombre/"
   },
   {
     "id": "jeu-103",
@@ -525,7 +544,8 @@
     "short": "Trouve le nombre pointé par la flèche pour aider Popeye à rejoindre Olive.",
     "thumb": "/assets/images/bannieres/openai/popeye-ligne-graduee.webp?v=bannieres-20261115",
     "imageAlt": "Bannière du jeu Popeye sur la ligne graduée",
-    "playClicks": 12
+    "playClicks": 12,
+    "ficheUrl": "/fiches/popeye-sur-la-ligne-graduee/"
   },
   {
     "id": "jeu-102",
@@ -553,7 +573,8 @@
     "thumb": "/jeux/crabes-des-salines/plage.webp",
     "imageAlt": "Les crabes et leurs pancartes sur la plage des Salines.",
     "playClicks": 7,
-    "localHeritage": "Martinique"
+    "localHeritage": "Martinique",
+    "ficheUrl": "/fiches/les-crabes-des-salines/"
   },
   {
     "id": "jeu-101",
@@ -581,7 +602,8 @@
     "playClicks": 10,
     "accessibility": [
       "audio"
-    ]
+    ],
+    "ficheUrl": "/fiches/le-chateau-des-nombres-vue-exterieure/"
   },
   {
     "id": "jeu-100",
@@ -609,7 +631,8 @@
     "playClicks": 7,
     "accessibility": [
       "audio"
-    ]
+    ],
+    "ficheUrl": "/fiches/le-chateau-des-nombres-cp/"
   },
   {
     "id": "jeu-99",
@@ -634,7 +657,8 @@
     "short": "Quatre niveaux pour encadrer les nombres de 501 à 10 000 avec Fritz.",
     "thumb": "/assets/fritz-encadrements/apercu.webp",
     "imageAlt": "Illustration de Fritz détouré sur sa planète extraterrestre.",
-    "playClicks": 2
+    "playClicks": 2,
+    "ficheUrl": "/fiches/la-planete-de-fritz-encadrer-les-nombres-ce2/"
   },
   {
     "id": "jeu-98",
@@ -659,7 +683,8 @@
     "short": "Deux niveaux pour encadrer les nombres de 1 à 99 avec Fritz.",
     "thumb": "/assets/fritz-encadrements/apercu.webp",
     "imageAlt": "Illustration de Fritz détouré sur sa planète extraterrestre.",
-    "playClicks": 3
+    "playClicks": 3,
+    "ficheUrl": "/fiches/la-planete-de-fritz-encadrer-les-nombres-cp/"
   },
   {
     "id": "jeu-97",
@@ -686,7 +711,8 @@
     "imageAlt": "Bannière du jeu La planète de Fritz — Encadrer les nombres",
     "pdfUrl": "/pdf/Fritz_encadrements_CE1_exercices_et_correction.pdf",
     "pdfLabel": "Encadrements : 30 exercices + corrigé (PDF)",
-    "playClicks": 4
+    "playClicks": 4,
+    "ficheUrl": "/fiches/la-planete-de-fritz-encadrer-les-nombres/"
   },
   {
     "id": "jeu-96",
@@ -711,7 +737,8 @@
     "short": "Neuf extraterrestres, trois niveaux et des textures réalistes pour compléter des symétries sur un quadrillage 12 × 12.",
     "thumb": "/assets/catalogue-v2/captures/symetrie-mars-ce2.webp",
     "imageAlt": "Extraterrestre sur un quadrillage 12 × 12 avec textures et axe de symétrie rose.",
-    "playClicks": 4
+    "playClicks": 4,
+    "ficheUrl": "/fiches/les-martiens-miroirs-symetrie-ce2/"
   },
   {
     "id": "jeu-95",
@@ -736,7 +763,8 @@
     "short": "Cinq niveaux, de 1 en 1 à 100 en 100 : observe la flèche et saisis ta réponse.",
     "thumb": "/assets/catalogue-v2/captures/droite-t-rex-ce1.svg",
     "imageAlt": "T-Rex, droite graduée et champ de réponse à saisir.",
-    "playClicks": 2
+    "playClicks": 2,
+    "ficheUrl": "/fiches/les-droites-du-t-rex-ce1/"
   },
   {
     "id": "jeu-94",
@@ -761,7 +789,8 @@
     "short": "42 défis et six séries : observe la flèche et clique sur le bon nombre.",
     "thumb": "/assets/catalogue-v2/captures/droite-t-rex-anime-cp.svg",
     "imageAlt": "Exercice de droite graduée du CP avec trois réponses, entouré d’un T-Rex et d’un tricératops dans la forêt tropicale.",
-    "playClicks": 6
+    "playClicks": 6,
+    "ficheUrl": "/fiches/les-42-droites-du-t-rex-anime/"
   },
   {
     "id": "jeu-93",
@@ -786,7 +815,8 @@
     "short": "24 défis et trois parcours : observe la flèche et clique sur le bon nombre.",
     "thumb": "/assets/catalogue-v2/captures/droite-t-rex-cp.svg",
     "imageAlt": "T-Rex dans une vallée préhistorique et droite numérique avec trois réponses.",
-    "playClicks": 6
+    "playClicks": 6,
+    "ficheUrl": "/fiches/la-droite-numerique-du-t-rex/"
   },
   {
     "id": "jeu-92",
@@ -812,7 +842,8 @@
     "short": "Multiplications et divisions mélangées, bulles à éclater et dinosaures animés.",
     "thumb": "/assets/catalogue-v2/captures/dino-calculs.webp",
     "imageAlt": "Dino Calculs dans une vallée avec des dinosaures et une forêt tropicale.",
-    "playClicks": 4
+    "playClicks": 4,
+    "ficheUrl": "/fiches/dino-calculs-multiplications-et-divisions/"
   },
   {
     "id": "jeu-91",
@@ -838,7 +869,8 @@
     "short": "20 séries de 15 calculs dans la forêt enchantée, avec retour des calculs ratés.",
     "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
     "imageAlt": "Une forêt enchantée avec un château et des bulles de calcul.",
-    "playClicks": 15
+    "playClicks": 15,
+    "ficheUrl": "/fiches/chronomaths-enchantes-ce1/"
   },
   {
     "id": "jeu-90",
@@ -863,7 +895,8 @@
     "short": "20 séries de 20 calculs : les bulles ratées reviennent avant la fin du chrono.",
     "thumb": "/assets/catalogue-v2/captures/jeu-82.webp",
     "imageAlt": "Une bulle de calcul dans un décor spatial.",
-    "playClicks": 15
+    "playClicks": 15,
+    "ficheUrl": "/fiches/chronomaths-galactiques-ce2/"
   },
   {
     "id": "jeu-89",
@@ -888,7 +921,8 @@
     "short": "Toutes les tables de 1 à 10 et les tables mélangées dans une forêt magique.",
     "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
     "imageAlt": "Bulle de multiplication dans une forêt magique, devant un château au bord du lac.",
-    "playClicks": 0
+    "playClicks": 0,
+    "ficheUrl": "/fiches/les-tables-enchantees-ce2/"
   },
   {
     "id": "jeu-88",
@@ -913,7 +947,8 @@
     "short": "Place les nombres et le point d’interrogation dans les barres.",
     "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-2.svg",
     "imageAlt": "Modèle en barres à compléter pour résoudre un problème.",
-    "playClicks": 5
+    "playClicks": 5,
+    "ficheUrl": "/fiches/problemes-cp-barres-a-completer/"
   },
   {
     "id": "jeu-87",
@@ -941,7 +976,8 @@
     "playClicks": 8,
     "accessibility": [
       "audio"
-    ]
+    ],
+    "ficheUrl": "/fiches/problemes-cp-periode-1/"
   },
   {
     "id": "jeu-86",
@@ -966,7 +1002,8 @@
     "short": "18 problèmes à résoudre avec des modèles en barres et une aide à la lecture.",
     "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-2.svg",
     "imageAlt": "Modèle en barres pour résoudre un problème de balles.",
-    "playClicks": 7
+    "playClicks": 7,
+    "ficheUrl": "/fiches/problemes-cp-periode-2/"
   },
   {
     "id": "jeu-85",
@@ -992,7 +1029,8 @@
     "short": "Trois niveaux de calcul mental en 90 secondes, dans le laboratoire d’un savant farfelu.",
     "thumb": "/assets/catalogue-v2/captures/jeu-85.webp",
     "imageAlt": "Opération dans un ballon de chimie devant un savant dans son laboratoire.",
-    "playClicks": 7
+    "playClicks": 7,
+    "ficheUrl": "/fiches/le-labo-des-calculs/"
   },
   {
     "id": "jeu-84",
@@ -1018,7 +1056,8 @@
     "short": "Quatre niveaux de moitiés, uniquement des nombres pairs, des bulles qui accélèrent et une musique féerique.",
     "thumb": "/assets/images/bannieres/openai/vallee-des-moities.webp?v=bannieres-20261115",
     "imageAlt": "Bannière du jeu La vallée des moitiés — Moitiés",
-    "playClicks": 6
+    "playClicks": 6,
+    "ficheUrl": "/fiches/la-vallee-des-moities/"
   },
   {
     "id": "jeu-83",
@@ -1044,7 +1083,8 @@
     "short": "Quatre niveaux de doubles, un chaudron fluorescent, des bulles qui accélèrent et une musique d’aventure.",
     "thumb": "/assets/images/bannieres/openai/temple-des-doubles.webp?v=bannieres-20261115",
     "imageAlt": "Bannière du jeu Le temple des doubles — Doubles",
-    "playClicks": 6
+    "playClicks": 6,
+    "ficheUrl": "/fiches/le-temple-des-doubles/"
   },
   {
     "id": "jeu-82",
@@ -1070,7 +1110,8 @@
     "short": "Six niveaux, des bulles de plus en plus rapides et une musique spatiale dans un vaisseau.",
     "thumb": "/assets/catalogue-v2/captures/jeu-82.webp",
     "imageAlt": "Bulle de division dans un vaisseau spatial, avec un petit extraterrestre et une planète bleue.",
-    "playClicks": 2
+    "playClicks": 2,
+    "ficheUrl": "/fiches/divisions-galactiques/"
   },
   {
     "id": "jeu-81",
@@ -1096,7 +1137,8 @@
     "short": "Six niveaux, des bulles de plus en plus rapides et une musique douce dans une forêt enchantée.",
     "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
     "imageAlt": "Bulle de multiplication dans une forêt magique, devant un château au bord du lac.",
-    "playClicks": 8
+    "playClicks": 8,
+    "ficheUrl": "/fiches/les-tables-enchantees/"
   },
   {
     "id": "jeu-80",
@@ -1122,7 +1164,8 @@
     "short": "Deux niveaux, trois modes et des fumerolles animées pour calculer avec 9, 19, 29, 39 et 49.",
     "thumb": "/assets/catalogue-v2/captures/jeu-80.webp",
     "imageAlt": "Bulle de calcul mental dans une salle de potions avec fumerolles animées.",
-    "playClicks": 5
+    "playClicks": 5,
+    "ficheUrl": "/fiches/bulles-de-sorcellerie/"
   },
   {
     "id": "jeu-79",
@@ -1148,7 +1191,8 @@
     "short": "54 objets à observer pour reconnaître cube, pavé droit, pyramide, boule, cylindre et cône.",
     "thumb": "/assets/catalogue-v2/captures/jeu-79.webp",
     "imageAlt": "Jeu de reconnaissance des solides avec un objet du quotidien et six réponses.",
-    "playClicks": 3
+    "playClicks": 3,
+    "ficheUrl": "/fiches/les-solides-autour-de-nous/"
   },
   {
     "id": "jeu-78",
@@ -1174,7 +1218,8 @@
     "short": "36 objets à observer pour reconnaître carré, rectangle, cercle et triangle.",
     "thumb": "/assets/catalogue-v2/captures/jeu-78.webp",
     "imageAlt": "Jeu de reconnaissance des formes avec un objet du quotidien et quatre réponses.",
-    "playClicks": 0
+    "playClicks": 0,
+    "ficheUrl": "/fiches/les-formes-autour-de-nous/"
   },
   {
     "title": "Géométrie CE1 — Colorier les figures",
@@ -1198,7 +1243,8 @@
     ],
     "short": "Colorie les figures selon leur forme et évite les figures pièges.",
     "imageAlt": "Figures géométriques à colorier.",
-    "playClicks": 2
+    "playClicks": 2,
+    "ficheUrl": "/fiches/geometrie-ce1-colorier-les-figures/"
   },
   {
     "title": "Calcul mental CE2 — Calcul Pop !",
@@ -1224,7 +1270,8 @@
     ],
     "short": "30 missions de calcul mental, à ton rythme ou en 3 minutes, avec astuces et corrections.",
     "thumb": "/assets/catalogue-v2/captures/jeu-76.webp",
-    "playClicks": 12
+    "playClicks": 12,
+    "ficheUrl": "/fiches/calcul-mental-ce2-calcul-pop/"
   },
   {
     "title": "Bulles en duo — Comparer les nombres",
@@ -1250,7 +1297,8 @@
     ],
     "short": "Comparer deux nombres et reconnaître le plus grand.",
     "thumb": "/assets/catalogue-v2/captures/jeu-1.webp",
-    "playClicks": 29
+    "playClicks": 29,
+    "ficheUrl": "/fiches/bulles-en-duo-comparer-les-nombres/"
   },
   {
     "title": "Bulles de corail — Pairs et impairs",
@@ -1277,7 +1325,8 @@
     ],
     "short": "Reconnaître les nombres pairs et les nombres impairs.",
     "thumb": "/assets/images/bannieres/openai/bulles-de-corail-pairs-impairs.webp?v=bannieres-20261115",
-    "playClicks": 4
+    "playClicks": 4,
+    "ficheUrl": "/fiches/bulles-de-corail-pairs-et-impairs/"
   },
   {
     "title": "L’Île mystérieuse — Soustractions",
@@ -1304,7 +1353,8 @@
     ],
     "short": "Trouver un résultat en retirant une quantité.",
     "thumb": "/assets/catalogue-v2/captures/jeu-3.webp",
-    "playClicks": 11
+    "playClicks": 11,
+    "ficheUrl": "/fiches/lile-mysterieuse-soustractions/"
   },
   {
     "title": "Le tour du monde en 80 jours — Compléments à 1 000",
@@ -1331,7 +1381,8 @@
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-4.webp",
-    "playClicks": 5
+    "playClicks": 5,
+    "ficheUrl": "/fiches/le-tour-du-monde-en-80-jours-complements-a-1-000/"
   },
   {
     "title": "Mission Nautilus — Compléments à 100",
@@ -1358,7 +1409,8 @@
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/images/bannieres/openai/mission-nautilus.webp?v=bannieres-20261115",
-    "playClicks": 1
+    "playClicks": 1,
+    "ficheUrl": "/fiches/mission-nautilus-complements-a-100/"
   },
   {
     "title": "Voyage au centre de la Terre — Les presque doubles",
@@ -1386,7 +1438,8 @@
     ],
     "short": "Utiliser les doubles pour calculer plus facilement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-6.webp",
-    "playClicks": 6
+    "playClicks": 6,
+    "ficheUrl": "/fiches/voyage-au-centre-de-la-terre-les-presque-doubles/"
   },
   {
     "title": "Mission Mars — Additions de 11 à 19",
@@ -1414,7 +1467,8 @@
     ],
     "short": "Utiliser des résultats connus pour calculer une addition mentalement.",
     "thumb": "/assets/images/bannieres/openai/mission-mars.webp?v=bannieres-20261115",
-    "playClicks": 2
+    "playClicks": 2,
+    "ficheUrl": "/fiches/mission-mars-additions-de-11-a-19/"
   },
   {
     "title": "Mission Abysses — Additions de 11 à 19",
@@ -1442,7 +1496,8 @@
     ],
     "short": "Utiliser des résultats connus pour calculer une addition mentalement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-8.webp",
-    "playClicks": 1
+    "playClicks": 1,
+    "ficheUrl": "/fiches/mission-abysses-additions-de-11-a-19/"
   },
   {
     "title": "Happy Halloween — Compléments à 10",
@@ -1470,7 +1525,8 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-9.webp",
     "playClicks": 8,
     "family": "halloween",
-    "variantLabel": "Compléments à 10"
+    "variantLabel": "Compléments à 10",
+    "ficheUrl": "/fiches/happy-halloween-complements-a-10/"
   },
   {
     "title": "Happy Halloween — Compléments à 100",
@@ -1499,7 +1555,8 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-10.webp",
     "playClicks": 0,
     "family": "halloween",
-    "variantLabel": "Compléments à 100"
+    "variantLabel": "Compléments à 100",
+    "ficheUrl": "/fiches/happy-halloween-complements-a-100/"
   },
   {
     "title": "Happy Halloween — Compléments à 1 000",
@@ -1528,7 +1585,8 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-11.webp",
     "playClicks": 1,
     "family": "halloween",
-    "variantLabel": "Compléments à 1 000"
+    "variantLabel": "Compléments à 1 000",
+    "ficheUrl": "/fiches/happy-halloween-complements-a-1-000/"
   },
   {
     "title": "Compléments à 10 — la course de la sorcière",
@@ -1556,7 +1614,8 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-12.webp",
     "playClicks": 6,
     "family": "sorciere",
-    "variantLabel": "Compléments à 10"
+    "variantLabel": "Compléments à 10",
+    "ficheUrl": "/fiches/complements-a-10-la-course-de-la-sorciere/"
   },
   {
     "title": "Compléments à 100 — la course de la sorcière",
@@ -1585,7 +1644,8 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-13.webp",
     "playClicks": 1,
     "family": "sorciere",
-    "variantLabel": "Compléments à 100"
+    "variantLabel": "Compléments à 100",
+    "ficheUrl": "/fiches/complements-a-100-la-course-de-la-sorciere/"
   },
   {
     "title": "Compléments à 1 000 — la course de la sorcière",
@@ -1614,7 +1674,8 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-14.webp",
     "playClicks": 0,
     "family": "sorciere",
-    "variantLabel": "Compléments à 1 000"
+    "variantLabel": "Compléments à 1 000",
+    "ficheUrl": "/fiches/complements-a-1-000-la-course-de-la-sorciere/"
   },
   {
     "title": "Compléments à 10 — le défi de l’araignée",
@@ -1643,7 +1704,8 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-15-toile-realiste.svg?v=20261116",
     "playClicks": 16,
     "family": "araignee",
-    "variantLabel": "Compléments à 10"
+    "variantLabel": "Compléments à 10",
+    "ficheUrl": "/fiches/complements-a-10-le-defi-de-laraignee/"
   },
   {
     "title": "Compléments à 100 — le défi de l’araignée",
@@ -1671,7 +1733,8 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-16-toile-realiste.svg?v=20261116",
     "playClicks": 3,
     "family": "araignee",
-    "variantLabel": "Compléments à 100"
+    "variantLabel": "Compléments à 100",
+    "ficheUrl": "/fiches/complements-a-100-le-defi-de-laraignee/"
   },
   {
     "title": "Compléments à 1 000 — le défi de l’araignée",
@@ -1699,7 +1762,8 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-17-toile-realiste.svg?v=20261116",
     "playClicks": 0,
     "family": "araignee",
-    "variantLabel": "Compléments à 1 000"
+    "variantLabel": "Compléments à 1 000",
+    "ficheUrl": "/fiches/complements-a-1-000-le-defi-de-laraignee/"
   },
   {
     "title": "Je revois les nombres jusqu’à 1000",
@@ -1725,7 +1789,8 @@
     "short": "Lire, écrire, comparer et décomposer les nombres jusqu’à 1 000.",
     "thumb": "/assets/catalogue-v2/captures/mission-numeration-fr.webp",
     "imageAlt": "Aperçu de Je revois les nombres jusqu’à 1000 : lire, écrire, comparer et décomposer les nombres jusqu’à 1 000.",
-    "playClicks": 49
+    "playClicks": 49,
+    "ficheUrl": "/fiches/je-revois-les-nombres-jusqua-1000/"
   },
   {
     "title": "Problèmes — Période 1",
@@ -1752,7 +1817,8 @@
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/mission-problemes-barres.webp",
     "imageAlt": "Aperçu de Problèmes — Période 1 : comprendre une situation et choisir un calcul pour la résoudre.",
-    "playClicks": 42
+    "playClicks": 42,
+    "ficheUrl": "/fiches/problemes-periode-1/"
   },
   {
     "id": "crabes-des-salines-alphabet",
@@ -1780,7 +1846,8 @@
     "thumb": "/jeux/crabes-des-salines-alphabet/capture-originale-haute-qualite.webp?v=jeu-reel-20261115",
     "imageAlt": "Capture du jeu Les crabes des Salines en vocabulaire : les crabes portent des mots à ranger dans l’ordre alphabétique.",
     "playClicks": 0,
-    "localHeritage": "Martinique"
+    "localHeritage": "Martinique",
+    "ficheUrl": "/fiches/crabes-des-salines-alphabet/"
   },
   {
     "title": "Vocabulaire — Période 1",
@@ -1806,7 +1873,8 @@
     "short": "Utiliser l’ordre alphabétique et reconnaître des contraires.",
     "thumb": "/assets/catalogue-v2/captures/jeu-20.webp",
     "imageAlt": "Aperçu de Vocabulaire — Période 1 : utiliser l’ordre alphabétique et reconnaître des contraires.",
-    "playClicks": 27
+    "playClicks": 27,
+    "ficheUrl": "/fiches/vocabulaire-periode-1/"
   },
   {
     "title": "Lecture et compréhension",
@@ -1834,7 +1902,8 @@
     "imageAlt": "Aperçu de Lecture et compréhension : lire un texte et retrouver les informations utiles pour répondre.",
     "pdfUrl": "/pdf/Lecture_comprehension_CE1_animaux_exercices_et_corriges.pdf",
     "pdfLabel": "Lecture CE1 · 4 textes, exercices et corrigés (PDF)",
-    "playClicks": 64
+    "playClicks": 64,
+    "ficheUrl": "/fiches/lecture-et-comprehension/"
   },
   {
     "title": "L’atelier des souris",
@@ -1860,7 +1929,8 @@
     "short": "Compléter et construire des phrases, puis relire son écrit.",
     "thumb": "/assets/catalogue-v2/captures/jeu-22.webp",
     "imageAlt": "Aperçu de L’atelier des souris : compléter et construire des phrases, puis relire son écrit.",
-    "playClicks": 28
+    "playClicks": 28,
+    "ficheUrl": "/fiches/latelier-des-souris/"
   },
   {
     "title": "Les mots en images",
@@ -1889,7 +1959,8 @@
     "playClicks": 13,
     "accessibility": [
       "audio"
-    ]
+    ],
+    "ficheUrl": "/fiches/les-mots-en-images/"
   },
   {
     "title": "Dictées 1 à 6 — Période 1",
@@ -1920,7 +1991,8 @@
     "playClicks": 15,
     "accessibility": [
       "audio"
-    ]
+    ],
+    "ficheUrl": "/fiches/dictees-1-a-6-periode-1/"
   },
   {
     "title": "Dictée 5 — Les mots en images",
@@ -1945,7 +2017,8 @@
     "short": "Écouter, observer et écrire pour mémoriser l’orthographe.",
     "thumb": "/assets/catalogue-v2/captures/jeu-25.webp",
     "imageAlt": "Aperçu de Dictée 5 — Les mots en images : écouter, observer et écrire pour mémoriser l’orthographe.",
-    "playClicks": 6
+    "playClicks": 6,
+    "ficheUrl": "/fiches/dictee-5-les-mots-en-images/"
   },
   {
     "title": "Dictée 5 — Les phrases à compléter",
@@ -1970,7 +2043,8 @@
     "short": "Écouter, observer et écrire pour mémoriser l’orthographe.",
     "thumb": "/assets/catalogue-v2/captures/jeu-26.webp",
     "imageAlt": "Aperçu de Dictée 5 — Les phrases à compléter : écouter, observer et écrire pour mémoriser l’orthographe.",
-    "playClicks": 3
+    "playClicks": 3,
+    "ficheUrl": "/fiches/dictee-5-les-phrases-a-completer/"
   },
   {
     "title": "Grammaire — Période 1",
@@ -1996,7 +2070,8 @@
     "short": "Repérer les éléments d’une phrase et s’entraîner en grammaire.",
     "thumb": "/assets/catalogue-v2/captures/jeu-27.webp",
     "imageAlt": "Aperçu de Grammaire — Période 1 : repérer les éléments d’une phrase et s’entraîner en grammaire.",
-    "playClicks": 20
+    "playClicks": 20,
+    "ficheUrl": "/fiches/grammaire-periode-1/"
   },
   {
     "title": "Calcul mental CP",
@@ -2021,7 +2096,8 @@
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-28.webp",
     "imageAlt": "Aperçu de Calcul mental CP : s’entraîner à plusieurs procédures de calcul mental.",
-    "playClicks": 32
+    "playClicks": 32,
+    "ficheUrl": "/fiches/calcul-mental-cp/"
   },
   {
     "id": "calcul-mental-cp-neon-un-calcul",
@@ -2046,7 +2122,8 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg",
     "imageAlt": "Jeu de calcul mental CP sur fond sombre et aux boutons néon.",
-    "playClicks": 0
+    "playClicks": 0,
+    "ficheUrl": "/fiches/calcul-mental-cp-neon/"
   },
   {
     "id": "calcul-mental-cp-pygame",
@@ -2075,7 +2152,8 @@
     "image": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg",
     "accessibility": [
       "audio"
-    ]
+    ],
+    "ficheUrl": "/fiches/calcul-mental-cp-pygame/"
   },
   {
     "title": "Chronomaths CE2 — 20 défis",
@@ -2100,7 +2178,8 @@
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-29.webp",
     "imageAlt": "Aperçu de Chronomaths CE2 — 20 défis : s’entraîner à plusieurs procédures de calcul mental.",
-    "playClicks": 16
+    "playClicks": 16,
+    "ficheUrl": "/fiches/chronomaths-ce2-20-defis/"
   },
   {
     "title": "Ateliers problèmes CE2",
@@ -2125,7 +2204,8 @@
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-30.webp",
     "imageAlt": "Aperçu de Ateliers problèmes CE2 : comprendre une situation et choisir un calcul pour la résoudre.",
-    "playClicks": 6
+    "playClicks": 6,
+    "ficheUrl": "/fiches/ateliers-problemes-ce2/"
   },
   {
     "title": "Dénombrer une collection",
@@ -2151,7 +2231,8 @@
     "short": "Organiser une collection pour trouver combien elle contient d’éléments.",
     "thumb": "/assets/catalogue-v2/captures/jeu-31-niveau-2.webp",
     "imageAlt": "Aperçu de Dénombrer une collection : organiser une collection pour trouver combien elle contient d’éléments.",
-    "playClicks": 21
+    "playClicks": 21,
+    "ficheUrl": "/fiches/denombrer-une-collection/"
   },
   {
     "title": "Comparer deux nombres",
@@ -2177,7 +2258,8 @@
     "short": "Comparer deux nombres et reconnaître le plus grand.",
     "thumb": "/assets/catalogue-v2/captures/jeu-32.webp",
     "imageAlt": "Aperçu de Comparer deux nombres : comparer deux nombres et reconnaître le plus grand.",
-    "playClicks": 10
+    "playClicks": 10,
+    "ficheUrl": "/fiches/comparer-deux-nombres/"
   },
   {
     "title": "Ranger des nombres",
@@ -2203,7 +2285,8 @@
     "short": "Ordonner des nombres du plus petit au plus grand.",
     "thumb": "/assets/catalogue-v2/captures/jeu-33.webp",
     "imageAlt": "Aperçu de Ranger des nombres : ordonner des nombres du plus petit au plus grand.",
-    "playClicks": 4
+    "playClicks": 4,
+    "ficheUrl": "/fiches/ranger-des-nombres/"
   },
   {
     "title": "Lire et écrire les nombres",
@@ -2229,7 +2312,8 @@
     "short": "Associer une écriture en chiffres et une écriture en lettres.",
     "thumb": "/assets/catalogue-v2/captures/jeu-34.webp",
     "imageAlt": "Aperçu de Lire et écrire les nombres : associer une écriture en chiffres et une écriture en lettres.",
-    "playClicks": 7
+    "playClicks": 7,
+    "ficheUrl": "/fiches/lire-et-ecrire-les-nombres/"
   },
   {
     "title": "Dictée de nombres",
@@ -2258,7 +2342,8 @@
     "playClicks": 5,
     "accessibility": [
       "audio"
-    ]
+    ],
+    "ficheUrl": "/fiches/dictee-de-nombres/"
   },
   {
     "title": "Compter de plusieurs façons",
@@ -2284,7 +2369,8 @@
     "short": "Trouver la règle et poursuivre une suite de nombres.",
     "thumb": "/assets/catalogue-v2/captures/jeu-36.webp",
     "imageAlt": "Aperçu de Compter de plusieurs façons : trouver la règle et poursuivre une suite de nombres.",
-    "playClicks": 4
+    "playClicks": 4,
+    "ficheUrl": "/fiches/compter-de-plusieurs-facons/"
   },
   {
     "title": "Composer et décomposer",
@@ -2310,7 +2396,8 @@
     "short": "Relier centaines, dizaines et unités pour composer ou décomposer un nombre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-37.webp",
     "imageAlt": "Aperçu de Composer et décomposer : relier centaines, dizaines et unités pour composer ou décomposer un nombre.",
-    "playClicks": 8
+    "playClicks": 8,
+    "ficheUrl": "/fiches/composer-et-decomposer/"
   },
   {
     "title": "Reconnaître les nombres pairs et impairs",
@@ -2336,7 +2423,8 @@
     "short": "Reconnaître les nombres pairs et les nombres impairs.",
     "thumb": "/assets/catalogue-v2/captures/jeu-38.webp",
     "imageAlt": "Aperçu de Reconnaître les nombres pairs et impairs : reconnaître les nombres pairs et les nombres impairs.",
-    "playClicks": 3
+    "playClicks": 3,
+    "ficheUrl": "/fiches/reconnaitre-les-nombres-pairs-et-impairs/"
   },
   {
     "title": "Compléter des suites",
@@ -2362,7 +2450,8 @@
     "short": "Trouver la règle et poursuivre une suite de nombres.",
     "thumb": "/assets/catalogue-v2/captures/jeu-39.webp",
     "imageAlt": "Aperçu de Compléter des suites : trouver la règle et poursuivre une suite de nombres.",
-    "playClicks": 4
+    "playClicks": 4,
+    "ficheUrl": "/fiches/completer-des-suites/"
   },
   {
     "title": "La droite graduée mystère",
@@ -2388,7 +2477,8 @@
     "short": "Repérer la place d’un nombre sur une droite graduée.",
     "thumb": "/assets/catalogue-v2/captures/jeu-40.webp",
     "imageAlt": "Aperçu de La droite graduée mystère : repérer la place d’un nombre sur une droite graduée.",
-    "playClicks": 6
+    "playClicks": 6,
+    "ficheUrl": "/fiches/la-droite-graduee-mystere/"
   },
   {
     "title": "Le défi de la droite graduée",
@@ -2414,7 +2504,8 @@
     "short": "Repérer la place d’un nombre sur une droite graduée.",
     "thumb": "/assets/catalogue-v2/captures/jeu-41.webp",
     "imageAlt": "Aperçu de Le défi de la droite graduée : repérer la place d’un nombre sur une droite graduée.",
-    "playClicks": 1
+    "playClicks": 1,
+    "ficheUrl": "/fiches/le-defi-de-la-droite-graduee/"
   },
   {
     "title": "Décomposer un nombre",
@@ -2440,7 +2531,8 @@
     "short": "Relier centaines, dizaines et unités pour composer ou décomposer un nombre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-42.webp",
     "imageAlt": "Aperçu de Décomposer un nombre : relier centaines, dizaines et unités pour composer ou décomposer un nombre.",
-    "playClicks": 3
+    "playClicks": 3,
+    "ficheUrl": "/fiches/decomposer-un-nombre/"
   },
   {
     "title": "Recomposer un nombre",
@@ -2466,7 +2558,8 @@
     "short": "Relier centaines, dizaines et unités pour composer ou décomposer un nombre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-43.webp",
     "imageAlt": "Aperçu de Recomposer un nombre : relier centaines, dizaines et unités pour composer ou décomposer un nombre.",
-    "playClicks": 0
+    "playClicks": 0,
+    "ficheUrl": "/fiches/recomposer-un-nombre/"
   },
   {
     "title": "Suites de nombres",
@@ -2492,7 +2585,8 @@
     "short": "Trouver la règle et poursuivre une suite de nombres.",
     "thumb": "/assets/catalogue-v2/captures/jeu-44.webp",
     "imageAlt": "Aperçu de Suites de nombres : trouver la règle et poursuivre une suite de nombres.",
-    "playClicks": 1
+    "playClicks": 1,
+    "ficheUrl": "/fiches/suites-de-nombres/"
   },
   {
     "title": "Les représentations des nombres",
@@ -2518,7 +2612,8 @@
     "short": "Reconnaître différentes représentations d’un même nombre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-45.webp",
     "imageAlt": "Aperçu de Les représentations des nombres : reconnaître différentes représentations d’un même nombre.",
-    "playClicks": 5
+    "playClicks": 5,
+    "ficheUrl": "/fiches/les-representations-des-nombres/"
   },
   {
     "title": "Ordonner les nombres",
@@ -2544,7 +2639,8 @@
     "short": "Ordonner des nombres du plus petit au plus grand.",
     "thumb": "/assets/catalogue-v2/captures/jeu-46.webp",
     "imageAlt": "Aperçu de Ordonner les nombres : ordonner des nombres du plus petit au plus grand.",
-    "playClicks": 1
+    "playClicks": 1,
+    "ficheUrl": "/fiches/ordonner-les-nombres/"
   },
   {
     "title": "Chronomaths CE1 — 20 défis",
@@ -2570,7 +2666,8 @@
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-47.webp",
     "imageAlt": "Aperçu de Chronomaths CE1 — 20 défis : s’entraîner à plusieurs procédures de calcul mental.",
-    "playClicks": 11
+    "playClicks": 11,
+    "ficheUrl": "/fiches/chronomaths-ce1-20-defis/"
   },
   {
     "title": "Soustractions par cassage",
@@ -2596,7 +2693,8 @@
     "short": "Utiliser les centaines, les dizaines et les unités pour soustraire.",
     "thumb": "/assets/catalogue-v2/captures/jeu-48.webp",
     "imageAlt": "Aperçu de Soustractions par cassage : utiliser les centaines, les dizaines et les unités pour soustraire.",
-    "playClicks": 14
+    "playClicks": 14,
+    "ficheUrl": "/fiches/soustractions-par-cassage/"
   },
   {
     "title": "Soustractions avec le matériel de numération",
@@ -2622,7 +2720,8 @@
     "short": "Utiliser les centaines, les dizaines et les unités pour soustraire.",
     "thumb": "/assets/catalogue-v2/captures/jeu-49.webp",
     "imageAlt": "Aperçu de Soustractions avec le matériel de numération : utiliser les centaines, les dizaines et les unités pour soustraire.",
-    "playClicks": 5
+    "playClicks": 5,
+    "ficheUrl": "/fiches/soustractions-avec-le-materiel-de-numeration/"
   },
   {
     "id": "soustractions-sans-echange-en-orbite",
@@ -2649,7 +2748,8 @@
     "imageAlt": "Capture réelle du jeu Soustractions en orbite CE1 montrant 32 − 11, le calcul des dizaines et les boutons futuristes.",
     "pdfUrl": "/pdf/Soustractions_CE1_sans_echange_tableaux_noir_blanc.pdf",
     "pdfLabel": "Fiches de soustractions C–D–U + corrigé (PDF)",
-    "playClicks": 1
+    "playClicks": 1,
+    "ficheUrl": "/fiches/soustractions-en-orbite-sans-echange/"
   },
   {
     "title": "Les additions sans échange en orbite",
@@ -2678,7 +2778,8 @@
     "imageAlt": "Addition posée 243 + 125 et calcul des unités, dans un cadre translucide devant la Terre et Saturne.",
     "pdfUrl": "/pdf/Additions_posees_sans_retenue_CE1_7_fiches_et_corriges.pdf",
     "pdfLabel": "Sans retenue : 7 fiches + corrigés (PDF)",
-    "playClicks": 9
+    "playClicks": 9,
+    "ficheUrl": "/fiches/additions-posees-sans-echange/"
   },
   {
     "title": "Les additions en orbite — Additions avec échanges",
@@ -2705,7 +2806,8 @@
     "short": "Calcule en colonnes et fais voyager les retenues dans le système solaire : sons, néons et animations.",
     "thumb": "/assets/catalogue-v2/captures/additions-posees-tableau-operation.webp?v=orbite-translucide-20261107",
     "imageAlt": "Les additions en orbite : addition 157 + 265, cadre translucide devant la Terre et Saturne.",
-    "playClicks": 23
+    "playClicks": 23,
+    "ficheUrl": "/fiches/additions-posees-avec-echanges/"
   },
   {
     "title": "Additions avec échanges — Jetons 3D",
@@ -2731,7 +2833,8 @@
     "short": "Aligner les colonnes et calculer une addition posée.",
     "thumb": "/assets/catalogue-v2/captures/jeu-52.webp",
     "imageAlt": "Aperçu de Additions avec échanges — Jetons 3D : aligner les colonnes et calculer une addition posée.",
-    "playClicks": 6
+    "playClicks": 6,
+    "ficheUrl": "/fiches/additions-avec-echanges-jetons-3d/"
   },
   {
     "title": "Additions avec échanges — Blocs 3D",
@@ -2756,7 +2859,8 @@
     "short": "Échange 10 cubes rouges contre une barre jaune, puis 10 barres contre une plaque bleue pour calculer une addition posée.",
     "thumb": "/assets/catalogue-v2/captures/jeu-106.webp",
     "imageAlt": "Plaque bleue de centaine, barres jaunes de dizaines et cubes rouges dans le cockpit.",
-    "playClicks": 18
+    "playClicks": 18,
+    "ficheUrl": "/fiches/additions-avec-echanges-blocs-3d/"
   },
   {
     "title": "Additions avec échanges — Blocs 3D (CE2)",
@@ -2781,7 +2885,8 @@
     "short": "Pose des additions à quatre chiffres et échange 10 centaines contre un cube rouge de 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-108.webp",
     "imageAlt": "Cube rouge de 1 000 et blocs de numération dans le cockpit.",
-    "playClicks": 1
+    "playClicks": 1,
+    "ficheUrl": "/fiches/additions-avec-echanges-blocs-3d-ce2/"
   },
   {
     "title": "Additions avec échanges — Blocs 3D (CP)",
@@ -2806,7 +2911,8 @@
     "short": "Échange 10 cubes rouges contre une barre jaune pour poser une addition dont le résultat est inférieur à 100.",
     "thumb": "/assets/catalogue-v2/captures/jeu-107.webp",
     "imageAlt": "Barres jaunes de dizaines et cubes rouges d’unités dans le cockpit.",
-    "playClicks": 0
+    "playClicks": 0,
+    "ficheUrl": "/fiches/additions-avec-echanges-blocs-3d-cp/"
   },
   {
     "title": "Additions avec passage par 10",
@@ -2834,7 +2940,8 @@
     "short": "Utiliser des résultats connus pour calculer une addition mentalement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-53.webp",
     "imageAlt": "Aperçu de Additions avec passage par 10 : utiliser des résultats connus pour calculer une addition mentalement.",
-    "playClicks": 6
+    "playClicks": 6,
+    "ficheUrl": "/fiches/additions-avec-passage-par-10/"
   },
   {
     "title": "Soustraire un nombre à 10",
@@ -2862,7 +2969,8 @@
     "short": "Trouver un résultat en retirant une quantité.",
     "thumb": "/assets/catalogue-v2/captures/jeu-54.webp",
     "imageAlt": "Aperçu de Soustraire un nombre à 10 : trouver un résultat en retirant une quantité.",
-    "playClicks": 3
+    "playClicks": 3,
+    "ficheUrl": "/fiches/soustraire-un-nombre-a-10/"
   },
   {
     "title": "Les doubles",
@@ -2890,7 +2998,8 @@
     "short": "Utiliser les doubles pour calculer plus facilement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-55.webp",
     "imageAlt": "Aperçu de Les doubles : utiliser les doubles pour calculer plus facilement.",
-    "playClicks": 7
+    "playClicks": 7,
+    "ficheUrl": "/fiches/les-doubles/"
   },
   {
     "title": "Les presque doubles",
@@ -2918,7 +3027,8 @@
     "short": "Utiliser les doubles pour calculer plus facilement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-56.webp",
     "imageAlt": "Aperçu de Les presque doubles : utiliser les doubles pour calculer plus facilement.",
-    "playClicks": 5
+    "playClicks": 5,
+    "ficheUrl": "/fiches/les-presque-doubles/"
   },
   {
     "title": "Les compléments à 10",
@@ -2946,7 +3056,8 @@
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-57.webp",
     "imageAlt": "Aperçu de Les compléments à 10 : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
-    "playClicks": 4
+    "playClicks": 4,
+    "ficheUrl": "/fiches/les-complements-a-10/"
   },
   {
     "title": "Ajouter et soustraire des dizaines",
@@ -2973,7 +3084,8 @@
     "short": "Trouver un résultat en retirant une quantité.",
     "thumb": "/assets/catalogue-v2/captures/jeu-58.webp",
     "imageAlt": "Aperçu de Ajouter et soustraire des dizaines : trouver un résultat en retirant une quantité.",
-    "playClicks": 3
+    "playClicks": 3,
+    "ficheUrl": "/fiches/ajouter-et-soustraire-des-dizaines/"
   },
   {
     "title": "Les petites additions",
@@ -3001,7 +3113,8 @@
     "short": "Utiliser des résultats connus pour calculer une addition mentalement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-59.webp",
     "imageAlt": "Aperçu de Les petites additions : utiliser des résultats connus pour calculer une addition mentalement.",
-    "playClicks": 5
+    "playClicks": 5,
+    "ficheUrl": "/fiches/les-petites-additions/"
   },
   {
     "title": "Calcul mental — Période 1",
@@ -3030,7 +3143,8 @@
     "imageAlt": "Aperçu de Calcul mental — Période 1 : s’entraîner à plusieurs procédures de calcul mental.",
     "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
     "pdfLabel": "7 compétences : exercices et corrigés (PDF)",
-    "playClicks": 24
+    "playClicks": 24,
+    "ficheUrl": "/fiches/calcul-mental-periode-1/"
   },
   {
     "title": "Les poissons des nombres",
@@ -3061,7 +3175,8 @@
     "screenshotUrl": "/assets/catalogue-v2/captures/jeu-61-actualise.svg?v=20261114b",
     "bannerSource": "approved-generated",
     "pdfUrl": "/pdf/Les_poissons_des_nombres_CE1_exercices_et_corrige_sans_fond.pdf?v=9pages-20261115",
-    "pdfLabel": "Exercices CE1 — 5 pages de chaînes de poissons + calculs et corrigés (PDF, 9 pages)"
+    "pdfLabel": "Exercices CE1 — 5 pages de chaînes de poissons + calculs et corrigés (PDF, 9 pages)",
+    "ficheUrl": "/fiches/les-poissons-des-nombres/"
   },
   {
     "title": "La course des calculs",
@@ -3089,7 +3204,8 @@
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-62.webp",
     "imageAlt": "Aperçu de La course des calculs : s’entraîner à plusieurs procédures de calcul mental.",
-    "playClicks": 4
+    "playClicks": 4,
+    "ficheUrl": "/fiches/la-course-des-calculs/"
   },
   {
     "title": "Compléments à 10, 100 et 1 000",
@@ -3116,7 +3232,8 @@
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-63.webp",
     "imageAlt": "Aperçu de Compléments à 10, 100 et 1 000 : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
-    "playClicks": 3
+    "playClicks": 3,
+    "ficheUrl": "/fiches/complements-a-10-100-et-1-000/"
   },
   {
     "title": "Calcul mental — Période 2",
@@ -3143,7 +3260,8 @@
     "short": "S’entraîner à plusieurs procédures de calcul mental.",
     "thumb": "/assets/catalogue-v2/captures/calcul-mental-ce1-periode-2-orbite.webp",
     "imageAlt": "Aperçu de Calcul mental — Période 2 : s’entraîner à plusieurs procédures de calcul mental.",
-    "playClicks": 36
+    "playClicks": 36,
+    "ficheUrl": "/fiches/calcul-mental-periode-2/"
   },
   {
     "title": "Trouver le tout",
@@ -3170,7 +3288,8 @@
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-65.webp",
     "imageAlt": "Aperçu de Trouver le tout : comprendre une situation et choisir un calcul pour la résoudre.",
-    "playClicks": 6
+    "playClicks": 6,
+    "ficheUrl": "/fiches/trouver-le-tout/"
   },
   {
     "title": "Trouver une partie",
@@ -3197,7 +3316,8 @@
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-66.webp",
     "imageAlt": "Aperçu de Trouver une partie : comprendre une situation et choisir un calcul pour la résoudre.",
-    "playClicks": 1
+    "playClicks": 1,
+    "ficheUrl": "/fiches/trouver-une-partie/"
   },
   {
     "title": "Ajouter, gagner, avancer",
@@ -3224,7 +3344,8 @@
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-67.webp",
     "imageAlt": "Aperçu de Ajouter, gagner, avancer : comprendre une situation et choisir un calcul pour la résoudre.",
-    "playClicks": 1
+    "playClicks": 1,
+    "ficheUrl": "/fiches/ajouter-gagner-avancer/"
   },
   {
     "title": "Soustraire, perdre, reculer",
@@ -3251,7 +3372,8 @@
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-68.webp",
     "imageAlt": "Aperçu de Soustraire, perdre, reculer : comprendre une situation et choisir un calcul pour la résoudre.",
-    "playClicks": 1
+    "playClicks": 1,
+    "ficheUrl": "/fiches/soustraire-perdre-reculer/"
   },
   {
     "title": "Résoudre en deux étapes",
@@ -3278,7 +3400,8 @@
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-69.webp",
     "imageAlt": "Aperçu de Résoudre en deux étapes : comprendre une situation et choisir un calcul pour la résoudre.",
-    "playClicks": 2
+    "playClicks": 2,
+    "ficheUrl": "/fiches/resoudre-en-deux-etapes/"
   },
   {
     "title": "Comparer deux quantités",
@@ -3305,7 +3428,8 @@
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-70.webp",
     "imageAlt": "Aperçu de Comparer deux quantités : comprendre une situation et choisir un calcul pour la résoudre.",
-    "playClicks": 0
+    "playClicks": 0,
+    "ficheUrl": "/fiches/comparer-deux-quantites/"
   },
   {
     "title": "Problèmes avec modèles en barres — Atelier 4",
@@ -3334,7 +3458,8 @@
     "imageAlt": "Aperçu de Problèmes avec modèles en barres — Atelier 4 : comprendre une situation et choisir un calcul pour la résoudre.",
     "pdfUrl": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
     "pdfLabel": "7 problèmes avec barres + corrigé (PDF)",
-    "playClicks": 3
+    "playClicks": 3,
+    "ficheUrl": "/fiches/problemes-avec-modeles-en-barres-atelier-4/"
   },
   {
     "title": "Problèmes — Période 2",
@@ -3360,7 +3485,8 @@
     "short": "Comprendre une situation et choisir un calcul pour la résoudre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-72.webp",
     "imageAlt": "Aperçu de Problèmes — Période 2 : comprendre une situation et choisir un calcul pour la résoudre.",
-    "playClicks": 5
+    "playClicks": 5,
+    "ficheUrl": "/fiches/problemes-periode-2/"
   },
   {
     "title": "Le grain de riz — aide DYS",
@@ -3389,7 +3515,8 @@
     "playClicks": 12,
     "accessibility": [
       "dys"
-    ]
+    ],
+    "ficheUrl": "/fiches/le-grain-de-riz-aide-dys/"
   },
   {
     "title": "Orthographe — Période 1",
@@ -3418,7 +3545,8 @@
     "playClicks": 5,
     "accessibility": [
       "audio"
-    ]
+    ],
+    "ficheUrl": "/fiches/orthographe-periode-1/"
   },
   {
     "title": "Dictées — Période 2",
@@ -3447,7 +3575,8 @@
     "playClicks": 9,
     "accessibility": [
       "audio"
-    ]
+    ],
+    "ficheUrl": "/fiches/dictees-periode-2/"
   },
   {
     "title": "Soustractions sans échange — Vaisseau spatial",
@@ -3472,7 +3601,8 @@
     "short": "Barre les jetons 3D et construis le résultat de droite à gauche.",
     "thumb": "/assets/catalogue-v2/captures/jeu-105.webp",
     "imageAlt": "Soustraction posée dans le cockpit, avec jetons 3D et résultat sous la barre.",
-    "playClicks": 2
+    "playClicks": 2,
+    "ficheUrl": "/fiches/soustractions-sans-echange-vaisseau-spatial/"
   },
   {
     "id": "jeu-109",
@@ -3497,6 +3627,7 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/jeu-109.webp",
     "imageAlt": "Cockpit du jeu Mission Pronoms et boutons il, elle, ils, elles.",
-    "playClicks": 1
+    "playClicks": 1,
+    "ficheUrl": "/fiches/mission-pronoms-en-orbite/"
   }
 ]
