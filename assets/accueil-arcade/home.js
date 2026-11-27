@@ -81,7 +81,7 @@ function activateCatalogue(source) {
     game.group, isEnglish && game.group === 'numeration' ? 'Number skills' : game.groupName,
   ]));
   const games = new Map(catalogue.map(game => [game.id, game]));
-  const defaults = { niveau: 'tous', matiere: 'tous', domaine: 'tous', competence: '', q: '', tri: 'catalogue', collection: '' };
+  const defaults = { niveau: 'tous', matiere: 'tous', domaine: 'tous', competence: '', q: '', tri: 'catalogue', collection: '', aide: '' };
   const collectionLabels = {
     favoris: localise('Mes jeux favoris', 'My favourite games', '我的收藏', 'Mis favoritos'),
     semaine: localise('Les jeux de la semaine', 'This week’s games', '本周游戏', 'Juegos de la semana'),
@@ -107,7 +107,7 @@ function activateCatalogue(source) {
   const normalize = value => String(value).toLocaleLowerCase(language).normalize('NFD')
     .replace(/\p{M}/gu, '').replaceAll('œ', 'oe').replace(/[^a-z0-9\p{Script=Han}]+/gu, ' ').trim();
   const searchIndex = new Map(catalogue.map(game => {
-    const content = [game.title, game.subject, subjects[subjectOf(game)], game.groupName, game.skillName, game.short, game.description, game.objective, game.levels.join(' '), levelLine(game)].join(' ');
+    const content = [game.title, game.subject, subjects[subjectOf(game)], game.groupName, game.skillName, game.short, game.description, game.objective, game.levels.join(' '), levelLine(game), ...(game.accessibility || [])].join(' ');
     return [game.id, normalize(content)];
   }));
 
@@ -141,6 +141,7 @@ function activateCatalogue(source) {
     if (params.get('tri') === 'az' || (!isEnglish && params.get('tri') === 'popularite')) next.tri = params.get('tri');
     const collection = params.get('collection') || params.get('vue');
     if (Object.hasOwn(collectionLabels, collection)) next.collection = collection;
+    if (language === 'fr' && ['audio','dys'].includes(params.get('aide'))) next.aide = params.get('aide');
     next.q = (params.get('q') || '').slice(0, 150);
     if (isEnglish && !params.has('domaine')) {
       const hash = location.hash.slice(1);
@@ -216,6 +217,7 @@ function activateCatalogue(source) {
       (state.collection !== 'favoris' || favorites.has(game.id)) &&
       (state.collection !== 'semaine' || game.weekly) &&
       (state.collection !== 'nouveautes' || game.new) &&
+      (!state.aide || game.accessibility?.includes(state.aide)) &&
       terms.every(term => searchIndex.get(game.id).includes(term))
     );
     if (state.tri === 'az') matching.sort((first, second) => first.title.localeCompare(second.title, language));
@@ -264,6 +266,7 @@ function activateCatalogue(source) {
         <p class="card-meta"><span class="card-levels">${escape(levelLine(game))}</span><span aria-hidden="true">/</span><span>${escape(game.groupName)}</span></p>
         <h3 class="card-title">${escape(game.title)}</h3>
         <p class="card-description">${escape(game.short)}</p>
+        ${language === 'fr' && game.accessibility?.length ? `<div style="display:flex;gap:6px;flex-wrap:wrap;margin:6px 0">${game.accessibility.map(a => `<span style="font-size:.78rem;border:1px solid #769bdd;border-radius:6px;padding:3px 7px">${a === 'audio' ? '🔊 Audio' : 'Aide DYS'}</span>`).join('')}</div>` : ''}
         <div class="card-actions">
           <a class="control control-outline play" href="${escape(playHref(game.id, game.url))}" target="_blank" rel="noopener" aria-label="${playLabel(game)}: ${escape(game.title)}"${trackingAttributes(game.tracking)}>${icon('play')} ${playLabel(game)}</a>
           ${game.extras.map(link => link.outerHTML).join('')}
@@ -341,6 +344,7 @@ function activateCatalogue(source) {
     $('#exercise-filter').value = state.competence;
     $('#exercise-control').toggleAttribute('hidden', state.domaine === 'tous' && !state.competence);
     $('#sort-filter').value = state.tri;
+    if ($('#access-filter')) $('#access-filter').value = state.aide;
     if (search.value !== state.q) search.value = state.q;
     $('#clear-search').hidden = !state.q;
     all('[data-level-link]').forEach(link => {
@@ -355,14 +359,31 @@ function activateCatalogue(source) {
     }
   }
 
+  const familyTitles = { halloween: 'Happy Halloween — Compléments', sorciere: 'La course de la sorcière — Compléments', araignee: 'Le défi de l’araignée — Compléments', 'cm1-livrets': 'Mission Calcul CM1 — Les livrets' };
+  function groupResults(results) {
+    const entries = [], families = new Map();
+    for (const game of results) {
+      if (language !== 'fr' || !game.family || state.collection === 'favoris') { entries.push([game]); continue; }
+      if (!families.has(game.family)) { const list = []; families.set(game.family,list); entries.push(list); }
+      families.get(game.family).push(game);
+    }
+    return entries;
+  }
+  function familyCard(list) {
+    if (list.length === 1) return card(list[0]);
+    const sorted = [...list].sort((a,b) => a.variantLabel.localeCompare(b.variantLabel,'fr',{numeric:true}));
+    const first = sorted[0];
+    return '<article class="game-card" data-card-subject="'+subjectOf(first)+'"><div class="game-image"><button class="image-button" type="button" data-preview="'+escape(first.id)+'" aria-label="'+escape(previewLabel+first.title)+'"><img src="'+escape(first.image)+'" alt="'+escape(first.alt || first.title)+'" loading="lazy" decoding="async"></button></div><div class="card-body"><p class="card-meta">'+escape([...new Set(sorted.flatMap(g=>g.levels))].join(' · '))+' / '+escape(first.groupName)+'</p><h3 class="card-title">'+escape(familyTitles[first.family])+'</h3><p class="card-description">'+sorted.length+' variantes disponibles. Choisis ton exercice.</p><div style="display:grid;gap:6px">'+sorted.map(g=>'<div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px"><a class="control control-outline play" style="flex:1" href="'+escape(playHref(g.id,g.url))+'" target="_blank" rel="noopener"'+trackingAttributes(g.tracking)+'>'+icon('play')+' '+escape(g.variantLabel)+'</a><button type="button" class="icon-button" data-preview="'+escape(g.id)+'" aria-label="'+escape(previewLabel+g.title)+'">'+icon('zoom')+'</button><button type="button" class="icon-button" data-favorite="'+escape(g.id)+'" aria-pressed="false">'+icon('heart')+'</button></div>').join('')+'</div></div></article>';
+  }
   function renderResults(results = visibleGames()) {
+    const entries = groupResults(results);
     const total = results.length;
-    const displayed = Math.min(total, visibleCount);
-    grid.innerHTML = results.slice(0, displayed).map(game => card(game)).join('');
+    const displayed = Math.min(entries.length, visibleCount);
+    grid.innerHTML = entries.slice(0, displayed).map(familyCard).join('');
     $('#result-count').textContent = gameCount(total) + localise(total === 1 ? ' trouvé' : ' trouvés', ' found', '', total === 1 ? ' encontrado' : ' encontrados');
     $('#clear-filters').hidden = Object.keys(defaults).every(key => state[key] === defaults[key]);
-    $('#more-area').hidden = displayed >= total;
-    $('#shown-count').textContent = shownLabel(displayed, total);
+    $('#more-area').hidden = displayed >= entries.length;
+    $('#shown-count').textContent = shownLabel(entries.slice(0,displayed).reduce((n,list)=>n+list.length,0), total);
     $('#empty-state').hidden = total !== 0;
     if (total === 0) {
       const noFavorites = state.collection === 'favoris' && !catalogue.some(game => favorites.has(game.id));
@@ -456,6 +477,7 @@ function activateCatalogue(source) {
   $('#skill-filter').addEventListener('change', event => setState({ domaine: event.target.value, competence: '' }));
   $('#exercise-filter').addEventListener('change', event => setState({ competence: event.target.value }));
   $('#sort-filter').addEventListener('change', event => setState({ tri: event.target.value }));
+  $('#access-filter')?.addEventListener('change', event => setState({ aide: event.target.value }));
   $('#load-more').addEventListener('click', () => {
     const previous = visibleCount;
     const results = visibleGames();
