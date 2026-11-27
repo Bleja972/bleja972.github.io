@@ -96,7 +96,8 @@
     "new": true,
     "thumb": "/assets/en-captures/en-mission-calcul-cm1-livret-1-live.webp",
     "imageAlt": "English gameplay screenshot of Math Mission — Grade 4 · Booklet 1",
-    "sourceId": "mission-calcul-cm1-livret-1"
+    "sourceId": "mission-calcul-cm1-livret-1",
+    "contentLanguage": "en"
   },
   {
     "id": "en-mission-calcul-cm1-livret-5",
@@ -121,7 +122,8 @@
     "new": true,
     "thumb": "/assets/en-captures/en-mission-calcul-cm1-livret-5-live.webp",
     "imageAlt": "English gameplay screenshot of Math Mission — Grade 4 · Booklet 5",
-    "sourceId": "mission-calcul-cm1-livret-5"
+    "sourceId": "mission-calcul-cm1-livret-5",
+    "contentLanguage": "en"
   },
   {
     "id": "en-mission-calcul-cm1-livret-4",
@@ -146,7 +148,8 @@
     "new": true,
     "thumb": "/assets/en-captures/en-mission-calcul-cm1-livret-4-live.webp",
     "imageAlt": "English gameplay screenshot of Math Mission — Grade 4 · Booklet 4",
-    "sourceId": "mission-calcul-cm1-livret-4"
+    "sourceId": "mission-calcul-cm1-livret-4",
+    "contentLanguage": "en"
   },
   {
     "id": "en-mission-calcul-cm1-livret-3",
@@ -171,7 +174,8 @@
     "new": true,
     "thumb": "/assets/en-captures/en-mission-calcul-cm1-livret-3-live.webp",
     "imageAlt": "English gameplay screenshot of Math Mission — Grade 4 · Booklet 3",
-    "sourceId": "mission-calcul-cm1-livret-3"
+    "sourceId": "mission-calcul-cm1-livret-3",
+    "contentLanguage": "en"
   },
   {
     "id": "en-mission-calcul-cm1-livret-2",
@@ -196,7 +200,8 @@
     "new": true,
     "thumb": "/assets/en-captures/en-mission-calcul-cm1-livret-2-live.webp",
     "imageAlt": "English gameplay screenshot of Math Mission — Grade 4 · Booklet 2",
-    "sourceId": "mission-calcul-cm1-livret-2"
+    "sourceId": "mission-calcul-cm1-livret-2",
+    "contentLanguage": "en"
   },
   {
     "id": "en-cartons-montessori-ce2",
@@ -267,13 +272,14 @@
     "imageAlt": "English gameplay screenshot of Number magic — Montessori cards",
     "pdfUrl": "/pdf/Cartons_Montessori_CE1_exercices_et_correction.pdf",
     "pdfLabel": "4 fiches élèves + corrigé (PDF)",
-    "sourceId": "cartons-montessori-ce1"
+    "sourceId": "cartons-montessori-ce1",
+    "contentLanguage": "en"
   },
   {
     "id": "en-ours-de-la-banquise",
     "title": "Ice Floe Bear",
     "url": "https://bleja972.github.io/jeux/ours-de-la-banquise-en/",
-    "description": "Program a path across the ice to collect fish.",
+    "description": "Program the polar bear’s moves across the ice to collect every fish without falling into the water.",
     "levels": [
       "CE1"
     ],
@@ -295,7 +301,7 @@
     "id": "en-ours-de-la-banquise-neon",
     "title": "Neon Mission — Crystal Robot",
     "url": "/jeux/ours-de-la-banquise-neon-en/",
-    "description": "Program the robot to collect crystals.",
+    "description": "Guide the robot through 20 glowing mazes, avoid forbidden squares and collect energy crystals.",
     "levels": [
       "CE1"
     ],
@@ -336,7 +342,8 @@
     "new": true,
     "thumb": "/assets/en-captures/kangaroo-number-path-gameplay.webp",
     "imageAlt": "English gameplay screenshot of The kangaroo’s number path",
-    "sourceId": "chemin-du-kangourou"
+    "sourceId": "chemin-du-kangourou",
+    "contentLanguage": "en"
   },
   {
     "id": "en-tombolo-crabs",
@@ -361,7 +368,8 @@
     "new": true,
     "thumb": "/assets/en-captures/tombolo-crabs-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Tombolo crabs — Odd and even numbers",
-    "sourceId": "crabes-du-tombolo"
+    "sourceId": "crabes-du-tombolo",
+    "contentLanguage": "en"
   },
   {
     "id": "en-popeye-number-line",
@@ -388,7 +396,8 @@
     "short": "Read number lines with six step sizes. Help Popeye reach Olive.",
     "thumb": "/assets/en-captures/popeye-number-line-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Popeye on the number line",
-    "sourceId": "jeu-103"
+    "sourceId": "jeu-103",
+    "contentLanguage": "en"
   },
   {
     "id": "en-salines-crabs",
@@ -415,7 +424,8 @@
     "short": "Order five numbers from smallest to largest or largest to smallest.",
     "thumb": "/assets/en-captures/salines-crabs-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Salines crabs — Put numbers in order",
-    "sourceId": "jeu-102"
+    "sourceId": "jeu-102",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-101",
@@ -436,7 +446,8 @@
     "new": true,
     "sourceId": "jeu-101",
     "thumb": "/assets/en-captures/number-castle-outside-gameplay.webp",
-    "imageAlt": "English gameplay screenshot of Number Castle — Outside View"
+    "imageAlt": "English gameplay screenshot of Number Castle — Outside View",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-100",
@@ -457,7 +468,8 @@
     "new": true,
     "sourceId": "jeu-100",
     "thumb": "/assets/en-captures/number-castle-gameplay.webp",
-    "imageAlt": "English gameplay screenshot of Number Castle"
+    "imageAlt": "English gameplay screenshot of Number Castle",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-99",
@@ -478,7 +490,8 @@
     "new": true,
     "sourceId": "jeu-99",
     "thumb": "/assets/en-captures/fritz-number-bounds-ce2-gameplay.webp",
-    "imageAlt": "English gameplay screenshot of Fritz’s Planet — Find the Bounds"
+    "imageAlt": "English gameplay screenshot of Fritz’s Planet — Find the Bounds",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-98",
@@ -499,7 +512,8 @@
     "new": true,
     "sourceId": "jeu-98",
     "thumb": "/assets/en-captures/fritz-number-bounds-cp-gameplay.webp",
-    "imageAlt": "English gameplay screenshot of Fritz’s Planet — Find the Bounds"
+    "imageAlt": "English gameplay screenshot of Fritz’s Planet — Find the Bounds",
+    "contentLanguage": "en"
   },
   {
     "id": "en-fritz-number-bounds",
@@ -524,7 +538,8 @@
     "short": "Three levels of number bounds on Fritz’s Planet.",
     "thumb": "/assets/en-captures/fritz-number-bounds-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Fritz’s Planet — Number bounds",
-    "sourceId": "jeu-97"
+    "sourceId": "jeu-97",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-96",
@@ -571,7 +586,8 @@
     "short": "Read number lines in steps of 1, 2, 5, 10 or 100, with numbers up to 1,000.",
     "thumb": "/assets/en-captures/t-rex-number-lines-ce1-gameplay.webp",
     "imageAlt": "English gameplay screenshot of T-Rex number lines — CE1",
-    "sourceId": "jeu-95"
+    "sourceId": "jeu-95",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-94",
@@ -637,7 +653,8 @@
     "new": true,
     "thumb": "/assets/en-captures/dino-calculs-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Dino Maths — Multiplication and division",
-    "sourceId": "jeu-92"
+    "sourceId": "jeu-92",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-91",
@@ -659,7 +676,8 @@
     "new": true,
     "sourceId": "jeu-91",
     "thumb": "/assets/en-captures/chronomaths-enchantes-ce1-gameplay.webp",
-    "imageAlt": "English gameplay screenshot of Enchanted Chronomaths"
+    "imageAlt": "English gameplay screenshot of Enchanted Chronomaths",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-90",
@@ -680,7 +698,8 @@
     "new": true,
     "sourceId": "jeu-90",
     "thumb": "/assets/en-captures/en-jeu-90-live.webp",
-    "imageAlt": "English gameplay screenshot of Galactic Chronomaths"
+    "imageAlt": "English gameplay screenshot of Galactic Chronomaths",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-89",
@@ -701,7 +720,8 @@
     "new": true,
     "sourceId": "jeu-89",
     "thumb": "/assets/en-captures/tables-enchantees-ce2-gameplay.webp",
-    "imageAlt": "English gameplay screenshot of Enchanted Times Tables"
+    "imageAlt": "English gameplay screenshot of Enchanted Times Tables",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-88",
@@ -722,7 +742,8 @@
     "new": true,
     "sourceId": "jeu-88",
     "thumb": "/assets/en-captures/year-2-complete-bar-models-gameplay.webp",
-    "imageAlt": "English gameplay screenshot of Word Problems — Complete the Bar Models"
+    "imageAlt": "English gameplay screenshot of Word Problems — Complete the Bar Models",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-87",
@@ -743,7 +764,8 @@
     "new": true,
     "sourceId": "jeu-87",
     "thumb": "/assets/en-captures/year-2-word-problems-term-1-gameplay.webp",
-    "imageAlt": "English gameplay screenshot of Year 2 Word Problems — Term 1"
+    "imageAlt": "English gameplay screenshot of Year 2 Word Problems — Term 1",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-86",
@@ -764,7 +786,8 @@
     "new": true,
     "sourceId": "jeu-86",
     "thumb": "/assets/en-captures/year-2-word-problems-term-2-gameplay.webp",
-    "imageAlt": "English gameplay screenshot of Year 2 Word Problems — Term 2"
+    "imageAlt": "English gameplay screenshot of Year 2 Word Problems — Term 2",
+    "contentLanguage": "en"
   },
   {
     "id": "en-40",
@@ -786,7 +809,8 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/jeu-85.webp",
     "imageAlt": "An arithmetic problem in a chemistry flask in The Maths Lab",
-    "sourceId": "jeu-85"
+    "sourceId": "jeu-85",
+    "contentLanguage": "en"
   },
   {
     "id": "en-23",
@@ -808,7 +832,8 @@
     "new": true,
     "thumb": "/assets/images/bannieres/openai/vallee-des-moities.webp?v=bannieres-20261115",
     "imageAlt": "Illustration for The Valley of Halves",
-    "sourceId": "jeu-84"
+    "sourceId": "jeu-84",
+    "contentLanguage": "en"
   },
   {
     "id": "en-24",
@@ -830,7 +855,8 @@
     "new": true,
     "thumb": "/assets/en-captures/temple-des-doubles-gameplay.webp",
     "imageAlt": "English gameplay screenshot of The Temple of Doubles",
-    "sourceId": "jeu-83"
+    "sourceId": "jeu-83",
+    "contentLanguage": "en"
   },
   {
     "id": "en-25",
@@ -852,7 +878,8 @@
     "new": true,
     "thumb": "/assets/en-captures/divisions-galactiques-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Galactic Division",
-    "sourceId": "jeu-82"
+    "sourceId": "jeu-82",
+    "contentLanguage": "en"
   },
   {
     "id": "en-26",
@@ -874,7 +901,8 @@
     "new": true,
     "thumb": "/assets/en-captures/tables-enchantees-gameplay.webp",
     "imageAlt": "English gameplay screenshot of The Enchanted Times Tables",
-    "sourceId": "jeu-81"
+    "sourceId": "jeu-81",
+    "contentLanguage": "en"
   },
   {
     "id": "en-27",
@@ -896,7 +924,8 @@
     "new": true,
     "thumb": "/assets/en-captures/bulles-de-sorcellerie-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Wizard Bubbles",
-    "sourceId": "jeu-80"
+    "sourceId": "jeu-80",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-79",
@@ -963,7 +992,8 @@
     "new": true,
     "sourceId": "jeu-77",
     "imageAlt": "English gameplay screenshot of Geometry — Colour the Shapes",
-    "thumb": "/assets/en-captures/colour-the-shapes-gameplay.webp"
+    "thumb": "/assets/en-captures/colour-the-shapes-gameplay.webp",
+    "contentLanguage": "en"
   },
   {
     "id": "en-3",
@@ -984,7 +1014,8 @@
     "new": true,
     "thumb": "/assets/en-captures/en-3-live.webp",
     "imageAlt": "English gameplay screenshot of Calcul Pop! — Year 4 mental maths",
-    "sourceId": "jeu-76"
+    "sourceId": "jeu-76",
+    "contentLanguage": "en"
   },
   {
     "title": "Number bubble pairs — Compare numbers",
@@ -1009,7 +1040,8 @@
     ],
     "short": "Choose the larger number in each pair of rising bubbles. Three levels with two- and three-digit numbers.",
     "thumb": "/assets/en-captures/number-bubble-pairs-in-play.webp",
-    "sourceId": "jeu-1"
+    "sourceId": "jeu-1",
+    "contentLanguage": "en"
   },
   {
     "title": "Coral bubbles — Odd and even numbers",
@@ -1035,7 +1067,8 @@
     ],
     "short": "Catch the requested odd or even numbers before the bubbles reach the surface.",
     "thumb": "/assets/en-captures/coral-bubbles-odd-even-gameplay.webp",
-    "sourceId": "jeu-2"
+    "sourceId": "jeu-2",
+    "contentLanguage": "en"
   },
   {
     "id": "en-28",
@@ -1057,7 +1090,8 @@
     "new": true,
     "thumb": "/assets/en-captures/ile-mysterieuse-soustractions-gameplay.webp",
     "imageAlt": "English gameplay screenshot of The Mysterious Island — Subtraction",
-    "sourceId": "jeu-3"
+    "sourceId": "jeu-3",
+    "contentLanguage": "en"
   },
   {
     "id": "en-29",
@@ -1079,7 +1113,8 @@
     "new": true,
     "thumb": "/assets/en-captures/tour-du-monde-complements-1000-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Around the World — Number Bonds to 1,000",
-    "sourceId": "jeu-4"
+    "sourceId": "jeu-4",
+    "contentLanguage": "en"
   },
   {
     "id": "en-30",
@@ -1101,7 +1136,8 @@
     "new": true,
     "thumb": "/assets/en-captures/mission-nautilus-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Mission Nautilus — Number Bonds to 100",
-    "sourceId": "jeu-5"
+    "sourceId": "jeu-5",
+    "contentLanguage": "en"
   },
   {
     "id": "en-31",
@@ -1124,7 +1160,8 @@
     "new": true,
     "thumb": "/assets/en-captures/presque-doubles-terre-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Journey to the Centre of the Earth — Near Doubles",
-    "sourceId": "jeu-6"
+    "sourceId": "jeu-6",
+    "contentLanguage": "en"
   },
   {
     "id": "en-32",
@@ -1147,7 +1184,8 @@
     "new": true,
     "thumb": "/assets/en-captures/mission-mars-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Mars Mission — Addition",
-    "sourceId": "jeu-7"
+    "sourceId": "jeu-7",
+    "contentLanguage": "en"
   },
   {
     "id": "en-33",
@@ -1170,7 +1208,8 @@
     "new": true,
     "thumb": "/assets/en-captures/additions-abysses-11-19-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Deep Sea Mission — Addition",
-    "sourceId": "jeu-8"
+    "sourceId": "jeu-8",
+    "contentLanguage": "en"
   },
   {
     "id": "en-34",
@@ -1191,7 +1230,8 @@
     "new": false,
     "thumb": "/assets/en-captures/halloween-complements-10-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Halloween — Number Bonds to 10",
-    "sourceId": "jeu-9"
+    "sourceId": "jeu-9",
+    "contentLanguage": "en"
   },
   {
     "id": "en-35",
@@ -1213,7 +1253,8 @@
     "new": false,
     "thumb": "/assets/en-captures/halloween-complements-100-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Halloween — Number Bonds to 100",
-    "sourceId": "jeu-10"
+    "sourceId": "jeu-10",
+    "contentLanguage": "en"
   },
   {
     "id": "en-36",
@@ -1235,7 +1276,8 @@
     "new": false,
     "thumb": "/assets/en-captures/halloween-complements-1000-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Halloween — Number Bonds to 1,000",
-    "sourceId": "jeu-11"
+    "sourceId": "jeu-11",
+    "contentLanguage": "en"
   },
   {
     "id": "en-37",
@@ -1256,7 +1298,8 @@
     "new": false,
     "thumb": "/assets/en-captures/sorciere-complements-10-gameplay.webp",
     "imageAlt": "English gameplay screenshot of The Witch’s Race — Number Bonds to 10",
-    "sourceId": "jeu-12"
+    "sourceId": "jeu-12",
+    "contentLanguage": "en"
   },
   {
     "id": "en-38",
@@ -1278,7 +1321,8 @@
     "new": false,
     "thumb": "/assets/en-captures/sorciere-complements-100-gameplay.webp",
     "imageAlt": "English gameplay screenshot of The Witch’s Race — Number Bonds to 100",
-    "sourceId": "jeu-13"
+    "sourceId": "jeu-13",
+    "contentLanguage": "en"
   },
   {
     "id": "en-39",
@@ -1300,7 +1344,8 @@
     "new": false,
     "thumb": "/assets/en-captures/sorciere-complements-1000-gameplay.webp",
     "imageAlt": "English gameplay screenshot of The Witch’s Race — Number Bonds to 1,000",
-    "sourceId": "jeu-14"
+    "sourceId": "jeu-14",
+    "contentLanguage": "en"
   },
   {
     "id": "en-1",
@@ -1322,7 +1367,8 @@
     "new": false,
     "thumb": "/assets/en-captures/complements1_a_10-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Number bonds to 10 — spider challenge",
-    "sourceId": "jeu-15"
+    "sourceId": "jeu-15",
+    "contentLanguage": "en"
   },
   {
     "id": "en-42",
@@ -1343,7 +1389,8 @@
     "new": false,
     "thumb": "/assets/en-captures/complements_a_100-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Number bonds to 100 — spider challenge",
-    "sourceId": "jeu-16"
+    "sourceId": "jeu-16",
+    "contentLanguage": "en"
   },
   {
     "id": "en-43",
@@ -1364,13 +1411,14 @@
     "new": false,
     "thumb": "/assets/en-captures/complements_a_1000-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Number bonds to 1,000 — spider challenge",
-    "sourceId": "jeu-17"
+    "sourceId": "jeu-17",
+    "contentLanguage": "en"
   },
   {
     "id": "en-15",
     "title": "Review numbers up to 1,000",
     "url": "/en/games/review-numbers-up-to-1-000/",
-    "description": "",
+    "description": "Review reading, writing and representing numbers up to 1,000 through interactive exercises.",
     "levels": [
       "CE1"
     ],
@@ -1385,13 +1433,15 @@
     "new": false,
     "thumb": "/assets/catalogue-v2/captures/mission-numeration-en.webp",
     "imageAlt": "English gameplay screenshot of Review numbers up to 1,000",
-    "sourceId": "jeu-18"
+    "sourceId": "jeu-18",
+    "short": "Review reading, writing and representing numbers up to 1,000 through interactive exercises.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-69",
     "title": "Word problems — Term 1",
     "url": "/en/games/word-problems-term-1/",
-    "description": "",
+    "description": "Solve everyday word problems and choose the calculation that matches each situation.",
     "levels": [
       "CP",
       "CE1"
@@ -1407,7 +1457,9 @@
     "new": false,
     "thumb": "/assets/en-captures/word-problems-term-1-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Word problems — Term 1",
-    "sourceId": "jeu-19"
+    "sourceId": "jeu-19",
+    "short": "Solve everyday word problems and choose the calculation that matches each situation.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-28",
@@ -1428,7 +1480,8 @@
     "new": false,
     "sourceId": "jeu-28",
     "thumb": "/assets/en-captures/year-2-mental-maths-gameplay.webp",
-    "imageAlt": "English gameplay screenshot of Year 2 Mental Maths"
+    "imageAlt": "English gameplay screenshot of Year 2 Mental Maths",
+    "contentLanguage": "en"
   },
   {
     "id": "en-calcul-mental-cp-neon-un-calcul",
@@ -1449,7 +1502,8 @@
     "new": true,
     "sourceId": "calcul-mental-cp-neon-un-calcul",
     "thumb": "/assets/en-captures/year-2-neon-mental-maths-gameplay.webp",
-    "imageAlt": "English gameplay screenshot of Neon Arcade Mental Maths — One Calculation at a Time"
+    "imageAlt": "English gameplay screenshot of Neon Arcade Mental Maths — One Calculation at a Time",
+    "contentLanguage": "en"
   },
   {
     "id": "en-calcul-mental-cp-pygame",
@@ -1470,7 +1524,8 @@
     "new": true,
     "sourceId": "calcul-mental-cp-pygame",
     "thumb": "/assets/en-captures/cp-mental-maths-gameplay.webp",
-    "imageAlt": "English gameplay screenshot of Maths Mission — Pygame Arcade"
+    "imageAlt": "English gameplay screenshot of Maths Mission — Pygame Arcade",
+    "contentLanguage": "en"
   },
   {
     "id": "en-4",
@@ -1491,7 +1546,8 @@
     "new": false,
     "thumb": "/assets/en-captures/ce2-chronomaths-20-challenges-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Year 4 Chronomaths — 20 challenges",
-    "sourceId": "jeu-29"
+    "sourceId": "jeu-29",
+    "contentLanguage": "en"
   },
   {
     "id": "en-5",
@@ -1512,13 +1568,14 @@
     "new": false,
     "thumb": "/assets/en-captures/ce2-word-problem-workshops-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Year 4 Word problem workshops",
-    "sourceId": "jeu-30"
+    "sourceId": "jeu-30",
+    "contentLanguage": "en"
   },
   {
     "id": "en-6",
     "title": "Count a collection",
     "url": "/en/games/count-a-collection/",
-    "description": "",
+    "description": "Count the objects in each collection and enter the total.",
     "levels": [
       "CE1"
     ],
@@ -1533,13 +1590,15 @@
     "new": false,
     "thumb": "/assets/en-captures/count-a-collection-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Count a collection",
-    "sourceId": "jeu-31"
+    "sourceId": "jeu-31",
+    "short": "Count the objects in each collection and enter the total.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-7",
     "title": "Compare two numbers",
     "url": "/en/games/compare-two-numbers/",
-    "description": "",
+    "description": "Compare two numbers and decide which is greater, smaller or equal.",
     "levels": [
       "CE1"
     ],
@@ -1554,13 +1613,15 @@
     "new": false,
     "thumb": "/assets/en-captures/compare-two-numbers-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Compare two numbers",
-    "sourceId": "jeu-32"
+    "sourceId": "jeu-32",
+    "short": "Compare two numbers and decide which is greater, smaller or equal.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-8",
     "title": "Put numbers in order",
     "url": "/en/games/put-numbers-in-order/",
-    "description": "",
+    "description": "Arrange numbers in the requested order to practise comparing their values.",
     "levels": [
       "CE1"
     ],
@@ -1575,13 +1636,15 @@
     "new": false,
     "thumb": "/assets/en-captures/put-numbers-in-order-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Put numbers in order",
-    "sourceId": "jeu-33"
+    "sourceId": "jeu-33",
+    "short": "Arrange numbers in the requested order to practise comparing their values.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-9",
     "title": "Read and write numbers",
     "url": "/en/games/read-and-write-numbers/",
-    "description": "",
+    "description": "Practise reading numbers and writing them in digits or words.",
     "levels": [
       "CE1"
     ],
@@ -1596,13 +1659,15 @@
     "new": false,
     "thumb": "/assets/en-captures/read-and-write-numbers-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Read and write numbers",
-    "sourceId": "jeu-34"
+    "sourceId": "jeu-34",
+    "short": "Practise reading numbers and writing them in digits or words.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-10",
     "title": "Number dictation",
     "url": "/en/games/number-dictation/",
-    "description": "",
+    "description": "Listen to the numbers and type the digits you hear.",
     "levels": [
       "CE1"
     ],
@@ -1617,13 +1682,15 @@
     "new": false,
     "thumb": "/assets/en-captures/number-dictation-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Number dictation",
-    "sourceId": "jeu-35"
+    "sourceId": "jeu-35",
+    "short": "Listen to the numbers and type the digits you hear.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-11",
     "title": "Count in different ways",
     "url": "/en/games/count-in-different-ways/",
-    "description": "",
+    "description": "Practise counting in different steps and recognise number patterns.",
     "levels": [
       "CE1"
     ],
@@ -1638,13 +1705,15 @@
     "new": false,
     "thumb": "/assets/en-captures/count-in-different-ways-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Count in different ways",
-    "sourceId": "jeu-36"
+    "sourceId": "jeu-36",
+    "short": "Practise counting in different steps and recognise number patterns.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-12",
     "title": "Compose and partition numbers",
     "url": "/en/games/compose-and-partition-numbers/",
-    "description": "",
+    "description": "Build and partition numbers using hundreds, tens and ones.",
     "levels": [
       "CE1"
     ],
@@ -1659,13 +1728,15 @@
     "new": false,
     "thumb": "/assets/en-captures/compose-and-partition-numbers-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Compose and partition numbers",
-    "sourceId": "jeu-37"
+    "sourceId": "jeu-37",
+    "short": "Build and partition numbers using hundreds, tens and ones.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-13",
     "title": "Recognise odd and even numbers",
     "url": "/en/games/recognise-odd-and-even-numbers/",
-    "description": "",
+    "description": "Identify odd and even numbers and strengthen your number sense.",
     "levels": [
       "CE1"
     ],
@@ -1680,13 +1751,15 @@
     "new": false,
     "thumb": "/assets/en-captures/recognise-odd-and-even-numbers-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Recognise odd and even numbers",
-    "sourceId": "jeu-38"
+    "sourceId": "jeu-38",
+    "short": "Identify odd and even numbers and strengthen your number sense.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-14",
     "title": "Complete number sequences",
     "url": "/en/games/complete-number-sequences/",
-    "description": "",
+    "description": "Find the pattern and fill in the missing numbers in each sequence.",
     "levels": [
       "CE1"
     ],
@@ -1701,13 +1774,15 @@
     "new": false,
     "thumb": "/assets/en-captures/complete-number-sequences-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Complete number sequences",
-    "sourceId": "jeu-39"
+    "sourceId": "jeu-39",
+    "short": "Find the pattern and fill in the missing numbers in each sequence.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-16",
     "title": "The mystery number line",
     "url": "/en/games/the-mystery-number-line/",
-    "description": "",
+    "description": "Work out the scale of a number line and find its missing values.",
     "levels": [
       "CE1"
     ],
@@ -1722,13 +1797,15 @@
     "new": false,
     "thumb": "/assets/en-captures/the-mystery-number-line-gameplay.webp",
     "imageAlt": "English gameplay screenshot of The mystery number line",
-    "sourceId": "jeu-40"
+    "sourceId": "jeu-40",
+    "short": "Work out the scale of a number line and find its missing values.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-17",
     "title": "The number line challenge",
     "url": "/en/games/the-number-line-challenge/",
-    "description": "",
+    "description": "Read the graduations and identify the correct number on the line.",
     "levels": [
       "CE1"
     ],
@@ -1743,13 +1820,15 @@
     "new": false,
     "thumb": "/assets/en-captures/the-number-line-challenge-gameplay.webp",
     "imageAlt": "English gameplay screenshot of The number line challenge",
-    "sourceId": "jeu-41"
+    "sourceId": "jeu-41",
+    "short": "Read the graduations and identify the correct number on the line.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-18",
     "title": "Partition a number",
     "url": "/en/games/partition-a-number/",
-    "description": "",
+    "description": "Break numbers into their place-value parts to practise partitioning.",
     "levels": [
       "CE1"
     ],
@@ -1764,13 +1843,15 @@
     "new": false,
     "thumb": "/assets/en-captures/partition-a-number-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Partition a number",
-    "sourceId": "jeu-42"
+    "sourceId": "jeu-42",
+    "short": "Break numbers into their place-value parts to practise partitioning.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-19",
     "title": "Build a number",
     "url": "/en/games/build-a-number/",
-    "description": "",
+    "description": "Combine place-value parts to build the requested number.",
     "levels": [
       "CE1"
     ],
@@ -1785,13 +1866,15 @@
     "new": false,
     "thumb": "/assets/en-captures/build-a-number-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Build a number",
-    "sourceId": "jeu-43"
+    "sourceId": "jeu-43",
+    "short": "Combine place-value parts to build the requested number.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-20",
     "title": "Number sequences",
     "url": "/en/games/number-sequences/",
-    "description": "",
+    "description": "Continue number sequences by identifying how the numbers change.",
     "levels": [
       "CE1"
     ],
@@ -1806,13 +1889,15 @@
     "new": false,
     "thumb": "/assets/en-captures/number-sequences-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Number sequences",
-    "sourceId": "jeu-44"
+    "sourceId": "jeu-44",
+    "short": "Continue number sequences by identifying how the numbers change.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-21",
     "title": "Ways to represent numbers",
     "url": "/en/games/ways-to-represent-numbers/",
-    "description": "",
+    "description": "Explore different ways to represent the same number using place value.",
     "levels": [
       "CE1"
     ],
@@ -1827,13 +1912,15 @@
     "new": false,
     "thumb": "/assets/en-captures/ways-to-represent-numbers-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Ways to represent numbers",
-    "sourceId": "jeu-45"
+    "sourceId": "jeu-45",
+    "short": "Explore different ways to represent the same number using place value.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-22",
     "title": "Order numbers",
     "url": "/en/games/order-numbers/",
-    "description": "",
+    "description": "Compare numbers and arrange them in the requested order.",
     "levels": [
       "CE1"
     ],
@@ -1848,7 +1935,9 @@
     "new": false,
     "thumb": "/assets/en-captures/order-numbers-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Order numbers",
-    "sourceId": "jeu-46"
+    "sourceId": "jeu-46",
+    "short": "Compare numbers and arrange them in the requested order.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-44",
@@ -1870,7 +1959,8 @@
     "new": false,
     "thumb": "/assets/en-captures/ce1-chronomaths-20-challenges-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Year 3 Chronomaths — 20 challenges",
-    "sourceId": "jeu-47"
+    "sourceId": "jeu-47",
+    "contentLanguage": "en"
   },
   {
     "id": "en-45",
@@ -1892,7 +1982,8 @@
     "new": false,
     "thumb": "/assets/en-captures/column-subtraction-with-regrouping-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Column subtraction with regrouping",
-    "sourceId": "jeu-48"
+    "sourceId": "jeu-48",
+    "contentLanguage": "en"
   },
   {
     "id": "en-46",
@@ -1914,7 +2005,8 @@
     "new": false,
     "thumb": "/assets/en-captures/subtraction-with-base-ten-blocks-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Subtraction with base-ten blocks",
-    "sourceId": "jeu-49"
+    "sourceId": "jeu-49",
+    "contentLanguage": "en"
   },
   {
     "id": "en-soustractions-sans-echange-en-orbite",
@@ -1958,7 +2050,8 @@
     "new": false,
     "thumb": "/assets/en-captures/en-47-live.webp",
     "imageAlt": "English gameplay screenshot of Column addition without regrouping",
-    "sourceId": "jeu-50"
+    "sourceId": "jeu-50",
+    "contentLanguage": "en"
   },
   {
     "id": "en-48",
@@ -1980,7 +2073,8 @@
     "new": false,
     "thumb": "/assets/en-captures/en-48-live.webp",
     "imageAlt": "English gameplay screenshot of Column addition with regrouping",
-    "sourceId": "jeu-51"
+    "sourceId": "jeu-51",
+    "contentLanguage": "en"
   },
   {
     "id": "en-49",
@@ -2002,7 +2096,8 @@
     "new": false,
     "thumb": "/assets/en-captures/addition-with-regrouping-3d-counters-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Addition with regrouping — 3D counters",
-    "sourceId": "jeu-52"
+    "sourceId": "jeu-52",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-106",
@@ -2074,7 +2169,7 @@
     "id": "en-50",
     "title": "Addition by bridging 10",
     "url": "/en/games/addition-by-bridging-10/",
-    "description": "",
+    "description": "Make the next ten to simplify addition and develop mental calculation strategies.",
     "levels": [
       "CP",
       "CE1",
@@ -2091,13 +2186,15 @@
     "new": false,
     "thumb": "/assets/en-captures/addition-by-bridging-10-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Addition by bridging 10",
-    "sourceId": "jeu-53"
+    "sourceId": "jeu-53",
+    "short": "Make the next ten to simplify addition and develop mental calculation strategies.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-51",
     "title": "Subtract from 10",
     "url": "/en/games/subtract-from-10/",
-    "description": "",
+    "description": "Practise subtracting small numbers from 10 and recall the answers quickly.",
     "levels": [
       "CP",
       "CE1",
@@ -2114,13 +2211,15 @@
     "new": false,
     "thumb": "/assets/en-captures/subtract-from-10-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Subtract from 10",
-    "sourceId": "jeu-54"
+    "sourceId": "jeu-54",
+    "short": "Practise subtracting small numbers from 10 and recall the answers quickly.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-52",
     "title": "Doubles",
     "url": "/en/games/doubles/",
-    "description": "",
+    "description": "Learn and recall doubles to build confidence in mental addition.",
     "levels": [
       "CP",
       "CE1",
@@ -2137,13 +2236,15 @@
     "new": false,
     "thumb": "/assets/en-captures/doubles-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Doubles",
-    "sourceId": "jeu-55"
+    "sourceId": "jeu-55",
+    "short": "Learn and recall doubles to build confidence in mental addition.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-53",
     "title": "Near doubles",
     "url": "/en/games/near-doubles/",
-    "description": "",
+    "description": "Use familiar doubles to calculate sums of two consecutive numbers.",
     "levels": [
       "CP",
       "CE1",
@@ -2160,13 +2261,15 @@
     "new": false,
     "thumb": "/assets/en-captures/near-doubles-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Near doubles",
-    "sourceId": "jeu-56"
+    "sourceId": "jeu-56",
+    "short": "Use familiar doubles to calculate sums of two consecutive numbers.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-54",
     "title": "Number bonds to 10",
     "url": "/en/games/number-bonds-to-10/",
-    "description": "",
+    "description": "Find the missing number in pairs that add up to 10.",
     "levels": [
       "CP",
       "CE1",
@@ -2183,13 +2286,15 @@
     "new": false,
     "thumb": "/assets/en-captures/number-bonds-to-10-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Number bonds to 10",
-    "sourceId": "jeu-57"
+    "sourceId": "jeu-57",
+    "short": "Find the missing number in pairs that add up to 10.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-55",
     "title": "Add and subtract tens",
     "url": "/en/games/add-and-subtract-tens/",
-    "description": "",
+    "description": "Practise adding and subtracting multiples of ten mentally.",
     "levels": [
       "CE1",
       "CE2"
@@ -2205,13 +2310,15 @@
     "new": false,
     "thumb": "/assets/en-captures/add-and-subtract-tens-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Add and subtract tens",
-    "sourceId": "jeu-58"
+    "sourceId": "jeu-58",
+    "short": "Practise adding and subtracting multiples of ten mentally.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-56",
     "title": "Simple addition",
     "url": "/en/games/simple-addition/",
-    "description": "",
+    "description": "Build fluency with short addition exercises.",
     "levels": [
       "CP",
       "CE1",
@@ -2228,13 +2335,15 @@
     "new": false,
     "thumb": "/assets/en-captures/simple-addition-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Simple addition",
-    "sourceId": "jeu-59"
+    "sourceId": "jeu-59",
+    "short": "Build fluency with short addition exercises.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-57",
     "title": "Mental maths — Term 1",
     "url": "/en/games/mental-maths-term-1/",
-    "description": "",
+    "description": "Review key mental maths skills from the first school term.",
     "levels": [
       "CE1",
       "CE2"
@@ -2250,13 +2359,15 @@
     "new": false,
     "thumb": "/assets/en-captures/mental-maths-term-1-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Mental maths — Term 1",
-    "sourceId": "jeu-60"
+    "sourceId": "jeu-60",
+    "short": "Review key mental maths skills from the first school term.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-58",
     "title": "Number fish",
     "url": "/en/games/number-fish/",
-    "description": "",
+    "description": "Follow the number fish and practise adding or subtracting 1, 10 or 100.",
     "levels": [
       "CE1",
       "CE2"
@@ -2272,13 +2383,15 @@
     "new": false,
     "thumb": "/assets/en-captures/number-fish-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Number fish",
-    "sourceId": "jeu-61"
+    "sourceId": "jeu-61",
+    "short": "Follow the number fish and practise adding or subtracting 1, 10 or 100.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-59",
     "title": "The calculation race",
     "url": "/en/games/the-calculation-race/",
-    "description": "",
+    "description": "Race through calculations to improve speed and accuracy in mental maths.",
     "levels": [
       "CP",
       "CE1",
@@ -2295,13 +2408,15 @@
     "new": false,
     "thumb": "/assets/en-captures/en-59-live.webp",
     "imageAlt": "English gameplay screenshot of The calculation race",
-    "sourceId": "jeu-62"
+    "sourceId": "jeu-62",
+    "short": "Race through calculations to improve speed and accuracy in mental maths.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-60",
     "title": "Number bonds to 10, 100 and 1,000",
     "url": "/en/games/number-bonds-to-10-100-and-1-000/",
-    "description": "",
+    "description": "Find the missing addend to complete 10, 100 or 1,000.",
     "levels": [
       "CE1",
       "CE2"
@@ -2317,7 +2432,9 @@
     "new": false,
     "thumb": "/assets/en-captures/number-bonds-to-10-100-and-1-000-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Number bonds to 10, 100 and 1,000",
-    "sourceId": "jeu-63"
+    "sourceId": "jeu-63",
+    "short": "Find the missing addend to complete 10, 100 or 1,000.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-61",
@@ -2340,13 +2457,14 @@
     "thumb": "/assets/en-captures/mental-maths-term-2-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Mental maths — Term 2",
     "sourceId": "jeu-64",
-    "short": "14 timed exercises · 10 soft neon colours · Arcade effects."
+    "short": "14 timed exercises · 10 soft neon colours · Arcade effects.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-62",
     "title": "Find the whole",
     "url": "/en/games/find-the-whole/",
-    "description": "",
+    "description": "Combine two parts to find the whole in everyday word problems.",
     "levels": [
       "CP",
       "CE1"
@@ -2362,13 +2480,15 @@
     "new": false,
     "thumb": "/assets/en-captures/find-the-whole-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Find the whole",
-    "sourceId": "jeu-65"
+    "sourceId": "jeu-65",
+    "short": "Combine two parts to find the whole in everyday word problems.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-63",
     "title": "Find a missing part",
     "url": "/en/games/find-a-missing-part/",
-    "description": "",
+    "description": "Use the total and the known part to work out the missing part.",
     "levels": [
       "CP",
       "CE1"
@@ -2384,13 +2504,15 @@
     "new": false,
     "thumb": "/assets/en-captures/find-a-missing-part-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Find a missing part",
-    "sourceId": "jeu-66"
+    "sourceId": "jeu-66",
+    "short": "Use the total and the known part to work out the missing part.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-64",
     "title": "Add, gain, move forward",
     "url": "/en/games/add-gain-move-forward/",
-    "description": "",
+    "description": "Solve addition problems involving gains and forward movement.",
     "levels": [
       "CP",
       "CE1"
@@ -2406,13 +2528,15 @@
     "new": false,
     "thumb": "/assets/en-captures/add-gain-move-forward-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Add, gain, move forward",
-    "sourceId": "jeu-67"
+    "sourceId": "jeu-67",
+    "short": "Solve addition problems involving gains and forward movement.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-65",
     "title": "Subtract, lose, move back",
     "url": "/en/games/subtract-lose-move-back/",
-    "description": "",
+    "description": "Solve subtraction problems involving losses and backward movement.",
     "levels": [
       "CP",
       "CE1"
@@ -2428,13 +2552,15 @@
     "new": false,
     "thumb": "/assets/en-captures/subtract-lose-move-back-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Subtract, lose, move back",
-    "sourceId": "jeu-68"
+    "sourceId": "jeu-68",
+    "short": "Solve subtraction problems involving losses and backward movement.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-66",
     "title": "Solve in two steps",
     "url": "/en/games/solve-in-two-steps/",
-    "description": "",
+    "description": "Identify the two calculations needed to solve each word problem.",
     "levels": [
       "CP",
       "CE1"
@@ -2450,13 +2576,15 @@
     "new": false,
     "thumb": "/assets/en-captures/solve-in-two-steps-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Solve in two steps",
-    "sourceId": "jeu-69"
+    "sourceId": "jeu-69",
+    "short": "Identify the two calculations needed to solve each word problem.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-67",
     "title": "Compare two quantities",
     "url": "/en/games/compare-two-quantities/",
-    "description": "",
+    "description": "Compare two quantities and work out the difference between them.",
     "levels": [
       "CP",
       "CE1"
@@ -2472,13 +2600,15 @@
     "new": false,
     "thumb": "/assets/en-captures/compare-two-quantities-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Compare two quantities",
-    "sourceId": "jeu-70"
+    "sourceId": "jeu-70",
+    "short": "Compare two quantities and work out the difference between them.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-68",
     "title": "Word problems with bar models — Workshop 4",
     "url": "/en/games/word-problems-with-bar-models-workshop-4/",
-    "description": "",
+    "description": "Use bar models to represent quantities and solve word problems in Workshop 4.",
     "levels": [
       "CP",
       "CE1"
@@ -2494,13 +2624,15 @@
     "new": false,
     "thumb": "/assets/en-captures/word-problems-with-bar-models-workshop-4-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Word problems with bar models — Workshop 4",
-    "sourceId": "jeu-71"
+    "sourceId": "jeu-71",
+    "short": "Use bar models to represent quantities and solve word problems in Workshop 4.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-70",
     "title": "Word problems — Term 2",
     "url": "/en/games/word-problems-term-2/",
-    "description": "",
+    "description": "Practise solving word problems from the second school term.",
     "levels": [
       "CE1"
     ],
@@ -2515,7 +2647,9 @@
     "new": false,
     "thumb": "/assets/en-captures/word-problems-term-2-gameplay.webp",
     "imageAlt": "English gameplay screenshot of Word problems — Term 2",
-    "sourceId": "jeu-72"
+    "sourceId": "jeu-72",
+    "short": "Practise solving word problems from the second school term.",
+    "contentLanguage": "en"
   },
   {
     "id": "en-jeu-105",
@@ -2543,7 +2677,7 @@
     "id": "en-80",
     "title": "Vocabulary — Term 1",
     "url": "/jouer/?lang=en&jeu=en-80",
-    "description": "",
+    "description": "Build French vocabulary through first-term word exercises.",
     "levels": [
       "CE1"
     ],
@@ -2558,13 +2692,15 @@
     "new": false,
     "thumb": "/assets/catalogue-v2/captures/jeu-20.webp",
     "imageAlt": "Screenshot of Vocabulary — Term 1",
-    "sourceId": "jeu-20"
+    "sourceId": "jeu-20",
+    "short": "Build French vocabulary through first-term word exercises.",
+    "contentLanguage": "fr"
   },
   {
     "id": "en-71",
     "title": "Reading comprehension",
     "url": "/jouer/?lang=en&jeu=en-71",
-    "description": "",
+    "description": "Read French texts and answer comprehension questions.",
     "levels": [
       "CE1"
     ],
@@ -2579,13 +2715,15 @@
     "new": false,
     "thumb": "/assets/catalogue-v2/captures/jeu-21.webp",
     "imageAlt": "Screenshot of Reading comprehension",
-    "sourceId": "jeu-21"
+    "sourceId": "jeu-21",
+    "short": "Read French texts and answer comprehension questions.",
+    "contentLanguage": "fr"
   },
   {
     "id": "en-81",
     "title": "The Mouse Workshop",
     "url": "/jouer/?lang=en&jeu=en-81",
-    "description": "",
+    "description": "Practise written expression in French with the Mouse Workshop.",
     "levels": [
       "CE1"
     ],
@@ -2600,13 +2738,15 @@
     "new": false,
     "thumb": "/assets/catalogue-v2/captures/jeu-22.webp",
     "imageAlt": "Screenshot of The Mouse Workshop",
-    "sourceId": "jeu-22"
+    "sourceId": "jeu-22",
+    "short": "Practise written expression in French with the Mouse Workshop.",
+    "contentLanguage": "fr"
   },
   {
     "id": "en-74",
     "title": "Words in pictures",
     "url": "/jouer/?lang=en&jeu=en-74",
-    "description": "",
+    "description": "Connect French words with pictures to practise spelling.",
     "levels": [
       "CE1"
     ],
@@ -2621,13 +2761,15 @@
     "new": false,
     "thumb": "/assets/catalogue-v2/captures/jeu-23.webp",
     "imageAlt": "Screenshot of Words in pictures",
-    "sourceId": "jeu-23"
+    "sourceId": "jeu-23",
+    "short": "Connect French words with pictures to practise spelling.",
+    "contentLanguage": "fr"
   },
   {
     "id": "en-73",
     "title": "Dictations 1–6 — Term 1",
     "url": "/jouer/?lang=en&jeu=en-73",
-    "description": "",
+    "description": "Practise French spelling with six first-term dictations.",
     "levels": [
       "CE1"
     ],
@@ -2642,13 +2784,15 @@
     "new": false,
     "thumb": "/assets/catalogue-v2/captures/jeu-24.webp",
     "imageAlt": "Screenshot of Dictations 1–6 — Term 1",
-    "sourceId": "jeu-24"
+    "sourceId": "jeu-24",
+    "short": "Practise French spelling with six first-term dictations.",
+    "contentLanguage": "fr"
   },
   {
     "id": "en-77",
     "title": "Dictation 5 — Words in pictures",
     "url": "/jouer/?lang=en&jeu=en-77",
-    "description": "",
+    "description": "Use pictures to practise the French words from Dictation 5.",
     "levels": [
       "CE1"
     ],
@@ -2663,13 +2807,15 @@
     "new": false,
     "thumb": "/assets/catalogue-v2/captures/jeu-25.webp",
     "imageAlt": "Screenshot of Dictation 5 — Words in pictures",
-    "sourceId": "jeu-25"
+    "sourceId": "jeu-25",
+    "short": "Use pictures to practise the French words from Dictation 5.",
+    "contentLanguage": "fr"
   },
   {
     "id": "en-78",
     "title": "Dictation 5 — Fill in the sentences",
     "url": "/jouer/?lang=en&jeu=en-78",
-    "description": "",
+    "description": "Complete French sentences using the words from Dictation 5.",
     "levels": [
       "CE1"
     ],
@@ -2684,13 +2830,15 @@
     "new": false,
     "thumb": "/assets/catalogue-v2/captures/jeu-26.webp",
     "imageAlt": "Screenshot of Dictation 5 — Fill in the sentences",
-    "sourceId": "jeu-26"
+    "sourceId": "jeu-26",
+    "short": "Complete French sentences using the words from Dictation 5.",
+    "contentLanguage": "fr"
   },
   {
     "id": "en-79",
     "title": "Grammar — Term 1",
     "url": "/jouer/?lang=en&jeu=en-79",
-    "description": "",
+    "description": "Review first-term French grammar through interactive exercises.",
     "levels": [
       "CE1"
     ],
@@ -2705,13 +2853,15 @@
     "new": false,
     "thumb": "/assets/catalogue-v2/captures/jeu-27.webp",
     "imageAlt": "Screenshot of Grammar — Term 1",
-    "sourceId": "jeu-27"
+    "sourceId": "jeu-27",
+    "short": "Review first-term French grammar through interactive exercises.",
+    "contentLanguage": "fr"
   },
   {
     "id": "en-72",
     "title": "The Grain of Rice — dyslexia support",
     "url": "/jouer/?lang=en&jeu=en-72",
-    "description": "",
+    "description": "Practise reading a French text with dyslexia-friendly support.",
     "levels": [
       "CE1"
     ],
@@ -2726,13 +2876,15 @@
     "new": false,
     "thumb": "/assets/catalogue-v2/captures/jeu-73.webp",
     "imageAlt": "Screenshot of The Grain of Rice — dyslexia support",
-    "sourceId": "jeu-73"
+    "sourceId": "jeu-73",
+    "short": "Practise reading a French text with dyslexia-friendly support.",
+    "contentLanguage": "fr"
   },
   {
     "id": "en-75",
     "title": "Spelling — Term 1",
     "url": "/jouer/?lang=en&jeu=en-75",
-    "description": "",
+    "description": "Review first-term French spelling through interactive practice.",
     "levels": [
       "CE1"
     ],
@@ -2747,13 +2899,15 @@
     "new": false,
     "thumb": "/assets/catalogue-v2/captures/jeu-74.webp",
     "imageAlt": "Screenshot of Spelling — Term 1",
-    "sourceId": "jeu-74"
+    "sourceId": "jeu-74",
+    "short": "Review first-term French spelling through interactive practice.",
+    "contentLanguage": "fr"
   },
   {
     "id": "en-76",
     "title": "Dictations — Term 2",
     "url": "/jouer/?lang=en&jeu=en-76",
-    "description": "",
+    "description": "Practise French spelling with second-term dictation exercises.",
     "levels": [
       "CE1"
     ],
@@ -2768,6 +2922,8 @@
     "new": false,
     "thumb": "/assets/catalogue-v2/captures/jeu-75.webp",
     "imageAlt": "Screenshot of Dictations — Term 2",
-    "sourceId": "jeu-75"
+    "sourceId": "jeu-75",
+    "short": "Practise French spelling with second-term dictation exercises.",
+    "contentLanguage": "fr"
   }
 ]
