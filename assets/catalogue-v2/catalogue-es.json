@@ -21,7 +21,9 @@
     "weekly": false,
     "new": true,
     "pdfUrl": "/pdf/adding-9-19-29-worksheets-es.pdf",
-    "pdfLabel": "PDF para imprimir"
+    "pdfLabel": "PDF para imprimir",
+    "short": "Suma 9, 19 o 29 a números de dos y tres cifras con centenas, decenas y unidades.",
+    "contentLanguage": "es"
   },
   {
     "id": "mission-ajouter-9-19-29",
@@ -47,7 +49,9 @@
     "pdfUrl": "/pdf/adding-9-19-29-worksheets-es.pdf",
     "pdfLabel": "PDF para imprimir",
     "thumb": "/assets/catalogue-v2/captures/mission-ajouter-9-19-29.webp",
-    "imageAlt": "Partida con decenas, una unidad tachada y el teclado numérico"
+    "imageAlt": "Partida con decenas, una unidad tachada y el teclado numérico",
+    "short": "Suma 9, 19 o 29 con decenas y tacha una unidad.",
+    "contentLanguage": "es"
   },
   {
     "id": "mission-fractions-ce1-revisions",
@@ -70,7 +74,8 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/Capture%20d'%C3%A9cran%202026-11-21%20142814.png",
     "imageAlt": "Imagen de Misión Fracciones — Repaso",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Reconoce, lee y compara fracciones sencillas."
   },
   {
     "id": "mission-calcul-cm1-livret-1",
@@ -78,7 +83,7 @@
     "title": "Misión de cálculo — Cuaderno 1",
     "url": "/es/games/mision-calculo-cuaderno-1/",
     "path": "/es/games/mision-calculo-cuaderno-1/",
-    "description": "Resuelve los retos de cálculo del cuaderno.",
+    "description": "Resuelve siete misiones de cálculo mental con tablas de multiplicar, sumas, restas y complementos.",
     "group": "mental",
     "skill": "calcul-mental-cm1",
     "skillName": "Cálculo mental",
@@ -92,7 +97,9 @@
     "new": true,
     "thumb": "/assets/es-captures/mision-calculo-cuaderno-1.webp",
     "imageAlt": "Cuaderno 1 de Misión de cálculo en plena partida",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Resuelve siete misiones de cálculo mental con tablas de multiplicar, sumas, restas y complementos.",
+    "contentLanguage": "es"
   },
   {
     "id": "mission-calcul-cm1-livret-5",
@@ -100,7 +107,7 @@
     "title": "Misión de cálculo — Cuaderno 5",
     "url": "/es/games/mision-calculo-cuaderno-5/",
     "path": "/es/games/mision-calculo-cuaderno-5/",
-    "description": "Resuelve los retos de cálculo del cuaderno.",
+    "description": "Practica fracciones, fracciones decimales, tablas de multiplicar y estrategias de cálculo mental.",
     "group": "mental",
     "skill": "calcul-mental-cm1",
     "skillName": "Cálculo mental",
@@ -114,7 +121,9 @@
     "new": true,
     "thumb": "/assets/es-captures/mision-calculo-cuaderno-5.webp",
     "imageAlt": "Cuaderno 5 de Misión de cálculo en plena partida",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Practica fracciones, fracciones decimales, tablas de multiplicar y estrategias de cálculo mental.",
+    "contentLanguage": "es"
   },
   {
     "id": "mission-calcul-cm1-livret-4",
@@ -122,7 +131,7 @@
     "title": "Misión de cálculo — Cuaderno 4",
     "url": "/es/games/mision-calculo-cuaderno-4/",
     "path": "/es/games/mision-calculo-cuaderno-4/",
-    "description": "Resuelve los retos de cálculo del cuaderno.",
+    "description": "Resuelve retos de sumas y restas de 8, 18, 28 y 38, multiplicaciones y divisiones.",
     "group": "mental",
     "skill": "calcul-mental-cm1",
     "skillName": "Cálculo mental",
@@ -136,7 +145,9 @@
     "new": true,
     "thumb": "/assets/es-captures/mision-calculo-cuaderno-4.webp",
     "imageAlt": "Cuaderno 4 de Misión de cálculo en plena partida",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Resuelve retos de sumas y restas de 8, 18, 28 y 38, multiplicaciones y divisiones.",
+    "contentLanguage": "es"
   },
   {
     "id": "mission-calcul-cm1-livret-3",
@@ -144,7 +155,7 @@
     "title": "Misión de cálculo — Cuaderno 3",
     "url": "/es/games/mision-calculo-cuaderno-3/",
     "path": "/es/games/mision-calculo-cuaderno-3/",
-    "description": "Resuelve los retos de cálculo del cuaderno.",
+    "description": "Entrena el cálculo con números decimales, multiplicaciones por 4 y 8 y múltiplos de 25.",
     "group": "mental",
     "skill": "calcul-mental-cm1",
     "skillName": "Cálculo mental",
@@ -158,7 +169,9 @@
     "new": true,
     "thumb": "/assets/es-captures/mision-calculo-cuaderno-3.webp",
     "imageAlt": "Cuaderno 3 de Misión de cálculo en plena partida",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Entrena el cálculo con números decimales, multiplicaciones por 4 y 8 y múltiplos de 25.",
+    "contentLanguage": "es"
   },
   {
     "id": "mission-calcul-cm1-livret-2",
@@ -166,7 +179,7 @@
     "title": "Misión de cálculo — Cuaderno 2",
     "url": "/es/games/mision-calculo-cuaderno-2/",
     "path": "/es/games/mision-calculo-cuaderno-2/",
-    "description": "Resuelve los retos de cálculo del cuaderno.",
+    "description": "Practica las tablas, las sumas, las restas y la multiplicación por potencias de diez en siete misiones.",
     "group": "mental",
     "skill": "calcul-mental-cm1",
     "skillName": "Cálculo mental",
@@ -180,7 +193,9 @@
     "new": true,
     "thumb": "/assets/es-captures/mision-calculo-cuaderno-2.webp",
     "imageAlt": "Cuaderno 2 de Misión de cálculo en plena partida",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Practica las tablas, las sumas, las restas y la multiplicación por potencias de diez en siete misiones.",
+    "contentLanguage": "es"
   },
   {
     "id": "cartons-montessori-ce2",
@@ -188,7 +203,7 @@
     "title": "Los números en órbita — Tarjetas Montessori CE2",
     "url": "/es/games/cartons-montessori-ce2/",
     "path": "/es/games/cartons-montessori-ce2/",
-    "description": "Componer y descomponer números de hasta cuatro cifras.",
+    "description": "Compón y descompón números de hasta cuatro cifras con tarjetas Montessori.",
     "group": "numeration",
     "skill": "composer-decomposer",
     "skillName": "Numeración",
@@ -202,7 +217,9 @@
     "new": true,
     "thumb": "/jeux/cartons-montessori-ce2/apercu.webp",
     "imageAlt": "Imagen de Los números en órbita — Tarjetas Montessori CE2",
-    "playClicks": 2
+    "playClicks": 2,
+    "short": "Compón y descompón números de hasta cuatro cifras con tarjetas Montessori.",
+    "contentLanguage": "es"
   },
   {
     "id": "cartons-montessori-cp",
@@ -210,7 +227,7 @@
     "title": "La magia de los números — CP",
     "url": "/es/games/cartons-montessori-cp/",
     "path": "/es/games/cartons-montessori-cp/",
-    "description": "Formar números de dos cifras con decenas y unidades.",
+    "description": "Forma números de dos cifras combinando tarjetas de decenas y unidades.",
     "group": "numeration",
     "skill": "composer-decomposer",
     "skillName": "Numeración",
@@ -224,7 +241,9 @@
     "new": true,
     "thumb": "/jeux/cartons-montessori-cp/apercu.svg",
     "imageAlt": "Imagen de La magia de los números — CP",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Forma números de dos cifras combinando tarjetas de decenas y unidades.",
+    "contentLanguage": "es"
   },
   {
     "id": "cartons-montessori-ce1",
@@ -232,7 +251,7 @@
     "title": "La magia de los números — CE1",
     "url": "/es/games/cartons-montessori-ce1/",
     "path": "/es/games/cartons-montessori-ce1/",
-    "description": "Componer y descomponer números de hasta 999.",
+    "description": "Compón y descompón números hasta 999 con tarjetas de centenas, decenas y unidades.",
     "group": "numeration",
     "skill": "composer-decomposer",
     "skillName": "Numeración",
@@ -246,7 +265,9 @@
     "new": true,
     "thumb": "/jeux/cartons-montessori-ce1/apercu.webp",
     "imageAlt": "Imagen de La magia de los números — CE1",
-    "playClicks": 4
+    "playClicks": 4,
+    "short": "Compón y descompón números hasta 999 con tarjetas de centenas, decenas y unidades.",
+    "contentLanguage": "es"
   },
   {
     "id": "ours-de-la-banquise",
@@ -269,7 +290,8 @@
     "new": true,
     "thumb": "/assets/images/bannieres/openai/ours-de-la-banquise.webp?v=bannieres-20261115",
     "imageAlt": "Imagen de El oso del hielo",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Programa los movimientos del oso para recoger los peces."
   },
   {
     "id": "ours-de-la-banquise-neon",
@@ -277,7 +299,7 @@
     "title": "Misión Neón — El robot de los cristales",
     "url": "/jeux/ours-de-la-banquise-neon-es/",
     "path": "/jeux/ours-de-la-banquise-neon-es/",
-    "description": "Programa los movimientos del robot para recoger los cristales.",
+    "description": "Guía al robot por 20 laberintos luminosos, evita las cruces rojas y recoge todos los cristales.",
     "group": "codage",
     "skill": "programmer-deplacements",
     "skillName": "Programación",
@@ -292,7 +314,8 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/ours-de-la-banquise-neon.svg?v=robot-mobile-20261121",
     "imageAlt": "Imagen de Misión Neón — El robot de los cristales",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Guía al robot por 20 laberintos luminosos, evita las cruces rojas y recoge todos los cristales."
   },
   {
     "id": "chemin-du-kangourou",
@@ -300,7 +323,7 @@
     "title": "El camino del canguro",
     "url": "/es/games/chemin-du-kangourou/",
     "path": "/es/games/chemin-du-kangourou/",
-    "description": "Elegir los saltos correctos hasta el final del laberinto.",
+    "description": "Ayuda al canguro a recorrer el laberinto contando de 10 en 10, de 20 en 20, de 25 en 25 o de 50 en 50.",
     "group": "numeration",
     "skill": "suites-numeriques",
     "skillName": "Numeración",
@@ -314,7 +337,9 @@
     "new": true,
     "thumb": "/assets/images/bannieres/openai/chemin-du-kangourou.webp?v=bannieres-20261115",
     "imageAlt": "Imagen de El camino del canguro",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Ayuda al canguro a recorrer el laberinto contando de 10 en 10, de 20 en 20, de 25 en 25 o de 50 en 50.",
+    "contentLanguage": "es"
   },
   {
     "id": "crabes-du-tombolo",
@@ -322,7 +347,7 @@
     "title": "Los cangrejos del tómbolo",
     "url": "/es/games/crabes-du-tombolo/",
     "path": "/es/games/crabes-du-tombolo/",
-    "description": "Distinguir números pares e impares.",
+    "description": "Ayuda a los cangrejos a cruzar el tómbolo eligiendo números pares o impares.",
     "group": "numeration",
     "skill": "pairs-impairs",
     "skillName": "Numeración",
@@ -336,7 +361,9 @@
     "new": true,
     "thumb": "/jeux/crabes-du-tombolo/apercu.svg",
     "imageAlt": "Imagen de Los cangrejos del tómbolo",
-    "playClicks": 1
+    "playClicks": 1,
+    "short": "Ayuda a los cangrejos a cruzar el tómbolo eligiendo números pares o impares.",
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-103",
@@ -344,7 +371,7 @@
     "title": "Popeye en la recta numérica",
     "url": "/es/games/popeye-ligne-graduee/",
     "path": "/es/games/popeye-ligne-graduee/",
-    "description": "Leer una recta graduada y encontrar números.",
+    "description": "Lee las graduaciones y encuentra los números para ayudar a Popeye a llegar hasta Olivia.",
     "group": "numeration",
     "skill": "droite-graduee",
     "skillName": "Numeración",
@@ -360,7 +387,9 @@
     "new": true,
     "thumb": "/assets/images/bannieres/openai/popeye-ligne-graduee.webp?v=bannieres-20261115",
     "imageAlt": "Imagen de Popeye en la recta numérica",
-    "playClicks": 7
+    "playClicks": 7,
+    "short": "Lee las graduaciones y encuentra los números para ayudar a Popeye a llegar hasta Olivia.",
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-102",
@@ -368,7 +397,7 @@
     "title": "Los cangrejos de las Salinas",
     "url": "/es/games/crabes-des-salines/",
     "path": "/es/games/crabes-des-salines/",
-    "description": "Ordenar números en orden ascendente o descendente.",
+    "description": "Ordena cinco números de menor a mayor o de mayor a menor junto a los cangrejos.",
     "group": "numeration",
     "skill": "ranger",
     "skillName": "Numeración",
@@ -384,7 +413,9 @@
     "new": true,
     "thumb": "/jeux/crabes-des-salines/plage.webp",
     "imageAlt": "Imagen de Los cangrejos de las Salinas",
-    "playClicks": 3
+    "playClicks": 3,
+    "short": "Ordena cinco números de menor a mayor o de mayor a menor junto a los cangrejos.",
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-101",
@@ -406,7 +437,9 @@
     "new": true,
     "thumb": "/jeux/chateau-nombres-exterieur-cp/assets/apercu.webp",
     "imageAlt": "Imagen de El castillo de los números — Exterior",
-    "playClicks": 1
+    "playClicks": 1,
+    "short": "Reconocer familias de números y descubrir el número misterioso.",
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-100",
@@ -428,7 +461,9 @@
     "new": true,
     "thumb": "/jeux/chateau-nombres-cp/assets/apercu.webp",
     "imageAlt": "Imagen de El castillo de los números — CP",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Explorar la tabla numérica del 0 al 99.",
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-99",
@@ -450,7 +485,9 @@
     "new": true,
     "thumb": "/assets/fritz-encadrements/apercu.webp",
     "imageAlt": "Imagen de El planeta de Fritz — CE2",
-    "playClicks": 1
+    "playClicks": 1,
+    "short": "Encuadrar números por unidades, decenas, centenas y millares.",
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-98",
@@ -472,7 +509,9 @@
     "new": true,
     "thumb": "/assets/fritz-encadrements/apercu.webp",
     "imageAlt": "Imagen de El planeta de Fritz — CP",
-    "playClicks": 1
+    "playClicks": 1,
+    "short": "Encontrar el número anterior y el siguiente.",
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-97",
@@ -494,7 +533,9 @@
     "new": true,
     "thumb": "/assets/images/bannieres/openai/fritz-encadrements-ce1.webp?v=bannieres-20261115",
     "imageAlt": "Imagen de El planeta de Fritz — CE1",
-    "playClicks": 2
+    "playClicks": 2,
+    "short": "Encuadrar números por unidades, decenas y centenas.",
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-96",
@@ -517,7 +558,8 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/symetrie-mars-ce2.webp",
     "imageAlt": "Imagen de Los marcianos espejo",
-    "playClicks": 2
+    "playClicks": 2,
+    "short": "Completa el reflejo de cada figura en la cuadrícula."
   },
   {
     "id": "jeu-95",
@@ -539,7 +581,9 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/droite-t-rex-ce1.svg",
     "imageAlt": "Imagen de Las rectas numéricas del T-Rex — CE1",
-    "playClicks": 2
+    "playClicks": 2,
+    "short": "Cinco niveles con saltos de 1, 2, 5, 10 y 100.",
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-94",
@@ -561,7 +605,9 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/droite-t-rex-anime-cp.svg",
     "imageAlt": "Imagen de Las 42 rectas animadas del T-Rex",
-    "playClicks": 6
+    "playClicks": 6,
+    "short": "Resolver 42 retos de rectas numéricas.",
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-93",
@@ -583,7 +629,9 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/droite-t-rex-cp.svg",
     "imageAlt": "Imagen de La recta numérica del T-Rex — CP",
-    "playClicks": 2
+    "playClicks": 2,
+    "short": "Identificar el número indicado por una flecha.",
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-92",
@@ -606,18 +654,19 @@
     "skillName": "Memorizar las tablas y sus divisiones",
     "slug": "dino-calculs",
     "objective": "Combinar las multiplicaciones y divisiones de las tablas de 1 a 10.",
-    "short": "Multiplicaciones y divisiones mezcladas, burbujas para estallar y dinosaurios animados.",
+    "short": "Revisa las tablas de 1 a 10 con multiplicaciones y divisiones mezcladas. Los dinosaurios animados y un T-Rex rugiente acompañan al desafío.",
     "thumb": "/assets/catalogue-v2/captures/dino-calculs.webp",
     "imageAlt": "Captura de Dino Cálculos — Multiplicaciones y divisiones",
     "sourceId": "jeu-92",
-    "playClicks": 2
+    "playClicks": 2,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-91",
     "title": "Cronomates encantados CE1",
     "url": "/es/games/chronomaths-enchantes-ce1/?v=es-repair-3",
     "path": "/es/games/chronomaths-enchantes-ce1/?v=es-repair-3",
-    "description": "Recuperar 15 cálculos en 3 minutos en un bosque encantado. Las burbujas falladas regresan y las respuestas correctas hacen estallar las burbujas.",
+    "description": "Resuelve 15 cálculos en tres minutos en un bosque encantado. Las burbujas con errores vuelven a aparecer.",
     "weekly": false,
     "new": true,
     "category": "calculs",
@@ -633,18 +682,19 @@
     "skillName": "Cálculos mentales variados",
     "slug": "chronomaths-enchantes-ce1",
     "objective": "En tres minutos, se llevará a cabo el cálculo de Chronomaths.",
-    "short": "20 series de 15 cálculos en el bosque encantado, con vueltas de los cálculos fallados.",
+    "short": "Resuelve 15 cálculos en tres minutos en un bosque encantado. Las burbujas con errores vuelven a aparecer.",
     "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
     "imageAlt": "Captura de Cronomates encantados CE1",
     "sourceId": "jeu-91",
-    "playClicks": 9
+    "playClicks": 9,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-90",
     "title": "Cronomates galácticos CE2",
     "url": "/es/games/chronomaths-galactiques-ce2/?v=es-repair-3",
     "path": "/es/games/chronomaths-galactiques-ce2/?v=es-repair-3",
-    "description": "Debajo de 20 cálculos en 3 minutos: las burbujas falladas regresan a esta aventura espacial CE2.",
+    "description": "Resuelve 20 cálculos en tres minutos en una aventura espacial. Las burbujas con errores vuelven a aparecer.",
     "weekly": false,
     "new": true,
     "category": "calcul-mental-ce2",
@@ -659,18 +709,19 @@
     "skillName": "Cálculos mentales variados",
     "slug": "chronomaths-galactiques-ce2",
     "objective": "En tres minutos, se llevará a cabo el cálculo de Chronomaths.",
-    "short": "20 series de 20 cálculos: las burbujas falladas regresan antes del final del crono.",
+    "short": "Resuelve 20 cálculos en tres minutos en una aventura espacial. Las burbujas con errores vuelven a aparecer.",
     "thumb": "/assets/catalogue-v2/captures/jeu-82.webp",
     "imageAlt": "Captura de Cronomates galácticos CE2",
     "sourceId": "jeu-90",
-    "playClicks": 10
+    "playClicks": 10,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-89",
     "title": "Las tablas encantadas CE2",
     "url": "/es/games/tables-enchantees-ce2/?v=es-repair-3",
     "path": "/es/games/tables-enchantees-ce2/?v=es-repair-3",
-    "description": "Entrena en las mesas del 1 al 10 en un bosque mágico con burbujas rápidas y sonido a cada buena respuesta.",
+    "description": "Practica las tablas del 1 al 10 en un bosque mágico con burbujas y efectos sonoros.",
     "weekly": false,
     "new": true,
     "category": "calcul",
@@ -685,18 +736,19 @@
     "skillName": "Memorizar tablas de multiplicación",
     "slug": "tables-enchantees-ce2",
     "objective": "Memorizar las tablas de multiplicación de 1 a 10 y responder rápidamente.",
-    "short": "Todas las mesas del 1 al 10 y las mesas mezcladas en un bosque mágico.",
+    "short": "Practica las tablas del 1 al 10 en un bosque mágico con burbujas y efectos sonoros.",
     "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
     "imageAlt": "Captura de Las tablas encantadas CE2",
     "sourceId": "jeu-89",
-    "playClicks": 0
+    "playClicks": 0,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-88",
     "title": "Problemas CP — Completar las barras",
     "url": "/es/games/problemes-cp-barres-a-completer/?v=es-repair-3",
     "path": "/es/games/problemes-cp-barres-a-completer/?v=es-repair-3",
-    "description": "Coloque los números y el punto de interrogación en los modelos en barras para resolver 18 problemas.",
+    "description": "Coloca los números y el signo de interrogación en los modelos de barras para resolver 18 problemas.",
     "weekly": false,
     "new": true,
     "category": "problemes",
@@ -711,18 +763,19 @@
     "skillName": "Solución de problemas",
     "slug": "problemes-cp-barres-a-completer",
     "objective": "Construir un modelo en barras para resolver un problema.",
-    "short": "Coloque los números y el punto de interrogación en las barras.",
+    "short": "Coloca los números y el signo de interrogación en los modelos de barras para resolver 18 problemas.",
     "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-2.svg",
     "imageAlt": "Captura de Problemas CP — Completar las barras",
     "sourceId": "jeu-88",
-    "playClicks": 2
+    "playClicks": 2,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-87",
     "title": "Problemas CP — Periodo 1",
     "url": "/es/games/problemes-cp-periode-1/?v=es-repair-3",
     "path": "/es/games/problemes-cp-periode-1/?v=es-repair-3",
-    "description": "Resuelve 42 problemas CP con plantillas en barras y escucha las indicaciones.",
+    "description": "Resuelve 42 problemas con modelos de barras y escucha las instrucciones.",
     "weekly": false,
     "new": true,
     "category": "problemes",
@@ -737,11 +790,12 @@
     "skillName": "Solución de problemas",
     "slug": "problemes-cp-periode-1",
     "objective": "Resolver problemas aditivos y sustractivos con modelos de barras.",
-    "short": "42 problemas a resolver con los modelos en barras y una lectura de las declaraciones.",
+    "short": "Resuelve 42 problemas con modelos de barras y escucha las instrucciones.",
     "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-1.svg",
     "imageAlt": "Captura de Problemas CP — Periodo 1",
     "sourceId": "jeu-87",
-    "playClicks": 3
+    "playClicks": 3,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-86",
@@ -763,18 +817,19 @@
     "skillName": "Solución de problemas",
     "slug": "problemes-cp-periode-2",
     "objective": "Resolver problemas aditivos y sustractivos con modelos de barras.",
-    "short": "18 problemas a resolver con modelos en barras y ayuda para la lectura.",
+    "short": "Resuelve 18 problemas con modelos en barras y ayuda a la lectura.",
     "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-2.svg",
     "imageAlt": "Captura de Problemas CP — Periodo 2",
     "sourceId": "jeu-86",
-    "playClicks": 5
+    "playClicks": 5,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-85",
     "title": "El laboratorio de cálculo",
     "url": "/es/games/labo-des-calculs/?v=es-repair-3",
     "path": "/es/games/labo-des-calculs/?v=es-repair-3",
-    "description": "Añade o resta 1, 10 ó 100 en 90 segundos al laboratorio de un científico farfelu.",
+    "description": "Suma o resta 1, 10 o 100 en 90 segundos en el laboratorio de un científico excéntrico.",
     "weekly": true,
     "new": true,
     "category": "calcul",
@@ -790,18 +845,19 @@
     "skillName": "Añadir y restar 1, 10 o 100",
     "slug": "labo-des-calculs",
     "objective": "Añadir y restar 1, 10 o 100 a los números hasta 999.",
-    "short": "Tres niveles de cálculo mental en 90 segundos, en el laboratorio de un científico farfelu.",
+    "short": "Suma o resta 1, 10 o 100 en 90 segundos en el laboratorio de un científico excéntrico.",
     "thumb": "/assets/catalogue-v2/captures/jeu-85.webp",
     "imageAlt": "Operación en un matraz de El laboratorio de cálculo",
     "sourceId": "jeu-85",
-    "playClicks": 6
+    "playClicks": 6,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-84",
     "title": "El valle de las mitades",
     "url": "/es/games/vallee-des-moities/?v=es-repair-3",
     "path": "/es/games/vallee-des-moities/?v=es-repair-3",
-    "description": "Encuentra la mitad de los números pares de 4 a 10, 10 a 20, 20 a 50 y 100 a 200. Las burbujas salen de un caldero fluorescente en un valle lfico.",
+    "description": "Encuentra la mitad de números pares y libera burbujas luminosas en un valle fantástico.",
     "weekly": true,
     "new": true,
     "category": "calcul",
@@ -817,18 +873,19 @@
     "skillName": "Calcular mitades",
     "slug": "vallee-des-moities",
     "objective": "Calcular las mitades de los números pares de 4 a 50 y de 100 a 200.",
-    "short": "Cuatro niveles de mitades, sólo números pares, burbujas que aceleran y música mágica.",
+    "short": "Encuentra la mitad de números pares y libera burbujas luminosas en un valle fantástico.",
     "thumb": "/assets/images/bannieres/openai/vallee-des-moities.webp?v=bannieres-20261115",
     "imageAlt": "Ilustración de El valle de las mitades",
     "sourceId": "jeu-84",
-    "playClicks": 4
+    "playClicks": 4,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-83",
     "title": "El templo de los dobles",
     "url": "/es/games/temple-des-doubles/?v=es-repair-3",
     "path": "/es/games/temple-des-doubles/?v=es-repair-3",
-    "description": "Encuentra los dobles de 3 a 10, 10 a 20, 20 a 50 y 100 a 200. Las burbujas salen de un caldero con fumolas fluorescentes en un templo de la selva.",
+    "description": "Calcula el doble de distintos números y libera burbujas en un templo de la selva.",
     "weekly": true,
     "new": true,
     "category": "calcul",
@@ -844,18 +901,19 @@
     "skillName": "Calcular dobles",
     "slug": "temple-des-doubles",
     "objective": "Calcular rápidamente los números duplicados de 3 a 50 y de 100 a 200.",
-    "short": "Cuatro niveles de dobles, un caldero fluorescente, burbujas que aceleran y música de aventura.",
+    "short": "Calcula el doble de distintos números y libera burbujas en un templo de la selva.",
     "thumb": "/assets/images/bannieres/openai/temple-des-doubles.webp?v=bannieres-20261115",
     "imageAlt": "Captura de El templo de los dobles",
     "sourceId": "jeu-83",
-    "playClicks": 5
+    "playClicks": 5,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-82",
     "title": "Divisiones galácticas",
     "url": "/es/games/divisions-galactiques/?v=es-repair-3",
     "path": "/es/games/divisions-galactiques/?v=es-repair-3",
-    "description": "Entrena en las divisiones por 2, 3, 4, 5 y 10, luego en las divisiones mezcladas. Las burbujas aceleran en una nave espacial con música original.",
+    "description": "Practica las divisiones entre 2, 3, 4, 5 y 10 en una nave espacial con burbujas animadas.",
     "weekly": true,
     "new": true,
     "category": "calcul",
@@ -871,18 +929,19 @@
     "skillName": "Calcular divisiones exactas",
     "slug": "divisions-galactiques",
     "objective": "Calcular divisiones exactas por 2, 3, 4, 5 y 10 y responder rápidamente.",
-    "short": "Seis niveles, burbujas cada vez más rápidas y música espacial en una nave.",
+    "short": "Practica las divisiones entre 2, 3, 4, 5 y 10 en una nave espacial con burbujas animadas.",
     "thumb": "/assets/catalogue-v2/captures/jeu-82.webp",
     "imageAlt": "Captura de Divisiones galácticas",
     "sourceId": "jeu-82",
-    "playClicks": 2
+    "playClicks": 2,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-81",
     "title": "Las tablas encantadas",
     "url": "/es/games/tables-enchantees/?v=es-repair-3",
     "path": "/es/games/tables-enchantees/?v=es-repair-3",
-    "description": "Revisa las tablas de 2, 3, 4, 5 y 10, luego las mesas mezcladas. Las burbujas aceleran cada éxito en un bosque mágico con música.",
+    "description": "Repasa las tablas del 2, 3, 4, 5 y 10 y combina distintas multiplicaciones en un bosque mágico.",
     "weekly": true,
     "new": true,
     "category": "calcul",
@@ -898,11 +957,12 @@
     "skillName": "Memorizar tablas de multiplicación",
     "slug": "tables-enchantees",
     "objective": "Memorizar las tablas de multiplicación de 2, 3, 4, 5 y 10 y responder rápidamente.",
-    "short": "Seis niveles, burbujas cada vez más rápidas y música suave en un bosque encantado.",
+    "short": "Repasa las tablas del 2, 3, 4, 5 y 10 y combina distintas multiplicaciones en un bosque mágico.",
     "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
     "imageAlt": "Captura de Las tablas encantadas",
     "sourceId": "jeu-81",
-    "playClicks": 7
+    "playClicks": 7,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-80",
@@ -925,18 +985,19 @@
     "skillName": "Añadir y restar un número terminado por 9",
     "slug": "bulles-de-sorcellerie",
     "objective": "Utilizar la decena vecina para añadir o restar 9, 19, 29, 39 o 49.",
-    "short": "Dos niveles, tres modos y cigarrillos animados para calcular con 9, 19, 29, 39 y 49.",
+    "short": "Añade o resta 9, 19, 29, 39 ó 49 a números de dos o tres dígitos. Haz estallar las burbujas en una sala de pociones animada.",
     "thumb": "/assets/catalogue-v2/captures/jeu-80.webp",
     "imageAlt": "Captura de Burbujas mágicas — Sumar y restar 9, 19…",
     "sourceId": "jeu-80",
-    "playClicks": 3
+    "playClicks": 3,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-79",
     "title": "Los cuerpos geométricos que nos rodean",
     "url": "/es/games/solides-autour-de-nous/?v=es-repair-3",
     "path": "/es/games/solides-autour-de-nous/?v=es-repair-3",
-    "description": "Identifica el cubo, el pavimentado derecho, la pirámide, la bola, el cilindro y el cono con 54 objetos en orden aleatorio.",
+    "description": "Identifica cubos, prismas rectangulares, pirámides, esferas, cilindros y conos en 54 objetos.",
     "weekly": true,
     "new": true,
     "category": "geometrie",
@@ -952,11 +1013,12 @@
     "skillName": "Reconocer los sólidos",
     "slug": "solides-autour-de-nous",
     "objective": "Reconocer los sólidos en los objetos cotidianos.",
-    "short": "54 objetos a observar para reconocer cubo, pavimentado recto, pirámide, bola, cilindro y cono.",
+    "short": "Identifica cubos, prismas rectangulares, pirámides, esferas, cilindros y conos en 54 objetos.",
     "thumb": "/assets/catalogue-v2/captures/jeu-79.webp",
     "imageAlt": "Captura de Los cuerpos geométricos que nos rodean",
     "sourceId": "jeu-79",
-    "playClicks": 1
+    "playClicks": 1,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-78",
@@ -979,16 +1041,17 @@
     "skillName": "Reconocer las figuras planas",
     "slug": "formes-autour-de-nous",
     "objective": "Reconocer las formas geométricas en los objetos cotidianos.",
-    "short": "36 objetos a observar para reconocer cuadrado, rectángulo, círculo y triángulo.",
+    "short": "Identifica cuadrados, rectángulos, círculos y triángulos a partir de 36 objetos diarios, en orden aleatorio.",
     "thumb": "/assets/catalogue-v2/captures/jeu-78.webp",
     "imageAlt": "Captura de Las formas que nos rodean",
     "sourceId": "jeu-78",
-    "playClicks": 0
+    "playClicks": 0,
+    "contentLanguage": "es"
   },
   {
     "title": "Geometría CE1 — Colorear las figuras",
     "url": "/es/games/geometrie-ce1-colorier-les-figures/?v=es-repair-3",
-    "description": "Reconocer y colorear los cuadrados, rectángulos, triángulos y círculos, sin dejarse engañar por el paralelogramo y la lombriz.",
+    "description": "Reconoce y colorea cuadrados, rectángulos, triángulos y círculos entre otras figuras.",
     "weekly": false,
     "category": "geometrie",
     "level": "CE1",
@@ -1005,15 +1068,16 @@
     "levels": [
       "CE1"
     ],
-    "short": "Coloria las figuras según su forma y evita las figuras trampa.",
+    "short": "Reconoce y colorea cuadrados, rectángulos, triángulos y círculos entre otras figuras.",
     "imageAlt": "Captura de Geometría CE1 — Colorear las figuras",
     "sourceId": "jeu-77",
-    "playClicks": 1
+    "playClicks": 1,
+    "contentLanguage": "es"
   },
   {
     "title": "Calcul Pop! — Cálculo mental CE2",
     "url": "/es/games/calcul-mental-ce2-calcul-pop/?v=es-repair-3",
-    "description": "30 misiones para entrenar a las adiciones, sustracciones, tablas de multiplicación, dobles y mitades. Elige 10 cálculos a tu ritmo o 15 cálculos en 3 minutos, con trucos y correcciones, sin cinturones.",
+    "description": "Elige entre 30 misiones de cálculo mental: sumas, restas, tablas, dobles y mitades, con ayudas y correcciones.",
     "weekly": false,
     "image": "https://bleja972.github.io/assets/catalogue-v2/captures/jeu-76.webp",
     "imageAlt": "Captura de Calcul Pop! — Cálculo mental CE2",
@@ -1032,10 +1096,11 @@
     "levels": [
       "CE2"
     ],
-    "short": "30 misiones de cálculo mental, a tu ritmo o en 3 minutos, con trucos y correcciones.",
+    "short": "Elige entre 30 misiones de cálculo mental: sumas, restas, tablas, dobles y mitades, con ayudas y correcciones.",
     "thumb": "/assets/catalogue-v2/captures/jeu-76.webp",
     "sourceId": "jeu-76",
-    "playClicks": 10
+    "playClicks": 10,
+    "contentLanguage": "es"
   },
   {
     "title": "Burbujas en pareja — Comparar números",
@@ -1059,15 +1124,16 @@
     "levels": [
       "CE1"
     ],
-    "short": "Comparar dos números y reconocer el más grande.",
+    "short": "En cada pareja que sube, haz clic en el mayor número. Tres niveles: 2 dígitos, 3 dígitos y luego una mezcla. Con tiburones animados.",
     "thumb": "/assets/catalogue-v2/captures/jeu-1.webp",
     "sourceId": "jeu-1",
-    "playClicks": 24
+    "playClicks": 24,
+    "contentLanguage": "es"
   },
   {
     "title": "Burbujas de coral — Pares e impares",
     "url": "/es/games/bulles-de-corail-pairs-et-impairs/?v=es-repair-3",
-    "description": "Escribe las burbujas de números pares en el nivel 1, luego impares en el nivel 2, antes de que lleguen a la superficie. La velocidad está aumentando gradualmente.",
+    "description": "Haz estallar las burbujas con números pares o impares antes de que lleguen a la superficie.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/bulles-corail/capture.webp",
     "imageAlt": "Captura de Burbujas de coral — Pares e impares",
@@ -1087,15 +1153,16 @@
       "CP",
       "CE1"
     ],
-    "short": "Reconocer los números pares y los números impares.",
+    "short": "Haz estallar las burbujas con números pares o impares antes de que lleguen a la superficie.",
     "thumb": "/assets/images/bannieres/openai/bulles-de-corail-pairs-impairs.webp?v=bannieres-20261115",
     "sourceId": "jeu-2",
-    "playClicks": 4
+    "playClicks": 4,
+    "contentLanguage": "es"
   },
   {
     "title": "La isla misteriosa — Restas",
     "url": "/es/games/lile-mysterieuse-soustractions/?v=es-repair-3",
-    "description": "Retira de 1 a 9 a una docena entera y luego toma el resultado. Explore ocho paisajes en 90 segundos con Top, Jup y un agouti. El explorador eleva el pulgar a cada respuesta correcta.",
+    "description": "Resta un número del 1 al 9 a una decena exacta y explora ocho paisajes en 90 segundos.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/ile-mysterieuse/capture.webp",
     "imageAlt": "Captura de La isla misteriosa — Restas",
@@ -1115,15 +1182,16 @@
       "CE1",
       "CE2"
     ],
-    "short": "Encontrar un resultado retirando una cantidad.",
+    "short": "Resta un número del 1 al 9 a una decena exacta y explora ocho paisajes en 90 segundos.",
     "thumb": "/assets/catalogue-v2/captures/jeu-3.webp",
     "sourceId": "jeu-3",
-    "playClicks": 6
+    "playClicks": 6,
+    "contentLanguage": "es"
   },
   {
     "title": "La vuelta al mundo en 80 días — Complementos a 1 000",
     "url": "/es/games/le-tour-du-monde-en-80-jours-complements-a-1-000/?v=es-repair-3",
-    "description": "Ingrese los suplementos a mil con números terminados por cero. Un desafío de 90 segundos para acompañar a Phileas Fogg y Assembly a través de ocho decoraciones de su viaje.",
+    "description": "Encuentra los complementos a 1 000 en 90 segundos mientras acompañas a Phileas Fogg en su viaje.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/monde80/capture.webp",
     "imageAlt": "Captura de La vuelta al mundo en 80 días — Complementos a 1 000",
@@ -1143,15 +1211,16 @@
       "CE1",
       "CE2"
     ],
-    "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
+    "short": "Encuentra los complementos a 1 000 en 90 segundos mientras acompañas a Phileas Fogg en su viaje.",
     "thumb": "/assets/catalogue-v2/captures/jeu-4.webp",
     "sourceId": "jeu-4",
-    "playClicks": 2
+    "playClicks": 2,
+    "contentLanguage": "es"
   },
   {
     "title": "Misión Nautilus — Complementos a 100",
     "url": "/es/games/mission-nautilus-complements-a-100/?v=es-repair-3",
-    "description": "Ingrese rápidamente los complementos a 100 con unidades diferentes de cero. Un desafío de 90 segundos en el Nautilus, con criaturas animadas en la ventana.",
+    "description": "Calcula los complementos a 100 en 90 segundos a bordo del Nautilus.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/nautilus/capture.webp",
     "imageAlt": "Captura de Misión Nautilus — Complementos a 100",
@@ -1171,15 +1240,16 @@
       "CE1",
       "CE2"
     ],
-    "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
+    "short": "Calcula los complementos a 100 en 90 segundos a bordo del Nautilus.",
     "thumb": "/assets/images/bannieres/openai/mission-nautilus.webp?v=bannieres-20261115",
     "sourceId": "jeu-5",
-    "playClicks": 0
+    "playClicks": 0,
+    "contentLanguage": "es"
   },
   {
     "title": "Viaje al centro de la Tierra — Casi dobles",
     "url": "/es/games/voyage-au-centre-de-la-terre-les-presque-doubles/?v=es-repair-3",
-    "description": "90 segundos para triunfar los casi dobles en una espectacular cueva poblada de criaturas animadas. El descenso acelera y las respuestas rápidas cobran más puntos.",
+    "description": "Calcula los casi dobles durante 90 segundos y explora una cueva de criaturas animadas.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/terre/capture.webp",
     "imageAlt": "Captura de Viaje al centro de la Tierra — Casi dobles",
@@ -1200,15 +1270,16 @@
       "CE1",
       "CE2"
     ],
-    "short": "Usar los dobles para calcular más fácilmente.",
+    "short": "Calcula los casi dobles durante 90 segundos y explora una cueva de criaturas animadas.",
     "thumb": "/assets/catalogue-v2/captures/jeu-6.webp",
     "sourceId": "jeu-6",
-    "playClicks": 2
+    "playClicks": 2,
+    "contentLanguage": "es"
   },
   {
     "title": "Misión Marte — Sumas de 11 a 19",
     "url": "/es/games/mission-mars-additions-de-11-a-19/?v=es-repair-3",
-    "description": "90 segundos para llegar a Marte: consigue las adiciones, gana puntos de velocidad y evita el marciano que surge riéndose de cada error.",
+    "description": "Resuelve sumas con resultados del 11 al 19 en una misión de 90 segundos rumbo a Marte.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/mars/capture.webp",
     "imageAlt": "Captura de Misión Marte — Sumas de 11 a 19",
@@ -1229,15 +1300,16 @@
       "CE1",
       "CE2"
     ],
-    "short": "Usar resultados conocidos para calcular una adición mental.",
+    "short": "Resuelve sumas con resultados del 11 al 19 en una misión de 90 segundos rumbo a Marte.",
     "thumb": "/assets/images/bannieres/openai/mission-mars.webp?v=bannieres-20261115",
     "sourceId": "jeu-7",
-    "playClicks": 1
+    "playClicks": 1,
+    "contentLanguage": "es"
   },
   {
     "title": "Misión Abismos — Sumas de 11 a 19",
     "url": "/es/games/mission-abysses-additions-de-11-a-19/?v=es-repair-3",
-    "description": "90 segundos para tener una adición a los abises. El descenso acelera, las respuestas rápidas reportan más puntos y las partes sin falta acceden a la clasificación.",
+    "description": "Resuelve sumas con resultados del 11 al 19 durante una aventura submarina de 90 segundos.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/abysses/capture.webp",
     "imageAlt": "Captura de Misión Abismos — Sumas de 11 a 19",
@@ -1258,10 +1330,11 @@
       "CE1",
       "CE2"
     ],
-    "short": "Usar resultados conocidos para calcular una adición mental.",
+    "short": "Resuelve sumas con resultados del 11 al 19 durante una aventura submarina de 90 segundos.",
     "thumb": "/assets/catalogue-v2/captures/jeu-8.webp",
     "sourceId": "jeu-8",
-    "playClicks": 1
+    "playClicks": 1,
+    "contentLanguage": "es"
   },
   {
     "title": "Halloween — Complementos a 10",
@@ -1285,10 +1358,11 @@
     "levels": [
       "CP"
     ],
-    "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
+    "short": "Calabazas, gato negro, murciélagos y arañas animadas: encuentra los complementos a 10 antes de la salida de la bruja!",
     "thumb": "/assets/catalogue-v2/captures/jeu-9.webp",
     "sourceId": "jeu-9",
-    "playClicks": 3
+    "playClicks": 3,
+    "contentLanguage": "es"
   },
   {
     "title": "Halloween — Complementos a 100",
@@ -1313,10 +1387,11 @@
       "CE1",
       "CE2"
     ],
-    "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
+    "short": "Calabazas, gato negro, murciélagos y arañas animadas: ¡encuentra los complementos 100 antes de la salida de la bruja!",
     "thumb": "/assets/catalogue-v2/captures/jeu-10.webp",
     "sourceId": "jeu-10",
-    "playClicks": 0
+    "playClicks": 0,
+    "contentLanguage": "es"
   },
   {
     "title": "Halloween — Complementos a 1 000",
@@ -1341,10 +1416,11 @@
       "CE1",
       "CE2"
     ],
-    "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
+    "short": "Calabazas, gato negro, murciélagos y arañas animadas: ¡encuentra los complementos a mil antes de la salida de la bruja!",
     "thumb": "/assets/catalogue-v2/captures/jeu-11.webp",
     "sourceId": "jeu-11",
-    "playClicks": 1
+    "playClicks": 1,
+    "contentLanguage": "es"
   },
   {
     "title": "La carrera de la bruja — Complementos a 10",
@@ -1368,10 +1444,11 @@
     "levels": [
       "CP"
     ],
-    "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
+    "short": "Encuentra los complementos a 10 antes de que la bruja salga de la pantalla. ¡Un desafío de 60 segundos!",
     "thumb": "/assets/catalogue-v2/captures/jeu-12.webp",
     "sourceId": "jeu-12",
-    "playClicks": 2
+    "playClicks": 2,
+    "contentLanguage": "es"
   },
   {
     "title": "La carrera de la bruja — Complementos a 100",
@@ -1396,10 +1473,11 @@
       "CE1",
       "CE2"
     ],
-    "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
+    "short": "Encuentra los suplementos a 100 antes de que la bruja salga de la pantalla. ¡Un desafío de 60 segundos con decenas enteras!",
     "thumb": "/assets/catalogue-v2/captures/jeu-13.webp",
     "sourceId": "jeu-13",
-    "playClicks": 1
+    "playClicks": 1,
+    "contentLanguage": "es"
   },
   {
     "title": "La carrera de la bruja — Complementos a 1 000",
@@ -1424,15 +1502,16 @@
       "CE1",
       "CE2"
     ],
-    "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
+    "short": "Encuentra los suplementos a mil antes de que la bruja salga de la pantalla. ¡Un desafío de 60 segundos con cientos enteros!",
     "thumb": "/assets/catalogue-v2/captures/jeu-14.webp",
     "sourceId": "jeu-14",
-    "playClicks": 0
+    "playClicks": 0,
+    "contentLanguage": "es"
   },
   {
     "title": "El reto de la araña — Complementos a 10",
     "url": "/es/games/complements-a-10-le-defi-de-laraignee/?v=es-repair-3",
-    "description": "Busca los complementos a 10 y haz que la telaraña avance.",
+    "description": "Encuentra el número que falta para completar 10 y ayuda a la araña a avanzar por su telaraña.",
     "weekly": true,
     "image": "https://bleja972.github.io/assets/capture-complements1_a_10.webp",
     "imageAlt": "Captura de El reto de la araña — Complementos a 10",
@@ -1452,10 +1531,11 @@
       "CP",
       "CE1"
     ],
-    "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
+    "short": "Encuentra el número que falta para completar 10 y ayuda a la araña a avanzar por su telaraña.",
     "thumb": "/assets/catalogue-v2/captures/jeu-15-toile-realiste.svg?v=20261116",
     "sourceId": "jeu-15",
-    "playClicks": 10
+    "playClicks": 10,
+    "contentLanguage": "es"
   },
   {
     "title": "El reto de la araña — Complementos a 100",
@@ -1479,10 +1559,11 @@
     "levels": [
       "CE1"
     ],
-    "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
+    "short": "Completa 100 con decenas enteras.",
     "thumb": "/assets/catalogue-v2/captures/jeu-16-toile-realiste.svg?v=20261116",
     "sourceId": "jeu-16",
-    "playClicks": 3
+    "playClicks": 3,
+    "contentLanguage": "es"
   },
   {
     "title": "El reto de la araña — Complementos a 1 000",
@@ -1506,10 +1587,11 @@
     "levels": [
       "CE1"
     ],
-    "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
+    "short": "Completa mil con cientos enteros.",
     "thumb": "/assets/catalogue-v2/captures/jeu-17-toile-realiste.svg?v=20261116",
     "sourceId": "jeu-17",
-    "playClicks": 0
+    "playClicks": 0,
+    "contentLanguage": "es"
   },
   {
     "title": "Repaso de los números hasta 1 000",
@@ -1532,11 +1614,12 @@
     "levels": [
       "CE1"
     ],
-    "short": "Leer, escribir, comparar y desglosar los números hasta 1.000.",
+    "short": "Revisa la lectura, escritura, comparación y descomposición de los números hasta 1.000.",
     "thumb": "/assets/catalogue-v2/captures/mission-numeration-es.webp",
     "imageAlt": "Captura de Repaso de los números hasta 1 000",
     "sourceId": "jeu-18",
-    "playClicks": 38
+    "playClicks": 38,
+    "contentLanguage": "es"
   },
   {
     "title": "Problemas — Periodo 1",
@@ -1560,16 +1643,17 @@
       "CP",
       "CE1"
     ],
-    "short": "Entender una situación y elegir un cálculo para resolverla.",
+    "short": "Entrena para encontrar un todo o una parte, agregar, sustraer y comparar.",
     "thumb": "/assets/catalogue-v2/captures/jeu-19.webp",
     "imageAlt": "Captura de Problemas — Periodo 1",
     "sourceId": "jeu-19",
-    "playClicks": 34
+    "playClicks": 34,
+    "contentLanguage": "es"
   },
   {
     "title": "Cálculo mental CP",
     "url": "/es/games/calcul-mental-cp/?v=es-repair-3",
-    "description": "Elige tu habilidad y practica durante 3 minutos: adiciones, sustracciones, dobles, mitades y suplementos a 10.",
+    "description": "Elige una habilidad y practica durante tres minutos: sumas, restas, dobles, mitades y complementos a 10.",
     "weekly": false,
     "category": "calcul-mental-cp",
     "level": "CP",
@@ -1586,11 +1670,12 @@
     "levels": [
       "CP"
     ],
-    "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
+    "short": "Elige una habilidad y practica durante tres minutos: sumas, restas, dobles, mitades y complementos a 10.",
     "thumb": "/assets/catalogue-v2/captures/jeu-28.webp",
     "imageAlt": "Captura de Cálculo mental CP",
     "sourceId": "jeu-28",
-    "playClicks": 20
+    "playClicks": 20,
+    "contentLanguage": "es"
   },
   {
     "id": "calcul-mental-cp-neon-un-calcul",
@@ -1613,7 +1698,8 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg",
     "imageAlt": "Imagen de Cálculo mental — Arcade neón",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Resuelve una operación por pantalla."
   },
   {
     "id": "calcul-mental-cp-pygame",
@@ -1636,12 +1722,13 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg",
     "imageAlt": "Imagen de Misión de cálculo mental — Arcade Pygame",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Practica cálculo mental en 34 retos."
   },
   {
     "title": "Cronomates CE2 — 20 retos",
     "url": "/es/games/chronomaths-ce2-20-defis/?v=es-repair-3",
-    "description": "Practica con 20 Chronomaths de 20 cálculos en 3 minutos. El cronómetro comienza con el primer número introducido y la puntuación así como el porcentaje se muestra al final.",
+    "description": "Practica con 20 retos de 20 cálculos en tres minutos y descubre tu puntuación y porcentaje de aciertos.",
     "weekly": false,
     "category": "calcul-mental-ce2",
     "level": "CE2",
@@ -1658,11 +1745,12 @@
     "levels": [
       "CE2"
     ],
-    "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
+    "short": "Practica con 20 retos de 20 cálculos en tres minutos y descubre tu puntuación y porcentaje de aciertos.",
     "thumb": "/assets/catalogue-v2/captures/jeu-29.webp",
     "imageAlt": "Captura de Cronomates CE2 — 20 retos",
     "sourceId": "jeu-29",
-    "playClicks": 15
+    "playClicks": 15,
+    "contentLanguage": "es"
   },
   {
     "title": "Talleres de problemas CE2",
@@ -1684,16 +1772,17 @@
     "levels": [
       "CE2"
     ],
-    "short": "Entender una situación y elegir un cálculo para resolverla.",
+    "short": "Elige tu taller y resuelve los problemas. Usa las ayudas y los esquemas en barras, luego descubre tu porcentaje de éxito.",
     "thumb": "/assets/catalogue-v2/captures/jeu-30.webp",
     "imageAlt": "Captura de Talleres de problemas CE2",
     "sourceId": "jeu-30",
-    "playClicks": 4
+    "playClicks": 4,
+    "contentLanguage": "es"
   },
   {
     "title": "Contar una colección",
     "url": "/es/games/denombrer-une-collection/?v=es-repair-3",
-    "description": "Organizar una colección para averiguar cuántos elementos contiene.",
+    "description": "Cuenta los elementos de cada colección y encuentra el total.",
     "weekly": false,
     "category": "numeration",
     "level": "CE1",
@@ -1711,11 +1800,12 @@
     "levels": [
       "CE1"
     ],
-    "short": "Organizar una colección para averiguar cuántos elementos contiene.",
+    "short": "Cuenta los elementos de cada colección y encuentra el total.",
     "thumb": "/assets/catalogue-v2/captures/jeu-31.webp",
     "imageAlt": "Captura de Contar una colección",
     "sourceId": "jeu-31",
-    "playClicks": 18
+    "playClicks": 18,
+    "contentLanguage": "es"
   },
   {
     "title": "Comparar dos números",
@@ -1742,7 +1832,8 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-32.webp",
     "imageAlt": "Captura de Comparar dos números",
     "sourceId": "jeu-32",
-    "playClicks": 10
+    "playClicks": 10,
+    "contentLanguage": "es"
   },
   {
     "title": "Ordenar números",
@@ -1769,12 +1860,13 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-33.webp",
     "imageAlt": "Captura de Ordenar números",
     "sourceId": "jeu-33",
-    "playClicks": 4
+    "playClicks": 4,
+    "contentLanguage": "es"
   },
   {
     "title": "Leer y escribir números",
     "url": "/es/games/lire-et-ecrire-les-nombres/?v=es-repair-3",
-    "description": "Combinar una escritura en números y una escritura en letras.",
+    "description": "Relaciona los números escritos con cifras y con palabras.",
     "weekly": false,
     "category": "numeration",
     "level": "CE1",
@@ -1792,16 +1884,17 @@
     "levels": [
       "CE1"
     ],
-    "short": "Combinar una escritura en números y una escritura en letras.",
+    "short": "Relaciona los números escritos con cifras y con palabras.",
     "thumb": "/assets/catalogue-v2/captures/jeu-34.webp",
     "imageAlt": "Captura de Leer y escribir números",
     "sourceId": "jeu-34",
-    "playClicks": 7
+    "playClicks": 7,
+    "contentLanguage": "es"
   },
   {
     "title": "Dictado de números",
     "url": "/es/games/dictee-de-nombres/?v=es-repair-3",
-    "description": "Escuchar un número y escribir en números.",
+    "description": "Escucha cada número y escríbelo con cifras.",
     "weekly": false,
     "category": "numeration",
     "level": "CE1",
@@ -1819,11 +1912,12 @@
     "levels": [
       "CE1"
     ],
-    "short": "Escuchar un número y escribir en números.",
+    "short": "Escucha cada número y escríbelo con cifras.",
     "thumb": "/assets/catalogue-v2/captures/jeu-35.webp",
     "imageAlt": "Captura de Dictado de números",
     "sourceId": "jeu-35",
-    "playClicks": 5
+    "playClicks": 5,
+    "contentLanguage": "es"
   },
   {
     "title": "Contar de distintas maneras",
@@ -1850,12 +1944,13 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-36.webp",
     "imageAlt": "Captura de Contar de distintas maneras",
     "sourceId": "jeu-36",
-    "playClicks": 4
+    "playClicks": 4,
+    "contentLanguage": "es"
   },
   {
     "title": "Componer y descomponer números",
     "url": "/es/games/composer-et-decomposer/?v=es-repair-3",
-    "description": "Cientos, decenas y unidades se unen para componer o descomponer un número.",
+    "description": "Combina centenas, decenas y unidades para componer y descomponer números.",
     "weekly": false,
     "category": "numeration",
     "level": "CE1",
@@ -1873,11 +1968,12 @@
     "levels": [
       "CE1"
     ],
-    "short": "Cientos, decenas y unidades se unen para componer o descomponer un número.",
+    "short": "Combina centenas, decenas y unidades para componer y descomponer números.",
     "thumb": "/assets/catalogue-v2/captures/jeu-37.webp",
     "imageAlt": "Captura de Componer y descomponer números",
     "sourceId": "jeu-37",
-    "playClicks": 8
+    "playClicks": 8,
+    "contentLanguage": "es"
   },
   {
     "title": "Reconocer números pares e impares",
@@ -1904,7 +2000,8 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-38.webp",
     "imageAlt": "Captura de Reconocer números pares e impares",
     "sourceId": "jeu-38",
-    "playClicks": 3
+    "playClicks": 3,
+    "contentLanguage": "es"
   },
   {
     "title": "Completar secuencias",
@@ -1931,12 +2028,13 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-39.webp",
     "imageAlt": "Captura de Completar secuencias",
     "sourceId": "jeu-39",
-    "playClicks": 4
+    "playClicks": 4,
+    "contentLanguage": "es"
   },
   {
     "title": "La recta numérica misteriosa",
     "url": "/es/games/la-droite-graduee-mystere/?v=es-repair-3",
-    "description": "Identificar el lugar de un número en una línea recta.",
+    "description": "Descubre el paso de la recta numérica y encuentra los números que faltan.",
     "weekly": false,
     "category": "numeration",
     "level": "CE1",
@@ -1954,16 +2052,17 @@
     "levels": [
       "CE1"
     ],
-    "short": "Identificar el lugar de un número en una línea recta.",
+    "short": "Descubre el paso de la recta numérica y encuentra los números que faltan.",
     "thumb": "/assets/catalogue-v2/captures/jeu-40.webp",
     "imageAlt": "Captura de La recta numérica misteriosa",
     "sourceId": "jeu-40",
-    "playClicks": 5
+    "playClicks": 5,
+    "contentLanguage": "es"
   },
   {
     "title": "El reto de la recta numérica",
     "url": "/es/games/le-defi-de-la-droite-graduee/?v=es-repair-3",
-    "description": "Identificar el lugar de un número en una línea recta.",
+    "description": "Lee las graduaciones e identifica el número señalado en la recta.",
     "weekly": false,
     "category": "numeration",
     "level": "CE1",
@@ -1981,16 +2080,17 @@
     "levels": [
       "CE1"
     ],
-    "short": "Identificar el lugar de un número en una línea recta.",
+    "short": "Lee las graduaciones e identifica el número señalado en la recta.",
     "thumb": "/assets/catalogue-v2/captures/jeu-41.webp",
     "imageAlt": "Captura de El reto de la recta numérica",
     "sourceId": "jeu-41",
-    "playClicks": 1
+    "playClicks": 1,
+    "contentLanguage": "es"
   },
   {
     "title": "Descomponer un número",
     "url": "/es/games/decomposer-un-nombre/?v=es-repair-3",
-    "description": "Cientos, decenas y unidades se unen para componer o descomponer un número.",
+    "description": "Descompón un número en centenas, decenas y unidades.",
     "weekly": false,
     "category": "numeration",
     "level": "CE1",
@@ -2008,16 +2108,17 @@
     "levels": [
       "CE1"
     ],
-    "short": "Cientos, decenas y unidades se unen para componer o descomponer un número.",
+    "short": "Descompón un número en centenas, decenas y unidades.",
     "thumb": "/assets/catalogue-v2/captures/jeu-42.webp",
     "imageAlt": "Captura de Descomponer un número",
     "sourceId": "jeu-42",
-    "playClicks": 3
+    "playClicks": 3,
+    "contentLanguage": "es"
   },
   {
     "title": "Componer un número",
     "url": "/es/games/recomposer-un-nombre/?v=es-repair-3",
-    "description": "Cientos, decenas y unidades se unen para componer o descomponer un número.",
+    "description": "Combina centenas, decenas y unidades para formar el número pedido.",
     "weekly": false,
     "category": "numeration",
     "level": "CE1",
@@ -2035,11 +2136,12 @@
     "levels": [
       "CE1"
     ],
-    "short": "Cientos, decenas y unidades se unen para componer o descomponer un número.",
+    "short": "Combina centenas, decenas y unidades para formar el número pedido.",
     "thumb": "/assets/catalogue-v2/captures/jeu-43.webp",
     "imageAlt": "Captura de Componer un número",
     "sourceId": "jeu-43",
-    "playClicks": 0
+    "playClicks": 0,
+    "contentLanguage": "es"
   },
   {
     "title": "Secuencias de números",
@@ -2066,7 +2168,8 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-44.webp",
     "imageAlt": "Captura de Secuencias de números",
     "sourceId": "jeu-44",
-    "playClicks": 1
+    "playClicks": 1,
+    "contentLanguage": "es"
   },
   {
     "title": "Representar los números",
@@ -2093,7 +2196,8 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-45.webp",
     "imageAlt": "Captura de Representar los números",
     "sourceId": "jeu-45",
-    "playClicks": 5
+    "playClicks": 5,
+    "contentLanguage": "es"
   },
   {
     "title": "Poner los números en orden",
@@ -2120,12 +2224,13 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-46.webp",
     "imageAlt": "Captura de Poner los números en orden",
     "sourceId": "jeu-46",
-    "playClicks": 1
+    "playClicks": 1,
+    "contentLanguage": "es"
   },
   {
     "title": "Cronomates CE1 — 20 retos",
     "url": "/es/games/chronomaths-ce1-20-defis/?v=es-repair-3",
-    "description": "Entrena en el cálculo mental con 20 Chronomaths de 15 cálculos. El cronómetro comienza con el primer número que se ha introducido. Descubre tu puntuación y porcentaje de éxito.",
+    "description": "Resuelve 20 retos de 15 cálculos mentales y descubre tu puntuación y porcentaje de aciertos.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2143,16 +2248,17 @@
       "CE1",
       "CE2"
     ],
-    "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
+    "short": "Resuelve 20 retos de 15 cálculos mentales y descubre tu puntuación y porcentaje de aciertos.",
     "thumb": "/assets/catalogue-v2/captures/jeu-47.webp",
     "imageAlt": "Captura de Cronomates CE1 — 20 retos",
     "sourceId": "jeu-47",
-    "playClicks": 11
+    "playClicks": 11,
+    "contentLanguage": "es"
   },
   {
     "title": "Restas descomponiendo",
     "url": "/es/games/soustractions-par-cassage/?v=es-repair-3",
-    "description": "Rompe una decena o un centenar, barre el material de recuento y completa las restas colocadas. Ocho operaciones de entrenamiento.",
+    "description": "Desagrupa una decena o una centena y tacha los bloques necesarios para resolver ocho restas.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2170,16 +2276,17 @@
       "CE1",
       "CE2"
     ],
-    "short": "Usar cientos, decenas y unidades para sustraerse.",
+    "short": "Desagrupa una decena o una centena y tacha los bloques necesarios para resolver ocho restas.",
     "thumb": "/assets/catalogue-v2/captures/jeu-48.webp",
     "imageAlt": "Captura de Restas descomponiendo",
     "sourceId": "jeu-48",
-    "playClicks": 11
+    "playClicks": 11,
+    "contentLanguage": "es"
   },
   {
     "title": "Restas con bloques de numeración",
     "url": "/es/games/soustractions-avec-le-materiel-de-numeration/?v=es-repair-3",
-    "description": "Usa cubos rojos, barras amarillas y placas verdes para evitar el intercambio. Barra el material y tiene éxito 8 operaciones aleatorias.",
+    "description": "Usa bloques de numeración para resolver ocho restas sin reagrupación.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2197,11 +2304,12 @@
       "CE1",
       "CE2"
     ],
-    "short": "Usar cientos, decenas y unidades para sustraerse.",
+    "short": "Usa bloques de numeración para resolver ocho restas sin reagrupación.",
     "thumb": "/assets/catalogue-v2/captures/jeu-49.webp",
     "imageAlt": "Captura de Restas con bloques de numeración",
     "sourceId": "jeu-49",
-    "playClicks": 5
+    "playClicks": 5,
+    "contentLanguage": "es"
   },
   {
     "id": "soustractions-sans-echange-en-orbite",
@@ -2224,12 +2332,13 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/soustractions-en-orbite-capture%20(1).webp",
     "imageAlt": "Imagen de Restas en órbita — Sin reagrupación",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Resta por columnas sin reagrupar."
   },
   {
     "title": "Sumas en columna sin llevadas",
     "url": "/es/games/additions-posees-sans-echange/?v=es-repair-3",
-    "description": "Calcula las adiciones a dos o tres dígitos alineando cientos, decenas y unidades. Revisa tus respuestas y averigua tu puntuación.",
+    "description": "Suma números de dos o tres cifras alineando centenas, decenas y unidades, sin llevadas.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2248,16 +2357,17 @@
       "CE1",
       "CE2"
     ],
-    "short": "Sumar a dos o tres dígitos, sin intercambio.",
+    "short": "Suma números de dos o tres cifras alineando centenas, decenas y unidades, sin llevadas.",
     "thumb": "/assets/catalogue-v2/captures/additions-sans-echange-orbite.webp",
     "imageAlt": "Captura de Sumas en columna sin llevadas",
     "sourceId": "jeu-50",
-    "playClicks": 6
+    "playClicks": 6,
+    "contentLanguage": "es"
   },
   {
     "title": "Sumas en columna con llevadas",
     "url": "/es/games/additions-posees-avec-echanges/?v=es-repair-3",
-    "description": "Pruébate en las adiciones con un intercambio y luego dos intercambios. Calcula cada columna, observa la retención y comprueba tus respuestas para saber tu puntuación.",
+    "description": "Practica sumas en columna con una o dos llevadas y comprueba tus resultados.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2276,11 +2386,12 @@
       "CE1",
       "CE2"
     ],
-    "short": "Comprender y calcular las adiciones con uno o dos intercambios.",
+    "short": "Practica sumas en columna con una o dos llevadas y comprueba tus resultados.",
     "thumb": "/assets/catalogue-v2/captures/additions-posees-tableau-operation.webp?v=orbite-translucide-20261107",
     "imageAlt": "Captura de Sumas en columna con llevadas",
     "sourceId": "jeu-51",
-    "playClicks": 16
+    "playClicks": 16,
+    "contentLanguage": "es"
   },
   {
     "title": "Sumas con cambios — Fichas 3D",
@@ -2303,11 +2414,12 @@
       "CE1",
       "CE2"
     ],
-    "short": "Alinear las columnas y calcular una adición colocada.",
+    "short": "Resuelve ocho sumas con fichas 3D. Calcula unidades y decenas, y cambia 10 unidades por 1 decena o 10 decenas por 1 centena.",
     "thumb": "/assets/catalogue-v2/captures/jeu-52.webp",
     "imageAlt": "Captura de Sumas con cambios — Fichas 3D",
     "sourceId": "jeu-52",
-    "playClicks": 5
+    "playClicks": 5,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-106",
@@ -2330,7 +2442,8 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/jeu-106.webp",
     "imageAlt": "Imagen de Sumas con reagrupación — Bloques 3D",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Suma y reagrupa con bloques de valor posicional."
   },
   {
     "id": "jeu-108",
@@ -2353,7 +2466,8 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/jeu-108.webp",
     "imageAlt": "Imagen de Sumas con reagrupación — Bloques 3D",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Suma y reagrupa con bloques de valor posicional."
   },
   {
     "id": "jeu-107",
@@ -2376,12 +2490,13 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/jeu-107.webp",
     "imageAlt": "Imagen de Sumas con reagrupación — Bloques 3D",
-    "playClicks": 0
+    "playClicks": 0,
+    "short": "Suma y reagrupa con bloques de valor posicional."
   },
   {
     "title": "Sumar pasando por 10",
     "url": "/es/games/additions-avec-passage-par-10/?v=es-repair-3",
-    "description": "Usar resultados conocidos para calcular una adición mental.",
+    "description": "Completa la decena siguiente para sumar mentalmente con mayor facilidad.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2401,16 +2516,17 @@
       "CE1",
       "CE2"
     ],
-    "short": "Usar resultados conocidos para calcular una adición mental.",
+    "short": "Completa la decena siguiente para sumar mentalmente con mayor facilidad.",
     "thumb": "/assets/catalogue-v2/captures/jeu-53.webp",
     "imageAlt": "Captura de Sumar pasando por 10",
     "sourceId": "jeu-53",
-    "playClicks": 4
+    "playClicks": 4,
+    "contentLanguage": "es"
   },
   {
     "title": "Restar a 10",
     "url": "/es/games/soustraire-un-nombre-a-10/?v=es-repair-3",
-    "description": "Encontrar un resultado retirando una cantidad.",
+    "description": "Practica las restas a partir de 10 y memoriza los resultados.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2430,16 +2546,17 @@
       "CE1",
       "CE2"
     ],
-    "short": "Encontrar un resultado retirando una cantidad.",
+    "short": "Practica las restas a partir de 10 y memoriza los resultados.",
     "thumb": "/assets/catalogue-v2/captures/jeu-54.webp",
     "imageAlt": "Captura de Restar a 10",
     "sourceId": "jeu-54",
-    "playClicks": 2
+    "playClicks": 2,
+    "contentLanguage": "es"
   },
   {
     "title": "Los dobles",
     "url": "/es/games/les-doubles/?v=es-repair-3",
-    "description": "Usar los dobles para calcular más fácilmente.",
+    "description": "Aprende y recuerda los dobles para agilizar el cálculo mental.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2459,16 +2576,17 @@
       "CE1",
       "CE2"
     ],
-    "short": "Usar los dobles para calcular más fácilmente.",
+    "short": "Aprende y recuerda los dobles para agilizar el cálculo mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-55.webp",
     "imageAlt": "Captura de Los dobles",
     "sourceId": "jeu-55",
-    "playClicks": 6
+    "playClicks": 6,
+    "contentLanguage": "es"
   },
   {
     "title": "Los casi dobles",
     "url": "/es/games/les-presque-doubles/?v=es-repair-3",
-    "description": "Usar los dobles para calcular más fácilmente.",
+    "description": "Utiliza los dobles conocidos para sumar dos números consecutivos.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2488,16 +2606,17 @@
       "CE1",
       "CE2"
     ],
-    "short": "Usar los dobles para calcular más fácilmente.",
+    "short": "Utiliza los dobles conocidos para sumar dos números consecutivos.",
     "thumb": "/assets/catalogue-v2/captures/jeu-56.webp",
     "imageAlt": "Captura de Los casi dobles",
     "sourceId": "jeu-56",
-    "playClicks": 3
+    "playClicks": 3,
+    "contentLanguage": "es"
   },
   {
     "title": "Los complementos a 10",
     "url": "/es/games/les-complements-a-10/?v=es-repair-3",
-    "description": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
+    "description": "Encuentra el número que falta para completar 10.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2517,16 +2636,17 @@
       "CE1",
       "CE2"
     ],
-    "short": "Encontrar el número que falta para llegar a 10, 100 o 1.000.",
+    "short": "Encuentra el número que falta para completar 10.",
     "thumb": "/assets/catalogue-v2/captures/jeu-57.webp",
     "imageAlt": "Captura de Los complementos a 10",
     "sourceId": "jeu-57",
-    "playClicks": 3
+    "playClicks": 3,
+    "contentLanguage": "es"
   },
   {
     "title": "Sumar y restar decenas",
     "url": "/es/games/ajouter-et-soustraire-des-dizaines/?v=es-repair-3",
-    "description": "Encontrar un resultado retirando una cantidad.",
+    "description": "Practica la suma y la resta mental de decenas exactas.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2545,16 +2665,17 @@
       "CE1",
       "CE2"
     ],
-    "short": "Encontrar un resultado retirando una cantidad.",
+    "short": "Practica la suma y la resta mental de decenas exactas.",
     "thumb": "/assets/catalogue-v2/captures/jeu-58.webp",
     "imageAlt": "Captura de Sumar y restar decenas",
     "sourceId": "jeu-58",
-    "playClicks": 2
+    "playClicks": 2,
+    "contentLanguage": "es"
   },
   {
     "title": "Pequeñas sumas",
     "url": "/es/games/les-petites-additions/?v=es-repair-3",
-    "description": "Usar resultados conocidos para calcular una adición mental.",
+    "description": "Mejora tu agilidad con pequeñas sumas de cálculo mental.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2574,16 +2695,17 @@
       "CE1",
       "CE2"
     ],
-    "short": "Usar resultados conocidos para calcular una adición mental.",
+    "short": "Mejora tu agilidad con pequeñas sumas de cálculo mental.",
     "thumb": "/assets/catalogue-v2/captures/jeu-59.webp",
     "imageAlt": "Captura de Pequeñas sumas",
     "sourceId": "jeu-59",
-    "playClicks": 5
+    "playClicks": 5,
+    "contentLanguage": "es"
   },
   {
     "title": "Cálculo mental — Periodo 1",
     "url": "/es/games/calcul-mental-periode-1/?v=es-repair-3",
-    "description": "Se han llevado a cabo varios procedimientos de cálculo mental.",
+    "description": "Repasa las estrategias de cálculo mental del primer periodo.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2602,16 +2724,17 @@
       "CE1",
       "CE2"
     ],
-    "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
+    "short": "Repasa las estrategias de cálculo mental del primer periodo.",
     "thumb": "/assets/catalogue-v2/captures/calcul-mental-ce1-periode-1-orbite.webp",
     "imageAlt": "Captura de Cálculo mental — Periodo 1",
     "sourceId": "jeu-60",
-    "playClicks": 19
+    "playClicks": 19,
+    "contentLanguage": "es"
   },
   {
     "title": "Los peces de los números",
     "url": "/es/games/les-poissons-des-nombres/?v=es-repair-3",
-    "description": "Se han llevado a cabo varios procedimientos de cálculo mental.",
+    "description": "Sigue a los peces y practica sumar o restar 1, 10 y 100.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2630,16 +2753,17 @@
       "CE1",
       "CE2"
     ],
-    "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
+    "short": "Sigue a los peces y practica sumar o restar 1, 10 y 100.",
     "thumb": "/assets/images/bannieres/jeu-61-apercu.webp?v=20261115",
     "imageAlt": "Captura de Los peces de los números",
     "sourceId": "jeu-61",
-    "playClicks": 5
+    "playClicks": 5,
+    "contentLanguage": "es"
   },
   {
     "title": "La carrera de los cálculos",
     "url": "/es/games/la-course-des-calculs/?v=es-repair-3",
-    "description": "Se han llevado a cabo varios procedimientos de cálculo mental.",
+    "description": "Mejora la rapidez y la precisión resolviendo cálculos en una carrera.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2659,11 +2783,12 @@
       "CE1",
       "CE2"
     ],
-    "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
+    "short": "Mejora la rapidez y la precisión resolviendo cálculos en una carrera.",
     "thumb": "/assets/catalogue-v2/captures/jeu-62.webp",
     "imageAlt": "Captura de La carrera de los cálculos",
     "sourceId": "jeu-62",
-    "playClicks": 4
+    "playClicks": 4,
+    "contentLanguage": "es"
   },
   {
     "title": "Complementos a 10, 100 y 1 000",
@@ -2691,12 +2816,13 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-63.webp",
     "imageAlt": "Captura de Complementos a 10, 100 y 1 000",
     "sourceId": "jeu-63",
-    "playClicks": 2
+    "playClicks": 2,
+    "contentLanguage": "es"
   },
   {
     "title": "Cálculo mental — Periodo 2",
     "url": "/es/games/calcul-mental-periode-2/?v=es-repair-3",
-    "description": "Se han llevado a cabo varios procedimientos de cálculo mental.",
+    "description": "Repasa las estrategias de cálculo mental del segundo periodo.",
     "weekly": false,
     "category": "calculs",
     "level": "CE1",
@@ -2715,16 +2841,17 @@
       "CE1",
       "CE2"
     ],
-    "short": "Se han llevado a cabo varios procedimientos de cálculo mental.",
+    "short": "Repasa las estrategias de cálculo mental del segundo periodo.",
     "thumb": "/assets/catalogue-v2/captures/calcul-mental-ce1-periode-2-orbite.webp",
     "imageAlt": "Captura de Cálculo mental — Periodo 2",
     "sourceId": "jeu-64",
-    "playClicks": 25
+    "playClicks": 25,
+    "contentLanguage": "es"
   },
   {
     "title": "Encontrar el total",
     "url": "/es/games/trouver-le-tout/?v=es-repair-3",
-    "description": "Entender una situación y elegir un cálculo para resolverla.",
+    "description": "Suma dos partes para encontrar el total de una situación.",
     "weekly": false,
     "category": "problemes",
     "level": "CE1",
@@ -2743,16 +2870,17 @@
       "CP",
       "CE1"
     ],
-    "short": "Entender una situación y elegir un cálculo para resolverla.",
+    "short": "Suma dos partes para encontrar el total de una situación.",
     "thumb": "/assets/catalogue-v2/captures/jeu-65.webp",
     "imageAlt": "Captura de Encontrar el total",
     "sourceId": "jeu-65",
-    "playClicks": 4
+    "playClicks": 4,
+    "contentLanguage": "es"
   },
   {
     "title": "Encontrar una parte",
     "url": "/es/games/trouver-une-partie/?v=es-repair-3",
-    "description": "Entender una situación y elegir un cálculo para resolverla.",
+    "description": "Encuentra la parte desconocida a partir del total y de la parte conocida.",
     "weekly": false,
     "category": "problemes",
     "level": "CE1",
@@ -2771,16 +2899,17 @@
       "CP",
       "CE1"
     ],
-    "short": "Entender una situación y elegir un cálculo para resolverla.",
+    "short": "Encuentra la parte desconocida a partir del total y de la parte conocida.",
     "thumb": "/assets/catalogue-v2/captures/jeu-66.webp",
     "imageAlt": "Captura de Encontrar una parte",
     "sourceId": "jeu-66",
-    "playClicks": 1
+    "playClicks": 1,
+    "contentLanguage": "es"
   },
   {
     "title": "Sumar, ganar, avanzar",
     "url": "/es/games/ajouter-gagner-avancer/?v=es-repair-3",
-    "description": "Entender una situación y elegir un cálculo para resolverla.",
+    "description": "Resuelve problemas de suma relacionados con ganancias y desplazamientos hacia delante.",
     "weekly": false,
     "category": "problemes",
     "level": "CE1",
@@ -2799,16 +2928,17 @@
       "CP",
       "CE1"
     ],
-    "short": "Entender una situación y elegir un cálculo para resolverla.",
+    "short": "Resuelve problemas de suma relacionados con ganancias y desplazamientos hacia delante.",
     "thumb": "/assets/catalogue-v2/captures/jeu-67.webp",
     "imageAlt": "Captura de Sumar, ganar, avanzar",
     "sourceId": "jeu-67",
-    "playClicks": 1
+    "playClicks": 1,
+    "contentLanguage": "es"
   },
   {
     "title": "Restar, perder, retroceder",
     "url": "/es/games/soustraire-perdre-reculer/?v=es-repair-3",
-    "description": "Entender una situación y elegir un cálculo para resolverla.",
+    "description": "Resuelve problemas de resta relacionados con pérdidas y desplazamientos hacia atrás.",
     "weekly": false,
     "category": "problemes",
     "level": "CE1",
@@ -2827,16 +2957,17 @@
       "CP",
       "CE1"
     ],
-    "short": "Entender una situación y elegir un cálculo para resolverla.",
+    "short": "Resuelve problemas de resta relacionados con pérdidas y desplazamientos hacia atrás.",
     "thumb": "/assets/catalogue-v2/captures/jeu-68.webp",
     "imageAlt": "Captura de Restar, perder, retroceder",
     "sourceId": "jeu-68",
-    "playClicks": 1
+    "playClicks": 1,
+    "contentLanguage": "es"
   },
   {
     "title": "Resolver en dos pasos",
     "url": "/es/games/resoudre-en-deux-etapes/?v=es-repair-3",
-    "description": "Entender una situación y elegir un cálculo para resolverla.",
+    "description": "Identifica las dos operaciones necesarias para resolver cada problema.",
     "weekly": false,
     "category": "problemes",
     "level": "CE1",
@@ -2855,16 +2986,17 @@
       "CP",
       "CE1"
     ],
-    "short": "Entender una situación y elegir un cálculo para resolverla.",
+    "short": "Identifica las dos operaciones necesarias para resolver cada problema.",
     "thumb": "/assets/catalogue-v2/captures/jeu-69.webp",
     "imageAlt": "Captura de Resolver en dos pasos",
     "sourceId": "jeu-69",
-    "playClicks": 2
+    "playClicks": 2,
+    "contentLanguage": "es"
   },
   {
     "title": "Comparar dos cantidades",
     "url": "/es/games/comparer-deux-quantites/?v=es-repair-3",
-    "description": "Entender una situación y elegir un cálculo para resolverla.",
+    "description": "Compara dos cantidades y calcula la diferencia entre ellas.",
     "weekly": false,
     "category": "problemes",
     "level": "CE1",
@@ -2883,16 +3015,17 @@
       "CP",
       "CE1"
     ],
-    "short": "Entender una situación y elegir un cálculo para resolverla.",
+    "short": "Compara dos cantidades y calcula la diferencia entre ellas.",
     "thumb": "/assets/catalogue-v2/captures/jeu-70.webp",
     "imageAlt": "Captura de Comparar dos cantidades",
     "sourceId": "jeu-70",
-    "playClicks": 0
+    "playClicks": 0,
+    "contentLanguage": "es"
   },
   {
     "title": "Problemas con modelos de barras — Taller 4",
     "url": "/es/games/problemes-avec-modeles-en-barres-atelier-4/?v=es-repair-3",
-    "description": "Entender una situación y elegir un cálculo para resolverla.",
+    "description": "Representa las cantidades con modelos de barras para resolver los problemas del taller.",
     "weekly": false,
     "category": "problemes",
     "level": "CE1",
@@ -2911,16 +3044,17 @@
       "CP",
       "CE1"
     ],
-    "short": "Entender una situación y elegir un cálculo para resolverla.",
+    "short": "Representa las cantidades con modelos de barras para resolver los problemas del taller.",
     "thumb": "/assets/catalogue-v2/captures/jeu-71.webp",
     "imageAlt": "Captura de Problemas con modelos de barras — Taller 4",
     "sourceId": "jeu-71",
-    "playClicks": 2
+    "playClicks": 2,
+    "contentLanguage": "es"
   },
   {
     "title": "Problemas — Periodo 2",
     "url": "/es/games/problemes-periode-2/?v=es-repair-3",
-    "description": "Entender una situación y elegir un cálculo para resolverla.",
+    "description": "Practica la resolución de problemas del segundo periodo.",
     "weekly": false,
     "category": "problemes",
     "level": "CE1",
@@ -2938,11 +3072,12 @@
     "levels": [
       "CE1"
     ],
-    "short": "Entender una situación y elegir un cálculo para resolverla.",
+    "short": "Practica la resolución de problemas del segundo periodo.",
     "thumb": "/assets/catalogue-v2/captures/jeu-72.webp",
     "imageAlt": "Captura de Problemas — Periodo 2",
     "sourceId": "jeu-72",
-    "playClicks": 4
+    "playClicks": 4,
+    "contentLanguage": "es"
   },
   {
     "id": "jeu-105",
@@ -2965,6 +3100,7 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/jeu-105.webp",
     "imageAlt": "Imagen de Restas sin reagrupación — Nave espacial",
-    "playClicks": 1
+    "playClicks": 1,
+    "short": "Resta con bloques de valor posicional."
   }
 ]
