@@ -23,7 +23,14 @@
     "pdfUrl": "/pdf/adding-9-19-29-worksheets-es.pdf",
     "pdfLabel": "PDF para imprimir",
     "short": "Suma 9, 19 o 29 a números de dos y tres cifras con centenas, decenas y unidades.",
-    "contentLanguage": "es"
+    "contentLanguage": "es",
+    "pdfResources": [
+      {
+        "url": "/pdf/adding-9-19-29-worksheets-es.pdf",
+        "label": "PDF para imprimir",
+        "language": "es"
+      }
+    ]
   },
   {
     "id": "mission-ajouter-9-19-29",
@@ -51,7 +58,14 @@
     "thumb": "/assets/catalogue-v2/captures/mission-ajouter-9-19-29.webp",
     "imageAlt": "Partida con decenas, una unidad tachada y el teclado numérico",
     "short": "Suma 9, 19 o 29 con decenas y tacha una unidad.",
-    "contentLanguage": "es"
+    "contentLanguage": "es",
+    "pdfResources": [
+      {
+        "url": "/pdf/adding-9-19-29-worksheets-es.pdf",
+        "label": "PDF para imprimir",
+        "language": "es"
+      }
+    ]
   },
   {
     "id": "mission-fractions-ce1-revisions",
@@ -219,7 +233,14 @@
     "imageAlt": "Imagen de Los números en órbita — Tarjetas Montessori CE2",
     "playClicks": 2,
     "short": "Compón y descompón números de hasta cuatro cifras con tarjetas Montessori.",
-    "contentLanguage": "es"
+    "contentLanguage": "es",
+    "pdfResources": [
+      {
+        "url": "/pdf/Cartons_Montessori_CE2_systeme_solaire_exercices_et_correction.pdf",
+        "label": "4 fiches élèves + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "cartons-montessori-cp",
@@ -267,7 +288,14 @@
     "imageAlt": "Imagen de La magia de los números — CE1",
     "playClicks": 4,
     "short": "Compón y descompón números hasta 999 con tarjetas de centenas, decenas y unidades.",
-    "contentLanguage": "es"
+    "contentLanguage": "es",
+    "pdfResources": [
+      {
+        "url": "/pdf/Cartons_Montessori_CE1_exercices_et_correction.pdf",
+        "label": "4 fiches élèves + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "ours-de-la-banquise",
@@ -363,7 +391,14 @@
     "imageAlt": "Imagen de Los cangrejos del tómbolo",
     "playClicks": 1,
     "short": "Ayuda a los cangrejos a cruzar el tómbolo eligiendo números pares o impares.",
-    "contentLanguage": "es"
+    "contentLanguage": "es",
+    "pdfResources": [
+      {
+        "url": "/pdf/Les_crabes_du_tombolo_CE1_pairs_impairs_exercices_et_correction.pdf",
+        "label": "Pairs et impairs : 3 fiches élèves + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-103",
@@ -389,7 +424,34 @@
     "imageAlt": "Imagen de Popeye en la recta numérica",
     "playClicks": 7,
     "short": "Lee las graduaciones y encuentra los números para ayudar a Popeye a llegar hasta Olivia.",
-    "contentLanguage": "es"
+    "contentLanguage": "es",
+    "pdfResources": [
+      {
+        "url": "/pdf/Popeye_le_funambule_CP.pdf",
+        "label": "CP",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1.pdf",
+        "label": "CE1",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1_8_exercices.pdf",
+        "label": "CE1 — 8 exercices",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1_pas_a_deviner.pdf",
+        "label": "CE1 — Pas à deviner",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE2.pdf",
+        "label": "CE2",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-102",
@@ -415,7 +477,24 @@
     "imageAlt": "Imagen de Los cangrejos de las Salinas",
     "playClicks": 3,
     "short": "Ordena cinco números de menor a mayor o de mayor a menor junto a los cangrejos.",
-    "contentLanguage": "es"
+    "contentLanguage": "es",
+    "pdfResources": [
+      {
+        "url": "/pdf/crabes-salines-cp-es.pdf",
+        "label": "CP",
+        "language": "es"
+      },
+      {
+        "url": "/pdf/crabes-salines-ce1-es.pdf",
+        "label": "CE1",
+        "language": "es"
+      },
+      {
+        "url": "/pdf/crabes-salines-ce2-es.pdf",
+        "label": "CE2",
+        "language": "es"
+      }
+    ]
   },
   {
     "id": "jeu-101",
@@ -535,7 +614,14 @@
     "imageAlt": "Imagen de El planeta de Fritz — CE1",
     "playClicks": 2,
     "short": "Encuadrar números por unidades, decenas y centenas.",
-    "contentLanguage": "es"
+    "contentLanguage": "es",
+    "pdfResources": [
+      {
+        "url": "/pdf/Fritz_encadrements_CE1_exercices_et_correction.pdf",
+        "label": "Encadrements : 30 exercices + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-96",
@@ -1244,7 +1330,14 @@
     "thumb": "/assets/images/bannieres/openai/mission-nautilus.webp?v=bannieres-20261115",
     "sourceId": "jeu-5",
     "playClicks": 0,
-    "contentLanguage": "es"
+    "contentLanguage": "es",
+    "pdfResources": [
+      {
+        "url": "/pdf/complementos-a-100-ce1-es.pdf",
+        "label": "PDF para imprimir",
+        "language": "es"
+      }
+    ]
   },
   {
     "title": "Viaje al centro de la Tierra — Casi dobles",
@@ -2333,7 +2426,14 @@
     "thumb": "/assets/catalogue-v2/captures/soustractions-en-orbite-capture%20(1).webp",
     "imageAlt": "Imagen de Restas en órbita — Sin reagrupación",
     "playClicks": 0,
-    "short": "Resta por columnas sin reagrupar."
+    "short": "Resta por columnas sin reagrupar.",
+    "pdfResources": [
+      {
+        "url": "/pdf/restas-columnas-sin-prestamos-ce1-es.pdf",
+        "label": "PDF para imprimir",
+        "language": "es"
+      }
+    ]
   },
   {
     "title": "Sumas en columna sin llevadas",
@@ -2362,7 +2462,14 @@
     "imageAlt": "Captura de Sumas en columna sin llevadas",
     "sourceId": "jeu-50",
     "playClicks": 6,
-    "contentLanguage": "es"
+    "contentLanguage": "es",
+    "pdfResources": [
+      {
+        "url": "/pdf/sumas-columnas-sin-llevadas-ce1-es.pdf",
+        "label": "PDF para imprimir",
+        "language": "es"
+      }
+    ]
   },
   {
     "title": "Sumas en columna con llevadas",
@@ -2729,7 +2836,14 @@
     "imageAlt": "Captura de Cálculo mental — Periodo 1",
     "sourceId": "jeu-60",
     "playClicks": 19,
-    "contentLanguage": "es"
+    "contentLanguage": "es",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "7 compétences : exercices et corrigés (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Los peces de los números",
@@ -2758,7 +2872,14 @@
     "imageAlt": "Captura de Los peces de los números",
     "sourceId": "jeu-61",
     "playClicks": 5,
-    "contentLanguage": "es"
+    "contentLanguage": "es",
+    "pdfResources": [
+      {
+        "url": "/pdf/peces-numeros-sumar-restar-ce1-es.pdf",
+        "label": "PDF para imprimir",
+        "language": "es"
+      }
+    ]
   },
   {
     "title": "La carrera de los cálculos",
@@ -3049,7 +3170,14 @@
     "imageAlt": "Captura de Problemas con modelos de barras — Taller 4",
     "sourceId": "jeu-71",
     "playClicks": 2,
-    "contentLanguage": "es"
+    "contentLanguage": "es",
+    "pdfResources": [
+      {
+        "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+        "label": "7 problèmes avec barres + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Problemas — Periodo 2",
@@ -3101,6 +3229,13 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-105.webp",
     "imageAlt": "Imagen de Restas sin reagrupación — Nave espacial",
     "playClicks": 1,
-    "short": "Resta con bloques de valor posicional."
+    "short": "Resta con bloques de valor posicional.",
+    "pdfResources": [
+      {
+        "url": "/pdf/restas-columnas-sin-prestamos-ce1-es.pdf",
+        "label": "PDF para imprimir",
+        "language": "es"
+      }
+    ]
   }
 ]
