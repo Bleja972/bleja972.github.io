@@ -56,7 +56,7 @@
   async function findGame() {
     // The legacy links resolve older aliases and include their printable sheets.
     const legacyGames = json('/assets/landscape-game-links.json?v=pronoms-pdf-20261121').catch(() => ({}));
-    const catalogue = json(cataloguePath).catch(() => []);
+    const catalogue = json(cataloguePath + (lang === 'en' && id === 'en-ours-de-la-banquise-neon' ? '?v=neon-english-20261126' : '')).catch(() => []);
     const legacy = await legacyGames;
     return legacy[lang + ':' + id] || (await catalogue).find(game => game.id === id);
   }
@@ -86,6 +86,9 @@
     const game = await findGame();
     if (!game) throw Error('Jeu introuvable');
     const url = new URL(game.url, location.origin);
+    if (lang === 'en' && id === 'en-ours-de-la-banquise-neon') {
+      url.href = new URL('/jeux/ours-de-la-banquise-neon-en/?v=20261126', location.origin).href;
+    }
     if (!['https:', 'http:'].includes(url.protocol)) throw Error('Adresse invalide');
 
     if (url.host === location.host || url.host === 'bleja972.github.io') {
