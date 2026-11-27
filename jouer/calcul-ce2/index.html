@@ -14,20 +14,21 @@
 <body class="arcade-player">
   <header class="horizontal-tools arcade-player-bar" data-landscape-in-flow>
     <span class="arcade-sparks" aria-hidden="true"></span>
-    <a class="arcade-player-home" href="/?lang=fr" aria-label="Accueil">
+    <a class="arcade-player-home" href="/" aria-label="Accueil">
       <img src="/assets/accueil-arcade/logo.svg" alt="" width="38" height="38">
     </a>
     <h1 id="game-title" class="arcade-player-title">Calcul CE2</h1>
     <nav class="game-links arcade-player-links" aria-label="Navigation du jeu">
-      <a id="catalogue-link" href="/?lang=fr#catalogue" class="control control-outline">Catalogue</a>
+      <a id="catalogue-link" href="/#catalogue" class="control control-outline">Catalogue</a>
       <a href="/?lang=fr&amp;niveau=CE2&amp;matiere=Math%C3%A9matiques&amp;domaine=mental#catalogue" class="control control-outline">Calcul mental CE2</a>
       <a href="/?lang=fr&amp;niveau=CE2&amp;matiere=Math%C3%A9matiques&amp;domaine=pose#catalogue" class="control control-outline">Calcul posé CE2</a>
+      <a id="fiche-link" hidden class="control control-outline">← Voir la fiche pédagogique</a>
       <a id="direct-link" hidden target="_blank" rel="noopener" class="control control-outline">Ouvrir le jeu seul</a>
       <button class="control control-primary" id="horizontal-toggle" type="button" aria-pressed="false">Affichage horizontal</button>
     </nav>
     <p id="horizontal-status" role="status" aria-live="polite" hidden></p>
   </header>
   <main id="game-container"><p id="missing">Choisis un jeu depuis <a href="/?lang=fr&amp;niveau=CE2&amp;matiere=Math%C3%A9matiques&amp;domaine=mental#catalogue">la rubrique Calcul CE2</a>.</p></main>
-  <script>const games={"jeu-90":{"title":"Chronomaths galactiques CE2","url":"https://bleja972.github.io/CHRONOMATHS_CE22/"},"jeu-76":{"title":"Calcul mental CE2 — Calcul Pop !","url":"/jeux/calcul-mental-ce2-calcul-pop/jouer/?v=orbite-espaces"},"jeu-29":{"title":"Chronomaths CE2 — 20 défis","url":"https://bleja972.github.io/CHRONOMATHS_CE2/"}};const game=games[new URLSearchParams(location.search).get('jeu')];if(game){document.title=game.title+' — Affichage horizontal';document.getElementById('game-title').textContent=game.title;const link=document.getElementById('direct-link');link.href=game.url;link.hidden=false;const frame=document.createElement('iframe');frame.title=game.title;frame.src=game.url;frame.allow='fullscreen';frame.allowFullscreen=true;document.getElementById('game-container').replaceChildren(frame);}</script>
+  <script>const games={"jeu-90":{"title":"Chronomaths galactiques CE2","url":"https://bleja972.github.io/CHRONOMATHS_CE22/"},"jeu-76":{"title":"Calcul mental CE2 — Calcul Pop !","url":"/jeux/calcul-mental-ce2-calcul-pop/jouer/?v=orbite-espaces"},"jeu-29":{"title":"Chronomaths CE2 — 20 défis","url":"https://bleja972.github.io/CHRONOMATHS_CE2/"}};const gameId=new URLSearchParams(location.search).get('jeu');const game=games[gameId];const ficheUrls={"jeu-90":"/fiches/chronomaths-galactiques-ce2/","jeu-76":"/fiches/calcul-mental-ce2-calcul-pop/","jeu-29":"/fiches/chronomaths-ce2-20-defis/"};if(game&&ficheUrls[gameId]){const fiche=document.getElementById('fiche-link');fiche.href=ficheUrls[gameId];fiche.hidden=false;fiche.setAttribute('aria-label','Voir la fiche pédagogique de '+game.title);}if(game){document.title=game.title+' — Affichage horizontal';document.getElementById('game-title').textContent=game.title;const link=document.getElementById('direct-link');link.href=game.url;link.hidden=false;const frame=document.createElement('iframe');frame.title=game.title;frame.src=game.url;frame.allow='fullscreen';frame.allowFullscreen=true;document.getElementById('game-container').replaceChildren(frame);}</script>
 </body>
 </html>
