@@ -24,7 +24,14 @@
     "playClicks": 0,
     "pdfUrl": "/pdf/ajouter-9-19-29-exercices.pdf",
     "pdfLabel": "Fiche d’exercices · 4 pages",
-    "ficheUrl": "/fiches/mission-ajouter-9-19-29-ce1/"
+    "ficheUrl": "/fiches/mission-ajouter-9-19-29-ce1/",
+    "pdfResources": [
+      {
+        "url": "/pdf/ajouter-9-19-29-exercices.pdf",
+        "label": "Fiche d’exercices · 4 pages",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "mission-ajouter-9-19-29",
@@ -53,7 +60,14 @@
     "imageAlt": "Mission +9, +19, +29 en pleine partie, avec les dizaines, une unité barrée et le pavé numérique",
     "pdfUrl": "/pdf/ajouter-9-19-29-exercices.pdf",
     "pdfLabel": "Fiche d’exercices · 4 pages",
-    "ficheUrl": "/fiches/mission-ajouter-9-19-29/"
+    "ficheUrl": "/fiches/mission-ajouter-9-19-29/",
+    "pdfResources": [
+      {
+        "url": "/pdf/ajouter-9-19-29-exercices.pdf",
+        "label": "Fiche d’exercices · 4 pages",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "mission-problemes-ce2-periode-2",
@@ -299,7 +313,14 @@
     "pdfUrl": "/pdf/Cartons_Montessori_CE2_systeme_solaire_exercices_et_correction.pdf",
     "pdfLabel": "4 fiches élèves + corrigé (PDF)",
     "playClicks": 7,
-    "ficheUrl": "/fiches/les-nombres-en-orbite-cartons-montessori-ce2/"
+    "ficheUrl": "/fiches/les-nombres-en-orbite-cartons-montessori-ce2/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Cartons_Montessori_CE2_systeme_solaire_exercices_et_correction.pdf",
+        "label": "4 fiches élèves + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "cartons-montessori-cp",
@@ -353,7 +374,14 @@
     "pdfUrl": "/pdf/Cartons_Montessori_CE1_exercices_et_correction.pdf",
     "pdfLabel": "4 fiches élèves + corrigé (PDF)",
     "playClicks": 7,
-    "ficheUrl": "/fiches/la-magie-des-nombres-cartons-montessori/"
+    "ficheUrl": "/fiches/la-magie-des-nombres-cartons-montessori/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Cartons_Montessori_CE1_exercices_et_correction.pdf",
+        "label": "4 fiches élèves + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "genre-des-noms-ce1",
@@ -384,7 +412,14 @@
     "accessibility": [
       "audio"
     ],
-    "ficheUrl": "/fiches/le-genre-des-noms-masculin-ou-feminin/"
+    "ficheUrl": "/fiches/le-genre-des-noms-masculin-ou-feminin/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Le_genre_des_noms_CE1_exercices_et_correction.pdf",
+        "label": "Fiche à imprimer + correction (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "ours-de-la-banquise",
@@ -491,7 +526,14 @@
     "pdfLabel": "Pairs et impairs : 3 fiches élèves + corrigé (PDF)",
     "playClicks": 3,
     "localHeritage": "Martinique",
-    "ficheUrl": "/fiches/les-crabes-du-tombolo/"
+    "ficheUrl": "/fiches/les-crabes-du-tombolo/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Les_crabes_du_tombolo_CE1_pairs_impairs_exercices_et_correction.pdf",
+        "label": "Pairs et impairs : 3 fiches élèves + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "hexaflash-ce1",
@@ -545,7 +587,34 @@
     "thumb": "/assets/images/bannieres/openai/popeye-ligne-graduee.webp?v=bannieres-20261115",
     "imageAlt": "Bannière du jeu Popeye sur la ligne graduée",
     "playClicks": 12,
-    "ficheUrl": "/fiches/popeye-sur-la-ligne-graduee/"
+    "ficheUrl": "/fiches/popeye-sur-la-ligne-graduee/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Popeye_le_funambule_CP.pdf",
+        "label": "CP",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1.pdf",
+        "label": "CE1",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1_8_exercices.pdf",
+        "label": "CE1 — 8 exercices",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1_pas_a_deviner.pdf",
+        "label": "CE1 — Pas à deviner",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE2.pdf",
+        "label": "CE2",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-102",
@@ -574,7 +643,24 @@
     "imageAlt": "Les crabes et leurs pancartes sur la plage des Salines.",
     "playClicks": 7,
     "localHeritage": "Martinique",
-    "ficheUrl": "/fiches/les-crabes-des-salines/"
+    "ficheUrl": "/fiches/les-crabes-des-salines/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Les_crabes_des_Salines_CP.pdf",
+        "label": "CP",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Les_crabes_des_Salines_CE1.pdf",
+        "label": "CE1",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Les_crabes_des_Salines_CE2.pdf",
+        "label": "CE2",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-101",
@@ -712,7 +798,14 @@
     "pdfUrl": "/pdf/Fritz_encadrements_CE1_exercices_et_correction.pdf",
     "pdfLabel": "Encadrements : 30 exercices + corrigé (PDF)",
     "playClicks": 4,
-    "ficheUrl": "/fiches/la-planete-de-fritz-encadrer-les-nombres/"
+    "ficheUrl": "/fiches/la-planete-de-fritz-encadrer-les-nombres/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Fritz_encadrements_CE1_exercices_et_correction.pdf",
+        "label": "Encadrements : 30 exercices + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-96",
@@ -1874,7 +1967,14 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-20.webp",
     "imageAlt": "Aperçu de Vocabulaire — Période 1 : utiliser l’ordre alphabétique et reconnaître des contraires.",
     "playClicks": 27,
-    "ficheUrl": "/fiches/vocabulaire-periode-1/"
+    "ficheUrl": "/fiches/vocabulaire-periode-1/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Vocabulaire_CE1_jeux_a_imprimer.pdf",
+        "label": "Vocabulaire CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Lecture et compréhension",
@@ -1903,7 +2003,14 @@
     "pdfUrl": "/pdf/Lecture_comprehension_CE1_animaux_exercices_et_corriges.pdf",
     "pdfLabel": "Lecture CE1 · 4 textes, exercices et corrigés (PDF)",
     "playClicks": 64,
-    "ficheUrl": "/fiches/lecture-et-comprehension/"
+    "ficheUrl": "/fiches/lecture-et-comprehension/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Lecture_comprehension_CE1_animaux_exercices_et_corriges.pdf",
+        "label": "Lecture CE1 · 4 textes, exercices et corrigés (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "L’atelier des souris",
@@ -1992,7 +2099,14 @@
     "accessibility": [
       "audio"
     ],
-    "ficheUrl": "/fiches/dictees-1-a-6-periode-1/"
+    "ficheUrl": "/fiches/dictees-1-a-6-periode-1/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Dictee_6_Periode_1_CE1_eleve_et_correction_parents.pdf",
+        "label": "Dictée 6 · à trous + correction parents (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Dictée 5 — Les mots en images",
@@ -2071,7 +2185,14 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-27.webp",
     "imageAlt": "Aperçu de Grammaire — Période 1 : repérer les éléments d’une phrase et s’entraîner en grammaire.",
     "playClicks": 20,
-    "ficheUrl": "/fiches/grammaire-periode-1/"
+    "ficheUrl": "/fiches/grammaire-periode-1/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Mission_Pronoms_en_orbite_CE1.pdf",
+        "label": "Pronoms personnels",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Calcul mental CP",
@@ -2749,7 +2870,14 @@
     "pdfUrl": "/pdf/Soustractions_CE1_sans_echange_tableaux_noir_blanc.pdf",
     "pdfLabel": "Fiches de soustractions C–D–U + corrigé (PDF)",
     "playClicks": 1,
-    "ficheUrl": "/fiches/soustractions-en-orbite-sans-echange/"
+    "ficheUrl": "/fiches/soustractions-en-orbite-sans-echange/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Soustractions_CE1_sans_echange_tableaux_noir_blanc.pdf",
+        "label": "Fiches de soustractions C–D–U + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Les additions sans échange en orbite",
@@ -2779,7 +2907,14 @@
     "pdfUrl": "/pdf/Additions_posees_sans_retenue_CE1_7_fiches_et_corriges.pdf",
     "pdfLabel": "Sans retenue : 7 fiches + corrigés (PDF)",
     "playClicks": 9,
-    "ficheUrl": "/fiches/additions-posees-sans-echange/"
+    "ficheUrl": "/fiches/additions-posees-sans-echange/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Additions_posees_sans_retenue_CE1_7_fiches_et_corriges.pdf",
+        "label": "Sans retenue : 7 fiches + corrigés (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Les additions en orbite — Additions avec échanges",
@@ -3144,7 +3279,14 @@
     "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
     "pdfLabel": "7 compétences : exercices et corrigés (PDF)",
     "playClicks": 24,
-    "ficheUrl": "/fiches/calcul-mental-periode-1/"
+    "ficheUrl": "/fiches/calcul-mental-periode-1/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "7 compétences : exercices et corrigés (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Les poissons des nombres",
@@ -3176,7 +3318,14 @@
     "bannerSource": "approved-generated",
     "pdfUrl": "/pdf/Les_poissons_des_nombres_CE1_exercices_et_corrige_sans_fond.pdf?v=9pages-20261115",
     "pdfLabel": "Exercices CE1 — 5 pages de chaînes de poissons + calculs et corrigés (PDF, 9 pages)",
-    "ficheUrl": "/fiches/les-poissons-des-nombres/"
+    "ficheUrl": "/fiches/les-poissons-des-nombres/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Les_poissons_des_nombres_CE1_exercices_et_corrige_sans_fond.pdf?v=9pages-20261115",
+        "label": "Exercices CE1 — 5 pages de chaînes de poissons + calculs et corrigés (PDF, 9 pages)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "La course des calculs",
@@ -3459,7 +3608,14 @@
     "pdfUrl": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
     "pdfLabel": "7 problèmes avec barres + corrigé (PDF)",
     "playClicks": 3,
-    "ficheUrl": "/fiches/problemes-avec-modeles-en-barres-atelier-4/"
+    "ficheUrl": "/fiches/problemes-avec-modeles-en-barres-atelier-4/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+        "label": "7 problèmes avec barres + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Problèmes — Période 2",
@@ -3576,7 +3732,14 @@
     "accessibility": [
       "audio"
     ],
-    "ficheUrl": "/fiches/dictees-periode-2/"
+    "ficheUrl": "/fiches/dictees-periode-2/",
+    "pdfResources": [
+      {
+        "url": "/fiches/dictees-periode-2/#pdf-dictees-periode-2",
+        "label": "Dictées 7 à 12",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Soustractions sans échange — Vaisseau spatial",
@@ -3602,7 +3765,14 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-105.webp",
     "imageAlt": "Soustraction posée dans le cockpit, avec jetons 3D et résultat sous la barre.",
     "playClicks": 2,
-    "ficheUrl": "/fiches/soustractions-sans-echange-vaisseau-spatial/"
+    "ficheUrl": "/fiches/soustractions-sans-echange-vaisseau-spatial/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Soustractions_CE1_sans_echange_tableaux_noir_blanc.pdf",
+        "label": "CE1 — Sans échange",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-109",
@@ -3628,6 +3798,13 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-109.webp",
     "imageAlt": "Cockpit du jeu Mission Pronoms et boutons il, elle, ils, elles.",
     "playClicks": 1,
-    "ficheUrl": "/fiches/mission-pronoms-en-orbite/"
+    "ficheUrl": "/fiches/mission-pronoms-en-orbite/",
+    "pdfResources": [
+      {
+        "url": "/pdf/Mission_Pronoms_en_orbite_CE1.pdf",
+        "label": "Pronoms personnels",
+        "language": "fr"
+      }
+    ]
   }
 ]
