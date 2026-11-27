@@ -294,7 +294,7 @@
   {
     "id": "en-ours-de-la-banquise-neon",
     "title": "Neon Mission — Crystal Robot",
-    "url": "/jeux/ours-de-la-banquise-neon/",
+    "url": "/jeux/ours-de-la-banquise-neon-en/",
     "description": "Program the robot to collect crystals.",
     "levels": [
       "CE1"
@@ -309,7 +309,7 @@
     "weekly": false,
     "new": true,
     "sourceId": "ours-de-la-banquise-neon",
-    "contentLanguage": "fr",
+    "contentLanguage": "en",
     "thumb": "/assets/en-captures/en-ours-de-la-banquise-neon-live.webp",
     "imageAlt": "French gameplay screenshot of Neon Mission — Crystal Robot"
   },
