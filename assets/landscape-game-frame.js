@@ -118,25 +118,31 @@
         try {
           const doc = frame.contentDocument;
           if (!doc || doc.getElementById('bleja-english-arcade-chrome')) return;
-          const style = doc.createElement('style');
-          style.id = 'bleja-english-arcade-chrome';
-          style.textContent = `
-            html { background-color: #000 !important; }
-            .bleja-landscape-tools:not([data-landscape-in-flow]) { background-color: transparent; }
-            .bleja-landscape-tools #horizontal-toggle {
-              border: 1px solid #73eaff !important;
-              border-radius: 10px !important;
-              background: linear-gradient(180deg,#c5f8ff,#73eaff 47%,#42b9e8) !important;
-              color: #08182c !important;
-              box-shadow: inset 0 1px #ffffffb3,inset 0 -2px #09122635,0 4px #275879,0 0 18px #73eaff55 !important;
-            }
-            .bleja-landscape-tools #horizontal-status {
-              border: 1px solid #7261ac !important;
-              background: #17172c !important;
-              color: #f4f5ff !important;
-            }
-          `;
-          doc.head.append(style);
+          const view = doc.defaultView;
+          const link = doc.createElement('link');
+          link.id = 'bleja-english-arcade-chrome';
+          link.rel = 'stylesheet';
+          link.href = '/assets/accueil-arcade/english-game-chrome.css?v=20261126';
+          // Only flatten green/teal outer backgrounds that contain no artwork.
+          const isGreen = value => {
+            const colors = [...value.matchAll(/rgba?\(\s*(\d+(?:\.\d+)?)\s*[, ]\s*(\d+(?:\.\d+)?)\s*[, ]\s*(\d+(?:\.\d+)?)/g)];
+            return colors.some(m => { const [,r,g,b]=m.map(Number); return g>r+12 && g>b*.90 && g>25; });
+          };
+          const themed = el => {
+            const cs = view.getComputedStyle(el);
+            return /url\(|image-set\(|paint\(/i.test(cs.backgroundImage);
+          };
+          for(const el of [doc.documentElement,doc.body]){
+            if(!el || themed(el)) continue;
+            const cs=view.getComputedStyle(el);
+            if(isGreen(cs.backgroundColor+' '+cs.backgroundImage)) el.classList.add('bleja-english-flat-background');
+          }
+          for(const el of doc.querySelectorAll('body > header, body > nav, body > footer, body > .wrap > header, body > .app > .shell > header, body > .shell > header, body > .page > header, body > .container > header, .decouvrir-autre-jeu')){
+            if(themed(el)) continue;
+            const cs=view.getComputedStyle(el);
+            if(isGreen(cs.backgroundColor+' '+cs.backgroundImage)) el.classList.add('bleja-english-outer-panel');
+          }
+          doc.head.append(link);
         } catch {}
       });
     }
