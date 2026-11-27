@@ -55,7 +55,7 @@ function activateCatalogue(source) {
       image: game.thumb || game.image || card?.querySelector('img')?.getAttribute('src'),
       capture: game.screenshotUrl || game.image,
       alt: game.imageAlt,
-      short: game.short || card?.querySelector('.card-description')?.textContent.trim() || game.description,
+      short: isEnglish ? (game.short || game.description || card?.querySelector('.card-description')?.textContent.trim() || '') : (game.short || card?.querySelector('.card-description')?.textContent.trim() || game.description),
       pdf: game.pdfUrl || extras.find(link => link.dataset.kind === 'pdf')?.getAttribute('href'),
       plays: game.playClicks,
       tracking: card?.querySelector('a.play')?.dataset,
@@ -257,6 +257,7 @@ function activateCatalogue(source) {
     return `<article class="game-card" data-game="${escape(game.id)}" data-card-subject="${subjectOf(game)}">
       <div class="game-image">
         ${image}
+        ${isEnglish ? `<span class="game-language-badge" data-game-language="${game.contentLanguage === 'fr' ? 'fr' : 'en'}" aria-label="Game language: ${game.contentLanguage === 'fr' ? 'French' : 'English'}"><span class="game-language-flag" aria-hidden="true"></span>${game.contentLanguage === 'fr' ? 'French' : 'English'}</span>` : ''}
         <button class="icon-button fav-button" data-favorite="${game.id}" type="button" aria-pressed="false">${icon('heart')}</button>
       </div>
       <div class="card-body">
