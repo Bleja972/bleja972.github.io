@@ -58,7 +58,10 @@
     "subject": "Mathématiques",
     "weekly": false,
     "new": true,
-    "playClicks": 0
+    "playClicks": 0,
+    "thumb": "/assets/images/bannieres/mission-enlever-9-19-29-ce1.webp",
+    "imageAlt": "Illustration de couverture générée pour Mission −9, −19, −29 — CE1 jusqu’à 999.",
+    "bannerSource": "auto-generated"
   },
   {
     "id": "mission-ajouter-9-19-29",
