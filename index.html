@@ -34,7 +34,7 @@
   <meta property="og:image" content="https://bleja972.github.io/assets/bulles-duo/capture.webp">
   <link rel="icon" href="/assets/accueil-arcade/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/accueil-arcade/home.css?v=top10-arcade">
-  <script defer src="/assets/accueil-arcade/home.js?v=4"></script>
+  <script defer src="/assets/accueil-arcade/home.js?v=5"></script>
   <script defer src="/assets/statistiques.js?v=total-languages-v1"></script>
   <script defer src="/assets/partager-jeu.js?v=share-v1"></script>
   <script async data-goatcounter="https://lesjeuxdemathsetdefrancais.goatcounter.com/count" src="https://gc.zgo.at/count.js"></script>
@@ -166,7 +166,7 @@
           <div>
             <h2 id="catalogue-title" tabindex="-1">Catalogue des jeux pédagogiques par domaine et par niveau</h2>
             <p id="catalogue-intro">Choisis un niveau, une discipline ou une compétence pour préparer un entraînement adapté à ta classe.</p>
-            <div class="catalogue-links">
+            <div class="catalogue-links"><a class="quiet-link" href="/?patrimoine=martinique#catalogue">🌴 Créations Martinique</a>
               <a class="quiet-link" href="/?collection=nouveautes#catalogue" data-new-link>Nouveautés</a>
               <a class="quiet-link" href="#jeux-les-plus-joues">Top 10</a>
               <a class="quiet-link" href="#parcours">Parcours</a>
@@ -207,6 +207,7 @@
               <div class="filter-control exercise-control" id="exercise-control" hidden><label for="exercise-filter">Exercice</label><select id="exercise-filter"></select></div>
             </div>
             <div class="catalogue-controls" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0"><label for="access-filter">Aides pédagogiques</label><select id="access-filter" style="max-width:100%"><option value="">Toutes</option><option value="audio">🔊 Audio</option><option value="dys">Aide DYS</option></select></div>
+            <div class="catalogue-controls" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:8px 0 12px"><label style="display:flex;align-items:center;gap:8px;cursor:pointer"><input id="heritage-filter" type="checkbox"> 🌴 Créations Martinique</label><span style="font-size:.85rem;color:var(--text-muted,#aebdd8)">Des jeux inspirés des paysages et du patrimoine martiniquais.</span></div>
             <div class="result-bar catalogue-controls">
               <p class="result-count" id="result-count" role="status" aria-atomic="true"></p>
               <button class="text-button" type="button" id="clear-filters" data-reset hidden>Tout afficher</button>
@@ -314,7 +315,7 @@
             <article class="game-card" data-game="crabes-du-tombolo" data-card-subject="maths">
               <div class="game-image"><a href="/jeux/crabes-du-tombolo/apercu.svg" class="image-button" target="_blank" rel="noopener" aria-label="Agrandir la capture de Les crabes du tombolo"><img src="/jeux/crabes-du-tombolo/apercu.svg" alt="Langue de sable du tombolo entre la mer et les îlets." loading="lazy" decoding="async"><span class="image-expand"><svg class="icon" aria-hidden="true"><use href="#i-zoom"/></svg></span></a></div>
               <div class="card-body"><p class="card-meta"><span class="card-levels">CE1</span> / Numération</p>
-                <h3 class="card-title">Les crabes du tombolo</h3><p class="card-description">Fais traverser les crabes en choisissant les nombres pairs ou impairs.</p><p class="game-competences" style="font-size:.81rem;line-height:1.45;margin:9px 0;color:var(--text-muted,#aebdd8)"><strong>Compétences travaillées :</strong> Distinguer nombres pairs et impairs · Observer le chiffre des unités</p>
+                <h3 class="card-title">Les crabes du tombolo</h3><p style="margin:5px 0"><span style="display:inline-block;font-size:.78rem;border:1px solid #e8b15b;border-radius:6px;padding:3px 8px;color:#ffd18c">🌴 Création Martinique</span></p><p class="card-description">Fais traverser les crabes en choisissant les nombres pairs ou impairs.</p><p class="game-competences" style="font-size:.81rem;line-height:1.45;margin:9px 0;color:var(--text-muted,#aebdd8)"><strong>Compétences travaillées :</strong> Distinguer nombres pairs et impairs · Observer le chiffre des unités</p>
                 <div class="card-actions"><a class="control control-outline play" href="/jeux/crabes-du-tombolo/" target="_blank" rel="noopener" aria-label="Jouer à Les crabes du tombolo" data-goatcounter-click="jouer-crabes-du-tombolo"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg> Jouer</a><a class="quiet-link card-extra" data-kind="link" href="/fiches/les-crabes-du-tombolo/">Fiche</a><a class="quiet-link card-extra" data-kind="pdf" href="/pdf/Les_crabes_du_tombolo_CE1_pairs_impairs_exercices_et_correction.pdf" data-goatcounter-click="telecharger-crabes-tombolo-ce1">PDF</a></div>
               </div>
             </article>
@@ -335,7 +336,7 @@
             <article class="game-card" data-game="jeu-102" data-card-subject="maths">
               <div class="game-image"><a href="/jeux/crabes-des-salines/plage.webp" class="image-button" target="_blank" rel="noopener" aria-label="Agrandir la capture de Les crabes des Salines"><img src="/jeux/crabes-des-salines/plage.webp" alt="Les crabes et leurs pancartes sur la plage des Salines." loading="lazy" decoding="async"><span class="image-expand"><svg class="icon" aria-hidden="true"><use href="#i-zoom"/></svg></span></a></div>
               <div class="card-body"><p class="card-meta"><span class="card-levels">CP · CE1 · CE2</span> / Numération</p>
-                <h3 class="card-title">Les crabes des Salines</h3><p class="card-description">Cinq séries de nombres à ranger sur la plage des Salines. Choisis le niveau CP, CE1 ou CE2.</p><p class="game-competences" style="font-size:.81rem;line-height:1.45;margin:9px 0;color:var(--text-muted,#aebdd8)"><strong>Compétences travaillées :</strong> Comparer et ranger des nombres · Ordonner par ordre croissant ou décroissant</p>
+                <h3 class="card-title">Les crabes des Salines</h3><p style="margin:5px 0"><span style="display:inline-block;font-size:.78rem;border:1px solid #e8b15b;border-radius:6px;padding:3px 8px;color:#ffd18c">🌴 Création Martinique</span></p><p class="card-description">Cinq séries de nombres à ranger sur la plage des Salines. Choisis le niveau CP, CE1 ou CE2.</p><p class="game-competences" style="font-size:.81rem;line-height:1.45;margin:9px 0;color:var(--text-muted,#aebdd8)"><strong>Compétences travaillées :</strong> Comparer et ranger des nombres · Ordonner par ordre croissant ou décroissant</p>
                 <div class="card-actions"><a class="control control-outline play" href="/jeux/crabes-des-salines/" target="_blank" rel="noopener" aria-label="Jouer à Les crabes des Salines" data-goatcounter-click="jouer-crabes-des-salines"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg> Jouer</a><a class="quiet-link card-extra" data-kind="link" href="/fiches/les-crabes-des-salines/">Fiche</a><a class="quiet-link card-extra" data-kind="link" href="/jeux/crabes-des-salines/?niveau=CP">🦀 Jouer au CP (5 à 100)</a><a class="quiet-link card-extra" data-kind="link" href="/en/games/salines-crabs/?niveau=CP">🇬🇧 English CP</a><a class="quiet-link card-extra" data-kind="link" href="/es/games/crabes-des-salines/?niveau=CP">🇪🇸 Español CP</a></div>
               </div>
             </article>
@@ -657,7 +658,7 @@
             <article class="game-card" data-game="crabes-des-salines-alphabet" data-card-subject="francais">
               <div class="game-image"><a href="/jeux/crabes-des-salines-alphabet/capture-originale-haute-qualite.webp?v=jeu-reel-20261115" class="image-button" target="_blank" rel="noopener" aria-label="Agrandir la capture de Les crabes des Salines — Ordre alphabétique"><img src="/jeux/crabes-des-salines-alphabet/capture-originale-haute-qualite.webp?v=jeu-reel-20261115" alt="Capture du jeu Les crabes des Salines en vocabulaire : les crabes portent des mots à ranger dans l’ordre alphabétique." loading="lazy" decoding="async"><span class="image-expand"><svg class="icon" aria-hidden="true"><use href="#i-zoom"/></svg></span></a></div>
               <div class="card-body"><p class="card-meta"><span class="card-levels">CP · CE1 · CE2</span> / Vocabulaire</p>
-                <h3 class="card-title">Les crabes des Salines — Ordre alphabétique</h3><p class="card-description">Fais traverser les crabes en rangeant les mots dans l’ordre alphabétique.</p><p class="game-competences" style="font-size:.81rem;line-height:1.45;margin:9px 0;color:var(--text-muted,#aebdd8)"><strong>Compétences travaillées :</strong> Classer les mots dans l’ordre alphabétique · Enrichir son vocabulaire</p>
+                <h3 class="card-title">Les crabes des Salines — Ordre alphabétique</h3><p style="margin:5px 0"><span style="display:inline-block;font-size:.78rem;border:1px solid #e8b15b;border-radius:6px;padding:3px 8px;color:#ffd18c">🌴 Création Martinique</span></p><p class="card-description">Fais traverser les crabes en rangeant les mots dans l’ordre alphabétique.</p><p class="game-competences" style="font-size:.81rem;line-height:1.45;margin:9px 0;color:var(--text-muted,#aebdd8)"><strong>Compétences travaillées :</strong> Classer les mots dans l’ordre alphabétique · Enrichir son vocabulaire</p>
                 <div class="card-actions"><a class="control control-outline play" href="/jeux/crabes-des-salines-alphabet/" target="_blank" rel="noopener" aria-label="Jouer à Les crabes des Salines — Ordre alphabétique"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg> Jouer</a></div>
               </div>
             </article>
