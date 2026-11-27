@@ -2,7 +2,7 @@
 (() => {
   const language = (document.documentElement.lang || '').toLowerCase().split('-')[0];
   const playerLanguage = new URLSearchParams(location.search).get('lang');
-  if (!['en','es'].includes(language) && !['en','es'].includes(playerLanguage)) return;
+  if (!['en','es','zh'].includes(language) && !['en','es','zh'].includes(playerLanguage)) return;
   const seen = new WeakSet();
   const selectors = 'html,body,body > header,body > nav,body > footer,body > main,body > .wrap,body > .shell,body > .app,body > .page,body > .container,body > .wrapper,body > .game-wrapper,body > .game-container,body > #game-container,body > .wrap > header,body > .shell > header,body > .page > header,body > .container > header,body > .app > .shell > header,.decouvrir-autre-jeu';
   const green = value => [...value.matchAll(/rgba?\(\s*([\d.]+)[, ]+([\d.]+)[, ]+([\d.]+)/g)].some(m => { const r=+m[1],g=+m[2],b=+m[3]; return g>r+12 && g>b*.90 && g>25; });
