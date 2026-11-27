@@ -143,3 +143,5 @@
 
 /* Black outside the game, only for English and Spanish players. */
 html[lang="en"],html[lang="es"],html[lang="en"] body.arcade-player,html[lang="es"] body.arcade-player,html[lang="en"] .arcade-player #game-container,html[lang="es"] .arcade-player #game-container,html[lang="en"] .arcade-player iframe,html[lang="es"] .arcade-player iframe {background:#000!important;}
+
+html[lang="zh"],html[lang="zh"] body.arcade-player,html[lang="zh"] .arcade-player #game-container,html[lang="zh"] .arcade-player iframe {background:#000!important;}
