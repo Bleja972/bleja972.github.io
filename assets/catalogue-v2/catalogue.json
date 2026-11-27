@@ -1448,12 +1448,12 @@
     "ficheUrl": "/fiches/geometrie-ce1-colorier-les-figures/"
   },
   {
-    "title": "Calcul mental CE2 — Calcul Pop !",
+    "title": "Mission Calcul CE2 — Laboratoire orbital",
     "url": "https://bleja972.github.io/jouer/calcul-ce2/?jeu=jeu-76",
-    "description": "30 missions pour s’entraîner aux additions, soustractions, tables de multiplication, doubles et moitiés. Choisis 10 calculs à ton rythme ou 15 calculs en 3 minutes, avec des astuces et des corrections, sans ceintures.",
+    "description": "30 missions de calcul mental : additions, soustractions, tables de multiplication, doubles et moitiés. 10 calculs en mode libre ou 15 en 3 minutes, avec corrections et effets arcade.",
     "weekly": false,
     "image": "https://bleja972.github.io/assets/catalogue-v2/captures/jeu-76.webp",
-    "imageAlt": "Capture d’écran de Calcul Pop ! : une addition à compléter et un pavé numérique.",
+    "imageAlt": "Miniature de l’ancienne interface de calcul mental CE2 (nouvelle capture à venir)",
     "category": "calculs",
     "level": "CE2",
     "subject": "Mathématiques",
@@ -1469,7 +1469,7 @@
     "levels": [
       "CE2"
     ],
-    "short": "30 missions de calcul mental, à ton rythme ou en 3 minutes, avec astuces et corrections.",
+    "short": "30 missions de calcul mental · Mode libre ou défi de 3 minutes · Corrections et néons 3D.",
     "thumb": "/assets/catalogue-v2/captures/jeu-76.webp",
     "playClicks": 12,
     "ficheUrl": "/fiches/calcul-mental-ce2-calcul-pop/"
