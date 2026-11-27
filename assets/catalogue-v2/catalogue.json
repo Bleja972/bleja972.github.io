@@ -689,7 +689,16 @@
     "accessibility": [
       "audio"
     ],
-    "ficheUrl": "/fiches/le-chateau-des-nombres-vue-exterieure/"
+    "ficheUrl": "/fiches/le-chateau-des-nombres-vue-exterieure/",
+    "pdfUrl": "/pdf/dominos-representations-nombres-banquise-cp.pdf",
+    "pdfLabel": "Représentations des nombres CP",
+    "pdfResources": [
+      {
+        "url": "/pdf/dominos-representations-nombres-banquise-cp.pdf",
+        "label": "Représentations des nombres CP",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-100",
@@ -718,7 +727,16 @@
     "accessibility": [
       "audio"
     ],
-    "ficheUrl": "/fiches/le-chateau-des-nombres-cp/"
+    "ficheUrl": "/fiches/le-chateau-des-nombres-cp/",
+    "pdfUrl": "/pdf/dominos-representations-nombres-banquise-cp.pdf",
+    "pdfLabel": "Représentations des nombres CP",
+    "pdfResources": [
+      {
+        "url": "/pdf/dominos-representations-nombres-banquise-cp.pdf",
+        "label": "Représentations des nombres CP",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-99",
@@ -857,7 +875,16 @@
     "thumb": "/assets/catalogue-v2/captures/droite-t-rex-ce1.svg",
     "imageAlt": "T-Rex, droite graduée et champ de réponse à saisir.",
     "playClicks": 2,
-    "ficheUrl": "/fiches/les-droites-du-t-rex-ce1/"
+    "ficheUrl": "/fiches/les-droites-du-t-rex-ce1/",
+    "pdfUrl": "/pdf/Popeye_le_funambule_CE1.pdf",
+    "pdfLabel": "Droites graduées CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1.pdf",
+        "label": "Droites graduées CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-94",
@@ -883,7 +910,16 @@
     "thumb": "/assets/catalogue-v2/captures/droite-t-rex-anime-cp.svg",
     "imageAlt": "Exercice de droite graduée du CP avec trois réponses, entouré d’un T-Rex et d’un tricératops dans la forêt tropicale.",
     "playClicks": 6,
-    "ficheUrl": "/fiches/les-42-droites-du-t-rex-anime/"
+    "ficheUrl": "/fiches/les-42-droites-du-t-rex-anime/",
+    "pdfUrl": "/pdf/Popeye_le_funambule_CP.pdf",
+    "pdfLabel": "Droites graduées CP",
+    "pdfResources": [
+      {
+        "url": "/pdf/Popeye_le_funambule_CP.pdf",
+        "label": "Droites graduées CP",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-93",
@@ -909,7 +945,16 @@
     "thumb": "/assets/catalogue-v2/captures/droite-t-rex-cp.svg",
     "imageAlt": "T-Rex dans une vallée préhistorique et droite numérique avec trois réponses.",
     "playClicks": 6,
-    "ficheUrl": "/fiches/la-droite-numerique-du-t-rex/"
+    "ficheUrl": "/fiches/la-droite-numerique-du-t-rex/",
+    "pdfUrl": "/pdf/Popeye_le_funambule_CP.pdf",
+    "pdfLabel": "Droites graduées CP",
+    "pdfResources": [
+      {
+        "url": "/pdf/Popeye_le_funambule_CP.pdf",
+        "label": "Droites graduées CP",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-92",
@@ -936,7 +981,16 @@
     "thumb": "/assets/catalogue-v2/captures/dino-calculs.webp",
     "imageAlt": "Dino Calculs dans une vallée avec des dinosaures et une forêt tropicale.",
     "playClicks": 4,
-    "ficheUrl": "/fiches/dino-calculs-multiplications-et-divisions/"
+    "ficheUrl": "/fiches/dino-calculs-multiplications-et-divisions/",
+    "pdfUrl": "/pdf/dominos-41-multiplications-divisions-manga-ce2.pdf",
+    "pdfLabel": "Multiplications et divisions CE2",
+    "pdfResources": [
+      {
+        "url": "/pdf/dominos-41-multiplications-divisions-manga-ce2.pdf",
+        "label": "Multiplications et divisions CE2",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-91",
@@ -1015,7 +1069,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
     "imageAlt": "Bulle de multiplication dans une forêt magique, devant un château au bord du lac.",
     "playClicks": 0,
-    "ficheUrl": "/fiches/les-tables-enchantees-ce2/"
+    "ficheUrl": "/fiches/les-tables-enchantees-ce2/",
+    "pdfUrl": "/pdf/dominos-tables-2-10-blocs-ce2.pdf",
+    "pdfLabel": "Tables de multiplication CE2",
+    "pdfResources": [
+      {
+        "url": "/pdf/dominos-tables-2-10-blocs-ce2.pdf",
+        "label": "Tables de multiplication CE2",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-88",
@@ -1123,7 +1186,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-85.webp",
     "imageAlt": "Opération dans un ballon de chimie devant un savant dans son laboratoire.",
     "playClicks": 7,
-    "ficheUrl": "/fiches/le-labo-des-calculs/"
+    "ficheUrl": "/fiches/le-labo-des-calculs/",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "Calcul mental CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "Calcul mental CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-84",
@@ -1150,7 +1222,16 @@
     "thumb": "/assets/images/bannieres/openai/vallee-des-moities.webp?v=bannieres-20261115",
     "imageAlt": "Bannière du jeu La vallée des moitiés — Moitiés",
     "playClicks": 6,
-    "ficheUrl": "/fiches/la-vallee-des-moities/"
+    "ficheUrl": "/fiches/la-vallee-des-moities/",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "Calcul mental CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "Calcul mental CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-83",
@@ -1177,7 +1258,16 @@
     "thumb": "/assets/images/bannieres/openai/temple-des-doubles.webp?v=bannieres-20261115",
     "imageAlt": "Bannière du jeu Le temple des doubles — Doubles",
     "playClicks": 6,
-    "ficheUrl": "/fiches/le-temple-des-doubles/"
+    "ficheUrl": "/fiches/le-temple-des-doubles/",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "Calcul mental CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "Calcul mental CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-82",
@@ -1204,7 +1294,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-82.webp",
     "imageAlt": "Bulle de division dans un vaisseau spatial, avec un petit extraterrestre et une planète bleue.",
     "playClicks": 2,
-    "ficheUrl": "/fiches/divisions-galactiques/"
+    "ficheUrl": "/fiches/divisions-galactiques/",
+    "pdfUrl": "/pdf/dominos-41-multiplications-divisions-manga-ce2.pdf",
+    "pdfLabel": "Multiplications et divisions CE2",
+    "pdfResources": [
+      {
+        "url": "/pdf/dominos-41-multiplications-divisions-manga-ce2.pdf",
+        "label": "Multiplications et divisions CE2",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-81",
@@ -1231,7 +1330,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-81.webp",
     "imageAlt": "Bulle de multiplication dans une forêt magique, devant un château au bord du lac.",
     "playClicks": 8,
-    "ficheUrl": "/fiches/les-tables-enchantees/"
+    "ficheUrl": "/fiches/les-tables-enchantees/",
+    "pdfUrl": "/pdf/dominos-tables-fonds-marins-ce1.pdf",
+    "pdfLabel": "Tables de multiplication CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/dominos-tables-fonds-marins-ce1.pdf",
+        "label": "Tables de multiplication CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-80",
@@ -1391,7 +1499,16 @@
     "short": "Comparer deux nombres et reconnaître le plus grand.",
     "thumb": "/assets/catalogue-v2/captures/jeu-1.webp",
     "playClicks": 29,
-    "ficheUrl": "/fiches/bulles-en-duo-comparer-les-nombres/"
+    "ficheUrl": "/fiches/bulles-en-duo-comparer-les-nombres/",
+    "pdfUrl": "/pdf/Les_crabes_des_Salines_CE1.pdf",
+    "pdfLabel": "Comparer et ranger les nombres CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Les_crabes_des_Salines_CE1.pdf",
+        "label": "Comparer et ranger les nombres CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Bulles de corail — Pairs et impairs",
@@ -1419,7 +1536,16 @@
     "short": "Reconnaître les nombres pairs et les nombres impairs.",
     "thumb": "/assets/images/bannieres/openai/bulles-de-corail-pairs-impairs.webp?v=bannieres-20261115",
     "playClicks": 4,
-    "ficheUrl": "/fiches/bulles-de-corail-pairs-et-impairs/"
+    "ficheUrl": "/fiches/bulles-de-corail-pairs-et-impairs/",
+    "pdfUrl": "/pdf/Les_crabes_du_tombolo_CE1_pairs_impairs_exercices_et_correction.pdf",
+    "pdfLabel": "Pairs et impairs CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Les_crabes_du_tombolo_CE1_pairs_impairs_exercices_et_correction.pdf",
+        "label": "Pairs et impairs CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "L’Île mystérieuse — Soustractions",
@@ -1447,7 +1573,16 @@
     "short": "Trouver un résultat en retirant une quantité.",
     "thumb": "/assets/catalogue-v2/captures/jeu-3.webp",
     "playClicks": 11,
-    "ficheUrl": "/fiches/lile-mysterieuse-soustractions/"
+    "ficheUrl": "/fiches/lile-mysterieuse-soustractions/",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "Calcul mental CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "Calcul mental CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Le tour du monde en 80 jours — Compléments à 1 000",
@@ -1475,7 +1610,16 @@
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-4.webp",
     "playClicks": 5,
-    "ficheUrl": "/fiches/le-tour-du-monde-en-80-jours-complements-a-1-000/"
+    "ficheUrl": "/fiches/le-tour-du-monde-en-80-jours-complements-a-1-000/",
+    "pdfUrl": "/pdf/dominos-complements-1000-couleurs-ce1.pdf",
+    "pdfLabel": "Dominos · Compléments à 1 000",
+    "pdfResources": [
+      {
+        "url": "/pdf/dominos-complements-1000-couleurs-ce1.pdf",
+        "label": "Dominos · Compléments à 1 000",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Mission Nautilus — Compléments à 100",
@@ -1503,7 +1647,16 @@
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/images/bannieres/openai/mission-nautilus.webp?v=bannieres-20261115",
     "playClicks": 1,
-    "ficheUrl": "/fiches/mission-nautilus-complements-a-100/"
+    "ficheUrl": "/fiches/mission-nautilus-complements-a-100/",
+    "pdfUrl": "/pdf/dominos-complements-100-ballons-cp-ce1.pdf",
+    "pdfLabel": "Dominos · Compléments à 100",
+    "pdfResources": [
+      {
+        "url": "/pdf/dominos-complements-100-ballons-cp-ce1.pdf",
+        "label": "Dominos · Compléments à 100",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Voyage au centre de la Terre — Les presque doubles",
@@ -1532,7 +1685,16 @@
     "short": "Utiliser les doubles pour calculer plus facilement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-6.webp",
     "playClicks": 6,
-    "ficheUrl": "/fiches/voyage-au-centre-de-la-terre-les-presque-doubles/"
+    "ficheUrl": "/fiches/voyage-au-centre-de-la-terre-les-presque-doubles/",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "Calcul mental CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "Calcul mental CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Mission Mars — Additions de 11 à 19",
@@ -1561,7 +1723,16 @@
     "short": "Utiliser des résultats connus pour calculer une addition mentalement.",
     "thumb": "/assets/images/bannieres/openai/mission-mars.webp?v=bannieres-20261115",
     "playClicks": 2,
-    "ficheUrl": "/fiches/mission-mars-additions-de-11-a-19/"
+    "ficheUrl": "/fiches/mission-mars-additions-de-11-a-19/",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "Calcul mental CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "Calcul mental CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Mission Abysses — Additions de 11 à 19",
@@ -1590,7 +1761,16 @@
     "short": "Utiliser des résultats connus pour calculer une addition mentalement.",
     "thumb": "/assets/catalogue-v2/captures/jeu-8.webp",
     "playClicks": 1,
-    "ficheUrl": "/fiches/mission-abysses-additions-de-11-a-19/"
+    "ficheUrl": "/fiches/mission-abysses-additions-de-11-a-19/",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "Calcul mental CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "Calcul mental CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Happy Halloween — Compléments à 10",
@@ -1649,7 +1829,16 @@
     "playClicks": 0,
     "family": "halloween",
     "variantLabel": "Compléments à 100",
-    "ficheUrl": "/fiches/happy-halloween-complements-a-100/"
+    "ficheUrl": "/fiches/happy-halloween-complements-a-100/",
+    "pdfUrl": "/pdf/dominos-complements-100-ballons-cp-ce1.pdf",
+    "pdfLabel": "Dominos · Compléments à 100",
+    "pdfResources": [
+      {
+        "url": "/pdf/dominos-complements-100-ballons-cp-ce1.pdf",
+        "label": "Dominos · Compléments à 100",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Happy Halloween — Compléments à 1 000",
@@ -1679,7 +1868,16 @@
     "playClicks": 1,
     "family": "halloween",
     "variantLabel": "Compléments à 1 000",
-    "ficheUrl": "/fiches/happy-halloween-complements-a-1-000/"
+    "ficheUrl": "/fiches/happy-halloween-complements-a-1-000/",
+    "pdfUrl": "/pdf/dominos-complements-1000-couleurs-ce1.pdf",
+    "pdfLabel": "Dominos · Compléments à 1 000",
+    "pdfResources": [
+      {
+        "url": "/pdf/dominos-complements-1000-couleurs-ce1.pdf",
+        "label": "Dominos · Compléments à 1 000",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Compléments à 10 — la course de la sorcière",
@@ -1738,7 +1936,16 @@
     "playClicks": 1,
     "family": "sorciere",
     "variantLabel": "Compléments à 100",
-    "ficheUrl": "/fiches/complements-a-100-la-course-de-la-sorciere/"
+    "ficheUrl": "/fiches/complements-a-100-la-course-de-la-sorciere/",
+    "pdfUrl": "/pdf/dominos-complements-100-ballons-cp-ce1.pdf",
+    "pdfLabel": "Dominos · Compléments à 100",
+    "pdfResources": [
+      {
+        "url": "/pdf/dominos-complements-100-ballons-cp-ce1.pdf",
+        "label": "Dominos · Compléments à 100",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Compléments à 1 000 — la course de la sorcière",
@@ -1768,7 +1975,16 @@
     "playClicks": 0,
     "family": "sorciere",
     "variantLabel": "Compléments à 1 000",
-    "ficheUrl": "/fiches/complements-a-1-000-la-course-de-la-sorciere/"
+    "ficheUrl": "/fiches/complements-a-1-000-la-course-de-la-sorciere/",
+    "pdfUrl": "/pdf/dominos-complements-1000-couleurs-ce1.pdf",
+    "pdfLabel": "Dominos · Compléments à 1 000",
+    "pdfResources": [
+      {
+        "url": "/pdf/dominos-complements-1000-couleurs-ce1.pdf",
+        "label": "Dominos · Compléments à 1 000",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Compléments à 10 — le défi de l’araignée",
@@ -1827,7 +2043,16 @@
     "playClicks": 3,
     "family": "araignee",
     "variantLabel": "Compléments à 100",
-    "ficheUrl": "/fiches/complements-a-100-le-defi-de-laraignee/"
+    "ficheUrl": "/fiches/complements-a-100-le-defi-de-laraignee/",
+    "pdfUrl": "/pdf/dominos-complements-100-ballons-cp-ce1.pdf",
+    "pdfLabel": "Dominos · Compléments à 100",
+    "pdfResources": [
+      {
+        "url": "/pdf/dominos-complements-100-ballons-cp-ce1.pdf",
+        "label": "Dominos · Compléments à 100",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Compléments à 1 000 — le défi de l’araignée",
@@ -1856,7 +2081,16 @@
     "playClicks": 0,
     "family": "araignee",
     "variantLabel": "Compléments à 1 000",
-    "ficheUrl": "/fiches/complements-a-1-000-le-defi-de-laraignee/"
+    "ficheUrl": "/fiches/complements-a-1-000-le-defi-de-laraignee/",
+    "pdfUrl": "/pdf/dominos-complements-1000-couleurs-ce1.pdf",
+    "pdfLabel": "Dominos · Compléments à 1 000",
+    "pdfResources": [
+      {
+        "url": "/pdf/dominos-complements-1000-couleurs-ce1.pdf",
+        "label": "Dominos · Compléments à 1 000",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Je revois les nombres jusqu’à 1000",
@@ -1911,7 +2145,16 @@
     "thumb": "/assets/catalogue-v2/captures/mission-problemes-barres.webp",
     "imageAlt": "Aperçu de Problèmes — Période 1 : comprendre une situation et choisir un calcul pour la résoudre.",
     "playClicks": 42,
-    "ficheUrl": "/fiches/problemes-periode-1/"
+    "ficheUrl": "/fiches/problemes-periode-1/",
+    "pdfUrl": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+    "pdfLabel": "Problèmes avec modèles en barres CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+        "label": "Problèmes avec modèles en barres CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "crabes-des-salines-alphabet",
@@ -2380,7 +2623,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-32.webp",
     "imageAlt": "Aperçu de Comparer deux nombres : comparer deux nombres et reconnaître le plus grand.",
     "playClicks": 10,
-    "ficheUrl": "/fiches/comparer-deux-nombres/"
+    "ficheUrl": "/fiches/comparer-deux-nombres/",
+    "pdfUrl": "/pdf/Les_crabes_des_Salines_CE1.pdf",
+    "pdfLabel": "Comparer et ranger les nombres CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Les_crabes_des_Salines_CE1.pdf",
+        "label": "Comparer et ranger les nombres CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Ranger des nombres",
@@ -2407,7 +2659,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-33.webp",
     "imageAlt": "Aperçu de Ranger des nombres : ordonner des nombres du plus petit au plus grand.",
     "playClicks": 4,
-    "ficheUrl": "/fiches/ranger-des-nombres/"
+    "ficheUrl": "/fiches/ranger-des-nombres/",
+    "pdfUrl": "/pdf/Les_crabes_des_Salines_CE1.pdf",
+    "pdfLabel": "Comparer et ranger les nombres CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Les_crabes_des_Salines_CE1.pdf",
+        "label": "Comparer et ranger les nombres CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Lire et écrire les nombres",
@@ -2545,7 +2806,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-38.webp",
     "imageAlt": "Aperçu de Reconnaître les nombres pairs et impairs : reconnaître les nombres pairs et les nombres impairs.",
     "playClicks": 3,
-    "ficheUrl": "/fiches/reconnaitre-les-nombres-pairs-et-impairs/"
+    "ficheUrl": "/fiches/reconnaitre-les-nombres-pairs-et-impairs/",
+    "pdfUrl": "/pdf/Les_crabes_du_tombolo_CE1_pairs_impairs_exercices_et_correction.pdf",
+    "pdfLabel": "Pairs et impairs CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Les_crabes_du_tombolo_CE1_pairs_impairs_exercices_et_correction.pdf",
+        "label": "Pairs et impairs CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Compléter des suites",
@@ -2599,7 +2869,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-40.webp",
     "imageAlt": "Aperçu de La droite graduée mystère : repérer la place d’un nombre sur une droite graduée.",
     "playClicks": 6,
-    "ficheUrl": "/fiches/la-droite-graduee-mystere/"
+    "ficheUrl": "/fiches/la-droite-graduee-mystere/",
+    "pdfUrl": "/pdf/Popeye_le_funambule_CE1.pdf",
+    "pdfLabel": "Droites graduées CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1.pdf",
+        "label": "Droites graduées CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Le défi de la droite graduée",
@@ -2626,7 +2905,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-41.webp",
     "imageAlt": "Aperçu de Le défi de la droite graduée : repérer la place d’un nombre sur une droite graduée.",
     "playClicks": 1,
-    "ficheUrl": "/fiches/le-defi-de-la-droite-graduee/"
+    "ficheUrl": "/fiches/le-defi-de-la-droite-graduee/",
+    "pdfUrl": "/pdf/Popeye_le_funambule_CE1.pdf",
+    "pdfLabel": "Droites graduées CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1.pdf",
+        "label": "Droites graduées CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Décomposer un nombre",
@@ -2761,7 +3049,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-46.webp",
     "imageAlt": "Aperçu de Ordonner les nombres : ordonner des nombres du plus petit au plus grand.",
     "playClicks": 1,
-    "ficheUrl": "/fiches/ordonner-les-nombres/"
+    "ficheUrl": "/fiches/ordonner-les-nombres/",
+    "pdfUrl": "/pdf/Les_crabes_des_Salines_CE1.pdf",
+    "pdfLabel": "Comparer et ranger les nombres CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Les_crabes_des_Salines_CE1.pdf",
+        "label": "Comparer et ranger les nombres CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Chronomaths CE1 — 20 défis",
@@ -3076,7 +3373,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-53.webp",
     "imageAlt": "Aperçu de Additions avec passage par 10 : utiliser des résultats connus pour calculer une addition mentalement.",
     "playClicks": 6,
-    "ficheUrl": "/fiches/additions-avec-passage-par-10/"
+    "ficheUrl": "/fiches/additions-avec-passage-par-10/",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "Calcul mental CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "Calcul mental CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Soustraire un nombre à 10",
@@ -3105,7 +3411,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-54.webp",
     "imageAlt": "Aperçu de Soustraire un nombre à 10 : trouver un résultat en retirant une quantité.",
     "playClicks": 3,
-    "ficheUrl": "/fiches/soustraire-un-nombre-a-10/"
+    "ficheUrl": "/fiches/soustraire-un-nombre-a-10/",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "Calcul mental CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "Calcul mental CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Les doubles",
@@ -3134,7 +3449,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-55.webp",
     "imageAlt": "Aperçu de Les doubles : utiliser les doubles pour calculer plus facilement.",
     "playClicks": 7,
-    "ficheUrl": "/fiches/les-doubles/"
+    "ficheUrl": "/fiches/les-doubles/",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "Calcul mental CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "Calcul mental CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Les presque doubles",
@@ -3163,7 +3487,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-56.webp",
     "imageAlt": "Aperçu de Les presque doubles : utiliser les doubles pour calculer plus facilement.",
     "playClicks": 5,
-    "ficheUrl": "/fiches/les-presque-doubles/"
+    "ficheUrl": "/fiches/les-presque-doubles/",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "Calcul mental CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "Calcul mental CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Les compléments à 10",
@@ -3192,7 +3525,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-57.webp",
     "imageAlt": "Aperçu de Les compléments à 10 : trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "playClicks": 4,
-    "ficheUrl": "/fiches/les-complements-a-10/"
+    "ficheUrl": "/fiches/les-complements-a-10/",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "Calcul mental CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "Calcul mental CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Ajouter et soustraire des dizaines",
@@ -3220,7 +3562,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-58.webp",
     "imageAlt": "Aperçu de Ajouter et soustraire des dizaines : trouver un résultat en retirant une quantité.",
     "playClicks": 3,
-    "ficheUrl": "/fiches/ajouter-et-soustraire-des-dizaines/"
+    "ficheUrl": "/fiches/ajouter-et-soustraire-des-dizaines/",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "Calcul mental CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "Calcul mental CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Les petites additions",
@@ -3249,7 +3600,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-59.webp",
     "imageAlt": "Aperçu de Les petites additions : utiliser des résultats connus pour calculer une addition mentalement.",
     "playClicks": 5,
-    "ficheUrl": "/fiches/les-petites-additions/"
+    "ficheUrl": "/fiches/les-petites-additions/",
+    "pdfUrl": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+    "pdfLabel": "Calcul mental CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "Calcul mental CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Calcul mental — Période 1",
@@ -3438,7 +3798,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-65.webp",
     "imageAlt": "Aperçu de Trouver le tout : comprendre une situation et choisir un calcul pour la résoudre.",
     "playClicks": 6,
-    "ficheUrl": "/fiches/trouver-le-tout/"
+    "ficheUrl": "/fiches/trouver-le-tout/",
+    "pdfUrl": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+    "pdfLabel": "Problèmes avec modèles en barres CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+        "label": "Problèmes avec modèles en barres CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Trouver une partie",
@@ -3466,7 +3835,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-66.webp",
     "imageAlt": "Aperçu de Trouver une partie : comprendre une situation et choisir un calcul pour la résoudre.",
     "playClicks": 1,
-    "ficheUrl": "/fiches/trouver-une-partie/"
+    "ficheUrl": "/fiches/trouver-une-partie/",
+    "pdfUrl": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+    "pdfLabel": "Problèmes avec modèles en barres CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+        "label": "Problèmes avec modèles en barres CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Ajouter, gagner, avancer",
@@ -3494,7 +3872,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-67.webp",
     "imageAlt": "Aperçu de Ajouter, gagner, avancer : comprendre une situation et choisir un calcul pour la résoudre.",
     "playClicks": 1,
-    "ficheUrl": "/fiches/ajouter-gagner-avancer/"
+    "ficheUrl": "/fiches/ajouter-gagner-avancer/",
+    "pdfUrl": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+    "pdfLabel": "Problèmes avec modèles en barres CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+        "label": "Problèmes avec modèles en barres CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Soustraire, perdre, reculer",
@@ -3522,7 +3909,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-68.webp",
     "imageAlt": "Aperçu de Soustraire, perdre, reculer : comprendre une situation et choisir un calcul pour la résoudre.",
     "playClicks": 1,
-    "ficheUrl": "/fiches/soustraire-perdre-reculer/"
+    "ficheUrl": "/fiches/soustraire-perdre-reculer/",
+    "pdfUrl": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+    "pdfLabel": "Problèmes avec modèles en barres CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+        "label": "Problèmes avec modèles en barres CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Résoudre en deux étapes",
@@ -3550,7 +3946,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-69.webp",
     "imageAlt": "Aperçu de Résoudre en deux étapes : comprendre une situation et choisir un calcul pour la résoudre.",
     "playClicks": 2,
-    "ficheUrl": "/fiches/resoudre-en-deux-etapes/"
+    "ficheUrl": "/fiches/resoudre-en-deux-etapes/",
+    "pdfUrl": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+    "pdfLabel": "Problèmes avec modèles en barres CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+        "label": "Problèmes avec modèles en barres CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Comparer deux quantités",
@@ -3578,7 +3983,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-70.webp",
     "imageAlt": "Aperçu de Comparer deux quantités : comprendre une situation et choisir un calcul pour la résoudre.",
     "playClicks": 0,
-    "ficheUrl": "/fiches/comparer-deux-quantites/"
+    "ficheUrl": "/fiches/comparer-deux-quantites/",
+    "pdfUrl": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+    "pdfLabel": "Problèmes avec modèles en barres CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+        "label": "Problèmes avec modèles en barres CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Problèmes avec modèles en barres — Atelier 4",
@@ -3642,7 +4056,16 @@
     "thumb": "/assets/catalogue-v2/captures/jeu-72.webp",
     "imageAlt": "Aperçu de Problèmes — Période 2 : comprendre une situation et choisir un calcul pour la résoudre.",
     "playClicks": 5,
-    "ficheUrl": "/fiches/problemes-periode-2/"
+    "ficheUrl": "/fiches/problemes-periode-2/",
+    "pdfUrl": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+    "pdfLabel": "Problèmes avec modèles en barres CE1",
+    "pdfResources": [
+      {
+        "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+        "label": "Problèmes avec modèles en barres CE1",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "Le grain de riz — aide DYS",
