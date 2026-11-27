@@ -272,7 +272,7 @@
   {
     "id": "en-ours-de-la-banquise",
     "title": "Ice Floe Bear",
-    "url": "https://bleja972.github.io/jeux/ours-de-la-banquise/",
+    "url": "https://bleja972.github.io/jeux/ours-de-la-banquise-en/",
     "description": "Program a path across the ice to collect fish.",
     "levels": [
       "CE1"
@@ -287,7 +287,7 @@
     "weekly": false,
     "new": true,
     "sourceId": "ours-de-la-banquise",
-    "contentLanguage": "fr",
+    "contentLanguage": "en",
     "thumb": "/assets/en-captures/en-ours-de-la-banquise-live.webp",
     "imageAlt": "French gameplay screenshot of Ice Floe Bear"
   },
