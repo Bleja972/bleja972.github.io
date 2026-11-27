@@ -163,7 +163,6 @@ function activateCatalogue(source) {
 
   function getLink(next, fragment = location.hash) {
     const params = new URLSearchParams();
-    if (new URLSearchParams(location.search).get('lang') === language) params.set('lang', language);
     for (const [key, value] of Object.entries(next)) {
       if (value !== defaults[key]) params.set(key, key === 'matiere' ? legacySubjects[value] || value : value);
     }
