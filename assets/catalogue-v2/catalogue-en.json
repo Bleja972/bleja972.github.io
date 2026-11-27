@@ -1083,9 +1083,9 @@
   },
   {
     "id": "en-3",
-    "title": "Calcul Pop! — Year 4 mental maths",
-    "url": "/en/games/year-4-calcul-pop/",
-    "description": "Choose from 30 colourful mental maths missions, with hints and a timed challenge.",
+    "title": "Mental Maths Mission — Year 4",
+    "url": "/jeux/calcul-mental-ce2-calcul-pop/jouer/arcade-en.html",
+    "description": "30 orbital mental maths missions: addition, subtraction, times tables, doubles and halves. Untimed or 3-minute challenges.",
     "levels": [
       "CE2"
     ],
@@ -1095,13 +1095,14 @@
     "groupName": "Mental maths",
     "skill": "mental",
     "skillName": "Mental maths",
-    "objective": "Choose from 30 colourful mental maths missions, with hints and a timed challenge.",
+    "objective": "30 orbital mental maths missions: addition, subtraction, times tables, doubles and halves. Untimed or 3-minute challenges.",
     "weekly": false,
     "new": true,
     "thumb": "/assets/en-captures/en-3-live.webp",
-    "imageAlt": "English gameplay screenshot of Calcul Pop! — Year 4 mental maths",
+    "imageAlt": "Mental Maths Mission — Year 4",
     "sourceId": "jeu-76",
-    "contentLanguage": "en"
+    "contentLanguage": "en",
+    "short": "30 orbital mental maths missions: addition, subtraction, times tables, doubles and halves. Untimed or 3-minute challenges."
   },
   {
     "title": "Number bubble pairs — Compare numbers",
