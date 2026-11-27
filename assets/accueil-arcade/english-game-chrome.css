@@ -1,0 +1,24 @@
+
+/* French arcade palette, restricted to the external chrome of English game pages.
+   Keep game artwork, board colours, feedback, and background images intact. */
+html { background-color:#000 !important; }
+body { background-color:#000 !important; }
+.bleja-english-flat-background { background-image:none !important; background-color:#000 !important; }
+.bleja-english-outer-panel {
+  background-color:#0d0e14 !important;
+  background-image:linear-gradient(105deg,#101b38,#080c18 65%,#18102a) !important;
+  border-color:#355b94 !important;
+  color:#f4f5ff !important;
+}
+.bleja-english-outer-panel a { color:#f4f5ff; }
+.bleja-landscape-tools:not([data-landscape-in-flow]) { background-color:transparent; }
+.bleja-landscape-tools #horizontal-toggle {
+  border:1px solid #b1f5ff !important; border-radius:10px !important;
+  color:#08182c !important; background:linear-gradient(180deg,#b1f5ff,#62d8fa 47%,#40b9ed) !important;
+  box-shadow:inset 0 1px #ffffffb3,inset 0 -2px #09122635,0 4px #155381,0 0 18px #4bd6ff5c !important;
+}
+.bleja-landscape-tools #horizontal-status { border:1px solid #7261ac !important;background:#17172c !important;color:#f4f5ff !important; }
+.decouvrir-autre-jeu {
+  background:#0d0e14 !important; border-color:#364567 !important; color:#f4f5ff !important;
+}
+.decouvrir-autre-jeu a { background:linear-gradient(#ffe9af,#ffd480 47%,#f2b95f) !important; border-color:#ffe9af !important; color:#08182c !important; box-shadow:inset 0 1px #fff9,0 4px #835523,0 0 18px #ffce7155 !important; }
