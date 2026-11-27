@@ -11,18 +11,19 @@
   <link rel="stylesheet" href="/assets/accueil-arcade/player.css?v=2">
   <script>const selectedLanguage=new URLSearchParams(location.search).get('lang');if(['fr','en','es','zh'].includes(selectedLanguage))document.documentElement.lang=selectedLanguage;</script>
   <script defer src="/assets/affichage-horizontal.js?v=arcade-player-1"></script>
-  <script defer src="/assets/landscape-game-frame.js?v=arcade-player-4"></script>
+  <script defer src="/assets/landscape-game-frame.js?v=fiche-navigation-1"></script>
 <style>html[lang="en"],html[lang="en"] body.arcade-player { background:#000 !important; } html[lang="en"] .arcade-player #game-container { background:#000 !important; } html[lang="en"] .arcade-player iframe { background:#0a1121; }</style>
 </head>
 <body class="arcade-player">
   <header class="horizontal-tools arcade-player-bar" data-landscape-in-flow>
     <span class="arcade-sparks" aria-hidden="true"></span>
-    <a class="arcade-player-home" href="/?lang=fr" aria-label="Accueil">
+    <a class="arcade-player-home" href="/" aria-label="Accueil">
       <img src="/assets/accueil-arcade/logo.svg" alt="" width="38" height="38">
     </a>
     <h1 id="game-title" class="arcade-player-title">Jeux éducatifs</h1>
     <nav class="game-links arcade-player-links" aria-label="Navigation du jeu">
       <a id="catalogue-link" class="control control-outline"></a>
+      <a id="fiche-link" hidden class="control control-outline">← Voir la fiche pédagogique</a>
       <a id="direct-link" hidden target="_blank" rel="noopener" class="control control-outline">Ouvrir le jeu seul</a>
       <a id="game-pdf-link" hidden download class="control control-primary arcade-player-sheet">PDF à imprimer</a>
       <button class="control control-primary" id="horizontal-toggle" type="button" aria-pressed="false">Affichage horizontal</button>
