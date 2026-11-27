@@ -33,6 +33,33 @@
     ]
   },
   {
+    "id": "mission-enlever-9-19-29-ce1",
+    "sourceId": "mission-enlever-9-19-29-ce1",
+    "slug": "mision-restar-9-19-29-hasta-999",
+    "title": "Misión −9, −19, −29 — Hasta 999",
+    "url": "/es/games/mision-restar-9-19-29-hasta-999/",
+    "path": "/es/games/mision-restar-9-19-29-hasta-999/",
+    "description": "Resta 9, 19 o 29 a números de dos y tres cifras: quita decenas y añade una unidad.",
+    "short": "Resta 9, 19 o 29 a números de dos y tres cifras: quita decenas y añade una unidad.",
+    "objective": "Resta 9, 19 o 29 a números de dos y tres cifras: quita decenas y añade una unidad.",
+    "levels": [
+      "CE1",
+      "CE2"
+    ],
+    "level": "CE1",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "skill": "mental",
+    "skillName": "Cálculo mental",
+    "groupName": "Cálculo mental",
+    "weekly": false,
+    "new": true,
+    "contentLanguage": "es",
+    "thumb": "/assets/catalogue-v2/captures/mission-enlever-9-19-29-ce1-es.svg",
+    "image": "https://bleja972.github.io/assets/catalogue-v2/captures/mission-enlever-9-19-29-ce1-es.svg",
+    "imageAlt": "Vista ilustrativa de la misión de resta con centenas, decenas y unidades"
+  },
+  {
     "id": "mission-ajouter-9-19-29",
     "sourceId": "mission-ajouter-9-19-29",
     "slug": "mision-sumar-9-19-29",
