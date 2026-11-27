@@ -35,7 +35,7 @@
   const cataloguePath = lang === 'fr' ? '/assets/catalogue-v2/catalogue.json' : '/assets/catalogue-v2/catalogue-' + lang + '.json';
   const homePath = lang === 'fr' ? '/' : '/' + lang + '/';
 
-  home.href = homePath + '?lang=' + lang;
+  home.href = homePath;
   home.setAttribute('aria-label', text.home);
   back.href = home.href + '#catalogue';
   back.textContent = text.back;
@@ -105,6 +105,16 @@
     direct.href = url.href;
     direct.hidden = false;
     showPdf(game);
+    if (lang === 'fr') {
+      const fiche = get('fiche-link');
+      const catalogue = await json(cataloguePath).catch(() => []);
+      const entry = catalogue.find(item => item.id === id);
+      if (fiche && entry?.ficheUrl && /^\/fiches\/[a-z0-9-]+\/$/.test(entry.ficheUrl)) {
+        fiche.href = entry.ficheUrl;
+        fiche.hidden = false;
+        fiche.setAttribute('aria-label', 'Voir la fiche pédagogique de ' + entry.title);
+      }
+    }
 
     const frame = document.createElement('iframe');
     frame.title = game.title;
