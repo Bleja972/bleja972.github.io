@@ -23,7 +23,14 @@
     "pdfUrl": "/pdf/adding-9-19-29-worksheets-zh.pdf",
     "pdfLabel": "打印练习 PDF",
     "short": "用百、十和一练习给两位数或三位数加 9、19 或 29。",
-    "contentLanguage": "zh"
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/adding-9-19-29-worksheets-zh.pdf",
+        "label": "打印练习 PDF",
+        "language": "zh"
+      }
+    ]
   },
   {
     "id": "mission-ajouter-9-19-29",
@@ -51,7 +58,14 @@
     "thumb": "/assets/catalogue-v2/captures/mission-ajouter-9-19-29.webp",
     "imageAlt": "游戏画面，包含十、划掉的一个一和数字键盘",
     "short": "先加整十数，再去掉一个一，练习加 9、19 或 29。",
-    "contentLanguage": "zh"
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/adding-9-19-29-worksheets-zh.pdf",
+        "label": "打印练习 PDF",
+        "language": "zh"
+      }
+    ]
   },
   {
     "id": "mission-fractions-ce1-revisions",
@@ -219,7 +233,14 @@
     "imageAlt": "游戏截图：轨道数字 — 蒙台梭利数字卡 CE2",
     "playClicks": 2,
     "short": "用数字卡片组合和拆分多位数。",
-    "contentLanguage": "zh"
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/Cartons_Montessori_CE2_systeme_solaire_exercices_et_correction.pdf",
+        "label": "4 fiches élèves + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "cartons-montessori-cp",
@@ -267,7 +288,14 @@
     "imageAlt": "游戏截图：数字的魔法 — CE1",
     "playClicks": 4,
     "short": "用数字卡片组合和拆分1000以内的数。",
-    "contentLanguage": "zh"
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/Cartons_Montessori_CE1_exercices_et_correction.pdf",
+        "label": "4 fiches élèves + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "ours-de-la-banquise",
@@ -363,7 +391,14 @@
     "imageAlt": "游戏截图：沙洲上的螃蟹",
     "playClicks": 1,
     "short": "区分偶数和奇数，帮助螃蟹过河。",
-    "contentLanguage": "zh"
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/Les_crabes_du_tombolo_CE1_pairs_impairs_exercices_et_correction.pdf",
+        "label": "Pairs et impairs : 3 fiches élèves + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-103",
@@ -389,7 +424,34 @@
     "imageAlt": "游戏截图：大力水手的数轴",
     "playClicks": 7,
     "short": "看刻度并找出正确的数字。",
-    "contentLanguage": "zh"
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/Popeye_le_funambule_CP.pdf",
+        "label": "CP",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1.pdf",
+        "label": "CE1",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1_8_exercices.pdf",
+        "label": "CE1 — 8 exercices",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE1_pas_a_deviner.pdf",
+        "label": "CE1 — Pas à deviner",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Popeye_le_funambule_CE2.pdf",
+        "label": "CE2",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-102",
@@ -415,7 +477,24 @@
     "imageAlt": "游戏截图：盐滩上的螃蟹",
     "playClicks": 3,
     "short": "从小到大或从大到小排列数字。",
-    "contentLanguage": "zh"
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/Les_crabes_des_Salines_CP.pdf",
+        "label": "CP",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Les_crabes_des_Salines_CE1.pdf",
+        "label": "CE1",
+        "language": "fr"
+      },
+      {
+        "url": "/pdf/Les_crabes_des_Salines_CE2.pdf",
+        "label": "CE2",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-101",
@@ -535,7 +614,14 @@
     "imageAlt": "游戏截图：弗里茨的星球 — CE1",
     "playClicks": 2,
     "short": "找出个位、整十与整百的邻数。",
-    "contentLanguage": "zh"
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/Fritz_encadrements_CE1_exercices_et_correction.pdf",
+        "label": "Encadrements : 30 exercices + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "jeu-96",
@@ -2334,7 +2420,14 @@
     "imageAlt": "游戏截图：轨道减法：不退位",
     "playClicks": 0,
     "short": "利用数位积木逐列计算不退位减法。",
-    "contentLanguage": "zh"
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/Soustractions_CE1_sans_echange_tableaux_noir_blanc.pdf",
+        "label": "Fiches de soustractions C–D–U + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "不进位竖式加法",
@@ -2363,7 +2456,14 @@
     "imageAlt": "游戏截图：不进位竖式加法",
     "sourceId": "jeu-50",
     "playClicks": 6,
-    "contentLanguage": "zh"
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/Additions_posees_sans_retenue_CE1_7_fiches_et_corriges.pdf",
+        "label": "Sans retenue : 7 fiches + corrigés (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "进位竖式加法",
@@ -2730,7 +2830,14 @@
     "imageAlt": "游戏截图：心算 — 第1阶段",
     "sourceId": "jeu-60",
     "playClicks": 19,
-    "contentLanguage": "zh"
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/Calcul_mental_CE1_Periode_1_une_competence_par_page.pdf",
+        "label": "7 compétences : exercices et corrigés (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "数字小鱼",
@@ -2759,7 +2866,14 @@
     "imageAlt": "游戏截图：数字小鱼",
     "sourceId": "jeu-61",
     "playClicks": 5,
-    "contentLanguage": "zh"
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/Les_poissons_des_nombres_CE1_exercices_et_corrige_sans_fond.pdf?v=9pages-20261115",
+        "label": "Exercices CE1 — 5 pages de chaînes de poissons + calculs et corrigés (PDF, 9 pages)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "计算赛跑",
@@ -3050,7 +3164,14 @@
     "imageAlt": "游戏截图：条形图应用题 — 第4组",
     "sourceId": "jeu-71",
     "playClicks": 2,
-    "contentLanguage": "zh"
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/Problemes_CE1_modeles_en_barres_PROBLEMES4_exercices_et_correction.pdf",
+        "label": "7 problèmes avec barres + corrigé (PDF)",
+        "language": "fr"
+      }
+    ]
   },
   {
     "title": "应用题 — 第2阶段",
@@ -3102,6 +3223,13 @@
     "imageAlt": "游戏截图：太空飞船：不退位减法",
     "playClicks": 1,
     "short": "在太空飞船中使用数位积木练习不退位减法。",
-    "contentLanguage": "zh"
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/Soustractions_CE1_sans_echange_tableaux_noir_blanc.pdf",
+        "label": "CE1 — Sans échange",
+        "language": "fr"
+      }
+    ]
   }
 ]
