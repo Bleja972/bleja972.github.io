@@ -151,7 +151,9 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-1.svg",
     "imageAlt": "Aperçu illustré d'une partie de Mission Calcul CM1 livret 1 : missions 1 à 7, exercices et calculs de multiplication à compléter, avec boutons lumineux.",
-    "playClicks": 0
+    "playClicks": 0,
+    "family": "cm1-livrets",
+    "variantLabel": "Livret 1"
   },
   {
     "id": "mission-calcul-cm1-livret-5",
@@ -176,7 +178,9 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-5.svg",
     "imageAlt": "Aperçu illustré du jeu Mission Calcul CM1 Livret 5 avec les missions 29 à 35 et des opérations sur les demis et les quarts.",
-    "playClicks": 0
+    "playClicks": 0,
+    "family": "cm1-livrets",
+    "variantLabel": "Livret 5"
   },
   {
     "id": "mission-calcul-cm1-livret-4",
@@ -201,7 +205,9 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-4.svg",
     "imageAlt": "Vignette illustrée du jeu Mission Calcul CM1 Livret 4 en cours, avec les missions 22 à 28 et les calculs 75 moins 8, 26 plus 38 et 91 moins 38.",
-    "playClicks": 0
+    "playClicks": 0,
+    "family": "cm1-livrets",
+    "variantLabel": "Livret 4"
   },
   {
     "id": "mission-calcul-cm1-livret-3",
@@ -226,7 +232,9 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-3.svg",
     "imageAlt": "Illustration du jeu Mission Calcul CM1 Livret 3 montrant la séquence 15 et des opérations de multiplication par quatre, avec des boutons lumineux.",
-    "playClicks": 0
+    "playClicks": 0,
+    "family": "cm1-livrets",
+    "variantLabel": "Livret 3"
   },
   {
     "id": "mission-calcul-cm1-livret-2",
@@ -251,7 +259,9 @@
     "new": true,
     "thumb": "/assets/catalogue-v2/captures/mission-calcul-cm1-livret-2.svg",
     "imageAlt": "Aperçu illustré du jeu Mission Calcul CM1 : fond noir, sept boutons de missions aux néons multicolores et trois boutons d'exercices lumineux.",
-    "playClicks": 0
+    "playClicks": 0,
+    "family": "cm1-livrets",
+    "variantLabel": "Livret 2"
   },
   {
     "id": "cartons-montessori-ce2",
@@ -357,7 +367,10 @@
     "imageAlt": "Bannière du jeu Le genre des noms — Masculin ou féminin ?",
     "pdfUrl": "/pdf/Le_genre_des_noms_CE1_exercices_et_correction.pdf",
     "pdfLabel": "Fiche à imprimer + correction (PDF)",
-    "playClicks": 5
+    "playClicks": 5,
+    "accessibility": [
+      "audio"
+    ]
   },
   {
     "id": "ours-de-la-banquise",
@@ -563,7 +576,10 @@
     "short": "Deux missions audio, de 0 à 99, devant un château médiéval réaliste.",
     "thumb": "/jeux/chateau-nombres-exterieur-cp/assets/apercu.webp",
     "imageAlt": "Tableau de 0 à 99 devant les tours et les remparts d’un château médiéval vu de l’extérieur.",
-    "playClicks": 10
+    "playClicks": 10,
+    "accessibility": [
+      "audio"
+    ]
   },
   {
     "id": "jeu-100",
@@ -588,7 +604,10 @@
     "short": "Deux missions audio pour découvrir les familles et les nombres de 0 à 99.",
     "thumb": "/jeux/chateau-nombres-cp/assets/apercu.webp",
     "imageAlt": "Aperçu du tableau de 0 à 99 dans un château médiéval, avec des familles colorées.",
-    "playClicks": 7
+    "playClicks": 7,
+    "accessibility": [
+      "audio"
+    ]
   },
   {
     "id": "jeu-99",
@@ -917,7 +936,10 @@
     "short": "42 problèmes à résoudre avec des modèles en barres et une lecture des énoncés.",
     "thumb": "/assets/catalogue-v2/captures/problemes-cp-periode-1.svg",
     "imageAlt": "Modèle en barres pour trouver les carottes manquantes.",
-    "playClicks": 8
+    "playClicks": 8,
+    "accessibility": [
+      "audio"
+    ]
   },
   {
     "id": "jeu-86",
@@ -1444,7 +1466,9 @@
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-9.webp",
-    "playClicks": 8
+    "playClicks": 8,
+    "family": "halloween",
+    "variantLabel": "Compléments à 10"
   },
   {
     "title": "Happy Halloween — Compléments à 100",
@@ -1471,7 +1495,9 @@
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-10.webp",
-    "playClicks": 0
+    "playClicks": 0,
+    "family": "halloween",
+    "variantLabel": "Compléments à 100"
   },
   {
     "title": "Happy Halloween — Compléments à 1 000",
@@ -1498,7 +1524,9 @@
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-11.webp",
-    "playClicks": 1
+    "playClicks": 1,
+    "family": "halloween",
+    "variantLabel": "Compléments à 1 000"
   },
   {
     "title": "Compléments à 10 — la course de la sorcière",
@@ -1524,7 +1552,9 @@
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-12.webp",
-    "playClicks": 6
+    "playClicks": 6,
+    "family": "sorciere",
+    "variantLabel": "Compléments à 10"
   },
   {
     "title": "Compléments à 100 — la course de la sorcière",
@@ -1551,7 +1581,9 @@
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-13.webp",
-    "playClicks": 1
+    "playClicks": 1,
+    "family": "sorciere",
+    "variantLabel": "Compléments à 100"
   },
   {
     "title": "Compléments à 1 000 — la course de la sorcière",
@@ -1578,7 +1610,9 @@
     ],
     "short": "Trouver le nombre manquant pour atteindre 10, 100 ou 1 000.",
     "thumb": "/assets/catalogue-v2/captures/jeu-14.webp",
-    "playClicks": 0
+    "playClicks": 0,
+    "family": "sorciere",
+    "variantLabel": "Compléments à 1 000"
   },
   {
     "title": "Compléments à 10 — le défi de l’araignée",
@@ -1605,7 +1639,9 @@
     ],
     "short": "20 calculs de compléments à 10, sur une toile d’araignée réaliste.",
     "thumb": "/assets/catalogue-v2/captures/jeu-15-toile-realiste.svg?v=20261116",
-    "playClicks": 16
+    "playClicks": 16,
+    "family": "araignee",
+    "variantLabel": "Compléments à 10"
   },
   {
     "title": "Compléments à 100 — le défi de l’araignée",
@@ -1631,7 +1667,9 @@
     ],
     "short": "20 calculs de compléments à 100, sur une toile d’araignée réaliste.",
     "thumb": "/assets/catalogue-v2/captures/jeu-16-toile-realiste.svg?v=20261116",
-    "playClicks": 3
+    "playClicks": 3,
+    "family": "araignee",
+    "variantLabel": "Compléments à 100"
   },
   {
     "title": "Compléments à 1 000 — le défi de l’araignée",
@@ -1657,7 +1695,9 @@
     ],
     "short": "20 calculs de compléments à 1 000, sur une toile d’araignée réaliste.",
     "thumb": "/assets/catalogue-v2/captures/jeu-17-toile-realiste.svg?v=20261116",
-    "playClicks": 0
+    "playClicks": 0,
+    "family": "araignee",
+    "variantLabel": "Compléments à 1 000"
   },
   {
     "title": "Je revois les nombres jusqu’à 1000",
@@ -1843,7 +1883,10 @@
     "short": "Écouter, observer et écrire pour mémoriser l’orthographe.",
     "thumb": "/assets/catalogue-v2/captures/jeu-23.webp",
     "imageAlt": "Aperçu de Les mots en images : écouter, observer et écrire pour mémoriser l’orthographe.",
-    "playClicks": 13
+    "playClicks": 13,
+    "accessibility": [
+      "audio"
+    ]
   },
   {
     "title": "Dictées 1 à 6 — Période 1",
@@ -1871,7 +1914,10 @@
     "imageAlt": "Aperçu de Dictées 1 à 6 — Période 1 : écouter, observer et écrire pour mémoriser l’orthographe.",
     "pdfUrl": "/pdf/Dictee_6_Periode_1_CE1_eleve_et_correction_parents.pdf",
     "pdfLabel": "Dictée 6 · à trous + correction parents (PDF)",
-    "playClicks": 15
+    "playClicks": 15,
+    "accessibility": [
+      "audio"
+    ]
   },
   {
     "title": "Dictée 5 — Les mots en images",
@@ -2023,7 +2069,10 @@
     "thumb": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg",
     "imageAlt": "Vue nette de Mission Calcul mental CP, version Arcade : mission 8, tableau des exercices et calculs avec boutons néon.",
     "playClicks": 1,
-    "image": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg"
+    "image": "/assets/catalogue-v2/captures/calcul-mental-cp-pygame-net.svg",
+    "accessibility": [
+      "audio"
+    ]
   },
   {
     "title": "Chronomaths CE2 — 20 défis",
@@ -2203,7 +2252,10 @@
     "short": "Écouter un nombre et l’écrire en chiffres.",
     "thumb": "/assets/catalogue-v2/captures/jeu-35.webp",
     "imageAlt": "Aperçu de Dictée de nombres : écouter un nombre et l’écrire en chiffres.",
-    "playClicks": 5
+    "playClicks": 5,
+    "accessibility": [
+      "audio"
+    ]
   },
   {
     "title": "Compter de plusieurs façons",
@@ -3331,7 +3383,10 @@
     "short": "Lire un texte et retrouver les informations utiles pour répondre.",
     "thumb": "/assets/catalogue-v2/captures/jeu-73.webp",
     "imageAlt": "Aperçu de Le grain de riz — aide DYS : lire un texte et retrouver les informations utiles pour répondre.",
-    "playClicks": 12
+    "playClicks": 12,
+    "accessibility": [
+      "dys"
+    ]
   },
   {
     "title": "Orthographe — Période 1",
@@ -3357,7 +3412,10 @@
     "short": "Écouter, observer et écrire pour mémoriser l’orthographe.",
     "thumb": "/assets/catalogue-v2/captures/jeu-74.webp",
     "imageAlt": "Aperçu de Orthographe — Période 1 : écouter, observer et écrire pour mémoriser l’orthographe.",
-    "playClicks": 5
+    "playClicks": 5,
+    "accessibility": [
+      "audio"
+    ]
   },
   {
     "title": "Dictées — Période 2",
@@ -3383,7 +3441,10 @@
     "short": "Écouter, observer et écrire pour mémoriser l’orthographe.",
     "thumb": "/assets/catalogue-v2/captures/jeu-75.webp",
     "imageAlt": "Aperçu de Dictées — Période 2 : écouter, observer et écrire pour mémoriser l’orthographe.",
-    "playClicks": 9
+    "playClicks": 9,
+    "accessibility": [
+      "audio"
+    ]
   },
   {
     "title": "Soustractions sans échange — Vaisseau spatial",
