@@ -23,7 +23,16 @@
     "new": true,
     "contentLanguage": "zh",
     "thumb": "/assets/catalogue-v2/captures/mission-soustraire-a-100-zh.svg",
-    "imageAlt": "任务100 — 从100中减去一个数"
+    "imageAlt": "任务100 — 从100中减去一个数",
+    "pdfUrl": "/pdf/mission-soustraire-a-100-exercices-zh.pdf",
+    "pdfLabel": "打印练习 PDF",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-soustraire-a-100-exercices-zh.pdf",
+        "label": "打印练习 PDF",
+        "language": "zh"
+      }
+    ]
   },
   {
     "id": "mission-franchir-la-dizaine",
