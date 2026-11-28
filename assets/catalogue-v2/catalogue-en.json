@@ -1,5 +1,31 @@
 [
   {
+    "id": "en-mission-soustraire-a-100",
+    "sourceId": "mission-soustraire-a-100",
+    "slug": "mission-subtract-from-100",
+    "title": "Mission 100 — Subtract from 100",
+    "url": "/en/games/mission-subtract-from-100/",
+    "path": "/en/games/mission-subtract-from-100/",
+    "description": "Cross out tens and ones of your choice, then find what remains. Two levels and 15 random subtractions.",
+    "short": "Cross out tens and ones of your choice, then find what remains. Two levels and 15 random subtractions.",
+    "objective": "Subtract from 100",
+    "levels": [
+      "CP",
+      "CE1"
+    ],
+    "level": "CP",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "skill": "mental",
+    "groupName": "Mental maths",
+    "skillName": "Mental maths",
+    "weekly": false,
+    "new": true,
+    "contentLanguage": "en",
+    "thumb": "/assets/catalogue-v2/captures/mission-soustraire-a-100-en.svg",
+    "imageAlt": "Mission 100 — Subtract from 100"
+  },
+  {
     "id": "en-mission-franchir-la-dizaine",
     "sourceId": "mission-franchir-la-dizaine",
     "slug": "mission-crossing-ten",
