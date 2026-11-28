@@ -62,7 +62,16 @@
     "thumb": "/assets/catalogue-v2/captures/mission-enlever-9-19-29-ce1.svg",
     "image": "https://bleja972.github.io/assets/catalogue-v2/captures/mission-enlever-9-19-29-ce1.svg",
     "imageAlt": "Aperçu illustré : 184 − 19 = 165, avec une centaine, six dizaines et cinq unités",
-    "ficheUrl": "/fiches/mission-enlever-9-19-29-ce1/"
+    "ficheUrl": "/fiches/mission-enlever-9-19-29-ce1/",
+    "pdfUrl": "/pdf/mission-enlever-9-19-29-exercices.pdf.pdf",
+    "pdfLabel": "Fiche d’exercices · 4 pages",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-enlever-9-19-29-exercices.pdf.pdf",
+        "label": "Fiche d’exercices · 4 pages",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "mission-ajouter-9-19-29",
