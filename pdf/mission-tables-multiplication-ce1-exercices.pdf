@@ -3,7 +3,7 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Count 13 /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R] >>
+<< /Type /Pages /Count 15 /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R] >>
 endobj
 3 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
@@ -1079,7 +1079,7 @@ stream
 .72 .76 .8 RG 0.4 w 413.4 97 13.2 13.2 re S
 .72 .76 .8 RG 0.4 w 426.6 97 13.2 13.2 re S
 .72 .76 .8 RG 0.4 w 439.8 97 13.2 13.2 re S
-.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 1 / 13) Tj ET
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 1 / 15) Tj ET
 .43 .17 .67 RG 1 w 416 40 143 28 re S
 .1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 6) Tj ET
 endstream
@@ -2434,7 +2434,7 @@ stream
 .72 .76 .8 RG 0.4 w 413.4 97 13.2 13.2 re S
 .72 .76 .8 RG 0.4 w 426.6 97 13.2 13.2 re S
 .72 .76 .8 RG 0.4 w 439.8 97 13.2 13.2 re S
-.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 2 / 13) Tj ET
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 2 / 15) Tj ET
 .43 .17 .67 RG 1 w 416 40 143 28 re S
 .1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 6) Tj ET
 endstream
@@ -2496,7 +2496,7 @@ stream
 .82 .85 .88 RG 0.6 w 392 142 166 83 re S
 .1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 174 Tm (10 x 10 =) Tj ET
 .43 .17 .67 RG 1.1 w 500 165 48 32 re S
-.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 3 / 13) Tj ET
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 3 / 15) Tj ET
 .43 .17 .67 RG 1 w 416 40 143 28 re S
 .1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 15) Tj ET
 endstream
@@ -3455,7 +3455,7 @@ stream
 .72 .76 .8 RG 0.4 w 413.4 97 13.2 13.2 re S
 .72 .76 .8 RG 0.4 w 426.6 97 13.2 13.2 re S
 .72 .76 .8 RG 0.4 w 439.8 97 13.2 13.2 re S
-.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 4 / 13) Tj ET
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 4 / 15) Tj ET
 .43 .17 .67 RG 1 w 416 40 143 28 re S
 .1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 6) Tj ET
 endstream
@@ -3517,7 +3517,7 @@ stream
 .82 .85 .88 RG 0.6 w 392 142 166 83 re S
 .1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 174 Tm (2 x 7 =) Tj ET
 .43 .17 .67 RG 1.1 w 500 165 48 32 re S
-.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 5 / 13) Tj ET
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 5 / 15) Tj ET
 .43 .17 .67 RG 1 w 416 40 143 28 re S
 .1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 15) Tj ET
 endstream
@@ -4638,7 +4638,7 @@ stream
 .72 .76 .8 RG 0.4 w 413.4 97 13.2 13.2 re S
 .72 .76 .8 RG 0.4 w 426.6 97 13.2 13.2 re S
 .72 .76 .8 RG 0.4 w 439.8 97 13.2 13.2 re S
-.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 6 / 13) Tj ET
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 6 / 15) Tj ET
 .43 .17 .67 RG 1 w 416 40 143 28 re S
 .1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 6) Tj ET
 endstream
@@ -4700,7 +4700,7 @@ stream
 .82 .85 .88 RG 0.6 w 392 142 166 83 re S
 .1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 174 Tm (3 x 7 =) Tj ET
 .43 .17 .67 RG 1.1 w 500 165 48 32 re S
-.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 7 / 13) Tj ET
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 7 / 15) Tj ET
 .43 .17 .67 RG 1 w 416 40 143 28 re S
 .1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 15) Tj ET
 endstream
@@ -5983,7 +5983,7 @@ stream
 .72 .76 .8 RG 0.4 w 413.4 97 13.2 13.2 re S
 .72 .76 .8 RG 0.4 w 426.6 97 13.2 13.2 re S
 .72 .76 .8 RG 0.4 w 439.8 97 13.2 13.2 re S
-.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 8 / 13) Tj ET
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 8 / 15) Tj ET
 .43 .17 .67 RG 1 w 416 40 143 28 re S
 .1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 6) Tj ET
 endstream
@@ -6045,7 +6045,7 @@ stream
 .82 .85 .88 RG 0.6 w 392 142 166 83 re S
 .1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 174 Tm (4 x 7 =) Tj ET
 .43 .17 .67 RG 1.1 w 500 165 48 32 re S
-.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 9 / 13) Tj ET
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 9 / 15) Tj ET
 .43 .17 .67 RG 1 w 416 40 143 28 re S
 .1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 15) Tj ET
 endstream
@@ -7490,7 +7490,7 @@ stream
 .72 .76 .8 RG 0.4 w 413.4 97 13.2 13.2 re S
 .72 .76 .8 RG 0.4 w 426.6 97 13.2 13.2 re S
 .72 .76 .8 RG 0.4 w 439.8 97 13.2 13.2 re S
-.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 10 / 13) Tj ET
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 10 / 15) Tj ET
 .43 .17 .67 RG 1 w 416 40 143 28 re S
 .1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 6) Tj ET
 endstream
@@ -7552,7 +7552,7 @@ stream
 .82 .85 .88 RG 0.6 w 392 142 166 83 re S
 .1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 174 Tm (5 x 7 =) Tj ET
 .43 .17 .67 RG 1.1 w 500 165 48 32 re S
-.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 11 / 13) Tj ET
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 11 / 15) Tj ET
 .43 .17 .67 RG 1 w 416 40 143 28 re S
 .1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 15) Tj ET
 endstream
@@ -9807,7 +9807,7 @@ stream
 .20 .72 .30 rg 449.5 104.4 m 449.5 106.499 447.799 108.2 445.7 108.2 c 443.601 108.2 441.9 106.499 441.9 104.4 c 441.9 102.301 443.601 100.6 445.7 100.6 c 447.799 100.6 449.5 102.301 449.5 104.4 c f
 .75 .95 .76 rg 446.3 105.5 m 446.3 106.328 445.628 107 444.8 107 c 443.972 107 443.3 106.328 443.3 105.5 c 443.3 104.672 443.972 104 444.8 104 c 445.628 104 446.3 104.672 446.3 105.5 c f
 .85 .66 .05 RG 1 w 320 96.5 134 14.2 re S
-.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 12 / 13) Tj ET
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 12 / 15) Tj ET
 .43 .17 .67 RG 1 w 416 40 143 28 re S
 .1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 6) Tj ET
 endstream
@@ -9869,46 +9869,174 @@ stream
 .82 .85 .88 RG 0.6 w 392 142 166 83 re S
 .1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 174 Tm (10 x 7 =) Tj ET
 .43 .17 .67 RG 1.1 w 500 165 48 32 re S
-.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 13 / 13) Tj ET
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 13 / 15) Tj ET
+.43 .17 .67 RG 1 w 416 40 143 28 re S
+.1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 15) Tj ET
+endstream
+endobj
+31 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 32 0 R >>
+endobj
+32 0 obj
+<< /Length 2836 >>
+stream
+.1 .17 .28 rg BT /F2 10 Tf 1 0 0 1 36 807 Tm (CE1  /  CALCUL MENTAL) Tj ET
+.1 .17 .28 rg BT /F2 24 Tf 1 0 0 1 36 777 Tm (Mission Multiplications) Tj ET
+.1 .17 .28 rg BT /F2 14 Tf 1 0 0 1 36 753 Tm (Je calcule sans les boules) Tj ET
+.1 .17 .28 rg BT /F1 11 Tf 1 0 0 1 36 731 Tm (Calcule les produits des tables m\351lang\351es.) Tj ET
+.1 .17 .28 rg BT /F1 11 Tf 1 0 0 1 36 707 Tm (Pr\351nom : _________________________      Date : _______________) Tj ET
+.1 .17 .28 RG 0.6 w 36 695 523 0.5 re S
+.82 .85 .88 RG 0.6 w 36 590 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 46 622 Tm (4 x 8 =) Tj ET
+.43 .17 .67 RG 1.1 w 144 613 48 32 re S
+.82 .85 .88 RG 0.6 w 214 590 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 224 622 Tm (2 x 9 =) Tj ET
+.43 .17 .67 RG 1.1 w 322 613 48 32 re S
+.82 .85 .88 RG 0.6 w 392 590 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 622 Tm (10 x 7 =) Tj ET
+.43 .17 .67 RG 1.1 w 500 613 48 32 re S
+.82 .85 .88 RG 0.6 w 36 478 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 46 510 Tm (3 x 6 =) Tj ET
+.43 .17 .67 RG 1.1 w 144 501 48 32 re S
+.82 .85 .88 RG 0.6 w 214 478 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 224 510 Tm (5 x 4 =) Tj ET
+.43 .17 .67 RG 1.1 w 322 501 48 32 re S
+.82 .85 .88 RG 0.6 w 392 478 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 510 Tm (2 x 5 =) Tj ET
+.43 .17 .67 RG 1.1 w 500 501 48 32 re S
+.82 .85 .88 RG 0.6 w 36 366 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 46 398 Tm (4 x 3 =) Tj ET
+.43 .17 .67 RG 1.1 w 144 389 48 32 re S
+.82 .85 .88 RG 0.6 w 214 366 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 224 398 Tm (10 x 9 =) Tj ET
+.43 .17 .67 RG 1.1 w 322 389 48 32 re S
+.82 .85 .88 RG 0.6 w 392 366 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 398 Tm (5 x 8 =) Tj ET
+.43 .17 .67 RG 1.1 w 500 389 48 32 re S
+.82 .85 .88 RG 0.6 w 36 254 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 46 286 Tm (3 x 7 =) Tj ET
+.43 .17 .67 RG 1.1 w 144 277 48 32 re S
+.82 .85 .88 RG 0.6 w 214 254 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 224 286 Tm (2 x 8 =) Tj ET
+.43 .17 .67 RG 1.1 w 322 277 48 32 re S
+.82 .85 .88 RG 0.6 w 392 254 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 286 Tm (5 x 6 =) Tj ET
+.43 .17 .67 RG 1.1 w 500 277 48 32 re S
+.82 .85 .88 RG 0.6 w 36 142 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 46 174 Tm (4 x 10 =) Tj ET
+.43 .17 .67 RG 1.1 w 144 165 48 32 re S
+.82 .85 .88 RG 0.6 w 214 142 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 224 174 Tm (3 x 9 =) Tj ET
+.43 .17 .67 RG 1.1 w 322 165 48 32 re S
+.82 .85 .88 RG 0.6 w 392 142 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 174 Tm (10 x 4 =) Tj ET
+.43 .17 .67 RG 1.1 w 500 165 48 32 re S
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 14 / 15) Tj ET
+.43 .17 .67 RG 1 w 416 40 143 28 re S
+.1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 15) Tj ET
+endstream
+endobj
+33 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 34 0 R >>
+endobj
+34 0 obj
+<< /Length 2836 >>
+stream
+.1 .17 .28 rg BT /F2 10 Tf 1 0 0 1 36 807 Tm (CE1  /  CALCUL MENTAL) Tj ET
+.1 .17 .28 rg BT /F2 24 Tf 1 0 0 1 36 777 Tm (Mission Multiplications) Tj ET
+.1 .17 .28 rg BT /F2 14 Tf 1 0 0 1 36 753 Tm (Je calcule sans les boules) Tj ET
+.1 .17 .28 rg BT /F1 11 Tf 1 0 0 1 36 731 Tm (Calcule les produits des tables m\351lang\351es.) Tj ET
+.1 .17 .28 rg BT /F1 11 Tf 1 0 0 1 36 707 Tm (Pr\351nom : _________________________      Date : _______________) Tj ET
+.1 .17 .28 RG 0.6 w 36 695 523 0.5 re S
+.82 .85 .88 RG 0.6 w 36 590 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 46 622 Tm (5 x 9 =) Tj ET
+.43 .17 .67 RG 1.1 w 144 613 48 32 re S
+.82 .85 .88 RG 0.6 w 214 590 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 224 622 Tm (3 x 8 =) Tj ET
+.43 .17 .67 RG 1.1 w 322 613 48 32 re S
+.82 .85 .88 RG 0.6 w 392 590 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 622 Tm (2 x 7 =) Tj ET
+.43 .17 .67 RG 1.1 w 500 613 48 32 re S
+.82 .85 .88 RG 0.6 w 36 478 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 46 510 Tm (10 x 6 =) Tj ET
+.43 .17 .67 RG 1.1 w 144 501 48 32 re S
+.82 .85 .88 RG 0.6 w 214 478 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 224 510 Tm (4 x 7 =) Tj ET
+.43 .17 .67 RG 1.1 w 322 501 48 32 re S
+.82 .85 .88 RG 0.6 w 392 478 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 510 Tm (3 x 4 =) Tj ET
+.43 .17 .67 RG 1.1 w 500 501 48 32 re S
+.82 .85 .88 RG 0.6 w 36 366 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 46 398 Tm (5 x 3 =) Tj ET
+.43 .17 .67 RG 1.1 w 144 389 48 32 re S
+.82 .85 .88 RG 0.6 w 214 366 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 224 398 Tm (2 x 6 =) Tj ET
+.43 .17 .67 RG 1.1 w 322 389 48 32 re S
+.82 .85 .88 RG 0.6 w 392 366 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 398 Tm (10 x 8 =) Tj ET
+.43 .17 .67 RG 1.1 w 500 389 48 32 re S
+.82 .85 .88 RG 0.6 w 36 254 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 46 286 Tm (4 x 9 =) Tj ET
+.43 .17 .67 RG 1.1 w 144 277 48 32 re S
+.82 .85 .88 RG 0.6 w 214 254 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 224 286 Tm (3 x 10 =) Tj ET
+.43 .17 .67 RG 1.1 w 322 277 48 32 re S
+.82 .85 .88 RG 0.6 w 392 254 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 286 Tm (5 x 7 =) Tj ET
+.43 .17 .67 RG 1.1 w 500 277 48 32 re S
+.82 .85 .88 RG 0.6 w 36 142 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 46 174 Tm (2 x 4 =) Tj ET
+.43 .17 .67 RG 1.1 w 144 165 48 32 re S
+.82 .85 .88 RG 0.6 w 214 142 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 224 174 Tm (4 x 6 =) Tj ET
+.43 .17 .67 RG 1.1 w 322 165 48 32 re S
+.82 .85 .88 RG 0.6 w 392 142 166 83 re S
+.1 .17 .28 rg BT /F2 20 Tf 1 0 0 1 402 174 Tm (10 x 2 =) Tj ET
+.43 .17 .67 RG 1.1 w 500 165 48 32 re S
+.1 .17 .28 rg BT /F1 9 Tf 1 0 0 1 36 30 Tm (Tables de 2, 3, 4, 5 et 10  |  Page 15 / 15) Tj ET
 .43 .17 .67 RG 1 w 416 40 143 28 re S
 .1 .17 .28 rg BT /F2 12 Tf 1 0 0 1 428 50 Tm (Score : ____ / 15) Tj ET
 endstream
 endobj
 xref
-0 31
+0 35
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
-0000000198 00000 n 
-0000000295 00000 n 
-0000000397 00000 n 
-0000000533 00000 n 
-0000110526 00000 n 
-0000110662 00000 n 
-0000276389 00000 n 
-0000276526 00000 n 
-0000279413 00000 n 
-0000279551 00000 n 
-0000370317 00000 n 
-0000370455 00000 n 
-0000373328 00000 n 
-0000373466 00000 n 
-0000494782 00000 n 
-0000494920 00000 n 
-0000497793 00000 n 
-0000497931 00000 n 
-0000650030 00000 n 
-0000650168 00000 n 
-0000653041 00000 n 
-0000653179 00000 n 
-0000835828 00000 n 
-0000835966 00000 n 
-0000838840 00000 n 
-0000838978 00000 n 
-0001174965 00000 n 
-0001175103 00000 n 
+0000000212 00000 n 
+0000000309 00000 n 
+0000000411 00000 n 
+0000000547 00000 n 
+0000110540 00000 n 
+0000110676 00000 n 
+0000276403 00000 n 
+0000276540 00000 n 
+0000279427 00000 n 
+0000279565 00000 n 
+0000370331 00000 n 
+0000370469 00000 n 
+0000373342 00000 n 
+0000373480 00000 n 
+0000494796 00000 n 
+0000494934 00000 n 
+0000497807 00000 n 
+0000497945 00000 n 
+0000650044 00000 n 
+0000650182 00000 n 
+0000653055 00000 n 
+0000653193 00000 n 
+0000835842 00000 n 
+0000835980 00000 n 
+0000838854 00000 n 
+0000838992 00000 n 
+0001174979 00000 n 
+0001175117 00000 n 
+0001178007 00000 n 
+0001178145 00000 n 
+0001181033 00000 n 
+0001181171 00000 n 
 trailer
-<< /Size 31 /Root 1 0 R >>
+<< /Size 35 /Root 1 0 R >>
 startxref
-1177993
+1184059
 %%EOF
