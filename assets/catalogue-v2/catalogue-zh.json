@@ -33,6 +33,41 @@
     ]
   },
   {
+    "id": "mission-enlever-9-19-29-ce1",
+    "sourceId": "mission-enlever-9-19-29-ce1",
+    "slug": "subtraction-mission-9-19-29-up-to-999",
+    "title": "口算任务 −9、−19、−29 — 999 以内",
+    "url": "/zh/games/subtraction-mission-9-19-29-up-to-999/",
+    "path": "/zh/games/subtraction-mission-9-19-29-up-to-999/",
+    "description": "给两位数或三位数减9、19或29：先减整十数，再加1。",
+    "objective": "给两位数或三位数减9、19或29：先减整十数，再加1。",
+    "group": "mental",
+    "skill": "mental",
+    "skillName": "口算",
+    "groupName": "口算",
+    "subject": "Mathématiques",
+    "levels": [
+      "CE1",
+      "CE2"
+    ],
+    "level": "CE1",
+    "weekly": false,
+    "new": true,
+    "pdfUrl": "/pdf/mission-enlever-9-19-29-exercices-zh.pdf",
+    "pdfLabel": "打印练习 PDF",
+    "short": "先减整十数，再加1。",
+    "contentLanguage": "zh",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-enlever-9-19-29-exercices-zh.pdf",
+        "label": "打印练习 PDF",
+        "language": "zh"
+      }
+    ],
+    "thumb": "/assets/catalogue-v2/captures/mission-enlever-9-19-29-ce1.svg",
+    "imageAlt": "减法游戏示意图：百、十和一"
+  },
+  {
     "id": "mission-ajouter-9-19-29",
     "sourceId": "mission-ajouter-9-19-29",
     "slug": "addition-mission-9-19-29",
