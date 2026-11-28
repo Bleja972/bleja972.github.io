@@ -23,7 +23,16 @@
     "new": true,
     "playClicks": 0,
     "thumb": "/assets/catalogue-v2/captures/mission-soustraire-a-100.svg",
-    "imageAlt": "Aperçu illustré de la soustraction 100 − 34"
+    "imageAlt": "Aperçu illustré de la soustraction 100 − 34",
+    "pdfUrl": "/pdf/mission-soustraire-a-100-exercices-corrige.pdf",
+    "pdfLabel": "Fiche d’exercices · 3 pages",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-soustraire-a-100-exercices-corrige.pdf",
+        "label": "Fiche d’exercices · 3 pages",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "mission-franchir-la-dizaine",
