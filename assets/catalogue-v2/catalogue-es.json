@@ -1,5 +1,31 @@
 [
   {
+    "id": "mission-soustraire-a-100",
+    "sourceId": "mission-soustraire-a-100",
+    "slug": "mission-subtract-from-100",
+    "title": "Misión 100 — Restar de 100",
+    "url": "/es/games/mission-subtract-from-100/",
+    "path": "/es/games/mission-subtract-from-100/",
+    "description": "Tacha las decenas y unidades que elijas y calcula lo que queda. Dos niveles y 15 restas aleatorias.",
+    "short": "Tacha las decenas y unidades que elijas y calcula lo que queda. Dos niveles y 15 restas aleatorias.",
+    "objective": "Restar de 100",
+    "levels": [
+      "CP",
+      "CE1"
+    ],
+    "level": "CP",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "skill": "mental",
+    "groupName": "Cálculo mental",
+    "skillName": "Cálculo mental",
+    "weekly": false,
+    "new": true,
+    "contentLanguage": "es",
+    "thumb": "/assets/catalogue-v2/captures/mission-soustraire-a-100-es.svg",
+    "imageAlt": "Misión 100 — Restar de 100"
+  },
+  {
     "id": "mission-franchir-la-dizaine",
     "sourceId": "mission-franchir-la-dizaine",
     "slug": "mission-crossing-ten",
