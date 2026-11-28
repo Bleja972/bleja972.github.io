@@ -1,5 +1,31 @@
 [
   {
+    "id": "mission-complements-100",
+    "slug": "mission-complements-100",
+    "title": "Mission 100 — Les compléments à 100",
+    "url": "/jeux/mission-complements-100-deux-niveaux.html",
+    "path": "/jeux/mission-complements-100-deux-niveaux.html",
+    "description": "Complète une grille de 100 cases avec des boules métallisées, puis entraîne-toi sans matériel. Deux niveaux, 15 opérations aléatoires.",
+    "short": "Compléter 100 par les unités puis les dizaines.",
+    "objective": "Calculer les compléments à 100.",
+    "skill": "complements",
+    "skillName": "Compléments",
+    "category": "mental",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "level": "CP",
+    "levels": [
+      "CP",
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "playClicks": 0,
+    "thumb": "/assets/catalogue-v2/captures/mission-complements-100.svg",
+    "imageAlt": "Aperçu illustré de Mission 100"
+  },
+  {
     "id": "mission-ajouter-9-19-29-ce1",
     "slug": "mission-ajouter-9-19-29-ce1",
     "title": "Mission +9, +19, +29 — CE1 jusqu’à 999",
