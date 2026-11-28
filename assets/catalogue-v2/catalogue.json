@@ -1,5 +1,40 @@
 [
   {
+    "id": "mission-franchir-la-dizaine",
+    "slug": "mission-franchir-la-dizaine",
+    "title": "Mission Dizaine — Franchir la dizaine supérieure",
+    "url": "/jeux/mission-franchir-la-dizaine-sans-indice.html",
+    "path": "/jeux/mission-franchir-la-dizaine-sans-indice.html",
+    "description": "Complète la dizaine supérieure avec des boules violettes, puis ajoute les unités restantes. Deux niveaux, 15 additions aléatoires.",
+    "short": "Franchir la dizaine supérieure avec ou sans les boules.",
+    "objective": "Additionner un nombre à deux chiffres et un nombre à un chiffre en franchissant la dizaine.",
+    "skill": "mental",
+    "skillName": "Calcul mental",
+    "category": "mental",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "level": "CP",
+    "levels": [
+      "CP",
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "playClicks": 0,
+    "thumb": "/assets/catalogue-v2/captures/mission-franchir-la-dizaine.svg",
+    "imageAlt": "Aperçu illustré : 38 + 5 = 43 avec les boules vertes et violettes",
+    "pdfUrl": "/pdf/mission-franchir-la-dizaine-exercices.pdf",
+    "pdfLabel": "Fiche d’exercices · 3 pages",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-franchir-la-dizaine-exercices.pdf",
+        "label": "Fiche d’exercices · 3 pages",
+        "language": "fr"
+      }
+    ]
+  },
+  {
     "id": "mission-complements-100",
     "slug": "mission-complements-100",
     "title": "Mission 100 — Les compléments à 100",
