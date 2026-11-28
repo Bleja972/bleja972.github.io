@@ -57,7 +57,16 @@
     "contentLanguage": "es",
     "thumb": "/assets/catalogue-v2/captures/mission-enlever-9-19-29-ce1-es.svg",
     "image": "https://bleja972.github.io/assets/catalogue-v2/captures/mission-enlever-9-19-29-ce1-es.svg",
-    "imageAlt": "Vista ilustrativa de la misión de resta con centenas, decenas y unidades"
+    "imageAlt": "Vista ilustrativa de la misión de resta con centenas, decenas y unidades",
+    "pdfUrl": "/pdf/mission-enlever-9-19-29-exercices-es.pdf",
+    "pdfLabel": "PDF para imprimir",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-enlever-9-19-29-exercices-es.pdf",
+        "label": "PDF para imprimir",
+        "language": "es"
+      }
+    ]
   },
   {
     "id": "mission-ajouter-9-19-29",
