@@ -23,7 +23,16 @@
     "new": true,
     "contentLanguage": "en",
     "thumb": "/assets/catalogue-v2/captures/mission-complements-100-en.svg",
-    "imageAlt": "Mission 100 — Number bonds to 100"
+    "imageAlt": "Mission 100 — Number bonds to 100",
+    "pdfUrl": "/pdf/mission-complements-100-exercices-en.pdf",
+    "pdfLabel": "Printable PDF",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-complements-100-exercices-en.pdf",
+        "label": "Printable PDF",
+        "language": "en"
+      }
+    ]
   },
   {
     "id": "en-mission-ajouter-9-19-29-ce1",
