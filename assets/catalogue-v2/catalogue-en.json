@@ -23,7 +23,16 @@
     "new": true,
     "contentLanguage": "en",
     "thumb": "/assets/catalogue-v2/captures/mission-franchir-la-dizaine-en.svg",
-    "imageAlt": "Mission Ten — Crossing the next ten"
+    "imageAlt": "Mission Ten — Crossing the next ten",
+    "pdfUrl": "/pdf/mission-franchir-la-dizaine-exercices-en.pdf",
+    "pdfLabel": "Printable PDF",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-franchir-la-dizaine-exercices-en.pdf",
+        "label": "Printable PDF",
+        "language": "en"
+      }
+    ]
   },
   {
     "id": "en-mission-complements-100",
