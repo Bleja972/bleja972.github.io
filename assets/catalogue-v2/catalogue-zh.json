@@ -1,5 +1,31 @@
 [
   {
+    "id": "mission-complements-100",
+    "sourceId": "mission-complements-100",
+    "slug": "mission-complements-100",
+    "title": "口算任务100 — 凑满100",
+    "url": "/zh/games/mission-complements-100/",
+    "path": "/zh/games/mission-complements-100/",
+    "description": "先凑满下一个整十数，再补足整十数直到100。两个关卡，15道随机题。",
+    "short": "先凑满下一个整十数，再补足整十数直到100。两个关卡，15道随机题。",
+    "objective": "凑满100",
+    "levels": [
+      "CP",
+      "CE1"
+    ],
+    "level": "CP",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "skill": "complements",
+    "groupName": "口算",
+    "skillName": "凑满100",
+    "weekly": false,
+    "new": true,
+    "contentLanguage": "zh",
+    "thumb": "/assets/catalogue-v2/captures/mission-complements-100-zh.svg",
+    "imageAlt": "口算任务100 — 凑满100"
+  },
+  {
     "id": "mission-ajouter-9-19-29-ce1",
     "sourceId": "mission-ajouter-9-19-29-ce1",
     "slug": "addition-mission-9-19-29-up-to-999",
