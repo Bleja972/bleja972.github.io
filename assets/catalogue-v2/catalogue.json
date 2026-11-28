@@ -23,7 +23,16 @@
     "new": true,
     "playClicks": 0,
     "thumb": "/assets/catalogue-v2/captures/mission-complements-100.svg",
-    "imageAlt": "Aperçu illustré de Mission 100"
+    "imageAlt": "Aperçu illustré de Mission 100",
+    "pdfUrl": "/pdf/mission-complements-100-exercices-modifie.pdf",
+    "pdfLabel": "Fiche d’exercices · 3 pages",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-complements-100-exercices-modifie.pdf",
+        "label": "Fiche d’exercices · 3 pages",
+        "language": "fr"
+      }
+    ]
   },
   {
     "id": "mission-ajouter-9-19-29-ce1",
