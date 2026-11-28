@@ -56,7 +56,16 @@
     "contentLanguage": "en",
     "thumb": "/assets/catalogue-v2/captures/mission-enlever-9-19-29-ce1-en.svg",
     "image": "https://bleja972.github.io/assets/catalogue-v2/captures/mission-enlever-9-19-29-ce1-en.svg",
-    "imageAlt": "Illustrated preview of subtraction mission with hundreds, tens and ones"
+    "imageAlt": "Illustrated preview of subtraction mission with hundreds, tens and ones",
+    "pdfUrl": "/pdf/mission-enlever-9-19-29-exercices-en.pdf",
+    "pdfLabel": "Printable PDF",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-enlever-9-19-29-exercices-en.pdf",
+        "label": "Printable PDF",
+        "language": "en"
+      }
+    ]
   },
   {
     "id": "en-mission-ajouter-9-19-29",
