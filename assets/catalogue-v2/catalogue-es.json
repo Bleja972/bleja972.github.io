@@ -23,7 +23,16 @@
     "new": true,
     "contentLanguage": "es",
     "thumb": "/assets/catalogue-v2/captures/mission-franchir-la-dizaine-es.svg",
-    "imageAlt": "Misión Decena — Pasar a la decena siguiente"
+    "imageAlt": "Misión Decena — Pasar a la decena siguiente",
+    "pdfUrl": "/pdf/mission-franchir-la-dizaine-exercices-es.pdf",
+    "pdfLabel": "PDF para imprimir",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-franchir-la-dizaine-exercices-es.pdf",
+        "label": "PDF para imprimir",
+        "language": "es"
+      }
+    ]
   },
   {
     "id": "mission-complements-100",
