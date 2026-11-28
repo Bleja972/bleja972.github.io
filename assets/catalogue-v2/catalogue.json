@@ -1,5 +1,31 @@
 [
   {
+    "id": "mission-soustraire-a-100",
+    "slug": "mission-soustraire-a-100",
+    "title": "Mission 100 — Soustraire à 100",
+    "url": "/jeux/mission-soustraire-a-100.html",
+    "path": "/jeux/mission-soustraire-a-100.html",
+    "description": "Barre les dizaines et les unités de ton choix, puis calcule ce qui reste. Deux niveaux, 15 soustractions aléatoires.",
+    "short": "Soustraire un nombre à 100 avec ou sans les boules.",
+    "objective": "Soustraire un nombre à 100 en décomposant dizaines et unités.",
+    "skill": "mental",
+    "skillName": "Calcul mental",
+    "category": "mental",
+    "group": "mental",
+    "groupName": "Calcul mental",
+    "level": "CP",
+    "levels": [
+      "CP",
+      "CE1"
+    ],
+    "subject": "Mathématiques",
+    "weekly": false,
+    "new": true,
+    "playClicks": 0,
+    "thumb": "/assets/catalogue-v2/captures/mission-soustraire-a-100.svg",
+    "imageAlt": "Aperçu illustré de la soustraction 100 − 34"
+  },
+  {
     "id": "mission-franchir-la-dizaine",
     "slug": "mission-franchir-la-dizaine",
     "title": "Mission Dizaine — Franchir la dizaine supérieure",
