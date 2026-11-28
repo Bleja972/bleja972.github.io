@@ -1,5 +1,31 @@
 [
   {
+    "id": "mission-soustraire-a-100",
+    "sourceId": "mission-soustraire-a-100",
+    "slug": "mission-subtract-from-100",
+    "title": "任务100 — 从100中减去一个数",
+    "url": "/zh/games/mission-subtract-from-100/",
+    "path": "/zh/games/mission-subtract-from-100/",
+    "description": "任选整十和个位小球划掉，再计算剩余数量。两个关卡，15道随机减法题。",
+    "short": "任选整十和个位小球划掉，再计算剩余数量。两个关卡，15道随机减法题。",
+    "objective": "从100中减去一个数",
+    "levels": [
+      "CP",
+      "CE1"
+    ],
+    "level": "CP",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "skill": "mental",
+    "groupName": "口算",
+    "skillName": "口算",
+    "weekly": false,
+    "new": true,
+    "contentLanguage": "zh",
+    "thumb": "/assets/catalogue-v2/captures/mission-soustraire-a-100-zh.svg",
+    "imageAlt": "任务100 — 从100中减去一个数"
+  },
+  {
     "id": "mission-franchir-la-dizaine",
     "sourceId": "mission-franchir-la-dizaine",
     "slug": "mission-crossing-ten",
