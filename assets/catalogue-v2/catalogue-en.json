@@ -23,7 +23,16 @@
     "new": true,
     "contentLanguage": "en",
     "thumb": "/assets/catalogue-v2/captures/mission-soustraire-a-100-en.svg",
-    "imageAlt": "Mission 100 — Subtract from 100"
+    "imageAlt": "Mission 100 — Subtract from 100",
+    "pdfUrl": "/pdf/mission-soustraire-a-100-exercices-en.pdf",
+    "pdfLabel": "Printable PDF",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-soustraire-a-100-exercices-en.pdf",
+        "label": "Printable PDF",
+        "language": "en"
+      }
+    ]
   },
   {
     "id": "en-mission-franchir-la-dizaine",
