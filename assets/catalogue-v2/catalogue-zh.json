@@ -23,7 +23,16 @@
     "new": true,
     "contentLanguage": "zh",
     "thumb": "/assets/catalogue-v2/captures/mission-complements-100-zh.svg",
-    "imageAlt": "口算任务100 — 凑满100"
+    "imageAlt": "口算任务100 — 凑满100",
+    "pdfUrl": "/pdf/mission-complements-100-exercices-zh.pdf",
+    "pdfLabel": "打印练习 PDF",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-complements-100-exercices-zh.pdf",
+        "label": "打印练习 PDF",
+        "language": "zh"
+      }
+    ]
   },
   {
     "id": "mission-ajouter-9-19-29-ce1",
