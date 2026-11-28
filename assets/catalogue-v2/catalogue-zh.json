@@ -1,5 +1,31 @@
 [
   {
+    "id": "mission-franchir-la-dizaine",
+    "sourceId": "mission-franchir-la-dizaine",
+    "slug": "mission-crossing-ten",
+    "title": "十进位任务 — 跨越整十数",
+    "url": "/zh/games/mission-crossing-ten/",
+    "path": "/zh/games/mission-crossing-ten/",
+    "description": "先补满黄色边框中的十格，再添加剩余的紫色小球。两个关卡，15道随机加法题。",
+    "short": "先补满黄色边框中的十格，再添加剩余的紫色小球。两个关卡，15道随机加法题。",
+    "objective": "跨越下一个整十数",
+    "levels": [
+      "CP",
+      "CE1"
+    ],
+    "level": "CP",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "skill": "mental",
+    "groupName": "口算",
+    "skillName": "口算",
+    "weekly": false,
+    "new": true,
+    "contentLanguage": "zh",
+    "thumb": "/assets/catalogue-v2/captures/mission-franchir-la-dizaine-zh.svg",
+    "imageAlt": "十进位任务 — 跨越整十数"
+  },
+  {
     "id": "mission-complements-100",
     "sourceId": "mission-complements-100",
     "slug": "mission-complements-100",
