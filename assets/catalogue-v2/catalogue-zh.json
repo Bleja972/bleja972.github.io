@@ -23,7 +23,16 @@
     "new": true,
     "contentLanguage": "zh",
     "thumb": "/assets/catalogue-v2/captures/mission-franchir-la-dizaine-zh.svg",
-    "imageAlt": "十进位任务 — 跨越整十数"
+    "imageAlt": "十进位任务 — 跨越整十数",
+    "pdfUrl": "/pdf/mission-franchir-la-dizaine-exercices-zh.pdf",
+    "pdfLabel": "打印练习 PDF",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-franchir-la-dizaine-exercices-zh.pdf",
+        "label": "打印练习 PDF",
+        "language": "zh"
+      }
+    ]
   },
   {
     "id": "mission-complements-100",
