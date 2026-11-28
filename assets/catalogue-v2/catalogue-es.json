@@ -23,7 +23,16 @@
     "new": true,
     "contentLanguage": "es",
     "thumb": "/assets/catalogue-v2/captures/mission-complements-100-es.svg",
-    "imageAlt": "Misión 100 — Complementos a 100"
+    "imageAlt": "Misión 100 — Complementos a 100",
+    "pdfUrl": "/pdf/mission-complements-100-exercices-es.pdf",
+    "pdfLabel": "PDF para imprimir",
+    "pdfResources": [
+      {
+        "url": "/pdf/mission-complements-100-exercices-es.pdf",
+        "label": "PDF para imprimir",
+        "language": "es"
+      }
+    ]
   },
   {
     "id": "mission-ajouter-9-19-29-ce1",
