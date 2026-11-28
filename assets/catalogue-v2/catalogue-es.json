@@ -1,5 +1,31 @@
 [
   {
+    "id": "mission-franchir-la-dizaine",
+    "sourceId": "mission-franchir-la-dizaine",
+    "slug": "mission-crossing-ten",
+    "title": "Misión Decena — Pasar a la decena siguiente",
+    "url": "/es/games/mission-crossing-ten/",
+    "path": "/es/games/mission-crossing-ten/",
+    "description": "Completa la decena marcada en amarillo y añade las bolas violetas restantes. Dos niveles y 15 sumas aleatorias.",
+    "short": "Completa la decena marcada en amarillo y añade las bolas violetas restantes. Dos niveles y 15 sumas aleatorias.",
+    "objective": "Pasar a la decena siguiente",
+    "levels": [
+      "CP",
+      "CE1"
+    ],
+    "level": "CP",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "skill": "mental",
+    "groupName": "Cálculo mental",
+    "skillName": "Cálculo mental",
+    "weekly": false,
+    "new": true,
+    "contentLanguage": "es",
+    "thumb": "/assets/catalogue-v2/captures/mission-franchir-la-dizaine-es.svg",
+    "imageAlt": "Misión Decena — Pasar a la decena siguiente"
+  },
+  {
     "id": "mission-complements-100",
     "sourceId": "mission-complements-100",
     "slug": "mission-complements-100",
