@@ -1,5 +1,31 @@
 [
   {
+    "id": "mission-complements-100",
+    "sourceId": "mission-complements-100",
+    "slug": "mission-complements-100",
+    "title": "Misión 100 — Complementos a 100",
+    "url": "/es/games/mission-complements-100/",
+    "path": "/es/games/mission-complements-100/",
+    "description": "Completa la decena siguiente y después las decenas enteras hasta 100. Dos niveles y 15 operaciones aleatorias.",
+    "short": "Completa la decena siguiente y después las decenas enteras hasta 100. Dos niveles y 15 operaciones aleatorias.",
+    "objective": "Complementos a 100",
+    "levels": [
+      "CP",
+      "CE1"
+    ],
+    "level": "CP",
+    "subject": "Mathématiques",
+    "group": "mental",
+    "skill": "complements",
+    "groupName": "Cálculo mental",
+    "skillName": "Complementos a 100",
+    "weekly": false,
+    "new": true,
+    "contentLanguage": "es",
+    "thumb": "/assets/catalogue-v2/captures/mission-complements-100-es.svg",
+    "imageAlt": "Misión 100 — Complementos a 100"
+  },
+  {
     "id": "mission-ajouter-9-19-29-ce1",
     "sourceId": "mission-ajouter-9-19-29-ce1",
     "slug": "mision-sumar-9-19-29-hasta-999",
